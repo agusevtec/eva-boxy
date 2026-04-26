@@ -29,7 +29,7 @@ if [ $? -ne 0 ]; then
 fi
 
 pushd "libraries/$repo_name" > /dev/null
-git checkout master
+git clone $1
 popd > /dev/null
 
 echo "Successfully cloned $repo_name"

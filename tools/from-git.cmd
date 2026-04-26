@@ -30,7 +30,7 @@ if errorlevel 1 (
 )
 
 pushd libraries\!repo_name!
-git checkout master
+git clone %1
 popd
 
 echo Successfully cloned !repo_name!
