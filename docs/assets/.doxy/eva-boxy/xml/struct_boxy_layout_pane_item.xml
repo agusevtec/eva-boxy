@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="struct_boxy_layout_pane_item" kind="struct" language="C++" prot="public">
+    <compoundname>BoxyLayoutPaneItem</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_boxy_layout_pane_item_1a87254f004acdb6472b065f3c4e2cdde8" prot="public" static="no" mutable="no">
+        <type><ref refid="class_boxy_base_element" kindref="compound">BoxyBaseElement</ref> *</type>
+        <definition>BoxyBaseElement* BoxyLayoutPaneItem::Element</definition>
+        <argsstring></argsstring>
+        <name>Element</name>
+        <qualifiedname>BoxyLayoutPaneItem::Element</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="10" column="19" bodyfile="src/BoxyLayoutPane.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_boxy_layout_pane_item_1a7de83326c20407cd13dcc97580b29981" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor BoxyLayoutPaneItem::Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <qualifiedname>BoxyLayoutPaneItem::Position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="11" column="8" bodyfile="src/BoxyLayoutPane.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_boxy_layout_pane_item_1add716dcb0ff84c040e6ba83513fc7d5c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor BoxyLayoutPaneItem::Size</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <qualifiedname>BoxyLayoutPaneItem::Size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="12" column="8" bodyfile="src/BoxyLayoutPane.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyLayoutPaneItem</label>
+        <link refid="struct_boxy_layout_pane_item"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Element</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>Position</edgelabel>
+          <edgelabel>Size</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Coor</label>
+        <link refid="struct_coor"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/BoxyLayoutPane.h" line="8" column="1" bodyfile="src/BoxyLayoutPane.h" bodystart="9" bodyend="13"/>
+    <listofallmembers>
+      <member refid="struct_boxy_layout_pane_item_1a87254f004acdb6472b065f3c4e2cdde8" prot="public" virt="non-virtual"><scope>BoxyLayoutPaneItem</scope><name>Element</name></member>
+      <member refid="struct_boxy_layout_pane_item_1a7de83326c20407cd13dcc97580b29981" prot="public" virt="non-virtual"><scope>BoxyLayoutPaneItem</scope><name>Position</name></member>
+      <member refid="struct_boxy_layout_pane_item_1add716dcb0ff84c040e6ba83513fc7d5c" prot="public" virt="non-virtual"><scope>BoxyLayoutPaneItem</scope><name>Size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

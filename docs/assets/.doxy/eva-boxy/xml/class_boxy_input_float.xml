@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_boxy_input_float" kind="class" language="C++" prot="public">
+    <compoundname>BoxyInputFloat</compoundname>
+    <basecompoundref refid="class_boxy_input_float_field" prot="public" virt="non-virtual">BoxyInputFloatField</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boxy_input_float_1aabd5b3239427f22e04d78eb404ab7583" prot="private" static="no" mutable="no">
+        <type>IDelegate *</type>
+        <definition>IDelegate* BoxyInputFloat::mOnValueChangedDelegate</definition>
+        <argsstring></argsstring>
+        <name>mOnValueChangedDelegate</name>
+        <qualifiedname>BoxyInputFloat::mOnValueChangedDelegate</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyInputFloat.h" line="33" column="13" bodyfile="src/BoxyInputFloat.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boxy_input_float_1a2eae050c655d18fd100eb46af09700f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoxyInputFloat::BoxyInputFloat</definition>
+        <argsstring>(const char *aName, float aValue, IDelegate *aOnValueChangedDelegate)</argsstring>
+        <name>BoxyInputFloat</name>
+        <qualifiedname>BoxyInputFloat::BoxyInputFloat</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>aName</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>aValue</declname>
+        </param>
+        <param>
+          <type>IDelegate *</type>
+          <declname>aOnValueChangedDelegate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyInputFloat.h" line="29" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_input_float_1aa2641df6b7ddf8663a3a6cb45e30d3d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool BoxyInputFloat::Key</definition>
+        <argsstring>(char aKey) override</argsstring>
+        <name>Key</name>
+        <qualifiedname>BoxyInputFloat::Key</qualifiedname>
+        <reimplements refid="class_boxy_base_element_1aef543820bc9144b5eaeea838ffcd90d4">Key</reimplements>
+        <param>
+          <type>char</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyInputFloat.h" line="30" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyInputFloat</label>
+        <link refid="class_boxy_input_float"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BoxyInputFloatField</label>
+        <link refid="class_boxy_input_float_field"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyInputFloat</label>
+        <link refid="class_boxy_input_float"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BoxyInputFloatField</label>
+        <link refid="class_boxy_input_float_field"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/BoxyInputFloat.h" line="26" column="1" bodyfile="src/BoxyInputFloat.h" bodystart="27" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_boxy_input_float_1a2eae050c655d18fd100eb46af09700f7" prot="public" virt="non-virtual"><scope>BoxyInputFloat</scope><name>BoxyInputFloat</name></member>
+      <member refid="class_boxy_input_float_field_1aef5bbdd4ec0d3e2466ce9cf6b7063dcd" prot="public" virt="non-virtual"><scope>BoxyInputFloat</scope><name>BoxyInputFloatField</name></member>
+      <member refid="class_boxy_base_field_1af645f46d791d49d39ea5799805c1363d" prot="public" virt="non-virtual"><scope>BoxyInputFloat</scope><name>Draw</name></member>
+      <member refid="class_boxy_input_float_field_1a5f595a95155e2a6620c7f58f4196373f" prot="public" virt="non-virtual"><scope>BoxyInputFloat</scope><name>GetValue</name></member>
+      <member refid="class_boxy_input_float_field_1a86f05d0d9bb91c5f244e7590a9aa2992" prot="public" virt="non-virtual"><scope>BoxyInputFloat</scope><name>IndeedDrawer</name></member>
+      <member refid="class_boxy_base_field_1a67f9d6f5831e1be83f9b4d7ab095cf49" prot="public" virt="non-virtual"><scope>BoxyInputFloat</scope><name>IsHidden</name></member>
+      <member refid="class_boxy_input_float_1aa2641df6b7ddf8663a3a6cb45e30d3d1" prot="public" virt="virtual"><scope>BoxyInputFloat</scope><name>Key</name></member>
+      <member refid="class_boxy_input_float_1aabd5b3239427f22e04d78eb404ab7583" prot="private" virt="non-virtual"><scope>BoxyInputFloat</scope><name>mOnValueChangedDelegate</name></member>
+      <member refid="class_boxy_input_float_field_1a191a74ef3dc1ca554315da8b85ff9788" prot="public" virt="non-virtual"><scope>BoxyInputFloat</scope><name>SetValue</name></member>
+      <member refid="class_boxy_base_field_1a693f78d6885208b9adeafde504f79134" prot="protected" virt="non-virtual"><scope>BoxyInputFloat</scope><name>updateView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

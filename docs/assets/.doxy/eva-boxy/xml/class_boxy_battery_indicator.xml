@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_boxy_battery_indicator" kind="class" language="C++" prot="public">
+    <compoundname>BoxyBatteryIndicator</compoundname>
+    <basecompoundref refid="class_boxy_base_field" prot="public" virt="non-virtual">BoxyBaseField</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boxy_battery_indicator_1aed36bd3aed27eb0fcb21a3aadf902607" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BoxyBatteryIndicator::mVoltage</definition>
+        <argsstring></argsstring>
+        <name>mVoltage</name>
+        <qualifiedname>BoxyBatteryIndicator::mVoltage</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyBatteryIndicator.h" line="17" column="11" bodyfile="src/BoxyBatteryIndicator.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boxy_battery_indicator_1a5c3bd00907443585ff7908b8109a10b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BoxyBatteryIndicator::SetVoltage</definition>
+        <argsstring>(float aVoltage)</argsstring>
+        <name>SetVoltage</name>
+        <qualifiedname>BoxyBatteryIndicator::SetVoltage</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>aVoltage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyBatteryIndicator.h" line="11" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_boxy_battery_indicator_1a12ec0ea84b0a5acf193d15842ae069f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BoxyBatteryIndicator::drawer</definition>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>BoxyBatteryIndicator::drawer</qualifiedname>
+        <reimplements refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22">drawer</reimplements>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSelected</declname>
+        </param>
+        <briefdescription>
+<para>Straight drawing of an element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper left corner of a drawing area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of an area. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyBatteryIndicator.h" line="14" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyBatteryIndicator</label>
+        <link refid="class_boxy_battery_indicator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyBatteryIndicator</label>
+        <link refid="class_boxy_battery_indicator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/BoxyBatteryIndicator.h" line="8" column="1" bodyfile="src/BoxyBatteryIndicator.h" bodystart="9" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_boxy_base_field_1af645f46d791d49d39ea5799805c1363d" prot="public" virt="non-virtual"><scope>BoxyBatteryIndicator</scope><name>Draw</name></member>
+      <member refid="class_boxy_battery_indicator_1a12ec0ea84b0a5acf193d15842ae069f6" prot="private" virt="virtual"><scope>BoxyBatteryIndicator</scope><name>drawer</name></member>
+      <member refid="class_boxy_base_field_1a67f9d6f5831e1be83f9b4d7ab095cf49" prot="public" virt="non-virtual"><scope>BoxyBatteryIndicator</scope><name>IsHidden</name></member>
+      <member refid="class_boxy_battery_indicator_1aed36bd3aed27eb0fcb21a3aadf902607" prot="private" virt="non-virtual"><scope>BoxyBatteryIndicator</scope><name>mVoltage</name></member>
+      <member refid="class_boxy_battery_indicator_1a5c3bd00907443585ff7908b8109a10b6" prot="public" virt="non-virtual"><scope>BoxyBatteryIndicator</scope><name>SetVoltage</name></member>
+      <member refid="class_boxy_base_field_1a693f78d6885208b9adeafde504f79134" prot="protected" virt="non-virtual"><scope>BoxyBatteryIndicator</scope><name>updateView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

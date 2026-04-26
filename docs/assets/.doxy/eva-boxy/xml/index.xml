@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
+  <compound refid="class_boxy_base_composite" kind="class"><name>BoxyBaseComposite</name>
+    <member refid="class_boxy_base_composite_1aed9d9494b16d4e27e6ce677c7adc9f85" kind="variable"><name>mFocusedChild</name></member>
+    <member refid="class_boxy_base_composite_1a0a13731348c383c780704f0333d63f6d" kind="variable"><name>mParent</name></member>
+    <member refid="class_boxy_base_composite_1a774539aa536750aa8c3e452f08cfdb56" kind="function"><name>BoxyBaseComposite</name></member>
+    <member refid="class_boxy_base_composite_1a056a99041d920c0529581d85b62cd3bb" kind="function"><name>IsFocused</name></member>
+    <member refid="class_boxy_base_composite_1a033d598f37fc36848719b442c6932ced" kind="function"><name>IsFocused</name></member>
+    <member refid="class_boxy_base_composite_1aa13f412ac9b7b8b4ab334109c52222f5" kind="function"><name>Key</name></member>
+    <member refid="class_boxy_base_composite_1a167c2ec53e32137cc8b86ce32382d8bd" kind="function"><name>focusChild</name></member>
+    <member refid="class_boxy_base_composite_1a1b0e51477fbf504d5f6978f445261f34" kind="function"><name>onKey</name></member>
+  </compound>
+  <compound refid="class_boxy_base_element" kind="class"><name>BoxyBaseElement</name>
+    <member refid="class_boxy_base_element_1aef543820bc9144b5eaeea838ffcd90d4" kind="function"><name>Key</name></member>
+  </compound>
+  <compound refid="class_boxy_base_field" kind="class"><name>BoxyBaseField</name>
+    <member refid="class_boxy_base_field_1ac74490ec8f0cbc54a09004bf11d3b06a" kind="variable"><name>mPos</name></member>
+    <member refid="class_boxy_base_field_1aafa165ff034578354c311216ede29a07" kind="variable"><name>mSize</name></member>
+    <member refid="class_boxy_base_field_1a67f9d6f5831e1be83f9b4d7ab095cf49" kind="function"><name>IsHidden</name></member>
+    <member refid="class_boxy_base_field_1af645f46d791d49d39ea5799805c1363d" kind="function"><name>Draw</name></member>
+    <member refid="class_boxy_base_field_1a693f78d6885208b9adeafde504f79134" kind="function"><name>updateView</name></member>
+    <member refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="class_boxy_battery_indicator" kind="class"><name>BoxyBatteryIndicator</name>
+    <member refid="class_boxy_battery_indicator_1aed36bd3aed27eb0fcb21a3aadf902607" kind="variable"><name>mVoltage</name></member>
+    <member refid="class_boxy_battery_indicator_1a5c3bd00907443585ff7908b8109a10b6" kind="function"><name>SetVoltage</name></member>
+    <member refid="class_boxy_battery_indicator_1a12ec0ea84b0a5acf193d15842ae069f6" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="class_boxy_button" kind="class"><name>BoxyButton</name>
+    <member refid="class_boxy_button_1a7be56798b307a6e413e1000e5e118fef" kind="variable"><name>mOnButtonPressedDelegate</name></member>
+    <member refid="class_boxy_button_1a05d85bef30030e192c808d24b6484a8e" kind="function"><name>BoxyButton</name></member>
+    <member refid="class_boxy_button_1a3fc7c1da9dff28e3bc887747431800fe" kind="function"><name>Key</name></member>
+  </compound>
+  <compound refid="class_boxy_button_listbox_item" kind="class"><name>BoxyButtonListboxItem</name>
+    <member refid="class_boxy_button_listbox_item_1aa72d058f9e58494346674094a90ea486" kind="variable"><name>mName</name></member>
+    <member refid="class_boxy_button_listbox_item_1a8b54fdc6e7b86885418369d36f6f8f4a" kind="function"><name>BoxyButtonListboxItem</name></member>
+    <member refid="class_boxy_button_listbox_item_1a559d155f00487e74e314e2b79356dc26" kind="function"><name>IndeedDrawer</name></member>
+    <member refid="class_boxy_button_listbox_item_1a259b32002f25764fa3334a3a80bb52d8" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="class_boxy_input_float" kind="class"><name>BoxyInputFloat</name>
+    <member refid="class_boxy_input_float_1aabd5b3239427f22e04d78eb404ab7583" kind="variable"><name>mOnValueChangedDelegate</name></member>
+    <member refid="class_boxy_input_float_1a2eae050c655d18fd100eb46af09700f7" kind="function"><name>BoxyInputFloat</name></member>
+    <member refid="class_boxy_input_float_1aa2641df6b7ddf8663a3a6cb45e30d3d1" kind="function"><name>Key</name></member>
+  </compound>
+  <compound refid="class_boxy_input_float_field" kind="class"><name>BoxyInputFloatField</name>
+    <member refid="class_boxy_input_float_field_1ac834a6d1f3f0090af02885d7da1edfd8" kind="variable"><name>mName</name></member>
+    <member refid="class_boxy_input_float_field_1a920d46f1ff45d3666069db61598bae86" kind="variable"><name>mValue</name></member>
+    <member refid="class_boxy_input_float_field_1aef5bbdd4ec0d3e2466ce9cf6b7063dcd" kind="function"><name>BoxyInputFloatField</name></member>
+    <member refid="class_boxy_input_float_field_1a191a74ef3dc1ca554315da8b85ff9788" kind="function"><name>SetValue</name></member>
+    <member refid="class_boxy_input_float_field_1a5f595a95155e2a6620c7f58f4196373f" kind="function"><name>GetValue</name></member>
+    <member refid="class_boxy_input_float_field_1a86f05d0d9bb91c5f244e7590a9aa2992" kind="function"><name>IndeedDrawer</name></member>
+    <member refid="class_boxy_input_float_field_1a1d0ade1a63e2336edc999c146b66717e" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="class_boxy_input_int" kind="class"><name>BoxyInputInt</name>
+    <member refid="class_boxy_input_int_1ac28bf7cadd8b5894a2f24c4cf42c2279" kind="variable"><name>mOnValueChangedDelegate</name></member>
+    <member refid="class_boxy_input_int_1a6662726a7854954e8ebaf65273f1e7dd" kind="function"><name>BoxyInputInt</name></member>
+    <member refid="class_boxy_input_int_1ab2a0699bc912f02a02c11fcdef6e0274" kind="function"><name>Key</name></member>
+  </compound>
+  <compound refid="class_boxy_input_int_field" kind="class"><name>BoxyInputIntField</name>
+    <member refid="class_boxy_input_int_field_1a88a236539274ae480f71bde81277273f" kind="variable"><name>mName</name></member>
+    <member refid="class_boxy_input_int_field_1a19ae3cd6b4de2870a04859ec1473eb92" kind="variable"><name>mValue</name></member>
+    <member refid="class_boxy_input_int_field_1a921bdaa4014a7d000a03f17cee082a48" kind="function"><name>BoxyInputIntField</name></member>
+    <member refid="class_boxy_input_int_field_1afa2cd0e722e7a479b437793ed0fbbd2f" kind="function"><name>SetValue</name></member>
+    <member refid="class_boxy_input_int_field_1aa8539e557b98d1ace33ed1b8b07a1dd6" kind="function"><name>GetValue</name></member>
+    <member refid="class_boxy_input_int_field_1a21d45bd848827bb8873fc5083448d809" kind="function"><name>IndeedDrawer</name></member>
+    <member refid="class_boxy_input_int_field_1af74b9300f458914ca934b74094685aa4" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="class_boxy_input_str" kind="class"><name>BoxyInputStr</name>
+    <member refid="class_boxy_input_str_1ac4f4f23d7b567b23d87c078eb8946170" kind="function"><name>IndeedDrawer</name></member>
+  </compound>
+  <compound refid="class_boxy_layout_pane" kind="class"><name>BoxyLayoutPane</name>
+    <member refid="class_boxy_layout_pane_1a48a84aae7c24af5e8c51021f329f7486" kind="variable"><name>mItems</name></member>
+    <member refid="class_boxy_layout_pane_1a95b422ebf41b15ca02b5e45e9f7a778b" kind="variable"><name>mCount</name></member>
+    <member refid="class_boxy_layout_pane_1ac9403ef7f341f30337d1c5ff3d97f1a9" kind="variable"><name>mFocused</name></member>
+    <member refid="class_boxy_layout_pane_1a852afef1c6e39cf8b349da0327006e20" kind="function"><name>BoxyLayoutPane</name></member>
+    <member refid="class_boxy_layout_pane_1a15bd0f34dec79c37df735c741cce928f" kind="function"><name>SetItems</name></member>
+    <member refid="class_boxy_layout_pane_1a004fb2a068dc8e29b3e65dd179c0652d" kind="function"><name>onKey</name></member>
+    <member refid="class_boxy_layout_pane_1ad6bb966a18931c47a428a16c27a14ab7" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="struct_boxy_layout_pane_item" kind="struct"><name>BoxyLayoutPaneItem</name>
+    <member refid="struct_boxy_layout_pane_item_1a87254f004acdb6472b065f3c4e2cdde8" kind="variable"><name>Element</name></member>
+    <member refid="struct_boxy_layout_pane_item_1a7de83326c20407cd13dcc97580b29981" kind="variable"><name>Position</name></member>
+    <member refid="struct_boxy_layout_pane_item_1add716dcb0ff84c040e6ba83513fc7d5c" kind="variable"><name>Size</name></member>
+  </compound>
+  <compound refid="class_boxy_list_box" kind="class"><name>BoxyListBox</name>
+    <member refid="class_boxy_list_box_1acc387c7eed7a2782fbe2cf67a0ad47e6" kind="variable"><name>mItems</name></member>
+    <member refid="class_boxy_list_box_1ac74cce4d652d6763d240bdb6614f1925" kind="variable"><name>mSlidingMethod</name></member>
+    <member refid="class_boxy_list_box_1a4e56fc075d34053ac42e6c114dcfd25d" kind="variable"><name>mOnItemModifyDelegate</name></member>
+    <member refid="class_boxy_list_box_1a6185712270ad13334c0df3c8e15df8e9" kind="variable"><name>mGap</name></member>
+    <member refid="class_boxy_list_box_1ac5ae434f9338b595ede2b50afd5a318a" kind="variable"><name>mIsReadOnly</name></member>
+    <member refid="class_boxy_list_box_1acbe1e4324ba2f54f7c6fdf0ce0a8e30d" kind="function"><name>BoxyListBox</name></member>
+    <member refid="class_boxy_list_box_1adcea4f576884795d68e6576b7129ace9" kind="function"><name>SetItems</name></member>
+    <member refid="class_boxy_list_box_1ab6b7262188c0465060c33020991f70a8" kind="function"><name>SetGap</name></member>
+    <member refid="class_boxy_list_box_1ac0c876ef0ecb72149bb5f0bc41c24c4e" kind="function"><name>SetReadOnly</name></member>
+    <member refid="class_boxy_list_box_1aa645628a61558454d4f6d14aa690ff0e" kind="function"><name>SetOnItemModified</name></member>
+    <member refid="class_boxy_list_box_1af33ed13c42748337335ce42a7cc71b3f" kind="function"><name>GetItem</name></member>
+    <member refid="class_boxy_list_box_1a18e1f300aada0c0568774a4d133fb855" kind="function"><name>Select</name></member>
+    <member refid="class_boxy_list_box_1adfd0264eb376103b3d2dc1920e8a8e5d" kind="function"><name>Selected</name></member>
+    <member refid="class_boxy_list_box_1a9535aa7afe9b6f26a96a9ebe09b7645e" kind="function"><name>Count</name></member>
+    <member refid="class_boxy_list_box_1a0093b0b8c165f338508034838892ed17" kind="function"><name>PageSize</name></member>
+    <member refid="class_boxy_list_box_1afe988d4ca4baea7b1bcef1739d5bc557" kind="function"><name>drawer</name></member>
+    <member refid="class_boxy_list_box_1a5e55b65cd2198051bb97627c47ddd867" kind="function"><name>onKey</name></member>
+  </compound>
+  <compound refid="class_boxy_modal" kind="class"><name>BoxyModal</name>
+    <member refid="class_boxy_modal_1a4c39efee88851118737b68e25fbae00d" kind="variable"><name>mTimer</name></member>
+    <member refid="class_boxy_modal_1ae8135ebc11dc408b041096c9ab203c62" kind="variable"><name>mDisplayPlatform</name></member>
+    <member refid="class_boxy_modal_1ae7af570791f9f99e97e932cdad9316aa" kind="function"><name>Instance</name></member>
+    <member refid="class_boxy_modal_1a88aaa82ee51af2d9e43c430e1bffb5e7" kind="function"><name>ShowInt</name></member>
+    <member refid="class_boxy_modal_1a63fb16dcf739c0111c1093b847ab911e" kind="function"><name>onTimeout</name></member>
+    <member refid="class_boxy_modal_1a2e9e0fc293861d784bcfa01df4c1b10a" kind="function"><name>BoxyModal</name></member>
+  </compound>
+  <compound refid="class_boxy_scrollbar" kind="class"><name>BoxyScrollbar</name>
+    <member refid="class_boxy_scrollbar_1a105120d1c91a9441b584277c73929d54" kind="variable"><name>mOnPositionChanged</name></member>
+    <member refid="class_boxy_scrollbar_1a266026921638bd7892ed1d7d1f65259b" kind="function"><name>BoxyScrollbar</name></member>
+    <member refid="class_boxy_scrollbar_1aaa69da2c71d82d8b39d1fbdb28c3cbd1" kind="function"><name>Key</name></member>
+  </compound>
+  <compound refid="class_boxy_scrollbar_field" kind="class"><name>BoxyScrollbarField</name>
+    <member refid="class_boxy_scrollbar_field_1a4ef1c8118134bafc752f2a57533e880f" kind="variable"><name>mPosition</name></member>
+    <member refid="class_boxy_scrollbar_field_1a9e97a35ec580ca404e449be89f46538e" kind="variable"><name>mCount</name></member>
+    <member refid="class_boxy_scrollbar_field_1a90f12d8a6982c44dae40056f470c6fb8" kind="function"><name>BoxyScrollbarField</name></member>
+    <member refid="class_boxy_scrollbar_field_1ac84c3d446dca5222005b3dec267a6843" kind="function"><name>SetPosition</name></member>
+    <member refid="class_boxy_scrollbar_field_1adad96980e5931faa024e3e8299e77843" kind="function"><name>GetPosition</name></member>
+    <member refid="class_boxy_scrollbar_field_1afdf00e9eaf599b54b311556ef62b794b" kind="function"><name>IndeedDrawer</name></member>
+    <member refid="class_boxy_scrollbar_field_1ad6ad66409e25d7d26ddbef527eef9c4a" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="struct_coor" kind="struct"><name>Coor</name>
+    <member refid="struct_coor_1af5555e1de4dde3c5709a003482827c48" kind="variable"><name>X</name></member>
+    <member refid="struct_coor_1a0c67f7cdfca9ea6113e3ad5a6d299593" kind="variable"><name>Y</name></member>
+    <member refid="struct_coor_1ae4d1bb3c18b8c03048bc81b3fce4765c" kind="function"><name>Coor</name></member>
+  </compound>
+  <compound refid="class_debug_platform" kind="class"><name>DebugPlatform</name>
+    <member refid="class_debug_platform_1ab8fa5ffe89318ffe71c330ef564744cb" kind="variable"><name>mField</name></member>
+    <member refid="class_debug_platform_1a220cc5d9457ff7ac9aeacbe4bf300ec4" kind="variable"><name>t</name></member>
+    <member refid="class_debug_platform_1a7c679f10960f05611db5ad03a50f45e1" kind="function"><name>DebugPlatform</name></member>
+    <member refid="class_debug_platform_1ab2583016b64c1b292a5096ac72e5ad4d" kind="function"><name>Display</name></member>
+    <member refid="class_debug_platform_1a55534eaa72ba2c522ff7532467fd92a1" kind="function"><name>Fill</name></member>
+    <member refid="class_debug_platform_1ad94494b1da67ecd5365b47bbb2c674ca" kind="function"><name>Size</name></member>
+    <member refid="class_debug_platform_1a12913920d8b32dcf2454877e51763253" kind="function"><name>Debug</name></member>
+  </compound>
+  <compound refid="class_display_platform" kind="class"><name>DisplayPlatform</name>
+    <member refid="class_display_platform_1ad6da64bdf6f414939408fbf98b275449" kind="variable"><name>mGroundElement</name></member>
+    <member refid="class_display_platform_1aa33696c41e12ac7e450af9045113ae34" kind="function"><name>Fill</name></member>
+    <member refid="class_display_platform_1a0ba4517fe9b243e8db8f364e0c5c9b89" kind="function"><name>Display</name></member>
+    <member refid="class_display_platform_1aee11fddad418803a0a789f64fdf09ead" kind="function"><name>Size</name></member>
+    <member refid="class_display_platform_1adf18510888dae116732a57e7fd22293b" kind="function"><name>Draw</name></member>
+    <member refid="class_display_platform_1ae87455ab0e71b8c90cadfb4731ad5ae4" kind="function"><name>Key</name></member>
+    <member refid="class_display_platform_1af3ab38d3c50687b36db51688e8fa0007" kind="function"><name>SetFreeze</name></member>
+    <member refid="class_display_platform_1a314ded0c6d99ea8d6950becbd1584a4b" kind="function"><name>Instance</name></member>
+  </compound>
+  <compound refid="class_flip_sliding_method" kind="class"><name>FlipSlidingMethod</name>
+    <member refid="class_flip_sliding_method_1accc52a7488ed7c32540624c16537676a" kind="function"><name>Select</name></member>
+  </compound>
+  <compound refid="class_gyver1306_platform" kind="class"><name>Gyver1306Platform</name>
+    <member refid="class_gyver1306_platform_1a1f24eb487ded894dc9adc962932f8934" kind="variable"><name>mLine</name></member>
+    <member refid="class_gyver1306_platform_1aeec5dd25831d480997e8d0f3744a0575" kind="function"><name>Gyver1306Platform</name></member>
+    <member refid="class_gyver1306_platform_1ab983e854309ef754294242a9671fda6f" kind="function"><name>Display</name></member>
+    <member refid="class_gyver1306_platform_1a04b226d425e1e0d94291fecbc666134f" kind="function"><name>Fill</name></member>
+    <member refid="class_gyver1306_platform_1a4306fd9d8d678f7907e2bc012598c3fe" kind="function"><name>Size</name></member>
+  </compound>
+  <compound refid="class_scroll_sliding_method" kind="class"><name>ScrollSlidingMethod</name>
+    <member refid="class_scroll_sliding_method_1a38c9016dcf0343685492ed114d7fc726" kind="function"><name>Select</name></member>
+  </compound>
+  <compound refid="class_sliding_method_base" kind="class"><name>SlidingMethodBase</name>
+    <member refid="class_sliding_method_base_1aec117a75ffe41ee0d94c56277462fc4f" kind="variable"><name>mSlidingWindow</name></member>
+    <member refid="class_sliding_method_base_1a323e5f2115490015002691d19dc25081" kind="variable"><name>mIndex</name></member>
+    <member refid="class_sliding_method_base_1a8b174465aa0182efbd30cd9e935c9fa6" kind="variable"><name>Count</name></member>
+    <member refid="class_sliding_method_base_1a3e1f23a9eabef56b36fffa674bc1cb7e" kind="variable"><name>PageSize</name></member>
+    <member refid="class_sliding_method_base_1a5594a5e622fe7f45e5516be3e7b2bd05" kind="function"><name>SlidingMethodBase</name></member>
+    <member refid="class_sliding_method_base_1a2766398e40d850cf92e3727e1e88aee1" kind="function"><name>Select</name></member>
+    <member refid="class_sliding_method_base_1a03ec1fa5b033ecb6f78e81780b70bccc" kind="function"><name>Selected</name></member>
+    <member refid="class_sliding_method_base_1a916a1847f5b11d44e9f84b95b4fcd5c6" kind="function"><name>IndexInWindow</name></member>
+    <member refid="class_sliding_method_base_1a4019f78522ec7b20877ad28749fb9737" kind="function"><name>SelectRelative</name></member>
+  </compound>
+  <compound refid="namespaceeva" kind="namespace"><name>eva</name>
+  </compound>
+  <compound refid="_boxy_base_composite_8h" kind="file"><name>BoxyBaseComposite.h</name>
+  </compound>
+  <compound refid="_boxy_base_element_8h" kind="file"><name>BoxyBaseElement.h</name>
+  </compound>
+  <compound refid="_boxy_base_field_8h" kind="file"><name>BoxyBaseField.h</name>
+  </compound>
+  <compound refid="_boxy_battery_indicator_8h" kind="file"><name>BoxyBatteryIndicator.h</name>
+  </compound>
+  <compound refid="_boxy_button_8h" kind="file"><name>BoxyButton.h</name>
+  </compound>
+  <compound refid="_boxy_input_float_8h" kind="file"><name>BoxyInputFloat.h</name>
+  </compound>
+  <compound refid="_boxy_input_int_8h" kind="file"><name>BoxyInputInt.h</name>
+  </compound>
+  <compound refid="_boxy_input_str_8h" kind="file"><name>BoxyInputStr.h</name>
+  </compound>
+  <compound refid="_boxy_layout_pane_8h" kind="file"><name>BoxyLayoutPane.h</name>
+  </compound>
+  <compound refid="_boxy_list_box_8h" kind="file"><name>BoxyListBox.h</name>
+  </compound>
+  <compound refid="_boxy_modal_8h" kind="file"><name>BoxyModal.h</name>
+  </compound>
+  <compound refid="_boxy_scrollbar_8h" kind="file"><name>BoxyScrollbar.h</name>
+  </compound>
+  <compound refid="_coor_8h" kind="file"><name>Coor.h</name>
+  </compound>
+  <compound refid="_debug_platform_8h" kind="file"><name>DebugPlatform.h</name>
+  </compound>
+  <compound refid="_display_platform_8h" kind="file"><name>DisplayPlatform.h</name>
+    <member refid="_display_platform_8h_1a9c9912a8f273f002b1b064d2b94fab8a" kind="enum"><name>DisplayPlatformAlign</name></member>
+    <member refid="_display_platform_8h_1a9c9912a8f273f002b1b064d2b94fab8aa9a3405b11cd2d02b7bede55b8bcf4372" kind="enumvalue"><name>PA_LEFT</name></member>
+    <member refid="_display_platform_8h_1a9c9912a8f273f002b1b064d2b94fab8aac82282c0c93b36650cbc112cc786ba1f" kind="enumvalue"><name>PA_CENTER</name></member>
+    <member refid="_display_platform_8h_1a9c9912a8f273f002b1b064d2b94fab8aa735ddff6e6acfbd3035a817d96c6f471" kind="enumvalue"><name>PA_RIGHT</name></member>
+  </compound>
+  <compound refid="_gyver1306_platform_8h" kind="file"><name>Gyver1306Platform.h</name>
+  </compound>
+  <compound refid="_sliding_methods_8h" kind="file"><name>SlidingMethods.h</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

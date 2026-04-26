@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_boxy_list_box" kind="class" language="C++" prot="public">
+    <compoundname>BoxyListBox</compoundname>
+    <basecompoundref refid="class_boxy_base_composite" prot="public" virt="non-virtual">BoxyBaseComposite</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boxy_list_box_1acc387c7eed7a2782fbe2cf67a0ad47e6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_boxy_base_field" kindref="compound">BoxyBaseField</ref> **</type>
+        <definition>BoxyBaseField** BoxyListBox::mItems</definition>
+        <argsstring></argsstring>
+        <name>mItems</name>
+        <qualifiedname>BoxyListBox::mItems</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="30" column="17" bodyfile="src/BoxyListBox.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boxy_list_box_1ac74cce4d652d6763d240bdb6614f1925" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sliding_method_base" kindref="compound">SlidingMethodBase</ref> *</type>
+        <definition>SlidingMethodBase* BoxyListBox::mSlidingMethod</definition>
+        <argsstring></argsstring>
+        <name>mSlidingMethod</name>
+        <qualifiedname>BoxyListBox::mSlidingMethod</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="31" column="21" bodyfile="src/BoxyListBox.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boxy_list_box_1a4e56fc075d34053ac42e6c114dcfd25d" prot="private" static="no" mutable="no">
+        <type>IDelegate *</type>
+        <definition>IDelegate* BoxyListBox::mOnItemModifyDelegate</definition>
+        <argsstring></argsstring>
+        <name>mOnItemModifyDelegate</name>
+        <qualifiedname>BoxyListBox::mOnItemModifyDelegate</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="32" column="13" bodyfile="src/BoxyListBox.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boxy_list_box_1a6185712270ad13334c0df3c8e15df8e9" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char BoxyListBox::mGap</definition>
+        <argsstring></argsstring>
+        <name>mGap</name>
+        <qualifiedname>BoxyListBox::mGap</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="33" column="17" bodyfile="src/BoxyListBox.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boxy_list_box_1ac5ae434f9338b595ede2b50afd5a318a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BoxyListBox::mIsReadOnly</definition>
+        <argsstring></argsstring>
+        <name>mIsReadOnly</name>
+        <qualifiedname>BoxyListBox::mIsReadOnly</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="34" column="8" bodyfile="src/BoxyListBox.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boxy_list_box_1acbe1e4324ba2f54f7c6fdf0ce0a8e30d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoxyListBox::BoxyListBox</definition>
+        <argsstring>(BoxyBaseComposite *aParent, SlidingMethodBase *aSlidingMethod)</argsstring>
+        <name>BoxyListBox</name>
+        <qualifiedname>BoxyListBox::BoxyListBox</qualifiedname>
+        <param>
+          <type><ref refid="class_boxy_base_composite" kindref="compound">BoxyBaseComposite</ref> *</type>
+          <declname>aParent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_sliding_method_base" kindref="compound">SlidingMethodBase</ref> *</type>
+          <declname>aSlidingMethod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="13" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1adcea4f576884795d68e6576b7129ace9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_boxy_list_box" kindref="compound">BoxyListBox</ref> &amp;</type>
+        <definition>BoxyListBox &amp; BoxyListBox::SetItems</definition>
+        <argsstring>(BoxyBaseField *aItems[], int aCount)</argsstring>
+        <name>SetItems</name>
+        <qualifiedname>BoxyListBox::SetItems</qualifiedname>
+        <param>
+          <type><ref refid="class_boxy_base_field" kindref="compound">BoxyBaseField</ref> *</type>
+          <declname>aItems</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>aCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="14" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1ab6b7262188c0465060c33020991f70a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_boxy_list_box" kindref="compound">BoxyListBox</ref> &amp;</type>
+        <definition>BoxyListBox &amp; BoxyListBox::SetGap</definition>
+        <argsstring>(unsigned char aGap)</argsstring>
+        <name>SetGap</name>
+        <qualifiedname>BoxyListBox::SetGap</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aGap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="15" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1ac0c876ef0ecb72149bb5f0bc41c24c4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_boxy_list_box" kindref="compound">BoxyListBox</ref> &amp;</type>
+        <definition>BoxyListBox &amp; BoxyListBox::SetReadOnly</definition>
+        <argsstring>(bool aIsReadonly)</argsstring>
+        <name>SetReadOnly</name>
+        <qualifiedname>BoxyListBox::SetReadOnly</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>aIsReadonly</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="16" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1aa645628a61558454d4f6d14aa690ff0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_boxy_list_box" kindref="compound">BoxyListBox</ref> &amp;</type>
+        <definition>BoxyListBox &amp; BoxyListBox::SetOnItemModified</definition>
+        <argsstring>(IDelegate *aOnItemModifyDelegate)</argsstring>
+        <name>SetOnItemModified</name>
+        <qualifiedname>BoxyListBox::SetOnItemModified</qualifiedname>
+        <param>
+          <type>IDelegate *</type>
+          <declname>aOnItemModifyDelegate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="17" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1af33ed13c42748337335ce42a7cc71b3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_boxy_base_field" kindref="compound">BoxyBaseField</ref> *</type>
+        <definition>BoxyBaseField * BoxyListBox::GetItem</definition>
+        <argsstring>(unsigned char aIndex)</argsstring>
+        <name>GetItem</name>
+        <qualifiedname>BoxyListBox::GetItem</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="19" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1a18e1f300aada0c0568774a4d133fb855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BoxyListBox::Select</definition>
+        <argsstring>(int mIndex)</argsstring>
+        <name>Select</name>
+        <qualifiedname>BoxyListBox::Select</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>mIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="20" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1adfd0264eb376103b3d2dc1920e8a8e5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxyListBox::Selected</definition>
+        <argsstring>()</argsstring>
+        <name>Selected</name>
+        <qualifiedname>BoxyListBox::Selected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="21" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1a9535aa7afe9b6f26a96a9ebe09b7645e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxyListBox::Count</definition>
+        <argsstring>()</argsstring>
+        <name>Count</name>
+        <qualifiedname>BoxyListBox::Count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="22" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1a0093b0b8c165f338508034838892ed17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxyListBox::PageSize</definition>
+        <argsstring>()</argsstring>
+        <name>PageSize</name>
+        <qualifiedname>BoxyListBox::PageSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="23" column="7"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_boxy_list_box_1afe988d4ca4baea7b1bcef1739d5bc557" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BoxyListBox::drawer</definition>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>BoxyListBox::drawer</qualifiedname>
+        <reimplements refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22">drawer</reimplements>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSelected</declname>
+        </param>
+        <briefdescription>
+<para>Straight drawing of an element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper left corner of a drawing area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of an area. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="26" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_list_box_1a5e55b65cd2198051bb97627c47ddd867" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool BoxyListBox::onKey</definition>
+        <argsstring>(char aKey) override</argsstring>
+        <name>onKey</name>
+        <qualifiedname>BoxyListBox::onKey</qualifiedname>
+        <reimplements refid="class_boxy_base_composite_1a1b0e51477fbf504d5f6978f445261f34">onKey</reimplements>
+        <param>
+          <type>char</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyListBox.h" line="27" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BoxyBaseComposite</label>
+        <link refid="class_boxy_base_composite"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyListBox</label>
+        <link refid="class_boxy_list_box"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BoxyBaseComposite</label>
+        <link refid="class_boxy_base_composite"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyListBox</label>
+        <link refid="class_boxy_list_box"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/BoxyListBox.h" line="10" column="1" bodyfile="src/BoxyListBox.h" bodystart="11" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_boxy_base_composite_1a774539aa536750aa8c3e452f08cfdb56" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>BoxyBaseComposite</name></member>
+      <member refid="class_boxy_list_box_1acbe1e4324ba2f54f7c6fdf0ce0a8e30d" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>BoxyListBox</name></member>
+      <member refid="class_boxy_list_box_1a9535aa7afe9b6f26a96a9ebe09b7645e" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>Count</name></member>
+      <member refid="class_boxy_base_field_1af645f46d791d49d39ea5799805c1363d" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>Draw</name></member>
+      <member refid="class_boxy_list_box_1afe988d4ca4baea7b1bcef1739d5bc557" prot="private" virt="virtual"><scope>BoxyListBox</scope><name>drawer</name></member>
+      <member refid="class_boxy_base_composite_1a167c2ec53e32137cc8b86ce32382d8bd" prot="protected" virt="non-virtual"><scope>BoxyListBox</scope><name>focusChild</name></member>
+      <member refid="class_boxy_list_box_1af33ed13c42748337335ce42a7cc71b3f" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>GetItem</name></member>
+      <member refid="class_boxy_base_composite_1a056a99041d920c0529581d85b62cd3bb" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>IsFocused</name></member>
+      <member refid="class_boxy_base_composite_1a033d598f37fc36848719b442c6932ced" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>IsFocused</name></member>
+      <member refid="class_boxy_base_field_1a67f9d6f5831e1be83f9b4d7ab095cf49" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>IsHidden</name></member>
+      <member refid="class_boxy_base_composite_1aa13f412ac9b7b8b4ab334109c52222f5" prot="public" virt="virtual"><scope>BoxyListBox</scope><name>Key</name></member>
+      <member refid="class_boxy_list_box_1a6185712270ad13334c0df3c8e15df8e9" prot="private" virt="non-virtual"><scope>BoxyListBox</scope><name>mGap</name></member>
+      <member refid="class_boxy_list_box_1ac5ae434f9338b595ede2b50afd5a318a" prot="private" virt="non-virtual"><scope>BoxyListBox</scope><name>mIsReadOnly</name></member>
+      <member refid="class_boxy_list_box_1acc387c7eed7a2782fbe2cf67a0ad47e6" prot="private" virt="non-virtual"><scope>BoxyListBox</scope><name>mItems</name></member>
+      <member refid="class_boxy_list_box_1a4e56fc075d34053ac42e6c114dcfd25d" prot="private" virt="non-virtual"><scope>BoxyListBox</scope><name>mOnItemModifyDelegate</name></member>
+      <member refid="class_boxy_list_box_1ac74cce4d652d6763d240bdb6614f1925" prot="private" virt="non-virtual"><scope>BoxyListBox</scope><name>mSlidingMethod</name></member>
+      <member refid="class_boxy_list_box_1a5e55b65cd2198051bb97627c47ddd867" prot="private" virt="virtual"><scope>BoxyListBox</scope><name>onKey</name></member>
+      <member refid="class_boxy_list_box_1a0093b0b8c165f338508034838892ed17" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>PageSize</name></member>
+      <member refid="class_boxy_list_box_1a18e1f300aada0c0568774a4d133fb855" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>Select</name></member>
+      <member refid="class_boxy_list_box_1adfd0264eb376103b3d2dc1920e8a8e5d" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>Selected</name></member>
+      <member refid="class_boxy_list_box_1ab6b7262188c0465060c33020991f70a8" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>SetGap</name></member>
+      <member refid="class_boxy_list_box_1adcea4f576884795d68e6576b7129ace9" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>SetItems</name></member>
+      <member refid="class_boxy_list_box_1aa645628a61558454d4f6d14aa690ff0e" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>SetOnItemModified</name></member>
+      <member refid="class_boxy_list_box_1ac0c876ef0ecb72149bb5f0bc41c24c4e" prot="public" virt="non-virtual"><scope>BoxyListBox</scope><name>SetReadOnly</name></member>
+      <member refid="class_boxy_base_field_1a693f78d6885208b9adeafde504f79134" prot="protected" virt="non-virtual"><scope>BoxyListBox</scope><name>updateView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

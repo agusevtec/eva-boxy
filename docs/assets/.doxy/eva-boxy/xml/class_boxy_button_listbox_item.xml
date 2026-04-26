@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_boxy_button_listbox_item" kind="class" language="C++" prot="public">
+    <compoundname>BoxyButtonListboxItem</compoundname>
+    <basecompoundref refid="class_boxy_base_element" prot="public" virt="non-virtual">BoxyBaseElement</basecompoundref>
+    <derivedcompoundref refid="class_boxy_button" prot="public" virt="non-virtual">BoxyButton</derivedcompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boxy_button_listbox_item_1aa72d058f9e58494346674094a90ea486" prot="private" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* BoxyButtonListboxItem::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <qualifiedname>BoxyButtonListboxItem::mName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyButton.h" line="18" column="14" bodyfile="src/BoxyButton.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boxy_button_listbox_item_1a8b54fdc6e7b86885418369d36f6f8f4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoxyButtonListboxItem::BoxyButtonListboxItem</definition>
+        <argsstring>(const char *aName)</argsstring>
+        <name>BoxyButtonListboxItem</name>
+        <qualifiedname>BoxyButtonListboxItem::BoxyButtonListboxItem</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyButton.h" line="11" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_boxy_button_listbox_item_1a559d155f00487e74e314e2b79356dc26" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void BoxyButtonListboxItem::IndeedDrawer</definition>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName)</argsstring>
+        <name>IndeedDrawer</name>
+        <qualifiedname>BoxyButtonListboxItem::IndeedDrawer</qualifiedname>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSelected</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyButton.h" line="12" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_boxy_button_listbox_item_1a259b32002f25764fa3334a3a80bb52d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BoxyButtonListboxItem::drawer</definition>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>BoxyButtonListboxItem::drawer</qualifiedname>
+        <reimplements refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22">drawer</reimplements>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSelected</declname>
+        </param>
+        <briefdescription>
+<para>Straight drawing of an element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper left corner of a drawing area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of an area. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyButton.h" line="15" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="4">
+        <label>BoxyButton</label>
+        <link refid="class_boxy_button"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BoxyButtonListboxItem</label>
+        <link refid="class_boxy_button_listbox_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyButtonListboxItem</label>
+        <link refid="class_boxy_button_listbox_item"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/BoxyButton.h" line="8" column="1" bodyfile="src/BoxyButton.h" bodystart="9" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_boxy_button_listbox_item_1a8b54fdc6e7b86885418369d36f6f8f4a" prot="public" virt="non-virtual"><scope>BoxyButtonListboxItem</scope><name>BoxyButtonListboxItem</name></member>
+      <member refid="class_boxy_base_field_1af645f46d791d49d39ea5799805c1363d" prot="public" virt="non-virtual"><scope>BoxyButtonListboxItem</scope><name>Draw</name></member>
+      <member refid="class_boxy_button_listbox_item_1a259b32002f25764fa3334a3a80bb52d8" prot="private" virt="virtual"><scope>BoxyButtonListboxItem</scope><name>drawer</name></member>
+      <member refid="class_boxy_button_listbox_item_1a559d155f00487e74e314e2b79356dc26" prot="public" virt="non-virtual"><scope>BoxyButtonListboxItem</scope><name>IndeedDrawer</name></member>
+      <member refid="class_boxy_base_field_1a67f9d6f5831e1be83f9b4d7ab095cf49" prot="public" virt="non-virtual"><scope>BoxyButtonListboxItem</scope><name>IsHidden</name></member>
+      <member refid="class_boxy_base_element_1aef543820bc9144b5eaeea838ffcd90d4" prot="public" virt="virtual"><scope>BoxyButtonListboxItem</scope><name>Key</name></member>
+      <member refid="class_boxy_button_listbox_item_1aa72d058f9e58494346674094a90ea486" prot="private" virt="non-virtual"><scope>BoxyButtonListboxItem</scope><name>mName</name></member>
+      <member refid="class_boxy_base_field_1a693f78d6885208b9adeafde504f79134" prot="protected" virt="non-virtual"><scope>BoxyButtonListboxItem</scope><name>updateView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

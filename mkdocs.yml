@@ -1,0 +1,33 @@
+site_name: EVA Boxy
+site_description: EVA Boxy
+repo_url: https://github.com/agusevtec/eva-boxy
+theme: material
+docs_dir: 'docs-md'
+site_dir: 'docs'
+nav:
+  - What is it?: index.md
+  - Tutorial:
+      - Quickstart: tutorial/quickstart.md
+
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - mkdoxy:
+      projects:
+        eva-boxy:
+          src-dirs: ./src
+          full-doc: True
+          doxy-cfg:
+            FILE_PATTERNS: "*.h"
+            RECURSIVE: True
+            EXTRACT_ALL: NO 
+            EXTRACT_STRUCT: NO
+            EXTRACT_PRIVATE: NO
+            EXTRACT_STATIC: YES
+

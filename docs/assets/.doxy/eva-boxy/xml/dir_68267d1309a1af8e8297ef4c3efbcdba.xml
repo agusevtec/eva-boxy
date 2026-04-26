@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="_boxy_base_composite_8h">BoxyBaseComposite.h</innerfile>
+    <innerfile refid="_boxy_base_element_8h">BoxyBaseElement.h</innerfile>
+    <innerfile refid="_boxy_base_field_8h">BoxyBaseField.h</innerfile>
+    <innerfile refid="_boxy_battery_indicator_8h">BoxyBatteryIndicator.h</innerfile>
+    <innerfile refid="_boxy_button_8h">BoxyButton.h</innerfile>
+    <innerfile refid="_boxy_input_float_8h">BoxyInputFloat.h</innerfile>
+    <innerfile refid="_boxy_input_int_8h">BoxyInputInt.h</innerfile>
+    <innerfile refid="_boxy_input_str_8h">BoxyInputStr.h</innerfile>
+    <innerfile refid="_boxy_layout_pane_8h">BoxyLayoutPane.h</innerfile>
+    <innerfile refid="_boxy_list_box_8h">BoxyListBox.h</innerfile>
+    <innerfile refid="_boxy_modal_8h">BoxyModal.h</innerfile>
+    <innerfile refid="_boxy_scrollbar_8h">BoxyScrollbar.h</innerfile>
+    <innerfile refid="_coor_8h">Coor.h</innerfile>
+    <innerfile refid="_debug_platform_8h">DebugPlatform.h</innerfile>
+    <innerfile refid="_display_platform_8h">DisplayPlatform.h</innerfile>
+    <innerfile refid="_gyver1306_platform_8h">Gyver1306Platform.h</innerfile>
+    <innerfile refid="_sliding_methods_8h">SlidingMethods.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

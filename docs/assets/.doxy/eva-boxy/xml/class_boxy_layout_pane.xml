@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_boxy_layout_pane" kind="class" language="C++" prot="public">
+    <compoundname>BoxyLayoutPane</compoundname>
+    <basecompoundref refid="class_boxy_base_composite" prot="public" virt="non-virtual">BoxyBaseComposite</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boxy_layout_pane_1a48a84aae7c24af5e8c51021f329f7486" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_boxy_layout_pane_item" kindref="compound">BoxyLayoutPaneItem</ref> *</type>
+        <definition>BoxyLayoutPaneItem* BoxyLayoutPane::mItems</definition>
+        <argsstring></argsstring>
+        <name>mItems</name>
+        <qualifiedname>BoxyLayoutPane::mItems</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="26" column="22" bodyfile="src/BoxyLayoutPane.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boxy_layout_pane_1a95b422ebf41b15ca02b5e45e9f7a778b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BoxyLayoutPane::mCount</definition>
+        <argsstring></argsstring>
+        <name>mCount</name>
+        <qualifiedname>BoxyLayoutPane::mCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="27" column="7" bodyfile="src/BoxyLayoutPane.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boxy_layout_pane_1ac9403ef7f341f30337d1c5ff3d97f1a9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BoxyLayoutPane::mFocused</definition>
+        <argsstring></argsstring>
+        <name>mFocused</name>
+        <qualifiedname>BoxyLayoutPane::mFocused</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="28" column="7" bodyfile="src/BoxyLayoutPane.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boxy_layout_pane_1a852afef1c6e39cf8b349da0327006e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoxyLayoutPane::BoxyLayoutPane</definition>
+        <argsstring>(BoxyBaseComposite *aContainer)</argsstring>
+        <name>BoxyLayoutPane</name>
+        <qualifiedname>BoxyLayoutPane::BoxyLayoutPane</qualifiedname>
+        <param>
+          <type><ref refid="class_boxy_base_composite" kindref="compound">BoxyBaseComposite</ref> *</type>
+          <declname>aContainer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="18" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_layout_pane_1a15bd0f34dec79c37df735c741cce928f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BoxyLayoutPane::SetItems</definition>
+        <argsstring>(BoxyLayoutPaneItem aItems[], int aCount)</argsstring>
+        <name>SetItems</name>
+        <qualifiedname>BoxyLayoutPane::SetItems</qualifiedname>
+        <param>
+          <type><ref refid="struct_boxy_layout_pane_item" kindref="compound">BoxyLayoutPaneItem</ref></type>
+          <declname>aItems</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>aCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="19" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_boxy_layout_pane_1a004fb2a068dc8e29b3e65dd179c0652d" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool BoxyLayoutPane::onKey</definition>
+        <argsstring>(char aKey) override</argsstring>
+        <name>onKey</name>
+        <qualifiedname>BoxyLayoutPane::onKey</qualifiedname>
+        <reimplements refid="class_boxy_base_composite_1a1b0e51477fbf504d5f6978f445261f34">onKey</reimplements>
+        <param>
+          <type>char</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="22" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_layout_pane_1ad6bb966a18931c47a428a16c27a14ab7" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BoxyLayoutPane::drawer</definition>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>BoxyLayoutPane::drawer</qualifiedname>
+        <reimplements refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22">drawer</reimplements>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSelected</declname>
+        </param>
+        <briefdescription>
+<para>Straight drawing of an element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper left corner of a drawing area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of an area. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyLayoutPane.h" line="23" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BoxyBaseComposite</label>
+        <link refid="class_boxy_base_composite"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyLayoutPane</label>
+        <link refid="class_boxy_layout_pane"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BoxyBaseComposite</label>
+        <link refid="class_boxy_base_composite"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyLayoutPane</label>
+        <link refid="class_boxy_layout_pane"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/BoxyLayoutPane.h" line="15" column="1" bodyfile="src/BoxyLayoutPane.h" bodystart="16" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_boxy_base_composite_1a774539aa536750aa8c3e452f08cfdb56" prot="public" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>BoxyBaseComposite</name></member>
+      <member refid="class_boxy_layout_pane_1a852afef1c6e39cf8b349da0327006e20" prot="public" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>BoxyLayoutPane</name></member>
+      <member refid="class_boxy_base_field_1af645f46d791d49d39ea5799805c1363d" prot="public" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>Draw</name></member>
+      <member refid="class_boxy_layout_pane_1ad6bb966a18931c47a428a16c27a14ab7" prot="private" virt="virtual"><scope>BoxyLayoutPane</scope><name>drawer</name></member>
+      <member refid="class_boxy_base_composite_1a167c2ec53e32137cc8b86ce32382d8bd" prot="protected" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>focusChild</name></member>
+      <member refid="class_boxy_base_composite_1a056a99041d920c0529581d85b62cd3bb" prot="public" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>IsFocused</name></member>
+      <member refid="class_boxy_base_composite_1a033d598f37fc36848719b442c6932ced" prot="public" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>IsFocused</name></member>
+      <member refid="class_boxy_base_field_1a67f9d6f5831e1be83f9b4d7ab095cf49" prot="public" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>IsHidden</name></member>
+      <member refid="class_boxy_base_composite_1aa13f412ac9b7b8b4ab334109c52222f5" prot="public" virt="virtual"><scope>BoxyLayoutPane</scope><name>Key</name></member>
+      <member refid="class_boxy_layout_pane_1a95b422ebf41b15ca02b5e45e9f7a778b" prot="private" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>mCount</name></member>
+      <member refid="class_boxy_layout_pane_1ac9403ef7f341f30337d1c5ff3d97f1a9" prot="private" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>mFocused</name></member>
+      <member refid="class_boxy_layout_pane_1a48a84aae7c24af5e8c51021f329f7486" prot="private" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>mItems</name></member>
+      <member refid="class_boxy_layout_pane_1a004fb2a068dc8e29b3e65dd179c0652d" prot="private" virt="virtual"><scope>BoxyLayoutPane</scope><name>onKey</name></member>
+      <member refid="class_boxy_layout_pane_1a15bd0f34dec79c37df735c741cce928f" prot="public" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>SetItems</name></member>
+      <member refid="class_boxy_base_field_1a693f78d6885208b9adeafde504f79134" prot="protected" virt="non-virtual"><scope>BoxyLayoutPane</scope><name>updateView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

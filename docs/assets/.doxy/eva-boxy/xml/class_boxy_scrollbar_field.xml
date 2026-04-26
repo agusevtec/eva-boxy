@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_boxy_scrollbar_field" kind="class" language="C++" prot="public">
+    <compoundname>BoxyScrollbarField</compoundname>
+    <basecompoundref refid="class_boxy_base_element" prot="public" virt="non-virtual">BoxyBaseElement</basecompoundref>
+    <derivedcompoundref refid="class_boxy_scrollbar" prot="public" virt="non-virtual">BoxyScrollbar</derivedcompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_boxy_scrollbar_field_1a4ef1c8118134bafc752f2a57533e880f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BoxyScrollbarField::mPosition</definition>
+        <argsstring></argsstring>
+        <name>mPosition</name>
+        <qualifiedname>BoxyScrollbarField::mPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyScrollbar.h" line="20" column="7" bodyfile="src/BoxyScrollbar.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_boxy_scrollbar_field_1a9e97a35ec580ca404e449be89f46538e" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned BoxyScrollbarField::mCount</definition>
+        <argsstring></argsstring>
+        <name>mCount</name>
+        <qualifiedname>BoxyScrollbarField::mCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyScrollbar.h" line="21" column="12" bodyfile="src/BoxyScrollbar.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_boxy_scrollbar_field_1a90f12d8a6982c44dae40056f470c6fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BoxyScrollbarField::BoxyScrollbarField</definition>
+        <argsstring>(unsigned aCount)</argsstring>
+        <name>BoxyScrollbarField</name>
+        <qualifiedname>BoxyScrollbarField::BoxyScrollbarField</qualifiedname>
+        <param>
+          <type>unsigned</type>
+          <declname>aCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyScrollbar.h" line="11" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_scrollbar_field_1ac84c3d446dca5222005b3dec267a6843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BoxyScrollbarField::SetPosition</definition>
+        <argsstring>(int aPosition)</argsstring>
+        <name>SetPosition</name>
+        <qualifiedname>BoxyScrollbarField::SetPosition</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>aPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyScrollbar.h" line="12" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_boxy_scrollbar_field_1adad96980e5931faa024e3e8299e77843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BoxyScrollbarField::GetPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetPosition</name>
+        <qualifiedname>BoxyScrollbarField::GetPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyScrollbar.h" line="13" column="7"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_boxy_scrollbar_field_1afdf00e9eaf599b54b311556ef62b794b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void BoxyScrollbarField::IndeedDrawer</definition>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected, unsigned aPosition, unsigned aCount)</argsstring>
+        <name>IndeedDrawer</name>
+        <qualifiedname>BoxyScrollbarField::IndeedDrawer</qualifiedname>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSelected</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>aPosition</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>aCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyScrollbar.h" line="14" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_boxy_scrollbar_field_1ad6ad66409e25d7d26ddbef527eef9c4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BoxyScrollbarField::drawer</definition>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>BoxyScrollbarField::drawer</qualifiedname>
+        <reimplements refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22">drawer</reimplements>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSelected</declname>
+        </param>
+        <briefdescription>
+<para>Straight drawing of an element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>upper left corner of a drawing area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of an area. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BoxyScrollbar.h" line="17" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="4">
+        <label>BoxyScrollbar</label>
+        <link refid="class_boxy_scrollbar"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BoxyScrollbarField</label>
+        <link refid="class_boxy_scrollbar_field"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BoxyBaseElement</label>
+        <link refid="class_boxy_base_element"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BoxyBaseField</label>
+        <link refid="class_boxy_base_field"/>
+      </node>
+      <node id="1">
+        <label>BoxyScrollbarField</label>
+        <link refid="class_boxy_scrollbar_field"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/BoxyScrollbar.h" line="8" column="1" bodyfile="src/BoxyScrollbar.h" bodystart="9" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_boxy_scrollbar_field_1a90f12d8a6982c44dae40056f470c6fb8" prot="public" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>BoxyScrollbarField</name></member>
+      <member refid="class_boxy_base_field_1af645f46d791d49d39ea5799805c1363d" prot="public" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>Draw</name></member>
+      <member refid="class_boxy_scrollbar_field_1ad6ad66409e25d7d26ddbef527eef9c4a" prot="private" virt="virtual"><scope>BoxyScrollbarField</scope><name>drawer</name></member>
+      <member refid="class_boxy_scrollbar_field_1adad96980e5931faa024e3e8299e77843" prot="public" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>GetPosition</name></member>
+      <member refid="class_boxy_scrollbar_field_1afdf00e9eaf599b54b311556ef62b794b" prot="public" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>IndeedDrawer</name></member>
+      <member refid="class_boxy_base_field_1a67f9d6f5831e1be83f9b4d7ab095cf49" prot="public" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>IsHidden</name></member>
+      <member refid="class_boxy_base_element_1aef543820bc9144b5eaeea838ffcd90d4" prot="public" virt="virtual"><scope>BoxyScrollbarField</scope><name>Key</name></member>
+      <member refid="class_boxy_scrollbar_field_1a9e97a35ec580ca404e449be89f46538e" prot="private" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>mCount</name></member>
+      <member refid="class_boxy_scrollbar_field_1a4ef1c8118134bafc752f2a57533e880f" prot="private" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>mPosition</name></member>
+      <member refid="class_boxy_scrollbar_field_1ac84c3d446dca5222005b3dec267a6843" prot="public" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>SetPosition</name></member>
+      <member refid="class_boxy_base_field_1a693f78d6885208b9adeafde504f79134" prot="protected" virt="non-virtual"><scope>BoxyScrollbarField</scope><name>updateView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
