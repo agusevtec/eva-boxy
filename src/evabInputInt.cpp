@@ -19,7 +19,7 @@ namespace evab
   void InputIntField::SetValue(int aValue)
   {
     mValue = aValue;
-    updateView();
+    Redraw();
   }
 
   int InputIntField::GetValue()

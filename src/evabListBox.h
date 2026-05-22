@@ -1,13 +1,13 @@
 #pragma once
 
 #include "evabSlidingMethods.h"
-#include "evabBaseComposite.h"
+#include "..\..\src\evabCompositeBase.h"
 #include <evaHandler.h>
 
 namespace evab
 {
 
-  class ListBox : public BaseComposite
+  class ListBox : public CompositeBase
   {
   public:
     enum EventType
@@ -15,13 +15,13 @@ namespace evab
       EVENT_ITEM_MODIFIED = 1,
       EVENT_SELECTION_CHANGED = 2
     };
-    ListBox(BaseComposite *aParent, SlidingMethodBase *aSlidingMethod);
+    ListBox(CompositeBase *aParent, SlidingMethodBase *aSlidingMethod);
     virtual ~ListBox() = default;
-    ListBox &SetItems(BaseField *aItems[], int aCount);
+    ListBox &SetItems(ElementBase *aItems[], int aCount);
     ListBox &SetGap(unsigned char aGap);
     ListBox &SetReadOnly(bool aIsReadonly);
     ListBox &SetOnItemModified(eva::IHandler *aOnItemModifyDelegate);
-    BaseField *GetItem(unsigned char aIndex);
+    ElementBase *GetItem(unsigned char aIndex);
     void Select(int mIndex);
     int Selected();
     int Count();
@@ -29,10 +29,10 @@ namespace evab
 
   private:
     void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override;
-    bool onKey(char aKey) override;
+    bool onResidualKey(char aKey) override;
 
   private:
-    BaseField **mItems = nullptr;
+    ElementBase **mItems = nullptr;
     SlidingMethodBase *mSlidingMethod;
     eva::IHandler *mOnItemModifyDelegate = nullptr;
     unsigned char mGap = 1;

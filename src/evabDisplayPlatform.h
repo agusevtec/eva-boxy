@@ -2,7 +2,7 @@
 #define EVAB_DISPLAY_PLATFORM_H
 
 #include "evabCoor.h"
-#include "evabBaseElement.h"
+#include "evabElementBase.h"
 
 namespace evab
 {
@@ -21,13 +21,13 @@ namespace evab
     virtual void Fill(const char aGlyph, Coor aPos, Coor aSize, unsigned char aMarkup) = 0;
     virtual void Display(Coor aPos, Coor aSize, const char *aText, unsigned char aAlign, unsigned char aMarkup = 0) = 0;
     virtual Coor Size() = 0;
-    void Draw(BaseElement *aGroundElement = nullptr);
+    void Draw(ElementBase *aGroundElement = nullptr);
     void Key(char aKey);
     void SetFreeze(int aFreeze);
     static DisplayPlatform *Instance(DisplayPlatform *aPlatform = nullptr);
 
   private:
-    BaseElement *mGroundElement = nullptr;
+    ElementBase *mGroundElement = nullptr;
   };
 
 }

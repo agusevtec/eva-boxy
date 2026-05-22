@@ -1,12 +1,12 @@
 #pragma once
 
-#include "evabBaseElement.h"
+#include "evabElementBase.h"
 #include <evaHandler.h>
 
 namespace evab
 {
 
-  class ScrollbarField : public BaseElement
+  class ScrollbarField : public ElementBase
   {
   public:
     ScrollbarField(unsigned aCount);

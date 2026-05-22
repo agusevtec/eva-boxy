@@ -1,12 +1,12 @@
 #pragma once
 
-#include "evabBaseElement.h"
+#include "evabElementBase.h"
 #include <evaHandler.h>
 
 namespace evab
 {
 
-  class ButtonListItem : public BaseElement
+  class ButtonListItem : public ElementBase
   {
   public:
     ButtonListItem(const char *aName);

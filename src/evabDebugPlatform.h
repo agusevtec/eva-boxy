@@ -18,7 +18,7 @@ namespace evab
     void invoke(void *msgSender, eva::CallbackInfo cbInfo) override;
 
   private:
-    char mField[7][13];
+    char mField[8][16];
     eva::RepeatTimer t;
   };
 

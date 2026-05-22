@@ -1,11 +1,11 @@
 #pragma once
 
-#include "evabBaseField.h"
+#include "evabElementBase.h"
 
 namespace evab
 {
 
-  class BatteryIndicator : public BaseField
+  class BatteryIndicator : public ElementBase
   {
   public:
     void SetVoltage(float aVoltage);

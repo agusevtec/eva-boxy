@@ -1,25 +1,25 @@
 #pragma once
 
-#include "evabBaseComposite.h"
+#include "..\..\src\evabCompositeBase.h"
 
 namespace evab
 {
 
   struct LayoutPaneItem
   {
-    BaseElement *Element;
+    ElementBase *Element;
     Coor Position;
     Coor Size;
   };
 
-  class LayoutPane : public BaseComposite
+  class LayoutPane : public CompositeBase
   {
   public:
-    LayoutPane(BaseComposite *aContainer);
+    LayoutPane(CompositeBase *aContainer);
     void SetItems(LayoutPaneItem aItems[], int aCount);
 
   private:
-    bool onKey(char aKey) override;
+    bool onResidualKey(char aKey) override;
     void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override;
 
   private:

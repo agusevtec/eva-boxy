@@ -58,7 +58,7 @@ namespace evab
       return false;
     if (mOnPositionChanged)
       mOnPositionChanged->invoke(this, {EVENT_POSITION_CHANGED, delta});
-    updateView();
+    Redraw();
     return true;
   }
 

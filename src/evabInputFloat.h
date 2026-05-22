@@ -1,12 +1,12 @@
 #pragma once
 
-#include "evabBaseElement.h"
+#include "evabElementBase.h"
 #include <evaHandler.h>
 
 namespace evab
 {
 
-  class InputFloatField : public BaseElement
+  class InputFloatField : public ElementBase
   {
   public:
     InputFloatField(const char *aName, float aValue);

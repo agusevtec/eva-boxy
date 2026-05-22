@@ -4,7 +4,7 @@
 namespace evab
 {
 
-  LayoutPane::LayoutPane(BaseComposite *aContainer) : BaseComposite(aContainer)
+  LayoutPane::LayoutPane(CompositeBase *aContainer) : CompositeBase(aContainer)
   {
   }
 
@@ -19,7 +19,7 @@ namespace evab
     }
   }
 
-  bool LayoutPane::onKey(char aKey)
+  bool LayoutPane::onResidualKey(char aKey)
   {
     if (mCount == 0)
       return false;

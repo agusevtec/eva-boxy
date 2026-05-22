@@ -10,7 +10,7 @@ namespace evab
   void BatteryIndicator::SetVoltage(float aVoltage)
   {
     mVoltage = aVoltage;
-    updateView();
+    Redraw();
   }
 
   void BatteryIndicator::drawer(Coor aPos, Coor aSize, unsigned char aSelected)

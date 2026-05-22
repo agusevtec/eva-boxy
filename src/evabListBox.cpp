@@ -4,12 +4,12 @@
 namespace evab
 {
 
-  ListBox::ListBox(BaseComposite *aParent, SlidingMethodBase *aSlidingMethod)
-      : BaseComposite(aParent), mSlidingMethod(aSlidingMethod)
+  ListBox::ListBox(CompositeBase *aParent, SlidingMethodBase *aSlidingMethod)
+      : CompositeBase(aParent), mSlidingMethod(aSlidingMethod)
   {
   }
 
-  ListBox &ListBox::SetItems(BaseField *aItems[], int aCount)
+  ListBox &ListBox::SetItems(ElementBase *aItems[], int aCount)
   {
     mItems = aItems;
     mSlidingMethod->Count = aCount;
@@ -34,14 +34,14 @@ namespace evab
     return *this;
   }
 
-  BaseField *ListBox::GetItem(unsigned char aIndex)
+  ElementBase *ListBox::GetItem(unsigned char aIndex)
   {
     if (aIndex < mSlidingMethod->Count)
       return mItems[aIndex];
     return nullptr;
   }
 
-  bool ListBox::onKey(char aKey)
+  bool ListBox::onResidualKey(char aKey)
   {
     if (mIsReadOnly)
       return false;
@@ -51,7 +51,7 @@ namespace evab
     if (aKey == 'u')
     {
       mSlidingMethod->SelectRelative(-1);
-      updateView();
+      Redraw();
       if (mOnItemModifyDelegate && oldSelected != mSlidingMethod->Selected())
         mOnItemModifyDelegate->invoke(this, {EVENT_SELECTION_CHANGED, mSlidingMethod->Selected()});
       return true;
@@ -59,7 +59,7 @@ namespace evab
     if (aKey == 'd')
     {
       mSlidingMethod->SelectRelative(+1);
-      updateView();
+      Redraw();
       if (mOnItemModifyDelegate && oldSelected != mSlidingMethod->Selected())
         mOnItemModifyDelegate->invoke(this, {EVENT_SELECTION_CHANGED, mSlidingMethod->Selected()});
       return true;

@@ -5,7 +5,7 @@ namespace evab
 
   char stringTemp[20];
 
-  void DisplayPlatform::Draw(BaseElement *aGroundElement)
+  void DisplayPlatform::Draw(ElementBase *aGroundElement)
   {
     if (!mGroundElement && aGroundElement)
       mGroundElement = aGroundElement;

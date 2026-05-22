@@ -22,7 +22,7 @@ namespace evab
   void InputFloatField::SetValue(float aValue)
   {
     mValue = aValue;
-    updateView();
+    Redraw();
   }
 
   float InputFloatField::GetValue()

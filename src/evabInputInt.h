@@ -1,12 +1,12 @@
 #pragma once
 
-#include "evabBaseElement.h"
+#include "evabElementBase.h"
 #include <evaHandler.h>
 
 namespace evab
 {
 
-  class InputIntField : public BaseElement
+  class InputIntField : public ElementBase
   {
   public:
     InputIntField(const char *aName, int aValue);

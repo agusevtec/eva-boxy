@@ -28,8 +28,4 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-pushd "libraries/$repo_name" > /dev/null
-git clone $1
-popd > /dev/null
-
 echo "Successfully cloned $repo_name"
