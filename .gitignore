@@ -39,6 +39,4 @@
 
 # debug information files
 *.dwo
-AUnit
-EpoxyDuino
-eva-core-sk
+libraries
