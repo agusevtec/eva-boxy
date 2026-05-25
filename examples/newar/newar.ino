@@ -1,6 +1,7 @@
 #include "TileScreenBase.h"
 #include "Tile64PagedScreenBase.h"
 #include "SSH1106_128x64.h"
+#include "Font1Tile8x8.h"
 
 class SlicerStub : public TileScreenBase
 {
@@ -31,7 +32,7 @@ public:
     }
 };
 
-class DisplayStub : public Tile64PagedScreenBase
+class DisplayStub : public Tile64PagedScreenBase<Font1Tile8x8>
 {
     char mTile[24][25];
 
