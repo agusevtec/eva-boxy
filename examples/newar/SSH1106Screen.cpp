@@ -1,8 +1,8 @@
-// SSH1106_128x64.cpp
-#include "SSH1106_128x64.h"
+// SSH1106TiledScreen.cpp
+#include "SSH1106Screen.h"
 #include <Wire.h>
 
-SSH1106_128x64::SSH1106_128x64()
+SSH1106Screen::SSH1106Screen()
     : _address(0x3C)
 {
   Wire.begin();
@@ -47,7 +47,7 @@ SSH1106_128x64::SSH1106_128x64()
   sendCommand(0xAF); // display on
 }
 
-void SSH1106_128x64::DrawVerticalSlice(Coor aPosition, unsigned char aColumn, unsigned char aSlice)
+void SSH1106Screen::DrawVerticalSlice(Coor aPosition, unsigned char aColumn, unsigned char aSlice)
 {
   // aPosition.X: 0-15 (16 тайлов по горизонтали)
   // aPosition.Y: 0-7 (8 тайлов по вертикали)
@@ -62,7 +62,7 @@ void SSH1106_128x64::DrawVerticalSlice(Coor aPosition, unsigned char aColumn, un
   Wire.endTransmission();
 }
 
-void SSH1106_128x64::sendCommand(unsigned char cmd)
+void SSH1106Screen::sendCommand(unsigned char cmd)
 {
   Wire.beginTransmission(_address);
   Wire.write(0x00); // command mode
@@ -70,23 +70,23 @@ void SSH1106_128x64::sendCommand(unsigned char cmd)
   Wire.endTransmission();
 }
 
-void SSH1106_128x64::setPage(unsigned char page)
+void SSH1106Screen::setPage(unsigned char page)
 {
   sendCommand(0xB0 | (page & 0x07)); // page 0-7
 }
 
-void SSH1106_128x64::setColumn(unsigned char col)
+void SSH1106Screen::setColumn(unsigned char col)
 {
   sendCommand(0x00 | (col & 0x0F));        // lower 4 bits
   sendCommand(0x10 | ((col >> 4) & 0x07)); // higher 3 bits
 }
 
-Coor SSH1106_128x64::Size()
+Coor SSH1106Screen::Size()
 {
   return {16, 8};
 }
 
-void SSH1106_128x64::ClearTile(Coor aPosition)
+void SSH1106Screen::ClearTile(Coor aPosition)
 {
   setPage(aPosition.Y);
   setColumn(aPosition.X * 8 + 2);
@@ -102,7 +102,7 @@ void SSH1106_128x64::ClearTile(Coor aPosition)
   Wire.endTransmission();
 }
 
-void SSH1106_128x64::clearDisplay()
+void SSH1106Screen::clearDisplay()
 {
   for (unsigned char page = 0; page < 8; page++)
   {

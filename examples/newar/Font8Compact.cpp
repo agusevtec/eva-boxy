@@ -1,6 +1,6 @@
-#include "Font1Tile8x8.h"
+#include "Font8Compact.h"
 
-const uint8_t Font1Tile8x8::kCharmap[][5] PROGMEM = {
+const uint8_t Font8Compact::kCharmap[][5] PROGMEM = {
     {0x00, 0x00, 0x00, 0x00, 0x00}, // ' '
     {0x00, 0x00, 0x6f, 0x00, 0x00}, // '!'
     {0x00, 0x07, 0x00, 0x07, 0x00}, // '"'
@@ -98,7 +98,7 @@ const uint8_t Font1Tile8x8::kCharmap[][5] PROGMEM = {
     {0x04, 0x02, 0x04, 0x08, 0x04} // '~'
 };
 
-static uint8_t Font1Tile8x8::getSlice(char charIndex, uint8_t column)
+static uint8_t Font8Compact::getSlice(char charIndex, uint8_t column)
 {
     {
         if (charIndex > 126)

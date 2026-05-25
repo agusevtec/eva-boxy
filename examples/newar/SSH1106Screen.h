@@ -2,14 +2,14 @@
 #pragma once
 
 #include "Coor.h"
-#include "Font2Tile8x8.h"
-#include "Tile64PagedScreenBase.h"
+#include "Font8Standart.h"
+#include "Page8ScreenBase.h"
 
 
-class SSH1106_128x64 : public Tile64PagedScreenBase<Font2Tile8x8>
+class SSH1106Screen : public Page8ScreenBase<Font8Standart>
 {
 public:
-    SSH1106_128x64();
+    SSH1106Screen();
     void clearDisplay();
 
 protected:

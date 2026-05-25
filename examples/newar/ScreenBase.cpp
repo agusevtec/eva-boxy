@@ -1,26 +1,26 @@
-#include "TileScreenBase.h"
+#include "ScreenBase.h"
 #include <string.h>
 
 // ========== Вспомогательные методы для F-строк ==========
-uint8_t TileScreenBase::flashStrLen(const __FlashStringHelper *str)
+uint8_t ScreenBase::flashStrLen(const __FlashStringHelper *str)
 {
   return strlen_P((const char *)str);
 }
 
-char TileScreenBase::flashStrRead(const __FlashStringHelper *str, uint8_t index)
+char ScreenBase::flashStrRead(const __FlashStringHelper *str, uint8_t index)
 {
   return pgm_read_byte((const char *)str + index);
 }
 
 // ========== Универсальные методы расчёта смещения ==========
-uint8_t TileScreenBase::calcLeftOffset(Coor aSize, uint8_t textLen)
+uint8_t ScreenBase::calcLeftOffset(Coor aSize, uint8_t textLen)
 {
   (void)aSize;   // Не используется для левого выравнивания
   (void)textLen; // Не используется для левого выравнивания
   return 0;
 }
 
-uint8_t TileScreenBase::calcCenterOffset(Coor aSize, uint8_t textLen)
+uint8_t ScreenBase::calcCenterOffset(Coor aSize, uint8_t textLen)
 {
   uint8_t scale = aSize.Y;
   uint8_t textWidth = textLen * scale;
@@ -30,7 +30,7 @@ uint8_t TileScreenBase::calcCenterOffset(Coor aSize, uint8_t textLen)
   return (offset > 0) ? offset : 0;
 }
 
-uint8_t TileScreenBase::calcRightOffset(Coor aSize, uint8_t textLen)
+uint8_t ScreenBase::calcRightOffset(Coor aSize, uint8_t textLen)
 {
   uint8_t scale = aSize.Y;
   uint8_t areaWidth = aSize.X;
@@ -41,7 +41,7 @@ uint8_t TileScreenBase::calcRightOffset(Coor aSize, uint8_t textLen)
 }
 
 // ========== Базовый метод для обычных строк ==========
-void TileScreenBase::printTextInArea(Coor aPosition, Coor aSize, const char *text,
+void ScreenBase::printTextInArea(Coor aPosition, Coor aSize, const char *text,
                                      unsigned char aColor, uint8_t offset)
 {
   Coor displaySize = Size();
@@ -65,7 +65,7 @@ void TileScreenBase::printTextInArea(Coor aPosition, Coor aSize, const char *tex
 }
 
 // ========== Базовый метод для F-строк ==========
-void TileScreenBase::printTextInArea(Coor aPosition, Coor aSize, const __FlashStringHelper *text,
+void ScreenBase::printTextInArea(Coor aPosition, Coor aSize, const __FlashStringHelper *text,
                                      unsigned char aColor, uint8_t offset)
 {
   Coor displaySize = Size();
@@ -90,7 +90,7 @@ void TileScreenBase::printTextInArea(Coor aPosition, Coor aSize, const __FlashSt
 }
 
 // ========== Публичные методы для обычных строк ==========
-void TileScreenBase::TextLeft(Coor aPosition, Coor aSize,
+void ScreenBase::TextLeft(Coor aPosition, Coor aSize,
                               const char *text, unsigned char aColor)
 {
   uint8_t textLen = strlen(text);
@@ -98,7 +98,7 @@ void TileScreenBase::TextLeft(Coor aPosition, Coor aSize,
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
-void TileScreenBase::TextCenter(Coor aPosition, Coor aSize,
+void ScreenBase::TextCenter(Coor aPosition, Coor aSize,
                                 const char *text, unsigned char aColor)
 {
   uint8_t textLen = strlen(text);
@@ -106,7 +106,7 @@ void TileScreenBase::TextCenter(Coor aPosition, Coor aSize,
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
-void TileScreenBase::TextRight(Coor aPosition, Coor aSize,
+void ScreenBase::TextRight(Coor aPosition, Coor aSize,
                                const char *text, unsigned char aColor)
 {
   uint8_t textLen = strlen(text);
@@ -115,7 +115,7 @@ void TileScreenBase::TextRight(Coor aPosition, Coor aSize,
 }
 
 // ========== Публичные методы для F-строк ==========
-void TileScreenBase::TextLeft(Coor aPosition, Coor aSize,
+void ScreenBase::TextLeft(Coor aPosition, Coor aSize,
                               const __FlashStringHelper *text, unsigned char aColor)
 {
   uint8_t textLen = flashStrLen(text);
@@ -123,7 +123,7 @@ void TileScreenBase::TextLeft(Coor aPosition, Coor aSize,
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
-void TileScreenBase::TextCenter(Coor aPosition, Coor aSize,
+void ScreenBase::TextCenter(Coor aPosition, Coor aSize,
                                 const __FlashStringHelper *text, unsigned char aColor)
 {
   uint8_t textLen = flashStrLen(text);
@@ -131,7 +131,7 @@ void TileScreenBase::TextCenter(Coor aPosition, Coor aSize,
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
-void TileScreenBase::TextRight(Coor aPosition, Coor aSize,
+void ScreenBase::TextRight(Coor aPosition, Coor aSize,
                                const __FlashStringHelper *text, unsigned char aColor)
 {
   uint8_t textLen = flashStrLen(text);
@@ -139,13 +139,13 @@ void TileScreenBase::TextRight(Coor aPosition, Coor aSize,
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
-void TileScreenBase::ClearTile(Coor aPosition)
+void ScreenBase::ClearTile(Coor aPosition)
 {
   DrawSymbol(aPosition, Coor(1, 1), ' ', 0);
 }
 
 // ========== Clear ==========
-void TileScreenBase::Clear(Coor aPosition, Coor aSize)
+void ScreenBase::Clear(Coor aPosition, Coor aSize)
 {
   Coor displaySize = Size();
   for (uint8_t x = 0; x < aSize.X; x++)

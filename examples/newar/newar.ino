@@ -1,9 +1,9 @@
-#include "TileScreenBase.h"
-#include "Tile64PagedScreenBase.h"
-#include "SSH1106_128x64.h"
-#include "Font1Tile8x8.h"
+#include "ScreenBase.h"
+#include "Page8ScreenBase.h"
+#include "SSH1106Screen.h"
+#include "Font8Compact.h"
 
-class SlicerStub : public TileScreenBase
+class SlicerStub : public ScreenBase
 {
     char mScreen[8][16];
 
@@ -32,7 +32,7 @@ public:
     }
 };
 
-class DisplayStub : public Tile64PagedScreenBase<Font1Tile8x8>
+class DisplayStub : public Page8ScreenBase<Font8Standart>
 {
     char mTile[24][25];
 
@@ -85,7 +85,7 @@ void setup()
     // ds.DrawVerticalSlice({0,0}, 3, 0xff);
     // ds.Show();
 
-    static SSH1106_128x64 displ;
+    static SSH1106Screen displ;
     // for (int i = 0; i < 8; i++)
     //   displ.TextLeft({ 0, i }, { 16, 1 }, "MMMMMMMMMMMMMMMM", 1);
     //displ.clearDisplay();

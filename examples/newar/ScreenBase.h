@@ -2,7 +2,7 @@
 #include "Coor.h"
 #include <Arduino.h>
 
-class TileScreenBase
+class ScreenBase
 {
 public:
     virtual Coor Size() = 0;

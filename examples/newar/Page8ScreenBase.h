@@ -2,10 +2,10 @@
 #pragma once
 
 #include "Coor.h"
-#include "TileScreenBase.h"
+#include "ScreenBase.h"
 
 template <class TFont>
-class Tile64PagedScreenBase: public TileScreenBase
+class Page8ScreenBase: public ScreenBase
 {
 public:
     void DrawSymbol(Coor aPosition, Coor aSize, char aSymbol, unsigned char aColor)
