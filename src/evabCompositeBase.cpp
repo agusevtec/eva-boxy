@@ -33,6 +33,7 @@ namespace evab
     return onResidualKey(aKey);
   }
 
+
   bool CompositeBase::onResidualKey(char aKey)
   {
     return false;

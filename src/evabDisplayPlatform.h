@@ -21,6 +21,8 @@ namespace evab
     virtual void Fill(const char aGlyph, Coor aPos, Coor aSize, unsigned char aMarkup) = 0;
     virtual void Display(Coor aPos, Coor aSize, const char *aText, unsigned char aAlign, unsigned char aMarkup = 0) = 0;
     virtual Coor Size() = 0;
+    void Clear(Coor aPos, Coor aSize) {};
+    
     void Draw(ElementBase *aGroundElement = nullptr);
     void Key(char aKey);
     void SetFreeze(int aFreeze);

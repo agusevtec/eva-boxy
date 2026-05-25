@@ -15,11 +15,20 @@ namespace evab
     return mSize == 0;
   }
 
+  void ElementBase::Hide()
+  {
+    mSize = 0;
+    hidder();
+  }
+
   void ElementBase::Draw(Coor aPos, Coor aSize, unsigned char aSelected)
   {
     mPos = (aSelected << 7) | (aPos.X << 3) | (0x7 & aPos.Y);
     mSize = (aSize.X << 4) | (0xf & aSize.Y);
-    drawer(aPos, aSize, aSelected);
+    if (mSize)
+      drawer(aPos, aSize, aSelected);
+    else
+      hidder();
   }
 
   bool ElementBase::Key(char aKey)
