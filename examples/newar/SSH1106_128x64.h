@@ -11,6 +11,7 @@ public:
     
 protected:
     void DrawVerticalSlice(Coor aPosition, unsigned char aColumn, unsigned char aSlice) override;
+    void ClearTile(Coor aPosition) override;
     Coor Size() override;
 private:
     void sendCommand(unsigned char cmd);

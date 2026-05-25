@@ -16,9 +16,9 @@ SSH1106_128x64::SSH1106_128x64()
   sendCommand(0x3F);  // 64 lines
 
   sendCommand(0xD3);  // display offset
-  sendCommand(0x00);
+  sendCommand(0x00);  // start line 0
 
-  sendCommand(0x40);  // start line 0
+  sendCommand(0x40);
 
   sendCommand(0x8D);  // charge pump
   sendCommand(0x14);  // enable
@@ -52,7 +52,7 @@ void SSH1106_128x64::DrawVerticalSlice(Coor aPosition, unsigned char aColumn, un
   // aSlice: байт для записи в этот тайл (8 пикселей вертикально)
 
   setPage(aPosition.Y);
-  setColumn(aPosition.X * 8 + aColumn);
+  setColumn(aPosition.X * 8 + aColumn + 2);
 
   Wire.beginTransmission(_address);
   Wire.write(0x40);  // data mode
@@ -80,20 +80,35 @@ Coor SSH1106_128x64::Size() {
   return { 16, 8 };
 }
 
+void SSH1106_128x64::ClearTile(Coor aPosition) {
+  setPage(aPosition.Y);
+  setColumn(aPosition.X * 8 + 2);
+
+  Wire.beginTransmission(_address);
+  Wire.write(0x40);  // data mode
+
+  for (unsigned char col = 0; col < 16; col++) {
+    Wire.write(0x00);
+  }
+
+  Wire.endTransmission();
+}
+
+
 void SSH1106_128x64::clearDisplay() {
-    for (unsigned char page = 0; page < 8; page++) {
-        for (unsigned char seg = 0; seg < 4; seg++) {  // 16 сегментов по 8 пикселей = 128
-            setPage(page);
-            setColumn(seg * 8 * 4);
-            
-            Wire.beginTransmission(_address);
-            Wire.write(0x40);  // data mode
-            
-            for (unsigned char col = 0; col < 128; col++) {
-                Wire.write(0x00);
-            }
-            
-            Wire.endTransmission();
-        }
+  for (unsigned char page = 0; page < 8; page++) {
+    for (unsigned char seg = 0; seg < 8; seg++) {  // 16 сегментов по 8 пикселей = 128
+      setPage(page);
+      setColumn(seg * 16 + 2);
+
+      Wire.beginTransmission(_address);
+      Wire.write(0x40);  // data mode
+
+      for (unsigned char col = 0; col < 16; col++) {
+        Wire.write(0x00);
+      }
+
+      Wire.endTransmission();
     }
+  }
 }

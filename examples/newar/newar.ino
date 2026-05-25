@@ -85,23 +85,29 @@ void setup()
     // ds.Show();
 
     static SSH1106_128x64 displ;
-    for (int i = 0; i < 8; i++)
-      displ.TextLeft({ 0, i }, { 16, 1 }, "xxxxxxxxxxxxxxxx", 1);
-    displ.clearDisplay();
+    // for (int i = 0; i < 8; i++)
+    //   displ.TextLeft({ 0, i }, { 16, 1 }, "MMMMMMMMMMMMMMMM", 1);
+    //displ.clearDisplay();
 
-    // displ.TextLeft({0, 0}, {10, 2}, F("Temp."), 1);
-    // displ.TextCenter({10, 2}, {6, 2}, F("1.7"), 1);
-    // delay(1000);
-    // displ.TextCenter({10, 2}, {6, 2}, F("2.3"), 1);
-    // delay(1000);
-    // displ.TextCenter({10, 2}, {6, 2}, F("5.5"), 1);
-    // delay(1000);
-    // displ.TextCenter({10, 2}, {6, 2}, F("4.1"), 1);
-    // delay(1000);
-    // displ.TextCenter({10, 2}, {6, 2}, F("3.8"), 1);
-    // delay(1000);
-    // displ.TextCenter({10, 2}, {6, 2}, F("4.4"), 1);
-    // delay(1000);
+    displ.TextCenter({0, 0}, {16, 1}, F("Dashboard"), 1);
+    displ.TextCenter({0, 2}, {10, 1}, F("R.P.M."), 1);
+    displ.TextCenter({10, 2}, {6, 2}, F("1.7"), 1);
+    displ.TextCenter({0, 4}, {10, 1}, F("SPEED"), 1);
+    displ.TextCenter({10, 4}, {6, 2}, F("127"), 1);
+    displ.TextCenter({0, 6}, {10, 1}, F("TEMP"), 1);
+    displ.TextCenter({10, 6}, {6, 2}, F("32"), 1);
+
+    delay(1000);
+    displ.TextCenter({10, 2}, {6, 2}, F("2.3"), 1);
+    delay(1000);
+    displ.TextCenter({10, 2}, {6, 2}, F("5.5"), 1);
+    delay(1000);
+    displ.TextCenter({10, 2}, {6, 2}, F("4.1"), 1);
+    delay(1000);
+    displ.TextCenter({10, 2}, {6, 2}, F("3.8"), 1);
+    delay(1000);
+    displ.TextCenter({10, 2}, {6, 2}, F("4.4"), 1);
+    delay(1000);
 }
 
 void loop()

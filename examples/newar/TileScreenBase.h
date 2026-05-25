@@ -6,6 +6,7 @@ class TileScreenBase {
 public:
     virtual Coor Size() = 0;
     virtual void DrawSymbol(Coor position, Coor size, char symbol, unsigned char color) = 0;
+    virtual void ClearTile(Coor position);
     
     // Обычные строки
     void TextLeft(Coor aPosition, Coor aSize, const char *text, unsigned char aColor);

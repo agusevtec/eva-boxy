@@ -3,7 +3,7 @@
 
 class Tile64PagedScreenBase : public TileScreenBase {
 protected:
-    static const uint8_t kCharmap[][5] PROGMEM;
+    static const uint8_t kCharmap[][7] PROGMEM;
     uint32_t upscale(uint8_t x, uint8_t scale) ;
     uint8_t getSymbolSlice(char charIndex, unsigned char i);
 
