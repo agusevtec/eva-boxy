@@ -2,11 +2,11 @@
 #pragma once
 
 #include "Coor.h"
-#include "Font8Standart.h"
+#include "Font8Bold.h"
 #include "Page8ScreenBase.h"
 
 
-class SSH1106Screen : public Page8ScreenBase<Font8Standart>
+class SSH1106Screen : public Page8ScreenBase<Font8Bold>
 {
 public:
     SSH1106Screen();

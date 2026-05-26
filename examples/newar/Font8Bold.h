@@ -2,7 +2,7 @@
 
 #include <Arduino.h>
 
-class Font8Standart
+class Font8Bold
 {
 public:
     static uint8_t getSlice(char charIndex, uint8_t column);

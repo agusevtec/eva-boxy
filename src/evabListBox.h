@@ -56,7 +56,7 @@ namespace evab
     }
 
   private:
-    void hidder() override
+    void hider() override
     {
       for (int i = 0; i < TSlidingMethod::Count; i++)
         mItems[i]->Hide();

@@ -18,7 +18,7 @@ namespace evab
   void ElementBase::Hide()
   {
     mSize = 0;
-    hidder();
+    hider();
   }
 
   void ElementBase::Draw(Coor aPos, Coor aSize, unsigned char aSelected)
@@ -28,7 +28,7 @@ namespace evab
     if (mSize)
       drawer(aPos, aSize, aSelected);
     else
-      hidder();
+      hider();
   }
 
   bool ElementBase::Key(char aKey)

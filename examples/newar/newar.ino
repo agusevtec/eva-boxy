@@ -32,7 +32,7 @@ public:
     }
 };
 
-class DisplayStub : public Page8ScreenBase<Font8Standart>
+class DisplayStub : public Page8ScreenBase<Font8Bold>
 {
     char mTile[24][25];
 

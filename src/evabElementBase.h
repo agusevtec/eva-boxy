@@ -15,7 +15,7 @@ namespace evab
 
   private:
     virtual void drawer(Coor aPos, Coor aSize, unsigned char aSelected) = 0;
-    virtual void hidder() {};
+    virtual void hider() {};
 
   private:
     unsigned char mPos = 0;

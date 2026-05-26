@@ -1,6 +1,6 @@
-#include "Font8Standart.h"
+#include "Font8Bold.h"
 
-const uint8_t Font8Standart::kCharmap[][8] PROGMEM = {
+const uint8_t Font8Bold::kCharmap[][8] PROGMEM = {
     {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // ' '
     {0x00, 0x00, 0x00, 0xbe, 0xbe, 0x00, 0x00, 0x00}, // '!'
     {0x00, 0x0e, 0x0e, 0x00, 0x0e, 0x0e, 0x00, 0x00}, // '\"'
@@ -98,7 +98,7 @@ const uint8_t Font8Standart::kCharmap[][8] PROGMEM = {
     {0x00, 0x20, 0x30, 0x30, 0x20, 0x30, 0x10, 0x00} // '~'
 };
 
-static uint8_t Font8Standart::getSlice(char charIndex, uint8_t column)
+static uint8_t Font8Bold::getSlice(char charIndex, uint8_t column)
 {
     {
         if (charIndex > 126)
