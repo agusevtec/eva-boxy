@@ -47,14 +47,14 @@ SSH1106Screen::SSH1106Screen()
   sendCommand(0xAF); // display on
 }
 
-void SSH1106Screen::DrawVerticalSlice(Coor aPosition, unsigned char aColumn, unsigned char aSlice)
+void SSH1106Screen::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
 {
   // aPosition.X: 0-15 (16 тайлов по горизонтали)
   // aPosition.Y: 0-7 (8 тайлов по вертикали)
   // aSlice: байт для записи в этот тайл (8 пикселей вертикально)
 
   setPage(aPosition.Y);
-  setColumn(aPosition.X * 8 + aColumn + 2);
+  setColumn(aPosition.X * 8 + aSliceColumn + 1);
 
   Wire.beginTransmission(_address);
   Wire.write(0x40); // data mode

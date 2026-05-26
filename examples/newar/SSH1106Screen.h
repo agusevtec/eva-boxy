@@ -2,18 +2,20 @@
 #pragma once
 
 #include "Coor.h"
+#include "Font8Thin.h"
+#include "Font8Compact.h"
 #include "Font8Bold.h"
 #include "Page8ScreenBase.h"
 
 
-class SSH1106Screen : public Page8ScreenBase<Font8Bold>
+class SSH1106Screen : public Page8ScreenBase<Font8Thin>
 {
 public:
     SSH1106Screen();
     void clearDisplay();
 
 protected:
-    void DrawVerticalSlice(Coor aPosition, unsigned char aColumn, unsigned char aSlice) override;
+    void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
     void ClearTile(Coor aPosition) override;
     Coor Size() override;
 

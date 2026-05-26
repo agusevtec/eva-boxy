@@ -1,7 +1,7 @@
 #pragma once
 
-#include "evabSlidingMethods.h"
-#include "..\..\src\evabCompositeBase.h"
+#include <evabSlidingMethods.h>
+#include <evabCompositeBase.h>
 #include <evaHandler.h>
 
 namespace evab
@@ -27,9 +27,9 @@ namespace evab
       TSlidingMethod::Count = aCount;
       return *this;
     }
-    ListBox<TSlidingMethod> &SetGap(unsigned char aGap)
+    ListBox<TSlidingMethod> &SetItemHeight(unsigned char aItemHeight)
     {
-      mGap = aGap;
+      mItemHeight = aItemHeight;
       return *this;
     }
     ListBox<TSlidingMethod> &SetReadOnly(bool aIsReadonly)
@@ -56,29 +56,32 @@ namespace evab
     }
 
   private:
+
+    void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override
+    {
+      TSlidingMethod::PageSize = aSize.Y / mItemHeight;
+      unsigned char visibleElementsCount = 0;
+      for (int i = 0; i < TSlidingMethod::Count; i++)
+      {
+        int offset = TSlidingMethod::IndexInWindow(i) * mItemHeight;
+        if (offset >= 0)
+        {
+          mItems[i]->Draw({aPos.X, aPos.Y + offset}, {aSize.X, mItemHeight}, (!mIsReadOnly) && aSelected && (TSlidingMethod::Selected() == index));
+          visibleElementsCount++;
+        }
+        else
+        {
+          mItems[i]->Hide();
+        }
+      }
+      auto p = DisplayPlatform::Instance();
+      p->Clear({aPos.X, visibleElementsCount * mItemHeight}, {aSize.Y - visibleElementsCount * mItemHeight, 1});
+    }
+
     void hider() override
     {
       for (int i = 0; i < TSlidingMethod::Count; i++)
         mItems[i]->Hide();
-    }
-
-    void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override
-    {
-      TSlidingMethod::PageSize = aSize.Y / mGap;
-      auto p = DisplayPlatform::Instance();
-      unsigned char visibleElementsCount = 0;
-      for (int index = 0; index < TSlidingMethod::Count; index++)
-      {
-        int i = TSlidingMethod::IndexInWindow(index);
-        if (i != -1)
-        {
-          mItems[index]->Draw({aPos.X, aPos.Y + i * mGap}, {aSize.X, mGap}, (!mIsReadOnly) && aSelected && (TSlidingMethod::Selected() == index));
-          visibleElementsCount++;
-        }
-        else
-          mItems[index]->Hide();
-      }
-      p->Clear({aPos.X, visibleElementsCount * mGap}, {aSize.Y - visibleElementsCount * mGap, 1});
     }
 
     bool onResidualKey(char aKey) override
@@ -104,14 +107,17 @@ namespace evab
           mOnItemDelegate->invoke(this, {EVENT_SELECTION_CHANGED, TSlidingMethod->Selected()});
         return true;
       }
-      if (mOnItemDelegate)
+      if (aKey == 'l')
       {
-        if (aKey == 'l')
+        if (mOnItemDelegate)
         {
           mOnItemDelegate->invoke(this, {EVENT_ITEM_MODIFIED, -1});
           return true;
         }
-        if (aKey == 'r')
+      }
+      if (aKey == 'r')
+      {
+        if (mOnItemDelegate)
         {
           mOnItemDelegate->invoke(this, {EVENT_ITEM_MODIFIED, +1});
           return true;
@@ -122,7 +128,7 @@ namespace evab
 
   private:
     ElementBase **mItems = nullptr;
-    unsigned char mGap = 1;
+    unsigned char mItemHeight = 1;
     bool mIsReadOnly = false;
     eva::IHandler *mOnItemDelegate = nullptr;
   };

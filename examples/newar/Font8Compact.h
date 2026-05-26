@@ -5,7 +5,7 @@
 class Font8Compact
 {
 public:
-    static uint8_t getSlice(char charIndex, uint8_t column);
+    static uint8_t GetVerticalSlice(char aCharcode, uint8_t aSliceColumn);
 
 private:
     static const uint8_t kCharmap[][5] PROGMEM;

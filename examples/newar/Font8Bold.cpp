@@ -98,12 +98,12 @@ const uint8_t Font8Bold::kCharmap[][8] PROGMEM = {
     {0x00, 0x20, 0x30, 0x30, 0x20, 0x30, 0x10, 0x00} // '~'
 };
 
-static uint8_t Font8Bold::getSlice(char charIndex, uint8_t column)
+static uint8_t Font8Bold::GetVerticalSlice(char aCharcode, uint8_t aSliceColumn)
 {
     {
-        if (charIndex > 126)
-            charIndex = 32;
+        if (aCharcode > 126)
+            aCharcode = 32;
 
-        return pgm_read_byte(&kCharmap[charIndex - 32][column]);
+        return pgm_read_byte(&kCharmap[aCharcode - 32][aSliceColumn]);
     }
 }
