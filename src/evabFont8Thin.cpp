@@ -1,4 +1,6 @@
-#include "Font8Thin.h"
+#include <evabFont8Thin.h>
+
+using namespace evab;
 
 const uint8_t Font8Thin::kCharmap[][7] PROGMEM = {
     {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // ' '

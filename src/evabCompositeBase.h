@@ -18,7 +18,7 @@ namespace evab
 
   private:
     virtual bool onResidualKey(char aKey);
-
+    virtual void hider() = 0;
   private:
     ElementBase *mFocusedChild = nullptr;
     CompositeBase *mParent;

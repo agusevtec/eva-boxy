@@ -2,10 +2,10 @@
 #pragma once
 
 #include "Coor.h"
-#include "Font8Thin.h"
-#include "Font8Compact.h"
-#include "Font8Bold.h"
-#include "Page8ScreenBase.h"
+#include "..\..\src\evabFont8Thin.h"
+#include "..\..\src\evabFont8Compact.h"
+#include "..\..\src\evabFont8Bold.h"
+#include "..\..\src\evabPage8ScreenBase.h"
 
 
 class SSH1106Screen : public Page8ScreenBase<Font8Thin>

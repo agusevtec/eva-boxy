@@ -1,5 +1,6 @@
 #pragma once
-#include "evabCoor.h"
+#include <evabCoor.h>
+#include <evabIScreen.h>
 
 namespace evab
 {
@@ -9,12 +10,12 @@ namespace evab
   public:
     virtual bool Key(char aKey);
     void Hide();
-    void Draw(Coor aPos, Coor aSize, unsigned char aSelected);
+    void Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
     void Redraw();
     bool IsHidden();
 
   private:
-    virtual void drawer(Coor aPos, Coor aSize, unsigned char aSelected) = 0;
+    virtual void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
     virtual void hider() {};
 
   private:

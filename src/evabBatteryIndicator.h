@@ -11,7 +11,7 @@ namespace evab
     void SetVoltage(float aVoltage);
 
   private:
-    void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override;
+    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
     float mVoltage = 0;

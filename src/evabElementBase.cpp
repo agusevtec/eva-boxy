@@ -1,5 +1,5 @@
-#include "evabElementBase.h"
-
+#include <evabElementBase.h>
+#include <evabBoxy.h>
 namespace evab
 {
 
@@ -7,7 +7,7 @@ namespace evab
   {
     if (mSize == 0)
       return;
-    drawer({(0x7f & mPos) >> 3, 0x7 & mPos}, {mSize >> 4, 0xf & mSize}, mPos >> 7);
+    drawer(Boxy::Instance()->Screen(), {(0x7f & mPos) >> 3, 0x7 & mPos}, {mSize >> 4, 0xf & mSize}, mPos >> 7);
   }
 
   bool ElementBase::IsHidden()
@@ -21,12 +21,12 @@ namespace evab
     hider();
   }
 
-  void ElementBase::Draw(Coor aPos, Coor aSize, unsigned char aSelected)
+  void ElementBase::Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
-    mPos = (aSelected << 7) | (aPos.X << 3) | (0x7 & aPos.Y);
+    mPos = (aIsFocused << 7) | (aPos.X << 3) | (0x7 & aPos.Y);
     mSize = (aSize.X << 4) | (0xf & aSize.Y);
     if (mSize)
-      drawer(aPos, aSize, aSelected);
+      drawer(aScreen, aPos, aSize, aIsFocused);
     else
       hider();
   }

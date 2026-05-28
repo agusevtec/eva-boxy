@@ -10,10 +10,10 @@ namespace evab
   {
   public:
     ButtonListItem(const char *aName);
-    static void IndeedDrawer(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName);
+    static void IndeedDrawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused, const char *aName);
 
   private:
-    void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override;
+    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
     const char *mName;

@@ -12,10 +12,10 @@ namespace evab
     InputIntField(const char *aName, int aValue);
     void SetValue(int aValue);
     int GetValue();
-    static void IndeedDrawer(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName, int aValue);
+    static void IndeedDrawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused, const char *aName, int aValue);
 
   private:
-    void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override;
+    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
     const char *mName;

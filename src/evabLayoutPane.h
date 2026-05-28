@@ -20,9 +20,10 @@ namespace evab
 
   private:
     bool onResidualKey(char aKey) override;
-    void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override;
+    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
+    void hider() override;
 
-  private:
+    private:
     LayoutPaneItem *mItems = nullptr;
     int mCount = 0;
     int mFocused = -1;

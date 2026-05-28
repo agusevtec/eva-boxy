@@ -1,5 +1,4 @@
 #include "evabBatteryIndicator.h"
-#include "evabDisplayPlatform.h"
 #include <Arduino.h>
 
 namespace evab
@@ -13,14 +12,14 @@ namespace evab
     Redraw();
   }
 
-  void BatteryIndicator::drawer(Coor aPos, Coor aSize, unsigned char aSelected)
+  void BatteryIndicator::drawer(IScreen *aScreen,Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
-    DisplayPlatform *p = DisplayPlatform::Instance();
+    
     memset(stringTemp, '|', 7);
     dtostrf(mVoltage, 1, 2, stringTemp + 1);
     stringTemp[5] = 'v';
     stringTemp[7] = 0;
-    p->Display(aPos, aSize, stringTemp, PA_CENTER, aSelected);
+    aScreen->TextCenter(aPos, aSize, stringTemp, aIsFocused);
   }
 
 }

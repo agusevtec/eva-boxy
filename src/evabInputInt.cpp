@@ -5,11 +5,10 @@
 namespace evab
 {
 
-  extern char stringTemp[20];
-
-  void InputIntField::IndeedDrawer(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName, int aValue)
+  void InputIntField::IndeedDrawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused, const char *aName, int aValue)
   {
-    InputStr::IndeedDrawer(aPos, aSize, aSelected, aName, itoa(aValue, stringTemp, 10));
+    char stringTemp[20];
+    InputStr::IndeedDrawer(aScreen, aPos, aSize, aIsFocused, aName, itoa(aValue, stringTemp, 10));
   }
 
   InputIntField::InputIntField(const char *aName, int aValue) : mName(aName), mValue(aValue)
@@ -27,11 +26,9 @@ namespace evab
     return mValue;
   }
 
-  void InputIntField::drawer(Coor aPos, Coor aSize, unsigned char aSelected)
+  void InputIntField::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
-    if (IsHidden())
-      return;
-    InputIntField::IndeedDrawer(aPos, aSize, aSelected, mName, mValue);
+    InputIntField::IndeedDrawer(aScreen, aPos, aSize, aIsFocused, mName, mValue);
   }
 
   InputInt::InputInt(const char *aName, int aValue, eva::IHandler *aOnValueChangedDelegate)

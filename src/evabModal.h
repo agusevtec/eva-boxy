@@ -1,7 +1,6 @@
 #pragma once
 
 #include <evaDelayTimer.h>
-#include "evabDisplayPlatform.h"
 
 namespace evab
 {
@@ -18,7 +17,6 @@ namespace evab
 
   private:
     eva::DelayTimer mTimer;
-    DisplayPlatform *mDisplayPlatform = DisplayPlatform::Instance();
   };
 
 }

@@ -1,4 +1,4 @@
-#include "ScreenBase.h"
+#include "..\..\src\evabScreenBase.h"
 #include <string.h>
 
 // ========== Вспомогательные методы для F-строк ==========

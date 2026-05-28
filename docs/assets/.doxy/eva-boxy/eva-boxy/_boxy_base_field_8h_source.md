@@ -21,13 +21,13 @@ public:
 
   bool IsHidden();
 
-  void Draw(Coor aPos, Coor aSize, unsigned char aSelected);
+  void Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
 protected:
     void updateView();
 
 private:
-  virtual void drawer(Coor aPos, Coor aSize, unsigned char aSelected) = 0;
+  virtual void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
 
 private:
   unsigned char mPos = 0;

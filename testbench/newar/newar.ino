@@ -113,17 +113,24 @@ void setup()
     // delay(500);
     // displ.Picto({0,0}, picto_103, 0);
     // delay(500);
-    displ.TextCenter({0, 2}, {10, 1}, F("4WD"), 1);
+
+    displ.TextCenter({0, 2}, {10, 1}, F("4WD"), 0);
     displ.TextCenter({0, 4}, {10, 1}, F("D-LOCK"), 0);
     displ.TextCenter({0, 6}, {10, 1}, F("LOW GEAR"), 0);
-    displ.Picto({10, 2}, picto_8, 1);
-    displ.Picto({10, 4}, picto_8, 0);
-    displ.Picto({10, 6}, picto_8, 0);
-    // displ.Picto({12,1}, picto_31, 0);
-    //  displ.Picto({0,5}, picto_31, 0);
-    //  displ.Picto({12,5}, picto_31, 0);
+    displ.Picto({10, 2}, picto_onoff, 0);
+    displ.Picto({10, 4}, picto_onoff, 0);
+    displ.Picto({10, 6}, picto_onoff, 0);
 
- 
+//    displ.Picto({12,1}, picto_31, 0);
+    //  displ.Picto({1,3}, picto_2, 0);
+    //  displ.TextCenter({2,5}, {2,1}, "23", 0);
+    //  displ.TextCenter({0,6}, {5,1}, "SPEED", 0);
+
+//     displ.Picto({10,3}, picto_1, 0);
+//     displ.TextCenter({11,4}, {2,1}, "23", 0);
+
+//    displ.Picto({2,3}, picto_scroll, 0);
+
 }
 
 void loop()

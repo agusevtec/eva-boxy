@@ -1,5 +1,4 @@
 #include "evabButton.h"
-#include "evabDisplayPlatform.h"
 
 namespace evab
 {
@@ -8,19 +7,19 @@ namespace evab
   {
   }
 
-  void ButtonListItem::IndeedDrawer(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName)
+  void ButtonListItem::IndeedDrawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused, const char *aName)
   {
-    DisplayPlatform *p = DisplayPlatform::Instance();
-    p->Display(aPos, {aSize.X, 1}, aName, PA_CENTER, aSelected);
+    
+    aScreen->TextCenter(aPos, {aSize.X, 1}, aName, aIsFocused);
     for (int i = 1; i < aSize.Y; i++)
-      p->Fill(' ', {aPos.X, aPos.Y + i}, aSize, aSelected);
+      aScreen->Clear({aPos.X, aPos.Y + i}, aSize, aIsFocused);
   }
 
-  void ButtonListItem::drawer(Coor aPos, Coor aSize, unsigned char aSelected)
+  void ButtonListItem::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
     if (IsHidden())
       return;
-    ButtonListItem::IndeedDrawer(aPos, aSize, aSelected, mName);
+    ButtonListItem::IndeedDrawer(aScreen, aPos, aSize, aIsFocused, mName);
   }
 
   Button::Button(const char *aName, eva::IHandler *aOnPressDelegate)

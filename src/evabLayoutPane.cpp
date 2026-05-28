@@ -1,5 +1,4 @@
 #include "evabLayoutPane.h"
-#include "evabDisplayPlatform.h"
 
 namespace evab
 {
@@ -38,16 +37,16 @@ namespace evab
     return false;
   }
 
-  void LayoutPane::drawer(Coor aPos, Coor aSize, unsigned char aSelected)
+  void LayoutPane::hider()
   {
-    if (IsHidden())
-    {
-      for (int i = 0; i < mCount; i++)
-        mItems[i].Element->Draw({0, 0}, {0, 0}, aSelected && (i == mFocused));
-      return;
-    }
     for (int i = 0; i < mCount; i++)
-      mItems[i].Element->Draw(mItems[i].Position, mItems[i].Size, aSelected && (i == mFocused));
+      mItems[i].Element->Hide();
+  }
+
+  void LayoutPane::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
+  {
+    for (int i = 0; i < mCount; i++)
+      mItems[i].Element->Draw(aScreen, mItems[i].Position, mItems[i].Size, aIsFocused && (i == mFocused));
   }
 
 }

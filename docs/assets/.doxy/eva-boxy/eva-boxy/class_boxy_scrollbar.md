@@ -142,7 +142,7 @@ See [BoxyBaseField](class_boxy_base_field.md)
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Draw**](class_boxy_base_field.md#function-draw) ([**Coor**](struct_coor.md) aPos, [**Coor**](struct_coor.md) aSize, unsigned char aSelected) <br>_normally library users should not use this method. Managing the calls to this method is a responsibility of a container that element was put into. It's only for developers who enhance the library and build composite componets_  |
+|  void | [**Draw**](class_boxy_base_field.md#function-draw) ([**Coor**](struct_coor.md) aPos, [**Coor**](struct_coor.md) aSize, unsigned char aIsFocused) <br>_normally library users should not use this method. Managing the calls to this method is a responsibility of a container that element was put into. It's only for developers who enhance the library and build composite componets_  |
 |  bool | [**IsHidden**](class_boxy_base_field.md#function-ishidden) () <br> |
 
 
@@ -154,7 +154,7 @@ See [BoxyScrollbarField](class_boxy_scrollbar_field.md)
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**IndeedDrawer**](class_boxy_scrollbar_field.md#function-indeeddrawer) ([**Coor**](struct_coor.md) aPos, [**Coor**](struct_coor.md) aSize, unsigned char aSelected, unsigned aPosition, unsigned aCount) <br> |
+|  void | [**IndeedDrawer**](class_boxy_scrollbar_field.md#function-indeeddrawer) ([**Coor**](struct_coor.md) aPos, [**Coor**](struct_coor.md) aSize, unsigned char aIsFocused, unsigned aPosition, unsigned aCount) <br> |
 
 
 

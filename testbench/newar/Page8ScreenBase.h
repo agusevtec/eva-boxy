@@ -2,7 +2,7 @@
 #pragma once
 
 #include "Coor.h"
-#include "ScreenBase.h"
+#include "..\..\src\evabScreenBase.h"
 
 template<class TFont>
 class Page8ScreenBase : public ScreenBase {

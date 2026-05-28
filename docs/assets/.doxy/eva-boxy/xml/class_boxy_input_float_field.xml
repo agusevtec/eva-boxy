@@ -94,7 +94,7 @@
       <memberdef kind="function" id="class_boxy_input_float_field_1a86f05d0d9bb91c5f244e7590a9aa2992" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void BoxyInputFloatField::IndeedDrawer</definition>
-        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName, float aValue)</argsstring>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aIsFocused, const char *aName, float aValue)</argsstring>
         <name>IndeedDrawer</name>
         <qualifiedname>BoxyInputFloatField::IndeedDrawer</qualifiedname>
         <param>
@@ -107,7 +107,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSelected</declname>
+          <declname>aIsFocused</declname>
         </param>
         <param>
           <type>const char *</type>
@@ -130,7 +130,7 @@
       <memberdef kind="function" id="class_boxy_input_float_field_1a1d0ade1a63e2336edc999c146b66717e" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void BoxyInputFloatField::drawer</definition>
-        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected) override</argsstring>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>BoxyInputFloatField::drawer</qualifiedname>
         <reimplements refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22">drawer</reimplements>
@@ -144,7 +144,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSelected</declname>
+          <declname>aIsFocused</declname>
         </param>
         <briefdescription>
 <para>Straight drawing of an element. </para>

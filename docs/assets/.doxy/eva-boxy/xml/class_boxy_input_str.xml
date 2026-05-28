@@ -6,7 +6,7 @@
       <memberdef kind="function" id="class_boxy_input_str_1ac4f4f23d7b567b23d87c078eb8946170" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void BoxyInputStr::IndeedDrawer</definition>
-        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName, const char *aValue)</argsstring>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aIsFocused, const char *aName, const char *aValue)</argsstring>
         <name>IndeedDrawer</name>
         <qualifiedname>BoxyInputStr::IndeedDrawer</qualifiedname>
         <param>
@@ -19,7 +19,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSelected</declname>
+          <declname>aIsFocused</declname>
         </param>
         <param>
           <type>const char *</type>

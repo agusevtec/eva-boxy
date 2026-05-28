@@ -11,12 +11,12 @@ namespace evab
   {
   }
 
-  void InputFloatField::IndeedDrawer(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName, float aValue)
+  void InputFloatField::IndeedDrawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused, const char *aName, float aValue)
   {
     if (abs(aValue) < 1)
-      InputStr::IndeedDrawer(aPos, aSize, aSelected, aName, dtostrf(aValue, aSize.X / 2, 2, stringTemp));
+      InputStr::IndeedDrawer(aScreen, aPos, aSize, aIsFocused, aName, dtostrf(aValue, aSize.X / 2, 2, stringTemp));
     else
-      InputStr::IndeedDrawer(aPos, aSize, aSelected, aName, dtostrf(aValue, aSize.X / 2, 1, stringTemp));
+      InputStr::IndeedDrawer(aScreen, aPos, aSize, aIsFocused, aName, dtostrf(aValue, aSize.X / 2, 1, stringTemp));
   }
 
   void InputFloatField::SetValue(float aValue)
@@ -30,11 +30,9 @@ namespace evab
     return mValue;
   }
 
-  void InputFloatField::drawer(Coor aPos, Coor aSize, unsigned char aSelected)
+  void InputFloatField::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
-    if (IsHidden())
-      return;
-    InputFloatField::IndeedDrawer(aPos, aSize, aSelected, mName, mValue);
+    InputFloatField::IndeedDrawer(aScreen, aPos, aSize, aIsFocused, mName, mValue);
   }
 
   InputFloat::InputFloat(const char *aName, float aValue, eva::IHandler *aOnValueChangedDelegate)

@@ -261,7 +261,7 @@
       <memberdef kind="function" id="class_boxy_list_box_1afe988d4ca4baea7b1bcef1739d5bc557" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void BoxyListBox::drawer</definition>
-        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected) override</argsstring>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>BoxyListBox::drawer</qualifiedname>
         <reimplements refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22">drawer</reimplements>
@@ -275,7 +275,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSelected</declname>
+          <declname>aIsFocused</declname>
         </param>
         <briefdescription>
 <para>Straight drawing of an element. </para>

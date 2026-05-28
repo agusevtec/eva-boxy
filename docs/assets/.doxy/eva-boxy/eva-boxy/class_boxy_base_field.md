@@ -53,7 +53,7 @@ Inherited by the following classes: [BoxyBaseElement](class_boxy_base_element.md
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Draw**](#function-draw) ([**Coor**](struct_coor.md) aPos, [**Coor**](struct_coor.md) aSize, unsigned char aSelected) <br>_normally library users should not use this method. Managing the calls to this method is a responsibility of a container that element was put into. It's only for developers who enhance the library and build composite componets_  |
+|  void | [**Draw**](#function-draw) ([**Coor**](struct_coor.md) aPos, [**Coor**](struct_coor.md) aSize, unsigned char aIsFocused) <br>_normally library users should not use this method. Managing the calls to this method is a responsibility of a container that element was put into. It's only for developers who enhance the library and build composite componets_  |
 |  bool | [**IsHidden**](#function-ishidden) () <br> |
 
 
@@ -100,7 +100,7 @@ _normally library users should not use this method. Managing the calls to this m
 void BoxyBaseField::Draw (
     Coor aPos,
     Coor aSize,
-    unsigned char aSelected
+    unsigned char aIsFocused
 ) 
 ```
 

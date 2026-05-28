@@ -23,10 +23,10 @@ public:
   BoxyInputFloatField(const char *aName, float aValue);
   void SetValue(float aValue);
   float GetValue();
-  static void IndeedDrawer(Coor aPos, Coor aSize, unsigned char aSelected, const char *aName, float aValue);
+  static void IndeedDrawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused, const char *aName, float aValue);
 
 private:
-  void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override;
+  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
 private:
   const char *mName;

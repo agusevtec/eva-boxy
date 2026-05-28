@@ -90,7 +90,7 @@
       <memberdef kind="function" id="class_boxy_scrollbar_field_1afdf00e9eaf599b54b311556ef62b794b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>static void BoxyScrollbarField::IndeedDrawer</definition>
-        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected, unsigned aPosition, unsigned aCount)</argsstring>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aIsFocused, unsigned aPosition, unsigned aCount)</argsstring>
         <name>IndeedDrawer</name>
         <qualifiedname>BoxyScrollbarField::IndeedDrawer</qualifiedname>
         <param>
@@ -103,7 +103,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSelected</declname>
+          <declname>aIsFocused</declname>
         </param>
         <param>
           <type>unsigned</type>
@@ -126,7 +126,7 @@
       <memberdef kind="function" id="class_boxy_scrollbar_field_1ad6ad66409e25d7d26ddbef527eef9c4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void BoxyScrollbarField::drawer</definition>
-        <argsstring>(Coor aPos, Coor aSize, unsigned char aSelected) override</argsstring>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>BoxyScrollbarField::drawer</qualifiedname>
         <reimplements refid="class_boxy_base_field_1a82af7050f13a113464a23f91ff499c22">drawer</reimplements>
@@ -140,7 +140,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSelected</declname>
+          <declname>aIsFocused</declname>
         </param>
         <briefdescription>
 <para>Straight drawing of an element. </para>

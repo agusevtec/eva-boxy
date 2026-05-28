@@ -1,6 +1,8 @@
-#include "Font8Bold.h"
+#include <evabFont8Bold.h>
 
-const uint8_t Font8Bold::kCharmap[][8] PROGMEM = {
+using namespace evab;
+
+const uint8_t evab::Font8Bold::kCharmap[][8] PROGMEM = {
     {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // ' '
     {0x00, 0x00, 0x00, 0xbe, 0xbe, 0x00, 0x00, 0x00}, // '!'
     {0x00, 0x0e, 0x0e, 0x00, 0x0e, 0x0e, 0x00, 0x00}, // '\"'
@@ -98,12 +100,11 @@ const uint8_t Font8Bold::kCharmap[][8] PROGMEM = {
     {0x00, 0x20, 0x30, 0x30, 0x20, 0x30, 0x10, 0x00} // '~'
 };
 
-static uint8_t Font8Bold::GetVerticalSlice(char aCharcode, uint8_t aSliceColumn)
+static uint8_t evab::Font8Bold::GetVerticalSlice(char aCharcode, uint8_t aSliceColumn)
 {
     {
         if (aCharcode > 126)
             aCharcode = 32;
-
         return pgm_read_byte(&kCharmap[aCharcode - 32][aSliceColumn]);
     }
 }

@@ -53,7 +53,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**IndeedDrawer**](#function-indeeddrawer) ([**Coor**](struct_coor.md) aPos, [**Coor**](struct_coor.md) aSize, unsigned char aSelected, const char \* aName, const char \* aValue) <br> |
+|  void | [**IndeedDrawer**](#function-indeeddrawer) ([**Coor**](struct_coor.md) aPos, [**Coor**](struct_coor.md) aSize, unsigned char aIsFocused, const char \* aName, const char \* aValue) <br> |
 
 
 
@@ -91,7 +91,7 @@
 static void BoxyInputStr::IndeedDrawer (
     Coor aPos,
     Coor aSize,
-    unsigned char aSelected,
+    unsigned char aIsFocused,
     const char * aName,
     const char * aValue
 ) 

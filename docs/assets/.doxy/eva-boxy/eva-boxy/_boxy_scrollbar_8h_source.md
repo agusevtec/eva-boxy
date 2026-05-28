@@ -21,10 +21,10 @@ public:
   BoxyScrollbarField(unsigned aCount);
   void SetPosition(int aPosition);
   int GetPosition();
-  static void IndeedDrawer(Coor aPos, Coor aSize, unsigned char aSelected, unsigned aPosition, unsigned aCount);
+  static void IndeedDrawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused, unsigned aPosition, unsigned aCount);
 
   private:
-  void drawer(Coor aPos, Coor aSize, unsigned char aSelected) override;
+  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
 private:
   int mPosition;

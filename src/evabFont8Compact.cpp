@@ -1,4 +1,6 @@
-#include "Font8Compact.h"
+#include <evabFont8Compact.h>
+
+using namespace evab;
 
 const uint8_t Font8Compact::kCharmap[][5] PROGMEM = {
     {0x00, 0x00, 0x00, 0x00, 0x00}, // ' '
