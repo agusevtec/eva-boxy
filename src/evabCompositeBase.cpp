@@ -8,24 +8,6 @@ namespace evab
     mFocusedChild = aChild;
   }
 
-  CompositeBase::CompositeBase(CompositeBase *aParent) : mParent(aParent)
-  {
-  }
-
-  bool CompositeBase::IsFocused(ElementBase *aChild)
-  {
-    if (!IsFocused())
-      return false;
-    return mFocusedChild == aChild;
-  }
-
-  bool CompositeBase::IsFocused()
-  {
-    if (!mParent)
-      return true;
-    return mParent->IsFocused(this);
-  }
-
   bool CompositeBase::Key(char aKey)
   {
     if (mFocusedChild && mFocusedChild->Key(aKey))

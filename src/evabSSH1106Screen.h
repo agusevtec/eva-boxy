@@ -15,6 +15,7 @@ namespace evab
             : _address(0x3C)
         {
             Wire.begin();
+            Wire.setClock(800000L);
 
             // инициализация дисплея (минимальный набор команд)
             sendCommand(0xAE); // display off
@@ -86,7 +87,7 @@ namespace evab
             // aSlice: байт для записи в этот тайл (8 пикселей вертикально)
 
             setPage(aPosition.Y);
-            setColumn(aPosition.X * 8 + aSliceColumn + 1);
+            setColumn(aPosition.X * 8 + aSliceColumn + 2);
 
             Wire.beginTransmission(_address);
             Wire.write(0x40); // data mode

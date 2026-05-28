@@ -7,19 +7,21 @@ namespace evab
   {
   public:
     SlidingMethodBase();
-    virtual ~SlidingMethodBase() = default;
     virtual void Select(signed char aIndex) = 0;
     signed char Selected();
-    signed char IndexInWindow(signed char aPosition);
-    void SelectRelative(signed char aShift);
+    signed char Count();
+    signed char WindowSize();
 
   protected:
-    signed char mSlidingWindow;
-    signed char mIndex;
+    signed char indexInWindow(signed char aPosition);
+    void setCount(signed char Count);
+    void resizeWindow(signed char aWindowSize);
 
-  public:
-    signed char Count;
-    signed char PageSize;
+  protected:
+    signed char mSelected;
+    signed char mCount;
+    signed char mWindowStart;
+    signed char mWindowSize;
   };
 
   class FlipSlidingMethod : public SlidingMethodBase

@@ -4,7 +4,6 @@
 
 namespace evab
 {
-
   struct LayoutPaneItem
   {
     ElementBase *Element;
@@ -15,7 +14,7 @@ namespace evab
   class LayoutPane : public CompositeBase
   {
   public:
-    LayoutPane(CompositeBase *aContainer);
+    // LayoutPane(CompositeBase *aContainer);
     void SetItems(LayoutPaneItem aItems[], int aCount);
 
   private:
@@ -28,5 +27,4 @@ namespace evab
     int mCount = 0;
     int mFocused = -1;
   };
-
 }

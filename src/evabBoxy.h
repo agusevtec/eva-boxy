@@ -1,6 +1,6 @@
 #pragma once
 #include <evabSSH1106Screen.h>
-#include <evabCompositeBase.h>
+#include <evabElementBase.h>
 #include <evabIScreen.h>
 
 namespace evab
@@ -13,11 +13,11 @@ namespace evab
             mScreen = aScreen;
         }
 
-        void Ground(CompositeBase *aGround)
+        void Ground(ElementBase *aGround)
         {
             mGround = aGround;
             if (mGround && mScreen)
-                mGround->Draw(mScreen, {0, 0}, mScreen->Size(), 0);
+                mGround->Draw(mScreen, {0, 0}, mScreen->Size(), 1);
         }
 
         void Enabled(bool aIsEnabled)
@@ -30,6 +30,7 @@ namespace evab
             if (mGround)
                 mGround->Key(aKey);
         }
+
         IScreen *Screen()
         {
             return mScreen;
@@ -43,7 +44,7 @@ namespace evab
 
     private:
         IScreen *mScreen = nullptr;
-        CompositeBase *mGround = nullptr;
+        ElementBase *mGround = nullptr;
         bool mIsEnabled = true;
     };
 

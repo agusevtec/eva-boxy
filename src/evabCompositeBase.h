@@ -8,9 +8,7 @@ namespace evab
   class CompositeBase : public ElementBase
   {
   public:
-    CompositeBase(CompositeBase *aParent = nullptr);
-    bool IsFocused(ElementBase *aChild);
-    bool IsFocused();
+
     bool Key(char aKey) override;
 
   protected:
@@ -21,7 +19,6 @@ namespace evab
     virtual void hider() = 0;
   private:
     ElementBase *mFocusedChild = nullptr;
-    CompositeBase *mParent;
   };
 
 }

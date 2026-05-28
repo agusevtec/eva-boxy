@@ -3,9 +3,9 @@
 namespace evab
 {
 
-  LayoutPane::LayoutPane(CompositeBase *aContainer) : CompositeBase(aContainer)
-  {
-  }
+  // LayoutPane::LayoutPane(CompositeBase *aContainer) : CompositeBase(aContainer)
+  // {
+  // }
 
   void LayoutPane::SetItems(LayoutPaneItem aItems[], int aCount)
   {
@@ -48,5 +48,4 @@ namespace evab
     for (int i = 0; i < mCount; i++)
       mItems[i].Element->Draw(aScreen, mItems[i].Position, mItems[i].Size, aIsFocused && (i == mFocused));
   }
-
 }

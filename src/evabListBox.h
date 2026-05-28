@@ -10,58 +10,78 @@ namespace evab
   static const unsigned short EVENT_SELECTION_CHANGED = 2;
 
   template <class TMethod>
-  class ListBox : public CompositeBase, public TMethod
+  class ListBox : public ElementBase, public TMethod
   {
   public:
-    ListBox<TMethod>(CompositeBase *aParent)
-        : CompositeBase(aParent)
-    {
-    }
+    // ListBox<TMethod>(CompositeBase *aParent)
+    //     : CompositeBase(aParent)
+    // {
+    // }
     ListBox<TMethod> &SetItems(ElementBase *aItems[], int aCount)
     {
       mItems = aItems;
-      TMethod::Count = aCount;
+      TMethod::setCount(aCount);
+      if (aCount)
+        Select(0);
+      Redraw();
       return *this;
     }
+
     ListBox<TMethod> &SetItemHeight(unsigned char aItemHeight)
     {
       mItemHeight = aItemHeight;
+      Redraw();
       return *this;
     }
+
     ListBox<TMethod> &SetReadOnly(bool aIsReadonly)
     {
       mIsReadOnly = aIsReadonly;
+      Redraw();
       return *this;
     }
-    ListBox<TMethod> &SetOnItemModified(eva::IHandler *aOnItemModifyDelegate)
+
+    ListBox<TMethod> &SetListener(eva::IHandler *aListener)
     {
-      mOnItemDelegate = aOnItemModifyDelegate;
+      mListener = aListener;
       return *this;
     }
+
     ElementBase *GetItem(unsigned char aIndex)
     {
-      if (aIndex < TMethod::Count)
+      if (aIndex < TMethod::Count())
         return mItems[aIndex];
       return nullptr;
     }
-    void Select(signed char mIndex) override
+
+    virtual void Select(signed char aIndex) override
     {
-      if (this->Count == 0)
-        return;
-      TMethod::Select(mIndex);
+      signed char wasSelected = TMethod::Selected();
+      TMethod::Select(aIndex);
+      signed char nowSelected = TMethod::Selected();
+      if ((wasSelected != nowSelected) && (nowSelected != -1))
+      {
+        if (mListener)
+        {
+          eva::CallbackInfo cbInfo = {EVENT_SELECTION_CHANGED, nowSelected};
+          mListener->invoke(this, cbInfo);
+        }
+        Redraw();
+      }
     }
 
   private:
     void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
-      TMethod::PageSize = aSize.Y / mItemHeight;
+      TMethod::resizeWindow(aSize.Y / mItemHeight);
       unsigned char visibleElementsCount = 0;
-      for (int i = 0; i < TMethod::Count; i++)
+      signed char selected = TMethod::Selected();
+      for (int i = 0; i < TMethod::Count(); i++)
       {
-        int offset = TMethod::IndexInWindow(i) * mItemHeight;
+        int offset = TMethod::indexInWindow(i) * mItemHeight;
         if (offset >= 0)
         {
-          mItems[i]->Draw(aScreen, {aPos.X, aPos.Y + offset}, {aSize.X, mItemHeight}, (!mIsReadOnly) && aIsFocused && (TMethod::Selected() == i));
+          mItems[i]->Draw(aScreen, {aPos.X, aPos.Y + offset}, {aSize.X, mItemHeight}, (!mIsReadOnly) && aIsFocused && (i == selected));
           visibleElementsCount++;
         }
         else
@@ -74,54 +94,35 @@ namespace evab
 
     void hider() override
     {
-      for (int i = 0; i < TMethod::Count; i++)
+      for (int i = 0; i < TMethod::Count(); i++)
         mItems[i]->Hide();
     }
 
-    bool onResidualKey(char aKey) override
+    bool Key(char aKey) override
     {
       if (mIsReadOnly)
         return false;
-      if (TMethod::Count == 0)
+
+      signed char selected = TMethod::Selected();
+
+      if (selected == -1)
         return false;
-      int oldSelected = TMethod::Selected();
-      if (aKey == 'u')
+
+      if (mItems[selected]->Key(aKey))
+        return true;
+
+      if (aKey == 'u' || aKey == 'd')
       {
-        TMethod::SelectRelative(-1);
-        Redraw();
-        if (mOnItemDelegate && oldSelected != TMethod::Selected())
-        {
-          eva::CallbackInfo cbInfo = {EVENT_SELECTION_CHANGED, TMethod::Selected()};
-          mOnItemDelegate->invoke((void *)this, cbInfo);
-        }
+        Select(selected + (aKey == 'u') ? -1 : +1);
         return true;
       }
-      if (aKey == 'd')
+
+      if (aKey == 'l' || aKey == 'r')
       {
-        TMethod::SelectRelative(+1);
-        Redraw();
-        if (mOnItemDelegate && oldSelected != TMethod::Selected())
+        if (mListener)
         {
-          eva::CallbackInfo cbInfo = {EVENT_SELECTION_CHANGED, TMethod::Selected()};
-          mOnItemDelegate->invoke((void *)this, cbInfo);
-        }
-        return true;
-      }
-      if (aKey == 'l')
-      {
-        if (mOnItemDelegate)
-        {
-          eva::CallbackInfo cbInfo = {EVENT_ITEM_MODIFIED, -1};
-          mOnItemDelegate->invoke((void *)this, cbInfo);
-          return true;
-        }
-      }
-      if (aKey == 'r')
-      {
-        if (mOnItemDelegate)
-        {
-          eva::CallbackInfo cbInfo = {EVENT_ITEM_MODIFIED, +1};
-          mOnItemDelegate->invoke((void *)this, cbInfo);
+          eva::CallbackInfo cbInfo = {EVENT_ITEM_MODIFIED, (aKey == 'l') ? -1 : +1};
+          mListener->invoke(this, cbInfo);
           return true;
         }
       }
@@ -132,7 +133,7 @@ namespace evab
     ElementBase **mItems = nullptr;
     unsigned char mItemHeight = 1;
     bool mIsReadOnly = false;
-    eva::IHandler *mOnItemDelegate = nullptr;
+    eva::IHandler *mListener = nullptr;
   };
 
 }

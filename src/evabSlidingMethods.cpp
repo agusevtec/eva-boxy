@@ -4,49 +4,66 @@
 namespace evab
 {
 
-  SlidingMethodBase::SlidingMethodBase() : mIndex(0), mSlidingWindow(0), PageSize(0), Count(0)
+  SlidingMethodBase::SlidingMethodBase()
+      : mSelected(0), mWindowStart(0), mWindowSize(0), mCount(0)
   {
   }
 
-  signed char SlidingMethodBase::IndexInWindow(signed char aPosition)
+  signed char SlidingMethodBase::indexInWindow(signed char aPosition)
   {
-    int candidate = aPosition - mSlidingWindow;
-    if (0 <= candidate && candidate < PageSize)
+    int candidate = aPosition - mWindowStart;
+    if (0 <= candidate && candidate < mWindowSize)
       return candidate;
     return -1;
   }
 
   signed char SlidingMethodBase::Selected()
   {
-    if (Count == 0)
+    if (mCount == 0)
       return -1;
-    return mIndex;
+    return mSelected;
   }
 
-  void SlidingMethodBase::SelectRelative(signed char aShift)
+  void SlidingMethodBase::setCount(signed char Count)
   {
-    Select(mIndex + aShift);
+      mCount = Count;
+    if (mCount)
+      mSelected = 0;
+  }
+  void SlidingMethodBase::resizeWindow(signed char aWindowSize)
+  {
+    mWindowSize = aWindowSize;
+  }
+
+  signed char SlidingMethodBase::Count()
+  {
+    return mCount;
+  }
+
+  signed char SlidingMethodBase::WindowSize()
+  {
+    return mWindowSize;
   }
 
   void FlipSlidingMethod::Select(signed char aIndex)
   {
-    if (Count == 0 || PageSize == 0)
+    if (mCount == 0 || mWindowSize == 0)
       return;
-    mIndex = ((aIndex % Count) + Count) % Count;
-    mSlidingWindow = (mIndex / PageSize) * PageSize;
+    mSelected = ((aIndex % mCount) + mCount) % mCount;
+    mWindowStart = (mSelected / mWindowSize) * mWindowSize;
   }
 
   void ScrollSlidingMethod::Select(signed char aIndex)
   {
-    if (Count == 0 || PageSize == 0)
+    if (mCount == 0 || mWindowSize == 0)
       return;
-    aIndex = ((aIndex % Count) + Count) % Count;
-    mIndex = constrain(aIndex, 0, Count - 1);
-    int visualIndex = aIndex - mSlidingWindow;
+    aIndex = ((aIndex % mCount) + mCount) % mCount;
+    mSelected = constrain(aIndex, 0, mCount - 1);
+    int visualIndex = aIndex - mWindowStart;
     if (visualIndex <= 0)
-      mSlidingWindow = max(0, aIndex - 1);
-    if (visualIndex >= PageSize - 1)
-      mSlidingWindow = min(max(0, Count - PageSize), aIndex - PageSize + 2);
+      mWindowStart = max(0, aIndex - 1);
+    if (visualIndex >= mWindowSize - 1)
+      mWindowStart = min(max(0, mCount - mWindowSize), aIndex - mWindowSize + 2);
   }
 
 }
