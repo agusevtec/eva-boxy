@@ -113,7 +113,7 @@ namespace evab
 
         Coor Size() override
         {
-            return {16, 8};
+            return {16, 3};
         }
 
     private:

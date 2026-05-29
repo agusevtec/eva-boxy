@@ -1,5 +1,5 @@
 #include "evabModal.h"
-#include "evabInputInt.h"
+//#include "evabInputInt.h"
 #include <evabBoxy.h>
 
 using namespace evab;
@@ -21,7 +21,7 @@ void Modal::ShowInt(const char *aName, int aValue)
   Boxy::Instance()->Enabled(false);
   // TODO:!!!
   //     screen->Fill('-', {0, sz.Y / 2 - 1}, {sz.X, 1}, 0);
-  InputIntField::IndeedDrawer(screen, {0, sz.Y / 2}, {sz.X, 1}, 0, aName, aValue);
+  //InputIntField::IndeedDrawer(screen, {0, sz.Y / 2}, {sz.X, 1}, 0, aName, aValue);
   // TODO:!!!
   //     mDisplayPlatform->Fill('-', {0, sz.Y / 2 + 1}, {sz.X, 1}, 0);
   mTimer.start(1200, this);

@@ -3,6 +3,13 @@
 #include <evabElementBase.h>
 #include <evabIScreen.h>
 
+static const unsigned char KEY_SELECT = 0x01;
+static const unsigned char KEY_MENU = 0x02;
+static const unsigned char KEY_DOWN = 0x04;
+static const unsigned char KEY_UP = 0x08;
+static const unsigned char KEY_LEFT = 0x10;
+static const unsigned char KEY_RIGHT = 0x20;
+
 namespace evab
 {
     class Boxy

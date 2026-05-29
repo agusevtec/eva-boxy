@@ -1,0 +1,77 @@
+#pragma once
+
+#include "evabIScreen.h"
+#include "evabCoor.h"
+
+namespace evab
+{
+
+  template <class T>
+  class Labeled : public T
+  {
+  public:
+    template<typename... Args>
+    Labeled(const char *aName, Args&&... args) 
+      : T(args...), mName(aName)
+    {
+    }
+
+  private:
+    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+    {
+      if (aSize.Y == 1)
+      {
+        unsigned char labelWidth = 2 * aSize.X / 3;
+        unsigned char inputWidth = aSize.X - labelWidth;
+        
+        aScreen->TextLeft(aPos, {labelWidth, 1}, mName, aIsFocused);
+        T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, 1}, aIsFocused);
+      }
+      else
+      {
+        aScreen->TextLeft(aPos, {aSize.X, 1}, mName, aIsFocused);
+        T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
+      }
+    }
+
+    void hider() override { T::Hide(); }
+
+  private:
+    const char *mName;
+  };
+
+  template <class T>
+  class LabeledF : public T
+  {
+  public:
+    template<typename... Args>
+    LabeledF(const __FlashStringHelper *aName, Args&&... args) 
+      : T(args...), mName(aName)
+    {
+    }
+
+  private:
+    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+    {
+      if (aSize.Y == 1)
+      {
+        unsigned char labelWidth = 2 * aSize.X / 3;
+        unsigned char inputWidth = aSize.X - labelWidth;
+        
+        aScreen->TextLeft(aPos, {labelWidth, 1}, mName, aIsFocused);
+        T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, 1}, aIsFocused);
+      }
+      else
+      {
+        aScreen->TextLeft(aPos, {aSize.X, 1}, mName, aIsFocused);
+        T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
+      }
+    }
+
+    void hider() override { T::Hide(); }
+
+  private:
+    const __FlashStringHelper *mName;
+  };
+
+}
