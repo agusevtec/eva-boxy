@@ -34,8 +34,6 @@ namespace evab
       }
     }
 
-    void hider() override { T::Hide(); }
-
   private:
     const char *mName;
   };
@@ -67,8 +65,6 @@ namespace evab
         T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
       }
     }
-
-    void hider() override { T::Hide(); }
 
   private:
     const __FlashStringHelper *mName;

@@ -7,6 +7,7 @@ namespace evab
   {
     if (IsHidden())
       return;
+
     IScreen *screen = Boxy::Instance()->Screen();
     if (screen)
     {
@@ -30,6 +31,9 @@ namespace evab
 
   void ElementBase::Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
+    if (!aScreen)
+      return;
+
     if (aSize.X == 0 || aSize.Y == 0)
     {
       hider();
@@ -44,7 +48,7 @@ namespace evab
     return false;
   }
 
-  unsigned short ElementBase::serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
+  void ElementBase::serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
   {
     serialized = 0;
 
@@ -70,7 +74,7 @@ namespace evab
   }
 
   // Десериализация: распаковка из unsigned short
-  void ElementBase::deserialize( Coor &aPos, Coor &aSize, bool &isFocused)
+  void ElementBase::deserialize(Coor &aPos, Coor &aSize, bool &isFocused)
   {
     // Бит 0
     if ((serialized >> 0) & 1)

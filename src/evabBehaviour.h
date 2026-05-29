@@ -28,7 +28,7 @@ namespace evab
       if (aKey & kKey)
         if (mListener)
         {
-          mListener->invoke(this, {EVENT_VALUE_CHANGED, (int)aKey});
+          mListener->invoke(this, {EVENT_CATCH_KEY, (int)aKey});
           return true;
         }
       return false;
@@ -39,11 +39,11 @@ namespace evab
   };
 
   template <class T, unsigned char kDec, unsigned char kInc>
-  class SilentReactor : public T
+  class KeyModifier : public T
   {
   public:
     template <typename... Args>
-    SilentReactor(Args &&...args)
+    KeyModifier(Args &&...args)
         : T(args...)
     {
     }
@@ -62,13 +62,10 @@ namespace evab
 
       return true;
     }
-
-  private:
-    eva::IHandler *mListener = nullptr;
   };
 
   template <class T, unsigned char kDec, unsigned char kInc>
-  class Reactor : public T
+  class KeyReactor : public T
   {
   public:
     enum EventType
@@ -77,7 +74,7 @@ namespace evab
     };
 
     template <typename... Args>
-    Reactor(eva::IHandler *aListener, Args &&...args)
+    KeyReactor(eva::IHandler *aListener, Args &&...args)
         : T(args...), mListener(aListener)
     {
     }

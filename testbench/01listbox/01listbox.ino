@@ -5,30 +5,37 @@
 #include <evabFont8Thin.h>
 #include <evabLabeled.h>
 #include <evabUIButton.h>
+#include <evabBehaviour.h>
 
 using namespace evab;
 
 class App {
-  ListBox<ScrollSlidingMethod> mTXSettingsListbox;
-  Labeled<InputFloat> mTXListboxItem0 = { "Value:", 4 };
-  // InputInt mTXListboxItem1 = { "LOCK", 45 };
-  // InputInt mTXListboxItem2 = { "GEAR", 99 };
+  KeyModifier<Labeled<InputFloat>, KEY_LEFT, KEY_RIGHT> item0 = {"Speed", 13};
+  Labeled<InputFloat> item1 = {"Course", 37};
+  Labeled<InputFloat> item2 = {"Fuel", 95};
 
-  // ElementBase *mTXSettingsElemets[3] = { &mTXListboxItem0, &mTXListboxItem1, &mTXListboxItem2};
+  ElementBase *items[3] = { 
+    &item0, 
+    &item1, 
+    &item2
+    };
+  KeyModifier<ListBox<ScrollSlidingMethod>, KEY_UP, KEY_DOWN>  mListbox;
 
 // Теперь можно так:
 
 public:
   App() {
     UseSSH1106Screen<Font8Thin>();
-    // mTXSettingsListbox.SetItems(mTXSettingsElemets, 3);
-    // mTXSettingsListbox.SetItemHeight(3);
-    Boxy::Instance()->Ground(&mTXListboxItem0);
-    mTXListboxItem0.Increment(1);
-    // mTXSettingsListbox.Select(1);
-    // mTXSettingsListbox.Select(2);
-    //mTXSettingsListbox.SetReadOnly(true);
-    //mTXListboxItem2.SetValue(12);
+    mListbox.SetItems(items, 3);
+    mListbox.SetItemHeight(3);
+    Boxy::Instance()->Ground(&mListbox);
+    Boxy::Instance()->Key(KEY_RIGHT);
+    Boxy::Instance()->Key(KEY_DOWN);
+    Boxy::Instance()->Key(KEY_RIGHT);
+    Boxy::Instance()->Key(KEY_DOWN);
+    Boxy::Instance()->Key(KEY_UP);
+    Boxy::Instance()->Key(KEY_UP);
+    Boxy::Instance()->ShowInt("Hi!", 5);
   }
 };
 

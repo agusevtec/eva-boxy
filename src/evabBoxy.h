@@ -2,6 +2,9 @@
 #include <evabSSH1106Screen.h>
 #include <evabElementBase.h>
 #include <evabIScreen.h>
+#include <evaDelayTimer.h>
+#include <evabInputInt.h>
+#include <evabLabeled.h>
 
 static const unsigned char KEY_SELECT = 0x01;
 static const unsigned char KEY_MENU = 0x02;
@@ -12,54 +15,30 @@ static const unsigned char KEY_RIGHT = 0x20;
 
 namespace evab
 {
-    class Boxy
+    class Boxy : public eva::IHandler
     {
     public:
-        void UseScreen(IScreen *aScreen)
-        {
-            mScreen = aScreen;
-        }
-
-        void Ground(ElementBase *aGround)
-        {
-            mGround = aGround;
-            if (mGround && mScreen)
-                mGround->Draw(mScreen, {0, 0}, mScreen->Size(), 1);
-        }
-
-        void Enabled(bool aIsEnabled)
-        {
-            mIsEnabled = aIsEnabled;
-        }
-
-        void Key(char aKey)
-        {
-            if (mGround)
-                mGround->Key(aKey);
-        }
-
-        IScreen *Screen()
-        {
-            return mScreen;
-        }
-
-        static Boxy *Instance()
-        {
-            static Boxy instance;
-            return &instance;
-        }
+        void SetScreen(IScreen *aScreen);
+        void Ground(ElementBase *aGround);
+        void ShowInt(const char *aName, int aValue);
+        void invoke(void *msgSender, eva::CallbackInfo cbInfo) override;
+        void Key(char aKey);
+        IScreen *Screen();
+        static Boxy *Instance();
 
     private:
+        Boxy() = default; 
         IScreen *mScreen = nullptr;
         ElementBase *mGround = nullptr;
-        bool mIsEnabled = true;
+        eva::DelayTimer mModalShowTimer;
     };
 
     template <class TFont>
     void UseSSH1106Screen()
     {
-        static SSH1106Screen<TFont> screen;
+        static TFont font;
+        static SSH1106Screen screen(&font);
         Boxy *boxy = Boxy::Instance();
-        boxy->UseScreen(&screen);
+        boxy->SetScreen(&screen);
     }
 }

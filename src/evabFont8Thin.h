@@ -1,15 +1,16 @@
 #pragma once
 
+#include <evabIFont.h>
 #include <Arduino.h>
 
 namespace evab
 {
-    class Font8Thin
+    class Font8Thin: public IFont
     {
     public:
-        static uint8_t GetVerticalSlice(char aCharcode, uint8_t aSliceColumn);
+         unsigned char GetVerticalSlice(char aCharcode, unsigned char aSliceColumn) const override;
 
     private:
-        static const uint8_t kCharmap[][7] PROGMEM;
+        static const unsigned char kCharmap[][7] PROGMEM;
     };
 }

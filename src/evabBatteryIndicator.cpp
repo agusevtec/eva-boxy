@@ -4,7 +4,6 @@
 namespace evab
 {
 
-  extern char stringTemp[20];
 
   void BatteryIndicator::SetVoltage(float aVoltage)
   {
@@ -15,6 +14,7 @@ namespace evab
   void BatteryIndicator::drawer(IScreen *aScreen,Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
     
+    char stringTemp[20];
     memset(stringTemp, '|', 7);
     dtostrf(mVoltage, 1, 2, stringTemp + 1);
     stringTemp[5] = 'v';

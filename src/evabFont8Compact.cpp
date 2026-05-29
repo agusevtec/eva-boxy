@@ -100,7 +100,7 @@ const uint8_t Font8Compact::kCharmap[][5] PROGMEM = {
     {0x04, 0x02, 0x04, 0x08, 0x04} // '~'
 };
 
-static uint8_t Font8Compact::GetVerticalSlice(char aCharcode, uint8_t aSliceColumn)
+unsigned char Font8Compact::GetVerticalSlice(char aCharcode, unsigned char aSliceColumn) const
 {
     {
         if (aCharcode > 126)

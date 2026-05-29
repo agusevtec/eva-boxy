@@ -2,7 +2,7 @@
 
 using namespace evab;
 
-const uint8_t evab::Font8Bold::kCharmap[][8] PROGMEM = {
+const unsigned char evab::Font8Bold::kCharmap[][8] PROGMEM = {
     {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // ' '
     {0x00, 0x00, 0x00, 0xbe, 0xbe, 0x00, 0x00, 0x00}, // '!'
     {0x00, 0x0e, 0x0e, 0x00, 0x0e, 0x0e, 0x00, 0x00}, // '\"'
@@ -100,7 +100,7 @@ const uint8_t evab::Font8Bold::kCharmap[][8] PROGMEM = {
     {0x00, 0x20, 0x30, 0x30, 0x20, 0x30, 0x10, 0x00} // '~'
 };
 
-static uint8_t evab::Font8Bold::GetVerticalSlice(char aCharcode, uint8_t aSliceColumn)
+unsigned char evab::Font8Bold::GetVerticalSlice(char aCharcode, unsigned char aSliceColumn) const
 {
     {
         if (aCharcode > 126)
