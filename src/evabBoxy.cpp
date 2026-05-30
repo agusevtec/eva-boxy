@@ -24,7 +24,7 @@ namespace evab
         mModalShowTimer.start(1200, this);
     }
 
-    void Boxy::invoke(void *msgSender, eva::CallbackInfo cbInfo)
+    void Boxy::invoke(void *, eva::CallbackInfo )
     {
         if (mGround && mScreen)
             mGround->Draw(mScreen, {0, 0}, mScreen->Size(), 1);

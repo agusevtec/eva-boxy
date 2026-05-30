@@ -12,7 +12,7 @@ namespace evab
     Page8ScreenBase(const IFont* mFont);
     
     void DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor);
-    void Picto(Coor aPosition, const uint8_t *pictoData, unsigned char aColor);
+    void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor);
  
   protected:
     virtual void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0;

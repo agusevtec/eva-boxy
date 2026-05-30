@@ -16,7 +16,7 @@ namespace evab
         void TextCenter(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) override;
         void TextRight(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) override;
         void Clear(Coor aPosition, Coor aSize, unsigned char aColor) override;
-        virtual void Picto(Coor aPosition, const uint8_t *pictoData, unsigned char aColor);
+        virtual void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor);
 
     protected:
         virtual void DrawSymbol(Coor position, Coor size, char symbol, unsigned char color) = 0;

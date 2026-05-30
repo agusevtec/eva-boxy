@@ -1,6 +1,6 @@
 #pragma once
 
-#include "..\..\src\evabCompositeBase.h"
+#include <evabCompositeBase.h>
 
 namespace evab
 {

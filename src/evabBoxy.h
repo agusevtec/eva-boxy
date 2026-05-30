@@ -21,7 +21,7 @@ namespace evab
         void SetScreen(IScreen *aScreen);
         void Ground(ElementBase *aGround);
         void ShowInt(const char *aName, int aValue);
-        void invoke(void *msgSender, eva::CallbackInfo cbInfo) override;
+        void invoke(void *, eva::CallbackInfo ) override;
         void Key(char aKey);
         IScreen *Screen();
         static Boxy *Instance();

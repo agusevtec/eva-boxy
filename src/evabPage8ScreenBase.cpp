@@ -30,7 +30,7 @@ namespace evab
     }
   }
 
-  void Page8ScreenBase::Picto(Coor aPosition, const uint8_t *pictoData, unsigned char aColor)
+  void Page8ScreenBase::Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor)
   {
     uint8_t tilesW = pgm_read_byte(pictoData + 0) / 8; // ширина в тайлах
     uint8_t tilesH = pgm_read_byte(pictoData + 1) / 8; // высота в тайлах

@@ -47,7 +47,7 @@ void ScreenBase::printTextInArea(Coor aPosition, Coor aSize, const char *text,
 {
   Coor displaySize = Size();
   uint8_t scale = aSize.Y;
-  uint8_t maxSymbols = min(aSize.X, displaySize.X - aPosition.X) / scale;
+  uint8_t maxSymbols = min((int)aSize.X, (int)(displaySize.X - aPosition.X)) / scale;
   uint8_t textLen = strlen(text);
 
   for (uint8_t i = 0; i < maxSymbols; i++)
@@ -71,7 +71,7 @@ void ScreenBase::printTextInArea(Coor aPosition, Coor aSize, const __FlashString
 {
   Coor displaySize = Size();
   uint8_t scale = aSize.Y;
-  uint8_t maxSymbols = min(aSize.X, displaySize.X - aPosition.X) / scale;
+  uint8_t maxSymbols = min((int)aSize.X, (int)(displaySize.X - aPosition.X)) / scale;
   uint8_t textLen = flashStrLen(text);
 
   for (uint8_t i = 0; i < maxSymbols; i++)
@@ -145,7 +145,7 @@ void ScreenBase::ClearTile(Coor aPosition, unsigned char aColor)
   DrawSymbol(aPosition, Coor(1, 1), ' ', 0);
 }
 
-void evab::ScreenBase::Picto(Coor aPosition, const uint8_t *pictoData, unsigned char aColor)
+void evab::ScreenBase::Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor)
 {
 }
 

@@ -1,62 +1,62 @@
-#include <ProgressBar.h>
+#include <evabProgressBar.h>
 
 using namespace evab;
 // 8x8 pictogram
-inline const uint8_t picto_progress_10[] PROGMEM = {
+const unsigned char picto_progress_10[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0x7f, 0xc0, 0x80, 0x80, 0x80, 0x80, 0xc0, 0x7f};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_11[] PROGMEM = {
+const unsigned char picto_progress_11[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0x7f, 0xc0, 0x98, 0xbc, 0xbc, 0x98, 0xc0, 0x7f};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_12[] PROGMEM = {
+const unsigned char picto_progress_12[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0x7f, 0xc0, 0x9e, 0xbf, 0xbf, 0x9e, 0xc0, 0x7f};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_1full[] PROGMEM = {
+const unsigned char picto_progress_1full[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0x7f, 0xc0, 0x9f, 0xbf, 0xbf, 0x9f, 0xc0, 0x7f};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_20[] PROGMEM = {
+const unsigned char picto_progress_20[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xff};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_21[] PROGMEM = {
+const unsigned char picto_progress_21[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0xff, 0x00, 0xe0, 0xf0, 0xf0, 0xe0, 0x00, 0xff};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_22[] PROGMEM = {
+const unsigned char picto_progress_22[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0xff, 0x00, 0xfe, 0xff, 0xff, 0xfe, 0x00, 0xff};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_2full[] PROGMEM = {
+const unsigned char picto_progress_2full[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0xff, 0x00, 0xff, 0xff, 0xff, 0xff, 0x00, 0xff};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_30[] PROGMEM = {
+const unsigned char picto_progress_30[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0xfe, 0x03, 0x01, 0x01, 0x01, 0x01, 0x03, 0xfe};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_31[] PROGMEM = {
+const unsigned char picto_progress_31[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0xfe, 0x03, 0xc1, 0xe1, 0xe1, 0xc1, 0x03, 0xfe};
 
 // 8x8 pictogram
-inline const uint8_t picto_progress_3full[] PROGMEM = {
+const unsigned char picto_progress_3full[] PROGMEM = {
     8, 8, // (8x8 пикселей)
     0xfe, 0x03, 0xf9, 0xfd, 0xfd, 0xf9, 0x03, 0xfe};
 
-static unsigned char *getPicto(unsigned char blockNumber, unsigned char blockFillNumber)
+static const unsigned char *getPicto(unsigned char blockNumber, unsigned char blockFillNumber)
 {
     switch ((blockNumber << 4) | (blockFillNumber))
     {
@@ -98,21 +98,28 @@ void ProgressBar::SetValue(unsigned char aValue)
     mValue = aValue;
 }
 
+unsigned char evab::ProgressBar::Resolution()
+{
+    return 0;
+}
+
 unsigned blockFillNumber(unsigned char blockNumber, unsigned char normalizedValue)
 {
-    if (blockNumber < normalizedValue/3)
-      return 3;
-    if (blockNumber > normalizedValue/3)
-      return 0;
+    if (blockNumber < normalizedValue / 3)
+        return 3;
+    if (blockNumber > normalizedValue / 3)
+        return 0;
     return normalizedValue % 3;
 }
 
 void ProgressBar::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
 {
-    unsigned short maxvalue = 3 + (aSize.Y - 2) * 3 + 2;
-    unsigned short normalizedValue = maxvalue * mValue / 100;
-    aScreen->Picto({aPos.X, aPos.Y + aSize.Y - 1}, getPicto(0, blockFillNumber(0, normalizedValue)));
+    unsigned short resulution = 3 + (aSize.Y - 2) * 3 + 2;
+    unsigned short normalizedValue = resulution * mValue / 100;
+    Serial.println(normalizedValue);
+    Serial.println(resulution);
+    aScreen->Picto({aPos.X, aPos.Y + aSize.Y - 1}, getPicto(1, blockFillNumber(0, normalizedValue)), aIsFocused);
     for (unsigned char i = 1; i < aSize.Y - 1; i++)
-        aScreen->Picto({aPos.X, aPos.Y + aSize.Y - 1}, getPicto(1, blockFillNumber(i, normalizedValue)));
-    aScreen->Picto({aPos.X, aPos.Y + aSize.Y - 1}, getPicto(2, blockFillNumber(aSize.Y, normalizedValue)));
+        aScreen->Picto({aPos.X, aPos.Y + aSize.Y - i - 1}, getPicto(2, blockFillNumber(i, normalizedValue)), aIsFocused);
+    aScreen->Picto(aPos, getPicto(3, blockFillNumber(aSize.Y-1, normalizedValue)), aIsFocused);
 }
