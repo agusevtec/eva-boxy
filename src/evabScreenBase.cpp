@@ -145,6 +145,10 @@ void ScreenBase::ClearTile(Coor aPosition, unsigned char aColor)
   DrawSymbol(aPosition, Coor(1, 1), ' ', 0);
 }
 
+void evab::ScreenBase::Picto(Coor aPosition, const uint8_t *pictoData, unsigned char aColor)
+{
+}
+
 // ========== Clear ==========
 void ScreenBase::Clear(Coor aPosition, Coor aSize, unsigned char aColor)
 {

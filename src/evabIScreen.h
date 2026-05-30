@@ -15,6 +15,7 @@ namespace evab
         virtual void TextCenter(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
         virtual void TextRight(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
 
+        virtual void Picto(Coor aPosition, const uint8_t *pictoData, unsigned char aColor) = 0;
         virtual void Clear(Coor aPosition, Coor aSize, unsigned char aColor = 0) = 0;
         virtual Coor Size() = 0;
     };
