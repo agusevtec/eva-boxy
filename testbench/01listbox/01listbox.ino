@@ -6,9 +6,10 @@
 #include <evabLabeled.h>
 #include <evabUIButton.h>
 #include <evabBehaviour.h>
+#include <evabProgressBar.h>
 
 using namespace evab;
-p
+
 class App {
   KeyModifier<Labeled<InputFloat>, KEY_LEFT, KEY_RIGHT> item0 = {"Speed", 13};
   Labeled<InputFloat> item1 = {"Course", 37};
@@ -28,14 +29,16 @@ public:
     UseSSH1106Screen<Font8Thin>();
     mListbox.SetItems(items, 3);
     mListbox.SetItemHeight(3);
+    ProgressBar pb(50);
     Boxy::Instance()->Ground(&mListbox);
-    Boxy::Instance()->Key(KEY_RIGHT);
-    Boxy::Instance()->Key(KEY_DOWN);
-    Boxy::Instance()->Key(KEY_RIGHT);
-    Boxy::Instance()->Key(KEY_DOWN);
-    Boxy::Instance()->Key(KEY_UP);
-    Boxy::Instance()->Key(KEY_UP);
-    Boxy::Instance()->ShowInt("Hi!", 5);
+    pb.Draw(Boxy::Instance()->Screen(), {14, 0}, {1,8}, 0);
+    // Boxy::Instance()->Key(KEY_RIGHT);
+    // Boxy::Instance()->Key(KEY_DOWN);
+    // Boxy::Instance()->Key(KEY_RIGHT);
+    // Boxy::Instance()->Key(KEY_DOWN);
+    // Boxy::Instance()->Key(KEY_UP);
+    // Boxy::Instance()->Key(KEY_UP);
+    // Boxy::Instance()->ShowInt("Hi!", 5);
   }
 };
 
