@@ -1,9 +1,9 @@
-#include <evabPCD8544Screen.h>
+#include <evabScreenPCD8544.h>
 
 using namespace evab;
 
-PCD8544Screen::PCD8544Screen(const IFont *aFont, uint8_t aDC, uint8_t aCS, uint8_t aRST, uint8_t aLED)
-    : Page8ScreenBase(aFont), mDCPin(aDC), mCSPin(aCS), mRSTPin(aRST), mLEDPin(aLED)
+ScreenPCD8544::ScreenPCD8544(const IFont *aFont, uint8_t aDC, uint8_t aCS, uint8_t aRST, uint8_t aLED)
+    : ScreenPage8Base(aFont), mDCPin(aDC), mCSPin(aCS), mRSTPin(aRST), mLEDPin(aLED)
 {
     pinMode(mDCPin, OUTPUT);
     pinMode(mCSPin, OUTPUT);
@@ -28,24 +28,24 @@ PCD8544Screen::PCD8544Screen(const IFont *aFont, uint8_t aDC, uint8_t aCS, uint8
     clear();
 }
 
-PCD8544Screen::~PCD8544Screen()
+ScreenPCD8544::~ScreenPCD8544()
 {
 }
 
-void PCD8544Screen::setBacklight(uint8_t aState)
+void ScreenPCD8544::setBacklight(uint8_t aState)
 {
     if (mLEDPin != 255)
         digitalWrite(mLEDPin, aState);
 }
 
-void PCD8544Screen::SetContrast(uint8_t aContrast)
+void ScreenPCD8544::SetContrast(uint8_t aContrast)
 {
     sendCommand(CMD_FUNC_SET | 0x01);
     sendCommand(CMD_SET_VOP | (aContrast & 0x7F));
     sendCommand(CMD_FUNC_SET);
 }
 
-void PCD8544Screen::clear()
+void ScreenPCD8544::clear()
 {
     for (uint8_t page = 0; page < 6; page++)
     {
@@ -56,12 +56,12 @@ void PCD8544Screen::clear()
     }
 }
 
-Coor PCD8544Screen::Size()
+Coor ScreenPCD8544::Size()
 {
     return {11, 6};
 }
 
-void PCD8544Screen::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+void ScreenPCD8544::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
 {
     uint8_t x = aPosition.X * 8 + aSliceColumn;
     if (x >= 84 || aPosition.Y >= 6)
@@ -76,7 +76,7 @@ void PCD8544Screen::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn
     digitalWrite(mCSPin, HIGH);
 }
 
-void PCD8544Screen::ClearTile(Coor aPosition, unsigned char aColor)
+void ScreenPCD8544::ClearTile(Coor aPosition, unsigned char aColor)
 {
     for (uint8_t col = 0; col < 8; col++)
     {
@@ -84,7 +84,7 @@ void PCD8544Screen::ClearTile(Coor aPosition, unsigned char aColor)
     }
 }
 
-void PCD8544Screen::sendCommand(uint8_t aCmd)
+void ScreenPCD8544::sendCommand(uint8_t aCmd)
 {
     digitalWrite(mDCPin, LOW);
     digitalWrite(mCSPin, LOW);
@@ -92,7 +92,7 @@ void PCD8544Screen::sendCommand(uint8_t aCmd)
     digitalWrite(mCSPin, HIGH);
 }
 
-void PCD8544Screen::initDisplay()
+void ScreenPCD8544::initDisplay()
 {
     sendCommand(CMD_FUNC_SET);
     sendCommand(CMD_DISP_CTRL | 0x04);

@@ -1,14 +1,14 @@
 #pragma once
 
-#include <evabPage8ScreenBase.h>
+#include <evabScreenPage8Base.h>
 #include <evabIFont.h>
 
 namespace evab
 {
-    class SerialPixelScreen: public Page8ScreenBase
+    class ScreenSerialPixel: public ScreenPage8Base
     {
     public:
-        SerialPixelScreen(IFont *aFont) : Page8ScreenBase(aFont)
+        ScreenSerialPixel(IFont *aFont) : ScreenPage8Base(aFont)
         {
             clear();
         }

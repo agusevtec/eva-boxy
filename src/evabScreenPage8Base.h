@@ -6,10 +6,10 @@
 
 namespace evab
 {
-  class Page8ScreenBase : public ScreenBase
+  class ScreenPage8Base : public ScreenBase
   {
   public:
-    Page8ScreenBase(const IFont* mFont);
+    ScreenPage8Base(const IFont* mFont);
     
     void DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor);
     void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor);

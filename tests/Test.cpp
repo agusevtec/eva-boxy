@@ -2,8 +2,8 @@
 #include <AUnit.h>
 
 using namespace aunit;
-#include <evabSerialTextScreen.h>
-#include <SerialPixelScreen.h>
+#include <evabScreenSerialText.h>
+#include <evabScreenSerialPixel.h>
 #include <evabFont8Thin.h>
 #include <evabProgressBar.h>
 
@@ -13,9 +13,9 @@ using namespace aunit;
 
 test(delayTimer_triggers_once)
 {
-    // evab::SerialTextScreen screen;
+    // evab::ScreenSerialText screen;
     evab::Font8Thin font;
-    evab::SerialPixelScreen screen(&font);
+    evab::ScreenSerialPixel screen(&font);
     for (int i = 0; i <= 10; i++)
     {
         evab::ProgressBar pb(10*i);

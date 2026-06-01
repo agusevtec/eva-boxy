@@ -1,17 +1,17 @@
 #pragma once
 
-#include <evabPage8ScreenBase.h>
+#include <evabScreenPage8Base.h>
 #include <evabIFont.h>
 #include <SPI.h>
 
 namespace evab
 {
 
-    class PCD8544Screen : public Page8ScreenBase
+    class ScreenPCD8544 : public ScreenPage8Base
     {
     public:
-        PCD8544Screen(const IFont *aFont, uint8_t aDC, uint8_t aCS, uint8_t aRST, uint8_t aLED = 255);
-        ~PCD8544Screen();
+        ScreenPCD8544(const IFont *aFont, uint8_t aDC, uint8_t aCS, uint8_t aRST, uint8_t aLED = 255);
+        ~ScreenPCD8544();
 
         void setBacklight(uint8_t aState);
         void SetContrast(uint8_t aContrast);

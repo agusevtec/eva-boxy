@@ -1,21 +1,21 @@
 #pragma once
 
-#include <evabPage8ScreenBase.h>
+#include <evabScreenPage8Base.h>
 #include <evabIFont.h>
 
 namespace evab
 {
 
-    class KS0108Screen : public Page8ScreenBase
+    class ScreenKS0108 : public ScreenPage8Base
     {
     public:
-        KS0108Screen(const IFont *aFont,
+        ScreenKS0108(const IFont *aFont,
                      uint8_t aRS, uint8_t aRW, uint8_t aE,
                      uint8_t aCS1, uint8_t aCS2,
                      uint8_t aDB0, uint8_t aDB1, uint8_t aDB2, uint8_t aDB3,
                      uint8_t aDB4, uint8_t aDB5, uint8_t aDB6, uint8_t aDB7,
                      uint8_t aLED = 255);
-        ~KS0108Screen();
+        ~ScreenKS0108();
 
         void setBacklight(uint8_t aState);
         void clear();

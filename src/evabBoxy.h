@@ -1,5 +1,5 @@
 #pragma once
-#include <evabSSH1106Screen.h>
+#include <evabScreenSSH1106S.h>
 #include <evabElementBase.h>
 #include <evabIScreen.h>
 #include <evaDelayTimer.h>
@@ -37,7 +37,7 @@ namespace evab
     void UseSSH1106Screen()
     {
         static TFont font;
-        static SSH1106Screen screen(&font);
+        static ScreenSSH1106 screen(&font);
         Boxy *boxy = Boxy::Instance();
         boxy->SetScreen(&screen);
     }

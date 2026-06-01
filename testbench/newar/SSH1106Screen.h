@@ -5,7 +5,7 @@
 #include "..\..\src\evabFont8Thin.h"
 #include "..\..\src\evabFont8Compact.h"
 #include "..\..\src\evabFont8Bold.h"
-#include "..\..\src\evabPage8ScreenBase.h"
+#include "..\..\src\evabScreenPage8Base.h"
 
 
 class SSH1106Screen : public Page8ScreenBase<Font8Thin>

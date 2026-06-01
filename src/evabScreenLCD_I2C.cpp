@@ -1,7 +1,7 @@
-#include <evabLCD_I2CScreen.h>
+#include <evabScreenLCD_I2C.h>
 
 using namespace evab;
-  LCD_I2CScreen::LCD_I2CScreen(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uint8_t aBacklightPin)
+  ScreenLCD_I2C::ScreenLCD_I2C(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uint8_t aBacklightPin)
     : mAddress(aAddress), mCols(aCols), mRows(aRows), mBacklightPin(aBacklightPin)
   {
     mBacklightMask = 1 << mBacklightPin;
@@ -30,7 +30,7 @@ using namespace evab;
     clear();
   }
 
-  void LCD_I2CScreen::sendNibble(uint8_t aData, bool aIsCommand)
+  void ScreenLCD_I2C::sendNibble(uint8_t aData, bool aIsCommand)
   {
     uint8_t value = aData | (aIsCommand ? 0x00 : 0x02);
     value |= mBacklightMask;
@@ -46,13 +46,13 @@ using namespace evab;
     delayMicroseconds(50);
   }
 
-  void LCD_I2CScreen::sendByte(uint8_t aData, bool aIsCommand)
+  void ScreenLCD_I2C::sendByte(uint8_t aData, bool aIsCommand)
   {
     sendNibble(aData & 0xF0, aIsCommand);
     sendNibble((aData << 4) & 0xF0, aIsCommand);
   }
 
-  void LCD_I2CScreen::setBacklight(uint8_t aState)
+  void ScreenLCD_I2C::setBacklight(uint8_t aState)
   {
     if (aState)
       mBacklightMask |= (1 << mBacklightPin);
@@ -61,19 +61,19 @@ using namespace evab;
     sendByte(0x00, true);
   }
 
-  void LCD_I2CScreen::clear()
+  void ScreenLCD_I2C::clear()
   {
     sendByte(0x01, true);
     delay(2);
   }
 
-  // void LCD_I2CScreen::home()
+  // void ScreenLCD_I2C::home()
   // {
   //   sendByte(0x02, true);
   //   delay(2);
   // }
 
-  void LCD_I2CScreen::setCursor(uint8_t aCol, uint8_t aRow)
+  void ScreenLCD_I2C::setCursor(uint8_t aCol, uint8_t aRow)
   {
     uint8_t rowOffsets[] = {0x00, 0x40, 0x14, 0x54};
     if (aRow >= mRows)
@@ -82,7 +82,7 @@ using namespace evab;
     delay(1);
   }
 
-  void LCD_I2CScreen::DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor)
+  void ScreenLCD_I2C::DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor)
   {
     (void)aSize;
     (void)aColor;

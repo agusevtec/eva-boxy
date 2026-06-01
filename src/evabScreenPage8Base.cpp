@@ -1,15 +1,15 @@
-#include <evabPage8ScreenBase.h>
+#include <evabScreenPage8Base.h>
 #include <Arduino.h>
 
 namespace evab
 {
 
-  Page8ScreenBase::Page8ScreenBase(const IFont* font)
+  ScreenPage8Base::ScreenPage8Base(const IFont* font)
     : mFont(font)
   {
   }
 
-  void Page8ScreenBase::DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor)
+  void ScreenPage8Base::DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor)
   {
     for (uint8_t col = 0; col < 8; col++)
     {
@@ -30,7 +30,7 @@ namespace evab
     }
   }
 
-  void Page8ScreenBase::Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor)
+  void ScreenPage8Base::Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor)
   {
     uint8_t tilesW = pgm_read_byte(pictoData + 0) / 8; // ширина в тайлах
     uint8_t tilesH = pgm_read_byte(pictoData + 1) / 8; // высота в тайлах
@@ -50,7 +50,7 @@ namespace evab
     }
   }
 
-  uint32_t Page8ScreenBase::upscaleY(uint8_t x, uint8_t scale)
+  uint32_t ScreenPage8Base::upscaleY(uint8_t x, uint8_t scale)
   {
     uint32_t result = 0;
     uint32_t weight = 1;

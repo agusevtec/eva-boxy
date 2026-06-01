@@ -1,15 +1,15 @@
 #pragma once
 
 #include <evabCoor.h>
-#include <evabPage8ScreenBase.h>
+#include <evabScreenPage8Base.h>
 #include <Wire.h>
 
 namespace evab
 {
-    class SSH1106Screen : public Page8ScreenBase
+    class ScreenSSH1106 : public ScreenPage8Base
     {
     public:
-        SSH1106Screen(const IFont* font);
+        ScreenSSH1106(const IFont* font);
         
         void clearDisplay();
 

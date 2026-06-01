@@ -1,15 +1,15 @@
-#include <evabKS0108Screen.h>
+#include <evabScreenKS0108.h>
 #include <Arduino.h>
 
 using namespace evab;
 
-KS0108Screen::KS0108Screen(const IFont *aFont,
+ScreenKS0108::ScreenKS0108(const IFont *aFont,
                            uint8_t aRS, uint8_t aRW, uint8_t aE,
                            uint8_t aCS1, uint8_t aCS2,
                            uint8_t aDB0, uint8_t aDB1, uint8_t aDB2, uint8_t aDB3,
                            uint8_t aDB4, uint8_t aDB5, uint8_t aDB6, uint8_t aDB7,
                            uint8_t aLED)
-    : Page8ScreenBase(aFont),
+    : ScreenPage8Base(aFont),
       mRSPin(aRS), mRWPin(aRW), mEPin(aE),
       mCS1Pin(aCS1), mCS2Pin(aCS2), mLEDPin(aLED), mCurrentChip(0)
 {
@@ -41,30 +41,30 @@ KS0108Screen::KS0108Screen(const IFont *aFont,
     clear();
 }
 
-KS0108Screen::~KS0108Screen()
+ScreenKS0108::~ScreenKS0108()
 {
 }
 
-void KS0108Screen::setBacklight(uint8_t aState)
+void ScreenKS0108::setBacklight(uint8_t aState)
 {
     if (mLEDPin != 255)
         digitalWrite(mLEDPin, aState);
 }
 
-void KS0108Screen::setChip(uint8_t aChip)
+void ScreenKS0108::setChip(uint8_t aChip)
 {
     digitalWrite(mCS1Pin, (aChip == 0) ? HIGH : LOW);
     digitalWrite(mCS2Pin, (aChip == 1) ? HIGH : LOW);
     mCurrentChip = aChip;
 }
 
-void KS0108Screen::writeByte(uint8_t aByte)
+void ScreenKS0108::writeByte(uint8_t aByte)
 {
     for (int i = 0; i < 8; i++)
         digitalWrite(mDataPins[i], (aByte >> i) & 1);
 }
 
-void KS0108Screen::pulseE()
+void ScreenKS0108::pulseE()
 {
     digitalWrite(mEPin, HIGH);
     delayMicroseconds(1);
@@ -72,7 +72,7 @@ void KS0108Screen::pulseE()
     delayMicroseconds(1);
 }
 
-void KS0108Screen::sendCommand(uint8_t aCmd, uint8_t aChip)
+void ScreenKS0108::sendCommand(uint8_t aCmd, uint8_t aChip)
 {
     setChip(aChip);
     digitalWrite(mRSPin, LOW);
@@ -80,7 +80,7 @@ void KS0108Screen::sendCommand(uint8_t aCmd, uint8_t aChip)
     pulseE();
 }
 
-void KS0108Screen::sendData(uint8_t aData, uint8_t aChip)
+void ScreenKS0108::sendData(uint8_t aData, uint8_t aChip)
 {
     setChip(aChip);
     digitalWrite(mRSPin, HIGH);
@@ -88,7 +88,7 @@ void KS0108Screen::sendData(uint8_t aData, uint8_t aChip)
     pulseE();
 }
 
-void KS0108Screen::setPage(uint8_t aPage)
+void ScreenKS0108::setPage(uint8_t aPage)
 {
     // page 0-7 (0xB0-0xB7)
     uint8_t cmd = 0xB0 | (aPage & 0x07);
@@ -96,7 +96,7 @@ void KS0108Screen::setPage(uint8_t aPage)
     sendCommand(cmd, 1);
 }
 
-void KS0108Screen::setColumn(uint8_t aCol)
+void ScreenKS0108::setColumn(uint8_t aCol)
 {
     // column 0-63 (0x40-0x7F)
     uint8_t cmd = 0x40 | (aCol & 0x3F);
@@ -104,7 +104,7 @@ void KS0108Screen::setColumn(uint8_t aCol)
     sendCommand(cmd, 1);
 }
 
-void KS0108Screen::initDisplay()
+void ScreenKS0108::initDisplay()
 {
     setPage(0);
     setColumn(0);
@@ -116,7 +116,7 @@ void KS0108Screen::initDisplay()
     delay(10);
 }
 
-void KS0108Screen::clear()
+void ScreenKS0108::clear()
 {
     for (uint8_t page = 0; page < 8; page++)
     {
@@ -134,12 +134,12 @@ void KS0108Screen::clear()
     }
 }
 
-Coor KS0108Screen::Size()
+Coor ScreenKS0108::Size()
 {
     return {16, 8}; // 128/8 = 16 тайлов, 8 страниц
 }
 
-void KS0108Screen::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+void ScreenKS0108::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
 {
     uint8_t x = aPosition.X * 8 + aSliceColumn;
     uint8_t page = aPosition.Y;
@@ -154,7 +154,7 @@ void KS0108Screen::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn,
     sendData(aSlice, chip);
 }
 
-void KS0108Screen::ClearTile(Coor aPosition, unsigned char aColor)
+void ScreenKS0108::ClearTile(Coor aPosition, unsigned char aColor)
 {
     uint8_t startCol = aPosition.X * 8;
     uint8_t page = aPosition.Y;

@@ -1,17 +1,17 @@
 #pragma once
 
-#include <evabPage8ScreenBase.h>
+#include <evabScreenPage8Base.h>
 #include <evabIFont.h>
 #include <Wire.h>
 
 namespace evab
 {
 
-  class SSD1306ScreenBase : public Page8ScreenBase
+  class ScreenSSD1306 : public ScreenPage8Base
   {
   public:
-    SSD1306ScreenBase(const IFont *aFont, uint8_t aHeightPx, uint8_t aAddress = 0x3C);
-    ~SSD1306ScreenBase();
+    ScreenSSD1306(const IFont *aFont, uint8_t aHeightPx, uint8_t aAddress = 0x3C);
+    ~ScreenSSD1306();
 
     void SetContrast(uint8_t aContrast);
     void ClearDisplay();

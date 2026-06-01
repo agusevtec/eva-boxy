@@ -6,10 +6,10 @@
 namespace evab
 {
 
-    class SerialTextScreen : public ScreenBase
+    class ScreenSerialText : public ScreenBase
     {
     public:
-        SerialTextScreen()
+        ScreenSerialText()
         {
             clear();
         }

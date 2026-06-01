@@ -6,10 +6,10 @@
 namespace evab
 {
 
-  class LCD_I2CScreen : public ScreenBase
+  class ScreenLCD_I2C : public ScreenBase
   {
   public:
-    LCD_I2CScreen(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uint8_t aBacklightPin = 3);
+    ScreenLCD_I2C(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uint8_t aBacklightPin = 3);
     
     void setBacklight(uint8_t aState);
     void clear();

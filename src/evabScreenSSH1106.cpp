@@ -1,9 +1,9 @@
 
-#include <evabSSH1106Screen.h>
+#include <evabScreenSSH1106S.h>
 namespace evab
 {
-    SSH1106Screen::SSH1106Screen(const IFont* font)
-        : Page8ScreenBase(font), _address(0x3C)
+    ScreenSSH1106::ScreenSSH1106(const IFont* font)
+        : ScreenPage8Base(font), _address(0x3C)
     {
         Wire.begin();
         Wire.setClock(800000L);
@@ -47,7 +47,7 @@ namespace evab
         sendCommand(0xAF); // display on
     }
 
-    void SSH1106Screen::clearDisplay()
+    void ScreenSSH1106::clearDisplay()
     {
         for (unsigned char page = 0; page < 8; page++)
         {
@@ -69,7 +69,7 @@ namespace evab
         }
     }
 
-    void SSH1106Screen::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+    void ScreenSSH1106::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
     {
         // aPosition.X: 0-15 (16 тайлов по горизонтали)
         // aPosition.Y: 0-7 (8 тайлов по вертикали)
@@ -84,7 +84,7 @@ namespace evab
         Wire.endTransmission();
     }
 
-    void SSH1106Screen::ClearTile(Coor aPosition, unsigned char aColor)
+    void ScreenSSH1106::ClearTile(Coor aPosition, unsigned char aColor)
     {
         setPage(aPosition.Y);
         setColumn(aPosition.X * 8 + 2);
@@ -98,12 +98,12 @@ namespace evab
         Wire.endTransmission();
     }
 
-    Coor SSH1106Screen::Size()
+    Coor ScreenSSH1106::Size()
     {
         return {16, 8};
     }
 
-    void SSH1106Screen::sendCommand(unsigned char cmd)
+    void ScreenSSH1106::sendCommand(unsigned char cmd)
     {
         Wire.beginTransmission(_address);
         Wire.write(0x00); // command mode
@@ -111,12 +111,12 @@ namespace evab
         Wire.endTransmission();
     }
 
-    void SSH1106Screen::setPage(unsigned char page)
+    void ScreenSSH1106::setPage(unsigned char page)
     {
         sendCommand(0xB0 | (page & 0x07)); // page 0-7
     }
 
-    void SSH1106Screen::setColumn(unsigned char col)
+    void ScreenSSH1106::setColumn(unsigned char col)
     {
         sendCommand(0x00 | (col & 0x0F));        // lower 4 bits
         sendCommand(0x10 | ((col >> 4) & 0x07)); // higher 3 bits

@@ -1,9 +1,9 @@
-#include <evabSSD1306Screen.h>
+#include <evabScreenSSD1306.h>
 
 using namespace evab;
 
-SSD1306ScreenBase::SSD1306ScreenBase(const IFont *aFont, uint8_t aHeightPx, uint8_t aAddress)
-    : Page8ScreenBase(aFont), mAddress(aAddress)
+ScreenSSD1306::ScreenSSD1306(const IFont *aFont, uint8_t aHeightPx, uint8_t aAddress)
+    : ScreenPage8Base(aFont), mAddress(aAddress)
 {
   Coor sz = Size();
   mWidth = 128;
@@ -16,11 +16,11 @@ SSD1306ScreenBase::SSD1306ScreenBase(const IFont *aFont, uint8_t aHeightPx, uint
   ClearDisplay();
 }
 
-SSD1306ScreenBase::~SSD1306ScreenBase()
+ScreenSSD1306::~ScreenSSD1306()
 {
 }
 
-void SSD1306ScreenBase::sendCommand(uint8_t aCmd)
+void ScreenSSD1306::sendCommand(uint8_t aCmd)
 {
   Wire.beginTransmission(mAddress);
   Wire.write(0x00);
@@ -28,7 +28,7 @@ void SSD1306ScreenBase::sendCommand(uint8_t aCmd)
   Wire.endTransmission();
 }
 
-void SSD1306ScreenBase::sendData(uint8_t aData)
+void ScreenSSD1306::sendData(uint8_t aData)
 {
   Wire.beginTransmission(mAddress);
   Wire.write(0x40);
@@ -36,7 +36,7 @@ void SSD1306ScreenBase::sendData(uint8_t aData)
   Wire.endTransmission();
 }
 
-void SSD1306ScreenBase::initDisplay()
+void ScreenSSD1306::initDisplay()
 {
   sendCommand(0xAE);
   sendCommand(0xD5);
@@ -63,13 +63,13 @@ void SSD1306ScreenBase::initDisplay()
   sendCommand(0xAF);
 }
 
-void SSD1306ScreenBase::SetContrast(uint8_t aContrast)
+void ScreenSSD1306::SetContrast(uint8_t aContrast)
 {
   sendCommand(0x81);
   sendCommand(aContrast);
 }
 
-void SSD1306ScreenBase::ClearDisplay()
+void ScreenSSD1306::ClearDisplay()
 {
   for (uint8_t page = 0; page < mPages; page++)
   {
@@ -82,7 +82,7 @@ void SSD1306ScreenBase::ClearDisplay()
   }
 }
 
-void SSD1306ScreenBase::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+void ScreenSSD1306::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
 {
   uint8_t x = aPosition.X * 8 + aSliceColumn;
   uint8_t page = aPosition.Y;
@@ -96,7 +96,7 @@ void SSD1306ScreenBase::DrawVerticalSlice(Coor aPosition, unsigned char aSliceCo
   sendData(aSlice);
 }
 
-void SSD1306ScreenBase::ClearTile(Coor aPosition, unsigned char aColor)
+void ScreenSSD1306::ClearTile(Coor aPosition, unsigned char aColor)
 {
   uint8_t startX = aPosition.X * 8;
   uint8_t page = aPosition.Y;
@@ -112,7 +112,7 @@ void SSD1306ScreenBase::ClearTile(Coor aPosition, unsigned char aColor)
     sendData(aColor ? 0xFF : 0x00);
 }
 
-Coor SSD1306ScreenBase::Size()
+Coor ScreenSSD1306::Size()
 {
   return {16, mPages};
 }
