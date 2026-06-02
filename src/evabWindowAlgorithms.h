@@ -3,10 +3,10 @@
 namespace evab
 {
 
-  class SlidingMethodBase
+  class WindowAlgorithmBase
   {
   public:
-    SlidingMethodBase();
+    WindowAlgorithmBase();
     virtual void Select(signed char aIndex) = 0;
     signed char Selected();
     signed char Count();
@@ -24,13 +24,13 @@ namespace evab
     signed char mWindowSize;
   };
 
-  class FlipSlidingMethod : public SlidingMethodBase
+  class FlipWindowAlgorithm : public WindowAlgorithmBase
   {
   public:
     void Select(signed char aIndex) override;
   };
 
-  class ScrollSlidingMethod : public SlidingMethodBase
+  class ScrollWindowAlgorithm : public WindowAlgorithmBase
   {
   public:
     void Select(signed char aIndex) override;

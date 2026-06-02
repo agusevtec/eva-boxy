@@ -1,15 +1,15 @@
-#include "evabSlidingMethods.h"
+#include <evabWindowAlgorithms.h>
 #include <Arduino.h>
 
 namespace evab
 {
 
-  SlidingMethodBase::SlidingMethodBase()
+  WindowAlgorithmBase::WindowAlgorithmBase()
       : mSelected(0), mWindowStart(0), mWindowSize(0), mCount(0)
   {
   }
 
-  signed char SlidingMethodBase::indexInWindow(signed char aPosition)
+  signed char WindowAlgorithmBase::indexInWindow(signed char aPosition)
   {
     int candidate = aPosition - mWindowStart;
     if (0 <= candidate && candidate < mWindowSize)
@@ -17,35 +17,35 @@ namespace evab
     return -1;
   }
 
-  signed char SlidingMethodBase::Selected()
+  signed char WindowAlgorithmBase::Selected()
   {
     if (mCount == 0)
       return -1;
     return mSelected;
   }
 
-  void SlidingMethodBase::setCount(signed char Count)
+  void WindowAlgorithmBase::setCount(signed char Count)
   {
       mCount = Count;
     if (mCount)
       mSelected = 0;
   }
-  void SlidingMethodBase::resizeWindow(signed char aWindowSize)
+  void WindowAlgorithmBase::resizeWindow(signed char aWindowSize)
   {
     mWindowSize = aWindowSize;
   }
 
-  signed char SlidingMethodBase::Count()
+  signed char WindowAlgorithmBase::Count()
   {
     return mCount;
   }
 
-  signed char SlidingMethodBase::WindowSize()
+  signed char WindowAlgorithmBase::WindowSize()
   {
     return mWindowSize;
   }
 
-  void FlipSlidingMethod::Select(signed char aIndex)
+  void FlipWindowAlgorithm::Select(signed char aIndex)
   {
     if (mCount == 0 || mWindowSize == 0)
       return;
@@ -53,7 +53,7 @@ namespace evab
     mWindowStart = (mSelected / mWindowSize) * mWindowSize;
   }
 
-  void ScrollSlidingMethod::Select(signed char aIndex)
+  void ScrollWindowAlgorithm::Select(signed char aIndex)
   {
     if (mCount == 0 || mWindowSize == 0)
       return;

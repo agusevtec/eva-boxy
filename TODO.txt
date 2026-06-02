@@ -1,0 +1,17 @@
+- horizontal progressbar
+- h and v scrollbars 
+- roundmeter
+- rainbowmeter
+- 32x4 serializer
+- grid layout
+- lamp indicator
+- propeller indicator
+- heating indicator
+- windings collection
+- int,float boundaries
+- battery indicator
+- on|off indicator
+- signal strenth indicator
+- loud indicator
+
+SPD1

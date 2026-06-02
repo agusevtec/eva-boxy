@@ -23,6 +23,6 @@ namespace evab
         void setPage(unsigned char page);
         void setColumn(unsigned char col);
 
-        uint8_t _address;
+        uint8_t mAddress;
     };
 }
