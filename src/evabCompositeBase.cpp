@@ -21,4 +21,8 @@ namespace evab
     return false;
   }
 
+  bool CompositeBase::IsFocused(ElementBase *aChild)
+  {
+      return aChild == mFocusedChild;
+  }
 }
