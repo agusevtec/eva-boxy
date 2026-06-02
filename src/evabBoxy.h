@@ -1,44 +1,43 @@
 #pragma once
-#include <evabScreenSSH1106S.h>
+
 #include <evabElementBase.h>
 #include <evabIScreen.h>
+#include <evaHandler.h>
 #include <evaDelayTimer.h>
-#include <evabInputInt.h>
-#include <evabLabeled.h>
+#include <evabKeys.h>
 
-static const unsigned char KEY_SELECT = 0x01;
-static const unsigned char KEY_MENU = 0x02;
-static const unsigned char KEY_DOWN = 0x04;
-static const unsigned char KEY_UP = 0x08;
-static const unsigned char KEY_LEFT = 0x10;
-static const unsigned char KEY_RIGHT = 0x20;
 
 namespace evab
 {
     class Boxy : public eva::IHandler
     {
     public:
-        void SetScreen(IScreen *aScreen);
-        void Ground(ElementBase *aGround);
-        void ShowInt(const char *aName, int aValue);
-        void invoke(void *, eva::CallbackInfo ) override;
-        void Key(char aKey);
-        IScreen *Screen();
+        template <class TScreen, class TFont, typename... Args>
+        static void Begin(ElementBase *aGround, Args &&...args)
+        {
+            static TFont font;
+            static TScreen screen(&font, args...);
+            auto instance = Instance();
+            instance->mScreen = &screen;
+            instance->mGround = aGround;
+            if (instance->mGround)
+                instance->mGround->Draw(instance->mScreen, {0, 0}, instance->mScreen->Size(), 1);
+        }
+
+        static void Key(Keys aKey);
+
+        static IScreen *Screen();
+
         static Boxy *Instance();
 
-    private:
-        Boxy() = default; 
-        IScreen *mScreen = nullptr;
-        ElementBase *mGround = nullptr;
-        eva::DelayTimer mModalShowTimer;
-    };
+        static void ShowInt(const char *aName, int aValue);
 
-    template <class TFont>
-    void UseSSH1106Screen()
-    {
-        static TFont font;
-        static ScreenSSH1106 screen(&font);
-        Boxy *boxy = Boxy::Instance();
-        boxy->SetScreen(&screen);
-    }
+    private:
+        void invoke(void *, eva::CallbackInfo) override;
+
+    private:
+        IScreen *mScreen;
+        ElementBase *mGround;
+        eva::DelayTimer mModalShowTimer = {this};
+    };
 }

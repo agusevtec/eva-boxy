@@ -18,7 +18,7 @@ namespace evab
     void SetItems(LayoutPaneItem aItems[], int aCount);
 
   private:
-    bool onResidualKey(char aKey) override;
+    bool onResidualKey(Keys aKey) override;
     void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
     void hider() override;
 

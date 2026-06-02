@@ -18,7 +18,7 @@ namespace evab
     }
   }
 
-  bool LayoutPane::onResidualKey(char aKey)
+  bool LayoutPane::onResidualKey(Keys aKey)
   {
     if (mCount == 0)
       return false;

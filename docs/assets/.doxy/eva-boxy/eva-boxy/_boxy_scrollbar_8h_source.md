@@ -35,7 +35,7 @@ class BoxyScrollbar : public BoxyScrollbarField
 {
 public:
   BoxyScrollbar(unsigned aCount, IDelegate *aOnPositionChanged);
-  bool Key(char aKey) override;
+  bool Key(Keys aKey) override;
 
 private:
   IDelegate *mOnPositionChanged;

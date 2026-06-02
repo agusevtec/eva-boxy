@@ -19,7 +19,7 @@ private:
 
 class IActor : public IField {
 public:
-  virtual bool Key(char aKey) = 0;
+  virtual bool Key(Keys aKey) = 0;
 };
 
 template<class T>
@@ -31,7 +31,7 @@ public:
     cache = place;
   }
 
-  bool Key(char aKey) override {
+  bool Key(Keys aKey) override {
     bool result  = T::Key(aKey);
     Redraw();
     return result;
@@ -55,7 +55,7 @@ public:
   void Set(char *text) {
   }
 
-  bool Key(char aKey) {
+  bool Key(Keys aKey) {
     Serial.println(aKey);
   }
 

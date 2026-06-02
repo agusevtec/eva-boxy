@@ -8,7 +8,7 @@ namespace evab
     mFocusedChild = aChild;
   }
 
-  bool CompositeBase::Key(char aKey)
+  bool CompositeBase::Key(Keys aKey)
   {
     if (mFocusedChild && mFocusedChild->Key(aKey))
       return true;
@@ -16,7 +16,7 @@ namespace evab
   }
 
 
-  bool CompositeBase::onResidualKey(char aKey)
+  bool CompositeBase::onResidualKey(Keys)
   {
     return false;
   }

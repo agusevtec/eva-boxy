@@ -36,7 +36,7 @@ class BoxyInputInt : public BoxyInputIntField
 {
 public:
   BoxyInputInt(const char *aName, int aValue, IDelegate *aOnValueChangedDelegate);
-  bool Key(char aKey) override;
+  bool Key(Keys aKey) override;
 
 private:
   IDelegate *mOnValueChangedDelegate = 0;

@@ -1,5 +1,5 @@
 // SSH1106TiledScreen.cpp
-#include "..\..\src\evabScreenSSH1106S.h"
+#include "..\..\src\evabScreenSSH1106.h"
 #include <Wire.h>
 
 SSH1106Screen::SSH1106Screen()

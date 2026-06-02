@@ -1,29 +1,29 @@
 #pragma once
 
-#include <evabSlidingMethods.h>
+#include <evabWindowAlgorithms.h>
 #include <evabElementBase.h>
 
 namespace evab
 {
-  template <class TMethod>
-  class ListBox : public ElementBase, public TMethod
+  template <class TWindowAlgorithm>
+  class ListBox : public ElementBase, public TWindowAlgorithm
   {
   private:
     ElementBase **mItems = nullptr;
     unsigned char mItemHeight = 1;
 
   public:
-    ListBox<TMethod> &SetItems(ElementBase *aItems[], int aCount)
+    ListBox<TWindowAlgorithm> &SetItems(ElementBase *aItems[], int aCount)
     {
       mItems = aItems;
-      TMethod::setCount(aCount);
+      TWindowAlgorithm::setCount(aCount);
       if (aCount)
         Select(0);
       Redraw();
       return *this;
     }
 
-    ListBox<TMethod> &SetItemHeight(unsigned char aItemHeight)
+    ListBox<TWindowAlgorithm> &SetItemHeight(unsigned char aItemHeight)
     {
       mItemHeight = aItemHeight;
       Redraw();
@@ -32,7 +32,7 @@ namespace evab
 
     ElementBase *GetItem(unsigned char aIndex)
     {
-      if (aIndex < TMethod::Count())
+      if (aIndex < TWindowAlgorithm::Count())
         return mItems[aIndex];
       return nullptr;
     }
@@ -43,9 +43,9 @@ namespace evab
       Redraw();
     }
 
-    bool Key(char aKey) override
+    bool Key(Keys aKey) override
     {
-      signed char selected = TMethod::Selected();
+      signed char selected = TWindowAlgorithm::Selected();
       if (selected == -1)
         return false;
 
@@ -55,23 +55,20 @@ namespace evab
       return false;
     }
 
-  private:
+  protected:
     void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
-      TMethod::resizeWindow(aSize.Y / mItemHeight);
+      TWindowAlgorithm::resizeWindow(aSize.Y / mItemHeight);
       unsigned char visibleElementsCount = 0;
-      signed char selected = TMethod::Selected();
-      for (int i = 0; i < TMethod::Count(); i++)
+      signed char selected = TWindowAlgorithm::Selected();
+      hider();
+      for (int i = 0; i < TWindowAlgorithm::Count(); i++)
       {
-        int offset = TMethod::indexInWindow(i) * mItemHeight;
+        int offset = TWindowAlgorithm::indexInWindow(i) * mItemHeight;
         if (offset >= 0)
         {
           mItems[i]->Draw(aScreen, {aPos.X, aPos.Y + offset}, {aSize.X, mItemHeight}, aIsFocused && (i == selected));
           visibleElementsCount++;
-        }
-        else
-        {
-          mItems[i]->Hide();
         }
       }
       aScreen->Clear({aPos.X, visibleElementsCount * mItemHeight}, {aSize.Y - visibleElementsCount * mItemHeight, 1});
@@ -79,8 +76,11 @@ namespace evab
 
     void hider() override
     {
-      for (int i = 0; i < TMethod::Count(); i++)
+      for (int i = 0; i < TWindowAlgorithm::Count(); i++)
         mItems[i]->Hide();
     }
   };
+
+  using ScrollListbox = ListBox<ScrollWindowAlgorithm>;
+  using FlipListbox = ListBox<FlipWindowAlgorithm>;
 }

@@ -18,7 +18,7 @@
 class BoxyBaseElement : public BoxyBaseField
 {
 public:
-  virtual bool Key(char aKey);
+  virtual bool Key(Keys aKey);
 };
 
 #endif

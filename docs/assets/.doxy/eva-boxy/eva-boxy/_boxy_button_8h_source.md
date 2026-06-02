@@ -32,7 +32,7 @@ class BoxyButton : public BoxyButtonListboxItem
 {
 public:
   BoxyButton(const char *aName, IDelegate *aOnButtonPressedDelegate = 0);
-  bool Key(char aKey) override;
+  bool Key(Keys aKey) override;
 
 private:
   IDelegate *mOnButtonPressedDelegate;

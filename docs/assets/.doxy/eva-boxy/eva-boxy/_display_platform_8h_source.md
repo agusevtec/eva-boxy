@@ -29,7 +29,7 @@ public:
   virtual void Display(Coor aPos, Coor aSize, const char *aText, unsigned char aAlign, unsigned char aMarkup = 0) = 0;
   virtual Coor Size() = 0;
   void Draw(BoxyBaseElement *aGroundElement = 0);
-  void Key(char aKey);
+  void Key(Keys aKey);
   void SetFreeze(int aFreeze);
   
 public:

@@ -1,6 +1,7 @@
 #pragma once
 #include <evabCoor.h>
 #include <evabIScreen.h>
+#include <evabKeys.h>
 
 namespace evab
 {
@@ -8,7 +9,7 @@ namespace evab
   class ElementBase
   {
   public:
-    virtual bool Key(char aKey);
+    virtual bool Key(Keys aKey);
     void Hide();
     void Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
     void Redraw();

@@ -37,7 +37,7 @@ class BoxyInputFloat : public BoxyInputFloatField
 {
 public:
   BoxyInputFloat(const char *aName, float aValue, IDelegate *aOnValueChangedDelegate);
-  bool Key(char aKey) override;
+  bool Key(Keys aKey) override;
 
 private:
   IDelegate *mOnValueChangedDelegate = 0;

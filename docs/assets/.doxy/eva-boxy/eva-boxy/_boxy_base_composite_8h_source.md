@@ -19,13 +19,13 @@ public:
   BoxyBaseComposite(BoxyBaseComposite *aParent = 0);
   bool IsFocused(BoxyBaseElement *aChild);
   bool IsFocused();
-  bool Key(char aKey) override;
+  bool Key(Keys aKey) override;
 
 protected:
   void focusChild(BoxyBaseElement *aChild);
 
 private:
-  virtual bool onKey(char aKey);
+  virtual bool onKey(Keys aKey);
 
 private:
   BoxyBaseElement *mFocusedChild = 0;

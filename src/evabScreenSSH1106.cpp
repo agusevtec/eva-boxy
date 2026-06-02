@@ -1,9 +1,9 @@
 
-#include <evabScreenSSH1106S.h>
+#include <evabScreenSSH1106.h>
 namespace evab
 {
     ScreenSSH1106::ScreenSSH1106(const IFont* font)
-        : ScreenPage8Base(font), _address(0x3C)
+        : ScreenPage8Base(font), mAddress(0x3C)
     {
         Wire.begin();
         Wire.setClock(800000L);
@@ -56,7 +56,7 @@ namespace evab
                 setPage(page);
                 setColumn(seg * 16 + 2);
 
-                Wire.beginTransmission(_address);
+                Wire.beginTransmission(mAddress);
                 Wire.write(0x40); // data mode
 
                 for (unsigned char col = 0; col < 16; col++)
@@ -78,7 +78,7 @@ namespace evab
         setPage(aPosition.Y);
         setColumn(aPosition.X * 8 + aSliceColumn + 2);
 
-        Wire.beginTransmission(_address);
+        Wire.beginTransmission(mAddress);
         Wire.write(0x40); // data mode
         Wire.write(aSlice);
         Wire.endTransmission();
@@ -89,7 +89,7 @@ namespace evab
         setPage(aPosition.Y);
         setColumn(aPosition.X * 8 + 2);
 
-        Wire.beginTransmission(_address);
+        Wire.beginTransmission(mAddress);
         Wire.write(0x40); // data mode
 
         for (unsigned char col = 0; col < 16; col++)
@@ -105,7 +105,7 @@ namespace evab
 
     void ScreenSSH1106::sendCommand(unsigned char cmd)
     {
-        Wire.beginTransmission(_address);
+        Wire.beginTransmission(mAddress);
         Wire.write(0x00); // command mode
         Wire.write(cmd);
         Wire.endTransmission();

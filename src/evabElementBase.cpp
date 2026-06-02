@@ -8,7 +8,7 @@ namespace evab
     if (IsHidden())
       return;
 
-    IScreen *screen = Boxy::Instance()->Screen();
+    IScreen *screen = Boxy::Screen();
     if (screen)
     {
       Coor pos, sz;
@@ -43,7 +43,7 @@ namespace evab
     serialize(aPos, aSize, aIsFocused);
   }
 
-  bool ElementBase::Key(char aKey)
+  bool ElementBase::Key(Keys)
   {
     return false;
   }

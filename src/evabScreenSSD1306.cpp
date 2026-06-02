@@ -2,8 +2,8 @@
 
 using namespace evab;
 
-ScreenSSD1306::ScreenSSD1306(const IFont *aFont, uint8_t aHeightPx, uint8_t aAddress)
-    : ScreenPage8Base(aFont), mAddress(aAddress)
+ScreenSSD1306::ScreenSSD1306(const IFont *aFont, uint8_t aHeightPx)
+    : ScreenPage8Base(aFont), mAddress(0x3C)
 {
   Coor sz = Size();
   mWidth = 128;
@@ -11,7 +11,7 @@ ScreenSSD1306::ScreenSSD1306(const IFont *aFont, uint8_t aHeightPx, uint8_t aAdd
   mPages = aHeightPx / 8;
 
   Wire.begin();
-  Wire.setClock(400000L);
+  Wire.setClock(800000L);
   initDisplay();
   ClearDisplay();
 }

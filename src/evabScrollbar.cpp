@@ -41,7 +41,7 @@
 //   {
 //   }
 
-//   bool Scrollbar::Key(char aKey)
+//   bool Scrollbar::Key(Keys aKey)
 //   {
 //     int delta = 0;
 //     if (aKey == 'l')

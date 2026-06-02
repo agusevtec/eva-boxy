@@ -9,13 +9,13 @@ namespace evab
   {
   public:
 
-    bool Key(char aKey) override;
+    bool Key(Keys aKey) override;
 
   protected:
     void focusChild(ElementBase *aChild);
 
   private:
-    virtual bool onResidualKey(char aKey);
+    virtual bool onResidualKey(Keys aKey);
     virtual void hider() = 0;
   private:
     ElementBase *mFocusedChild = nullptr;

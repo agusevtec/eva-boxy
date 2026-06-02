@@ -30,7 +30,7 @@
 //       EVENT_POSITION_CHANGED = 1
 //     };
 //     Scrollbar(unsigned aCount, eva::IHandler *aOnPositionChanged);
-//     bool Key(char aKey) override;
+//     bool Key(Keys aKey) override;
 
 //   private:
 //     eva::IHandler *mOnPositionChanged;

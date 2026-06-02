@@ -2,49 +2,64 @@
 #include <evabInputFloat.h>
 #include <evaTac.h>
 #include <evabBoxy.h>
-#include <evabFont8Thin.h>
 #include <evabLabeled.h>
 #include <evabUIButton.h>
 #include <evabBehaviour.h>
 #include <evabProgressBar.h>
+#include <evabCompositeBase.h>
+
+#include <evabFont8Bold.h>
+#include <evabScreenSSH1106.h>
+#include <evaRepeatTimer.h>
 
 using namespace evab;
 
-class App {
-  KeyModifier<Labeled<InputFloat>, KEY_LEFT, KEY_RIGHT> item0 = {"Speed", 13};
-  Labeled<InputFloat> item1 = {"Course", 37};
-  Labeled<InputFloat> item2 = {"Fuel", 95};
+class MyListbox : public ScrollListbox {
+public:
+  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+    ScrollListbox::drawer(aScreen, aPos, { aSize.X - 1, aSize.Y }, aIsFocused);
+    ProgressBar pb(100 * (ScrollListbox::Selected() + 1) / ScrollListbox::Count());
+    pb.Draw(aScreen, {aPos.X + aSize.X - 1, aPos.Y}, { 1, aSize.Y }, 0);
+  }
+};
 
-  ElementBase *items[3] = { 
-    &item0, 
-    &item1, 
+class App: public eva::IHandler {
+  KeyModifier<Labeled<InputFloat>, KEY_LEFT, KEY_RIGHT> item0 = { "Speed", 13 };
+  Labeled<InputFloat> item1 = { "Course", 37 };
+  Labeled<InputFloat> item2 = { "Fuel", 95 };
+  ElementBase *items[3] = {
+    &item0,
+    &item1,
     &item2
-    };
-  KeyModifier<ListBox<ScrollSlidingMethod>, KEY_UP, KEY_DOWN>  mListbox;
+  };
+  KeyModifier<MyListbox, KEY_UP, KEY_DOWN> mListbox;
 
-// Теперь можно так:
+  eva::RepeatTimer timer;
 
 public:
   App() {
-    UseSSH1106Screen<Font8Thin>();
     mListbox.SetItems(items, 3);
     mListbox.SetItemHeight(3);
-    ProgressBar pb(50);
-    Boxy::Instance()->Ground(&mListbox);
-    pb.Draw(Boxy::Instance()->Screen(), {14, 0}, {1,8}, 0);
-    // Boxy::Instance()->Key(KEY_RIGHT);
-    // Boxy::Instance()->Key(KEY_DOWN);
-    // Boxy::Instance()->Key(KEY_RIGHT);
-    // Boxy::Instance()->Key(KEY_DOWN);
-    // Boxy::Instance()->Key(KEY_UP);
-    // Boxy::Instance()->Key(KEY_UP);
-    // Boxy::Instance()->ShowInt("Hi!", 5);
+    Boxy::Begin<ScreenSSH1106, Font8Bold>(&mListbox);
+    timer.start(2000, this);
+  }
+
+  void invoke(void *, eva::CallbackInfo)
+  {
+    Boxy::Key(KEY_DOWN);
   }
 };
 
 void setup() {
   Serial.begin(9600);
   static App app;
+  // Boxy::Key(KEY_RIGHT);
+  // Boxy::Key(KEY_DOWN);
+  // Boxy::Key(KEY_RIGHT);
+  // Boxy::Key(KEY_DOWN);
+  // Boxy::Key(KEY_UP);
+  // Boxy::Key(KEY_UP);
+  //    Boxy::ShowInt("Hi!", 5);
 }
 
 void loop() {

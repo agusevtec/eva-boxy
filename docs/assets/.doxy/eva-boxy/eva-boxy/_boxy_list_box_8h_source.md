@@ -34,7 +34,7 @@ public:
 
 private:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
-  bool onKey(char aKey) override;
+  bool onKey(Keys aKey) override;
 
 private:
   BoxyBaseField **mItems;

@@ -29,7 +29,7 @@ public:
   void SetItems(BoxyLayoutPaneItem aItems[], int aCount);
 
 private:
-  bool onKey(char aKey) override;
+  bool onKey(Keys aKey) override;
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
 private:

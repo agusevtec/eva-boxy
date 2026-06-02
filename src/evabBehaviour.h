@@ -20,12 +20,12 @@ namespace evab
     {
     }
 
-    bool Key(char aKey) override
+    bool Key(Keys aKey) override
     {
       if (T::Key(aKey))
         return true;
 
-      if (aKey & kKey)
+      if (aKey == kKey)
         if (mListener)
         {
           mListener->invoke(this, {EVENT_CATCH_KEY, (int)aKey});
@@ -48,14 +48,14 @@ namespace evab
     {
     }
 
-    bool Key(char aKey) override
+    bool Key(Keys aKey) override
     {
       if (T::Key(aKey))
         return true;
 
-      if (aKey & kDec)
+      if (aKey == kDec)
         T::Increment(-1);
-      else if (aKey & kInc)
+      else if (aKey == kInc)
         T::Increment(+1);
       else
         return false;
@@ -79,14 +79,14 @@ namespace evab
     {
     }
 
-    bool Key(char aKey) override
+    bool Key(Keys aKey) override
     {
       if (T::Key(aKey))
         return true;
 
-      if (aKey & kDec)
+      if (aKey == kDec)
         T::Increment(-1);
-      else if (aKey & kInc)
+      else if (aKey == kInc)
         T::Increment(+1);
       else
         return false;
