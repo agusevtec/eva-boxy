@@ -71,7 +71,7 @@ namespace evab
           visibleElementsCount++;
         }
       }
-      aScreen->Clear({aPos.X, visibleElementsCount * mItemHeight}, {aSize.Y - visibleElementsCount * mItemHeight, 1});
+      aScreen->Clear({aPos.X, aPos.Y + visibleElementsCount * mItemHeight}, {aSize.X, aSize.Y - visibleElementsCount * mItemHeight});
     }
 
     void hider() override
