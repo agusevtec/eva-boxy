@@ -137,7 +137,7 @@ class TxtToCharmapConverter:
             total_bytes = len(columns)
             
             lines.append(f"// {width}x{height} pictogram")
-            lines.append(f"inline const uint8_t picto_{name}[] PROGMEM = {{")
+            lines.append(f"const uint8_t picto_{name}[] PROGMEM = {{")
             lines.append(f"    {width}, {height},  // ({width}x{height} пикселей)")
             
             # Форматируем байты в строки по 8-12 байт на строку для читаемости

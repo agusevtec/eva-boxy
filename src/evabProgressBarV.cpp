@@ -1,4 +1,4 @@
-#include <evabProgressBar.h>
+#include <evabProgressBarV.h>
 
 using namespace evab;
 // 8x8 pictogram
@@ -110,28 +110,25 @@ static const unsigned char *getPicto(unsigned char blockType, unsigned char fill
     case 0x33:
         return picto_progress_33;
     }
-    Serial.print("Error ");
-    Serial.println(blockType);
-    Serial.println(fillNumber);
     return nullptr;
 }
 
-ProgressBar::ProgressBar(unsigned char aValue)
+ProgressBarV::ProgressBarV(unsigned char aValue)
     : mValue(aValue)
 {
 }
 
-void ProgressBar::SetValue(unsigned char aValue)
+void ProgressBarV::SetValue(unsigned char aValue)
 {
     mValue = aValue;
 }
 
-unsigned char evab::ProgressBar::Resolution()
+unsigned char evab::ProgressBarV::Resolution()
 {
     return 0;
 }
 
-char fillNumber(unsigned char blockNumber, unsigned char normalizedValue)
+static char fillNumber(unsigned char blockNumber, unsigned char normalizedValue)
 {
     if (normalizedValue / 3 < blockNumber)
         return 0;
@@ -140,7 +137,7 @@ char fillNumber(unsigned char blockNumber, unsigned char normalizedValue)
     return normalizedValue % 3 + 1;
 }
 
-void ProgressBar::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
+void ProgressBarV::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
 {
     unsigned short resulution = 3 + (aSize.Y - 2) * 3 + 2;
     unsigned short normalizedValue = min((int)(resulution * mValue / 95), (int)resulution);

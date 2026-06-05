@@ -4,10 +4,10 @@
 
 namespace evab
 {
-    class ProgressBar : public ElementBase
+    class ProgressBarH : public ElementBase
     {
     public:
-        ProgressBar(unsigned char aValue);
+        ProgressBarH(unsigned char aValue);
         void SetValue(unsigned char aValue);
         unsigned char Resolution();
 

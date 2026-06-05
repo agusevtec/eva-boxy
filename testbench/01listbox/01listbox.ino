@@ -18,7 +18,7 @@ class MyListbox : public ScrollListbox {
 public:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     ScrollListbox::drawer(aScreen, aPos, { aSize.X - 1, aSize.Y }, aIsFocused);
-    ProgressBar pb(100 * (ScrollListbox::Selected() + 1) / ScrollListbox::Count());
+    ProgressBarV pb(100 * (ScrollListbox::Selected() + 1) / ScrollListbox::Count());
     pb.Draw(aScreen, {aPos.X + aSize.X - 1, aPos.Y}, { 1, aSize.Y }, 0);
   }
 };
