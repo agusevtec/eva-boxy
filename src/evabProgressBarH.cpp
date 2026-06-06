@@ -132,6 +132,6 @@ void ProgressBarH::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char
     Serial.println(resulution);
     aScreen->Picto({aPos.X, aPos.Y}, getPicto(1, fillNumber(0, normalizedValue)), aIsFocused);
     for (unsigned char i = 1; i < aSize.X - 1; i++)
-        aScreen->Picto({aPos.X + i, aPos.Y}, getPicto(1, fillNumber(i, normalizedValue)), aIsFocused);
+        aScreen->Picto({aPos.X + i, aPos.Y}, getPicto(2, fillNumber(i, normalizedValue)), aIsFocused);
     aScreen->Picto({aPos.X + aSize.X - 1, aPos.Y}, getPicto(3, fillNumber(aSize.X - 1, normalizedValue)), aIsFocused);
 }
