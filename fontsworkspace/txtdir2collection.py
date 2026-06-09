@@ -1,228 +1,209 @@
 import os
 import sys
 import re
-from typing import List, Tuple, Optional
+from typing import List, Tuple
 
 class TxtToCharmapConverter:
     """
-    Конвертирует txt-файлы с символами произвольного размера в C-массивы для микродисплея.
-    
-    Поддерживаемые высоты: любые (кратные 8 или нет).
-    Формат упаковки: разбиение на горизонтальные полосы по 8 строк.
-    В каждой полосе для каждой колонки собирается байт (бит0=верхняя строка полосы, бит7=нижняя).
-    
-    Для каждого файла создаётся отдельная переменная.
+    Конвертирует каталог с txt-файлами в C++ класс TileSet.
     """
 
-    def __init__(self, input_dir: str, output_file: str = "charmap.h"):
-        """
-        Args:
-            input_dir: Директория с txt-файлами (например, "picto/")
-            output_file: Имя выходного C-файла
-        """
+    def __init__(self, input_dir: str, output_prefix: str = "pictograms"):
         self.input_dir = input_dir
-        self.output_file = output_file
+        self.output_prefix = output_prefix
+        self.header_file = f"{output_prefix}.h"
+        self.cpp_file = f"{output_prefix}.cpp"
+        
+        # Имя класса из имени каталога
+        self.class_name = os.path.basename(input_dir.rstrip('/\\'))
+        if self.class_name:
+            self.class_name = self.class_name[0].upper() + self.class_name[1:]
 
     def parse_txt_char(self, file_path: str) -> Tuple[List[int], int, int]:
-        """
-        Читает txt-файл и возвращает массив байт для микродисплея.
-        
-        Упаковка:
-        - Разбиваем изображение на горизонтальные полосы по 8 строк
-        - В каждой полосе для каждой колонки собираем байт:
-          бит0 = верхняя строка полосы, бит7 = нижняя строка полосы
-        - Порядок байт: сначала все колонки первой полосы, затем все колонки второй полосы и т.д.
-        
-        Args:
-            file_path: Путь к txt-файлу (N строк по M символов # и .)
-            
-        Returns:
-            Кортеж (массив_байт, ширина_символа, высота_символа)
-        """
+        """Читает txt-файл и возвращает массив байт."""
         with open(file_path, 'r', encoding='utf-8') as f:
             lines = [line.rstrip('\n') for line in f.readlines()]
         
-        # Определяем размеры символа
         height = len(lines)
         width = max(len(line) for line in lines) if lines else 0
         
-        # Обрезаем/дополняем каждую строку до единой ширины
+        # Обрезаем/дополняем строки
         for i in range(len(lines)):
             if len(lines[i]) > width:
                 lines[i] = lines[i][:width]
             elif len(lines[i]) < width:
                 lines[i] = lines[i] + '.' * (width - len(lines[i]))
         
-        # Определяем количество полос по 8 строк
+        # Упаковка в байты (полосы по 8 строк)
         num_bands = (height + 7) // 8
-        bytes_per_band = width  # в каждой полосе по байту на колонку
-        
-        # Массив для результата
         columns = []
         
-        # Обрабатываем каждую полосу
         for band in range(num_bands):
             start_row = band * 8
             end_row = min(start_row + 8, height)
             
-            # Для каждой колонки собираем байт
             for col in range(width):
                 byte = 0
                 for row in range(start_row, end_row):
                     if lines[row][col] == '#':
-                        # бит0 = верхняя строка полосы
-                        bit_pos = row - start_row
-                        byte |= (1 << bit_pos)
+                        byte |= (1 << (row - start_row))
                 columns.append(byte)
         
         return columns, width, height
 
-    def get_name_from_filename(self, filename: str) -> Optional[str]:
-        """
-        Извлекает имя переменной из имени файла (без расширения).
-        """
+    def get_variable_name(self, filename: str) -> str:
+        """Формирует имя PROGMEM переменной с префиксом picto_"""
         name = os.path.splitext(filename)[0]
-        # Очищаем имя от недопустимых символов для C-идентификатора
         name = re.sub(r'[^a-zA-Z0-9_]', '_', name)
-        return name
+        return f"picto_{name}"
 
-    def scan_directory(self) -> List[Tuple[str, List[int], int, int]]:
-        """
-        Сканирует директорию и собирает все символы.
-        
-        Returns:
-            Список кортежей (имя_переменной, массив_байт, ширина, высота)
-        """
-        chars = []
+    def get_constant_name(self, filename: str) -> str:
+        """Формирует имя константы для заголовочного файла"""
+        name = os.path.splitext(filename)[0]
+        name = re.sub(r'[^a-zA-Z0-9_]', '_', name)
+        return name.upper()
+
+    def scan_directory(self) -> List[Tuple[str, str, List[int], int, int]]:
+        """Сканирует каталог и собирает все тайлы."""
+        tiles = []
         
         for filename in sorted(os.listdir(self.input_dir)):
             if not filename.endswith('.txt'):
                 continue
             
-            name = self.get_name_from_filename(filename)
-            if name is None:
-                continue
-            
+            var_name = self.get_variable_name(filename)
+            const_name = self.get_constant_name(filename)
             file_path = os.path.join(self.input_dir, filename)
+            
             try:
-                columns, width, height = self.parse_txt_char(file_path)
-                num_bands = (height + 7) // 8
-                print(f"  {filename} -> {name}: {width}x{height} "
-                      f"({num_bands} полос по 8 строк, всего {len(columns)} байт)")
-                chars.append((name, columns, width, height))
+                data, width, height = self.parse_txt_char(file_path)
+                print(f"  {filename} -> {var_name}: {width}x{height}, {len(data)} байт")
+                tiles.append((var_name, const_name, data, width, height))
             except Exception as e:
                 print(f"  Ошибка в {filename}: {e}")
         
-        return chars
+        return tiles
 
-    def generate_c_arrays(self, chars: List[Tuple[str, List[int], int, int]]) -> str:
-        """
-        Генерирует C-код с массивами символов.
-        """
+    def generate_header(self, tiles: List[Tuple[str, str, List[int], int, int]]) -> str:
+        """Генерирует заголовочный файл."""
         lines = []
         
-        # Заголовок
-        lines.append("// Auto-generated font/pictogram arrays")
-        lines.append("// Format: width, height, then byte data")
-        lines.append("// Bytes are organized in horizontal bands of 8 rows each")
-        lines.append("// For each band: one byte per column (bit0=top row of band, bit7=bottom row)")
-        lines.append("// Order: all columns of band0, then all columns of band1, etc.")
+        lines.append("#pragma once")
         lines.append("")
         lines.append("#include <Arduino.h>")
         lines.append("")
+        lines.append(f"class TileSet{self.class_name}")
+        lines.append("{")
+        lines.append("public:")
+        lines.append(f"    static const uint8_t* GetTile(unsigned char aIndex);")
+        lines.append(f"    static constexpr unsigned char Count = {len(tiles)};")
+        lines.append("};")
+        lines.append("")
         
-        # Генерируем отдельную переменную для каждого файла
-        for name, columns, width, height in chars:
-            num_bands = (height + 7) // 8
-            total_bytes = len(columns)
+        return '\n'.join(lines)
+
+    def generate_cpp(self, tiles: List[Tuple[str, str, List[int], int, int]]) -> str:
+        """Генерирует cpp файл с PROGMEM данными внутри GetTile."""
+        lines = []
+        
+        lines.append(f'#include "{self.output_prefix}.h"')
+        lines.append("#include <avr/pgmspace.h>")
+        lines.append("")
+        
+        lines.append(f"const uint8_t* TileSet{self.class_name}::GetTile(unsigned char aIndex)")
+        lines.append("{")
+        
+        # Объявляем все тайлы как статические локальные переменные
+        for var_name, _, data, width, height in tiles:
+            lines.append(f"    static const uint8_t {var_name}[] PROGMEM = {{")
+            lines.append(f"        {width}, {height},  // {width}x{height}")
             
-            lines.append(f"// {width}x{height} pictogram")
-            lines.append(f"const uint8_t picto_{name}[] PROGMEM = {{")
-            lines.append(f"    {width}, {height},  // ({width}x{height} пикселей)")
-            
-            # Форматируем байты в строки по 8-12 байт на строку для читаемости
-            byte_strs = [f"0x{byte:02x}" for byte in columns]
-            bytes_per_line = 8  # количество байт на строку в выводе
+            byte_strs = [f"0x{byte:02x}" for byte in data]
+            bytes_per_line = 8
             
             for i in range(0, len(byte_strs), bytes_per_line):
                 chunk = byte_strs[i:i+bytes_per_line]
-                line = "    " + ", ".join(chunk)
+                line = "        " + ", ".join(chunk)
                 if i + bytes_per_line < len(byte_strs):
                     line += ","
                 lines.append(line)
             
-            lines.append("};")
+            lines.append("    };")
             lines.append("")
         
-        # Добавляем информацию о количестве сгенерированных массивов
-        lines.append(f"// Total pictograms generated: {len(chars)}")
+        # Switch по индексу
+        lines.append("    switch (aIndex)")
+        lines.append("    {")
+        
+        for idx, (var_name, _, _, _, _) in enumerate(tiles):
+            lines.append(f"        case {idx}: return {var_name};")
+        
+        lines.append("        default: return nullptr;")
+        lines.append("    }")
+        lines.append("}")
+        lines.append("")
+        
+        total_bytes = sum(len(data) + 2 for _, _, data, _, _ in tiles)
+        lines.append(f"// Total pictogram data size: {total_bytes} bytes")
         
         return '\n'.join(lines)
 
     def convert(self):
-        """
-        Основной метод конвертации.
-        """
+        """Основной метод конвертации."""
         if not os.path.exists(self.input_dir):
             print(f"Ошибка: директория '{self.input_dir}' не найдена!")
             return False
         
-        print(f"Сканирование директории: {self.input_dir}")
-        chars = self.scan_directory()
+        print(f"Каталог: {self.input_dir}")
+        print(f"Класс: TileSet{self.class_name}")
+        print(f"\nТайлы:")
         
-        if not chars:
+        tiles = self.scan_directory()
+        
+        if not tiles:
             print("Не найдено ни одного txt-файла!")
             return False
         
-        print(f"\nНайдено файлов: {len(chars)}")
+        print(f"\nНайдено тайлов: {len(tiles)}")
         
-        c_code = self.generate_c_arrays(chars)
+        # Генерируем файлы
+        header_code = self.generate_header(tiles)
+        cpp_code = self.generate_cpp(tiles)
         
-        with open(self.output_file, 'w', encoding='utf-8') as f:
-            f.write(c_code)
+        with open(self.header_file, 'w', encoding='utf-8') as f:
+            f.write(header_code)
         
-        print(f"\nСоздан файл: {self.output_file}")
+        with open(self.cpp_file, 'w', encoding='utf-8') as f:
+            f.write(cpp_code)
+        
+        print(f"\nСозданы:")
+        print(f"  {self.header_file}")
+        print(f"  {self.cpp_file}")
         return True
 
 
 def main():
     if len(sys.argv) < 2:
-        print("Использование: python picto_converter.py <каталог_с_txt_файлами> [выходной_файл]")
+        print("Использование: python picto_converter.py <каталог> [префикс]")
         print("")
-        print("Параметры:")
-        print("  каталог_с_txt_файлами  - директория с файлами .txt (обязательный)")
-        print("  выходной_файл          - имя выходного .h файла (по умолчанию pictograms.h)")
-        print("")
-        print("Формат упаковки данных:")
-        print("  - Изображение разбивается на горизонтальные полосы по 8 строк")
-        print("  - В каждой полосе для каждой колонки собирается байт")
-        print("  - Бит0 = верхняя строка полосы, бит7 = нижняя строка полосы")
-        print("  - Порядок байт: все колонки полосы0, затем все колонки полосы1, ...")
+        print("  каталог - директория с .txt файлами (один каталог = один TileSet)")
+        print("  префикс - имя выходных файлов (по умолчанию = имя каталога)")
         print("")
         print("Пример:")
-        print("  python picto_converter.py pictograms/ my_pictos.h")
-        print("")
-        print("Для каждого файла будет создана переменная picto_<имя_файла>[]")
+        print("  python picto_converter.py ./vprogress_bar my_gui")
         sys.exit(1)
     
-    input_dir = sys.argv[1]
-    # Убираем слеш в конце, если есть
-    input_dir = input_dir.rstrip('/\\')
+    input_dir = sys.argv[1].rstrip('/\\')
+    output_prefix = sys.argv[2] if len(sys.argv) > 2 else os.path.basename(input_dir)
     
-    # Выходной файл
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "pictograms.h"
+    converter = TxtToCharmapConverter(input_dir, output_prefix)
     
-    try:
-        converter = TxtToCharmapConverter(input_dir, output_file)
-        
-        if converter.convert():
-            print(f"\nГотово! Файл {output_file} создан.")
-            print("Скопируйте его в ваш проект Arduino/PlatformIO.")
-        else:
-            print("\nОшибка при конвертации.")
-            sys.exit(1)
-    except ValueError as e:
-        print(f"Ошибка: {e}")
+    if converter.convert():
+        print(f"\nГотово!")
+        print(f"\nИспользование:")
+        print(f"  #include \"{output_prefix}.h\"")
+        print(f"  aScreen->Picto({{0,0}}, TileSet{converter.class_name}::GetTile(0), false);")
+    else:
         sys.exit(1)
 
 

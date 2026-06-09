@@ -4,13 +4,15 @@
 #include <evabBoxy.h>
 #include <evabLabeled.h>
 #include <evabUIButton.h>
-#include <evabBehaviour.h>
-#include <evabProgressBar.h>
+#include <evabBehavior.h>
 #include <evabCompositeBase.h>
 
-#include <evabFont8Bold.h>
-#include <evabScreenSSH1106.h>
+#include <evabFont8Thin.h>
+#include <evabScreenSSD1306.h>
 #include <evaRepeatTimer.h>
+#include <evabTilesets.h>
+#include <evabInputWidget.h>
+#include <evabStretchbar.h>
 
 using namespace evab;
 
@@ -18,12 +20,14 @@ class MyListbox : public ScrollListbox {
 public:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     ScrollListbox::drawer(aScreen, aPos, { aSize.X - 1, aSize.Y }, aIsFocused);
-    ProgressBarV pb(100 * (ScrollListbox::Selected() + 1) / ScrollListbox::Count());
-    pb.Draw(aScreen, {aPos.X + aSize.X - 1, aPos.Y}, { 1, aSize.Y }, 0);
+    VProgressBar pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
+    pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y }, { 1, aSize.Y }, 0);
+    // InputWidget<TilesetH_progress1> fan(ScrollListbox::Selected() + 1);
+    // fan.Draw(aScreen, { aPos.X + 1, aPos.Y + aSize.Y - 3 }, { 2, 2 }, 0);
   }
 };
 
-class App: public eva::IHandler {
+class App : public eva::IHandler {
   KeyModifier<Labeled<InputFloat>, KEY_LEFT, KEY_RIGHT> item0 = { "Speed", 13 };
   Labeled<InputFloat> item1 = { "Course", 37 };
   Labeled<InputFloat> item2 = { "Fuel", 95 };
@@ -39,13 +43,12 @@ class App: public eva::IHandler {
 public:
   App() {
     mListbox.SetItems(items, 3);
-    mListbox.SetItemHeight(3);
-    Boxy::Begin<ScreenSSH1106, Font8Bold>(&mListbox);
+    mListbox.SetItemHeight(2);
+    Boxy::Begin<ScreenSSD1306, Font8Thin>(&mListbox);
     timer.start(2000, this);
   }
 
-  void invoke(void *, eva::CallbackInfo)
-  {
+  void invoke(void *, eva::CallbackInfo) {
     Boxy::Key(KEY_DOWN);
   }
 };

@@ -2,10 +2,11 @@
 #include <AUnit.h>
 
 using namespace aunit;
-#include <evabScreenSerialText.h>
+// #include <evabScreenSerialText.h>
 #include <evabScreenSerialPixel.h>
 #include <evabFont8Thin.h>
-#include <evabProgressBarH.h>
+#include <evabStretchBar.h>
+#include <evabTilesets.h>
 
 // -------------------------------------------------------------------
 // DelayTimer
@@ -18,8 +19,8 @@ test(delayTimer_triggers_once)
     evab::ScreenSerialPixel screen(&font);
     for (int i = 0; i < 8; i++)
     {
-        evab::ProgressBarH pb(10*i);
-        pb.Draw(&screen, {0, i}, {16,1}, 0);
+        evab::VScrollBar pb(10*i);
+        pb.Draw(&screen, {i, 0}, {1, 8}, 0);
     }
     screen.printToSerial();
     assertEqual(1, 1);
