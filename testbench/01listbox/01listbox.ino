@@ -19,9 +19,11 @@ using namespace evab;
 class MyListbox : public ScrollListbox {
 public:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    ScrollListbox::drawer(aScreen, aPos, { aSize.X - 1, aSize.Y }, aIsFocused);
+    InputWidget<TilesetBattery> b(6);
+    b.Draw(aScreen, {aPos.X+aSize.X-4, aPos.Y}, {2,1}, 0);
+    ScrollListbox::drawer(aScreen, {aPos.X,aPos.Y+1}, { aSize.X - 1, aSize.Y - 1}, aIsFocused);
     VProgressBar pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
-    pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y }, { 1, aSize.Y }, 0);
+    pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y+1 }, { 1, aSize.Y -1}, 0);
     // InputWidget<TilesetH_progress1> fan(ScrollListbox::Selected() + 1);
     // fan.Draw(aScreen, { aPos.X + 1, aPos.Y + aSize.Y - 3 }, { 2, 2 }, 0);
   }

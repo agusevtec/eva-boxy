@@ -6,8 +6,8 @@ from typing import List, Tuple
 # ============================================================
 # НАСТРАИВАЕМЫЕ КОНСТАНТЫ
 # ============================================================
-OUTPUT_WIDTH = 32   # ширина поля вывода в пикселях (по умолчанию 16)
-OUTPUT_HEIGHT = 24  # высота поля вывода в пикселях (по умолчанию 16)
+OUTPUT_WIDTH = 16   # ширина поля вывода в пикселях (по умолчанию 16)
+OUTPUT_HEIGHT = 16  # высота поля вывода в пикселях (по умолчанию 16)
 POSTPROCESSING_DESCALEFACTOR = 1  # коэффициент уменьшения (1 - без изменений, 2 - уменьшить в 2 раза, и т.д.)
 # ============================================================
 
@@ -211,7 +211,9 @@ class FontToPseudographics:
         print()
 
         # Генерируем символы с 32 по 127
-        for code in range(32, 225):
+#        for code in range(32, 225):
+        for code in range(63081, 63081+10):
+#        for code in range(0xea01, 0xf69d):
             self.save_char(code, output_dir)
 
         print(f"\nГотово! Символы сохранены в {output_dir}")
@@ -239,7 +241,7 @@ def main():
         sys.exit(1)
 
     # Размер шрифта можно менять здесь (влияет на детализацию)
-    converter = FontToPseudographics(font_path, font_size=26)
+    converter = FontToPseudographics(font_path, font_size=20)
     converter.generate_font(font_path)
 
 

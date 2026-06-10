@@ -58,3 +58,10 @@ public:
     static constexpr unsigned char Count = 5;
 };
 
+
+class TilesetBattery
+{
+public:
+    static const uint8_t* GetTile(unsigned char aIndex);
+    static constexpr unsigned char Count = 7;
+};
