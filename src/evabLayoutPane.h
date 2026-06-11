@@ -1,6 +1,6 @@
 #pragma once
 
-#include <evabCompositeBase.h>
+#include <evabElementBase.h>
 
 namespace evab
 {
@@ -11,20 +11,23 @@ namespace evab
     Coor Size;
   };
 
-  class LayoutPane : public CompositeBase
+  class LayoutPane: public ElementBase
   {
   public:
     // LayoutPane(CompositeBase *aContainer);
-    void SetItems(LayoutPaneItem aItems[], int aCount);
+      void SetItems(unsigned short aLayout, LayoutPaneItem aItems[], unsigned char  aCount);
 
   private:
-    bool onResidualKey(Keys aKey) override;
+    bool Key(Keys aKey) override;
     void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
     void hider() override;
+    static int digits(unsigned short n);
+    static int getTileCount(unsigned short n, unsigned char row);
 
-    private:
+  private:
     LayoutPaneItem *mItems = nullptr;
     int mCount = 0;
     int mFocused = -1;
+    unsigned short number;
   };
 }
