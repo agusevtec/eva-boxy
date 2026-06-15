@@ -6,7 +6,7 @@ namespace evab
         : ScreenPage8Base(font), mAddress(0x3C)
     {
         Wire.begin();
-        Wire.setClock(800000L);
+        Wire.setClock(400000L);
 
         sendCommand(0xAE); // display off
 
