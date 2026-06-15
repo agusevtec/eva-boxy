@@ -5,7 +5,7 @@
 namespace evab
 {
 
-  template <class T, unsigned char kKey>
+  template <class T, Keys... KEYS>
   class KeyCatcher : public T
   {
   public:
@@ -16,7 +16,7 @@ namespace evab
 
     template <typename... Args>
     KeyCatcher(eva::IHandler *aListener, Args &&...args)
-        : T(args...)
+        : T(args...), mListener(aListener)
     {
     }
 
@@ -25,12 +25,14 @@ namespace evab
       if (T::Key(aKey))
         return true;
 
-      if (aKey == kKey)
+      if ((... || (aKey == KEYS)))
+      {
         if (mListener)
         {
           mListener->invoke(this, {EVENT_CATCH_KEY, (int)aKey});
           return true;
         }
+      }
       return false;
     }
 

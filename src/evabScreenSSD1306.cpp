@@ -11,7 +11,7 @@ ScreenSSD1306::ScreenSSD1306(const IFont *aFont, uint8_t aHeightPx)
   mPages = aHeightPx / 8;
 
   Wire.begin();
-  Wire.setClock(800000L);
+  Wire.setClock(400000L);
   initDisplay();
   ClearDisplay();
 }
