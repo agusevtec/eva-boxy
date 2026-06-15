@@ -2,11 +2,11 @@
 #include <evabScreenSSH1106.h>
 namespace evab
 {
-    ScreenSSH1106::ScreenSSH1106(const IFont* font)
+    ScreenSSH1106::ScreenSSH1106(const IFont* font, unsigned long aWireClock)
         : ScreenPage8Base(font), mAddress(0x3C)
     {
         Wire.begin();
-        Wire.setClock(400000L);
+        Wire.setClock(aWireClock);
 
         sendCommand(0xAE); // display off
 

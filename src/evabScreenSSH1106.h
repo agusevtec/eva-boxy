@@ -9,7 +9,7 @@ namespace evab
     class ScreenSSH1106 : public ScreenPage8Base
     {
     public:
-        ScreenSSH1106(const IFont* font);
+        ScreenSSH1106(const IFont* font, unsigned long aWireClock = 800000L);
         
         void clearDisplay();
 

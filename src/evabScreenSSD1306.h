@@ -10,7 +10,7 @@ namespace evab
   class ScreenSSD1306 : public ScreenPage8Base
   {
   public:
-    ScreenSSD1306(const IFont *aFont, uint8_t aHeightPx=64);
+    ScreenSSD1306(const IFont *aFont, unsigned long aWireClock = 800000L, uint8_t aHeightPx = 64);
     ~ScreenSSD1306();
 
     void SetContrast(uint8_t aContrast);
