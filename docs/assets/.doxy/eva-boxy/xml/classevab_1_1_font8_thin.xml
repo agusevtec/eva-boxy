@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_font8_thin" kind="class" language="C++" prot="public">
+    <compoundname>evab::Font8Thin</compoundname>
+    <basecompoundref refid="classevab_1_1_i_font" prot="public" virt="non-virtual">evab::IFont</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_font8_thin_1a034f9688d1d3f2bb874de14985131737" prot="private" static="yes" mutable="no">
+        <type>const unsigned char kCharmap[][7]</type>
+        <definition>const unsigned char kCharmap [][7] evab::Font8Thin::PROGMEM</definition>
+        <argsstring></argsstring>
+        <name>PROGMEM</name>
+        <qualifiedname>evab::Font8Thin::PROGMEM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabFont8Thin.h" line="14" column="45" bodyfile="src/evabFont8Thin.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_font8_thin_1adbb5876ae45ec71b7122dae3275e2b22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::Font8Thin::GetVerticalSlice</definition>
+        <argsstring>(char aCharcode, unsigned char aSliceColumn) const override</argsstring>
+        <name>GetVerticalSlice</name>
+        <qualifiedname>evab::Font8Thin::GetVerticalSlice</qualifiedname>
+        <reimplements refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad">GetVerticalSlice</reimplements>
+        <param>
+          <type>char</type>
+          <declname>aCharcode</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSliceColumn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabFont8Thin.h" line="11" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evab::Font8Thin</label>
+        <link refid="classevab_1_1_font8_thin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::IFont</label>
+        <link refid="classevab_1_1_i_font"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evab::Font8Thin</label>
+        <link refid="classevab_1_1_font8_thin"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::IFont</label>
+        <link refid="classevab_1_1_i_font"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabFont8Thin.h" line="8" column="5" bodyfile="src/evabFont8Thin.h" bodystart="9" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_font8_thin_1adbb5876ae45ec71b7122dae3275e2b22" prot="public" virt="virtual"><scope>evab::Font8Thin</scope><name>GetVerticalSlice</name></member>
+      <member refid="classevab_1_1_font8_thin_1a034f9688d1d3f2bb874de14985131737" prot="private" virt="non-virtual"><scope>evab::Font8Thin</scope><name>PROGMEM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

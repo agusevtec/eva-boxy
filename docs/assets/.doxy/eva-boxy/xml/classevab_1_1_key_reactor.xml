@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_key_reactor" kind="class" language="C++" prot="public">
+    <compoundname>evab::KeyReactor</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>unsigned char</type>
+        <declname>kDec</declname>
+        <defname>kDec</defname>
+      </param>
+      <param>
+        <type>unsigned char</type>
+        <declname>kInc</declname>
+        <defname>kInc</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EventType</name>
+        <qualifiedname>evab::KeyReactor::EventType</qualifiedname>
+        <enumvalue id="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adba9e339d50c53f9e5e5fad794046472241" prot="public">
+          <name>EVENT_VALUE_CHANGED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabBehavior.h" line="73" column="5" bodyfile="src/evabBehavior.h" bodystart="74" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_key_reactor_1a9074e6080556052703c2c4a6a1695479" prot="private" static="no" mutable="no">
+        <type>eva::IHandler *</type>
+        <definition>eva::IHandler* evab::KeyReactor&lt; T, kDec, kInc &gt;::mListener</definition>
+        <argsstring></argsstring>
+        <name>mListener</name>
+        <qualifiedname>evab::KeyReactor::mListener</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabBehavior.h" line="102" column="19" bodyfile="src/evabBehavior.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_key_reactor_1ab6048049cec3a2eadf0c33bd45744b2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>evab::KeyReactor&lt; T, kDec, kInc &gt;::KeyReactor</definition>
+        <argsstring>(eva::IHandler *aListener, Args &amp;&amp;...args)</argsstring>
+        <name>KeyReactor</name>
+        <qualifiedname>evab::KeyReactor::KeyReactor</qualifiedname>
+        <param>
+          <type>eva::IHandler *</type>
+          <declname>aListener</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabBehavior.h" line="79" column="5" bodyfile="src/evabBehavior.h" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_key_reactor_1add03501f9e93c3fca17c685a4735a6f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool evab::KeyReactor&lt; T, kDec, kInc &gt;::Key</definition>
+        <argsstring>(Keys aKey) override</argsstring>
+        <name>Key</name>
+        <qualifiedname>evab::KeyReactor::Key</qualifiedname>
+        <param>
+          <type>Keys</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabBehavior.h" line="84" column="10" bodyfile="src/evabBehavior.h" bodystart="84" bodyend="99"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::KeyReactor&lt; T, kDec, kInc &gt;</label>
+        <link refid="classevab_1_1_key_reactor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::KeyReactor&lt; T, kDec, kInc &gt;</label>
+        <link refid="classevab_1_1_key_reactor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabBehavior.h" line="70" column="3" bodyfile="src/evabBehavior.h" bodystart="71" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adba9e339d50c53f9e5e5fad794046472241" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>EVENT_VALUE_CHANGED</name></member>
+      <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adb" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>EventType</name></member>
+      <member refid="classevab_1_1_key_reactor_1add03501f9e93c3fca17c685a4735a6f3" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>Key</name></member>
+      <member refid="classevab_1_1_key_reactor_1ab6048049cec3a2eadf0c33bd45744b2a" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>KeyReactor</name></member>
+      <member refid="classevab_1_1_key_reactor_1a9074e6080556052703c2c4a6a1695479" prot="private" virt="non-virtual"><scope>evab::KeyReactor</scope><name>mListener</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

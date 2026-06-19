@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="evab_screen_page8_base_8h" kind="file" language="C++">
+    <compoundname>evabScreenPage8Base.h</compoundname>
+    <includes refid="evab_coor_8h" local="no">evabCoor.h</includes>
+    <includes refid="evab_screen_base_8h" local="no">evabScreenBase.h</includes>
+    <includes refid="evab_i_font_8h" local="no">evabIFont.h</includes>
+    <includedby refid="evab_screen_k_s0108_8h" local="no">src/evabScreenKS0108.h</includedby>
+    <includedby refid="evab_screen_p_c_d8544_8h" local="no">src/evabScreenPCD8544.h</includedby>
+    <includedby refid="evab_screen_s_s_d1306_8h" local="no">src/evabScreenSSD1306.h</includedby>
+    <includedby refid="evab_screen_s_s_h1106_8h" local="no">src/evabScreenSSH1106.h</includedby>
+    <includedby refid="evab_screen_serial_pixel_8h" local="no">src/evabScreenSerialPixel.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="2">
+        <label>evabCoor.h</label>
+        <link refid="evab_coor_8h_source"/>
+      </node>
+      <node id="6">
+        <label>evabIFont.h</label>
+        <link refid="evab_i_font_8h_source"/>
+      </node>
+      <node id="5">
+        <label>evabIScreen.h</label>
+        <link refid="evab_i_screen_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evabScreenBase.h</label>
+        <link refid="evab_screen_base_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/evabScreenPage8Base.h</label>
+        <link refid="evab_screen_page8_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/evabScreenKS0108.h</label>
+        <link refid="evab_screen_k_s0108_8h_source"/>
+      </node>
+      <node id="3">
+        <label>src/evabScreenPCD8544.h</label>
+        <link refid="evab_screen_p_c_d8544_8h_source"/>
+      </node>
+      <node id="1">
+        <label>src/evabScreenPage8Base.h</label>
+        <link refid="evab_screen_page8_base_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/evabScreenSSD1306.h</label>
+        <link refid="evab_screen_s_s_d1306_8h_source"/>
+      </node>
+      <node id="5">
+        <label>src/evabScreenSSH1106.h</label>
+        <link refid="evab_screen_s_s_h1106_8h_source"/>
+      </node>
+      <node id="6">
+        <label>src/evabScreenSerialPixel.h</label>
+        <link refid="evab_screen_serial_pixel_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classevab_1_1_screen_page8_base" prot="public">evab::ScreenPage8Base</innerclass>
+    <innernamespace refid="namespaceevab">evab</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabCoor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabScreenBase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabIFont.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="classevab_1_1_screen_page8_base" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ScreenPage8Base<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_base" kindref="compound">ScreenBase</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>ScreenPage8Base(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref>*<sp/>mFont);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawSymbol(<ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPosition,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aCharcode,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aColor);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Picto(<ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPosition,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pictoData,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aColor);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DrawVerticalSlice(<ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPosition,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSliceColumn,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSlice)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref>*<sp/>mFont;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>upscaleY(uint8_t<sp/>x,<sp/>uint8_t<sp/>scale);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/evabScreenPage8Base.h"/>
+  </compounddef>
+</doxygen>

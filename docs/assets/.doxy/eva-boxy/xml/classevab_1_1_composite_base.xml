@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_composite_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>evab::CompositeBase</compoundname>
+    <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_composite_base_1a3a3a987ae08713a09c798e96f38ab169" prot="private" static="no" mutable="no">
+        <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+        <definition>ElementBase* evab::CompositeBase::mFocusedChild</definition>
+        <argsstring></argsstring>
+        <name>mFocusedChild</name>
+        <qualifiedname>evab::CompositeBase::mFocusedChild</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabCompositeBase.h" line="22" column="17" bodyfile="src/evabCompositeBase.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_composite_base_1a8f8254f07c5d194bf4da33d597848057" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool evab::CompositeBase::onResidualKey</definition>
+        <argsstring>(Keys aKey)</argsstring>
+        <name>onResidualKey</name>
+        <qualifiedname>evab::CompositeBase::onResidualKey</qualifiedname>
+        <param>
+          <type>Keys</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabCompositeBase.h" line="11" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_composite_base_1a03ddf518a77efc13f3109bf41c43bb0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void evab::CompositeBase::hider</definition>
+        <argsstring>()=0</argsstring>
+        <name>hider</name>
+        <qualifiedname>evab::CompositeBase::hider</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703">hider</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabCompositeBase.h" line="12" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_composite_base_1ac6a7c9c5d50a6c27ea3d1348aa66f9c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool evab::CompositeBase::IsFocused</definition>
+        <argsstring>(ElementBase *aChild)</argsstring>
+        <name>IsFocused</name>
+        <qualifiedname>evab::CompositeBase::IsFocused</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+          <declname>aChild</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabCompositeBase.h" line="13" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_composite_base_1af353c1f95e7835298d2420002ccb6a68" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::CompositeBase::focusChild</definition>
+        <argsstring>(ElementBase *aChild)</argsstring>
+        <name>focusChild</name>
+        <qualifiedname>evab::CompositeBase::focusChild</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+          <declname>aChild</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabCompositeBase.h" line="16" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_composite_base_1a04b3cdb0c1fb134e78624e44cc75a95d" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool evab::CompositeBase::Key</definition>
+        <argsstring>(Keys aKey) override</argsstring>
+        <name>Key</name>
+        <qualifiedname>evab::CompositeBase::Key</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5">Key</reimplements>
+        <param>
+          <type>Keys</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabCompositeBase.h" line="19" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evab::CompositeBase</label>
+        <link refid="classevab_1_1_composite_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evab::CompositeBase</label>
+        <link refid="classevab_1_1_composite_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabCompositeBase.h" line="8" column="3" bodyfile="src/evabCompositeBase.h" bodystart="9" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_composite_base_1af353c1f95e7835298d2420002ccb6a68" prot="protected" virt="non-virtual"><scope>evab::CompositeBase</scope><name>focusChild</name></member>
+      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Hide</name></member>
+      <member refid="classevab_1_1_composite_base_1a03ddf518a77efc13f3109bf41c43bb0d" prot="public" virt="pure-virtual"><scope>evab::CompositeBase</scope><name>hider</name></member>
+      <member refid="classevab_1_1_composite_base_1ac6a7c9c5d50a6c27ea3d1348aa66f9c1" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>IsFocused</name></member>
+      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>IsHidden</name></member>
+      <member refid="classevab_1_1_composite_base_1a04b3cdb0c1fb134e78624e44cc75a95d" prot="private" virt="virtual"><scope>evab::CompositeBase</scope><name>Key</name></member>
+      <member refid="classevab_1_1_composite_base_1a3a3a987ae08713a09c798e96f38ab169" prot="private" virt="non-virtual"><scope>evab::CompositeBase</scope><name>mFocusedChild</name></member>
+      <member refid="classevab_1_1_composite_base_1a8f8254f07c5d194bf4da33d597848057" prot="public" virt="virtual"><scope>evab::CompositeBase</scope><name>onResidualKey</name></member>
+      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Redraw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

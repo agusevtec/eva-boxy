@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_key_modifier" kind="class" language="C++" prot="public">
+    <compoundname>evab::KeyModifier</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>unsigned char</type>
+        <declname>kDec</declname>
+        <defname>kDec</defname>
+      </param>
+      <param>
+        <type>unsigned char</type>
+        <declname>kInc</declname>
+        <defname>kInc</defname>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_key_modifier_1a3195a8c0a81cfcbcd39e7a19f3f853dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>evab::KeyModifier&lt; T, kDec, kInc &gt;::KeyModifier</definition>
+        <argsstring>(Args &amp;&amp;...args)</argsstring>
+        <name>KeyModifier</name>
+        <qualifiedname>evab::KeyModifier::KeyModifier</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabBehavior.h" line="48" column="5" bodyfile="src/evabBehavior.h" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_key_modifier_1a3f7a058708b289a742aa8e6dd8e6f24d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool evab::KeyModifier&lt; T, kDec, kInc &gt;::Key</definition>
+        <argsstring>(Keys aKey) override</argsstring>
+        <name>Key</name>
+        <qualifiedname>evab::KeyModifier::Key</qualifiedname>
+        <param>
+          <type>Keys</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabBehavior.h" line="53" column="10" bodyfile="src/evabBehavior.h" bodystart="53" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::KeyModifier&lt; T, kDec, kInc &gt;</label>
+        <link refid="classevab_1_1_key_modifier"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::KeyModifier&lt; T, kDec, kInc &gt;</label>
+        <link refid="classevab_1_1_key_modifier"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabBehavior.h" line="44" column="3" bodyfile="src/evabBehavior.h" bodystart="45" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_key_modifier_1a3f7a058708b289a742aa8e6dd8e6f24d" prot="public" virt="non-virtual"><scope>evab::KeyModifier</scope><name>Key</name></member>
+      <member refid="classevab_1_1_key_modifier_1a3195a8c0a81cfcbcd39e7a19f3f853dc" prot="public" virt="non-virtual"><scope>evab::KeyModifier</scope><name>KeyModifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

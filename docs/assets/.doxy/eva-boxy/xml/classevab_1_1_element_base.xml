@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_element_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>evab::ElementBase</compoundname>
+    <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; ScrollWindowAlgorithm &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; FlipWindowAlgorithm &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_battery_indicator" prot="public" virt="non-virtual">evab::BatteryIndicator</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_composite_base" prot="public" virt="non-virtual">evab::CompositeBase</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_float" prot="public" virt="non-virtual">evab::InputFloat</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_int" prot="public" virt="non-virtual">evab::InputInt</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_layout_pane" prot="public" virt="non-virtual">evab::LayoutPane</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; TWindowAlgorithm &gt;</derivedcompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_element_base_1a3522932042a2224a31ddc7445b3cd2b7" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::ElementBase::serialized</definition>
+        <argsstring></argsstring>
+        <name>serialized</name>
+        <qualifiedname>evab::ElementBase::serialized</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="26" column="20" bodyfile="src/evabElementBase.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool evab::ElementBase::Key</definition>
+        <argsstring>(Keys aKey)</argsstring>
+        <name>Key</name>
+        <qualifiedname>evab::ElementBase::Key</qualifiedname>
+        <reimplementedby refid="classevab_1_1_composite_base_1a04b3cdb0c1fb134e78624e44cc75a95d">Key</reimplementedby>
+        <reimplementedby refid="classevab_1_1_layout_pane_1a6eede8e680b27e48e815ac914fcc3ea5">Key</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a5faf9890ff8dce44e7eec53b6d119630">Key</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a5faf9890ff8dce44e7eec53b6d119630">Key</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a5faf9890ff8dce44e7eec53b6d119630">Key</reimplementedby>
+        <param>
+          <type>Keys</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="12" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ElementBase::Hide</definition>
+        <argsstring>()</argsstring>
+        <name>Hide</name>
+        <qualifiedname>evab::ElementBase::Hide</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="13" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ElementBase::Draw</definition>
+        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)</argsstring>
+        <name>Draw</name>
+        <qualifiedname>evab::ElementBase::Draw</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="14" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ElementBase::Redraw</definition>
+        <argsstring>()</argsstring>
+        <name>Redraw</name>
+        <qualifiedname>evab::ElementBase::Redraw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="15" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool evab::ElementBase::IsHidden</definition>
+        <argsstring>()</argsstring>
+        <name>IsHidden</name>
+        <qualifiedname>evab::ElementBase::IsHidden</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="16" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void evab::ElementBase::drawer</definition>
+        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)=0</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::ElementBase::drawer</qualifiedname>
+        <reimplementedby refid="classevab_1_1_battery_indicator_1af8815421fda1cae585881f93fc43646e">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_float_1acfa08df4550aaad3a79e368470bacc00">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_int_1abfef31986b1b4ade1a661a9b1c8144c9">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_layout_pane_1a2a511b8bf0024ea38711a585916d9add">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1ad877350533d2964624f75a23caaa9034">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1ad877350533d2964624f75a23caaa9034">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1ad877350533d2964624f75a23caaa9034">drawer</reimplementedby>
+        <param>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="19" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void evab::ElementBase::hider</definition>
+        <argsstring>()</argsstring>
+        <name>hider</name>
+        <qualifiedname>evab::ElementBase::hider</qualifiedname>
+        <reimplementedby refid="classevab_1_1_composite_base_1a03ddf518a77efc13f3109bf41c43bb0d">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_layout_pane_1a902802c1ad7d5016d8f8ca6885655a1f">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a9c64349ba298d36609ba46d65d6ceec2">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a9c64349ba298d36609ba46d65d6ceec2">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a9c64349ba298d36609ba46d65d6ceec2">hider</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="20" column="18" bodyfile="src/evabElementBase.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_element_base_1aa34821a9a361787f62ebbb119e9bf6bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ElementBase::serialize</definition>
+        <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
+        <name>serialize</name>
+        <qualifiedname>evab::ElementBase::serialize</qualifiedname>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="22" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_element_base_1a9ffa54dc3ebe34c4fad66caa02e41519" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ElementBase::deserialize</definition>
+        <argsstring>(Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
+        <name>deserialize</name>
+        <qualifiedname>evab::ElementBase::deserialize</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabElementBase.h" line="23" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>evab::BatteryIndicator</label>
+        <link refid="classevab_1_1_battery_indicator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>evab::CompositeBase</label>
+        <link refid="classevab_1_1_composite_base"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="6">
+        <label>evab::InputFloat</label>
+        <link refid="classevab_1_1_input_float"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>evab::InputInt</label>
+        <link refid="classevab_1_1_input_int"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>evab::LayoutPane</label>
+        <link refid="classevab_1_1_layout_pane"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>evab::ListBox&lt; TWindowAlgorithm &gt;</label>
+        <link refid="classevab_1_1_list_box"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evab::ListBox&lt; FlipWindowAlgorithm &gt;</label>
+        <link refid="classevab_1_1_list_box"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::ListBox&lt; ScrollWindowAlgorithm &gt;</label>
+        <link refid="classevab_1_1_list_box"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/evabElementBase.h" line="9" column="3" bodyfile="src/evabElementBase.h" bodystart="10" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_element_base_1a9ffa54dc3ebe34c4fad66caa02e41519" prot="private" virt="non-virtual"><scope>evab::ElementBase</scope><name>deserialize</name></member>
+      <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e" prot="private" virt="pure-virtual"><scope>evab::ElementBase</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>Hide</name></member>
+      <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="private" virt="virtual"><scope>evab::ElementBase</scope><name>hider</name></member>
+      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>IsHidden</name></member>
+      <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::ElementBase</scope><name>Key</name></member>
+      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>Redraw</name></member>
+      <member refid="classevab_1_1_element_base_1aa34821a9a361787f62ebbb119e9bf6bb" prot="private" virt="non-virtual"><scope>evab::ElementBase</scope><name>serialize</name></member>
+      <member refid="classevab_1_1_element_base_1a3522932042a2224a31ddc7445b3cd2b7" prot="private" virt="non-virtual"><scope>evab::ElementBase</scope><name>serialized</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

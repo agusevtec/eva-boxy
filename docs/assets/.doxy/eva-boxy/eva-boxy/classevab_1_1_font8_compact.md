@@ -1,0 +1,162 @@
+
+
+# Class evab::Font8Compact
+
+
+
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**Font8Compact**](classevab_1_1_font8_compact.md)
+
+
+
+
+
+
+
+
+Inherits the following classes: [evab::IFont](classevab_1_1_i_font.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Public Functions
+
+| Type | Name |
+| ---: | :--- |
+| virtual unsigned char | [**GetVerticalSlice**](#function-getverticalslice) (char aCharcode, unsigned char aSliceColumn) override const<br> |
+
+
+## Public Functions inherited from evab::IFont
+
+See [evab::IFont](classevab_1_1_i_font.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual unsigned char | [**GetVerticalSlice**](classevab_1_1_i_font.md#function-getverticalslice) (char aCharcode, unsigned char col) const = 0<br> |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Public Functions Documentation
+
+
+
+
+### function GetVerticalSlice 
+
+```C++
+virtual unsigned char evab::Font8Compact::GetVerticalSlice (
+    char aCharcode,
+    unsigned char aSliceColumn
+) override const
+```
+
+
+
+Implements [*evab::IFont::GetVerticalSlice*](classevab_1_1_i_font.md#function-getverticalslice)
+
+
+<hr>
+
+------------------------------
+The documentation for this class was generated from the following file `src/evabFont8Compact.h`
+

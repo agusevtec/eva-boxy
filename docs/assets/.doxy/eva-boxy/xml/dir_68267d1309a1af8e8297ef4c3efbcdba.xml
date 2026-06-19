@@ -1,24 +1,35 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
-    <innerfile refid="_boxy_base_composite_8h">BoxyBaseComposite.h</innerfile>
-    <innerfile refid="_boxy_base_element_8h">BoxyBaseElement.h</innerfile>
-    <innerfile refid="_boxy_base_field_8h">BoxyBaseField.h</innerfile>
-    <innerfile refid="_boxy_battery_indicator_8h">BoxyBatteryIndicator.h</innerfile>
-    <innerfile refid="_boxy_button_8h">BoxyButton.h</innerfile>
-    <innerfile refid="_boxy_input_float_8h">BoxyInputFloat.h</innerfile>
-    <innerfile refid="_boxy_input_int_8h">BoxyInputInt.h</innerfile>
-    <innerfile refid="_boxy_input_str_8h">BoxyInputStr.h</innerfile>
-    <innerfile refid="_boxy_layout_pane_8h">BoxyLayoutPane.h</innerfile>
-    <innerfile refid="_boxy_list_box_8h">BoxyListBox.h</innerfile>
-    <innerfile refid="_boxy_modal_8h">BoxyModal.h</innerfile>
-    <innerfile refid="_boxy_scrollbar_8h">BoxyScrollbar.h</innerfile>
-    <innerfile refid="_coor_8h">Coor.h</innerfile>
-    <innerfile refid="_debug_platform_8h">DebugPlatform.h</innerfile>
-    <innerfile refid="_display_platform_8h">DisplayPlatform.h</innerfile>
-    <innerfile refid="_gyver1306_platform_8h">Gyver1306Platform.h</innerfile>
-    <innerfile refid="_sliding_methods_8h">SlidingMethods.h</innerfile>
+    <innerfile refid="evab_battery_indicator_8h">evabBatteryIndicator.h</innerfile>
+    <innerfile refid="evab_behavior_8h">evabBehavior.h</innerfile>
+    <innerfile refid="evab_boxy_8h">evabBoxy.h</innerfile>
+    <innerfile refid="evab_composite_base_8h">evabCompositeBase.h</innerfile>
+    <innerfile refid="evab_coor_8h">evabCoor.h</innerfile>
+    <innerfile refid="evab_element_base_8h">evabElementBase.h</innerfile>
+    <innerfile refid="evab_font8_bold_8h">evabFont8Bold.h</innerfile>
+    <innerfile refid="evab_font8_compact_8h">evabFont8Compact.h</innerfile>
+    <innerfile refid="evab_font8_thin_8h">evabFont8Thin.h</innerfile>
+    <innerfile refid="evab_i_font_8h">evabIFont.h</innerfile>
+    <innerfile refid="evab_input_float_8h">evabInputFloat.h</innerfile>
+    <innerfile refid="evab_input_int_8h">evabInputInt.h</innerfile>
+    <innerfile refid="evab_i_screen_8h">evabIScreen.h</innerfile>
+    <innerfile refid="evab_keys_8h">evabKeys.h</innerfile>
+    <innerfile refid="evab_labeled_8h">evabLabeled.h</innerfile>
+    <innerfile refid="evab_layout_pane_8h">evabLayoutPane.h</innerfile>
+    <innerfile refid="evab_list_box_8h">evabListBox.h</innerfile>
+    <innerfile refid="evab_screen_base_8h">evabScreenBase.h</innerfile>
+    <innerfile refid="evab_screen_k_s0108_8h">evabScreenKS0108.h</innerfile>
+    <innerfile refid="evab_screen_l_c_d___i2_c_8h">evabScreenLCD_I2C.h</innerfile>
+    <innerfile refid="evab_screen_page8_base_8h">evabScreenPage8Base.h</innerfile>
+    <innerfile refid="evab_screen_p_c_d8544_8h">evabScreenPCD8544.h</innerfile>
+    <innerfile refid="evab_screen_serial_pixel_8h">evabScreenSerialPixel.h</innerfile>
+    <innerfile refid="evab_screen_serial_text_8h">evabScreenSerialText.h</innerfile>
+    <innerfile refid="evab_screen_s_s_d1306_8h">evabScreenSSD1306.h</innerfile>
+    <innerfile refid="evab_screen_s_s_h1106_8h">evabScreenSSH1106.h</innerfile>
+    <innerfile refid="evab_tilesets_8h">evabTilesets.h</innerfile>
+    <innerfile refid="evab_window_algorithms_8h">evabWindowAlgorithms.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_layout_pane" kind="class" language="C++" prot="public">
+    <compoundname>evab::LayoutPane</compoundname>
+    <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_layout_pane_1a07f20970ecfbe999c796ee8d0c954591" prot="private" static="no" mutable="no">
+        <type><ref refid="structevab_1_1_layout_pane_item" kindref="compound">LayoutPaneItem</ref> *</type>
+        <definition>LayoutPaneItem* evab::LayoutPane::mItems</definition>
+        <argsstring></argsstring>
+        <name>mItems</name>
+        <qualifiedname>evab::LayoutPane::mItems</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="28" column="20" bodyfile="src/evabLayoutPane.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_layout_pane_1a707037b314dcd47674eb0e19c029f5f7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int evab::LayoutPane::mCount</definition>
+        <argsstring></argsstring>
+        <name>mCount</name>
+        <qualifiedname>evab::LayoutPane::mCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="29" column="9" bodyfile="src/evabLayoutPane.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_layout_pane_1a2ea5772f6d6983ba319b47f17568618d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int evab::LayoutPane::mFocused</definition>
+        <argsstring></argsstring>
+        <name>mFocused</name>
+        <qualifiedname>evab::LayoutPane::mFocused</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="30" column="9" bodyfile="src/evabLayoutPane.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_layout_pane_1a20ed11ebf7ad96f31b1a7dd02a1cd870" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::LayoutPane::number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <qualifiedname>evab::LayoutPane::number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="31" column="20" bodyfile="src/evabLayoutPane.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_layout_pane_1a1f5a7370248d1c39a5d6a76d6cc0bf5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::LayoutPane::SetItems</definition>
+        <argsstring>(unsigned short aLayout, LayoutPaneItem aItems[], unsigned char aCount)</argsstring>
+        <name>SetItems</name>
+        <qualifiedname>evab::LayoutPane::SetItems</qualifiedname>
+        <param>
+          <type>unsigned short</type>
+          <declname>aLayout</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_layout_pane_item" kindref="compound">LayoutPaneItem</ref></type>
+          <declname>aItems</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="18" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_layout_pane_1a6eede8e680b27e48e815ac914fcc3ea5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool evab::LayoutPane::Key</definition>
+        <argsstring>(Keys aKey) override</argsstring>
+        <name>Key</name>
+        <qualifiedname>evab::LayoutPane::Key</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5">Key</reimplements>
+        <param>
+          <type>Keys</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="21" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_pane_1a2a511b8bf0024ea38711a585916d9add" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::LayoutPane::drawer</definition>
+        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::LayoutPane::drawer</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e">drawer</reimplements>
+        <param>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="22" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_pane_1a902802c1ad7d5016d8f8ca6885655a1f" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::LayoutPane::hider</definition>
+        <argsstring>() override</argsstring>
+        <name>hider</name>
+        <qualifiedname>evab::LayoutPane::hider</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703">hider</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="23" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classevab_1_1_layout_pane_1a4275884ff76cfc4f1e5df84784a81562" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int evab::LayoutPane::digits</definition>
+        <argsstring>(unsigned short n)</argsstring>
+        <name>digits</name>
+        <qualifiedname>evab::LayoutPane::digits</qualifiedname>
+        <param>
+          <type>unsigned short</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="24" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_pane_1af0057aed53393de3a812a20c3e51b0b4" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int evab::LayoutPane::getTileCount</definition>
+        <argsstring>(unsigned short n, unsigned char row)</argsstring>
+        <name>getTileCount</name>
+        <qualifiedname>evab::LayoutPane::getTileCount</qualifiedname>
+        <param>
+          <type>unsigned short</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="25" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::LayoutPane</label>
+        <link refid="classevab_1_1_layout_pane"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::LayoutPane</label>
+        <link refid="classevab_1_1_layout_pane"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabLayoutPane.h" line="14" column="3" bodyfile="src/evabLayoutPane.h" bodystart="15" bodyend="32"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_layout_pane_1a4275884ff76cfc4f1e5df84784a81562" prot="private" virt="non-virtual"><scope>evab::LayoutPane</scope><name>digits</name></member>
+      <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::LayoutPane</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_layout_pane_1a2a511b8bf0024ea38711a585916d9add" prot="private" virt="virtual"><scope>evab::LayoutPane</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_layout_pane_1af0057aed53393de3a812a20c3e51b0b4" prot="private" virt="non-virtual"><scope>evab::LayoutPane</scope><name>getTileCount</name></member>
+      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::LayoutPane</scope><name>Hide</name></member>
+      <member refid="classevab_1_1_layout_pane_1a902802c1ad7d5016d8f8ca6885655a1f" prot="private" virt="virtual"><scope>evab::LayoutPane</scope><name>hider</name></member>
+      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::LayoutPane</scope><name>IsHidden</name></member>
+      <member refid="classevab_1_1_layout_pane_1a6eede8e680b27e48e815ac914fcc3ea5" prot="private" virt="virtual"><scope>evab::LayoutPane</scope><name>Key</name></member>
+      <member refid="classevab_1_1_layout_pane_1a707037b314dcd47674eb0e19c029f5f7" prot="private" virt="non-virtual"><scope>evab::LayoutPane</scope><name>mCount</name></member>
+      <member refid="classevab_1_1_layout_pane_1a2ea5772f6d6983ba319b47f17568618d" prot="private" virt="non-virtual"><scope>evab::LayoutPane</scope><name>mFocused</name></member>
+      <member refid="classevab_1_1_layout_pane_1a07f20970ecfbe999c796ee8d0c954591" prot="private" virt="non-virtual"><scope>evab::LayoutPane</scope><name>mItems</name></member>
+      <member refid="classevab_1_1_layout_pane_1a20ed11ebf7ad96f31b1a7dd02a1cd870" prot="private" virt="non-virtual"><scope>evab::LayoutPane</scope><name>number</name></member>
+      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::LayoutPane</scope><name>Redraw</name></member>
+      <member refid="classevab_1_1_layout_pane_1a1f5a7370248d1c39a5d6a76d6cc0bf5f" prot="public" virt="non-virtual"><scope>evab::LayoutPane</scope><name>SetItems</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

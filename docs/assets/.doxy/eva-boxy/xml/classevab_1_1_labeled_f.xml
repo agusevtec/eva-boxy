@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_labeled_f" kind="class" language="C++" prot="public">
+    <compoundname>evab::LabeledF</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_labeled_f_1a44f5a2367b7fbe19b134b4e80a0c2079" prot="private" static="no" mutable="no">
+        <type>const __FlashStringHelper *</type>
+        <definition>const __FlashStringHelper* evab::LabeledF&lt; T &gt;::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <qualifiedname>evab::LabeledF::mName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLabeled.h" line="70" column="31" bodyfile="src/evabLabeled.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_labeled_f_1a6342f29909992b393c51ca98a89a96e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>evab::LabeledF&lt; T &gt;::LabeledF</definition>
+        <argsstring>(const __FlashStringHelper *aName, Args &amp;&amp;... args)</argsstring>
+        <name>LabeledF</name>
+        <qualifiedname>evab::LabeledF::LabeledF</qualifiedname>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>aName</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLabeled.h" line="46" column="5" bodyfile="src/evabLabeled.h" bodystart="46" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_labeled_f_1ae6477a9b99dd74618c8f4c951ad6ae78" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::LabeledF&lt; T &gt;::drawer</definition>
+        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::LabeledF::drawer</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLabeled.h" line="52" column="10" bodyfile="src/evabLabeled.h" bodystart="52" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::LabeledF&lt; T &gt;</label>
+        <link refid="classevab_1_1_labeled_f"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::LabeledF&lt; T &gt;</label>
+        <link refid="classevab_1_1_labeled_f"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabLabeled.h" line="42" column="3" bodyfile="src/evabLabeled.h" bodystart="43" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_labeled_f_1ae6477a9b99dd74618c8f4c951ad6ae78" prot="private" virt="non-virtual"><scope>evab::LabeledF</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_labeled_f_1a6342f29909992b393c51ca98a89a96e2" prot="public" virt="non-virtual"><scope>evab::LabeledF</scope><name>LabeledF</name></member>
+      <member refid="classevab_1_1_labeled_f_1a44f5a2367b7fbe19b134b4e80a0c2079" prot="private" virt="non-virtual"><scope>evab::LabeledF</scope><name>mName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

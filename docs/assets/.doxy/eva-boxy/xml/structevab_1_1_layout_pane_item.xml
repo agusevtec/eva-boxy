@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structevab_1_1_layout_pane_item" kind="struct" language="C++" prot="public">
+    <compoundname>evab::LayoutPaneItem</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structevab_1_1_layout_pane_item_1a8b3b97debe8e1211046634fba46044b7" prot="public" static="no" mutable="no">
+        <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+        <definition>ElementBase* evab::LayoutPaneItem::Element</definition>
+        <argsstring></argsstring>
+        <name>Element</name>
+        <qualifiedname>evab::LayoutPaneItem::Element</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="9" column="17" bodyfile="src/evabLayoutPane.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structevab_1_1_layout_pane_item_1ab9a10fd15fbd7a692cef94bb97d50203" prot="public" static="no" mutable="no">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::LayoutPaneItem::Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <qualifiedname>evab::LayoutPaneItem::Position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="10" column="10" bodyfile="src/evabLayoutPane.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structevab_1_1_layout_pane_item_1a36773171ff6311a3cda30a20c3c38aab" prot="public" static="no" mutable="no">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::LayoutPaneItem::Size</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <qualifiedname>evab::LayoutPaneItem::Size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutPane.h" line="11" column="10" bodyfile="src/evabLayoutPane.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>evab::Coor</label>
+        <link refid="structevab_1_1_coor"/>
+      </node>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::LayoutPaneItem</label>
+        <link refid="structevab_1_1_layout_pane_item"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Element</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Position</edgelabel>
+          <edgelabel>Size</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabLayoutPane.h" line="7" column="3" bodyfile="src/evabLayoutPane.h" bodystart="8" bodyend="12"/>
+    <listofallmembers>
+      <member refid="structevab_1_1_layout_pane_item_1a8b3b97debe8e1211046634fba46044b7" prot="public" virt="non-virtual"><scope>evab::LayoutPaneItem</scope><name>Element</name></member>
+      <member refid="structevab_1_1_layout_pane_item_1ab9a10fd15fbd7a692cef94bb97d50203" prot="public" virt="non-virtual"><scope>evab::LayoutPaneItem</scope><name>Position</name></member>
+      <member refid="structevab_1_1_layout_pane_item_1a36773171ff6311a3cda30a20c3c38aab" prot="public" virt="non-virtual"><scope>evab::LayoutPaneItem</scope><name>Size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

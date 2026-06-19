@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_screen_l_c_d___i2_c" kind="class" language="C++" prot="public">
+    <compoundname>evab::ScreenLCD_I2C</compoundname>
+    <basecompoundref refid="classevab_1_1_screen_base" prot="public" virt="non-virtual">evab::ScreenBase</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_screen_l_c_d___i2_c_1a9bcf0ba87c198c759190fcb1254a5712" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenLCD_I2C::mAddress</definition>
+        <argsstring></argsstring>
+        <name>mAddress</name>
+        <qualifiedname>evab::ScreenLCD_I2C::mAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="27" column="13" bodyfile="src/evabScreenLCD_I2C.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_screen_l_c_d___i2_c_1a8433a10decf7de0aefd2da656a5a4aa4" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenLCD_I2C::mCols</definition>
+        <argsstring></argsstring>
+        <name>mCols</name>
+        <qualifiedname>evab::ScreenLCD_I2C::mCols</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="28" column="13" bodyfile="src/evabScreenLCD_I2C.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_screen_l_c_d___i2_c_1af817a361de9b1fb0364a26d4a5fe2d8c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenLCD_I2C::mRows</definition>
+        <argsstring></argsstring>
+        <name>mRows</name>
+        <qualifiedname>evab::ScreenLCD_I2C::mRows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="29" column="13" bodyfile="src/evabScreenLCD_I2C.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_screen_l_c_d___i2_c_1a9a581a281e4f2645d7991b221b8cf8db" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenLCD_I2C::mBacklightPin</definition>
+        <argsstring></argsstring>
+        <name>mBacklightPin</name>
+        <qualifiedname>evab::ScreenLCD_I2C::mBacklightPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="30" column="13" bodyfile="src/evabScreenLCD_I2C.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_screen_l_c_d___i2_c_1aa4f306c25639e9783bf12534d027500d" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenLCD_I2C::mBacklightMask</definition>
+        <argsstring></argsstring>
+        <name>mBacklightMask</name>
+        <qualifiedname>evab::ScreenLCD_I2C::mBacklightMask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="31" column="13" bodyfile="src/evabScreenLCD_I2C.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1a2018a5d432f325f214613bbd4ce9abc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>evab::ScreenLCD_I2C::ScreenLCD_I2C</definition>
+        <argsstring>(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uint8_t aBacklightPin=3)</argsstring>
+        <name>ScreenLCD_I2C</name>
+        <qualifiedname>evab::ScreenLCD_I2C::ScreenLCD_I2C</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>aAddress</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>aCols</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>aRows</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>aBacklightPin</declname>
+          <defval>3</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1a2e59761f8219cc8fdc107136771a6770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenLCD_I2C::setBacklight</definition>
+        <argsstring>(uint8_t aState)</argsstring>
+        <name>setBacklight</name>
+        <qualifiedname>evab::ScreenLCD_I2C::setBacklight</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>aState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="14" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1a336a6cd65232f8907430173fc391f122" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenLCD_I2C::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>evab::ScreenLCD_I2C::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="15" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1a182aa7dc15d18fb4aed2a66575fef182" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::ScreenLCD_I2C::Size</definition>
+        <argsstring>() override</argsstring>
+        <name>Size</name>
+        <qualifiedname>evab::ScreenLCD_I2C::Size</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="16" column="10" bodyfile="src/evabScreenLCD_I2C.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1a1e087edbf58797b3a600d01a24113033" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::ScreenLCD_I2C::DrawSymbol</definition>
+        <argsstring>(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor) override</argsstring>
+        <name>DrawSymbol</name>
+        <qualifiedname>evab::ScreenLCD_I2C::DrawSymbol</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1aa0ad56fedd8b77765e0fece74ab14d21">DrawSymbol</reimplements>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPosition</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>aCharcode</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aColor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="19" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1a10aa4b8b6233d39582f60a28825ac42e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenLCD_I2C::sendByte</definition>
+        <argsstring>(uint8_t aData, bool aIsCommand)</argsstring>
+        <name>sendByte</name>
+        <qualifiedname>evab::ScreenLCD_I2C::sendByte</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>aData</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>aIsCommand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="22" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1a13c192fc01d18c8072a6ae94f8091717" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenLCD_I2C::sendNibble</definition>
+        <argsstring>(uint8_t aData, bool aIsCommand)</argsstring>
+        <name>sendNibble</name>
+        <qualifiedname>evab::ScreenLCD_I2C::sendNibble</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>aData</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>aIsCommand</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="23" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1ab566f3d27b6e0c45c105aa465f8f57dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenLCD_I2C::initDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>initDisplay</name>
+        <qualifiedname>evab::ScreenLCD_I2C::initDisplay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_l_c_d___i2_c_1afcfab9cbb2a038c4817872eeb34bd760" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenLCD_I2C::setCursor</definition>
+        <argsstring>(uint8_t aCol, uint8_t aRow)</argsstring>
+        <name>setCursor</name>
+        <qualifiedname>evab::ScreenLCD_I2C::setCursor</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>aCol</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>aRow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenLCD_I2C.h" line="25" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>evab::IScreen</label>
+        <link refid="classevab_1_1_i_screen"/>
+      </node>
+      <node id="2">
+        <label>evab::ScreenBase</label>
+        <link refid="classevab_1_1_screen_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>evab::ScreenLCD_I2C</label>
+        <link refid="classevab_1_1_screen_l_c_d___i2_c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>evab::IScreen</label>
+        <link refid="classevab_1_1_i_screen"/>
+      </node>
+      <node id="2">
+        <label>evab::ScreenBase</label>
+        <link refid="classevab_1_1_screen_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>evab::ScreenLCD_I2C</label>
+        <link refid="classevab_1_1_screen_l_c_d___i2_c"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabScreenLCD_I2C.h" line="9" column="3" bodyfile="src/evabScreenLCD_I2C.h" bodystart="10" bodyend="32"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a336a6cd65232f8907430173fc391f122" prot="public" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>clear</name></member>
+      <member refid="classevab_1_1_screen_base_1adcecf3475b92507656c85c7e97af5717" prot="protected" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a1e087edbf58797b3a600d01a24113033" prot="protected" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>DrawSymbol</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1ab566f3d27b6e0c45c105aa465f8f57dd" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>initDisplay</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a9bcf0ba87c198c759190fcb1254a5712" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>mAddress</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1aa4f306c25639e9783bf12534d027500d" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>mBacklightMask</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a9a581a281e4f2645d7991b221b8cf8db" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>mBacklightPin</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a8433a10decf7de0aefd2da656a5a4aa4" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>mCols</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1af817a361de9b1fb0364a26d4a5fe2d8c" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>mRows</name></member>
+      <member refid="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a2018a5d432f325f214613bbd4ce9abc8" prot="public" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>ScreenLCD_I2C</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a10aa4b8b6233d39582f60a28825ac42e" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>sendByte</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a13c192fc01d18c8072a6ae94f8091717" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>sendNibble</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a2e59761f8219cc8fdc107136771a6770" prot="public" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>setBacklight</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1afcfab9cbb2a038c4817872eeb34bd760" prot="private" virt="non-virtual"><scope>evab::ScreenLCD_I2C</scope><name>setCursor</name></member>
+      <member refid="classevab_1_1_screen_l_c_d___i2_c_1a182aa7dc15d18fb4aed2a66575fef182" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>Size</name></member>
+      <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_screen_base_1af34945fb5a3fa9452f61f9f59b11f35f" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_screen_base_1a57d68fbe93780fa7e2618f06ba13c80a" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_screen_base_1a3d5abf436b82c2c0498765dac9fa157b" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_screen_base_1abd7f2ce82a9ecc72decf3aa01d1be544" prot="public" virt="virtual"><scope>evab::ScreenLCD_I2C</scope><name>TextRight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

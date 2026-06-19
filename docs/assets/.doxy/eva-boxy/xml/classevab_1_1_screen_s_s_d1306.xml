@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_screen_s_s_d1306" kind="class" language="C++" prot="public">
+    <compoundname>evab::ScreenSSD1306</compoundname>
+    <basecompoundref refid="classevab_1_1_screen_page8_base" prot="public" virt="non-virtual">evab::ScreenPage8Base</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_screen_s_s_d1306_1a29d8d7a7cf670e3dbf16b1b247d88cfc" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenSSD1306::mAddress</definition>
+        <argsstring></argsstring>
+        <name>mAddress</name>
+        <qualifiedname>evab::ScreenSSD1306::mAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="29" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_screen_s_s_d1306_1a9b6cc688c874cab19c59975d9416acf2" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenSSD1306::mWidth</definition>
+        <argsstring></argsstring>
+        <name>mWidth</name>
+        <qualifiedname>evab::ScreenSSD1306::mWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="30" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_screen_s_s_d1306_1a1b75cc2243ff7fb71ce806ae0a361f5c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenSSD1306::mHeight</definition>
+        <argsstring></argsstring>
+        <name>mHeight</name>
+        <qualifiedname>evab::ScreenSSD1306::mHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="31" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_screen_s_s_d1306_1a519c1e3890fbf5eefd8b1eca3920975d" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t evab::ScreenSSD1306::mPages</definition>
+        <argsstring></argsstring>
+        <name>mPages</name>
+        <qualifiedname>evab::ScreenSSD1306::mPages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="32" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a943b7bc19f9cffa84b2b21d2a7940555" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>evab::ScreenSSD1306::ScreenSSD1306</definition>
+        <argsstring>(const IFont *aFont, unsigned long aWireClock=800000L, uint8_t aHeightPx=64)</argsstring>
+        <name>ScreenSSD1306</name>
+        <qualifiedname>evab::ScreenSSD1306::ScreenSSD1306</qualifiedname>
+        <param>
+          <type>const <ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref> *</type>
+          <declname>aFont</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>aWireClock</declname>
+          <defval>800000L</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>aHeightPx</declname>
+          <defval>64</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1af1636deb2c3650f7c389e08580640480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>evab::ScreenSSD1306::~ScreenSSD1306</definition>
+        <argsstring>()</argsstring>
+        <name>~ScreenSSD1306</name>
+        <qualifiedname>evab::ScreenSSD1306::~ScreenSSD1306</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="14" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a79f177085bfb5d072a4acd1238a40a84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::SetContrast</definition>
+        <argsstring>(uint8_t aContrast)</argsstring>
+        <name>SetContrast</name>
+        <qualifiedname>evab::ScreenSSD1306::SetContrast</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>aContrast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="16" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a9e96e3d871bd0e9f3e6d800f59f4d30e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::ClearDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>ClearDisplay</name>
+        <qualifiedname>evab::ScreenSSD1306::ClearDisplay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="17" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1ae1e23d3abbf9b7a7a1524abf7e5dc379" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::ScreenSSD1306::Size</definition>
+        <argsstring>() override</argsstring>
+        <name>Size</name>
+        <qualifiedname>evab::ScreenSSD1306::Size</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="18" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a3f90b5d44a4a6d3a293ad5c2157e2f2f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::DrawVerticalSlice</definition>
+        <argsstring>(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override</argsstring>
+        <name>DrawVerticalSlice</name>
+        <qualifiedname>evab::ScreenSSD1306::DrawVerticalSlice</qualifiedname>
+        <reimplements refid="classevab_1_1_screen_page8_base_1a2291c5edbcd8a7e0a694595a1fcd7454">DrawVerticalSlice</reimplements>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPosition</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSliceColumn</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSlice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="21" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a0e035a690be3ccc2c49165492847ce56" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::ClearTile</definition>
+        <argsstring>(Coor aPosition, unsigned char aColor) override</argsstring>
+        <name>ClearTile</name>
+        <qualifiedname>evab::ScreenSSD1306::ClearTile</qualifiedname>
+        <reimplements refid="classevab_1_1_screen_base_1adcecf3475b92507656c85c7e97af5717">ClearTile</reimplements>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPosition</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aColor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="22" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a6d903761ebb4e180bd357b186238c1d4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::initDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>initDisplay</name>
+        <qualifiedname>evab::ScreenSSD1306::initDisplay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="23" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1ab3b8dd9149a0294b7d01ba1e251d0477" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::sendCommand</definition>
+        <argsstring>(uint8_t aCmd)</argsstring>
+        <name>sendCommand</name>
+        <qualifiedname>evab::ScreenSSD1306::sendCommand</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>aCmd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="26" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a2b972e4990709b9ba5024f15e40627c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::sendData</definition>
+        <argsstring>(uint8_t aData)</argsstring>
+        <name>sendData</name>
+        <qualifiedname>evab::ScreenSSD1306::sendData</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>aData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="27" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>evab::IScreen</label>
+        <link refid="classevab_1_1_i_screen"/>
+      </node>
+      <node id="3">
+        <label>evab::ScreenBase</label>
+        <link refid="classevab_1_1_screen_base"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::ScreenPage8Base</label>
+        <link refid="classevab_1_1_screen_page8_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>evab::ScreenSSD1306</label>
+        <link refid="classevab_1_1_screen_s_s_d1306"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>evab::IScreen</label>
+        <link refid="classevab_1_1_i_screen"/>
+      </node>
+      <node id="3">
+        <label>evab::ScreenBase</label>
+        <link refid="classevab_1_1_screen_base"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::ScreenPage8Base</label>
+        <link refid="classevab_1_1_screen_page8_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>evab::ScreenSSD1306</label>
+        <link refid="classevab_1_1_screen_s_s_d1306"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabScreenSSD1306.h" line="10" column="3" bodyfile="src/evabScreenSSD1306.h" bodystart="11" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a9e96e3d871bd0e9f3e6d800f59f4d30e" prot="public" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>ClearDisplay</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a0e035a690be3ccc2c49165492847ce56" prot="protected" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>DrawSymbol</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a3f90b5d44a4a6d3a293ad5c2157e2f2f" prot="protected" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>DrawVerticalSlice</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a6d903761ebb4e180bd357b186238c1d4" prot="protected" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>initDisplay</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a29d8d7a7cf670e3dbf16b1b247d88cfc" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>mAddress</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a1b75cc2243ff7fb71ce806ae0a361f5c" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>mHeight</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a519c1e3890fbf5eefd8b1eca3920975d" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>mPages</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a9b6cc688c874cab19c59975d9416acf2" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>mWidth</name></member>
+      <member refid="classevab_1_1_screen_page8_base_1aa5e0f45e049c5539df59ba5f97ef8446" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_screen_page8_base_1aaf41c535c3c37a3c908803e7138bc326" prot="public" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>ScreenPage8Base</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a943b7bc19f9cffa84b2b21d2a7940555" prot="public" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>ScreenSSD1306</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1ab3b8dd9149a0294b7d01ba1e251d0477" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>sendCommand</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a2b972e4990709b9ba5024f15e40627c4" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>sendData</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a79f177085bfb5d072a4acd1238a40a84" prot="public" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>SetContrast</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1ae1e23d3abbf9b7a7a1524abf7e5dc379" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>Size</name></member>
+      <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_screen_base_1af34945fb5a3fa9452f61f9f59b11f35f" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_screen_base_1a57d68fbe93780fa7e2618f06ba13c80a" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_screen_base_1a3d5abf436b82c2c0498765dac9fa157b" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_screen_base_1abd7f2ce82a9ecc72decf3aa01d1be544" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1af1636deb2c3650f7c389e08580640480" prot="public" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>~ScreenSSD1306</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

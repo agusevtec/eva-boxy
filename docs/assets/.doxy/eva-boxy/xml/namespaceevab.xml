@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespaceevab" kind="namespace" language="C++">
+    <compoundname>evab</compoundname>
+    <innerclass refid="classevab_1_1_battery_indicator" prot="public">evab::BatteryIndicator</innerclass>
+    <innerclass refid="classevab_1_1_boxy" prot="public">evab::Boxy</innerclass>
+    <innerclass refid="classevab_1_1_composite_base" prot="public">evab::CompositeBase</innerclass>
+    <innerclass refid="structevab_1_1_coor" prot="public">evab::Coor</innerclass>
+    <innerclass refid="classevab_1_1_element_base" prot="public">evab::ElementBase</innerclass>
+    <innerclass refid="classevab_1_1_flip_window_algorithm" prot="public">evab::FlipWindowAlgorithm</innerclass>
+    <innerclass refid="classevab_1_1_font8_bold" prot="public">evab::Font8Bold</innerclass>
+    <innerclass refid="classevab_1_1_font8_compact" prot="public">evab::Font8Compact</innerclass>
+    <innerclass refid="classevab_1_1_font8_thin" prot="public">evab::Font8Thin</innerclass>
+    <innerclass refid="classevab_1_1_i_font" prot="public">evab::IFont</innerclass>
+    <innerclass refid="classevab_1_1_input_float" prot="public">evab::InputFloat</innerclass>
+    <innerclass refid="classevab_1_1_input_int" prot="public">evab::InputInt</innerclass>
+    <innerclass refid="classevab_1_1_i_screen" prot="public">evab::IScreen</innerclass>
+    <innerclass refid="classevab_1_1_key_catcher" prot="public">evab::KeyCatcher</innerclass>
+    <innerclass refid="classevab_1_1_key_modifier" prot="public">evab::KeyModifier</innerclass>
+    <innerclass refid="classevab_1_1_key_reactor" prot="public">evab::KeyReactor</innerclass>
+    <innerclass refid="classevab_1_1_labeled" prot="public">evab::Labeled</innerclass>
+    <innerclass refid="classevab_1_1_labeled_f" prot="public">evab::LabeledF</innerclass>
+    <innerclass refid="classevab_1_1_layout_pane" prot="public">evab::LayoutPane</innerclass>
+    <innerclass refid="structevab_1_1_layout_pane_item" prot="public">evab::LayoutPaneItem</innerclass>
+    <innerclass refid="classevab_1_1_list_box" prot="public">evab::ListBox</innerclass>
+    <innerclass refid="classevab_1_1_screen_base" prot="public">evab::ScreenBase</innerclass>
+    <innerclass refid="classevab_1_1_screen_k_s0108" prot="public">evab::ScreenKS0108</innerclass>
+    <innerclass refid="classevab_1_1_screen_l_c_d___i2_c" prot="public">evab::ScreenLCD_I2C</innerclass>
+    <innerclass refid="classevab_1_1_screen_page8_base" prot="public">evab::ScreenPage8Base</innerclass>
+    <innerclass refid="classevab_1_1_screen_p_c_d8544" prot="public">evab::ScreenPCD8544</innerclass>
+    <innerclass refid="classevab_1_1_screen_serial_pixel" prot="public">evab::ScreenSerialPixel</innerclass>
+    <innerclass refid="classevab_1_1_screen_serial_text" prot="public">evab::ScreenSerialText</innerclass>
+    <innerclass refid="classevab_1_1_screen_s_s_d1306" prot="public">evab::ScreenSSD1306</innerclass>
+    <innerclass refid="classevab_1_1_screen_s_s_h1106" prot="public">evab::ScreenSSH1106</innerclass>
+    <innerclass refid="classevab_1_1_scroll_window_algorithm" prot="public">evab::ScrollWindowAlgorithm</innerclass>
+    <innerclass refid="classevab_1_1_tile_set_battery" prot="public">evab::TileSetBattery</innerclass>
+    <innerclass refid="classevab_1_1_tileset_fan" prot="public">evab::TilesetFan</innerclass>
+    <innerclass refid="classevab_1_1_tileset_horizontal_progress_bar1x1" prot="public">evab::TilesetHorizontalProgressBar1x1</innerclass>
+    <innerclass refid="classevab_1_1_tile_set_lamp" prot="public">evab::TileSetLamp</innerclass>
+    <innerclass refid="classevab_1_1_tileset_on_off" prot="public">evab::TilesetOnOff</innerclass>
+    <innerclass refid="classevab_1_1_tile_set_progress" prot="public">evab::TileSetProgress</innerclass>
+    <innerclass refid="classevab_1_1_tileset_rainbowmeter" prot="public">evab::TilesetRainbowmeter</innerclass>
+    <innerclass refid="classevab_1_1_tileset_roundmeter" prot="public">evab::TilesetRoundmeter</innerclass>
+    <innerclass refid="classevab_1_1_tile_set_signal" prot="public">evab::TileSetSignal</innerclass>
+    <innerclass refid="classevab_1_1_tile_set_speaker" prot="public">evab::TileSetSpeaker</innerclass>
+    <innerclass refid="classevab_1_1_window_algorithm_base" prot="public">evab::WindowAlgorithmBase</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="evab_list_box_8h_1ab0e402829f916a7ac10c7166d1cd151e" prot="public" static="no">
+        <type><ref refid="classevab_1_1_list_box" kindref="compound">ListBox</ref>&lt; <ref refid="classevab_1_1_scroll_window_algorithm" kindref="compound">ScrollWindowAlgorithm</ref> &gt;</type>
+        <definition>using evab::ScrollListbox = ListBox&lt;ScrollWindowAlgorithm&gt;</definition>
+        <argsstring></argsstring>
+        <name>ScrollListbox</name>
+        <qualifiedname>evab::ScrollListbox</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabListBox.h" line="89" column="3" bodyfile="src/evabListBox.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="evab_list_box_8h_1a0cc3d8204a1b4527982f648e2f153804" prot="public" static="no">
+        <type><ref refid="classevab_1_1_list_box" kindref="compound">ListBox</ref>&lt; <ref refid="classevab_1_1_flip_window_algorithm" kindref="compound">FlipWindowAlgorithm</ref> &gt;</type>
+        <definition>using evab::FlipListbox = ListBox&lt;FlipWindowAlgorithm&gt;</definition>
+        <argsstring></argsstring>
+        <name>FlipListbox</name>
+        <qualifiedname>evab::FlipListbox</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabListBox.h" line="90" column="3" bodyfile="src/evabListBox.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabBatteryIndicator.h" line="5" column="1"/>
+  </compounddef>
+</doxygen>

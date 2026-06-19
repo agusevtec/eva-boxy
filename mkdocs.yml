@@ -7,8 +7,11 @@ site_dir: 'docs'
 nav:
   - What is it?: index.md
   - Tutorial:
-      - Quickstart: tutorial/quickstart.md
-
+      - Display Driver: tutorial/01-display-driver.md
+      - UI Elements: tutorial/02-ui-elements.md
+      - Redraw at position: tutorial/03-user-code-organization.md
+      - Keyboard behavior: tutorial/04-keyboard-behavior.md
+      - Custom display: tutorial/05-custom-display-driver.md
 
 markdown_extensions:
   - admonition
