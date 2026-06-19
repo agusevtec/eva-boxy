@@ -17,6 +17,7 @@ namespace evab
 
         virtual void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor) = 0;
         virtual void Clear(Coor aPosition, Coor aSize, unsigned char aColor = 0) = 0;
+        virtual void DrawSymbol(Coor aPosition, Coor aSize, char aSymbol, unsigned char aColor) = 0;
         virtual Coor Size() = 0;
     };
 }

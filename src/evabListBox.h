@@ -30,6 +30,12 @@ namespace evab
       return *this;
     }
 
+    void Select(signed char aIndex) override
+    {
+      TWindowAlgorithm::Select(aIndex);
+      Redraw();
+    }
+
     ElementBase *GetItem(unsigned char aIndex)
     {
       if (aIndex < TWindowAlgorithm::Count())
@@ -40,7 +46,6 @@ namespace evab
     void Increment(signed char delta)
     {
       Select(Selected() + delta);
-      Redraw();
     }
 
     bool Key(Keys aKey) override

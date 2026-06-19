@@ -3,29 +3,47 @@
 #include <evaTac.h>
 #include <evabBoxy.h>
 #include <evabLabeled.h>
-#include <evabUIButton.h>
+#include <evabInputButton.h>
 #include <evabBehavior.h>
 #include <evabCompositeBase.h>
-
 #include <evabFont8Thin.h>
 #include <evabScreenSSD1306.h>
 #include <evaRepeatTimer.h>
-#include <evabTilesets.h>
-#include <evabInputWidget.h>
-#include <evabStretchbar.h>
+#include <evabInputStretchbar.h>
+#include <evabInputPictogram.h>
+#include <evabInputTextStretchBar.h>
 
 using namespace evab;
 
 class MyListbox : public ScrollListbox {
 public:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    InputWidget<TilesetBattery> b(6);
-    b.Draw(aScreen, {aPos.X+aSize.X-4, aPos.Y}, {2,1}, 0);
-    ScrollListbox::drawer(aScreen, {aPos.X,aPos.Y+1}, { aSize.X - 1, aSize.Y - 1}, aIsFocused);
-    VProgressBar pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
-    pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y+1 }, { 1, aSize.Y -1}, 0);
-    // InputWidget<TilesetH_progress1> fan(ScrollListbox::Selected() + 1);
-    // fan.Draw(aScreen, { aPos.X + 1, aPos.Y + aSize.Y - 3 }, { 2, 2 }, 0);
+    ScrollListbox::drawer(aScreen, { aPos.X, aPos.Y + 1 }, { aSize.X - 1, aSize.Y - 1 }, aIsFocused);
+    VerticalProgressBar pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
+    pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y + 1 }, { 1, aSize.Y - 1 }, 0);
+  }
+};
+
+class MyContainer : public CompositeBase {
+  InputPictogram<TileSetBattery> mBattery;
+  InputPictogram<TileSetSignal> mSignal;
+  KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
+
+public:
+  MyContainer() {
+    CompositeBase::focusChild(&test);
+  }
+
+  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+    mBattery.Draw(aScreen, aPos, aSize, 0);
+    mSignal.Draw(aScreen, { aPos.X + aSize.X - 2, aPos.Y }, { 2, 1 }, 0);
+    test.Draw(aScreen, { aPos.X, 4 }, { aSize.X, 1 }, 0);
+    // test.Draw(aScreen, {4, aPos.Y}, {1, aSize.Y}, 0);
+  }
+  void hider() override {
+    mBattery.Hide();
+    mSignal.Hide();
+    test.Hide();
   }
 };
 
@@ -39,32 +57,25 @@ class App : public eva::IHandler {
     &item2
   };
   KeyModifier<MyListbox, KEY_UP, KEY_DOWN> mListbox;
-
+  MyContainer myContainer;
   eva::RepeatTimer timer;
 
 public:
   App() {
     mListbox.SetItems(items, 3);
     mListbox.SetItemHeight(2);
-    Boxy::Begin<ScreenSSD1306, Font8Thin>(&mListbox);
-    timer.start(2000, this);
+    Boxy::Begin<ScreenSSD1306, Font8Thin>(&myContainer);
+    timer.start(500, this);
   }
 
   void invoke(void *, eva::CallbackInfo) {
-    Boxy::Key(KEY_DOWN);
+    Boxy::Key(KEY_UP);
   }
 };
 
 void setup() {
   Serial.begin(9600);
   static App app;
-  // Boxy::Key(KEY_RIGHT);
-  // Boxy::Key(KEY_DOWN);
-  // Boxy::Key(KEY_RIGHT);
-  // Boxy::Key(KEY_DOWN);
-  // Boxy::Key(KEY_UP);
-  // Boxy::Key(KEY_UP);
-  //    Boxy::ShowInt("Hi!", 5);
 }
 
 void loop() {

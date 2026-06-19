@@ -19,7 +19,7 @@ namespace evab
         virtual void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor);
 
     protected:
-        virtual void DrawSymbol(Coor position, Coor size, char symbol, unsigned char color) = 0;
+
         virtual void ClearTile(Coor position, unsigned char aColor);
 
     private:
