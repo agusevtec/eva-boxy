@@ -38,35 +38,35 @@ namespace evab
         static constexpr unsigned char Count = 5;
     };
 
-    class TileSetBattery
+    class TilesetBattery
     {
     public:
         static const uint8_t *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 7;
     };
 
-    class TileSetLamp
+    class TilesetLamp
     {
     public:
         static const uint8_t *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 6;
     };
 
-    class TileSetProgress
+    class TilesetProgress
     {
     public:
         static const uint8_t *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 9;
     };
 
-    class TileSetSpeaker
+    class TilesetSpeaker
     {
     public:
         static const uint8_t *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 4;
     };
 
-    class TileSetSignal
+    class TilesetSignal
     {
     public:
         static const uint8_t *GetTile(unsigned char aIndex);

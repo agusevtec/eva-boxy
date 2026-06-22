@@ -337,7 +337,7 @@ const uint8_t *TilesetFan::GetTile(unsigned char aIndex)
     }
 }
 
-const uint8_t *TileSetBattery::GetTile(unsigned char aIndex)
+const uint8_t *TilesetBattery::GetTile(unsigned char aIndex)
 {
     static const uint8_t picto_0[] PROGMEM = {
         16, 8, // 16x8
@@ -395,7 +395,7 @@ const uint8_t *TileSetBattery::GetTile(unsigned char aIndex)
     }
 }
 
-const uint8_t *TileSetLamp::GetTile(unsigned char aIndex)
+const uint8_t *TilesetLamp::GetTile(unsigned char aIndex)
 {
     static const uint8_t picto_0[] PROGMEM = {
         16, 16, // 16x16
@@ -458,7 +458,7 @@ const uint8_t *TileSetLamp::GetTile(unsigned char aIndex)
     }
 }
 
-const uint8_t *TileSetProgress::GetTile(unsigned char aIndex)
+const uint8_t *TilesetProgress::GetTile(unsigned char aIndex)
 {
     static const uint8_t picto_0[] PROGMEM = {
         16, 16, // 16x16
@@ -548,7 +548,7 @@ const uint8_t *TileSetProgress::GetTile(unsigned char aIndex)
     }
 }
 
-const uint8_t *TileSetSpeaker::GetTile(unsigned char aIndex)
+const uint8_t *TilesetSpeaker::GetTile(unsigned char aIndex)
 {
     static const uint8_t picto_0[] PROGMEM = {
         16, 16, // 16x16
@@ -593,7 +593,7 @@ const uint8_t *TileSetSpeaker::GetTile(unsigned char aIndex)
     }
 }
 
-const uint8_t *TileSetSignal::GetTile(unsigned char aIndex)
+const uint8_t *TilesetSignal::GetTile(unsigned char aIndex)
 {
     static const uint8_t picto_0[] PROGMEM = {
         16, 8, // 16x8

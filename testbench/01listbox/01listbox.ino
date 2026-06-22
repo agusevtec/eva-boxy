@@ -12,6 +12,7 @@
 #include <evabInputStretchbar.h>
 #include <evabInputPictogram.h>
 #include <evabInputTextStretchBar.h>
+#include <evabTilesets.h>
 
 using namespace evab;
 
@@ -25,8 +26,8 @@ public:
 };
 
 class MyContainer : public CompositeBase {
-  InputPictogram<TileSetBattery> mBattery;
-  InputPictogram<TileSetSignal> mSignal;
+  InputPictogram<TilesetBattery> mBattery;
+  InputPictogram<TilesetSignal> mSignal;
   KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
 
 public:
