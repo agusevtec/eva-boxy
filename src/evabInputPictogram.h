@@ -10,11 +10,12 @@ namespace evab
     public:
         InputPictogram(int aValue = 0)
         {
-            SetValue(aValue);
+            mValue = constrain(aValue, 0, TTileSet::Count - 1);
         }
-        signed char SetValue(int aValue)
+        void SetValue(int aValue)
         {
             mValue = constrain(aValue, 0, TTileSet::Count - 1);
+            Redraw();
         }
         signed char GetValue() const
         {

@@ -25,13 +25,13 @@ test(delayTimer_triggers_once)
 //    evab::LayoutPane lp;
 //    lp.SetItems(4321, nullptr, 0);
 //    lp.Draw(&screen, {0, 0}, {16, 8}, 0);
-    // evab::InputButton ib(F("Restore"));
-    // ib.Draw(&screen, {0, 0}, {16, 8}, 0);
-    for (int i = 0; i < 4; i++)
-    {
-        InputPictogram<TileSetBattery_v2> pb(i);
-        pb.Draw(&screen, {0, i}, {1, 2}, 0);
-    }
+     evab::InputButton ib(F("Restore"));
+     ib.Draw(&screen, {0, 0}, {9, 8}, 0);
+    // for (int i = 0; i < 4; i++)
+    // {
+    //     InputPictogram<TilesetBattery> pb(i);
+    //     pb.Draw(&screen, {0, i}, {1, 2}, 0);
+    // }
 
     screen.printToSerial();
     assertEqual(1, 1);

@@ -10,6 +10,7 @@
 #include <evabScreenSSD1306.h>
 #include <evaRepeatTimer.h>
 #include <evabInputStretchbar.h>
+#include <evabInputTextStretchbar.h>
 #include <evabInputPictogram.h>
 #include <evabInputTextStretchBar.h>
 #include <evabTilesets.h>
@@ -28,7 +29,7 @@ public:
 class MyContainer : public CompositeBase {
   InputPictogram<TilesetBattery> mBattery;
   InputPictogram<TilesetSignal> mSignal;
-  KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
+  KeyModifier<TextHorizontalScrollBar, KEY_DOWN, KEY_UP> test;
 
 public:
   MyContainer() {

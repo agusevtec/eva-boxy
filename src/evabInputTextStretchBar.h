@@ -1,3 +1,4 @@
+#pragma once
 #include <evabElementBase.h>
 #include <evabTilesetsStretchy.h>
 
