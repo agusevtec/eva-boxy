@@ -24,7 +24,7 @@ namespace evab
 
         void SetValuePercent(int aValue)
         {
-            SetValue(map(mValue, 0, 100, 0, TTileSet::Count - 1));
+            SetValue(map(aValue, 0, 100, 0, TTileSet::Count - 1));
         }
 
         signed char GetValuePercent() const
