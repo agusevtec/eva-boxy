@@ -11,7 +11,7 @@ namespace evab
         virtual void TextCenter(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) = 0;
         virtual void TextRight(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) = 0;
 
-        virtual void TextLeft(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor)  = 0;
+        virtual void TextLeft(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
         virtual void TextCenter(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
         virtual void TextRight(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
 
@@ -19,5 +19,7 @@ namespace evab
         virtual void Clear(Coor aPosition, Coor aSize, unsigned char aColor = 0) = 0;
         virtual void DrawSymbol(Coor aPosition, Coor aSize, char aSymbol, unsigned char aColor) = 0;
         virtual Coor Size() = 0;
+        virtual unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused) = 0;
+        virtual void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused) = 0;
     };
 }

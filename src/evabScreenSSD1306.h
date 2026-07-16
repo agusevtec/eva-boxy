@@ -14,8 +14,9 @@ namespace evab
     ~ScreenSSD1306();
 
     void SetContrast(uint8_t aContrast);
-    void ClearDisplay();
     Coor Size() override;
+    unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
+    void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
   protected:
     void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
@@ -23,6 +24,7 @@ namespace evab
     void initDisplay();
 
   private:
+    void clearDisplay();
     void sendCommand(uint8_t aCmd);
     void sendData(uint8_t aData);
 

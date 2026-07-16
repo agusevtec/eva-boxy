@@ -1,5 +1,6 @@
 #include <evabScreenKS0108.h>
 #include <Arduino.h>
+#include <evabSerializers.h>
 
 using namespace evab;
 
@@ -182,4 +183,16 @@ void ScreenKS0108::ClearTile(Coor aPosition, unsigned char aColor)
             }
         }
     }
+}
+
+
+
+unsigned short ScreenKS0108::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
+{
+    return serialize_16x8(aPos, aSize, isFocused);
+}
+
+void ScreenKS0108::Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused)
+{
+    deserialize_16x8(aSerialized, aPos, aSize, isFocused);
 }

@@ -7,7 +7,7 @@
 #include <evabBehavior.h>
 #include <evabCompositeBase.h>
 #include <evabFont8Thin.h>
-#include <evabScreenSSD1306.h>
+#include <evabScreenSSH1106.h>
 #include <evaRepeatTimer.h>
 #include <evabInputStretchbar.h>
 #include <evabInputTextStretchbar.h>
@@ -66,7 +66,7 @@ public:
   App() {
     mListbox.SetItems(items, 3);
     mListbox.SetItemHeight(2);
-    Boxy::Begin<ScreenSSD1306, Font8Thin>(&myContainer);
+    Boxy::Begin<ScreenSSH1106, Font8Thin>(&myContainer);
     timer.start(500, this);
   }
 

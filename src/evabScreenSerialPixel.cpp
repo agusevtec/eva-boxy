@@ -1,7 +1,8 @@
 #include <evabScreenSerialPixel.h>
+#include <evabSerializers.h>
 
-namespace evab
-{
+using namespace evab;
+
     ScreenSerialPixel::ScreenSerialPixel(IFont *aFont) 
         : ScreenPage8Base(aFont)
     {
@@ -44,4 +45,14 @@ namespace evab
         if (x < 128 && page < 8)
             mBuffer[page * 128 + x] = aSlice;
     }
+
+
+unsigned short ScreenSerialPixel::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
+{
+    return serialize_16x8(aPos, aSize, isFocused);
+}
+
+void ScreenSerialPixel::Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused)
+{
+    deserialize_16x8(aSerialized, aPos, aSize, isFocused);
 }

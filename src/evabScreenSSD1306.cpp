@@ -13,7 +13,7 @@ ScreenSSD1306::ScreenSSD1306(const IFont *aFont, unsigned long aWireClock, uint8
   Wire.begin();
   Wire.setClock(aWireClock);
   initDisplay();
-  ClearDisplay();
+  clearDisplay();
 }
 
 ScreenSSD1306::~ScreenSSD1306()
@@ -115,4 +115,16 @@ void ScreenSSD1306::ClearTile(Coor aPosition, unsigned char aColor)
 Coor ScreenSSD1306::Size()
 {
   return {16, mPages};
+}
+
+#include <evabSerializers.h>
+
+unsigned short ScreenSSD1306::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
+{
+    return serialize_16x8(aPos, aSize, isFocused);
+}
+
+void ScreenSSD1306::Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused)
+{
+    deserialize_16x8(aSerialized, aPos, aSize, isFocused);
 }
