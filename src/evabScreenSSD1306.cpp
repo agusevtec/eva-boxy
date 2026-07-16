@@ -69,7 +69,7 @@ void ScreenSSD1306::SetContrast(uint8_t aContrast)
   sendCommand(aContrast);
 }
 
-void ScreenSSD1306::ClearDisplay()
+void ScreenSSD1306::clearDisplay()
 {
   for (uint8_t page = 0; page < mPages; page++)
   {
