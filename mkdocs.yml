@@ -7,11 +7,15 @@ site_dir: 'docs'
 nav:
   - What is it?: index.md
   - Tutorial:
-      - Display Driver: tutorial/01-display-driver.md
-      - UI Elements: tutorial/02-ui-elements.md
-      - Redraw at position: tutorial/03-user-code-organization.md
-      - Keyboard behavior: tutorial/04-keyboard-behavior.md
-      - Custom display: tutorial/05-custom-display-driver.md
+      - Display Driver: tutorial/display-drivers.md
+      - UC Paint: tutorial/uc-paint.md
+      - UC Elements Stamps: tutorial/uc-elements-stamps.md
+      - UC Structured UI: tutorial/uc-structured-ui.md
+      - Keyboard behavior: tutorial/keyboard-behavior.md
+      - Custom display: tutorial/custom-display-driver.md
+
+
+
 
 markdown_extensions:
   - admonition

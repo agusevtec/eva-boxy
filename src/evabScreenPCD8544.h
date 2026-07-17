@@ -13,11 +13,9 @@ namespace evab
                   uint8_t aRST, uint8_t aCE, uint8_t aDC,
                   uint8_t aDIN, uint8_t aCLK,
                   uint8_t aLED = 255);
-    ~ScreenPCD8544();
 
-    void setBacklight(uint8_t aState);
-    void setContrast(uint8_t aContrast);
-    void clear();
+    void SetBacklight(uint8_t aState);
+    void SetContrast(uint8_t aContrast);
     Coor Size() override { return {11, 6}; }
     unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
     void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
@@ -27,6 +25,7 @@ namespace evab
     void ClearTile(Coor aPosition, unsigned char aColor) override;
 
   private:
+    void clearDisplay();
     void sendCommand(uint8_t aCmd);
     void sendData(uint8_t aData);
     void initDisplay();

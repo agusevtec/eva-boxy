@@ -39,14 +39,14 @@ ScreenKS0108::ScreenKS0108(const IFont *aFont,
     digitalWrite(mEPin, LOW);
 
     initDisplay();
-    clear();
+    clearDisplay();
 }
 
 ScreenKS0108::~ScreenKS0108()
 {
 }
 
-void ScreenKS0108::setBacklight(uint8_t aState)
+void ScreenKS0108::SetBacklight(uint8_t aState)
 {
     if (mLEDPin != 255)
         digitalWrite(mLEDPin, aState);
@@ -117,7 +117,7 @@ void ScreenKS0108::initDisplay()
     delay(10);
 }
 
-void ScreenKS0108::clear()
+void ScreenKS0108::clearDisplay()
 {
     for (uint8_t page = 0; page < 8; page++)
     {

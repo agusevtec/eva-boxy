@@ -1,4 +1,5 @@
 #include <evabScreenPCD8544.h>
+#include <evabSerializers.h>
 
 using namespace evab;
 
@@ -29,27 +30,25 @@ ScreenPCD8544::ScreenPCD8544(const IFont *aFont,
   SPI.setClockDivider(SPI_CLOCK_DIV4);
 
   initDisplay();
-  clear();
+  clearDisplay();
 }
 
-ScreenPCD8544::~ScreenPCD8544()
-{
-}
 
-void ScreenPCD8544::setBacklight(uint8_t aState)
+
+void ScreenPCD8544::SetBacklight(uint8_t aState)
 {
   if (mLEDPin != 255)
     digitalWrite(mLEDPin, aState);
 }
 
-void ScreenPCD8544::setContrast(uint8_t aContrast)
+void ScreenPCD8544::SetContrast(uint8_t aContrast)
 {
   sendCommand(CMD_FUNC_SET | 0x01);
   sendCommand(CMD_SET_VOP | (aContrast & 0x7F));
   sendCommand(CMD_FUNC_SET);
 }
 
-void ScreenPCD8544::clear()
+void ScreenPCD8544::clearDisplay()
 {
   for (uint8_t page = 0; page < 6; page++)
   {
@@ -82,7 +81,7 @@ void ScreenPCD8544::initDisplay()
   sendCommand(CMD_DISP_CTRL | 0x04);
   sendCommand(CMD_SET_Y | 0x00);
   sendCommand(CMD_SET_X | 0x00);
-  setContrast(0x30);
+  SetContrast(0x30);
 }
 
 void ScreenPCD8544::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
@@ -106,7 +105,6 @@ void ScreenPCD8544::ClearTile(Coor aPosition, unsigned char aColor)
   }
 }
 
-#include <evabSerializers.h>
 
 unsigned short ScreenPCD8544::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
 {

@@ -28,8 +28,8 @@ ScreenLCD_I2C::ScreenLCD_I2C(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uin
   sendByte(0x06, true); // entry mode
   sendByte(0x0C, true); // display on, cursor off
 
-  setBacklight(HIGH);
-  clear();
+  SetBacklight(HIGH);
+  clearDisplay();
 }
 
 void ScreenLCD_I2C::sendNibble(uint8_t aData, bool aIsCommand)
@@ -54,7 +54,7 @@ void ScreenLCD_I2C::sendByte(uint8_t aData, bool aIsCommand)
   sendNibble((aData << 4) & 0xF0, aIsCommand);
 }
 
-void ScreenLCD_I2C::setBacklight(uint8_t aState)
+void ScreenLCD_I2C::SetBacklight(uint8_t aState)
 {
   if (aState)
     mBacklightMask |= (1 << mBacklightPin);
@@ -63,7 +63,7 @@ void ScreenLCD_I2C::setBacklight(uint8_t aState)
   sendByte(0x00, true);
 }
 
-void ScreenLCD_I2C::clear()
+void ScreenLCD_I2C::clearDisplay()
 {
   sendByte(0x01, true);
   delay(2);

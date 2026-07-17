@@ -17,8 +17,8 @@ namespace evab
                      uint8_t aLED = 255);
         ~ScreenKS0108();
 
-        void setBacklight(uint8_t aState);
-        void clear();
+        void SetBacklight(uint8_t aState);
+        void clearDisplay();
         Coor Size() override;
         unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
         void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
