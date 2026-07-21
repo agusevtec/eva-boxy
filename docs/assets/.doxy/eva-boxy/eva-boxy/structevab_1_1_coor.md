@@ -8,8 +8,9 @@
 
 
 
+_Coordinate structure for positions and sizes on screen._ 
 
-
+* `#include <evabCoor.h>`
 
 
 
@@ -36,7 +37,7 @@
 | Type | Name |
 | ---: | :--- |
 |  unsigned char | [**X**](#variable-x)  <br> |
-|  unsigned char | [**Y**](#variable-y)  <br> |
+|  unsigned char | [**Y**](#variable-y)  <br>_X and Y coordinates._  |
 
 
 
@@ -57,7 +58,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Coor**](#function-coor) (int x=0, int y=0) <br> |
+|   | [**Coor**](#function-coor) (int x=0, int y=0) <br>_Constructor with default values._  |
 
 
 
@@ -106,6 +107,7 @@ unsigned char evab::Coor::X;
 
 ### variable Y 
 
+_X and Y coordinates._ 
 ```C++
 unsigned char evab::Coor::Y;
 ```
@@ -121,6 +123,7 @@ unsigned char evab::Coor::Y;
 
 ### function Coor 
 
+_Constructor with default values._ 
 ```C++
 evab::Coor::Coor (
     int x=0,
@@ -130,6 +133,18 @@ evab::Coor::Coor (
 
 
 
+
+
+**Parameters:**
+
+
+* `x` X coordinate (default 0) 
+* `y` Y coordinate (default 0) 
+
+
+
+
+        
 
 <hr>
 

@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_input_button" kind="class" language="C++" prot="public">
+    <compoundname>evab::InputButton</compoundname>
+    <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <includes refid="evab_input_button_8h" local="no">evabInputButton.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_input_button_1a4aae7083737250daac9307caf8bf242a" prot="private" static="no" mutable="no">
+        <type>const __FlashStringHelper *</type>
+        <definition>const __FlashStringHelper* evab::InputButton::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <qualifiedname>evab::InputButton::mName</qualifiedname>
+        <briefdescription>
+<para>Button label. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputButton.h" line="43" column="32" bodyfile="src/evabInputButton.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_input_button_1a05c6d004438a14a2da6501a3f4a065c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>evab::InputButton::InputButton</definition>
+        <argsstring>(const __FlashStringHelper *aName)</argsstring>
+        <name>InputButton</name>
+        <qualifiedname>evab::InputButton::InputButton</qualifiedname>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_input_button" kindref="compound">InputButton</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string for button label </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputButton.h" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_button_1a904f5ce49e71b70537fd52cead26c95b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::InputButton::Increment</definition>
+        <argsstring>(signed char delta)</argsstring>
+        <name>Increment</name>
+        <qualifiedname>evab::InputButton::Increment</qualifiedname>
+        <param>
+          <type>signed char</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>Placeholder increment method (does nothing). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputButton.h" line="29" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_input_button_1aeff1acaf2760ffe34b65cd83b92feb85" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::InputButton::drawer</definition>
+        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::InputButton::drawer</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e">drawer</reimplements>
+        <param>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+<para>Draws the button element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Screen to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputButton.h" line="40" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Button input element. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Displays a button with a label enclosed in parentheses. The Increment method is a placeholder that does nothing. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::InputButton</label>
+        <link refid="classevab_1_1_input_button"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::InputButton</label>
+        <link refid="classevab_1_1_input_button"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabInputButton.h" line="14" column="3" bodyfile="src/evabInputButton.h" bodystart="15" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_input_button_1aeff1acaf2760ffe34b65cd83b92feb85" prot="protected" virt="virtual"><scope>evab::InputButton</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>Hide</name></member>
+      <member refid="classevab_1_1_input_button_1a904f5ce49e71b70537fd52cead26c95b" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_input_button_1a05c6d004438a14a2da6501a3f4a065c2" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>InputButton</name></member>
+      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>IsHidden</name></member>
+      <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::InputButton</scope><name>Key</name></member>
+      <member refid="classevab_1_1_input_button_1a4aae7083737250daac9307caf8bf242a" prot="private" virt="non-virtual"><scope>evab::InputButton</scope><name>mName</name></member>
+      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>Redraw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

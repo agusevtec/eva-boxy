@@ -3,20 +3,22 @@
   <compounddef id="classevab_1_1_font8_compact" kind="class" language="C++" prot="public">
     <compoundname>evab::Font8Compact</compoundname>
     <basecompoundref refid="classevab_1_1_i_font" prot="public" virt="non-virtual">evab::IFont</basecompoundref>
+    <includes refid="evab_font8_compact_8h" local="no">evabFont8Compact.h</includes>
     <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="classevab_1_1_font8_compact_1a820c5ffadd18050f509e18ce4bdd3a64" prot="private" static="yes" mutable="no">
-        <type>const uint8_t kCharmap[][5]</type>
-        <definition>const uint8_t kCharmap [][5] evab::Font8Compact::PROGMEM</definition>
+      <memberdef kind="variable" id="classevab_1_1_font8_compact_1ac4e893b9a2cb30dc4204a8a1b1246ff0" prot="private" static="yes" mutable="no">
+        <type>const unsigned char kCharmap[][5]</type>
+        <definition>const unsigned char kCharmap [][5] evab::Font8Compact::PROGMEM</definition>
         <argsstring></argsstring>
         <name>PROGMEM</name>
         <qualifiedname>evab::Font8Compact::PROGMEM</qualifiedname>
         <briefdescription>
+<para>Character bitmap data. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabFont8Compact.h" line="14" column="39" bodyfile="src/evabFont8Compact.h" bodystart="14" bodyend="-1"/>
+        <location file="src/evabFont8Compact.h" line="27" column="45" bodyfile="src/evabFont8Compact.h" bodystart="27" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -36,17 +38,40 @@
           <declname>aSliceColumn</declname>
         </param>
         <briefdescription>
+<para>Gets a vertical slice of a character. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aCharcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ASCII character code (32-126) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSliceColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index (0-7) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned char Bitmap data for the specified column </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabFont8Compact.h" line="11" column="23"/>
+        <location file="src/evabFont8Compact.h" line="24" column="23"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>8x8 compact font implementation </para>
     </briefdescription>
     <detaileddescription>
+<para>Provides a compact 8x8 pixel font that saves memory by storing only 5 columns per character. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -72,10 +97,10 @@
         <link refid="classevab_1_1_i_font"/>
       </node>
     </collaborationgraph>
-    <location file="src/evabFont8Compact.h" line="8" column="5" bodyfile="src/evabFont8Compact.h" bodystart="9" bodyend="15"/>
+    <location file="src/evabFont8Compact.h" line="14" column="5" bodyfile="src/evabFont8Compact.h" bodystart="15" bodyend="28"/>
     <listofallmembers>
       <member refid="classevab_1_1_font8_compact_1af7ccdf9f104d645a9558a9f7cf2cdb37" prot="public" virt="virtual"><scope>evab::Font8Compact</scope><name>GetVerticalSlice</name></member>
-      <member refid="classevab_1_1_font8_compact_1a820c5ffadd18050f509e18ce4bdd3a64" prot="private" virt="non-virtual"><scope>evab::Font8Compact</scope><name>PROGMEM</name></member>
+      <member refid="classevab_1_1_font8_compact_1ac4e893b9a2cb30dc4204a8a1b1246ff0" prot="private" virt="non-virtual"><scope>evab::Font8Compact</scope><name>PROGMEM</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

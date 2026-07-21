@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_pictoset_fan" kind="class" language="C++" prot="public">
+    <compoundname>evab::PictosetFan</compoundname>
+    <includes refid="evab_pictosets_8h" local="no">evabPictosets.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_pictoset_fan_1a58708583debefff10ee784aba5d073dd" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::PictosetFan::Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <qualifiedname>evab::PictosetFan::Count</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+<para>Number of pictograms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="66" column="40" bodyfile="src/evabPictosets.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_pictoset_fan_1a5099b9489cafd4aa57d250041396e749" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::PictosetFan::GetTile</definition>
+        <argsstring>(unsigned char aIndex)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::PictosetFan::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index (0-2) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="65" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Fan pictogram set (3 states). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabPictosets.h" line="56" column="5" bodyfile="src/evabPictosets.h" bodystart="57" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_pictoset_fan_1a58708583debefff10ee784aba5d073dd" prot="public" virt="non-virtual"><scope>evab::PictosetFan</scope><name>Count</name></member>
+      <member refid="classevab_1_1_pictoset_fan_1a5099b9489cafd4aa57d250041396e749" prot="public" virt="non-virtual"><scope>evab::PictosetFan</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

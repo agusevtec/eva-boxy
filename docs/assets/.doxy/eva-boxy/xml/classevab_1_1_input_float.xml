@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_input_float" kind="class" language="C++" prot="public">
     <compoundname>evab::InputFloat</compoundname>
     <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <includes refid="evab_input_float_8h" local="no">evabInputFloat.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_float_1a22eaf1e38a7c238e64f098702552ade0" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -11,12 +12,13 @@
         <name>mValue</name>
         <qualifiedname>evab::InputFloat::mValue</qualifiedname>
         <briefdescription>
+<para>Current float value. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="20" column="11" bodyfile="src/evabInputFloat.h" bodystart="20" bodyend="-1"/>
+        <location file="src/evabInputFloat.h" line="56" column="11" bodyfile="src/evabInputFloat.h" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -32,12 +34,23 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_input_float" kindref="compound">InputFloat</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial float value (default 0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="11" column="5"/>
+        <location file="src/evabInputFloat.h" line="21" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_1a2c458fd33df72334c05a9f0dd1f6f887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -50,12 +63,23 @@
           <declname>aValue</declname>
         </param>
         <briefdescription>
+<para>Sets the float value and redraws. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New float value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="12" column="10"/>
+        <location file="src/evabInputFloat.h" line="28" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_1ad726fd1724ca5091418203bcdd63801c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -64,12 +88,16 @@
         <name>GetValue</name>
         <qualifiedname>evab::InputFloat::GetValue</qualifiedname>
         <briefdescription>
+<para>Gets the current float value. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Current float value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="13" column="11"/>
+        <location file="src/evabInputFloat.h" line="35" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_1ab41ba1f0e7254592a36312bc8ebf6bea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -82,12 +110,23 @@
           <declname>delta</declname>
         </param>
         <briefdescription>
+<para>Increments the value by a delta. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount to add (positive or negative) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="14" column="10"/>
+        <location file="src/evabInputFloat.h" line="42" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -115,17 +154,54 @@
           <declname>aIsFocused</declname>
         </param>
         <briefdescription>
+<para>Draws the float value centered on screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Screen to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="17" column="10"/>
+        <location file="src/evabInputFloat.h" line="53" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Floating-point input element. </para>
     </briefdescription>
     <detaileddescription>
+<para>Displays and manages a floating-point value. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -151,7 +227,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputFloat.h" line="8" column="3" bodyfile="src/evabInputFloat.h" bodystart="9" bodyend="22"/>
+    <location file="src/evabInputFloat.h" line="13" column="3" bodyfile="src/evabInputFloat.h" bodystart="14" bodyend="58"/>
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>Draw</name></member>
       <member refid="classevab_1_1_input_float_1acfa08df4550aaad3a79e368470bacc00" prot="protected" virt="virtual"><scope>evab::InputFloat</scope><name>drawer</name></member>

@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md) <br> |
+| class | [**ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md) <br>_PCD8544 screen driver (Nokia 5110 display)._  |
 
 
 

@@ -2,18 +2,28 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="namespaceevab" kind="namespace" language="C++">
     <compoundname>evab</compoundname>
-    <innerclass refid="classevab_1_1_battery_indicator" prot="public">evab::BatteryIndicator</innerclass>
     <innerclass refid="classevab_1_1_boxy" prot="public">evab::Boxy</innerclass>
+    <innerclass refid="structevab_1_1_charset_horizontal_progress_bar" prot="public">evab::CharsetHorizontalProgressBar</innerclass>
+    <innerclass refid="structevab_1_1_charset_horizontal_scroll_bar" prot="public">evab::CharsetHorizontalScrollBar</innerclass>
+    <innerclass refid="structevab_1_1_charset_vertical_progress_bar" prot="public">evab::CharsetVerticalProgressBar</innerclass>
+    <innerclass refid="structevab_1_1_charset_vertical_scroll_bar" prot="public">evab::CharsetVerticalScrollBar</innerclass>
     <innerclass refid="classevab_1_1_composite_base" prot="public">evab::CompositeBase</innerclass>
     <innerclass refid="structevab_1_1_coor" prot="public">evab::Coor</innerclass>
     <innerclass refid="classevab_1_1_element_base" prot="public">evab::ElementBase</innerclass>
     <innerclass refid="classevab_1_1_flip_window_algorithm" prot="public">evab::FlipWindowAlgorithm</innerclass>
     <innerclass refid="classevab_1_1_font8_bold" prot="public">evab::Font8Bold</innerclass>
     <innerclass refid="classevab_1_1_font8_compact" prot="public">evab::Font8Compact</innerclass>
-    <innerclass refid="classevab_1_1_font8_thin" prot="public">evab::Font8Thin</innerclass>
+    <innerclass refid="classevab_1_1_font8_narrow" prot="public">evab::Font8Narrow</innerclass>
+    <innerclass refid="structevab_1_1_horizontal_picto_policy" prot="public">evab::HorizontalPictoPolicy</innerclass>
+    <innerclass refid="structevab_1_1_horizontal_text_policy" prot="public">evab::HorizontalTextPolicy</innerclass>
     <innerclass refid="classevab_1_1_i_font" prot="public">evab::IFont</innerclass>
+    <innerclass refid="classevab_1_1_input_animation" prot="public">evab::InputAnimation</innerclass>
+    <innerclass refid="classevab_1_1_input_button" prot="public">evab::InputButton</innerclass>
     <innerclass refid="classevab_1_1_input_float" prot="public">evab::InputFloat</innerclass>
     <innerclass refid="classevab_1_1_input_int" prot="public">evab::InputInt</innerclass>
+    <innerclass refid="classevab_1_1_input_pictogram" prot="public">evab::InputPictogram</innerclass>
+    <innerclass refid="classevab_1_1_input_stretch_bar" prot="public">evab::InputStretchBar</innerclass>
+    <innerclass refid="classevab_1_1_input_text_stretch_bar" prot="public">evab::InputTextStretchBar</innerclass>
     <innerclass refid="classevab_1_1_i_screen" prot="public">evab::IScreen</innerclass>
     <innerclass refid="classevab_1_1_key_catcher" prot="public">evab::KeyCatcher</innerclass>
     <innerclass refid="classevab_1_1_key_modifier" prot="public">evab::KeyModifier</innerclass>
@@ -23,6 +33,19 @@
     <innerclass refid="classevab_1_1_layout_pane" prot="public">evab::LayoutPane</innerclass>
     <innerclass refid="structevab_1_1_layout_pane_item" prot="public">evab::LayoutPaneItem</innerclass>
     <innerclass refid="classevab_1_1_list_box" prot="public">evab::ListBox</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_battery" prot="public">evab::PictosetBattery</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_fan" prot="public">evab::PictosetFan</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_horizontal_progress_bar" prot="public">evab::PictosetHorizontalProgressBar</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_horizontal_scroll_bar" prot="public">evab::PictosetHorizontalScrollBar</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_lamp" prot="public">evab::PictosetLamp</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_on_off" prot="public">evab::PictosetOnOff</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_progress" prot="public">evab::PictosetProgress</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_rainbowmeter" prot="public">evab::PictosetRainbowmeter</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_roundmeter" prot="public">evab::PictosetRoundmeter</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_signal" prot="public">evab::PictosetSignal</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_speaker" prot="public">evab::PictosetSpeaker</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_vertical_progress_bar" prot="public">evab::PictosetVerticalProgressBar</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_vertical_scroll_bar" prot="public">evab::PictosetVerticalScrollBar</innerclass>
     <innerclass refid="classevab_1_1_screen_base" prot="public">evab::ScreenBase</innerclass>
     <innerclass refid="classevab_1_1_screen_k_s0108" prot="public">evab::ScreenKS0108</innerclass>
     <innerclass refid="classevab_1_1_screen_l_c_d___i2_c" prot="public">evab::ScreenLCD_I2C</innerclass>
@@ -33,18 +56,122 @@
     <innerclass refid="classevab_1_1_screen_s_s_d1306" prot="public">evab::ScreenSSD1306</innerclass>
     <innerclass refid="classevab_1_1_screen_s_s_h1106" prot="public">evab::ScreenSSH1106</innerclass>
     <innerclass refid="classevab_1_1_scroll_window_algorithm" prot="public">evab::ScrollWindowAlgorithm</innerclass>
-    <innerclass refid="classevab_1_1_tile_set_battery" prot="public">evab::TileSetBattery</innerclass>
-    <innerclass refid="classevab_1_1_tileset_fan" prot="public">evab::TilesetFan</innerclass>
-    <innerclass refid="classevab_1_1_tileset_horizontal_progress_bar1x1" prot="public">evab::TilesetHorizontalProgressBar1x1</innerclass>
-    <innerclass refid="classevab_1_1_tile_set_lamp" prot="public">evab::TileSetLamp</innerclass>
-    <innerclass refid="classevab_1_1_tileset_on_off" prot="public">evab::TilesetOnOff</innerclass>
-    <innerclass refid="classevab_1_1_tile_set_progress" prot="public">evab::TileSetProgress</innerclass>
-    <innerclass refid="classevab_1_1_tileset_rainbowmeter" prot="public">evab::TilesetRainbowmeter</innerclass>
-    <innerclass refid="classevab_1_1_tileset_roundmeter" prot="public">evab::TilesetRoundmeter</innerclass>
-    <innerclass refid="classevab_1_1_tile_set_signal" prot="public">evab::TileSetSignal</innerclass>
-    <innerclass refid="classevab_1_1_tile_set_speaker" prot="public">evab::TileSetSpeaker</innerclass>
+    <innerclass refid="structevab_1_1_vertical_picto_policy" prot="public">evab::VerticalPictoPolicy</innerclass>
+    <innerclass refid="structevab_1_1_vertical_text_policy" prot="public">evab::VerticalTextPolicy</innerclass>
     <innerclass refid="classevab_1_1_window_algorithm_base" prot="public">evab::WindowAlgorithmBase</innerclass>
     <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a9b6f4f26a39daff7e004b650952fae54" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_vertical_progress_bar" kindref="compound">PictosetVerticalProgressBar</ref>, <ref refid="structevab_1_1_vertical_picto_policy" kindref="compound">VerticalPictoPolicy</ref> &gt;</type>
+        <definition>using evab::VerticalProgressBar = InputStretchBar&lt;PictosetVerticalProgressBar, VerticalPictoPolicy&gt;</definition>
+        <argsstring></argsstring>
+        <name>VerticalProgressBar</name>
+        <qualifiedname>evab::VerticalProgressBar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputStretchBar.h" line="196" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a5e8178ef64dfcb0c6a0c2457ed589ea6" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_horizontal_progress_bar" kindref="compound">PictosetHorizontalProgressBar</ref>, <ref refid="structevab_1_1_horizontal_picto_policy" kindref="compound">HorizontalPictoPolicy</ref> &gt;</type>
+        <definition>using evab::HorizontalProgressBar = InputStretchBar&lt;PictosetHorizontalProgressBar, HorizontalPictoPolicy&gt;</definition>
+        <argsstring></argsstring>
+        <name>HorizontalProgressBar</name>
+        <qualifiedname>evab::HorizontalProgressBar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputStretchBar.h" line="197" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1aeb9e8805e2478ea44de99e90365cbe64" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_vertical_scroll_bar" kindref="compound">PictosetVerticalScrollBar</ref>, <ref refid="structevab_1_1_vertical_picto_policy" kindref="compound">VerticalPictoPolicy</ref> &gt;</type>
+        <definition>using evab::VerticalScrollBar = InputStretchBar&lt;PictosetVerticalScrollBar, VerticalPictoPolicy&gt;</definition>
+        <argsstring></argsstring>
+        <name>VerticalScrollBar</name>
+        <qualifiedname>evab::VerticalScrollBar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputStretchBar.h" line="198" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a6e1a9e218c26afa41f01615605a01d8e" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_horizontal_scroll_bar" kindref="compound">PictosetHorizontalScrollBar</ref>, <ref refid="structevab_1_1_horizontal_picto_policy" kindref="compound">HorizontalPictoPolicy</ref> &gt;</type>
+        <definition>using evab::HorizontalScrollBar = InputStretchBar&lt;PictosetHorizontalScrollBar, HorizontalPictoPolicy&gt;</definition>
+        <argsstring></argsstring>
+        <name>HorizontalScrollBar</name>
+        <qualifiedname>evab::HorizontalScrollBar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputStretchBar.h" line="199" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="evab_input_text_stretch_bar_8h_1a57671f379e3ab4bf45737a960a5433d9" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>&lt; <ref refid="structevab_1_1_charset_vertical_progress_bar" kindref="compound">CharsetVerticalProgressBar</ref>, <ref refid="structevab_1_1_vertical_text_policy" kindref="compound">VerticalTextPolicy</ref> &gt;</type>
+        <definition>using evab::TextVerticalProgressBar = InputTextStretchBar&lt;CharsetVerticalProgressBar, VerticalTextPolicy&gt;</definition>
+        <argsstring></argsstring>
+        <name>TextVerticalProgressBar</name>
+        <qualifiedname>evab::TextVerticalProgressBar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="286" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="evab_input_text_stretch_bar_8h_1a3084ed355ae65ee08396b93acc689db8" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>&lt; <ref refid="structevab_1_1_charset_horizontal_progress_bar" kindref="compound">CharsetHorizontalProgressBar</ref>, <ref refid="structevab_1_1_horizontal_text_policy" kindref="compound">HorizontalTextPolicy</ref> &gt;</type>
+        <definition>using evab::TextHorizontalProgressBar = InputTextStretchBar&lt;CharsetHorizontalProgressBar, HorizontalTextPolicy&gt;</definition>
+        <argsstring></argsstring>
+        <name>TextHorizontalProgressBar</name>
+        <qualifiedname>evab::TextHorizontalProgressBar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="287" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="evab_input_text_stretch_bar_8h_1a96206b0bc1ad82a113b01953e5529e2f" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>&lt; <ref refid="structevab_1_1_charset_vertical_scroll_bar" kindref="compound">CharsetVerticalScrollBar</ref>, <ref refid="structevab_1_1_vertical_text_policy" kindref="compound">VerticalTextPolicy</ref> &gt;</type>
+        <definition>using evab::TextVerticalScrollBar = InputTextStretchBar&lt;CharsetVerticalScrollBar, VerticalTextPolicy&gt;</definition>
+        <argsstring></argsstring>
+        <name>TextVerticalScrollBar</name>
+        <qualifiedname>evab::TextVerticalScrollBar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="288" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="evab_input_text_stretch_bar_8h_1ad9e6b3b839d3249d214c9051c3d363cb" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>&lt; <ref refid="structevab_1_1_charset_horizontal_scroll_bar" kindref="compound">CharsetHorizontalScrollBar</ref>, <ref refid="structevab_1_1_horizontal_text_policy" kindref="compound">HorizontalTextPolicy</ref> &gt;</type>
+        <definition>using evab::TextHorizontalScrollBar = InputTextStretchBar&lt;CharsetHorizontalScrollBar, HorizontalTextPolicy&gt;</definition>
+        <argsstring></argsstring>
+        <name>TextHorizontalScrollBar</name>
+        <qualifiedname>evab::TextHorizontalScrollBar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="289" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="typedef" id="evab_list_box_8h_1ab0e402829f916a7ac10c7166d1cd151e" prot="public" static="no">
         <type><ref refid="classevab_1_1_list_box" kindref="compound">ListBox</ref>&lt; <ref refid="classevab_1_1_scroll_window_algorithm" kindref="compound">ScrollWindowAlgorithm</ref> &gt;</type>
         <definition>using evab::ScrollListbox = ListBox&lt;ScrollWindowAlgorithm&gt;</definition>
@@ -52,12 +179,13 @@
         <name>ScrollListbox</name>
         <qualifiedname>evab::ScrollListbox</qualifiedname>
         <briefdescription>
+<para>Scrollable list box. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="89" column="3" bodyfile="src/evabListBox.h" bodystart="89" bodyend="-1"/>
+        <location file="src/evabListBox.h" line="143" column="3" bodyfile="src/evabListBox.h" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_list_box_8h_1a0cc3d8204a1b4527982f648e2f153804" prot="public" static="no">
         <type><ref refid="classevab_1_1_list_box" kindref="compound">ListBox</ref>&lt; <ref refid="classevab_1_1_flip_window_algorithm" kindref="compound">FlipWindowAlgorithm</ref> &gt;</type>
@@ -66,18 +194,283 @@
         <name>FlipListbox</name>
         <qualifiedname>evab::FlipListbox</qualifiedname>
         <briefdescription>
+<para>Flip-based list box. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="90" column="3" bodyfile="src/evabListBox.h" bodystart="90" bodyend="-1"/>
+        <location file="src/evabListBox.h" line="144" column="3" bodyfile="src/evabListBox.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="evab_picto_remixicon16_8h_1a5b5d922ffe18eb8d70f2ee9671e87271" prot="public" static="no" mutable="no">
+        <type>const unsigned char picto_remixicon16_ea01[]</type>
+        <definition>const unsigned char picto_remixicon16_f69d [] evab::PROGMEM</definition>
+        <argsstring></argsstring>
+        <name>PROGMEM</name>
+        <qualifiedname>evab::PROGMEM</qualifiedname>
+        <initializer>                                               = {
+16, 16, 
+0x9e, 0x9c, 0x1c, 0x1e, 0x12, 0x03, 0x01, 0x01,
+0x01, 0x01, 0x03, 0x02, 0x06, 0x1c, 0x38, 0x20,
+0x03, 0x0f, 0x1c, 0x30, 0x00, 0x00, 0x46, 0x77,
+0x79, 0x5f, 0x4e, 0x00, 0x1f, 0x10, 0x7f, 0x7f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictoRemixicon16.h" line="7" column="48" bodyfile="src/evabPictoRemixicon16.h" bodystart="7" bodyend="12"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="evab_serializers_8h_1aa5c8a3753a7787e08f51e73bebbd1e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::serialize_16x8</definition>
+        <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
+        <name>serialize_16x8</name>
+        <qualifiedname>evab::serialize_16x8</qualifiedname>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Serializes element state for 16x8 tile screens. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned short Serialized state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabSerializers.h" line="14" column="20" declfile="src/evabSerializers.h" declline="14" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="evab_serializers_8h_1a03b280ac012295c05807836a32f299c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::deserialize_16x8</definition>
+        <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
+        <name>deserialize_16x8</name>
+        <qualifiedname>evab::deserialize_16x8</qualifiedname>
+        <param>
+          <type>unsigned short</type>
+          <declname>aSerialized</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes element state for 16x8 tile screens. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSerialized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Serialized state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (output) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabSerializers.h" line="24" column="10" declfile="src/evabSerializers.h" declline="24" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="evab_serializers_8h_1a95bd885987c140b2a0e8ce5d9914ce39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::serialize_32x4</definition>
+        <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
+        <name>serialize_32x4</name>
+        <qualifiedname>evab::serialize_32x4</qualifiedname>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Serializes element state for 32x4 tile screens. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned short Serialized state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabSerializers.h" line="34" column="20" declfile="src/evabSerializers.h" declline="34" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="evab_serializers_8h_1a6bac1d32bff87f385ed4c4d041f2be18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::deserialize_32x4</definition>
+        <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
+        <name>deserialize_32x4</name>
+        <qualifiedname>evab::deserialize_32x4</qualifiedname>
+        <param>
+          <type>unsigned short</type>
+          <declname>aSerialized</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes element state for 32x4 tile screens. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSerialized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Serialized state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (output) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabSerializers.h" line="44" column="10" declfile="src/evabSerializers.h" declline="44" declcolumn="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabBatteryIndicator.h" line="5" column="1"/>
+    <location file="src/evabBehavior.h" line="5" column="1"/>
   </compounddef>
 </doxygen>

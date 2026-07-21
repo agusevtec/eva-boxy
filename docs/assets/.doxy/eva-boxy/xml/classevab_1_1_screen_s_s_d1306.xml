@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_screen_s_s_d1306" kind="class" language="C++" prot="public">
     <compoundname>evab::ScreenSSD1306</compoundname>
     <basecompoundref refid="classevab_1_1_screen_page8_base" prot="public" virt="non-virtual">evab::ScreenPage8Base</basecompoundref>
+    <includes refid="evab_screen_s_s_d1306_8h" local="no">evabScreenSSD1306.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_screen_s_s_d1306_1a29d8d7a7cf670e3dbf16b1b247d88cfc" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -11,12 +12,13 @@
         <name>mAddress</name>
         <qualifiedname>evab::ScreenSSD1306::mAddress</qualifiedname>
         <briefdescription>
+<para>I2C address. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="29" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="29" bodyend="-1"/>
+        <location file="src/evabScreenSSD1306.h" line="105" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_s_s_d1306_1a9b6cc688c874cab19c59975d9416acf2" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -25,12 +27,13 @@
         <name>mWidth</name>
         <qualifiedname>evab::ScreenSSD1306::mWidth</qualifiedname>
         <briefdescription>
+<para>Width in pixels. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="30" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="30" bodyend="-1"/>
+        <location file="src/evabScreenSSD1306.h" line="106" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_s_s_d1306_1a1b75cc2243ff7fb71ce806ae0a361f5c" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -39,12 +42,13 @@
         <name>mHeight</name>
         <qualifiedname>evab::ScreenSSD1306::mHeight</qualifiedname>
         <briefdescription>
+<para>Height in pixels. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="31" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="31" bodyend="-1"/>
+        <location file="src/evabScreenSSD1306.h" line="107" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_s_s_d1306_1a519c1e3890fbf5eefd8b1eca3920975d" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -53,12 +57,13 @@
         <name>mPages</name>
         <qualifiedname>evab::ScreenSSD1306::mPages</qualifiedname>
         <briefdescription>
+<para>Number of pages. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="32" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="32" bodyend="-1"/>
+        <location file="src/evabScreenSSD1306.h" line="108" column="13" bodyfile="src/evabScreenSSD1306.h" bodystart="108" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -83,12 +88,39 @@
           <defval>64</defval>
         </param>
         <briefdescription>
+<para>Constructor for SSD1306 screen driver. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aFont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Font to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aWireClock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C clock speed (default 800000) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aHeightPx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Display height in pixels (default 64) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="13" column="5"/>
+        <location file="src/evabScreenSSD1306.h" line="25" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1af1636deb2c3650f7c389e08580640480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -102,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="14" column="5"/>
+        <location file="src/evabScreenSSD1306.h" line="26" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a79f177085bfb5d072a4acd1238a40a84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -115,26 +147,23 @@
           <declname>aContrast</declname>
         </param>
         <briefdescription>
+<para>Sets display contrast. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aContrast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contrast value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="16" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a9e96e3d871bd0e9f3e6d800f59f4d30e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void evab::ScreenSSD1306::ClearDisplay</definition>
-        <argsstring>()</argsstring>
-        <name>ClearDisplay</name>
-        <qualifiedname>evab::ScreenSSD1306::ClearDisplay</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="17" column="10"/>
+        <location file="src/evabScreenSSD1306.h" line="33" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1ae1e23d3abbf9b7a7a1524abf7e5dc379" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -144,12 +173,138 @@
         <qualifiedname>evab::ScreenSSD1306::Size</qualifiedname>
         <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
         <briefdescription>
+<para>Gets the screen size in tiles. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Screen dimensions (16 x pages) </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="18" column="10"/>
+        <location file="src/evabScreenSSD1306.h" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a0615113f865bc13dcb6908e4cf669a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::ScreenSSD1306::Serialize</definition>
+        <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>evab::ScreenSSD1306::Serialize</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352">Serialize</reimplements>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Serializes element state for 16x8 screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned short Serialized state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="50" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1afb00106a9a0edad05762591fadea1bdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::Deserialize</definition>
+        <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
+        <name>Deserialize</name>
+        <qualifiedname>evab::ScreenSSD1306::Deserialize</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008">Deserialize</reimplements>
+        <param>
+          <type>unsigned short</type>
+          <declname>aSerialized</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes element state for 16x8 screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSerialized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Serialized state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (output) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="60" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -173,12 +328,39 @@
           <declname>aSlice</declname>
         </param>
         <briefdescription>
+<para>Draws a vertical slice at the specified position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSliceColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column within the tile (0-7) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSlice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap data for the slice </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="21" column="10"/>
+        <location file="src/evabScreenSSD1306.h" line="70" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a0e035a690be3ccc2c49165492847ce56" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -196,12 +378,31 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Clears a tile at the specified position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the tile </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="22" column="10"/>
+        <location file="src/evabScreenSSD1306.h" line="78" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a6d903761ebb4e180bd357b186238c1d4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -210,15 +411,31 @@
         <name>initDisplay</name>
         <qualifiedname>evab::ScreenSSD1306::initDisplay</qualifiedname>
         <briefdescription>
+<para>Initializes the display. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="23" column="10"/>
+        <location file="src/evabScreenSSD1306.h" line="83" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1ae7e88a167983b2f79e3d4193b130aaf9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSSD1306::clearDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>clearDisplay</name>
+        <qualifiedname>evab::ScreenSSD1306::clearDisplay</qualifiedname>
+        <briefdescription>
+<para>Clears the entire display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSD1306.h" line="89" column="10"/>
+      </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1ab3b8dd9149a0294b7d01ba1e251d0477" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::ScreenSSD1306::sendCommand</definition>
@@ -230,12 +447,23 @@
           <declname>aCmd</declname>
         </param>
         <briefdescription>
+<para>Sends a command to the display. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aCmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="26" column="10"/>
+        <location file="src/evabScreenSSD1306.h" line="96" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a2b972e4990709b9ba5024f15e40627c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -248,17 +476,30 @@
           <declname>aData</declname>
         </param>
         <briefdescription>
+<para>Sends data to the display. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSD1306.h" line="27" column="10"/>
+        <location file="src/evabScreenSSD1306.h" line="103" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>SSD1306 screen driver for OLED displays. </para>
     </briefdescription>
     <detaileddescription>
+<para>Supports 128x64 and 128x32 OLED displays with I2C interface. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="4">
@@ -308,11 +549,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenSSD1306.h" line="10" column="3" bodyfile="src/evabScreenSSD1306.h" bodystart="11" bodyend="33"/>
+    <location file="src/evabScreenSSD1306.h" line="15" column="3" bodyfile="src/evabScreenSSD1306.h" bodystart="16" bodyend="109"/>
     <listofallmembers>
       <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>Clear</name></member>
-      <member refid="classevab_1_1_screen_s_s_d1306_1a9e96e3d871bd0e9f3e6d800f59f4d30e" prot="public" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>ClearDisplay</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1ae7e88a167983b2f79e3d4193b130aaf9" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>clearDisplay</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1a0e035a690be3ccc2c49165492847ce56" prot="protected" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1afb00106a9a0edad05762591fadea1bdf" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>DrawSymbol</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1a3f90b5d44a4a6d3a293ad5c2157e2f2f" prot="protected" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>DrawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1a6d903761ebb4e180bd357b186238c1d4" prot="protected" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>initDisplay</name></member>
@@ -325,6 +567,7 @@
       <member refid="classevab_1_1_screen_s_s_d1306_1a943b7bc19f9cffa84b2b21d2a7940555" prot="public" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>ScreenSSD1306</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1ab3b8dd9149a0294b7d01ba1e251d0477" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>sendCommand</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1a2b972e4990709b9ba5024f15e40627c4" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>sendData</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1a0615113f865bc13dcb6908e4cf669a9b" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>Serialize</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1a79f177085bfb5d072a4acd1238a40a84" prot="public" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>SetContrast</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1ae1e23d3abbf9b7a7a1524abf7e5dc379" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>Size</name></member>
       <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>TextCenter</name></member>

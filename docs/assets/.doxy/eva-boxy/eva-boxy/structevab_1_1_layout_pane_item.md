@@ -8,8 +8,9 @@
 
 
 
+_Structure defining a single item in a layout pane._ 
 
-
+* `#include <evabLayoutPane.h>`
 
 
 
@@ -35,9 +36,9 @@
 
 | Type | Name |
 | ---: | :--- |
-|  [**ElementBase**](classevab_1_1_element_base.md) \* | [**Element**](#variable-element)  <br> |
-|  [**Coor**](structevab_1_1_coor.md) | [**Position**](#variable-position)  <br> |
-|  [**Coor**](structevab_1_1_coor.md) | [**Size**](#variable-size)  <br> |
+|  [**ElementBase**](classevab_1_1_element_base.md) \* | [**Element**](#variable-element)  <br>_Pointer to the element._  |
+|  [**Coor**](structevab_1_1_coor.md) | [**Position**](#variable-position)  <br>_Position of the item._  |
+|  [**Coor**](structevab_1_1_coor.md) | [**Size**](#variable-size)  <br>_Size of the item._  |
 
 
 
@@ -89,6 +90,7 @@
 
 ### variable Element 
 
+_Pointer to the element._ 
 ```C++
 ElementBase* evab::LayoutPaneItem::Element;
 ```
@@ -102,6 +104,7 @@ ElementBase* evab::LayoutPaneItem::Element;
 
 ### variable Position 
 
+_Position of the item._ 
 ```C++
 Coor evab::LayoutPaneItem::Position;
 ```
@@ -115,6 +118,7 @@ Coor evab::LayoutPaneItem::Position;
 
 ### variable Size 
 
+_Size of the item._ 
 ```C++
 Coor evab::LayoutPaneItem::Size;
 ```

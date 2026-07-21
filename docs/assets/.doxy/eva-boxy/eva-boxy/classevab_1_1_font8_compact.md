@@ -8,8 +8,9 @@
 
 
 
+_8x8 compact font implementation_ [More...](#detailed-description)
 
-
+* `#include <evabFont8Compact.h>`
 
 
 
@@ -72,7 +73,7 @@ Inherits the following classes: [evab::IFont](classevab_1_1_i_font.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual unsigned char | [**GetVerticalSlice**](#function-getverticalslice) (char aCharcode, unsigned char aSliceColumn) override const<br> |
+| virtual unsigned char | [**GetVerticalSlice**](#function-getverticalslice) (char aCharcode, unsigned char aSliceColumn) override const<br>_Gets a vertical slice of a character._  |
 
 
 ## Public Functions inherited from evab::IFont
@@ -81,7 +82,7 @@ See [evab::IFont](classevab_1_1_i_font.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual unsigned char | [**GetVerticalSlice**](classevab_1_1_i_font.md#function-getverticalslice) (char aCharcode, unsigned char col) const = 0<br> |
+| virtual unsigned char | [**GetVerticalSlice**](classevab_1_1_i_font.md#function-getverticalslice) (char aCharcode, unsigned char col) const = 0<br>_Gets a vertical slice (column) of a character._  |
 
 
 
@@ -136,6 +137,13 @@ See [evab::IFont](classevab_1_1_i_font.md)
 
 
 
+## Detailed Description
+
+
+Provides a compact 8x8 pixel font that saves memory by storing only 5 columns per character. 
+
+
+    
 ## Public Functions Documentation
 
 
@@ -143,6 +151,7 @@ See [evab::IFont](classevab_1_1_i_font.md)
 
 ### function GetVerticalSlice 
 
+_Gets a vertical slice of a character._ 
 ```C++
 virtual unsigned char evab::Font8Compact::GetVerticalSlice (
     char aCharcode,
@@ -152,6 +161,25 @@ virtual unsigned char evab::Font8Compact::GetVerticalSlice (
 
 
 
+
+
+**Parameters:**
+
+
+* `aCharcode` ASCII character code (32-126) 
+* `aSliceColumn` Column index (0-7) 
+
+
+
+**Returns:**
+
+unsigned char Bitmap data for the specified column 
+
+
+
+
+
+        
 Implements [*evab::IFont::GetVerticalSlice*](classevab_1_1_i_font.md#function-getverticalslice)
 
 

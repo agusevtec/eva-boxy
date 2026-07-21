@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -484,26 +512,33 @@
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">ScreenLCD_I2C</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ScreenBase</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">ScreenLCD_I2C</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aAddress</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aCols</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aRows</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aBacklightPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ScreenLCD_I2C</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aAddress</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aCols</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aRows</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aBacklightPin</span><span class="p">);</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setBacklight</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aState</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">SetBacklight</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aState</span><span class="p">);</span>
+
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="nf">Size</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">mCols</span><span class="p">,</span><span class="w"> </span><span class="n">mRows</span><span class="p">};</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="nf">Serialize</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isFocused</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Deserialize</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">aSerialized</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">&amp;</span><span class="n">isFocused</span><span class="p">);</span>
 
 <span class="w">  </span><span class="k">protected</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">DrawSymbol</span><span class="p">(</span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aCharcode</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">sendByte</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aData</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">aIsCommand</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">clearDisplay</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendByte</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aData</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">aIsCommand</span><span class="p">);</span>
+
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendNibble</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aData</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">aIsCommand</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">initDisplay</span><span class="p">();</span>
+
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setCursor</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aCol</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aRow</span><span class="p">);</span>
 
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mAddress</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mCols</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mRows</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mBacklightPin</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mBacklightMask</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mAddress</span><span class="p">;</span><span class="w">          </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mCols</span><span class="p">;</span><span class="w">             </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mRows</span><span class="p">;</span><span class="w">             </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mBacklightPin</span><span class="p">;</span><span class="w">     </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mBacklightMask</span><span class="p">;</span><span class="w">    </span>
 <span class="w">  </span><span class="p">};</span>
 
 <span class="p">}</span>

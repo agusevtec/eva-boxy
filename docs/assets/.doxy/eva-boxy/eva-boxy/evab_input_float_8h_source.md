@@ -19,15 +19,18 @@ namespace evab
   {
   public:
     InputFloat(float aValue = 0);
+    
     void SetValue(float aValue);
+    
     float GetValue() const;
+    
     void Increment(signed char delta);
 
   protected:
     void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
-    float mValue;
+    float mValue;  
 
   };
 

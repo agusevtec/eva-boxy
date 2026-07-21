@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_pictoset_horizontal_scroll_bar" kind="class" language="C++" prot="public">
+    <compoundname>evab::PictosetHorizontalScrollBar</compoundname>
+    <includes refid="evab_pictosets_stretchy_8h" local="no">evabPictosetsStretchy.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_pictoset_horizontal_scroll_bar_1a77b5e8a6e8cd8c44f597458474e04e16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::PictosetHorizontalScrollBar::GetTile</definition>
+        <argsstring>(unsigned char blockType, unsigned char fillNumber)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::PictosetHorizontalScrollBar::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>blockType</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>fillNumber</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram for horizontal scroll bar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blockType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Block type (1=start, 2=middle, 3=end) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fillNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill level (0-4) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosetsStretchy.h" line="66" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Horizontal scroll bar pictogram set. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabPictosetsStretchy.h" line="56" column="5" bodyfile="src/evabPictosetsStretchy.h" bodystart="57" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_pictoset_horizontal_scroll_bar_1a77b5e8a6e8cd8c44f597458474e04e16" prot="public" virt="non-virtual"><scope>evab::PictosetHorizontalScrollBar</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

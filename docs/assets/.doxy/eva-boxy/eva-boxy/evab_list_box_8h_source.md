@@ -19,8 +19,8 @@ namespace evab
   class ListBox : public ElementBase, public TWindowAlgorithm
   {
   private:
-    ElementBase **mItems = nullptr;
-    unsigned char mItemHeight = 1;
+    ElementBase **mItems = nullptr;  
+    unsigned char mItemHeight = 1;    
 
   public:
     ListBox<TWindowAlgorithm> &SetItems(ElementBase *aItems[], int aCount)
@@ -96,8 +96,9 @@ namespace evab
     }
   };
 
-  using ScrollListbox = ListBox<ScrollWindowAlgorithm>;
-  using FlipListbox = ListBox<FlipWindowAlgorithm>;
+  // Convenience typedefs for common list box types
+  using ScrollListbox = ListBox<ScrollWindowAlgorithm>;  
+  using FlipListbox = ListBox<FlipWindowAlgorithm>;      
 }
 ```
 

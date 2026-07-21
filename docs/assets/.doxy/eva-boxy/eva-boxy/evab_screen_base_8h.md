@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenBase**](classevab_1_1_screen_base.md) <br> |
+| class | [**ScreenBase**](classevab_1_1_screen_base.md) <br>_Base class for screen implementations._  |
 
 
 

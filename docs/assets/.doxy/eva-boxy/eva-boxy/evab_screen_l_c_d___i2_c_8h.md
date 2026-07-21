@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) <br> |
+| class | [**ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) <br>_I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._  |
 
 
 

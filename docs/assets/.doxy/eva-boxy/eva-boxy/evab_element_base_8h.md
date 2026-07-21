@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ElementBase**](classevab_1_1_element_base.md) <br> |
+| class | [**ElementBase**](classevab_1_1_element_base.md) <br>_Abstract base class for all UI elements._  |
 
 
 

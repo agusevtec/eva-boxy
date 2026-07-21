@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_key_reactor" kind="class" language="C++" prot="public">
     <compoundname>evab::KeyReactor</compoundname>
     <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <includes refid="evab_behavior_8h" local="no">evabBehavior.h</includes>
     <templateparamlist>
       <param>
         <type>class T</type>
@@ -27,17 +28,19 @@
           <name>EVENT_VALUE_CHANGED</name>
           <initializer>= 1</initializer>
           <briefdescription>
+<para>Event triggered when value changes. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Event types for <ref refid="classevab_1_1_key_reactor" kindref="compound">KeyReactor</ref> notifications. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="73" column="5" bodyfile="src/evabBehavior.h" bodystart="74" bodyend="76"/>
+        <location file="src/evabBehavior.h" line="131" column="5" bodyfile="src/evabBehavior.h" bodystart="132" bodyend="134"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -49,12 +52,13 @@
         <qualifiedname>evab::KeyReactor::mListener</qualifiedname>
         <initializer>= nullptr</initializer>
         <briefdescription>
+<para>Event listener for value change events. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="102" column="19" bodyfile="src/evabBehavior.h" bodystart="102" bodyend="-1"/>
+        <location file="src/evabBehavior.h" line="172" column="19" bodyfile="src/evabBehavior.h" bodystart="172" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -80,12 +84,31 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_key_reactor" kindref="compound">KeyReactor</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aListener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the event listener </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments forwarded to the base element constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="79" column="5" bodyfile="src/evabBehavior.h" bodystart="79" bodyend="82"/>
+        <location file="src/evabBehavior.h" line="143" column="5" bodyfile="src/evabBehavior.h" bodystart="143" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_key_reactor_1add03501f9e93c3fca17c685a4735a6f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -98,17 +121,58 @@
           <declname>aKey</declname>
         </param>
         <briefdescription>
+<para>Handles key events, triggers event on value change. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key code to process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the key was handled, false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="84" column="10" bodyfile="src/evabBehavior.h" bodystart="84" bodyend="99"/>
+        <location file="src/evabBehavior.h" line="154" column="10" bodyfile="src/evabBehavior.h" bodystart="154" bodyend="169"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Decorator that triggers events when values change via increment/decrement. </para>
     </briefdescription>
     <detaileddescription>
+<para>Similar to <ref refid="classevab_1_1_key_modifier" kindref="compound">KeyModifier</ref> but additionally sends event notifications when the value changes through increment/decrement operations.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base element type (must have Increment(signed char) and GetValue() methods) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kDec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code for decrement </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kInc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code for increment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -132,7 +196,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabBehavior.h" line="70" column="3" bodyfile="src/evabBehavior.h" bodystart="71" bodyend="103"/>
+    <location file="src/evabBehavior.h" line="125" column="3" bodyfile="src/evabBehavior.h" bodystart="126" bodyend="173"/>
     <listofallmembers>
       <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adba9e339d50c53f9e5e5fad794046472241" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>EVENT_VALUE_CHANGED</name></member>
       <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adb" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>EventType</name></member>

@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -481,6 +509,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-functions-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -530,6 +569,10 @@
 
 <h1 id="class-evabfont8bold">Class evab::Font8Bold<a class="headerlink" href="#class-evabfont8bold" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>Font8Bold</strong></a></p>
+<p><em>8x8 bold font implementation</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabFont8Bold.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../classevab_1_1_i_font/">evab::IFont</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -542,7 +585,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual unsigned char</td>
-<td style="text-align: left;"><a href="#function-getverticalslice"><strong>GetVerticalSlice</strong></a> (char aCharcode, unsigned char col) override const<br></td>
+<td style="text-align: left;"><a href="#function-getverticalslice"><strong>GetVerticalSlice</strong></a> (char aCharcode, unsigned char col) override const<br><em>Gets a vertical slice of a character.</em></td>
 </tr>
 </tbody>
 </table>
@@ -558,18 +601,28 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual unsigned char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_font/#function-getverticalslice"><strong>GetVerticalSlice</strong></a> (char aCharcode, unsigned char col) const = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_font/#function-getverticalslice"><strong>GetVerticalSlice</strong></a> (char aCharcode, unsigned char col) const = 0<br><em>Gets a vertical slice (column) of a character.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Provides a bold 8x8 pixel font for display systems. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-getverticalslice">function GetVerticalSlice<a class="headerlink" href="#function-getverticalslice" title="Permanent link">&para;</a></h3>
+<p><em>Gets a vertical slice of a character.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Font8Bold</span><span class="o">::</span><span class="n">GetVerticalSlice</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">aCharcode</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">col</span>
 <span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">const</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aCharcode</code> ASCII character code (32-126) </li>
+<li><code>col</code> Column index (0-7) </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>unsigned char Bitmap data for the specified column </p>
 <p>Implements <a href="../classevab_1_1_i_font/#function-getverticalslice"><em>evab::IFont::GetVerticalSlice</em></a></p>
 <hr>
 

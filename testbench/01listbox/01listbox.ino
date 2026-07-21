@@ -6,14 +6,17 @@
 #include <evabInputButton.h>
 #include <evabBehavior.h>
 #include <evabCompositeBase.h>
-#include <evabFont8Thin.h>
-#include <evabScreenSSH1106.h>
+#include <evabFont8Narrow.h>
+#include <evabScreenSSD1306.h>
 #include <evaRepeatTimer.h>
 #include <evabInputStretchbar.h>
 #include <evabInputTextStretchbar.h>
 #include <evabInputPictogram.h>
 #include <evabInputTextStretchBar.h>
-#include <evabTilesets.h>
+#include <evabPictosets.h>
+#include <evabPictoRemixicon16.h>
+#include <evabInputAnimation.h>
+
 
 using namespace evab;
 
@@ -27,9 +30,10 @@ public:
 };
 
 class MyContainer : public CompositeBase {
-  InputPictogram<TilesetBattery> mBattery;
-  InputPictogram<TilesetSignal> mSignal;
-  KeyModifier<TextHorizontalScrollBar, KEY_DOWN, KEY_UP> test;
+  InputPictogram<PictosetBattery> mBattery;
+  InputPictogram<PictosetSignal> mSignal;
+  KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
+  InputAnimation<PictosetRainbowmeter, 10> mFan = {1};
 
 public:
   MyContainer() {
@@ -39,8 +43,10 @@ public:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     mBattery.Draw(aScreen, aPos, aSize, 0);
     mSignal.Draw(aScreen, { aPos.X + aSize.X - 2, aPos.Y }, { 2, 1 }, 0);
-    test.Draw(aScreen, { aPos.X, 4 }, { aSize.X, 1 }, 0);
+    test.Draw(aScreen, { aPos.X, 2 }, { aSize.X, 1 }, 0);
     // test.Draw(aScreen, {4, aPos.Y}, {1, aSize.Y}, 0);
+    aScreen->Picto({aPos.X, 4}, picto_remixicon16_f110, 0);
+    mFan.Draw(aScreen, { aPos.X + 10, 4}, {3, 3}, 0);
   }
   void hider() override {
     mBattery.Hide();
@@ -66,7 +72,7 @@ public:
   App() {
     mListbox.SetItems(items, 3);
     mListbox.SetItemHeight(2);
-    Boxy::Begin<ScreenSSH1106, Font8Thin>(&myContainer);
+    Boxy::Begin<ScreenSSD1306, Font8Narrow>(&myContainer);
     timer.start(500, this);
   }
 

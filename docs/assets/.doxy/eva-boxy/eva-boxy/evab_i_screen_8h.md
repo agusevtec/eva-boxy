@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**IScreen**](classevab_1_1_i_screen.md) <br> |
+| class | [**IScreen**](classevab_1_1_i_screen.md) <br>_Abstract interface for screen rendering._  |
 
 
 

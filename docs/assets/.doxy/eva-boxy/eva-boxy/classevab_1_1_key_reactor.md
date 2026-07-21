@@ -10,8 +10,9 @@
 
 
 
+_Decorator that triggers events when values change via increment/decrement._ [More...](#detailed-description)
 
-
+* `#include <evabBehavior.h>`
 
 
 
@@ -34,7 +35,7 @@ Inherits the following classes: T
 
 | Type | Name |
 | ---: | :--- |
-| enum  | [**EventType**](#enum-eventtype)  <br> |
+| enum  | [**EventType**](#enum-eventtype)  <br>_Event types for_ [_**KeyReactor**_](classevab_1_1_key_reactor.md) _notifications._ |
 
 
 
@@ -59,8 +60,8 @@ Inherits the following classes: T
 
 | Type | Name |
 | ---: | :--- |
-|  bool | [**Key**](#function-key) (Keys aKey) override<br> |
-|   | [**KeyReactor**](#function-keyreactor) (eva::IHandler \* aListener, Args &&... args) <br> |
+|  bool | [**Key**](#function-key) (Keys aKey) override<br>_Handles key events, triggers event on value change._  |
+|   | [**KeyReactor**](#function-keyreactor) (eva::IHandler \* aListener, Args &&... args) <br>_Constructor for_ [_**KeyReactor**_](classevab_1_1_key_reactor.md) _._ |
 
 
 
@@ -89,6 +90,25 @@ Inherits the following classes: T
 
 
 
+## Detailed Description
+
+
+Similar to [**KeyModifier**](classevab_1_1_key_modifier.md) but additionally sends event notifications when the value changes through increment/decrement operations.
+
+
+
+
+**Template parameters:**
+
+
+* `T` Base element type (must have Increment(signed char) and GetValue() methods) 
+* `kDec` Key code for decrement 
+* `kInc` Key code for increment 
+
+
+
+
+    
 ## Public Types Documentation
 
 
@@ -96,6 +116,7 @@ Inherits the following classes: T
 
 ### enum EventType 
 
+_Event types for_ [_**KeyReactor**_](classevab_1_1_key_reactor.md) _notifications._
 ```C++
 enum evab::KeyReactor::EventType {
     EVENT_VALUE_CHANGED = 1
@@ -113,6 +134,7 @@ enum evab::KeyReactor::EventType {
 
 ### function Key 
 
+_Handles key events, triggers event on value change._ 
 ```C++
 inline bool evab::KeyReactor::Key (
     Keys aKey
@@ -122,12 +144,31 @@ inline bool evab::KeyReactor::Key (
 
 
 
+
+**Parameters:**
+
+
+* `aKey` The key code to process 
+
+
+
+**Returns:**
+
+true if the key was handled, false otherwise 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function KeyReactor 
 
+_Constructor for_ [_**KeyReactor**_](classevab_1_1_key_reactor.md) _._
 ```C++
 template<typename... Args>
 inline evab::KeyReactor::KeyReactor (
@@ -138,6 +179,18 @@ inline evab::KeyReactor::KeyReactor (
 
 
 
+
+
+**Parameters:**
+
+
+* `aListener` Pointer to the event listener 
+* `args` Arguments forwarded to the base element constructor 
+
+
+
+
+        
 
 <hr>
 

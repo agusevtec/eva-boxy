@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenPage8Base**](classevab_1_1_screen_page8_base.md) <br> |
+| class | [**ScreenPage8Base**](classevab_1_1_screen_page8_base.md) <br>_Base class for page-based 8-bit screens._  |
 
 
 

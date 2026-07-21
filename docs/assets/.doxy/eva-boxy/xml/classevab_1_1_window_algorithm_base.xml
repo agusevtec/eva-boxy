@@ -4,6 +4,7 @@
     <compoundname>evab::WindowAlgorithmBase</compoundname>
     <derivedcompoundref refid="classevab_1_1_flip_window_algorithm" prot="public" virt="non-virtual">evab::FlipWindowAlgorithm</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_scroll_window_algorithm" prot="public" virt="non-virtual">evab::ScrollWindowAlgorithm</derivedcompoundref>
+    <includes refid="evab_window_algorithms_8h" local="no">evabWindowAlgorithms.h</includes>
     <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1ad4350c862eb5257a467623e5bd0918c5" prot="protected" static="no" mutable="no">
         <type>signed char</type>
@@ -12,12 +13,13 @@
         <name>mSelected</name>
         <qualifiedname>evab::WindowAlgorithmBase::mSelected</qualifiedname>
         <briefdescription>
+<para>Currently selected index. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="21" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="21" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="71" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a8881fd816814115cbdc8d45e508d054c" prot="protected" static="no" mutable="no">
         <type>signed char</type>
@@ -26,12 +28,13 @@
         <name>mCount</name>
         <qualifiedname>evab::WindowAlgorithmBase::mCount</qualifiedname>
         <briefdescription>
+<para>Total number of items. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="22" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="22" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="72" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a1f7536774485ca911d1daf7d569b2f5d" prot="protected" static="no" mutable="no">
         <type>signed char</type>
@@ -40,12 +43,13 @@
         <name>mWindowStart</name>
         <qualifiedname>evab::WindowAlgorithmBase::mWindowStart</qualifiedname>
         <briefdescription>
+<para>Start of the current window. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="23" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="23" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="73" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a3037a5d364ac13f0031ef977864feab6" prot="protected" static="no" mutable="no">
         <type>signed char</type>
@@ -54,12 +58,13 @@
         <name>mWindowSize</name>
         <qualifiedname>evab::WindowAlgorithmBase::mWindowSize</qualifiedname>
         <briefdescription>
+<para>Window size. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="24" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="24" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="74" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -70,12 +75,13 @@
         <name>WindowAlgorithmBase</name>
         <qualifiedname>evab::WindowAlgorithmBase::WindowAlgorithmBase</qualifiedname>
         <briefdescription>
+<para>Constructor for window algorithm base. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="9" column="5"/>
+        <location file="src/evabWindowAlgorithms.h" line="17" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a022903ad9e9100b92f81c6b10737f8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -92,12 +98,23 @@
           <declname>aIndex</declname>
         </param>
         <briefdescription>
+<para>Pure virtual method to select an item. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index to select </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="10" column="18"/>
+        <location file="src/evabWindowAlgorithms.h" line="24" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1aa0bf5cb24c9b5aee7312798e465d6596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>signed char</type>
@@ -106,12 +123,16 @@
         <name>Selected</name>
         <qualifiedname>evab::WindowAlgorithmBase::Selected</qualifiedname>
         <briefdescription>
+<para>Gets the currently selected item index. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Selected index, or -1 if empty </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="11" column="17"/>
+        <location file="src/evabWindowAlgorithms.h" line="31" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a5477e753aea1c5bcaff5b0f9240cd0fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>signed char</type>
@@ -120,12 +141,16 @@
         <name>Count</name>
         <qualifiedname>evab::WindowAlgorithmBase::Count</qualifiedname>
         <briefdescription>
+<para>Gets the total number of items. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Total number of items </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="12" column="17"/>
+        <location file="src/evabWindowAlgorithms.h" line="38" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a6f19b87f40b6cc235b9e7ceee79a4195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>signed char</type>
@@ -134,12 +159,16 @@
         <name>WindowSize</name>
         <qualifiedname>evab::WindowAlgorithmBase::WindowSize</qualifiedname>
         <briefdescription>
+<para>Gets the window size. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Window size </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="13" column="17"/>
+        <location file="src/evabWindowAlgorithms.h" line="45" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -154,12 +183,25 @@
           <declname>aPosition</declname>
         </param>
         <briefdescription>
+<para>Calculates the visual index of an item in the current window. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Absolute position of the item </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Visual index, or -1 if not visible </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="16" column="17"/>
+        <location file="src/evabWindowAlgorithms.h" line="54" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a300de90f05a5544c3b92debbbcb355b8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -172,12 +214,23 @@
           <declname>Count</declname>
         </param>
         <briefdescription>
+<para>Sets the total number of items. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of items </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="17" column="10"/>
+        <location file="src/evabWindowAlgorithms.h" line="61" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1ae05ad89a293255d891685c08c60f4b2a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -190,17 +243,30 @@
           <declname>aWindowSize</declname>
         </param>
         <briefdescription>
+<para>Resizes the window. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aWindowSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New window size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="18" column="10"/>
+        <location file="src/evabWindowAlgorithms.h" line="68" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Abstract base class for window navigation algorithms. </para>
     </briefdescription>
     <detaileddescription>
+<para>Provides common functionality for list box navigation strategies. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -232,7 +298,7 @@
         <link refid="classevab_1_1_window_algorithm_base"/>
       </node>
     </inheritancegraph>
-    <location file="src/evabWindowAlgorithms.h" line="6" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="7" bodyend="25"/>
+    <location file="src/evabWindowAlgorithms.h" line="11" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="12" bodyend="75"/>
     <listofallmembers>
       <member refid="classevab_1_1_window_algorithm_base_1a5477e753aea1c5bcaff5b0f9240cd0fd" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>Count</name></member>
       <member refid="classevab_1_1_window_algorithm_base_1acd6b3bd987a44454afcc8a148d4cc3c6" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>indexInWindow</name></member>

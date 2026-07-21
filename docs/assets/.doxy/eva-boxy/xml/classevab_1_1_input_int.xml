@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_input_int" kind="class" language="C++" prot="public">
     <compoundname>evab::InputInt</compoundname>
     <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <includes refid="evab_input_int_8h" local="no">evabInputInt.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_int_1a4e796e046e457432648db7c7763ca005" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -11,12 +12,13 @@
         <name>mValue</name>
         <qualifiedname>evab::InputInt::mValue</qualifiedname>
         <briefdescription>
+<para>Current integer value. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="20" column="9" bodyfile="src/evabInputInt.h" bodystart="20" bodyend="-1"/>
+        <location file="src/evabInputInt.h" line="56" column="9" bodyfile="src/evabInputInt.h" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -32,12 +34,23 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_input_int" kindref="compound">InputInt</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial integer value (default 0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="11" column="5"/>
+        <location file="src/evabInputInt.h" line="21" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_int_1ab94428a72666e1384fd6c10a20e7a03c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -50,12 +63,23 @@
           <declname>aValue</declname>
         </param>
         <briefdescription>
+<para>Sets the integer value and redraws. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New integer value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="12" column="10"/>
+        <location file="src/evabInputInt.h" line="28" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_int_1acd95020d7bff5880dc4091fe7e8b1a04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -64,12 +88,16 @@
         <name>GetValue</name>
         <qualifiedname>evab::InputInt::GetValue</qualifiedname>
         <briefdescription>
+<para>Gets the current integer value. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Current integer value </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="13" column="9"/>
+        <location file="src/evabInputInt.h" line="35" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_int_1a0aed4c88950d1266043fbd8b54207208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -82,12 +110,23 @@
           <declname>delta</declname>
         </param>
         <briefdescription>
+<para>Increments the value by a delta. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount to add (positive or negative) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="14" column="10"/>
+        <location file="src/evabInputInt.h" line="42" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -115,17 +154,54 @@
           <declname>aIsFocused</declname>
         </param>
         <briefdescription>
+<para>Draws the integer value centered on screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Screen to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="17" column="10"/>
+        <location file="src/evabInputInt.h" line="53" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Integer input element. </para>
     </briefdescription>
     <detaileddescription>
+<para>Displays and manages an integer value. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -151,7 +227,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputInt.h" line="8" column="3" bodyfile="src/evabInputInt.h" bodystart="9" bodyend="21"/>
+    <location file="src/evabInputInt.h" line="13" column="3" bodyfile="src/evabInputInt.h" bodystart="14" bodyend="57"/>
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>Draw</name></member>
       <member refid="classevab_1_1_input_int_1abfef31986b1b4ade1a661a9b1c8144c9" prot="protected" virt="virtual"><scope>evab::InputInt</scope><name>drawer</name></member>

@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -485,6 +513,17 @@
     <span class="md-ellipsis">
       
         Protected Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
       
     </span>
   </a>
@@ -636,6 +675,10 @@
 <h1 id="class-evablistbox">Class evab::ListBox<a class="headerlink" href="#class-evablistbox" title="Permanent link">&para;</a></h1>
 <p><strong>template &lt;class TWindowAlgorithm&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>ListBox</strong></a></p>
+<p><em>List box element with configurable windowing algorithm.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabListBox.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../classevab_1_1_element_base/">evab::ElementBase</a>,  TWindowAlgorithm</p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -648,27 +691,27 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-getitem"><strong>GetItem</strong></a> (unsigned char aIndex) <br></td>
+<td style="text-align: left;"><a href="#function-getitem"><strong>GetItem</strong></a> (unsigned char aIndex) <br><em>Gets an item by index.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-increment"><strong>Increment</strong></a> (signed char delta) <br></td>
+<td style="text-align: left;"><a href="#function-increment"><strong>Increment</strong></a> (signed char delta) <br><em>Increments the selection by a delta.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) override<br></td>
+<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) override<br><em>Handles key events, forwarding to selected item.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (signed char aIndex) override<br></td>
+<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (signed char aIndex) override<br><em>Selects an item by index.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>ListBox</strong></a>&lt; TWindowAlgorithm &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-setitemheight"><strong>SetItemHeight</strong></a> (unsigned char aItemHeight) <br></td>
+<td style="text-align: left;"><a href="#function-setitemheight"><strong>SetItemHeight</strong></a> (unsigned char aItemHeight) <br><em>Sets the height of each item.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>ListBox</strong></a>&lt; TWindowAlgorithm &gt; &amp;</td>
-<td style="text-align: left;"><a href="#function-setitems"><strong>SetItems</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aItems, int aCount) <br></td>
+<td style="text-align: left;"><a href="#function-setitems"><strong>SetItems</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aItems, int aCount) <br><em>Sets the list of items to display.</em></td>
 </tr>
 </tbody>
 </table>
@@ -684,23 +727,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hide"><strong>Hide</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hide"><strong>Hide</strong></a> () <br><em>Hides the element from view.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br><em>Checks if the element is hidden.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
 </tr>
 </tbody>
 </table>
@@ -715,66 +758,112 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br></td>
+<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Draws the list box.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-hider"><strong>hider</strong></a> () override<br></td>
+<td style="text-align: left;"><a href="#function-hider"><strong>hider</strong></a> () override<br><em>Hides all items.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Displays a scrollable list of items with navigation support.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>TWindowAlgorithm</code> Windowing algorithm for navigation (Flip/Scroll) </li>
+</ul>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-getitem">function GetItem<a class="headerlink" href="#function-getitem" title="Permanent link">&para;</a></h3>
+<p><em>Gets an item by index.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">GetItem</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aIndex</code> Index of the item </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Pointer to the item, or nullptr if invalid </p>
 <hr>
 
 <h3 id="function-increment">function Increment<a class="headerlink" href="#function-increment" title="Permanent link">&para;</a></h3>
+<p><em>Increments the selection by a delta.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">Increment</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">delta</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>delta</code> Amount to increment (positive or negative) </li>
+</ul>
 <hr>
 
 <h3 id="function-key">function Key<a class="headerlink" href="#function-key" title="Permanent link">&para;</a></h3>
+<p><em>Handles key events, forwarding to selected item.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">Key</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span>
 <span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aKey</code> Key code to process </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>true if the key was handled </p>
 <p>Implements <a href="../classevab_1_1_element_base/#function-key"><em>evab::ElementBase::Key</em></a></p>
 <hr>
 
 <h3 id="function-select">function Select<a class="headerlink" href="#function-select" title="Permanent link">&para;</a></h3>
+<p><em>Selects an item by index.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">Select</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
 <span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aIndex</code> Index to select </li>
+</ul>
 <hr>
 
 <h3 id="function-setitemheight">function SetItemHeight<a class="headerlink" href="#function-setitemheight" title="Permanent link">&para;</a></h3>
+<p><em>Sets the height of each item.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">ListBox</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TWindowAlgorithm</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">SetItemHeight</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aItemHeight</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aItemHeight</code> Height in tiles </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Reference to this list box </p>
 <hr>
 
 <h3 id="function-setitems">function SetItems<a class="headerlink" href="#function-setitems" title="Permanent link">&para;</a></h3>
+<p><em>Sets the list of items to display.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">ListBox</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">TWindowAlgorithm</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">SetItems</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aItems</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">aCount</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aItems</code> Array of element pointers </li>
+<li><code>aCount</code> Number of items </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Reference to this list box </p>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-drawer">function drawer<a class="headerlink" href="#function-drawer" title="Permanent link">&para;</a></h3>
+<p><em>Draws the list box.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">drawer</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">IScreen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
@@ -783,10 +872,18 @@
 <span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aScreen</code> Screen to draw on </li>
+<li><code>aPos</code> Position on screen </li>
+<li><code>aSize</code> Size of the element </li>
+<li><code>aIsFocused</code> Focus state (1 = focused, 0 = not focused) </li>
+</ul>
 <p>Implements <a href="../classevab_1_1_element_base/#function-drawer"><em>evab::ElementBase::drawer</em></a></p>
 <hr>
 
 <h3 id="function-hider">function hider<a class="headerlink" href="#function-hider" title="Permanent link">&para;</a></h3>
+<p><em>Hides all items.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">hider</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 

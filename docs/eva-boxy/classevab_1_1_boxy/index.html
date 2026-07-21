@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -463,6 +491,17 @@
     <span class="md-ellipsis">
       
         Public Static Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
       
     </span>
   </a>
@@ -563,6 +602,10 @@
 
 <h1 id="class-evabboxy">Class evab::Boxy<a class="headerlink" href="#class-evabboxy" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>Boxy</strong></a></p>
+<p><em>Main application controller managing screen, input, and modal overlays.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabBoxy.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: eva::IHandler</p>
 <h2 id="public-static-functions">Public Static Functions<a class="headerlink" href="#public-static-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -575,28 +618,31 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-begin"><strong>Begin</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aGround, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-begin"><strong>Begin</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aGround, Args &amp;&amp;... args) <br><em>Initializes the</em> <a href="./"><em><strong>Boxy</strong></em></a> <em>system with a screen and ground element.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./"><strong>Boxy</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-instance"><strong>Instance</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-instance"><strong>Instance</strong></a> () <br><em>Gets the singleton instance.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) <br></td>
+<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Forwards key events to the ground element.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-screen"><strong>Screen</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-screen"><strong>Screen</strong></a> () <br><em>Gets the current screen pointer.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-showint"><strong>ShowInt</strong></a> (const char * aName, int aValue) <br></td>
+<td style="text-align: left;"><a href="#function-showint"><strong>ShowInt</strong></a> (const char * aName, int aValue) <br><em>Displays a temporary modal with a named integer value.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p><a href="./"><strong>Boxy</strong></a> is a singleton that provides global access to the display system, manages the current screen, and handles modal popups. </p>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation<a class="headerlink" href="#public-static-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-begin">function Begin<a class="headerlink" href="#function-begin" title="Permanent link">&para;</a></h3>
+<p><em>Initializes the</em> <a href="./"><em><strong>Boxy</strong></em></a> <em>system with a screen and ground element.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TScreen</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TFont</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
 <span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Begin</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aGround</span><span class="p">,</span>
@@ -604,35 +650,63 @@
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>TScreen</code> Screen type to use </li>
+<li><code>TFont</code> Font type to use </li>
+<li><code>Args</code> Additional arguments for screen constructor </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aGround</code> Base element to display </li>
+<li><code>args</code> Arguments forwarded to screen constructor </li>
+</ul>
 <hr>
 
 <h3 id="function-instance">function Instance<a class="headerlink" href="#function-instance" title="Permanent link">&para;</a></h3>
+<p><em>Gets the singleton instance.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">Boxy</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Instance</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Returns:</strong></p>
+<p>Pointer to the <a href="./"><strong>Boxy</strong></a> singleton </p>
 <hr>
 
 <h3 id="function-key">function Key<a class="headerlink" href="#function-key" title="Permanent link">&para;</a></h3>
+<p><em>Forwards key events to the ground element.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aKey</code> Key code to process </li>
+</ul>
 <hr>
 
 <h3 id="function-screen">function Screen<a class="headerlink" href="#function-screen" title="Permanent link">&para;</a></h3>
+<p><em>Gets the current screen pointer.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">IScreen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Screen</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Returns:</strong></p>
+<p>Pointer to current screen, or nullptr if modal is active </p>
 <hr>
 
 <h3 id="function-showint">function ShowInt<a class="headerlink" href="#function-showint" title="Permanent link">&para;</a></h3>
+<p><em>Displays a temporary modal with a named integer value.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">ShowInt</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aName</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">aValue</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aName</code> Label text </li>
+<li><code>aValue</code> Integer value to show </li>
+</ul>
 <hr>
 
 <hr />

@@ -16,9 +16,9 @@ namespace evab
 {
   struct LayoutPaneItem
   {
-    ElementBase *Element;
-    Coor Position;
-    Coor Size;
+    ElementBase *Element;  
+    Coor Position;          
+    Coor Size;              
   };
 
   class LayoutPane: public ElementBase
@@ -29,16 +29,20 @@ namespace evab
 
   private:
     bool Key(Keys aKey) override;
+    
     void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
+    
     void hider() override;
+    
     static int digits(unsigned short n);
+    
     static int getTileCount(unsigned short n, unsigned char row);
 
   private:
-    LayoutPaneItem *mItems = nullptr;
-    int mCount = 0;
-    int mFocused = -1;
-    unsigned short number;
+    LayoutPaneItem *mItems = nullptr;  
+    int mCount = 0;                    
+    int mFocused = -1;                 
+    unsigned short number;             
   };
 }
 ```

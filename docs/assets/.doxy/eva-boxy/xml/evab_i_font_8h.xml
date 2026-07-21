@@ -4,7 +4,7 @@
     <compoundname>evabIFont.h</compoundname>
     <includedby refid="evab_font8_bold_8h" local="no">src/evabFont8Bold.h</includedby>
     <includedby refid="evab_font8_compact_8h" local="no">src/evabFont8Compact.h</includedby>
-    <includedby refid="evab_font8_thin_8h" local="no">src/evabFont8Thin.h</includedby>
+    <includedby refid="evab_font8_narrow_8h" local="no">src/evabFont8Narrow.h</includedby>
     <includedby refid="evab_screen_k_s0108_8h" local="no">src/evabScreenKS0108.h</includedby>
     <includedby refid="evab_screen_page8_base_8h" local="no">src/evabScreenPage8Base.h</includedby>
     <includedby refid="evab_screen_s_s_d1306_8h" local="no">src/evabScreenSSD1306.h</includedby>
@@ -19,8 +19,8 @@
         <link refid="evab_font8_compact_8h_source"/>
       </node>
       <node id="4">
-        <label>src/evabFont8Thin.h</label>
-        <link refid="evab_font8_thin_8h_source"/>
+        <label>src/evabFont8Narrow.h</label>
+        <link refid="evab_font8_narrow_8h_source"/>
       </node>
       <node id="1">
         <label>src/evabIFont.h</label>
@@ -86,13 +86,13 @@
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
 <codeline lineno="4"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="5" refid="classevab_1_1_i_font" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>GetVerticalSlice(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aCharcode,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>col)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11" refid="classevab_1_1_i_font" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad" kindref="member">GetVerticalSlice</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aCharcode,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>col)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/evabIFont.h"/>
   </compounddef>

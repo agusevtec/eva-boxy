@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -485,6 +513,17 @@
     <span class="md-ellipsis">
       
         Protected Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
       
     </span>
   </a>
@@ -696,6 +735,10 @@
 
 <h1 id="class-evabwindowalgorithmbase">Class evab::WindowAlgorithmBase<a class="headerlink" href="#class-evabwindowalgorithmbase" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>WindowAlgorithmBase</strong></a></p>
+<p><em>Abstract base class for window navigation algorithms.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabWindowAlgorithms.h&gt;</code></li>
+</ul>
 <p>Inherited by the following classes: <a href="../classevab_1_1_flip_window_algorithm/">evab::FlipWindowAlgorithm</a>,  <a href="../classevab_1_1_scroll_window_algorithm/">evab::ScrollWindowAlgorithm</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -708,23 +751,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#function-count"><strong>Count</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-count"><strong>Count</strong></a> () <br><em>Gets the total number of items.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (signed char aIndex) = 0<br></td>
+<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (signed char aIndex) = 0<br><em>Pure virtual method to select an item.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#function-selected"><strong>Selected</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-selected"><strong>Selected</strong></a> () <br><em>Gets the currently selected item index.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-windowalgorithmbase"><strong>WindowAlgorithmBase</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-windowalgorithmbase"><strong>WindowAlgorithmBase</strong></a> () <br><em>Constructor for window algorithm base.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#function-windowsize"><strong>WindowSize</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-windowsize"><strong>WindowSize</strong></a> () <br><em>Gets the window size.</em></td>
 </tr>
 </tbody>
 </table>
@@ -739,19 +782,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#variable-mcount"><strong>mCount</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-mcount"><strong>mCount</strong></a>  <br><em>Total number of items.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#variable-mselected"><strong>mSelected</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-mselected"><strong>mSelected</strong></a>  <br><em>Currently selected index.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#variable-mwindowsize"><strong>mWindowSize</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-mwindowsize"><strong>mWindowSize</strong></a>  <br><em>Window size.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#variable-mwindowstart"><strong>mWindowStart</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-mwindowstart"><strong>mWindowStart</strong></a>  <br><em>Start of the current window.</em></td>
 </tr>
 </tbody>
 </table>
@@ -766,97 +809,135 @@
 <tbody>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#function-indexinwindow"><strong>indexInWindow</strong></a> (signed char aPosition) <br></td>
+<td style="text-align: left;"><a href="#function-indexinwindow"><strong>indexInWindow</strong></a> (signed char aPosition) <br><em>Calculates the visual index of an item in the current window.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-resizewindow"><strong>resizeWindow</strong></a> (signed char aWindowSize) <br></td>
+<td style="text-align: left;"><a href="#function-resizewindow"><strong>resizeWindow</strong></a> (signed char aWindowSize) <br><em>Resizes the window.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setcount"><strong>setCount</strong></a> (signed char Count) <br></td>
+<td style="text-align: left;"><a href="#function-setcount"><strong>setCount</strong></a> (signed char Count) <br><em>Sets the total number of items.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Provides common functionality for list box navigation strategies. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-count">function Count<a class="headerlink" href="#function-count" title="Permanent link">&para;</a></h3>
+<p><em>Gets the total number of items.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">Count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Returns:</strong></p>
+<p>Total number of items </p>
 <hr>
 
 <h3 id="function-select">function Select<a class="headerlink" href="#function-select" title="Permanent link">&para;</a></h3>
+<p><em>Pure virtual method to select an item.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">Select</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aIndex</code> Index to select </li>
+</ul>
 <hr>
 
 <h3 id="function-selected">function Selected<a class="headerlink" href="#function-selected" title="Permanent link">&para;</a></h3>
+<p><em>Gets the currently selected item index.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">Selected</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Returns:</strong></p>
+<p>Selected index, or -1 if empty </p>
 <hr>
 
 <h3 id="function-windowalgorithmbase">function WindowAlgorithmBase<a class="headerlink" href="#function-windowalgorithmbase" title="Permanent link">&para;</a></h3>
+<p><em>Constructor for window algorithm base.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="function-windowsize">function WindowSize<a class="headerlink" href="#function-windowsize" title="Permanent link">&para;</a></h3>
+<p><em>Gets the window size.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">WindowSize</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Returns:</strong></p>
+<p>Window size </p>
 <hr>
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation<a class="headerlink" href="#protected-attributes-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="variable-mcount">variable mCount<a class="headerlink" href="#variable-mcount" title="Permanent link">&para;</a></h3>
+<p><em>Total number of items.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mCount</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="variable-mselected">variable mSelected<a class="headerlink" href="#variable-mselected" title="Permanent link">&para;</a></h3>
+<p><em>Currently selected index.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mSelected</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="variable-mwindowsize">variable mWindowSize<a class="headerlink" href="#variable-mwindowsize" title="Permanent link">&para;</a></h3>
+<p><em>Window size.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mWindowSize</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="variable-mwindowstart">variable mWindowStart<a class="headerlink" href="#variable-mwindowstart" title="Permanent link">&para;</a></h3>
+<p><em>Start of the current window.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mWindowStart</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-indexinwindow">function indexInWindow<a class="headerlink" href="#function-indexinwindow" title="Permanent link">&para;</a></h3>
+<p><em>Calculates the visual index of an item in the current window.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">indexInWindow</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aPosition</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Absolute position of the item </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Visual index, or -1 if not visible </p>
 <hr>
 
 <h3 id="function-resizewindow">function resizeWindow<a class="headerlink" href="#function-resizewindow" title="Permanent link">&para;</a></h3>
+<p><em>Resizes the window.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">resizeWindow</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aWindowSize</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aWindowSize</code> New window size </li>
+</ul>
 <hr>
 
 <h3 id="function-setcount">function setCount<a class="headerlink" href="#function-setcount" title="Permanent link">&para;</a></h3>
+<p><em>Sets the total number of items.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">setCount</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">Count</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>Count</code> Total number of items </li>
+</ul>
 <hr>
 
 <hr />

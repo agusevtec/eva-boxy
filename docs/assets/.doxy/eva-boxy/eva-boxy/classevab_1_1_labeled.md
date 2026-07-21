@@ -10,8 +10,9 @@
 
 
 
+_Decorator that adds a label to any element._ [More...](#detailed-description)
 
-
+* `#include <evabLabeled.h>`
 
 
 
@@ -54,7 +55,7 @@ Inherits the following classes: T
 
 | Type | Name |
 | ---: | :--- |
-|   | [**Labeled**](#function-labeled) (const char \* aName, Args &&... args) <br> |
+|   | [**Labeled**](#function-labeled) (const char \* aName, Args &&... args) <br>_Constructor for_ [_**Labeled**_](classevab_1_1_labeled.md) _with C-string label._ |
 
 
 
@@ -83,6 +84,23 @@ Inherits the following classes: T
 
 
 
+## Detailed Description
+
+
+Wraps an element and adds a text label either to the left (single line) or above (multi-line).
+
+
+
+
+**Template parameters:**
+
+
+* `T` Element type to label 
+
+
+
+
+    
 ## Public Functions Documentation
 
 
@@ -90,6 +108,7 @@ Inherits the following classes: T
 
 ### function Labeled 
 
+_Constructor for_ [_**Labeled**_](classevab_1_1_labeled.md) _with C-string label._
 ```C++
 template<typename... Args>
 inline evab::Labeled::Labeled (
@@ -100,6 +119,18 @@ inline evab::Labeled::Labeled (
 
 
 
+
+
+**Parameters:**
+
+
+* `aName` Label text (C-string) 
+* `args` Arguments forwarded to the base element constructor 
+
+
+
+
+        
 
 <hr>
 

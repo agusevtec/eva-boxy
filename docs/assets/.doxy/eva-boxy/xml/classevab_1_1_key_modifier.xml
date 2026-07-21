@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_key_modifier" kind="class" language="C++" prot="public">
     <compoundname>evab::KeyModifier</compoundname>
     <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <includes refid="evab_behavior_8h" local="no">evabBehavior.h</includes>
     <templateparamlist>
       <param>
         <type>class T</type>
@@ -37,12 +38,23 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_key_modifier" kindref="compound">KeyModifier</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments forwarded to the base element constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="48" column="5" bodyfile="src/evabBehavior.h" bodystart="48" bodyend="51"/>
+        <location file="src/evabBehavior.h" line="87" column="5" bodyfile="src/evabBehavior.h" bodystart="87" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_key_modifier_1a3f7a058708b289a742aa8e6dd8e6f24d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -55,17 +67,58 @@
           <declname>aKey</declname>
         </param>
         <briefdescription>
+<para>Handles key events for increment/decrement. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key code to process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the key was handled, false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="53" column="10" bodyfile="src/evabBehavior.h" bodystart="53" bodyend="66"/>
+        <location file="src/evabBehavior.h" line="98" column="10" bodyfile="src/evabBehavior.h" bodystart="98" bodyend="111"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Decorator that modifies values using increment/decrement keys. </para>
     </briefdescription>
     <detaileddescription>
+<para>This class wraps any element and adds behavior for increment and decrement keys. It calls the underlying element&apos;s Increment() method with +/- 1.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base element type (must have Increment(signed char) method) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kDec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code for decrement </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kInc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code for increment </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -89,7 +142,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabBehavior.h" line="44" column="3" bodyfile="src/evabBehavior.h" bodystart="45" bodyend="67"/>
+    <location file="src/evabBehavior.h" line="78" column="3" bodyfile="src/evabBehavior.h" bodystart="79" bodyend="112"/>
     <listofallmembers>
       <member refid="classevab_1_1_key_modifier_1a3f7a058708b289a742aa8e6dd8e6f24d" prot="public" virt="non-virtual"><scope>evab::KeyModifier</scope><name>Key</name></member>
       <member refid="classevab_1_1_key_modifier_1a3195a8c0a81cfcbcd39e7a19f3f853dc" prot="public" virt="non-virtual"><scope>evab::KeyModifier</scope><name>KeyModifier</name></member>

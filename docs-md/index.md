@@ -115,9 +115,9 @@ evabBoxy/
 │   ├── evabFont8Bold.h/cpp     - 8-pixel bold font
 │   ├── evabFont8Compact.h/cpp  - 8-pixel compact font
 │   └── evabFont8Thin.h/cpp     - 8-pixel thin font
-├── Tilesets/
-│   ├── evabTilesets.h/cpp      - Predefined pictogram sets
-│   └── evabTilesetsStretchy.h/cpp - Resizable bar tilesets
+├── Pictosets/
+│   ├── evabPictosets.h/cpp      - Predefined pictogram sets
+│   └── evabPictosetsStretchy.h/cpp - Resizable bar Pictosets
 ├── Behavior/
 │   ├── evabBehavior.h          - Key modifiers and reactors
 │   ├── evabWindowAlgorithms.h/cpp - Window scrolling algorithms

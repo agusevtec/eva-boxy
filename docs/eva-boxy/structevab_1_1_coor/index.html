@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -569,6 +597,10 @@
 
 <h1 id="struct-evabcoor">Struct evab::Coor<a class="headerlink" href="#struct-evabcoor" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>Coor</strong></a></p>
+<p><em>Coordinate structure for positions and sizes on screen.</em> </p>
+<ul>
+<li><code>#include &lt;evabCoor.h&gt;</code></li>
+</ul>
 <h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -584,7 +616,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">unsigned char</td>
-<td style="text-align: left;"><a href="#variable-y"><strong>Y</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-y"><strong>Y</strong></a>  <br><em>X and Y coordinates.</em></td>
 </tr>
 </tbody>
 </table>
@@ -599,7 +631,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-coor"><strong>Coor</strong></a> (int x=0, int y=0) <br></td>
+<td style="text-align: left;"><a href="#function-coor"><strong>Coor</strong></a> (int x=0, int y=0) <br><em>Constructor with default values.</em></td>
 </tr>
 </tbody>
 </table>
@@ -611,18 +643,25 @@
 <hr>
 
 <h3 id="variable-y">variable Y<a class="headerlink" href="#variable-y" title="Permanent link">&para;</a></h3>
+<p><em>X and Y coordinates.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Coor</span><span class="o">::</span><span class="n">Y</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-coor">function Coor<a class="headerlink" href="#function-coor" title="Permanent link">&para;</a></h3>
+<p><em>Constructor with default values.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">Coor</span><span class="o">::</span><span class="n">Coor</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> X coordinate (default 0) </li>
+<li><code>y</code> Y coordinate (default 0) </li>
+</ul>
 <hr>
 
 <hr />

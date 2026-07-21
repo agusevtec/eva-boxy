@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Font8Compact**](classevab_1_1_font8_compact.md) <br> |
+| class | [**Font8Compact**](classevab_1_1_font8_compact.md) <br>_8x8 compact font implementation_  |
 
 
 

@@ -34,7 +34,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**Coor**](structevab_1_1_coor.md) <br> |
+| struct | [**Coor**](structevab_1_1_coor.md) <br>_Coordinate structure for positions and sizes on screen._  |
 
 
 

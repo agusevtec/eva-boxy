@@ -5,7 +5,7 @@ from typing import List, Tuple
 
 class TxtToCharmapConverter:
     """
-    Конвертирует каталог с txt-файлами в C++ класс TileSet.
+    Converts a directory with txt files to a C++ Pictoset class.
     """
 
     def __init__(self, input_dir: str, output_prefix: str = "pictograms"):
@@ -14,27 +14,27 @@ class TxtToCharmapConverter:
         self.header_file = f"{output_prefix}.h"
         self.cpp_file = f"{output_prefix}.cpp"
         
-        # Имя класса из имени каталога
+        # Class name from directory name
         self.class_name = os.path.basename(input_dir.rstrip('/\\'))
         if self.class_name:
             self.class_name = self.class_name[0].upper() + self.class_name[1:]
 
     def parse_txt_char(self, file_path: str) -> Tuple[List[int], int, int]:
-        """Читает txt-файл и возвращает массив байт."""
+        """Reads a txt file and returns a byte array."""
         with open(file_path, 'r', encoding='utf-8') as f:
             lines = [line.rstrip('\n') for line in f.readlines()]
         
         height = len(lines)
         width = max(len(line) for line in lines) if lines else 0
         
-        # Обрезаем/дополняем строки
+        # Crop/pad lines
         for i in range(len(lines)):
             if len(lines[i]) > width:
                 lines[i] = lines[i][:width]
             elif len(lines[i]) < width:
                 lines[i] = lines[i] + '.' * (width - len(lines[i]))
         
-        # Упаковка в байты (полосы по 8 строк)
+        # Pack into bytes (bands of 8 rows)
         num_bands = (height + 7) // 8
         columns = []
         
@@ -52,19 +52,19 @@ class TxtToCharmapConverter:
         return columns, width, height
 
     def get_variable_name(self, filename: str) -> str:
-        """Формирует имя PROGMEM переменной с префиксом picto_"""
+        """Generates a PROGMEM variable name with picto_ prefix"""
         name = os.path.splitext(filename)[0]
         name = re.sub(r'[^a-zA-Z0-9_]', '_', name)
         return f"picto_{name}"
 
     def get_constant_name(self, filename: str) -> str:
-        """Формирует имя константы для заголовочного файла"""
+        """Generates a constant name for the header file"""
         name = os.path.splitext(filename)[0]
         name = re.sub(r'[^a-zA-Z0-9_]', '_', name)
         return name.upper()
 
     def scan_directory(self) -> List[Tuple[str, str, List[int], int, int]]:
-        """Сканирует каталог и собирает все тайлы."""
+        """Scans the directory and collects all tiles."""
         tiles = []
         
         for filename in sorted(os.listdir(self.input_dir)):
@@ -77,22 +77,22 @@ class TxtToCharmapConverter:
             
             try:
                 data, width, height = self.parse_txt_char(file_path)
-                print(f"  {filename} -> {var_name}: {width}x{height}, {len(data)} байт")
+                print(f"  {filename} -> {var_name}: {width}x{height}, {len(data)} bytes")
                 tiles.append((var_name, const_name, data, width, height))
             except Exception as e:
-                print(f"  Ошибка в {filename}: {e}")
+                print(f"  Error in {filename}: {e}")
         
         return tiles
 
     def generate_header(self, tiles: List[Tuple[str, str, List[int], int, int]]) -> str:
-        """Генерирует заголовочный файл."""
+        """Generates the header file."""
         lines = []
         
         lines.append("#pragma once")
         lines.append("")
         lines.append("#include <Arduino.h>")
         lines.append("")
-        lines.append(f"class TileSet{self.class_name}")
+        lines.append(f"class Pictoset{self.class_name}")
         lines.append("{")
         lines.append("public:")
         lines.append(f"    static const uint8_t* GetTile(unsigned char aIndex);")
@@ -103,17 +103,17 @@ class TxtToCharmapConverter:
         return '\n'.join(lines)
 
     def generate_cpp(self, tiles: List[Tuple[str, str, List[int], int, int]]) -> str:
-        """Генерирует cpp файл с PROGMEM данными внутри GetTile."""
+        """Generates the cpp file with PROGMEM data inside GetTile."""
         lines = []
         
         lines.append(f'#include "{self.output_prefix}.h"')
         lines.append("#include <avr/pgmspace.h>")
         lines.append("")
         
-        lines.append(f"const uint8_t* TileSet{self.class_name}::GetTile(unsigned char aIndex)")
+        lines.append(f"const uint8_t* Pictoset{self.class_name}::GetTile(unsigned char aIndex)")
         lines.append("{")
         
-        # Объявляем все тайлы как статические локальные переменные
+        # Declare all tiles as static local variables
         for var_name, _, data, width, height in tiles:
             lines.append(f"    static const uint8_t {var_name}[] PROGMEM = {{")
             lines.append(f"        {width}, {height},  // {width}x{height}")
@@ -131,7 +131,7 @@ class TxtToCharmapConverter:
             lines.append("    };")
             lines.append("")
         
-        # Switch по индексу
+        # Switch by index
         lines.append("    switch (aIndex)")
         lines.append("    {")
         
@@ -149,24 +149,24 @@ class TxtToCharmapConverter:
         return '\n'.join(lines)
 
     def convert(self):
-        """Основной метод конвертации."""
+        """Main conversion method."""
         if not os.path.exists(self.input_dir):
-            print(f"Ошибка: директория '{self.input_dir}' не найдена!")
+            print(f"Error: directory '{self.input_dir}' not found!")
             return False
         
-        print(f"Каталог: {self.input_dir}")
-        print(f"Класс: TileSet{self.class_name}")
-        print(f"\nТайлы:")
+        print(f"Directory: {self.input_dir}")
+        print(f"Class: Pictoset{self.class_name}")
+        print(f"\nTiles:")
         
         tiles = self.scan_directory()
         
         if not tiles:
-            print("Не найдено ни одного txt-файла!")
+            print("No txt files found!")
             return False
         
-        print(f"\nНайдено тайлов: {len(tiles)}")
+        print(f"\nTiles found: {len(tiles)}")
         
-        # Генерируем файлы
+        # Generate files
         header_code = self.generate_header(tiles)
         cpp_code = self.generate_cpp(tiles)
         
@@ -176,7 +176,7 @@ class TxtToCharmapConverter:
         with open(self.cpp_file, 'w', encoding='utf-8') as f:
             f.write(cpp_code)
         
-        print(f"\nСозданы:")
+        print(f"\nCreated:")
         print(f"  {self.header_file}")
         print(f"  {self.cpp_file}")
         return True
@@ -184,13 +184,13 @@ class TxtToCharmapConverter:
 
 def main():
     if len(sys.argv) < 2:
-        print("Использование: python picto_converter.py <каталог> [префикс]")
+        print("Usage: python txtdir2collection.py <directory> [prefix]")
         print("")
-        print("  каталог - директория с .txt файлами (один каталог = один TileSet)")
-        print("  префикс - имя выходных файлов (по умолчанию = имя каталога)")
+        print("  directory - directory with .txt files (one directory = one Pictoset)")
+        print("  prefix    - output files name prefix (default = directory name)")
         print("")
-        print("Пример:")
-        print("  python picto_converter.py ./vprogress_bar my_gui")
+        print("Example:")
+        print("  python txtdir2collection.py ./vprogress_bar my_gui")
         sys.exit(1)
     
     input_dir = sys.argv[1].rstrip('/\\')
@@ -199,10 +199,10 @@ def main():
     converter = TxtToCharmapConverter(input_dir, output_prefix)
     
     if converter.convert():
-        print(f"\nГотово!")
-        print(f"\nИспользование:")
+        print(f"\nDone!")
+        print(f"\nUsage:")
         print(f"  #include \"{output_prefix}.h\"")
-        print(f"  aScreen->Picto({{0,0}}, TileSet{converter.class_name}::GetTile(0), false);")
+        print(f"  aScreen->Picto({{0,0}}, Pictoset{converter.class_name}::GetTile(0), false);")
     else:
         sys.exit(1)
 

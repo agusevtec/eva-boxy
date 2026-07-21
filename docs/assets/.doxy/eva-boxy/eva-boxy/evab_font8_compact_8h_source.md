@@ -21,7 +21,7 @@ namespace evab
         unsigned char GetVerticalSlice(char aCharcode, unsigned char aSliceColumn) const override;
 
     private:
-        static const uint8_t kCharmap[][5] PROGMEM;
+        static const unsigned char kCharmap[][5] PROGMEM;  
     };
 }
 ```

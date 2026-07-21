@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -481,6 +509,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-functions-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -530,6 +569,10 @@
 
 <h1 id="class-evablayoutpane">Class evab::LayoutPane<a class="headerlink" href="#class-evablayoutpane" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>LayoutPane</strong></a></p>
+<p><em>Dynamic layout pane for arranging items in a grid.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabLayoutPane.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../classevab_1_1_element_base/">evab::ElementBase</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -542,7 +585,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setitems"><strong>SetItems</strong></a> (unsigned short aLayout, <a href="../structevab_1_1_layout_pane_item/"><strong>LayoutPaneItem</strong></a> aItems, unsigned char aCount) <br></td>
+<td style="text-align: left;"><a href="#function-setitems"><strong>SetItems</strong></a> (unsigned short aLayout, <a href="../structevab_1_1_layout_pane_item/"><strong>LayoutPaneItem</strong></a> aItems, unsigned char aCount) <br><em>Sets up the layout pane with items.</em></td>
 </tr>
 </tbody>
 </table>
@@ -558,28 +601,31 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hide"><strong>Hide</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hide"><strong>Hide</strong></a> () <br><em>Hides the element from view.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br><em>Checks if the element is hidden.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Uses a numeric layout definition to determine the grid structure. Each digit represents the number of items in that row. Currently in development (debug version). </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-setitems">function SetItems<a class="headerlink" href="#function-setitems" title="Permanent link">&para;</a></h3>
+<p><em>Sets up the layout pane with items.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LayoutPane</span><span class="o">::</span><span class="n">SetItems</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">aLayout</span><span class="p">,</span>
 <span class="w">    </span><span class="n">LayoutPaneItem</span><span class="w"> </span><span class="n">aItems</span><span class="p">,</span>
@@ -587,6 +633,12 @@
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aLayout</code> Layout configuration (digits represent items per row) </li>
+<li><code>aItems</code> Array of layout items </li>
+<li><code>aCount</code> Number of items </li>
+</ul>
 <hr>
 
 <hr />

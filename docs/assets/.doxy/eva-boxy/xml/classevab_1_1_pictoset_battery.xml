@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_pictoset_battery" kind="class" language="C++" prot="public">
+    <compoundname>evab::PictosetBattery</compoundname>
+    <includes refid="evab_pictosets_8h" local="no">evabPictosets.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_pictoset_battery_1a584403583ee3dba52a7bc7266eca7634" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::PictosetBattery::Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <qualifiedname>evab::PictosetBattery::Count</qualifiedname>
+        <initializer>= 7</initializer>
+        <briefdescription>
+<para>Number of pictograms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="83" column="40" bodyfile="src/evabPictosets.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_pictoset_battery_1a01b965052710ed18d619b921d5135f67" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::PictosetBattery::GetTile</definition>
+        <argsstring>(unsigned char aIndex)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::PictosetBattery::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index (0-6) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="82" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Battery pictogram set (7 states). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabPictosets.h" line="73" column="5" bodyfile="src/evabPictosets.h" bodystart="74" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_pictoset_battery_1a584403583ee3dba52a7bc7266eca7634" prot="public" virt="non-virtual"><scope>evab::PictosetBattery</scope><name>Count</name></member>
+      <member refid="classevab_1_1_pictoset_battery_1a01b965052710ed18d619b921d5135f67" prot="public" virt="non-virtual"><scope>evab::PictosetBattery</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

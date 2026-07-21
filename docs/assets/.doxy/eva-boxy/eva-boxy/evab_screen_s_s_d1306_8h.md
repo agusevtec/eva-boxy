@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md) <br> |
+| class | [**ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md) <br>_SSD1306 screen driver for OLED displays._  |
 
 
 

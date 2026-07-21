@@ -21,7 +21,7 @@ namespace evab
   public:
     enum EventType
     {
-      EVENT_CATCH_KEY = 1,
+      EVENT_CATCH_KEY = 1,  
     };
 
     template <typename... Args>
@@ -47,7 +47,7 @@ namespace evab
     }
 
   private:
-    eva::IHandler *mListener = nullptr;
+    eva::IHandler *mListener = nullptr;  
   };
 
   template <class T, unsigned char kDec, unsigned char kInc>
@@ -82,7 +82,7 @@ namespace evab
   public:
     enum EventType
     {
-      EVENT_VALUE_CHANGED = 1,
+      EVENT_VALUE_CHANGED = 1,  
     };
 
     template <typename... Args>
@@ -109,7 +109,7 @@ namespace evab
     }
 
   private:
-    eva::IHandler *mListener = nullptr;
+    eva::IHandler *mListener = nullptr;  
   };
 
 }

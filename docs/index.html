@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="tutorial/01-display-driver/">
+        <link rel="next" href="tutorial/display-drivers/">
       
       
         
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#evab-library-documentation" class="md-skip">
+        <a href="#eva-boxy-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -280,21 +280,149 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#library-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Library Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Library Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tile-based-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tile-Based Positioning
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-layers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick Start
+        Architecture Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinate-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Usage Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -363,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/01-display-driver/" class="md-nav__link">
+      <a href="tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -391,14 +519,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -419,14 +547,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -447,7 +575,35 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -475,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -530,21 +686,149 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#library-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Library Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Library Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tile-based-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tile-Based Positioning
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-layers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick Start
+        Architecture Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coordinate-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Usage Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Memory Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serialization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
       
     </span>
   </a>
@@ -571,56 +855,181 @@
   
 
 
-<h1 id="evab-library-documentation">EVAB Library Documentation<a class="headerlink" href="#evab-library-documentation" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>EVAB (Embedded Visual Application Builder) is a lightweight GUI library for embedded systems with graphical displays. It provides a complete framework for building user interfaces with support for various display controllers, input handling, and UI elements.</p>
-<p><strong>Key Features:</strong>
-- Display driver abstraction with support for multiple controllers
-- UI element framework with automatic redrawing
-- Keyboard/button input handling with event system
-- Composite elements for complex layouts
-- Flash memory optimization for fonts and graphics
-- Support for both graphical (pixel-based) and character LCD displays</p>
-<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<h1 id="eva-boxy-documentation">EVA Boxy Documentation<a class="headerlink" href="#eva-boxy-documentation" title="Permanent link">&para;</a></h1>
+<h2 id="library-structure">Library Structure<a class="headerlink" href="#library-structure" title="Permanent link">&para;</a></h2>
+<p>EVA Boxy is a compact tile-based graphic framework designed for embedded systems with limited resources. The library follows the EVA (Extremely Versatile Architecture) ecosystem concept, providing a modular and efficient way to build user interfaces on microcontrollers.</p>
+<h3 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h3>
+<h4 id="tile-based-positioning">Tile-Based Positioning<a class="headerlink" href="#tile-based-positioning" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Minimum positioning unit is a tile</strong></li>
+<li>Each tile represents a single character cell or 8x8 pixel block</li>
+<li>Coordinates are expressed in tile units (X, Y)</li>
+<li>Screen sizes are measured in tiles (e.g., 16x8 for 128x64 pixel display)</li>
+</ul>
+<h4 id="architecture-layers">Architecture Layers<a class="headerlink" href="#architecture-layers" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Display Drivers Layer</strong> - Hardware abstraction for various display types</li>
+<li><strong>Pencil Mode (IScreen)</strong> - Direct drawing operations on the screen</li>
+<li><strong>Stamp Mode (ElementBase)</strong> - Reusable graphical elements with state management</li>
+<li><strong>Structured UI</strong> - Composite elements and layout management</li>
+<li><strong>Keyboard Behavior</strong> - Input handling and focus management</li>
+</ol>
+<h3 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h3>
+<h4 id="core-classes">Core Classes<a class="headerlink" href="#core-classes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IScreen</code></td>
+<td>Interface for screen operations (text, pictograms, clearing)</td>
+</tr>
+<tr>
+<td><code>ScreenBase</code></td>
+<td>Base implementation of IScreen with text rendering</td>
+</tr>
+<tr>
+<td><code>ScreenPage8Base</code></td>
+<td>Base for page-oriented displays (8-pixel vertical strips)</td>
+</tr>
+<tr>
+<td><code>ElementBase</code></td>
+<td>Base class for all UI elements with drawing and hiding</td>
+</tr>
+<tr>
+<td><code>CompositeBase</code></td>
+<td>Container for multiple elements with focus management</td>
+</tr>
+<tr>
+<td><code>Boxy</code></td>
+<td>Global library manager and entry point</td>
+</tr>
+</tbody>
+</table>
+<h4 id="coordinate-system">Coordinate System<a class="headerlink" href="#coordinate-system" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">Coor</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">Y</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Coor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+
+<ul>
+<li>Coordinates are 0-based</li>
+<li>X ranges from 0 to screen width in tiles - 1</li>
+<li>Y ranges from 0 to screen height in tiles - 1</li>
+</ul>
+<h3 id="basic-usage-pattern">Basic Usage Pattern<a class="headerlink" href="#basic-usage-pattern" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabBoxy.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabScreenSSD1306.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFont8Bold.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputInt.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLabeled.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFont8Compact.h&gt;</span>
 
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">evab</span><span class="p">;</span>
-
-<span class="c1">// Define your UI</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">MyUI</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CompositeBase</span><span class="w"> </span><span class="p">{</span>
-<span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="n">Labeled</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawer</span><span class="p">(</span><span class="n">IScreen</span><span class="w"> </span><span class="o">*</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">focused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">mValue</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">focused</span><span class="p">);</span>
+<span class="c1">// Define your root element</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MyRootElement</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ElementBase</span><span class="w"> </span><span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">drawer</span><span class="p">(</span><span class="n">IScreen</span><span class="o">*</span><span class="w"> </span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">focused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">TextCenter</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">focused</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">hider</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">mValue</span><span class="p">.</span><span class="n">Hide</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">MyUI</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">mValue</span><span class="p">(</span><span class="s">&quot;Value: &quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">hider</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span>
 <span class="p">};</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">Font8Bold</span><span class="w"> </span><span class="n">font</span><span class="p">;</span>
-<span class="w">    </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Begin</span><span class="o">&lt;</span><span class="n">ScreenSSD1306</span><span class="p">,</span><span class="w"> </span><span class="n">Font8Bold</span><span class="o">&gt;</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MyUI</span><span class="p">());</span>
+<span class="w">    </span><span class="n">MyRootElement</span><span class="w"> </span><span class="n">root</span><span class="p">;</span>
+<span class="w">    </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Begin</span><span class="o">&lt;</span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenSSD1306</span><span class="p">,</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Font8Compact</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="o">&amp;</span><span class="n">root</span><span class="p">,</span>
+<span class="w">        </span><span class="mf">800000L</span><span class="p">,</span><span class="w">  </span><span class="c1">// I2C clock</span>
+<span class="w">        </span><span class="mi">64</span><span class="w">        </span><span class="c1">// Display height in pixels</span>
+<span class="w">    </span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Handle keys</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_ENTER</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Process keyboard events</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonPressed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_ENTER</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<hr />
+<h3 id="file-structure">File Structure<a class="headerlink" href="#file-structure" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="nx">evabBoxy</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">Core</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabBoxy</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="nx">Library</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="nx">point</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabCoor</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="nx">Coordinate</span><span class="w"> </span><span class="nx">system</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabKeys</span><span class="p">.</span><span class="nx">h</span><span class="w">              </span><span class="o">-</span><span class="w"> </span><span class="nx">Key</span><span class="w"> </span><span class="nx">definitions</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">evabIScreen</span><span class="p">.</span><span class="nx">h</span><span class="w">           </span><span class="o">-</span><span class="w"> </span><span class="nx">Screen</span><span class="w"> </span><span class="kd">interface</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">Screens</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenBase</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Base</span><span class="w"> </span><span class="nx">screen</span><span class="w"> </span><span class="nx">implementation</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenPage8Base</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Page</span><span class="o">-</span><span class="nx">based</span><span class="w"> </span><span class="nx">screen</span><span class="w"> </span><span class="kd">base</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenSSD1306</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">OLED</span><span class="w"> </span><span class="nx">display</span><span class="w"> </span><span class="nx">driver</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenPCD8544</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Nokia</span><span class="w"> </span><span class="mi">5110</span><span class="w"> </span><span class="nx">driver</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenLCD_I2C</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">I2C</span><span class="w"> </span><span class="nx">LCD</span><span class="w"> </span><span class="nx">driver</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenKS0108</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">KS0108</span><span class="w"> </span><span class="nx">graphics</span><span class="w"> </span><span class="nx">driver</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenSSH1106</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">SSH1106</span><span class="w"> </span><span class="nx">OLED</span><span class="w"> </span><span class="nx">driver</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenSerialPixel</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Debug</span><span class="w"> </span><span class="nx">pixel</span><span class="w"> </span><span class="nx">display</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">evabScreenSerialText</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Debug</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="nx">display</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">Elements</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabElementBase</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="nx">Base</span><span class="w"> </span><span class="nx">UI</span><span class="w"> </span><span class="nx">element</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabCompositeBase</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Container</span><span class="w"> </span><span class="nx">element</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabInputInt</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="nx">Integer</span><span class="w"> </span><span class="nx">input</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabInputFloat</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Float</span><span class="w"> </span><span class="nx">input</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabInputButton</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="nx">Button</span><span class="w"> </span><span class="nx">element</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabInputPictogram</span><span class="p">.</span><span class="nx">h</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Pictogram</span><span class="w"> </span><span class="nx">selector</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabInputStretchBar</span><span class="p">.</span><span class="nx">h</span><span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="nx">Progress</span><span class="o">/</span><span class="nx">scroll</span><span class="w"> </span><span class="nx">bars</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabInputTextStretchBar</span><span class="p">.</span><span class="nx">h</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Text</span><span class="o">-</span><span class="nx">based</span><span class="w"> </span><span class="nx">bars</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabListBox</span><span class="p">.</span><span class="nx">h</span><span class="w">           </span><span class="o">-</span><span class="w"> </span><span class="nx">List</span><span class="w"> </span><span class="nx">container</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabLayoutPane</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Layout</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="p">(</span><span class="nx">prototyping</span><span class="p">)</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">evabLabeled</span><span class="p">.</span><span class="nx">h</span><span class="w">           </span><span class="o">-</span><span class="w"> </span><span class="nx">Label</span><span class="w"> </span><span class="nx">modifier</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">Fonts</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabIFont</span><span class="p">.</span><span class="nx">h</span><span class="w">             </span><span class="o">-</span><span class="w"> </span><span class="nx">Font</span><span class="w"> </span><span class="kd">interface</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabFont8Bold</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">     </span><span class="o">-</span><span class="w"> </span><span class="mi">8</span><span class="o">-</span><span class="nx">pixel</span><span class="w"> </span><span class="nx">bold</span><span class="w"> </span><span class="nx">font</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabFont8Compact</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="mi">8</span><span class="o">-</span><span class="nx">pixel</span><span class="w"> </span><span class="nx">compact</span><span class="w"> </span><span class="nx">font</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">evabFont8Thin</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">     </span><span class="o">-</span><span class="w"> </span><span class="mi">8</span><span class="o">-</span><span class="nx">pixel</span><span class="w"> </span><span class="nx">thin</span><span class="w"> </span><span class="nx">font</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">Pictosets</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabPictosets</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="nx">Predefined</span><span class="w"> </span><span class="nx">pictogram</span><span class="w"> </span><span class="nx">sets</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">evabPictosetsStretchy</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Resizable</span><span class="w"> </span><span class="nx">bar</span><span class="w"> </span><span class="nx">Pictosets</span>
+<span class="err">├──</span><span class="w"> </span><span class="nx">Behavior</span><span class="o">/</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabBehavior</span><span class="p">.</span><span class="nx">h</span><span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="nx">Key</span><span class="w"> </span><span class="nx">modifiers</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">reactors</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabWindowAlgorithms</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Window</span><span class="w"> </span><span class="nx">scrolling</span><span class="w"> </span><span class="nx">algorithms</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">evabSerializers</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="nx">State</span><span class="w"> </span><span class="nx">serialization</span>
+<span class="err">└──</span><span class="w"> </span><span class="nx">Utilities</span><span class="o">/</span>
+<span class="w">    </span><span class="err">├──</span><span class="w"> </span><span class="nx">font2textdir</span><span class="p">.</span><span class="nx">py</span><span class="w">         </span><span class="o">-</span><span class="w"> </span><span class="nx">Convert</span><span class="w"> </span><span class="nx">TTF</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">pseudographics</span>
+<span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="nx">txtdir2charmap</span><span class="p">.</span><span class="nx">py</span><span class="w">       </span><span class="o">-</span><span class="w"> </span><span class="nx">Convert</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="nx">chars</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">C</span><span class="w"> </span><span class="nx">array</span>
+</code></pre></div>
+
+<h3 id="memory-considerations">Memory Considerations<a class="headerlink" href="#memory-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All coordinates use <code>unsigned char</code> (0-255) for compact storage</li>
+<li>Element state is serialized into 16-bit integers</li>
+<li>Font data stored in PROGMEM (flash memory)</li>
+<li>Minimal RAM usage through static allocation</li>
+<li>No dynamic memory allocation in core library</li>
+</ul>
+<h3 id="serialization">Serialization<a class="headerlink" href="#serialization" title="Permanent link">&para;</a></h3>
+<p>The library uses compact serialization to store element state:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// 16x8 screens (16 tiles wide, 8 tiles high)</span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="nf">Serialize</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isFocused</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Deserialize</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">serialized</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&amp;</span><span class="w"> </span><span class="n">isFocused</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Bit packing:
+- Bit 0: Visibility
+- Bit 1: Focus state
+- Bits 2-5: X position (0-15)
+- Bits 6-8: Y position (0-7)
+- Bits 9-12: Width (1-16)
+- Bits 13-15: Height (1-8)</p>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="display-drivers.md">Display Drivers</a> - Understanding screen initialization</li>
+<li><a href="uc-paint.md">Pencil Mode</a> - Direct drawing with IScreen interface</li>
+<li><a href="uc-elements-stamps.md">Stamp Mode</a> - Reusable graphical elements</li>
+<li><a href="uc-structured-ui.md">Structured UI</a> - Building composite interfaces</li>
+<li><a href="keyboard-behavior.md">Keyboard Behavior</a> - Input handling and focus</li>
+<li><a href="custom-display-driver.md">Custom Display Driver</a> - Creating custom screen drivers</li>
+</ul>
 
 
 

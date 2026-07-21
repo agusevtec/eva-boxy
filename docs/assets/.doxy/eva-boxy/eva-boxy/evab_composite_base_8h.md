@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**CompositeBase**](classevab_1_1_composite_base.md) <br> |
+| class | [**CompositeBase**](classevab_1_1_composite_base.md) <br>_Abstract base class for composite elements that can manage child focus._  |
 
 
 

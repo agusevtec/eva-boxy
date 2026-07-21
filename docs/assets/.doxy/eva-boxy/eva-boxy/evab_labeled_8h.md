@@ -36,8 +36,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Labeled**](classevab_1_1_labeled.md) &lt;class T&gt;<br> |
-| class | [**LabeledF**](classevab_1_1_labeled_f.md) &lt;class T&gt;<br> |
+| class | [**Labeled**](classevab_1_1_labeled.md) &lt;class T&gt;<br>_Decorator that adds a label to any element._  |
+| class | [**LabeledF**](classevab_1_1_labeled_f.md) &lt;class T&gt;<br>_Decorator that adds a Flash string label to any element._  |
 
 
 

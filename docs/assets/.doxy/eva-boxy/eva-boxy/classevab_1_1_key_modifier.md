@@ -10,8 +10,9 @@
 
 
 
+_Decorator that modifies values using increment/decrement keys._ [More...](#detailed-description)
 
-
+* `#include <evabBehavior.h>`
 
 
 
@@ -54,8 +55,8 @@ Inherits the following classes: T
 
 | Type | Name |
 | ---: | :--- |
-|  bool | [**Key**](#function-key) (Keys aKey) override<br> |
-|   | [**KeyModifier**](#function-keymodifier) (Args &&... args) <br> |
+|  bool | [**Key**](#function-key) (Keys aKey) override<br>_Handles key events for increment/decrement._  |
+|   | [**KeyModifier**](#function-keymodifier) (Args &&... args) <br>_Constructor for_ [_**KeyModifier**_](classevab_1_1_key_modifier.md) _._ |
 
 
 
@@ -84,6 +85,25 @@ Inherits the following classes: T
 
 
 
+## Detailed Description
+
+
+This class wraps any element and adds behavior for increment and decrement keys. It calls the underlying element's Increment() method with +/- 1.
+
+
+
+
+**Template parameters:**
+
+
+* `T` Base element type (must have Increment(signed char) method) 
+* `kDec` Key code for decrement 
+* `kInc` Key code for increment 
+
+
+
+
+    
 ## Public Functions Documentation
 
 
@@ -91,6 +111,7 @@ Inherits the following classes: T
 
 ### function Key 
 
+_Handles key events for increment/decrement._ 
 ```C++
 inline bool evab::KeyModifier::Key (
     Keys aKey
@@ -100,12 +121,31 @@ inline bool evab::KeyModifier::Key (
 
 
 
+
+**Parameters:**
+
+
+* `aKey` The key code to process 
+
+
+
+**Returns:**
+
+true if the key was handled, false otherwise 
+
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function KeyModifier 
 
+_Constructor for_ [_**KeyModifier**_](classevab_1_1_key_modifier.md) _._
 ```C++
 template<typename... Args>
 inline evab::KeyModifier::KeyModifier (
@@ -115,6 +155,17 @@ inline evab::KeyModifier::KeyModifier (
 
 
 
+
+
+**Parameters:**
+
+
+* `args` Arguments forwarded to the base element constructor 
+
+
+
+
+        
 
 <hr>
 

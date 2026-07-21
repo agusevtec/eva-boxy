@@ -45,7 +45,7 @@ namespace evab
     }
 
   private:
-    const char *mName;
+    const char *mName;  
   };
 
   template <class T>
@@ -77,7 +77,7 @@ namespace evab
     }
 
   private:
-    const __FlashStringHelper *mName;
+    const __FlashStringHelper *mName;  
   };
 
 }

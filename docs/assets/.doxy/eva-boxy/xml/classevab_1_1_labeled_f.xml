@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_labeled_f" kind="class" language="C++" prot="public">
     <compoundname>evab::LabeledF</compoundname>
     <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <includes refid="evab_labeled_8h" local="no">evabLabeled.h</includes>
     <templateparamlist>
       <param>
         <type>class T</type>
@@ -16,12 +17,13 @@
         <name>mName</name>
         <qualifiedname>evab::LabeledF::mName</qualifiedname>
         <briefdescription>
+<para>Label text (Flash string). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="70" column="31" bodyfile="src/evabLabeled.h" bodystart="70" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="114" column="31" bodyfile="src/evabLabeled.h" bodystart="114" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -47,12 +49,31 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_labeled_f" kindref="compound">LabeledF</ref> with Flash string label. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label text (Flash string, PROGMEM) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments forwarded to the base element constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="46" column="5" bodyfile="src/evabLabeled.h" bodystart="46" bodyend="49"/>
+        <location file="src/evabLabeled.h" line="82" column="5" bodyfile="src/evabLabeled.h" bodystart="82" bodyend="85"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -79,17 +100,64 @@
           <declname>aIsFocused</declname>
         </param>
         <briefdescription>
+<para>Draws the labeled element. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Screen to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="52" column="10" bodyfile="src/evabLabeled.h" bodystart="52" bodyend="67"/>
+        <location file="src/evabLabeled.h" line="96" column="10" bodyfile="src/evabLabeled.h" bodystart="96" bodyend="111"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Decorator that adds a Flash string label to any element. </para>
     </briefdescription>
     <detaileddescription>
+<para>Wraps an element and adds a Flash string label either to the left (single line) or above (multi-line).</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Element type to label </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -113,7 +181,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabLabeled.h" line="42" column="3" bodyfile="src/evabLabeled.h" bodystart="43" bodyend="71"/>
+    <location file="src/evabLabeled.h" line="72" column="3" bodyfile="src/evabLabeled.h" bodystart="73" bodyend="115"/>
     <listofallmembers>
       <member refid="classevab_1_1_labeled_f_1ae6477a9b99dd74618c8f4c951ad6ae78" prot="private" virt="non-virtual"><scope>evab::LabeledF</scope><name>drawer</name></member>
       <member refid="classevab_1_1_labeled_f_1a6342f29909992b393c51ca98a89a96e2" prot="public" virt="non-virtual"><scope>evab::LabeledF</scope><name>LabeledF</name></member>

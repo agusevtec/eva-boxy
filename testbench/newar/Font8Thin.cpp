@@ -1,6 +1,6 @@
-#include "..\..\src\evabFont8Thin.h"
+#include "..\..\src\evabFont8Narrow.h"
 
-const uint8_t Font8Thin::kCharmap[][7] PROGMEM = {
+const uint8_t Font8Narrow::kCharmap[][7] PROGMEM = {
     {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // ' '
     {0x00, 0x00, 0xc6, 0xde, 0xc6, 0x00, 0x00}, // '!'
     {0x00, 0x00, 0x0e, 0x00, 0x0e, 0x00, 0x00}, // '\"'
@@ -98,7 +98,7 @@ const uint8_t Font8Thin::kCharmap[][7] PROGMEM = {
     {0x10, 0x08, 0x08, 0x10, 0x20, 0x20, 0x10}  // '~'
 };
 
-static uint8_t Font8Thin::GetVerticalSlice(char aCharcode, uint8_t aSliceColumn)
+static uint8_t Font8Narrow::GetVerticalSlice(char aCharcode, uint8_t aSliceColumn)
 {
     {
         if (aCharcode > 126)

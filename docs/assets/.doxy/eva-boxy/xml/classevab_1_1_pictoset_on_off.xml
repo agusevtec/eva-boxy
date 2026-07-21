@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_pictoset_on_off" kind="class" language="C++" prot="public">
+    <compoundname>evab::PictosetOnOff</compoundname>
+    <includes refid="evab_pictosets_8h" local="no">evabPictosets.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_pictoset_on_off_1ab96a686e19ab9abc882d3d35e7caf3de" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::PictosetOnOff::Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <qualifiedname>evab::PictosetOnOff::Count</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>Number of pictograms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="18" column="40" bodyfile="src/evabPictosets.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_pictoset_on_off_1a4c2f25c92aa51e8e862f2a0c4379f522" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::PictosetOnOff::GetTile</definition>
+        <argsstring>(unsigned char aIndex)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::PictosetOnOff::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index (0-1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="17" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>On/Off pictogram set (2 states). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabPictosets.h" line="8" column="5" bodyfile="src/evabPictosets.h" bodystart="9" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_pictoset_on_off_1ab96a686e19ab9abc882d3d35e7caf3de" prot="public" virt="non-virtual"><scope>evab::PictosetOnOff</scope><name>Count</name></member>
+      <member refid="classevab_1_1_pictoset_on_off_1a4c2f25c92aa51e8e862f2a0c4379f522" prot="public" virt="non-virtual"><scope>evab::PictosetOnOff</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

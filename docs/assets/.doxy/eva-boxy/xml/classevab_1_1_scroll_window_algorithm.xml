@@ -4,6 +4,7 @@
     <compoundname>evab::ScrollWindowAlgorithm</compoundname>
     <basecompoundref refid="classevab_1_1_window_algorithm_base" prot="public" virt="non-virtual">evab::WindowAlgorithmBase</basecompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; ScrollWindowAlgorithm &gt;</derivedcompoundref>
+    <includes refid="evab_window_algorithms_8h" local="no">evabWindowAlgorithms.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_scroll_window_algorithm_1ae8ba2a3db17d9ca40f53317e0b304126" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -17,17 +18,30 @@
           <declname>aIndex</declname>
         </param>
         <briefdescription>
+<para>Selects an item using scroll navigation. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index to select </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="36" column="10"/>
+        <location file="src/evabWindowAlgorithms.h" line="106" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Scroll navigation algorithm. </para>
     </briefdescription>
     <detaileddescription>
+<para>Scrolls the window to keep selection visible. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -59,7 +73,7 @@
         <link refid="classevab_1_1_window_algorithm_base"/>
       </node>
     </collaborationgraph>
-    <location file="src/evabWindowAlgorithms.h" line="33" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="34" bodyend="37"/>
+    <location file="src/evabWindowAlgorithms.h" line="98" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="99" bodyend="107"/>
     <listofallmembers>
       <member refid="classevab_1_1_window_algorithm_base_1a5477e753aea1c5bcaff5b0f9240cd0fd" prot="public" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>Count</name></member>
       <member refid="classevab_1_1_window_algorithm_base_1acd6b3bd987a44454afcc8a148d4cc3c6" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>indexInWindow</name></member>

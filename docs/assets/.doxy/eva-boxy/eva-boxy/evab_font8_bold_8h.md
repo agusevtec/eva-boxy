@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Font8Bold**](classevab_1_1_font8_bold.md) <br> |
+| class | [**Font8Bold**](classevab_1_1_font8_bold.md) <br>_8x8 bold font implementation_  |
 
 
 

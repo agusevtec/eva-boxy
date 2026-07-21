@@ -35,9 +35,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**KeyCatcher**](classevab_1_1_key_catcher.md) &lt;class T, KEYS&gt;<br> |
-| class | [**KeyModifier**](classevab_1_1_key_modifier.md) &lt;class T, kDec, kInc&gt;<br> |
-| class | [**KeyReactor**](classevab_1_1_key_reactor.md) &lt;class T, kDec, kInc&gt;<br> |
+| class | [**KeyCatcher**](classevab_1_1_key_catcher.md) &lt;class T, KEYS&gt;<br>_Decorator that catches specified key events and forwards them to a listener._  |
+| class | [**KeyModifier**](classevab_1_1_key_modifier.md) &lt;class T, kDec, kInc&gt;<br>_Decorator that modifies values using increment/decrement keys._  |
+| class | [**KeyReactor**](classevab_1_1_key_reactor.md) &lt;class T, kDec, kInc&gt;<br>_Decorator that triggers events when values change via increment/decrement._  |
 
 
 

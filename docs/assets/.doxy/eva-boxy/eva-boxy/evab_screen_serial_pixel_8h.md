@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenSerialPixel**](classevab_1_1_screen_serial_pixel.md) <br> |
+| class | [**ScreenSerialPixel**](classevab_1_1_screen_serial_pixel.md) <br>_Debug screen that renders pixels to serial output._  |
 
 
 

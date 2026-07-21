@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_composite_base" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>evab::CompositeBase</compoundname>
     <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <includes refid="evab_composite_base_8h" local="no">evabCompositeBase.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_composite_base_1a3a3a987ae08713a09c798e96f38ab169" prot="private" static="no" mutable="no">
         <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
@@ -12,12 +13,13 @@
         <qualifiedname>evab::CompositeBase::mFocusedChild</qualifiedname>
         <initializer>= nullptr</initializer>
         <briefdescription>
+<para>Currently focused child element. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="22" column="17" bodyfile="src/evabCompositeBase.h" bodystart="22" bodyend="-1"/>
+        <location file="src/evabCompositeBase.h" line="57" column="17" bodyfile="src/evabCompositeBase.h" bodystart="57" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -32,12 +34,26 @@
           <declname>aKey</declname>
         </param>
         <briefdescription>
+<para>Handles residual keys when no child handles the event. </para>
         </briefdescription>
         <detaileddescription>
+<para>Override this to implement custom key handling in composites.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code to process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the key was handled, false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="11" column="18"/>
+        <location file="src/evabCompositeBase.h" line="24" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_composite_base_1a03ddf518a77efc13f3109bf41c43bb0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -47,12 +63,13 @@
         <qualifiedname>evab::CompositeBase::hider</qualifiedname>
         <reimplements refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703">hider</reimplements>
         <briefdescription>
+<para>Pure virtual method to hide all children. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="12" column="18"/>
+        <location file="src/evabCompositeBase.h" line="29" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_composite_base_1ac6a7c9c5d50a6c27ea3d1348aa66f9c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -65,12 +82,25 @@
           <declname>aChild</declname>
         </param>
         <briefdescription>
+<para>Checks if a child is currently focused. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aChild</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Child element to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the child is focused </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="13" column="10"/>
+        <location file="src/evabCompositeBase.h" line="37" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -85,12 +115,23 @@
           <declname>aChild</declname>
         </param>
         <briefdescription>
+<para>Sets the focused child element. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aChild</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Child element to focus </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="16" column="10"/>
+        <location file="src/evabCompositeBase.h" line="45" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -106,17 +147,32 @@
           <declname>aKey</declname>
         </param>
         <briefdescription>
+<para>Handles key events by forwarding to focused child. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code to process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the key was handled, false otherwise </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="19" column="10"/>
+        <location file="src/evabCompositeBase.h" line="54" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Abstract base class for composite elements that can manage child focus. </para>
     </briefdescription>
     <detaileddescription>
+<para>Provides focus management and key event routing for container elements. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -142,7 +198,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
     </collaborationgraph>
-    <location file="src/evabCompositeBase.h" line="8" column="3" bodyfile="src/evabCompositeBase.h" bodystart="9" bodyend="23"/>
+    <location file="src/evabCompositeBase.h" line="13" column="3" bodyfile="src/evabCompositeBase.h" bodystart="14" bodyend="58"/>
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Draw</name></member>
       <member refid="classevab_1_1_composite_base_1af353c1f95e7835298d2420002ccb6a68" prot="protected" virt="non-virtual"><scope>evab::CompositeBase</scope><name>focusChild</name></member>

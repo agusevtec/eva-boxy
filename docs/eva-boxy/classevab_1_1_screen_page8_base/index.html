@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -514,6 +542,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-functions-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -613,6 +652,10 @@
 
 <h1 id="class-evabscreenpage8base">Class evab::ScreenPage8Base<a class="headerlink" href="#class-evabscreenpage8base" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>ScreenPage8Base</strong></a></p>
+<p><em>Base class for page-based 8-bit screens.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabScreenPage8Base.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../classevab_1_1_screen_base/">evab::ScreenBase</a></p>
 <p>Inherited by the following classes: <a href="../classevab_1_1_screen_k_s0108/">evab::ScreenKS0108</a>,  <a href="../classevab_1_1_screen_p_c_d8544/">evab::ScreenPCD8544</a>,  <a href="../classevab_1_1_screen_s_s_d1306/">evab::ScreenSSD1306</a>,  <a href="../classevab_1_1_screen_s_s_h1106/">evab::ScreenSSH1106</a>,  <a href="../classevab_1_1_screen_serial_pixel/">evab::ScreenSerialPixel</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
@@ -626,15 +669,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawsymbol"><strong>DrawSymbol</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, char aCharcode, unsigned char aColor) <br></td>
+<td style="text-align: left;"><a href="#function-drawsymbol"><strong>DrawSymbol</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, char aCharcode, unsigned char aColor) <br><em>Draws a symbol at the specified position with scaling.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * pictoData, unsigned char aColor) <br></td>
+<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * pictoData, unsigned char aColor) <br><em>Draws a pictogram at the specified position.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-screenpage8base"><strong>ScreenPage8Base</strong></a> (const <a href="../classevab_1_1_i_font/"><strong>IFont</strong></a> * mFont) <br></td>
+<td style="text-align: left;"><a href="#function-screenpage8base"><strong>ScreenPage8Base</strong></a> (const <a href="../classevab_1_1_i_font/"><strong>IFont</strong></a> * mFont) <br><em>Constructor for page-based 8-bit screen base.</em></td>
 </tr>
 </tbody>
 </table>
@@ -650,35 +693,35 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-clear"><strong>Clear</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aColor) override<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-clear"><strong>Clear</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aColor) override<br><em>Clears a rectangular area.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * pictoData, unsigned char aColor) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * pictoData, unsigned char aColor) <br><em>Draws a pictogram (default implementation).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned center (C-string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned center (Flash string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned left (C-string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned left (Flash string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned right (C-string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned right (Flash string).</em></td>
 </tr>
 </tbody>
 </table>
@@ -694,43 +737,51 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-clear"><strong>Clear</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aColor=0) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-clear"><strong>Clear</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aColor=0) = 0<br><em>Clears a rectangular area on screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-drawsymbol"><strong>DrawSymbol</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, char aSymbol, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-deserialize"><strong>Deserialize</strong></a> (unsigned short aSerialized, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aSize, bool &amp; isFocused) = 0<br><em>Deserializes element state from 16-bit value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * pictoData, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-drawsymbol"><strong>DrawSymbol</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, char aSymbol, unsigned char aColor) = 0<br><em>Draws a single character symbol.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * pictoData, unsigned char aColor) = 0<br><em>Draws a pictogram at the specified position.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual unsigned short</td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-serialize"><strong>Serialize</strong></a> (const <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aPos, const <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aSize, bool isFocused) = 0<br><em>Serializes element state into 16-bit value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual <a href="../structevab_1_1_coor/"><strong>Coor</strong></a></td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-size"><strong>Size</strong></a> () = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-size"><strong>Size</strong></a> () = 0<br><em>Gets the screen size in tiles.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the center.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the center.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the left.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the left.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the right.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the right.</em></td>
 </tr>
 </tbody>
 </table>
@@ -745,7 +796,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawverticalslice"><strong>DrawVerticalSlice</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0<br></td>
+<td style="text-align: left;"><a href="#function-drawverticalslice"><strong>DrawVerticalSlice</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0<br><em>Pure virtual method to draw a vertical slice.</em></td>
 </tr>
 </tbody>
 </table>
@@ -761,12 +812,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-cleartile"><strong>ClearTile</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> position, unsigned char aColor) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_base/#function-cleartile"><strong>ClearTile</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> position, unsigned char aColor) <br><em>Clears a single tile.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Provides common rendering for screens organized in 8-pixel pages. Used by SSD1306, KS0108, PCD8544, and similar displays. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-drawsymbol">function DrawSymbol<a class="headerlink" href="#function-drawsymbol" title="Permanent link">&para;</a></h3>
+<p><em>Draws a symbol at the specified position with scaling.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenPage8Base</span><span class="o">::</span><span class="n">DrawSymbol</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -775,10 +829,18 @@
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSize</code> Size of the symbol </li>
+<li><code>aCharcode</code> Character code </li>
+<li><code>aColor</code> Color/inversion flag </li>
+</ul>
 <p>Implements <a href="../classevab_1_1_i_screen/#function-drawsymbol"><em>evab::IScreen::DrawSymbol</em></a></p>
 <hr>
 
 <h3 id="function-picto">function Picto<a class="headerlink" href="#function-picto" title="Permanent link">&para;</a></h3>
+<p><em>Draws a pictogram at the specified position.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenPage8Base</span><span class="o">::</span><span class="n">Picto</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pictoData</span><span class="p">,</span>
@@ -786,18 +848,30 @@
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>pictoData</code> Pictogram data </li>
+<li><code>aColor</code> Color/inversion flag </li>
+</ul>
 <p>Implements <a href="../classevab_1_1_screen_base/#function-picto"><em>evab::ScreenBase::Picto</em></a></p>
 <hr>
 
 <h3 id="function-screenpage8base">function ScreenPage8Base<a class="headerlink" href="#function-screenpage8base" title="Permanent link">&para;</a></h3>
+<p><em>Constructor for page-based 8-bit screen base.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">ScreenPage8Base</span><span class="o">::</span><span class="n">ScreenPage8Base</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">IFont</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mFont</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>mFont</code> Font to use for rendering </li>
+</ul>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-drawverticalslice">function DrawVerticalSlice<a class="headerlink" href="#function-drawverticalslice" title="Permanent link">&para;</a></h3>
+<p><em>Pure virtual method to draw a vertical slice.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenPage8Base</span><span class="o">::</span><span class="n">DrawVerticalSlice</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aSliceColumn</span><span class="p">,</span>
@@ -805,6 +879,12 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSliceColumn</code> Column within the tile (0-7) </li>
+<li><code>aSlice</code> Bitmap data for the slice </li>
+</ul>
 <hr>
 
 <hr />

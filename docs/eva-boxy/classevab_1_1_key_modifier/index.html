@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -463,6 +491,17 @@
     <span class="md-ellipsis">
       
         Public Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
       
     </span>
   </a>
@@ -531,6 +570,10 @@
 <h1 id="class-evabkeymodifier">Class evab::KeyModifier<a class="headerlink" href="#class-evabkeymodifier" title="Permanent link">&para;</a></h1>
 <p><strong>template &lt;class T, unsigned char kDec, unsigned char kInc&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>KeyModifier</strong></a></p>
+<p><em>Decorator that modifies values using increment/decrement keys.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabBehavior.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: T</p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -543,30 +586,50 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) override<br></td>
+<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) override<br><em>Handles key events for increment/decrement.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-keymodifier"><strong>KeyModifier</strong></a> (Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-keymodifier"><strong>KeyModifier</strong></a> (Args &amp;&amp;... args) <br><em>Constructor for</em> <a href="./"><em><strong>KeyModifier</strong></em></a> <em>.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>This class wraps any element and adds behavior for increment and decrement keys. It calls the underlying element's Increment() method with +/- 1.</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> Base element type (must have Increment(signed char) method) </li>
+<li><code>kDec</code> Key code for decrement </li>
+<li><code>kInc</code> Key code for increment </li>
+</ul>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-key">function Key<a class="headerlink" href="#function-key" title="Permanent link">&para;</a></h3>
+<p><em>Handles key events for increment/decrement.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">KeyModifier</span><span class="o">::</span><span class="n">Key</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span>
 <span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aKey</code> The key code to process </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>true if the key was handled, false otherwise </p>
 <hr>
 
 <h3 id="function-keymodifier">function KeyModifier<a class="headerlink" href="#function-keymodifier" title="Permanent link">&para;</a></h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>KeyModifier</strong></em></a> <em>.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
 <span class="kr">inline</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">KeyModifier</span><span class="o">::</span><span class="n">KeyModifier</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>args</code> Arguments forwarded to the base element constructor </li>
+</ul>
 <hr>
 
 <hr />

@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -503,6 +531,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-functions-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -552,6 +591,10 @@
 
 <h1 id="class-evabflipwindowalgorithm">Class evab::FlipWindowAlgorithm<a class="headerlink" href="#class-evabflipwindowalgorithm" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>FlipWindowAlgorithm</strong></a></p>
+<p><em>Flip-page navigation algorithm.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabWindowAlgorithms.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../classevab_1_1_window_algorithm_base/">evab::WindowAlgorithmBase</a></p>
 <p>Inherited by the following classes: <a href="../classevab_1_1_list_box/">evab::ListBox</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
@@ -565,7 +608,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (signed char aIndex) override<br></td>
+<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (signed char aIndex) override<br><em>Selects an item using flip-page navigation.</em></td>
 </tr>
 </tbody>
 </table>
@@ -581,23 +624,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-count"><strong>Count</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-count"><strong>Count</strong></a> () <br><em>Gets the total number of items.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-select"><strong>Select</strong></a> (signed char aIndex) = 0<br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-select"><strong>Select</strong></a> (signed char aIndex) = 0<br><em>Pure virtual method to select an item.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-selected"><strong>Selected</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-selected"><strong>Selected</strong></a> () <br><em>Gets the currently selected item index.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-windowalgorithmbase"><strong>WindowAlgorithmBase</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-windowalgorithmbase"><strong>WindowAlgorithmBase</strong></a> () <br><em>Constructor for window algorithm base.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-windowsize"><strong>WindowSize</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-windowsize"><strong>WindowSize</strong></a> () <br><em>Gets the window size.</em></td>
 </tr>
 </tbody>
 </table>
@@ -613,19 +656,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#variable-mcount"><strong>mCount</strong></a>  <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#variable-mcount"><strong>mCount</strong></a>  <br><em>Total number of items.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#variable-mselected"><strong>mSelected</strong></a>  <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#variable-mselected"><strong>mSelected</strong></a>  <br><em>Currently selected index.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#variable-mwindowsize"><strong>mWindowSize</strong></a>  <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#variable-mwindowsize"><strong>mWindowSize</strong></a>  <br><em>Window size.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#variable-mwindowstart"><strong>mWindowStart</strong></a>  <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#variable-mwindowstart"><strong>mWindowStart</strong></a>  <br><em>Start of the current window.</em></td>
 </tr>
 </tbody>
 </table>
@@ -641,25 +684,32 @@
 <tbody>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-indexinwindow"><strong>indexInWindow</strong></a> (signed char aPosition) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-indexinwindow"><strong>indexInWindow</strong></a> (signed char aPosition) <br><em>Calculates the visual index of an item in the current window.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-resizewindow"><strong>resizeWindow</strong></a> (signed char aWindowSize) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-resizewindow"><strong>resizeWindow</strong></a> (signed char aWindowSize) <br><em>Resizes the window.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-setcount"><strong>setCount</strong></a> (signed char Count) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_window_algorithm_base/#function-setcount"><strong>setCount</strong></a> (signed char Count) <br><em>Sets the total number of items.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Pages are flipped in chunks of window size. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-select">function Select<a class="headerlink" href="#function-select" title="Permanent link">&para;</a></h3>
+<p><em>Selects an item using flip-page navigation.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">FlipWindowAlgorithm</span><span class="o">::</span><span class="n">Select</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
 <span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aIndex</code> Index to select </li>
+</ul>
 <p>Implements <a href="../classevab_1_1_window_algorithm_base/#function-select"><em>evab::WindowAlgorithmBase::Select</em></a></p>
 <hr>
 

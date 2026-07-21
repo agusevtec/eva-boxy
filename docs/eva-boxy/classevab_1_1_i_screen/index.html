@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -470,6 +498,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-functions-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -493,6 +532,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-deserialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Deserialize
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-drawsymbol" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -508,6 +558,17 @@
     <span class="md-ellipsis">
       
         function Picto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-serialize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Serialize
       
     </span>
   </a>
@@ -618,6 +679,10 @@
 
 <h1 id="class-evabiscreen">Class evab::IScreen<a class="headerlink" href="#class-evabiscreen" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>IScreen</strong></a></p>
+<p><em>Abstract interface for screen rendering.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabIScreen.h&gt;</code></li>
+</ul>
 <p>Inherited by the following classes: <a href="../classevab_1_1_screen_base/">evab::ScreenBase</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -630,48 +695,59 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-clear"><strong>Clear</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aColor=0) = 0<br></td>
+<td style="text-align: left;"><a href="#function-clear"><strong>Clear</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aColor=0) = 0<br><em>Clears a rectangular area on screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawsymbol"><strong>DrawSymbol</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, char aSymbol, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (unsigned short aSerialized, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aSize, bool &amp; isFocused) = 0<br><em>Deserializes element state from 16-bit value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * pictoData, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="#function-drawsymbol"><strong>DrawSymbol</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, char aSymbol, unsigned char aColor) = 0<br><em>Draws a single character symbol.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * pictoData, unsigned char aColor) = 0<br><em>Draws a pictogram at the specified position.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual unsigned short</td>
+<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (const <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aPos, const <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aSize, bool isFocused) = 0<br><em>Serializes element state into 16-bit value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual <a href="../structevab_1_1_coor/"><strong>Coor</strong></a></td>
-<td style="text-align: left;"><a href="#function-size"><strong>Size</strong></a> () = 0<br></td>
+<td style="text-align: left;"><a href="#function-size"><strong>Size</strong></a> () = 0<br><em>Gets the screen size in tiles.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the center.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the center.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the left.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the left.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the right.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br></td>
+<td style="text-align: left;"><a href="#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the right.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Defines the contract for display implementations, supporting text, pictograms, and state serialization. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-clear">function Clear<a class="headerlink" href="#function-clear" title="Permanent link">&para;</a></h3>
+<p><em>Clears a rectangular area on screen.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Clear</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -679,9 +755,35 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position of the area </li>
+<li><code>aSize</code> Size of the area </li>
+<li><code>aColor</code> Fill color (0 = clear, 1 = fill) </li>
+</ul>
+<hr>
+
+<h3 id="function-deserialize">function Deserialize<a class="headerlink" href="#function-deserialize" title="Permanent link">&para;</a></h3>
+<p><em>Deserializes element state from 16-bit value.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Deserialize</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">aSerialized</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">isFocused</span>
+<span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aSerialized</code> Serialized state </li>
+<li><code>aPos</code> Position of the element (output) </li>
+<li><code>aSize</code> Size of the element (output) </li>
+<li><code>isFocused</code> Focus state (output) </li>
+</ul>
 <hr>
 
 <h3 id="function-drawsymbol">function DrawSymbol<a class="headerlink" href="#function-drawsymbol" title="Permanent link">&para;</a></h3>
+<p><em>Draws a single character symbol.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">DrawSymbol</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -690,9 +792,17 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSize</code> Size of the symbol </li>
+<li><code>aSymbol</code> Character to draw </li>
+<li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
+</ul>
 <hr>
 
 <h3 id="function-picto">function Picto<a class="headerlink" href="#function-picto" title="Permanent link">&para;</a></h3>
+<p><em>Draws a pictogram at the specified position.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Picto</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pictoData</span><span class="p">,</span>
@@ -700,15 +810,44 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>pictoData</code> Pictogram data (first two bytes: width/height in tiles) </li>
+<li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
+</ul>
+<hr>
+
+<h3 id="function-serialize">function Serialize<a class="headerlink" href="#function-serialize" title="Permanent link">&para;</a></h3>
+<p><em>Serializes element state into 16-bit value.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Serialize</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isFocused</span>
+<span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPos</code> Position of the element </li>
+<li><code>aSize</code> Size of the element </li>
+<li><code>isFocused</code> Focus state </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>unsigned short Serialized state </p>
 <hr>
 
 <h3 id="function-size">function Size<a class="headerlink" href="#function-size" title="Permanent link">&para;</a></h3>
+<p><em>Gets the screen size in tiles.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Size</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Returns:</strong></p>
+<p><a href="../structevab_1_1_coor/"><strong>Coor</strong></a> Screen dimensions in tiles (X, Y) </p>
 <hr>
 
 <h3 id="function-textcenter-12">function TextCenter [1/2]<a class="headerlink" href="#function-textcenter-12" title="Permanent link">&para;</a></h3>
+<p><em>Draws text aligned to the center.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -717,9 +856,17 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSize</code> Size of the text area </li>
+<li><code>text</code> Null-terminated string </li>
+<li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
+</ul>
 <hr>
 
 <h3 id="function-textcenter-22">function TextCenter [2/2]<a class="headerlink" href="#function-textcenter-22" title="Permanent link">&para;</a></h3>
+<p><em>Draws flash string text aligned to the center.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -728,9 +875,17 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSize</code> Size of the text area </li>
+<li><code>text</code> Flash string (PROGMEM) </li>
+<li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
+</ul>
 <hr>
 
 <h3 id="function-textleft-12">function TextLeft [1/2]<a class="headerlink" href="#function-textleft-12" title="Permanent link">&para;</a></h3>
+<p><em>Draws text aligned to the left.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -739,9 +894,17 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSize</code> Size of the text area </li>
+<li><code>text</code> Null-terminated string </li>
+<li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
+</ul>
 <hr>
 
 <h3 id="function-textleft-22">function TextLeft [2/2]<a class="headerlink" href="#function-textleft-22" title="Permanent link">&para;</a></h3>
+<p><em>Draws flash string text aligned to the left.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -750,9 +913,17 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSize</code> Size of the text area </li>
+<li><code>text</code> Flash string (PROGMEM) </li>
+<li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
+</ul>
 <hr>
 
 <h3 id="function-textright-12">function TextRight [1/2]<a class="headerlink" href="#function-textright-12" title="Permanent link">&para;</a></h3>
+<p><em>Draws text aligned to the right.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -761,9 +932,17 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSize</code> Size of the text area </li>
+<li><code>text</code> Null-terminated string </li>
+<li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
+</ul>
 <hr>
 
 <h3 id="function-textright-22">function TextRight [2/2]<a class="headerlink" href="#function-textright-22" title="Permanent link">&para;</a></h3>
+<p><em>Draws flash string text aligned to the right.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -772,6 +951,13 @@
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPosition</code> Position on screen </li>
+<li><code>aSize</code> Size of the text area </li>
+<li><code>text</code> Flash string (PROGMEM) </li>
+<li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
+</ul>
 <hr>
 
 <hr />

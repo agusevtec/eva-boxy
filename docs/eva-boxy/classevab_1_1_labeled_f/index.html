@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -470,6 +498,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-functions-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -520,6 +559,10 @@
 <h1 id="class-evablabeledf">Class evab::LabeledF<a class="headerlink" href="#class-evablabeledf" title="Permanent link">&para;</a></h1>
 <p><strong>template &lt;class T&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>LabeledF</strong></a></p>
+<p><em>Decorator that adds a Flash string label to any element.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabLabeled.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: T</p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -532,12 +575,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-labeledf"><strong>LabeledF</strong></a> (const __FlashStringHelper * aName, Args &amp;&amp;... args) <br></td>
+<td style="text-align: left;"><a href="#function-labeledf"><strong>LabeledF</strong></a> (const __FlashStringHelper * aName, Args &amp;&amp;... args) <br><em>Constructor for</em> <a href="./"><em><strong>LabeledF</strong></em></a> <em>with Flash string label.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Wraps an element and adds a Flash string label either to the left (single line) or above (multi-line).</p>
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>T</code> Element type to label </li>
+</ul>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-labeledf">function LabeledF<a class="headerlink" href="#function-labeledf" title="Permanent link">&para;</a></h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>LabeledF</strong></em></a> <em>with Flash string label.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
 <span class="kr">inline</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LabeledF</span><span class="o">::</span><span class="n">LabeledF</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aName</span><span class="p">,</span>
@@ -545,6 +595,11 @@
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aName</code> Label text (Flash string, PROGMEM) </li>
+<li><code>args</code> Arguments forwarded to the base element constructor </li>
+</ul>
 <hr>
 
 <hr />

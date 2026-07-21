@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ListBox**](classevab_1_1_list_box.md) &lt;class TWindowAlgorithm&gt;<br> |
+| class | [**ListBox**](classevab_1_1_list_box.md) &lt;class TWindowAlgorithm&gt;<br>_List box element with configurable windowing algorithm._  |
 
 
 

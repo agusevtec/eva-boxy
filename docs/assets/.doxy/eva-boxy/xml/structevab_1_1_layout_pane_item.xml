@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="structevab_1_1_layout_pane_item" kind="struct" language="C++" prot="public">
     <compoundname>evab::LayoutPaneItem</compoundname>
+    <includes refid="evab_layout_pane_8h" local="no">evabLayoutPane.h</includes>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structevab_1_1_layout_pane_item_1a8b3b97debe8e1211046634fba46044b7" prot="public" static="no" mutable="no">
         <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
@@ -10,12 +11,13 @@
         <name>Element</name>
         <qualifiedname>evab::LayoutPaneItem::Element</qualifiedname>
         <briefdescription>
+<para>Pointer to the element. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutPane.h" line="9" column="17" bodyfile="src/evabLayoutPane.h" bodystart="9" bodyend="-1"/>
+        <location file="src/evabLayoutPane.h" line="12" column="17" bodyfile="src/evabLayoutPane.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structevab_1_1_layout_pane_item_1ab9a10fd15fbd7a692cef94bb97d50203" prot="public" static="no" mutable="no">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -24,12 +26,13 @@
         <name>Position</name>
         <qualifiedname>evab::LayoutPaneItem::Position</qualifiedname>
         <briefdescription>
+<para>Position of the item. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutPane.h" line="10" column="10" bodyfile="src/evabLayoutPane.h" bodystart="10" bodyend="-1"/>
+        <location file="src/evabLayoutPane.h" line="13" column="10" bodyfile="src/evabLayoutPane.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structevab_1_1_layout_pane_item_1a36773171ff6311a3cda30a20c3c38aab" prot="public" static="no" mutable="no">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -38,15 +41,17 @@
         <name>Size</name>
         <qualifiedname>evab::LayoutPaneItem::Size</qualifiedname>
         <briefdescription>
+<para>Size of the item. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutPane.h" line="11" column="10" bodyfile="src/evabLayoutPane.h" bodystart="11" bodyend="-1"/>
+        <location file="src/evabLayoutPane.h" line="14" column="10" bodyfile="src/evabLayoutPane.h" bodystart="14" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Structure defining a single item in a layout pane. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -71,7 +76,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabLayoutPane.h" line="7" column="3" bodyfile="src/evabLayoutPane.h" bodystart="8" bodyend="12"/>
+    <location file="src/evabLayoutPane.h" line="10" column="3" bodyfile="src/evabLayoutPane.h" bodystart="11" bodyend="15"/>
     <listofallmembers>
       <member refid="structevab_1_1_layout_pane_item_1a8b3b97debe8e1211046634fba46044b7" prot="public" virt="non-virtual"><scope>evab::LayoutPaneItem</scope><name>Element</name></member>
       <member refid="structevab_1_1_layout_pane_item_1ab9a10fd15fbd7a692cef94bb97d50203" prot="public" virt="non-virtual"><scope>evab::LayoutPaneItem</scope><name>Position</name></member>

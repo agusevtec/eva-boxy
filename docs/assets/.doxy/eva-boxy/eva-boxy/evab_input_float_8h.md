@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InputFloat**](classevab_1_1_input_float.md) <br> |
+| class | [**InputFloat**](classevab_1_1_input_float.md) <br>_Floating-point input element._  |
 
 
 

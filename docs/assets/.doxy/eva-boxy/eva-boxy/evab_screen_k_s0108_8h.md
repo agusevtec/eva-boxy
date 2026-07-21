@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenKS0108**](classevab_1_1_screen_k_s0108.md) <br> |
+| class | [**ScreenKS0108**](classevab_1_1_screen_k_s0108.md) <br>_KS0108-based GLCD screen driver._  |
 
 
 

@@ -34,7 +34,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**IFont**](classevab_1_1_i_font.md) <br> |
+| class | [**IFont**](classevab_1_1_i_font.md) <br>_Abstract interface for font providers._  |
 
 
 

@@ -35,8 +35,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**LayoutPane**](classevab_1_1_layout_pane.md) <br> |
-| struct | [**LayoutPaneItem**](structevab_1_1_layout_pane_item.md) <br> |
+| class | [**LayoutPane**](classevab_1_1_layout_pane.md) <br>_Dynamic layout pane for arranging items in a grid._  |
+| struct | [**LayoutPaneItem**](structevab_1_1_layout_pane_item.md) <br>_Structure defining a single item in a layout pane._  |
 
 
 

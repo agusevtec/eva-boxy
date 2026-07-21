@@ -31,7 +31,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| enum  | [**Keys**](#enum-keys)  <br> |
+| enum  | [**Keys**](#enum-keys)  <br>_Key codes for user input._  |
 
 
 
@@ -87,6 +87,7 @@
 
 ### enum Keys 
 
+_Key codes for user input._ 
 ```C++
 enum Keys {
     KEY_MENU = 1,
@@ -118,6 +119,10 @@ enum Keys {
 
 
 
+Defines the standard key codes used throughout the library. ASCII codes are used for numeric keys (0x30-0x39). 
+
+
+        
 
 <hr>
 

@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenSerialText**](classevab_1_1_screen_serial_text.md) <br> |
+| class | [**ScreenSerialText**](classevab_1_1_screen_serial_text.md) <br>_Debug screen that renders text to serial output._  |
 
 
 

@@ -20,28 +20,38 @@ namespace evab
     {
     public:
         void TextLeft(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) override;
+        
         void TextCenter(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) override;
+        
         void TextRight(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) override;
+        
         void TextLeft(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) override;
+        
         void TextCenter(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) override;
+        
         void TextRight(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) override;
+        
         void Clear(Coor aPosition, Coor aSize, unsigned char aColor) override;
+        
         virtual void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor);
 
     protected:
-
         virtual void ClearTile(Coor position, unsigned char aColor);
 
     private:
-        void printTextInArea(Coor aPosition, Coor aSize, const char *text, unsigned char aColor, uint8_t offset);
-        void printTextInArea(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor, uint8_t offset);
+        void printTextInArea(Coor aPosition, Coor aSize, const char *text, unsigned char aColor, unsigned char offset);
+        
+        void printTextInArea(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor, unsigned char offset);
 
-        uint8_t calcLeftOffset(Coor aSize, uint8_t textLen);
-        uint8_t calcCenterOffset(Coor aSize, uint8_t textLen);
-        uint8_t calcRightOffset(Coor aSize, uint8_t textLen);
+        unsigned char calcLeftOffset(Coor aSize, unsigned char textLen);
+        
+        unsigned char calcCenterOffset(Coor aSize, unsigned char textLen);
+        
+        unsigned char calcRightOffset(Coor aSize, unsigned char textLen);
 
-        uint8_t flashStrLen(const __FlashStringHelper *str);
-        char flashStrRead(const __FlashStringHelper *str, uint8_t index);
+        unsigned char flashStrLen(const __FlashStringHelper *str);
+        
+        char flashStrRead(const __FlashStringHelper *str, unsigned char index);
     };
 }
 ```

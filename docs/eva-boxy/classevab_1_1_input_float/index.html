@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -485,6 +513,17 @@
     <span class="md-ellipsis">
       
         Protected Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
       
     </span>
   </a>
@@ -602,6 +641,10 @@
 
 <h1 id="class-evabinputfloat">Class evab::InputFloat<a class="headerlink" href="#class-evabinputfloat" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>InputFloat</strong></a></p>
+<p><em>Floating-point input element.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabInputFloat.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../classevab_1_1_element_base/">evab::ElementBase</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -614,19 +657,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">float</td>
-<td style="text-align: left;"><a href="#function-getvalue"><strong>GetValue</strong></a> () const<br></td>
+<td style="text-align: left;"><a href="#function-getvalue"><strong>GetValue</strong></a> () const<br><em>Gets the current float value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-increment"><strong>Increment</strong></a> (signed char delta) <br></td>
+<td style="text-align: left;"><a href="#function-increment"><strong>Increment</strong></a> (signed char delta) <br><em>Increments the value by a delta.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-inputfloat"><strong>InputFloat</strong></a> (float aValue=0) <br></td>
+<td style="text-align: left;"><a href="#function-inputfloat"><strong>InputFloat</strong></a> (float aValue=0) <br><em>Constructor for</em> <a href="./"><em><strong>InputFloat</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setvalue"><strong>SetValue</strong></a> (float aValue) <br></td>
+<td style="text-align: left;"><a href="#function-setvalue"><strong>SetValue</strong></a> (float aValue) <br><em>Sets the float value and redraws.</em></td>
 </tr>
 </tbody>
 </table>
@@ -642,23 +685,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hide"><strong>Hide</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hide"><strong>Hide</strong></a> () <br><em>Hides the element from view.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br><em>Checks if the element is hidden.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
 </tr>
 </tbody>
 </table>
@@ -673,42 +716,63 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br></td>
+<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Draws the float value centered on screen.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Displays and manages a floating-point value. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-getvalue">function GetValue<a class="headerlink" href="#function-getvalue" title="Permanent link">&para;</a></h3>
+<p><em>Gets the current float value.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloat</span><span class="o">::</span><span class="n">GetValue</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
 </code></pre></div>
 
+<p><strong>Returns:</strong></p>
+<p>Current float value </p>
 <hr>
 
 <h3 id="function-increment">function Increment<a class="headerlink" href="#function-increment" title="Permanent link">&para;</a></h3>
+<p><em>Increments the value by a delta.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloat</span><span class="o">::</span><span class="n">Increment</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">delta</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>delta</code> Amount to add (positive or negative) </li>
+</ul>
 <hr>
 
 <h3 id="function-inputfloat">function InputFloat<a class="headerlink" href="#function-inputfloat" title="Permanent link">&para;</a></h3>
+<p><em>Constructor for</em> <a href="./"><em><strong>InputFloat</strong></em></a> <em>.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">InputFloat</span><span class="o">::</span><span class="n">InputFloat</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">aValue</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aValue</code> Initial float value (default 0) </li>
+</ul>
 <hr>
 
 <h3 id="function-setvalue">function SetValue<a class="headerlink" href="#function-setvalue" title="Permanent link">&para;</a></h3>
+<p><em>Sets the float value and redraws.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloat</span><span class="o">::</span><span class="n">SetValue</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">aValue</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aValue</code> New float value </li>
+</ul>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-drawer">function drawer<a class="headerlink" href="#function-drawer" title="Permanent link">&para;</a></h3>
+<p><em>Draws the float value centered on screen.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloat</span><span class="o">::</span><span class="n">drawer</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">IScreen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
@@ -717,6 +781,13 @@
 <span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aScreen</code> Screen to draw on </li>
+<li><code>aPos</code> Position on screen </li>
+<li><code>aSize</code> Size of the element </li>
+<li><code>aIsFocused</code> Focus state (1 = focused, 0 = not focused) </li>
+</ul>
 <p>Implements <a href="../classevab_1_1_element_base/#function-drawer"><em>evab::ElementBase::drawer</em></a></p>
 <hr>
 

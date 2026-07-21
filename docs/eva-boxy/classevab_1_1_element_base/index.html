@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -463,6 +491,17 @@
     <span class="md-ellipsis">
       
         Public Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
       
     </span>
   </a>
@@ -563,7 +602,11 @@
 
 <h1 id="class-evabelementbase">Class evab::ElementBase<a class="headerlink" href="#class-evabelementbase" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>ElementBase</strong></a></p>
-<p>Inherited by the following classes: <a href="../classevab_1_1_list_box/">evab::ListBox</a>,  <a href="../classevab_1_1_list_box/">evab::ListBox</a>,  <a href="../classevab_1_1_battery_indicator/">evab::BatteryIndicator</a>,  <a href="../classevab_1_1_composite_base/">evab::CompositeBase</a>,  <a href="../classevab_1_1_input_float/">evab::InputFloat</a>,  <a href="../classevab_1_1_input_int/">evab::InputInt</a>,  <a href="../classevab_1_1_layout_pane/">evab::LayoutPane</a>,  <a href="../classevab_1_1_list_box/">evab::ListBox</a></p>
+<p><em>Abstract base class for all UI elements.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabElementBase.h&gt;</code></li>
+</ul>
+<p>Inherited by the following classes: <a href="../classevab_1_1_input_stretch_bar/">evab::InputStretchBar</a>,  <a href="../classevab_1_1_input_stretch_bar/">evab::InputStretchBar</a>,  <a href="../classevab_1_1_input_stretch_bar/">evab::InputStretchBar</a>,  <a href="../classevab_1_1_input_stretch_bar/">evab::InputStretchBar</a>,  <a href="../classevab_1_1_input_text_stretch_bar/">evab::InputTextStretchBar</a>,  <a href="../classevab_1_1_input_text_stretch_bar/">evab::InputTextStretchBar</a>,  <a href="../classevab_1_1_input_text_stretch_bar/">evab::InputTextStretchBar</a>,  <a href="../classevab_1_1_input_text_stretch_bar/">evab::InputTextStretchBar</a>,  <a href="../classevab_1_1_list_box/">evab::ListBox</a>,  <a href="../classevab_1_1_list_box/">evab::ListBox</a>,  <a href="../classevab_1_1_composite_base/">evab::CompositeBase</a>,  <a href="../classevab_1_1_input_animation/">evab::InputAnimation</a>,  <a href="../classevab_1_1_input_button/">evab::InputButton</a>,  <a href="../classevab_1_1_input_float/">evab::InputFloat</a>,  <a href="../classevab_1_1_input_int/">evab::InputInt</a>,  <a href="../classevab_1_1_input_pictogram/">evab::InputPictogram</a>,  <a href="../classevab_1_1_input_stretch_bar/">evab::InputStretchBar</a>,  <a href="../classevab_1_1_input_text_stretch_bar/">evab::InputTextStretchBar</a>,  <a href="../classevab_1_1_layout_pane/">evab::LayoutPane</a>,  <a href="../classevab_1_1_list_box/">evab::ListBox</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -575,28 +618,31 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br></td>
+<td style="text-align: left;"><a href="#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-hide"><strong>Hide</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-hide"><strong>Hide</strong></a> () <br><em>Hides the element from view.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-ishidden"><strong>IsHidden</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-ishidden"><strong>IsHidden</strong></a> () <br><em>Checks if the element is hidden.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) <br></td>
+<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-redraw"><strong>Redraw</strong></a> () <br></td>
+<td style="text-align: left;"><a href="#function-redraw"><strong>Redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Provides the core functionality for rendering, state management, and key event handling for visual elements. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-draw">function Draw<a class="headerlink" href="#function-draw" title="Permanent link">&para;</a></h3>
+<p><em>Draws the element on the specified screen.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ElementBase</span><span class="o">::</span><span class="n">Draw</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">IScreen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
@@ -605,29 +651,49 @@
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aScreen</code> Screen to draw on </li>
+<li><code>aPos</code> Position on screen </li>
+<li><code>aSize</code> Size of the element </li>
+<li><code>aIsFocused</code> Focus state (1 = focused, 0 = not focused) </li>
+</ul>
 <hr>
 
 <h3 id="function-hide">function Hide<a class="headerlink" href="#function-hide" title="Permanent link">&para;</a></h3>
+<p><em>Hides the element from view.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ElementBase</span><span class="o">::</span><span class="n">Hide</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="function-ishidden">function IsHidden<a class="headerlink" href="#function-ishidden" title="Permanent link">&para;</a></h3>
+<p><em>Checks if the element is hidden.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ElementBase</span><span class="o">::</span><span class="n">IsHidden</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Returns:</strong></p>
+<p>true if hidden, false otherwise </p>
 <hr>
 
 <h3 id="function-key">function Key<a class="headerlink" href="#function-key" title="Permanent link">&para;</a></h3>
+<p><em>Handles key events for the element.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ElementBase</span><span class="o">::</span><span class="n">Key</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p>Override to implement custom key handling.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aKey</code> Key code to process </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>true if the key was handled, false otherwise </p>
 <hr>
 
 <h3 id="function-redraw">function Redraw<a class="headerlink" href="#function-redraw" title="Permanent link">&para;</a></h3>
+<p><em>Redraws the element on the current screen.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ElementBase</span><span class="o">::</span><span class="n">Redraw</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 

@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_screen_k_s0108" kind="class" language="C++" prot="public">
     <compoundname>evab::ScreenKS0108</compoundname>
     <basecompoundref refid="classevab_1_1_screen_page8_base" prot="public" virt="non-virtual">evab::ScreenPage8Base</basecompoundref>
+    <includes refid="evab_screen_k_s0108_8h" local="no">evabScreenKS0108.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1a8b966bbebffa75f0b900d93b70b73413" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -11,12 +12,13 @@
         <name>mRSPin</name>
         <qualifiedname>evab::ScreenKS0108::mRSPin</qualifiedname>
         <briefdescription>
+<para>Register select pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="39" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="39" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="149" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="149" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1a8dcc4b0867290d032975c4a735eabedf" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -25,12 +27,13 @@
         <name>mRWPin</name>
         <qualifiedname>evab::ScreenKS0108::mRWPin</qualifiedname>
         <briefdescription>
+<para>Read/Write pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="40" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="40" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="150" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="150" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1ab87dccb493415c5136b6c7be70b01c31" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -39,12 +42,13 @@
         <name>mEPin</name>
         <qualifiedname>evab::ScreenKS0108::mEPin</qualifiedname>
         <briefdescription>
+<para>Enable pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="41" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="41" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="151" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="151" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1a96b228087ec2a5819c3afa946e67a200" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -53,12 +57,13 @@
         <name>mCS1Pin</name>
         <qualifiedname>evab::ScreenKS0108::mCS1Pin</qualifiedname>
         <briefdescription>
+<para>Chip select 1 pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="42" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="42" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="152" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="152" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1ac2a3472a4b4f0a96301b4398a265026a" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -67,12 +72,13 @@
         <name>mCS2Pin</name>
         <qualifiedname>evab::ScreenKS0108::mCS2Pin</qualifiedname>
         <briefdescription>
+<para>Chip select 2 pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="43" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="43" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="153" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="153" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1aa4fb0b79fae727041418636822a028ee" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -81,12 +87,13 @@
         <name>mDataPins</name>
         <qualifiedname>evab::ScreenKS0108::mDataPins</qualifiedname>
         <briefdescription>
+<para>Data bus pins. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="44" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="44" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="154" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="154" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1a1a6096fc14e7d9e9bb07c090da0dee02" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -95,12 +102,13 @@
         <name>mLEDPin</name>
         <qualifiedname>evab::ScreenKS0108::mLEDPin</qualifiedname>
         <briefdescription>
+<para>Backlight pin (255 = none). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="45" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="45" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="155" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="155" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1af30ebcd42e890bfa71af5b1399747f70" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -109,12 +117,13 @@
         <name>mCurrentChip</name>
         <qualifiedname>evab::ScreenKS0108::mCurrentChip</qualifiedname>
         <briefdescription>
+<para>Currently selected chip. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="46" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="46" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="156" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="156" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -186,12 +195,79 @@
           <defval>255</defval>
         </param>
         <briefdescription>
+<para>Constructor for KS0108 screen driver. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aFont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Font to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aRS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register select pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aRW</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Read/Write pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enable pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aCS1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chip select 1 pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aCS2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chip select 2 pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aDB0-DB7</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data bus pins </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aLED</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Backlight pin (255 = none) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="12" column="9"/>
+        <location file="src/evabScreenKS0108.h" line="29" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a883c97db6211549b7526aae2238a2633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -205,39 +281,51 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="18" column="9"/>
+        <location file="src/evabScreenKS0108.h" line="35" column="9"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a9e03b634e15adf579c78eac6b9881e59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1af5e630a14289a607af25cbfc06230202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::ScreenKS0108::setBacklight</definition>
+        <definition>void evab::ScreenKS0108::SetBacklight</definition>
         <argsstring>(uint8_t aState)</argsstring>
-        <name>setBacklight</name>
-        <qualifiedname>evab::ScreenKS0108::setBacklight</qualifiedname>
+        <name>SetBacklight</name>
+        <qualifiedname>evab::ScreenKS0108::SetBacklight</qualifiedname>
         <param>
           <type>uint8_t</type>
           <declname>aState</declname>
         </param>
         <briefdescription>
+<para>Sets backlight state. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1 = on, 0 = off </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="20" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="42" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a6a9d4446c3c4fb69d23655f75b805ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a2ecad38d92bae38f94f7d6afd90529e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::ScreenKS0108::clear</definition>
+        <definition>void evab::ScreenKS0108::clearDisplay</definition>
         <argsstring>()</argsstring>
-        <name>clear</name>
-        <qualifiedname>evab::ScreenKS0108::clear</qualifiedname>
+        <name>clearDisplay</name>
+        <qualifiedname>evab::ScreenKS0108::clearDisplay</qualifiedname>
         <briefdescription>
+<para>Clears the entire display. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="21" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="47" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1ae73709eb2823cda32272011a2f08b8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -247,12 +335,138 @@
         <qualifiedname>evab::ScreenKS0108::Size</qualifiedname>
         <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
         <briefdescription>
+<para>Gets the screen size in tiles. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Screen dimensions (16x8 tiles) </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="22" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="54" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a37b85da65c7574bc077bf368412f4f79" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::ScreenKS0108::Serialize</definition>
+        <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>evab::ScreenKS0108::Serialize</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352">Serialize</reimplements>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Serializes element state for 16x8 screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned short Serialized state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenKS0108.h" line="64" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1afc3b7c6858d7ca964b60527cd8410126" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::ScreenKS0108::Deserialize</definition>
+        <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
+        <name>Deserialize</name>
+        <qualifiedname>evab::ScreenKS0108::Deserialize</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008">Deserialize</reimplements>
+        <param>
+          <type>unsigned short</type>
+          <declname>aSerialized</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes element state for 16x8 screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSerialized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Serialized state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (output) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenKS0108.h" line="74" column="14"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -276,12 +490,39 @@
           <declname>aSlice</declname>
         </param>
         <briefdescription>
+<para>Draws a vertical slice at the specified position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSliceColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column within the tile (0-7) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSlice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap data for the slice </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="25" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="84" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a18e1970f2e83f64251c2aa3fd0443b7d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -299,12 +540,31 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Clears a tile at the specified position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the tile </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="26" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="92" column="14"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -323,12 +583,31 @@
           <declname>aChip</declname>
         </param>
         <briefdescription>
+<para>Sends a command to the specified chip. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aCmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aChip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chip index (0 or 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="29" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="101" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a15b9f6cf7e8f6b8c555fa922a0e32a80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -345,12 +624,31 @@
           <declname>aChip</declname>
         </param>
         <briefdescription>
+<para>Sends data to the specified chip. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aChip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chip index (0 or 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="30" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="109" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a279c3bcab5839669639f8e557ec44926" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -363,12 +661,23 @@
           <declname>aChip</declname>
         </param>
         <briefdescription>
+<para>Selects a chip for communication. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aChip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chip index (0 or 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="31" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="116" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a23cb3a95a6fe351ce9e8a4dfe9afdf55" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -381,12 +690,23 @@
           <declname>aPage</declname>
         </param>
         <briefdescription>
+<para>Sets the current page. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Page index (0-7) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="32" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="123" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1af1ff6f196ee38f0886799740c94d5476" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -399,12 +719,23 @@
           <declname>aCol</declname>
         </param>
         <briefdescription>
+<para>Sets the current column. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aCol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index (0-63) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="33" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="130" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a0787687c76c804ea6caf3f8c73758041" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -413,12 +744,13 @@
         <name>initDisplay</name>
         <qualifiedname>evab::ScreenKS0108::initDisplay</qualifiedname>
         <briefdescription>
+<para>Initializes the display. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="34" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="135" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a6ed04598b6ef6580f3d6160585f46174" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -431,12 +763,23 @@
           <declname>aByte</declname>
         </param>
         <briefdescription>
+<para>Writes a byte to the data bus. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aByte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Byte to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="36" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="142" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a9a9e47aa964596a3ca43e21d0ebd9166" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -445,17 +788,20 @@
         <name>pulseE</name>
         <qualifiedname>evab::ScreenKS0108::pulseE</qualifiedname>
         <briefdescription>
+<para>Pulses the enable pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="37" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="147" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>KS0108-based GLCD screen driver. </para>
     </briefdescription>
     <detaileddescription>
+<para>Supports 128x64 pixel displays with two KS0108 chips. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="4">
@@ -505,11 +851,12 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenKS0108.h" line="9" column="5" bodyfile="src/evabScreenKS0108.h" bodystart="10" bodyend="47"/>
+    <location file="src/evabScreenKS0108.h" line="14" column="5" bodyfile="src/evabScreenKS0108.h" bodystart="15" bodyend="157"/>
     <listofallmembers>
       <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Clear</name></member>
-      <member refid="classevab_1_1_screen_k_s0108_1a6a9d4446c3c4fb69d23655f75b805ac1" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>clear</name></member>
+      <member refid="classevab_1_1_screen_k_s0108_1a2ecad38d92bae38f94f7d6afd90529e0" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>clearDisplay</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a18e1970f2e83f64251c2aa3fd0443b7d" prot="protected" virt="virtual"><scope>evab::ScreenKS0108</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_screen_k_s0108_1afc3b7c6858d7ca964b60527cd8410126" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>DrawSymbol</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1aa50cc147a07f93fd6c0b3edd33134aa6" prot="protected" virt="virtual"><scope>evab::ScreenKS0108</scope><name>DrawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a0787687c76c804ea6caf3f8c73758041" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>initDisplay</name></member>
@@ -527,7 +874,8 @@
       <member refid="classevab_1_1_screen_page8_base_1aaf41c535c3c37a3c908803e7138bc326" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>ScreenPage8Base</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a05e23f666e5894455e14734317332480" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>sendCommand</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a15b9f6cf7e8f6b8c555fa922a0e32a80" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>sendData</name></member>
-      <member refid="classevab_1_1_screen_k_s0108_1a9e03b634e15adf579c78eac6b9881e59" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>setBacklight</name></member>
+      <member refid="classevab_1_1_screen_k_s0108_1a37b85da65c7574bc077bf368412f4f79" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Serialize</name></member>
+      <member refid="classevab_1_1_screen_k_s0108_1af5e630a14289a607af25cbfc06230202" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>SetBacklight</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a279c3bcab5839669639f8e557ec44926" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>setChip</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1af1ff6f196ee38f0886799740c94d5476" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>setColumn</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a23cb3a95a6fe351ce9e8a4dfe9afdf55" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>setPage</name></member>

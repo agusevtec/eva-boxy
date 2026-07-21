@@ -4,6 +4,7 @@
     <compoundname>evab::FlipWindowAlgorithm</compoundname>
     <basecompoundref refid="classevab_1_1_window_algorithm_base" prot="public" virt="non-virtual">evab::WindowAlgorithmBase</basecompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; FlipWindowAlgorithm &gt;</derivedcompoundref>
+    <includes refid="evab_window_algorithms_8h" local="no">evabWindowAlgorithms.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_flip_window_algorithm_1aae9f7251d9e739b99119871e78cdcca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -18,17 +19,30 @@
           <declname>aIndex</declname>
         </param>
         <briefdescription>
+<para>Selects an item using flip-page navigation. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index to select </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="30" column="10"/>
+        <location file="src/evabWindowAlgorithms.h" line="90" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Flip-page navigation algorithm. </para>
     </briefdescription>
     <detaileddescription>
+<para>Pages are flipped in chunks of window size. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -60,7 +74,7 @@
         <link refid="classevab_1_1_window_algorithm_base"/>
       </node>
     </collaborationgraph>
-    <location file="src/evabWindowAlgorithms.h" line="27" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="28" bodyend="31"/>
+    <location file="src/evabWindowAlgorithms.h" line="82" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="83" bodyend="91"/>
     <listofallmembers>
       <member refid="classevab_1_1_window_algorithm_base_1a5477e753aea1c5bcaff5b0f9240cd0fd" prot="public" virt="non-virtual"><scope>evab::FlipWindowAlgorithm</scope><name>Count</name></member>
       <member refid="classevab_1_1_window_algorithm_base_1acd6b3bd987a44454afcc8a148d4cc3c6" prot="protected" virt="non-virtual"><scope>evab::FlipWindowAlgorithm</scope><name>indexInWindow</name></member>

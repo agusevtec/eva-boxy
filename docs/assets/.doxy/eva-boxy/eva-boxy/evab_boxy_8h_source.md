@@ -46,9 +46,9 @@ namespace evab
         void invoke(void *, eva::CallbackInfo) override;
 
     private:
-        IScreen *mScreen;
-        ElementBase *mGround;
-        eva::DelayTimer mModalShowTimer = {this};
+        IScreen *mScreen;                          
+        ElementBase *mGround;                      
+        eva::DelayTimer mModalShowTimer = {this};  
     };
 }
 ```

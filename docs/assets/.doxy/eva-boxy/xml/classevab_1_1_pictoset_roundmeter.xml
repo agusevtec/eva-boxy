@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_pictoset_roundmeter" kind="class" language="C++" prot="public">
+    <compoundname>evab::PictosetRoundmeter</compoundname>
+    <includes refid="evab_pictosets_8h" local="no">evabPictosets.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_pictoset_roundmeter_1af863daefb65ff061a33c4e959aa004a0" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::PictosetRoundmeter::Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <qualifiedname>evab::PictosetRoundmeter::Count</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+<para>Number of pictograms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="50" column="40" bodyfile="src/evabPictosets.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_pictoset_roundmeter_1a2c51b4354a87f3bc4695e8a94c78c7d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::PictosetRoundmeter::GetTile</definition>
+        <argsstring>(unsigned char aIndex)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::PictosetRoundmeter::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index (0-8) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="49" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Roundmeter pictogram set (9 states). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabPictosets.h" line="40" column="5" bodyfile="src/evabPictosets.h" bodystart="41" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_pictoset_roundmeter_1af863daefb65ff061a33c4e959aa004a0" prot="public" virt="non-virtual"><scope>evab::PictosetRoundmeter</scope><name>Count</name></member>
+      <member refid="classevab_1_1_pictoset_roundmeter_1a2c51b4354a87f3bc4695e8a94c78c7d1" prot="public" virt="non-virtual"><scope>evab::PictosetRoundmeter</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

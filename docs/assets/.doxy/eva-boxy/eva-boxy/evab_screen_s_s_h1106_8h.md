@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**ScreenSSH1106**](classevab_1_1_screen_s_s_h1106.md) <br> |
+| class | [**ScreenSSH1106**](classevab_1_1_screen_s_s_h1106.md) <br>_SSH1106 screen driver for OLED displays._  |
 
 
 

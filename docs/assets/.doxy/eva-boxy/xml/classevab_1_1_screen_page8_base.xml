@@ -8,6 +8,7 @@
     <derivedcompoundref refid="classevab_1_1_screen_s_s_d1306" prot="public" virt="non-virtual">evab::ScreenSSD1306</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_s_s_h1106" prot="public" virt="non-virtual">evab::ScreenSSH1106</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_serial_pixel" prot="public" virt="non-virtual">evab::ScreenSerialPixel</derivedcompoundref>
+    <includes refid="evab_screen_page8_base_8h" local="no">evabScreenPage8Base.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_screen_page8_base_1af462a0c020b9e9ef045d9c1ebda366f0" prot="private" static="no" mutable="no">
         <type>const <ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref> *</type>
@@ -16,12 +17,13 @@
         <name>mFont</name>
         <qualifiedname>evab::ScreenPage8Base::mFont</qualifiedname>
         <briefdescription>
+<para>Font for text rendering. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPage8Base.h" line="21" column="17" bodyfile="src/evabScreenPage8Base.h" bodystart="21" bodyend="-1"/>
+        <location file="src/evabScreenPage8Base.h" line="55" column="17" bodyfile="src/evabScreenPage8Base.h" bodystart="55" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -36,12 +38,23 @@
           <declname>mFont</declname>
         </param>
         <briefdescription>
+<para>Constructor for page-based 8-bit screen base. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mFont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Font to use for rendering </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPage8Base.h" line="12" column="5"/>
+        <location file="src/evabScreenPage8Base.h" line="23" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -67,12 +80,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws a symbol at the specified position with scaling. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aCharcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPage8Base.h" line="14" column="10"/>
+        <location file="src/evabScreenPage8Base.h" line="33" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_page8_base_1aa5e0f45e049c5539df59ba5f97ef8446" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -94,12 +142,39 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws a pictogram at the specified position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pictoData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pictogram data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPage8Base.h" line="15" column="10"/>
+        <location file="src/evabScreenPage8Base.h" line="42" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -127,12 +202,39 @@
           <declname>aSlice</declname>
         </param>
         <briefdescription>
+<para>Pure virtual method to draw a vertical slice. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSliceColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column within the tile (0-7) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSlice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap data for the slice </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPage8Base.h" line="18" column="18"/>
+        <location file="src/evabScreenPage8Base.h" line="52" column="18"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -151,17 +253,40 @@
           <declname>scale</declname>
         </param>
         <briefdescription>
+<para>Upscales a byte vertically by repeating bits. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input byte (8 bits) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scale factor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Upscaled value (up to 32 bits) </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPage8Base.h" line="23" column="14"/>
+        <location file="src/evabScreenPage8Base.h" line="64" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Base class for page-based 8-bit screens. </para>
     </briefdescription>
     <detaileddescription>
+<para>Provides common rendering for screens organized in 8-pixel pages. Used by SSD1306, KS0108, PCD8544, and similar displays. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -229,15 +354,17 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenPage8Base.h" line="9" column="3" bodyfile="src/evabScreenPage8Base.h" bodystart="10" bodyend="24"/>
+    <location file="src/evabScreenPage8Base.h" line="15" column="3" bodyfile="src/evabScreenPage8Base.h" bodystart="16" bodyend="65"/>
     <listofallmembers>
       <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>Clear</name></member>
       <member refid="classevab_1_1_screen_base_1adcecf3475b92507656c85c7e97af5717" prot="protected" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008" prot="public" virt="pure-virtual"><scope>evab::ScreenPage8Base</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>DrawSymbol</name></member>
       <member refid="classevab_1_1_screen_page8_base_1a2291c5edbcd8a7e0a694595a1fcd7454" prot="protected" virt="pure-virtual"><scope>evab::ScreenPage8Base</scope><name>DrawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af462a0c020b9e9ef045d9c1ebda366f0" prot="private" virt="non-virtual"><scope>evab::ScreenPage8Base</scope><name>mFont</name></member>
       <member refid="classevab_1_1_screen_page8_base_1aa5e0f45e049c5539df59ba5f97ef8446" prot="public" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>Picto</name></member>
       <member refid="classevab_1_1_screen_page8_base_1aaf41c535c3c37a3c908803e7138bc326" prot="public" virt="non-virtual"><scope>evab::ScreenPage8Base</scope><name>ScreenPage8Base</name></member>
+      <member refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352" prot="public" virt="pure-virtual"><scope>evab::ScreenPage8Base</scope><name>Serialize</name></member>
       <member refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3" prot="public" virt="pure-virtual"><scope>evab::ScreenPage8Base</scope><name>Size</name></member>
       <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>TextCenter</name></member>
       <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>TextCenter</name></member>

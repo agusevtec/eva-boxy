@@ -10,8 +10,9 @@
 
 
 
+_Decorator that adds a Flash string label to any element._ [More...](#detailed-description)
 
-
+* `#include <evabLabeled.h>`
 
 
 
@@ -54,7 +55,7 @@ Inherits the following classes: T
 
 | Type | Name |
 | ---: | :--- |
-|   | [**LabeledF**](#function-labeledf) (const \_\_FlashStringHelper \* aName, Args &&... args) <br> |
+|   | [**LabeledF**](#function-labeledf) (const \_\_FlashStringHelper \* aName, Args &&... args) <br>_Constructor for_ [_**LabeledF**_](classevab_1_1_labeled_f.md) _with Flash string label._ |
 
 
 
@@ -83,6 +84,23 @@ Inherits the following classes: T
 
 
 
+## Detailed Description
+
+
+Wraps an element and adds a Flash string label either to the left (single line) or above (multi-line).
+
+
+
+
+**Template parameters:**
+
+
+* `T` Element type to label 
+
+
+
+
+    
 ## Public Functions Documentation
 
 
@@ -90,6 +108,7 @@ Inherits the following classes: T
 
 ### function LabeledF 
 
+_Constructor for_ [_**LabeledF**_](classevab_1_1_labeled_f.md) _with Flash string label._
 ```C++
 template<typename... Args>
 inline evab::LabeledF::LabeledF (
@@ -100,6 +119,18 @@ inline evab::LabeledF::LabeledF (
 
 
 
+
+
+**Parameters:**
+
+
+* `aName` Label text (Flash string, PROGMEM) 
+* `args` Arguments forwarded to the base element constructor 
+
+
+
+
+        
 
 <hr>
 

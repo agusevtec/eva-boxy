@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structevab_1_1_charset_vertical_progress_bar" kind="struct" language="C++" prot="public">
+    <compoundname>evab::CharsetVerticalProgressBar</compoundname>
+    <includes refid="evab_input_text_stretch_bar_8h" local="no">evabInputTextStretchBar.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structevab_1_1_charset_vertical_progress_bar_1ae8e93db3b5310731f9f08d4240d9c323" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char</type>
+        <definition>static char evab::CharsetVerticalProgressBar::GetChar</definition>
+        <argsstring>(unsigned char fillLevel)</argsstring>
+        <name>GetChar</name>
+        <qualifiedname>evab::CharsetVerticalProgressBar::GetChar</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>fillLevel</declname>
+        </param>
+        <briefdescription>
+<para>Gets character for fill level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fillLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill level (0-2) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Character to display </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="102" column="21" bodyfile="src/evabInputTextStretchBar.h" bodystart="102" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Character set for vertical progress bar. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabInputTextStretchBar.h" line="94" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="95" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structevab_1_1_charset_vertical_progress_bar_1ae8e93db3b5310731f9f08d4240d9c323" prot="public" virt="non-virtual"><scope>evab::CharsetVerticalProgressBar</scope><name>GetChar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

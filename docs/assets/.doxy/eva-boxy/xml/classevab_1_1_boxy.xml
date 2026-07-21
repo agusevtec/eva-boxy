@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_boxy" kind="class" language="C++" prot="public">
     <compoundname>evab::Boxy</compoundname>
     <basecompoundref prot="public" virt="non-virtual">eva::IHandler</basecompoundref>
+    <includes refid="evab_boxy_8h" local="no">evabBoxy.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_boxy_1aa0c9017e75baac7aa95194f73bfd641a" prot="private" static="no" mutable="no">
         <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
@@ -11,12 +12,13 @@
         <name>mScreen</name>
         <qualifiedname>evab::Boxy::mScreen</qualifiedname>
         <briefdescription>
+<para>Current screen instance. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="39" column="17" bodyfile="src/evabBoxy.h" bodystart="39" bodyend="-1"/>
+        <location file="src/evabBoxy.h" line="81" column="17" bodyfile="src/evabBoxy.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_boxy_1a19139a262d040ad6307416a87f1dcfbc" prot="private" static="no" mutable="no">
         <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
@@ -25,12 +27,13 @@
         <name>mGround</name>
         <qualifiedname>evab::Boxy::mGround</qualifiedname>
         <briefdescription>
+<para>Ground element being displayed. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="40" column="21" bodyfile="src/evabBoxy.h" bodystart="40" bodyend="-1"/>
+        <location file="src/evabBoxy.h" line="82" column="21" bodyfile="src/evabBoxy.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_boxy_1a1f6c8d9667d25c68e7a38b3c84c27d52" prot="private" static="no" mutable="no">
         <type>eva::DelayTimer</type>
@@ -40,12 +43,13 @@
         <qualifiedname>evab::Boxy::mModalShowTimer</qualifiedname>
         <initializer>= {this}</initializer>
         <briefdescription>
+<para>Timer for modal visibility. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="41" column="25" bodyfile="src/evabBoxy.h" bodystart="41" bodyend="41"/>
+        <location file="src/evabBoxy.h" line="83" column="25" bodyfile="src/evabBoxy.h" bodystart="83" bodyend="83"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -77,12 +81,56 @@
           <declname>args</declname>
         </param>
         <briefdescription>
+<para>Initializes the <ref refid="classevab_1_1_boxy" kindref="compound">Boxy</ref> system with a screen and ground element. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Screen type to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TFont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Font type to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional arguments for screen constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aGround</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base element to display </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments forwarded to screen constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="16" column="21" bodyfile="src/evabBoxy.h" bodystart="16" bodyend="25"/>
+        <location file="src/evabBoxy.h" line="31" column="21" bodyfile="src/evabBoxy.h" bodystart="31" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_1a087c7b44197fde12c104519ac261a04e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -95,12 +143,23 @@
           <declname>aKey</declname>
         </param>
         <briefdescription>
+<para>Forwards key events to the ground element. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code to process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="27" column="21"/>
+        <location file="src/evabBoxy.h" line="47" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_1adce1596da674162398db477716fcc3f6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
@@ -109,12 +168,16 @@
         <name>Screen</name>
         <qualifiedname>evab::Boxy::Screen</qualifiedname>
         <briefdescription>
+<para>Gets the current screen pointer. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to current screen, or nullptr if modal is active </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="29" column="24"/>
+        <location file="src/evabBoxy.h" line="54" column="24"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_1ad497c4dfe6634762aa2a1cee62a0e7a8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classevab_1_1_boxy" kindref="compound">Boxy</ref> *</type>
@@ -123,12 +186,16 @@
         <name>Instance</name>
         <qualifiedname>evab::Boxy::Instance</qualifiedname>
         <briefdescription>
+<para>Gets the singleton instance. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the <ref refid="classevab_1_1_boxy" kindref="compound">Boxy</ref> singleton </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="31" column="21"/>
+        <location file="src/evabBoxy.h" line="61" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_1a6a8436a7b2ebd0e87fc82e39bcd670af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -145,12 +212,31 @@
           <declname>aValue</declname>
         </param>
         <briefdescription>
+<para>Displays a temporary modal with a named integer value. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label text </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Integer value to show </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="33" column="21"/>
+        <location file="src/evabBoxy.h" line="69" column="21"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -167,17 +253,38 @@
           <type>eva::CallbackInfo</type>
         </param>
         <briefdescription>
+<para>IHandler callback implementation. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>void*</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unused </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eva::CallbackInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback information </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="36" column="14"/>
+        <location file="src/evabBoxy.h" line="78" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Main application controller managing screen, input, and modal overlays. </para>
     </briefdescription>
     <detaileddescription>
+<para><ref refid="classevab_1_1_boxy" kindref="compound">Boxy</ref> is a singleton that provides global access to the display system, manages the current screen, and handles modal popups. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -201,7 +308,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabBoxy.h" line="12" column="5" bodyfile="src/evabBoxy.h" bodystart="13" bodyend="42"/>
+    <location file="src/evabBoxy.h" line="18" column="5" bodyfile="src/evabBoxy.h" bodystart="19" bodyend="84"/>
     <listofallmembers>
       <member refid="classevab_1_1_boxy_1a8feff22f64a5b6fb21fecfd986bcc1e4" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>Begin</name></member>
       <member refid="classevab_1_1_boxy_1ad497c4dfe6634762aa2a1cee62a0e7a8" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>Instance</name></member>

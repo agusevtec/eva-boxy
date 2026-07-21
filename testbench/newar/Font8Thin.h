@@ -2,7 +2,7 @@
 
 #include <Arduino.h>
 
-class Font8Thin
+class Font8Narrow
 {
 public:
     static uint8_t GetVerticalSlice(char aCharcode, uint8_t aSliceColumn);

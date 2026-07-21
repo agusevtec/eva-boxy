@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_input_text_stretch_bar" kind="class" language="C++" prot="public">
+    <compoundname>evab::InputTextStretchBar</compoundname>
+    <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <includes refid="evab_input_text_stretch_bar_8h" local="no">evabInputTextStretchBar.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TPictoset</type>
+      </param>
+      <param>
+        <type>typename OrientationTextPolicy</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_input_text_stretch_bar_1ae8a908d1e06d229cbf2157c12bab6211" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::mValue</definition>
+        <argsstring></argsstring>
+        <name>mValue</name>
+        <qualifiedname>evab::InputTextStretchBar::mValue</qualifiedname>
+        <briefdescription>
+<para>Current value (0-100). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="282" column="23" bodyfile="src/evabInputTextStretchBar.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1ab4e3f6400340b440effe4a826337a737" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::InputTextStretchBar</definition>
+        <argsstring>(unsigned char aValue=0)</argsstring>
+        <name>InputTextStretchBar</name>
+        <qualifiedname>evab::InputTextStretchBar::InputTextStretchBar</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aValue</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial value (0-100) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="212" column="9" bodyfile="src/evabInputTextStretchBar.h" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1a43dfe12c6dae484f8651b3170603db93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::SetValue</definition>
+        <argsstring>(unsigned char aValue)</argsstring>
+        <name>SetValue</name>
+        <qualifiedname>evab::InputTextStretchBar::SetValue</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value and redraws. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value (0-100) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="222" column="14" bodyfile="src/evabInputTextStretchBar.h" bodystart="222" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1a124045da73d9912358daf72ffb658bba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::Increment</definition>
+        <argsstring>(signed char delta)</argsstring>
+        <name>Increment</name>
+        <qualifiedname>evab::InputTextStretchBar::Increment</qualifiedname>
+        <param>
+          <type>signed char</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>Increments the value by a delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount to add (positive or negative) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="233" column="14" bodyfile="src/evabInputTextStretchBar.h" bodystart="233" bodyend="236"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1ab4ab3df83b0f0be3a48db05a0d15f2ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::drawer</definition>
+        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::InputTextStretchBar::drawer</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e">drawer</reimplements>
+        <param>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+<para>Draws the text stretch bar on screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Screen to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="247" column="14" bodyfile="src/evabInputTextStretchBar.h" bodystart="247" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1ab757049ce13d88293615ba330f1f7228" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char</type>
+        <definition>char evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::blockFill</definition>
+        <argsstring>(unsigned char blockNumber, unsigned short normalizedValue)</argsstring>
+        <name>blockFill</name>
+        <qualifiedname>evab::InputTextStretchBar::blockFill</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>blockNumber</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>normalizedValue</declname>
+        </param>
+        <briefdescription>
+<para>Calculates fill level for a block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blockNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Block index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normalizedValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Normalized value (0 to resolution) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Fill level (0-2) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputTextStretchBar.h" line="273" column="14" bodyfile="src/evabInputTextStretchBar.h" bodystart="273" bodyend="280"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Text-based stretch bar element. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Displays a progress/scroll bar using characters instead of pictograms.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TPictoset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character set class providing GetChar method </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>OrientationTextPolicy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Policy for orientation (vertical/horizontal) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;</label>
+        <link refid="classevab_1_1_input_text_stretch_bar"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;</label>
+        <link refid="classevab_1_1_input_text_stretch_bar"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabInputTextStretchBar.h" line="204" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="205" bodyend="283"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_input_text_stretch_bar_1ab757049ce13d88293615ba330f1f7228" prot="private" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>blockFill</name></member>
+      <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_input_text_stretch_bar_1ab4ab3df83b0f0be3a48db05a0d15f2ec" prot="private" virt="virtual"><scope>evab::InputTextStretchBar</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>Hide</name></member>
+      <member refid="classevab_1_1_input_text_stretch_bar_1a124045da73d9912358daf72ffb658bba" prot="public" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_input_text_stretch_bar_1ab4e3f6400340b440effe4a826337a737" prot="public" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>InputTextStretchBar</name></member>
+      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>IsHidden</name></member>
+      <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::InputTextStretchBar</scope><name>Key</name></member>
+      <member refid="classevab_1_1_input_text_stretch_bar_1ae8a908d1e06d229cbf2157c12bab6211" prot="private" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>mValue</name></member>
+      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>Redraw</name></member>
+      <member refid="classevab_1_1_input_text_stretch_bar_1a43dfe12c6dae484f8651b3170603db93" prot="public" virt="non-virtual"><scope>evab::InputTextStretchBar</scope><name>SetValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

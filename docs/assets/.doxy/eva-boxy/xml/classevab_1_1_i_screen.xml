@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_i_screen" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>evab::IScreen</compoundname>
     <derivedcompoundref refid="classevab_1_1_screen_base" prot="public" virt="non-virtual">evab::ScreenBase</derivedcompoundref>
+    <includes refid="evab_i_screen_8h" local="no">evabIScreen.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_i_screen_1a8af506f56d3886c03958031168f75fa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -28,12 +29,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned to the left. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Null-terminated string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag (0 = normal, 1 = inverted) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="10" column="22"/>
+        <location file="src/evabIScreen.h" line="24" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a3cfd8a521fb127b33c3ee316e06a90a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -59,12 +95,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned to the center. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Null-terminated string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag (0 = normal, 1 = inverted) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="11" column="22"/>
+        <location file="src/evabIScreen.h" line="34" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a9e64eb57249408a3adbea99a94752418" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -90,12 +161,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned to the right. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Null-terminated string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag (0 = normal, 1 = inverted) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="12" column="22"/>
+        <location file="src/evabIScreen.h" line="44" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a413b62fc5db49fb386f71596740ac771" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -121,12 +227,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws flash string text aligned to the left. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string (PROGMEM) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag (0 = normal, 1 = inverted) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="14" column="22"/>
+        <location file="src/evabIScreen.h" line="54" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1acf7da756d0282ccfe9b1ac45084e8010" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -152,12 +293,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws flash string text aligned to the center. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string (PROGMEM) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag (0 = normal, 1 = inverted) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="15" column="22"/>
+        <location file="src/evabIScreen.h" line="64" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1ab06ff5b742b28cd92c84d42ae0ad3f87" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -183,12 +359,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws flash string text aligned to the right. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string (PROGMEM) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag (0 = normal, 1 = inverted) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="16" column="22"/>
+        <location file="src/evabIScreen.h" line="74" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a856a489025c3ad7c546464c69faf9ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -211,12 +422,39 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws a pictogram at the specified position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pictoData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pictogram data (first two bytes: width/height in tiles) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag (0 = normal, 1 = inverted) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="18" column="22"/>
+        <location file="src/evabIScreen.h" line="83" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a990fb6e0d14b6ebc8fcc001a98623205" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -239,12 +477,39 @@
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Clears a rectangular area on screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill color (0 = clear, 1 = fill) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="19" column="22"/>
+        <location file="src/evabIScreen.h" line="92" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1aa0ad56fedd8b77765e0fece74ab14d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -272,12 +537,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws a single character symbol. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSymbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character to draw </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag (0 = normal, 1 = inverted) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="20" column="22"/>
+        <location file="src/evabIScreen.h" line="102" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -293,17 +593,157 @@
         <reimplementedby refid="classevab_1_1_screen_s_s_d1306_1ae1e23d3abbf9b7a7a1524abf7e5dc379">Size</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa">Size</reimplementedby>
         <briefdescription>
+<para>Gets the screen size in tiles. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Screen dimensions in tiles (X, Y) </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="21" column="22"/>
+        <location file="src/evabIScreen.h" line="109" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>unsigned short</type>
+        <definition>virtual unsigned short evab::IScreen::Serialize</definition>
+        <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)=0</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>evab::IScreen::Serialize</qualifiedname>
+        <reimplementedby refid="classevab_1_1_screen_k_s0108_1a37b85da65c7574bc077bf368412f4f79">Serialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_l_c_d___i2_c_1a297f2d8d2db51fa6a73a6fced5008165">Serialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_p_c_d8544_1a7401fa0b08f2cede79ccd3fff9ae971d">Serialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_serial_pixel_1a53ce3ee6231eb5d7371020e5f38fe7bf">Serialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_serial_text_1a6de54c87951c558b8a2d6159a354ef37">Serialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_s_s_d1306_1a0615113f865bc13dcb6908e4cf669a9b">Serialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_s_s_h1106_1a80e2cdf993dfdb565a21f4f593559732">Serialize</reimplementedby>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Serializes element state into 16-bit value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned short Serialized state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabIScreen.h" line="119" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void evab::IScreen::Deserialize</definition>
+        <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)=0</argsstring>
+        <name>Deserialize</name>
+        <qualifiedname>evab::IScreen::Deserialize</qualifiedname>
+        <reimplementedby refid="classevab_1_1_screen_k_s0108_1afc3b7c6858d7ca964b60527cd8410126">Deserialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_l_c_d___i2_c_1a511ab4c467c8a21cd55fc460eeed3bac">Deserialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_p_c_d8544_1aa477aa8668fe7f21a21658943d4fd149">Deserialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_serial_pixel_1a204afb81d0ade103dd72b316bef83100">Deserialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_serial_text_1a57b41418e58cbc04cd12c298a307e025">Deserialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_s_s_d1306_1afb00106a9a0edad05762591fadea1bdf">Deserialize</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_s_s_h1106_1a21264b69f031c5d30985b48230aeb132">Deserialize</reimplementedby>
+        <param>
+          <type>unsigned short</type>
+          <declname>aSerialized</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes element state from 16-bit value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSerialized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Serialized state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (output) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabIScreen.h" line="129" column="22"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Abstract interface for screen rendering. </para>
     </briefdescription>
     <detaileddescription>
+<para>Defines the contract for display implementations, supporting text, pictograms, and state serialization. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -365,11 +805,13 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="src/evabIScreen.h" line="7" column="5" bodyfile="src/evabIScreen.h" bodystart="8" bodyend="22"/>
+    <location file="src/evabIScreen.h" line="13" column="5" bodyfile="src/evabIScreen.h" bodystart="14" bodyend="130"/>
     <listofallmembers>
       <member refid="classevab_1_1_i_screen_1a990fb6e0d14b6ebc8fcc001a98623205" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_i_screen_1aa0ad56fedd8b77765e0fece74ab14d21" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>DrawSymbol</name></member>
       <member refid="classevab_1_1_i_screen_1a856a489025c3ad7c546464c69faf9ecb" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Serialize</name></member>
       <member refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Size</name></member>
       <member refid="classevab_1_1_i_screen_1a3cfd8a521fb127b33c3ee316e06a90a2" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>TextCenter</name></member>
       <member refid="classevab_1_1_i_screen_1acf7da756d0282ccfe9b1ac45084e8010" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>TextCenter</name></member>

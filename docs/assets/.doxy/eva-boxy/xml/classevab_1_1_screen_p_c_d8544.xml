@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_screen_p_c_d8544" kind="class" language="C++" prot="public">
     <compoundname>evab::ScreenPCD8544</compoundname>
     <basecompoundref refid="classevab_1_1_screen_page8_base" prot="public" virt="non-virtual">evab::ScreenPage8Base</basecompoundref>
+    <includes refid="evab_screen_p_c_d8544_8h" local="no">evabScreenPCD8544.h</includes>
     <sectiondef kind="private-static-attrib">
       <memberdef kind="variable" id="classevab_1_1_screen_p_c_d8544_1ad54050ec532e6782e47e1552d8771084" prot="private" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -12,12 +13,13 @@
         <qualifiedname>evab::ScreenPCD8544::CMD_FUNC_SET</qualifiedname>
         <initializer>= 0x20</initializer>
         <briefdescription>
+<para>Function set command. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="32" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="32" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="117" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_p_c_d8544_1a2db6edc4c37e676b3e14c7daa1f63e8c" prot="private" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -27,12 +29,13 @@
         <qualifiedname>evab::ScreenPCD8544::CMD_DISP_CTRL</qualifiedname>
         <initializer>= 0x08</initializer>
         <briefdescription>
+<para>Display control command. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="33" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="33" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="118" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_p_c_d8544_1ad2d1a22a4c78bb862ee9354fa89fe504" prot="private" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -42,12 +45,13 @@
         <qualifiedname>evab::ScreenPCD8544::CMD_SET_Y</qualifiedname>
         <initializer>= 0x40</initializer>
         <briefdescription>
+<para>Set Y address command. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="34" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="34" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="119" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="119" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_p_c_d8544_1af587dcd27b2f257df273b61f56155681" prot="private" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -57,12 +61,13 @@
         <qualifiedname>evab::ScreenPCD8544::CMD_SET_X</qualifiedname>
         <initializer>= 0x80</initializer>
         <briefdescription>
+<para>Set X address command. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="35" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="35" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="120" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_p_c_d8544_1af8c0344fd0dde925dfa85c624947a72e" prot="private" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -72,12 +77,13 @@
         <qualifiedname>evab::ScreenPCD8544::CMD_SET_VOP</qualifiedname>
         <initializer>= 0x80</initializer>
         <briefdescription>
+<para>Set Vop (contrast) command. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="36" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="36" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="121" column="26" bodyfile="src/evabScreenPCD8544.h" bodystart="121" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -88,12 +94,13 @@
         <name>mRSTPin</name>
         <qualifiedname>evab::ScreenPCD8544::mRSTPin</qualifiedname>
         <briefdescription>
+<para>Reset pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="38" column="13" bodyfile="src/evabScreenPCD8544.h" bodystart="38" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="123" column="13" bodyfile="src/evabScreenPCD8544.h" bodystart="123" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_p_c_d8544_1abe59098a8a395f92479046c7ff992d0f" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -102,12 +109,13 @@
         <name>mCEPin</name>
         <qualifiedname>evab::ScreenPCD8544::mCEPin</qualifiedname>
         <briefdescription>
+<para>Chip enable pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="39" column="13" bodyfile="src/evabScreenPCD8544.h" bodystart="39" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="124" column="13" bodyfile="src/evabScreenPCD8544.h" bodystart="124" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_p_c_d8544_1a747c2c0b2bd7392ecbdd8b5cfb098312" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -116,12 +124,13 @@
         <name>mDCPin</name>
         <qualifiedname>evab::ScreenPCD8544::mDCPin</qualifiedname>
         <briefdescription>
+<para>Data/Command pin. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="40" column="13" bodyfile="src/evabScreenPCD8544.h" bodystart="40" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="125" column="13" bodyfile="src/evabScreenPCD8544.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_p_c_d8544_1ad93725d55cc2c03edd5c100a0a87b20c" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -130,12 +139,13 @@
         <name>mLEDPin</name>
         <qualifiedname>evab::ScreenPCD8544::mLEDPin</qualifiedname>
         <briefdescription>
+<para>Backlight pin (255 = none). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="41" column="13" bodyfile="src/evabScreenPCD8544.h" bodystart="41" bodyend="-1"/>
+        <location file="src/evabScreenPCD8544.h" line="126" column="13" bodyfile="src/evabScreenPCD8544.h" bodystart="126" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -175,76 +185,129 @@
           <defval>255</defval>
         </param>
         <briefdescription>
+<para>Constructor for PCD8544 screen driver. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aFont</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Font to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aRST</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reset pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aCE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chip enable pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aDC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data/Command pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aDIN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data in pin (MOSI) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aCLK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Clock pin (SCLK) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aLED</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Backlight pin (255 = none) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="12" column="5"/>
+        <location file="src/evabScreenPCD8544.h" line="28" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a35b636a7e5765db1df07874f8f65cce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>evab::ScreenPCD8544::~ScreenPCD8544</definition>
-        <argsstring>()</argsstring>
-        <name>~ScreenPCD8544</name>
-        <qualifiedname>evab::ScreenPCD8544::~ScreenPCD8544</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="16" column="5"/>
-      </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1abc530d05cc5c3bb1d6e32a8adefad650" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a9c00ee95bb7c13aecafdad56913291f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::ScreenPCD8544::setBacklight</definition>
+        <definition>void evab::ScreenPCD8544::SetBacklight</definition>
         <argsstring>(uint8_t aState)</argsstring>
-        <name>setBacklight</name>
-        <qualifiedname>evab::ScreenPCD8544::setBacklight</qualifiedname>
+        <name>SetBacklight</name>
+        <qualifiedname>evab::ScreenPCD8544::SetBacklight</qualifiedname>
         <param>
           <type>uint8_t</type>
           <declname>aState</declname>
         </param>
         <briefdescription>
+<para>Sets backlight state. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1 = on, 0 = off </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="18" column="10"/>
+        <location file="src/evabScreenPCD8544.h" line="38" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1ac5d9eaa754dc2265728116d634b9df50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a52234370b67796bc8c52aea8dca72595" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::ScreenPCD8544::setContrast</definition>
+        <definition>void evab::ScreenPCD8544::SetContrast</definition>
         <argsstring>(uint8_t aContrast)</argsstring>
-        <name>setContrast</name>
-        <qualifiedname>evab::ScreenPCD8544::setContrast</qualifiedname>
+        <name>SetContrast</name>
+        <qualifiedname>evab::ScreenPCD8544::SetContrast</qualifiedname>
         <param>
           <type>uint8_t</type>
           <declname>aContrast</declname>
         </param>
         <briefdescription>
+<para>Sets display contrast. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aContrast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contrast value (0-127) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="19" column="10"/>
-      </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1af637db5454408173b8aabc27a0b25f0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void evab::ScreenPCD8544::clear</definition>
-        <argsstring>()</argsstring>
-        <name>clear</name>
-        <qualifiedname>evab::ScreenPCD8544::clear</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="20" column="10"/>
+        <location file="src/evabScreenPCD8544.h" line="45" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a9477b0447b9418287c36d9e39c539185" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -254,12 +317,138 @@
         <qualifiedname>evab::ScreenPCD8544::Size</qualifiedname>
         <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
         <briefdescription>
+<para>Gets the screen size in tiles. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Screen dimensions (11x6 tiles) </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="21" column="10" bodyfile="src/evabScreenPCD8544.h" bodystart="21" bodyend="21"/>
+        <location file="src/evabScreenPCD8544.h" line="52" column="10" bodyfile="src/evabScreenPCD8544.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a7401fa0b08f2cede79ccd3fff9ae971d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::ScreenPCD8544::Serialize</definition>
+        <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>evab::ScreenPCD8544::Serialize</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352">Serialize</reimplements>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Serializes element state for 16x8 screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned short Serialized state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenPCD8544.h" line="62" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1aa477aa8668fe7f21a21658943d4fd149" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::ScreenPCD8544::Deserialize</definition>
+        <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
+        <name>Deserialize</name>
+        <qualifiedname>evab::ScreenPCD8544::Deserialize</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008">Deserialize</reimplements>
+        <param>
+          <type>unsigned short</type>
+          <declname>aSerialized</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes element state for 16x8 screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSerialized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Serialized state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (output) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenPCD8544.h" line="72" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -283,12 +472,39 @@
           <declname>aSlice</declname>
         </param>
         <briefdescription>
+<para>Draws a vertical slice at the specified position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSliceColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column within the tile (0-7) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSlice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitmap data for the slice </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="24" column="10"/>
+        <location file="src/evabScreenPCD8544.h" line="82" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a24a4d136902bb772b51b1b736198edda" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -306,15 +522,49 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Clears a tile at the specified position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the tile </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenPCD8544.h" line="90" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a47203082236f02d40faa72abf40e04ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ScreenPCD8544::clearDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>clearDisplay</name>
+        <qualifiedname>evab::ScreenPCD8544::clearDisplay</qualifiedname>
+        <briefdescription>
+<para>Clears the entire display. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="25" column="10"/>
+        <location file="src/evabScreenPCD8544.h" line="96" column="10"/>
       </memberdef>
-    </sectiondef>
-    <sectiondef kind="private-func">
       <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a6c6c09b9754b80a1c2ce539dd99e1f94" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::ScreenPCD8544::sendCommand</definition>
@@ -326,12 +576,23 @@
           <declname>aCmd</declname>
         </param>
         <briefdescription>
+<para>Sends a command to the display. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aCmd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="28" column="10"/>
+        <location file="src/evabScreenPCD8544.h" line="103" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a68d08ddbff3d563e40a0169e51f8fe4b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -344,12 +605,23 @@
           <declname>aData</declname>
         </param>
         <briefdescription>
+<para>Sends data to the display. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="29" column="10"/>
+        <location file="src/evabScreenPCD8544.h" line="110" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a098109f64ab1e74a0fb479b24e7cf41f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -358,17 +630,20 @@
         <name>initDisplay</name>
         <qualifiedname>evab::ScreenPCD8544::initDisplay</qualifiedname>
         <briefdescription>
+<para>Initializes the display. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenPCD8544.h" line="30" column="10"/>
+        <location file="src/evabScreenPCD8544.h" line="115" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>PCD8544 screen driver (Nokia 5110 display). </para>
     </briefdescription>
     <detaileddescription>
+<para>Supports 84x48 pixel displays with SPI interface. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="4">
@@ -418,16 +693,17 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenPCD8544.h" line="9" column="3" bodyfile="src/evabScreenPCD8544.h" bodystart="10" bodyend="42"/>
+    <location file="src/evabScreenPCD8544.h" line="14" column="3" bodyfile="src/evabScreenPCD8544.h" bodystart="15" bodyend="127"/>
     <listofallmembers>
       <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>Clear</name></member>
-      <member refid="classevab_1_1_screen_p_c_d8544_1af637db5454408173b8aabc27a0b25f0e" prot="public" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>clear</name></member>
+      <member refid="classevab_1_1_screen_p_c_d8544_1a47203082236f02d40faa72abf40e04ee" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>clearDisplay</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a24a4d136902bb772b51b1b736198edda" prot="protected" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>ClearTile</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a2db6edc4c37e676b3e14c7daa1f63e8c" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>CMD_DISP_CTRL</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1ad54050ec532e6782e47e1552d8771084" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>CMD_FUNC_SET</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1af8c0344fd0dde925dfa85c624947a72e" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>CMD_SET_VOP</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1af587dcd27b2f257df273b61f56155681" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>CMD_SET_X</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1ad2d1a22a4c78bb862ee9354fa89fe504" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>CMD_SET_Y</name></member>
+      <member refid="classevab_1_1_screen_p_c_d8544_1aa477aa8668fe7f21a21658943d4fd149" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>DrawSymbol</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a6b0e45f539bb2517aed2d9102464fade" prot="protected" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>DrawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a098109f64ab1e74a0fb479b24e7cf41f" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>initDisplay</name></member>
@@ -440,8 +716,9 @@
       <member refid="classevab_1_1_screen_p_c_d8544_1adf541dce2af6a4d759114b7c9d2704a9" prot="public" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>ScreenPCD8544</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a6c6c09b9754b80a1c2ce539dd99e1f94" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>sendCommand</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a68d08ddbff3d563e40a0169e51f8fe4b" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>sendData</name></member>
-      <member refid="classevab_1_1_screen_p_c_d8544_1abc530d05cc5c3bb1d6e32a8adefad650" prot="public" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>setBacklight</name></member>
-      <member refid="classevab_1_1_screen_p_c_d8544_1ac5d9eaa754dc2265728116d634b9df50" prot="public" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>setContrast</name></member>
+      <member refid="classevab_1_1_screen_p_c_d8544_1a7401fa0b08f2cede79ccd3fff9ae971d" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>Serialize</name></member>
+      <member refid="classevab_1_1_screen_p_c_d8544_1a9c00ee95bb7c13aecafdad56913291f3" prot="public" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>SetBacklight</name></member>
+      <member refid="classevab_1_1_screen_p_c_d8544_1a52234370b67796bc8c52aea8dca72595" prot="public" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>SetContrast</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a9477b0447b9418287c36d9e39c539185" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>Size</name></member>
       <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>TextCenter</name></member>
       <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>TextCenter</name></member>
@@ -449,7 +726,6 @@
       <member refid="classevab_1_1_screen_base_1a57d68fbe93780fa7e2618f06ba13c80a" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>TextLeft</name></member>
       <member refid="classevab_1_1_screen_base_1a3d5abf436b82c2c0498765dac9fa157b" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>TextRight</name></member>
       <member refid="classevab_1_1_screen_base_1abd7f2ce82a9ecc72decf3aa01d1be544" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>TextRight</name></member>
-      <member refid="classevab_1_1_screen_p_c_d8544_1a35b636a7e5765db1df07874f8f65cce9" prot="public" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>~ScreenPCD8544</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

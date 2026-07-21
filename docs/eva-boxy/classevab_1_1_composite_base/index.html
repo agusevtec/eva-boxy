@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -485,6 +513,17 @@
     <span class="md-ellipsis">
       
         Protected Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detailed Description
       
     </span>
   </a>
@@ -591,6 +630,10 @@
 
 <h1 id="class-evabcompositebase">Class evab::CompositeBase<a class="headerlink" href="#class-evabcompositebase" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>CompositeBase</strong></a></p>
+<p><em>Abstract base class for composite elements that can manage child focus.</em> <a href="#detailed-description">More...</a></p>
+<ul>
+<li><code>#include &lt;evabCompositeBase.h&gt;</code></li>
+</ul>
 <p>Inherits the following classes: <a href="../classevab_1_1_element_base/">evab::ElementBase</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -603,15 +646,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-isfocused"><strong>IsFocused</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aChild) <br></td>
+<td style="text-align: left;"><a href="#function-isfocused"><strong>IsFocused</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aChild) <br><em>Checks if a child is currently focused.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-hider"><strong>hider</strong></a> () = 0<br></td>
+<td style="text-align: left;"><a href="#function-hider"><strong>hider</strong></a> () = 0<br><em>Pure virtual method to hide all children.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="#function-onresidualkey"><strong>onResidualKey</strong></a> (Keys aKey) <br></td>
+<td style="text-align: left;"><a href="#function-onresidualkey"><strong>onResidualKey</strong></a> (Keys aKey) <br><em>Handles residual keys when no child handles the event.</em></td>
 </tr>
 </tbody>
 </table>
@@ -627,23 +670,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>IScreen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hide"><strong>Hide</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hide"><strong>Hide</strong></a> () <br><em>Hides the element from view.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br><em>Checks if the element is hidden.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
 </tr>
 </tbody>
 </table>
@@ -658,20 +701,30 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-focuschild"><strong>focusChild</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aChild) <br></td>
+<td style="text-align: left;"><a href="#function-focuschild"><strong>focusChild</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aChild) <br><em>Sets the focused child element.</em></td>
 </tr>
 </tbody>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
+<p>Provides focus management and key event routing for container elements. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-isfocused">function IsFocused<a class="headerlink" href="#function-isfocused" title="Permanent link">&para;</a></h3>
+<p><em>Checks if a child is currently focused.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">CompositeBase</span><span class="o">::</span><span class="n">IsFocused</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aChild</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aChild</code> Child element to check </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>true if the child is focused </p>
 <hr>
 
 <h3 id="function-hider">function hider<a class="headerlink" href="#function-hider" title="Permanent link">&para;</a></h3>
+<p><em>Pure virtual method to hide all children.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">CompositeBase</span><span class="o">::</span><span class="n">hider</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
@@ -679,19 +732,32 @@
 <hr>
 
 <h3 id="function-onresidualkey">function onResidualKey<a class="headerlink" href="#function-onresidualkey" title="Permanent link">&para;</a></h3>
+<p><em>Handles residual keys when no child handles the event.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">CompositeBase</span><span class="o">::</span><span class="n">onResidualKey</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p>Override this to implement custom key handling in composites.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aKey</code> Key code to process </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>true if the key was handled, false otherwise </p>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-focuschild">function focusChild<a class="headerlink" href="#function-focuschild" title="Permanent link">&para;</a></h3>
+<p><em>Sets the focused child element.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">CompositeBase</span><span class="o">::</span><span class="n">focusChild</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aChild</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aChild</code> Child element to focus </li>
+</ul>
 <hr>
 
 <hr />

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_font8_narrow" kind="class" language="C++" prot="public">
+    <compoundname>evab::Font8Narrow</compoundname>
+    <basecompoundref refid="classevab_1_1_i_font" prot="public" virt="non-virtual">evab::IFont</basecompoundref>
+    <includes refid="evab_font8_narrow_8h" local="no">evabFont8Narrow.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_font8_narrow_1ab3f248a18cde663956656231cd6bb8ce" prot="private" static="yes" mutable="no">
+        <type>const unsigned char kCharmap[][7]</type>
+        <definition>const unsigned char kCharmap [][7] evab::Font8Narrow::PROGMEM</definition>
+        <argsstring></argsstring>
+        <name>PROGMEM</name>
+        <qualifiedname>evab::Font8Narrow::PROGMEM</qualifiedname>
+        <briefdescription>
+<para>Character bitmap data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabFont8Narrow.h" line="26" column="45" bodyfile="src/evabFont8Narrow.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_font8_narrow_1a8c62a4684773a2120a1922b5fb9f1d7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::Font8Narrow::GetVerticalSlice</definition>
+        <argsstring>(char aCharcode, unsigned char aSliceColumn) const override</argsstring>
+        <name>GetVerticalSlice</name>
+        <qualifiedname>evab::Font8Narrow::GetVerticalSlice</qualifiedname>
+        <reimplements refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad">GetVerticalSlice</reimplements>
+        <param>
+          <type>char</type>
+          <declname>aCharcode</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aSliceColumn</declname>
+        </param>
+        <briefdescription>
+<para>Gets a vertical slice of a character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aCharcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ASCII character code (32-126) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSliceColumn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index (0-7) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned char Bitmap data for the specified column </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabFont8Narrow.h" line="23" column="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>8x8 thin font implementation </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides a thin 8x8 pixel font for display systems. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evab::Font8Narrow</label>
+        <link refid="classevab_1_1_font8_narrow"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::IFont</label>
+        <link refid="classevab_1_1_i_font"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evab::Font8Narrow</label>
+        <link refid="classevab_1_1_font8_narrow"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evab::IFont</label>
+        <link refid="classevab_1_1_i_font"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabFont8Narrow.h" line="13" column="5" bodyfile="src/evabFont8Narrow.h" bodystart="14" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_font8_narrow_1a8c62a4684773a2120a1922b5fb9f1d7a" prot="public" virt="virtual"><scope>evab::Font8Narrow</scope><name>GetVerticalSlice</name></member>
+      <member refid="classevab_1_1_font8_narrow_1ab3f248a18cde663956656231cd6bb8ce" prot="private" virt="non-virtual"><scope>evab::Font8Narrow</scope><name>PROGMEM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

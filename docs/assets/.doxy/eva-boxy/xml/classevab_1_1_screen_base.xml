@@ -6,6 +6,7 @@
     <derivedcompoundref refid="classevab_1_1_screen_l_c_d___i2_c" prot="public" virt="non-virtual">evab::ScreenLCD_I2C</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_page8_base" prot="public" virt="non-virtual">evab::ScreenPage8Base</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_serial_text" prot="public" virt="non-virtual">evab::ScreenSerialText</derivedcompoundref>
+    <includes refid="evab_screen_base_8h" local="no">evabScreenBase.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_screen_base_1af34945fb5a3fa9452f61f9f59b11f35f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -31,12 +32,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned left (C-string). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Null-terminated string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="12" column="14"/>
+        <location file="src/evabScreenBase.h" line="25" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -62,12 +98,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned center (C-string). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Null-terminated string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="13" column="14"/>
+        <location file="src/evabScreenBase.h" line="35" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_base_1a3d5abf436b82c2c0498765dac9fa157b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -93,12 +164,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned right (C-string). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Null-terminated string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="14" column="14"/>
+        <location file="src/evabScreenBase.h" line="45" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_base_1a57d68fbe93780fa7e2618f06ba13c80a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -124,12 +230,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned left (Flash string). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="15" column="14"/>
+        <location file="src/evabScreenBase.h" line="55" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -155,12 +296,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned center (Flash string). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="16" column="14"/>
+        <location file="src/evabScreenBase.h" line="65" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_base_1abd7f2ce82a9ecc72decf3aa01d1be544" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -186,12 +362,47 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws text aligned right (Flash string). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="17" column="14"/>
+        <location file="src/evabScreenBase.h" line="75" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -213,12 +424,39 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Clears a rectangular area. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill color (0 = clear, 1 = fill) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="18" column="14"/>
+        <location file="src/evabScreenBase.h" line="84" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -241,12 +479,39 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws a pictogram (default implementation). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pictoData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pictogram data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="19" column="22"/>
+        <location file="src/evabScreenBase.h" line="93" column="22"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -269,19 +534,38 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Clears a single tile. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the tile </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill color </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="23" column="22"/>
+        <location file="src/evabScreenBase.h" line="102" column="22"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
-      <memberdef kind="function" id="classevab_1_1_screen_base_1a3c6175de44026da6c2e51cf62cd9d270" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_base_1a4dfb6528b6882ed2aa253d2d4ea06eac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::ScreenBase::printTextInArea</definition>
-        <argsstring>(Coor aPosition, Coor aSize, const char *text, unsigned char aColor, uint8_t offset)</argsstring>
+        <argsstring>(Coor aPosition, Coor aSize, const char *text, unsigned char aColor, unsigned char offset)</argsstring>
         <name>printTextInArea</name>
         <qualifiedname>evab::ScreenBase::printTextInArea</qualifiedname>
         <param>
@@ -301,21 +585,64 @@
           <declname>aColor</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type>unsigned char</type>
           <declname>offset</declname>
         </param>
         <briefdescription>
+<para>Prints text in an area with offset (C-string). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Null-terminated string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character offset </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="26" column="14"/>
+        <location file="src/evabScreenBase.h" line="114" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_base_1adefd623e270bca28209af7205c651c22" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_base_1a95aeceb461f4f63306dae68b1186069d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::ScreenBase::printTextInArea</definition>
-        <argsstring>(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor, uint8_t offset)</argsstring>
+        <argsstring>(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor, unsigned char offset)</argsstring>
         <name>printTextInArea</name>
         <qualifiedname>evab::ScreenBase::printTextInArea</qualifiedname>
         <param>
@@ -335,21 +662,64 @@
           <declname>aColor</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type>unsigned char</type>
           <declname>offset</declname>
         </param>
         <briefdescription>
+<para>Prints text in an area with offset (Flash string). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character offset </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="27" column="14"/>
+        <location file="src/evabScreenBase.h" line="125" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_base_1a93433bf500bfe771393afbffa9df5136" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t evab::ScreenBase::calcLeftOffset</definition>
-        <argsstring>(Coor aSize, uint8_t textLen)</argsstring>
+      <memberdef kind="function" id="classevab_1_1_screen_base_1a128c87a949506bde39031213a283d8f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::ScreenBase::calcLeftOffset</definition>
+        <argsstring>(Coor aSize, unsigned char textLen)</argsstring>
         <name>calcLeftOffset</name>
         <qualifiedname>evab::ScreenBase::calcLeftOffset</qualifiedname>
         <param>
@@ -357,21 +727,42 @@
           <declname>aSize</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type>unsigned char</type>
           <declname>textLen</declname>
         </param>
         <briefdescription>
+<para>Calculates offset for left alignment. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the text </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Offset </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="29" column="17"/>
+        <location file="src/evabScreenBase.h" line="134" column="23"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_base_1af9b4f0e4250234cd8d9043fcd2f3e001" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t evab::ScreenBase::calcCenterOffset</definition>
-        <argsstring>(Coor aSize, uint8_t textLen)</argsstring>
+      <memberdef kind="function" id="classevab_1_1_screen_base_1a4b7c51926c3422e4c8c738ecaf954d1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::ScreenBase::calcCenterOffset</definition>
+        <argsstring>(Coor aSize, unsigned char textLen)</argsstring>
         <name>calcCenterOffset</name>
         <qualifiedname>evab::ScreenBase::calcCenterOffset</qualifiedname>
         <param>
@@ -379,21 +770,42 @@
           <declname>aSize</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type>unsigned char</type>
           <declname>textLen</declname>
         </param>
         <briefdescription>
+<para>Calculates offset for center alignment. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the text </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Offset </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="30" column="17"/>
+        <location file="src/evabScreenBase.h" line="143" column="23"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_base_1ada5b6b450c3c7a758b0237108625288a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t evab::ScreenBase::calcRightOffset</definition>
-        <argsstring>(Coor aSize, uint8_t textLen)</argsstring>
+      <memberdef kind="function" id="classevab_1_1_screen_base_1a4e8bf825cfe2d13a8dff1f0e64e1b04c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::ScreenBase::calcRightOffset</definition>
+        <argsstring>(Coor aSize, unsigned char textLen)</argsstring>
         <name>calcRightOffset</name>
         <qualifiedname>evab::ScreenBase::calcRightOffset</qualifiedname>
         <param>
@@ -401,20 +813,41 @@
           <declname>aSize</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type>unsigned char</type>
           <declname>textLen</declname>
         </param>
         <briefdescription>
+<para>Calculates offset for right alignment. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the text area </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the text </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Offset </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="31" column="17"/>
+        <location file="src/evabScreenBase.h" line="152" column="23"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_base_1af632d8db4e79b46a7a184787daa90c78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint8_t</type>
-        <definition>uint8_t evab::ScreenBase::flashStrLen</definition>
+      <memberdef kind="function" id="classevab_1_1_screen_base_1a9ebc7bf00216db1187ad5e3ae30df25d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::ScreenBase::flashStrLen</definition>
         <argsstring>(const __FlashStringHelper *str)</argsstring>
         <name>flashStrLen</name>
         <qualifiedname>evab::ScreenBase::flashStrLen</qualifiedname>
@@ -423,17 +856,30 @@
           <declname>str</declname>
         </param>
         <briefdescription>
+<para>Gets length of a Flash string. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Length of the string </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="33" column="17"/>
+        <location file="src/evabScreenBase.h" line="160" column="23"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_base_1acac0b6c990235c2f8f93d5798dbc7bc1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_base_1a64e9e06bc90c5ac7de1f9b8ad7ba4e9e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
         <definition>char evab::ScreenBase::flashStrRead</definition>
-        <argsstring>(const __FlashStringHelper *str, uint8_t index)</argsstring>
+        <argsstring>(const __FlashStringHelper *str, unsigned char index)</argsstring>
         <name>flashStrRead</name>
         <qualifiedname>evab::ScreenBase::flashStrRead</qualifiedname>
         <param>
@@ -441,21 +887,44 @@
           <declname>str</declname>
         </param>
         <param>
-          <type>uint8_t</type>
+          <type>unsigned char</type>
           <declname>index</declname>
         </param>
         <briefdescription>
+<para>Reads a character from Flash string. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flash string pointer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Character at the specified position </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenBase.h" line="34" column="14"/>
+        <location file="src/evabScreenBase.h" line="169" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Base class for screen implementations. </para>
     </briefdescription>
     <detaileddescription>
+<para>Provides common text rendering functionality for all screens. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -529,19 +998,21 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenBase.h" line="9" column="5" bodyfile="src/evabScreenBase.h" bodystart="10" bodyend="35"/>
+    <location file="src/evabScreenBase.h" line="14" column="5" bodyfile="src/evabScreenBase.h" bodystart="15" bodyend="170"/>
     <listofallmembers>
-      <member refid="classevab_1_1_screen_base_1af9b4f0e4250234cd8d9043fcd2f3e001" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>calcCenterOffset</name></member>
-      <member refid="classevab_1_1_screen_base_1a93433bf500bfe771393afbffa9df5136" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>calcLeftOffset</name></member>
-      <member refid="classevab_1_1_screen_base_1ada5b6b450c3c7a758b0237108625288a" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>calcRightOffset</name></member>
+      <member refid="classevab_1_1_screen_base_1a4b7c51926c3422e4c8c738ecaf954d1a" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>calcCenterOffset</name></member>
+      <member refid="classevab_1_1_screen_base_1a128c87a949506bde39031213a283d8f0" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>calcLeftOffset</name></member>
+      <member refid="classevab_1_1_screen_base_1a4e8bf825cfe2d13a8dff1f0e64e1b04c" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>calcRightOffset</name></member>
       <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenBase</scope><name>Clear</name></member>
       <member refid="classevab_1_1_screen_base_1adcecf3475b92507656c85c7e97af5717" prot="protected" virt="virtual"><scope>evab::ScreenBase</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008" prot="public" virt="pure-virtual"><scope>evab::ScreenBase</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_i_screen_1aa0ad56fedd8b77765e0fece74ab14d21" prot="public" virt="pure-virtual"><scope>evab::ScreenBase</scope><name>DrawSymbol</name></member>
-      <member refid="classevab_1_1_screen_base_1af632d8db4e79b46a7a184787daa90c78" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>flashStrLen</name></member>
-      <member refid="classevab_1_1_screen_base_1acac0b6c990235c2f8f93d5798dbc7bc1" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>flashStrRead</name></member>
+      <member refid="classevab_1_1_screen_base_1a9ebc7bf00216db1187ad5e3ae30df25d" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>flashStrLen</name></member>
+      <member refid="classevab_1_1_screen_base_1a64e9e06bc90c5ac7de1f9b8ad7ba4e9e" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>flashStrRead</name></member>
       <member refid="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6" prot="public" virt="virtual"><scope>evab::ScreenBase</scope><name>Picto</name></member>
-      <member refid="classevab_1_1_screen_base_1a3c6175de44026da6c2e51cf62cd9d270" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>printTextInArea</name></member>
-      <member refid="classevab_1_1_screen_base_1adefd623e270bca28209af7205c651c22" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>printTextInArea</name></member>
+      <member refid="classevab_1_1_screen_base_1a4dfb6528b6882ed2aa253d2d4ea06eac" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>printTextInArea</name></member>
+      <member refid="classevab_1_1_screen_base_1a95aeceb461f4f63306dae68b1186069d" prot="private" virt="non-virtual"><scope>evab::ScreenBase</scope><name>printTextInArea</name></member>
+      <member refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352" prot="public" virt="pure-virtual"><scope>evab::ScreenBase</scope><name>Serialize</name></member>
       <member refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3" prot="public" virt="pure-virtual"><scope>evab::ScreenBase</scope><name>Size</name></member>
       <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenBase</scope><name>TextCenter</name></member>
       <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenBase</scope><name>TextCenter</name></member>

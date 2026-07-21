@@ -5,24 +5,20 @@
     <includedby refid="evab_boxy_8h" local="no">src/evabBoxy.h</includedby>
     <includedby refid="evab_element_base_8h" local="no">src/evabElementBase.h</includedby>
     <invincdepgraph>
-      <node id="4">
-        <label>src/evabBatteryIndicator.h</label>
-        <link refid="evab_battery_indicator_8h_source"/>
-      </node>
       <node id="2">
         <label>src/evabBoxy.h</label>
         <link refid="evab_boxy_8h_source"/>
       </node>
-      <node id="5">
+      <node id="4">
         <label>src/evabCompositeBase.h</label>
         <link refid="evab_composite_base_8h_source"/>
       </node>
       <node id="3">
         <label>src/evabElementBase.h</label>
         <link refid="evab_element_base_8h_source"/>
-        <childnode refid="4" relation="include">
-        </childnode>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -34,14 +30,42 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/evabInputAnimation.h</label>
+        <link refid="evab_input_animation_8h_source"/>
       </node>
       <node id="6">
+        <label>src/evabInputButton.h</label>
+        <link refid="evab_input_button_8h_source"/>
+      </node>
+      <node id="7">
         <label>src/evabInputFloat.h</label>
         <link refid="evab_input_float_8h_source"/>
       </node>
-      <node id="7">
+      <node id="8">
         <label>src/evabInputInt.h</label>
         <link refid="evab_input_int_8h_source"/>
+      </node>
+      <node id="9">
+        <label>src/evabInputPictogram.h</label>
+        <link refid="evab_input_pictogram_8h_source"/>
+      </node>
+      <node id="10">
+        <label>src/evabInputStretchBar.h</label>
+        <link refid="evab_input_stretch_bar_8h_source"/>
+      </node>
+      <node id="11">
+        <label>src/evabInputTextStretchBar.h</label>
+        <link refid="evab_input_text_stretch_bar_8h_source"/>
       </node>
       <node id="1">
         <label>src/evabKeys.h</label>
@@ -51,11 +75,11 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="12">
         <label>src/evabLayoutPane.h</label>
         <link refid="evab_layout_pane_8h_source"/>
       </node>
-      <node id="9">
+      <node id="13">
         <label>src/evabListBox.h</label>
         <link refid="evab_list_box_8h_source"/>
       </node>
@@ -68,6 +92,7 @@
           <name>KEY_MENU</name>
           <initializer>= 1</initializer>
           <briefdescription>
+<para>Menu key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -75,6 +100,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca1b0a91ff3a855d6993930ebf0abaa518" prot="public">
           <name>KEY_MODE</name>
           <briefdescription>
+<para>Mode key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -82,6 +108,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca2a662d23aadd7106a3a2afdfd5d426ed" prot="public">
           <name>KEY_ENTER</name>
           <briefdescription>
+<para>Enter key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -89,6 +116,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca3a471c8b61a5f730dcbdd50fe53f3ab7" prot="public">
           <name>KEY_ESCAPE</name>
           <briefdescription>
+<para>Escape key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -96,6 +124,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bcae7a3a4540031b038014294aa6743a7a4" prot="public">
           <name>KEY_DELETE</name>
           <briefdescription>
+<para>Delete key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -103,6 +132,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bcaa3cd0158e01f834cebcfb3fc5578df4b" prot="public">
           <name>KEY_BACKSPACE</name>
           <briefdescription>
+<para>Backspace key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -110,6 +140,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bcaa9cdac7967bf7d88fdb761138a2a3416" prot="public">
           <name>KEY_DOWN</name>
           <briefdescription>
+<para>Down arrow. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -117,6 +148,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca0848a442d907968b211b97bc2bd88acd" prot="public">
           <name>KEY_UP</name>
           <briefdescription>
+<para>Up arrow. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -124,6 +156,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca612120b69c7dfd46086db7aaebdbcf65" prot="public">
           <name>KEY_LEFT</name>
           <briefdescription>
+<para>Left arrow. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -131,6 +164,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca6504370d9c6391e1a9da6a1a529b089d" prot="public">
           <name>KEY_RIGHT</name>
           <briefdescription>
+<para>Right arrow. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -138,6 +172,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca5d9c9ba1d8f2c6f6737db37d3f449071" prot="public">
           <name>KEY_PAGEUP</name>
           <briefdescription>
+<para>Page Up key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -145,6 +180,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca5996c34d86df2b3c1be741aeb35bdbc4" prot="public">
           <name>KEY_PAGEDOWN</name>
           <briefdescription>
+<para>Page Down key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -152,6 +188,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca1de0dcc184ca51ef6112a4d14b9f1022" prot="public">
           <name>KEY_PLUS</name>
           <briefdescription>
+<para>Plus key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -159,6 +196,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca5f8f8f15bcfc7a3e745d4b5e0008832c" prot="public">
           <name>KEY_MINUS</name>
           <briefdescription>
+<para>Minus key. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -167,6 +205,7 @@
           <name>KEY_0</name>
           <initializer>= 0x30</initializer>
           <briefdescription>
+<para>Numeric key 0. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -174,6 +213,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca35bcc2bc85513df4f3897a9d64a9c51c" prot="public">
           <name>KEY_1</name>
           <briefdescription>
+<para>Numeric key 1. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -181,6 +221,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca2333d7c312aa98622c41e74c5d13e8de" prot="public">
           <name>KEY_2</name>
           <briefdescription>
+<para>Numeric key 2. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -188,6 +229,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bcaef054680a9be7da17d196e15aec894f8" prot="public">
           <name>KEY_3</name>
           <briefdescription>
+<para>Numeric key 3. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -195,6 +237,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bcae9f20352b4ef69ae68b9ff44abadfd79" prot="public">
           <name>KEY_4</name>
           <briefdescription>
+<para>Numeric key 4. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -202,6 +245,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bcaed864c0209ba46546ba112f6c36e0cc4" prot="public">
           <name>KEY_5</name>
           <briefdescription>
+<para>Numeric key 5. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -209,6 +253,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca2fe7fe99bcb0fd90bf4234be9e4ce5be" prot="public">
           <name>KEY_6</name>
           <briefdescription>
+<para>Numeric key 6. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -216,6 +261,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bcae78c88108d428cb8066e7a056195f489" prot="public">
           <name>KEY_7</name>
           <briefdescription>
+<para>Numeric key 7. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -223,6 +269,7 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bcaab8917d426f9be27c95c0d3810006d7b" prot="public">
           <name>KEY_8</name>
           <briefdescription>
+<para>Numeric key 8. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -230,17 +277,20 @@
         <enumvalue id="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca601382e2da6215882c129b43b3384611" prot="public">
           <name>KEY_9</name>
           <briefdescription>
+<para>Numeric key 9. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Key codes for user input. </para>
         </briefdescription>
         <detaileddescription>
+<para>Defines the standard key codes used throughout the library. ASCII codes are used for numeric keys (0x30-0x39). </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabKeys.h" line="3" column="1" bodyfile="src/evabKeys.h" bodystart="4" bodyend="29"/>
+        <location file="src/evabKeys.h" line="9" column="1" bodyfile="src/evabKeys.h" bodystart="10" bodyend="35"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -250,34 +300,33 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>Keys</highlight></codeline>
-<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_MENU<sp/>=<sp/>1,</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_MODE,</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_ENTER,</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_ESCAPE,</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_DELETE,</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_BACKSPACE,</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_DOWN,</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_UP,</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_LEFT,</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_RIGHT,</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_PAGEUP,</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_PAGEDOWN,</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_PLUS,</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_MINUS,</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_0<sp/>=<sp/>0x30,</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_1,</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_2,</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_3,</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_4,</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_5,</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_6,</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_7,</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_8,</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_9</highlight></codeline>
-<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>Keys</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_MENU<sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_MODE,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_ENTER,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_ESCAPE,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_DELETE,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_BACKSPACE,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_DOWN,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_UP,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_LEFT,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_RIGHT,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_PAGEUP,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_PAGEDOWN,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_PLUS,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_MINUS,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_0<sp/>=<sp/>0x30,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_4,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_5,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_6,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_7,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_8,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>KEY_9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
     </programlisting>
     <location file="src/evabKeys.h"/>
   </compounddef>

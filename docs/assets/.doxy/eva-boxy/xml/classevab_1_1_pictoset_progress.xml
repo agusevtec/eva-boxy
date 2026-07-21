@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_pictoset_progress" kind="class" language="C++" prot="public">
+    <compoundname>evab::PictosetProgress</compoundname>
+    <includes refid="evab_pictosets_8h" local="no">evabPictosets.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_pictoset_progress_1a57dadc63a2d661bd6cafbfc13eae4bda" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::PictosetProgress::Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <qualifiedname>evab::PictosetProgress::Count</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+<para>Number of pictograms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="115" column="40" bodyfile="src/evabPictosets.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_pictoset_progress_1ab6df4dfde8e89733ad963ee7bed507d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::PictosetProgress::GetTile</definition>
+        <argsstring>(unsigned char aIndex)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::PictosetProgress::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index (0-8) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPictosets.h" line="114" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Progress pictogram set (9 states). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabPictosets.h" line="105" column="5" bodyfile="src/evabPictosets.h" bodystart="106" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_pictoset_progress_1a57dadc63a2d661bd6cafbfc13eae4bda" prot="public" virt="non-virtual"><scope>evab::PictosetProgress</scope><name>Count</name></member>
+      <member refid="classevab_1_1_pictoset_progress_1ab6df4dfde8e89733ad963ee7bed507d8" prot="public" virt="non-virtual"><scope>evab::PictosetProgress</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

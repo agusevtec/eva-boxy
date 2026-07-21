@@ -1,0 +1,1466 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="EVA Boxy">
+      
+      
+      
+      
+        <link rel="prev" href="../uc-structured-ui/">
+      
+      
+        <link rel="next" href="../custom-display-driver/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Keyboard behavior - EVA Boxy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#keyboard-behavior" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EVA Boxy" class="md-header__button md-logo" aria-label="EVA Boxy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EVA Boxy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Keyboard behavior
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/agusevtec/eva-boxy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EVA Boxy" class="md-nav__button md-logo" aria-label="EVA Boxy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EVA Boxy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/agusevtec/eva-boxy" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What is it?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../display-drivers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Display Driver
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uc-paint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Paint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uc-elements-stamps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Elements Stamps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard behavior
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard behavior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-handling-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Handling Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Codes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sending-keys-to-boxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sending Keys to Boxy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Propagation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Modifiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Behavior Modifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keycatcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KeyCatcher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keymodifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KeyModifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyreactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KeyReactor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Focus Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#focus-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-control-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Control Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-key-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greedy Key Capture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy Key Capture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-capture-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Capture Chain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greedy-element-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greedy Element Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compositebase-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CompositeBase Customization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CompositeBase Customization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overriding-key-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overriding Key Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-display-driver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom display
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-handling-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Handling Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Codes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Input
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sending-keys-to-boxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sending Keys to Boxy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Propagation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Modifiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Behavior Modifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keycatcher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KeyCatcher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keymodifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KeyModifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyreactor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KeyReactor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Focus Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#focus-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-control-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Control Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Focus Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greedy-key-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greedy Key Capture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Greedy Key Capture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-capture-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Capture Chain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#greedy-element-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greedy Element Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compositebase-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CompositeBase Customization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CompositeBase Customization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overriding-key-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overriding Key Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="keyboard-behavior">Keyboard Behavior<a class="headerlink" href="#keyboard-behavior" title="Permanent link">&para;</a></h1>
+<p>EVA Boxy provides automatic keyboard event handling through the <code>Boxy::Key()</code> method. Elements must be wrapped with behavior modifiers to handle key events properly.</p>
+<h2 id="key-handling-flow">Key Handling Flow<a class="headerlink" href="#key-handling-flow" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nv">Physical</span><span class="w"> </span><span class="nv">Input</span><span class="w"> </span>→<span class="w"> </span><span class="nv">Boxy</span>::<span class="nv">Key</span><span class="ss">()</span><span class="w"> </span>→<span class="w"> </span><span class="nv">Root</span><span class="w"> </span><span class="nv">Element</span><span class="w"> </span>→<span class="w"> </span><span class="nv">Composite</span><span class="w"> </span>→<span class="w"> </span><span class="nv">Child</span><span class="w"> </span><span class="nv">Elements</span>
+<span class="w">                                    </span>↓
+<span class="w">                          </span><span class="nv">Focused</span><span class="w"> </span><span class="nv">Element</span>
+<span class="w">                                    </span>↓
+<span class="w">                          </span><span class="nv">Returns</span><span class="w"> </span><span class="nv">true</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">consumed</span>
+<span class="w">                                    </span>↓
+<span class="w">                     </span><span class="nv">Parent</span><span class="w"> </span><span class="nv">checks</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="nv">was</span><span class="w"> </span><span class="nv">used</span>
+</code></pre></div>
+
+<h2 id="key-codes">Key Codes<a class="headerlink" href="#key-codes" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">enum</span><span class="w"> </span><span class="nc">Keys</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">KEY_MENU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_MODE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_ENTER</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_ESCAPE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_DELETE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_BACKSPACE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_DOWN</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_UP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_LEFT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_RIGHT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_PAGEUP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_PAGEDOWN</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_PLUS</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_MINUS</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x30</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_4</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_5</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_6</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_7</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_8</span><span class="p">,</span>
+<span class="w">    </span><span class="n">KEY_9</span>
+<span class="p">};</span>
+</code></pre></div>
+
+<h2 id="key-input">Key Input<a class="headerlink" href="#key-input" title="Permanent link">&para;</a></h2>
+<h3 id="sending-keys-to-boxy">Sending Keys to Boxy<a class="headerlink" href="#sending-keys-to-boxy" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// In your main loop</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonDownPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_DOWN</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonUpPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_UP</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonMenuPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_MENU</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">buttonEnterPressed</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_ENTER</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="key-propagation">Key Propagation<a class="headerlink" href="#key-propagation" title="Permanent link">&para;</a></h3>
+<p>Keys are passed to the root element and propagated down:</p>
+<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">Boxy::Key</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Instance</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">mGround</span><span class="p">)</span>
+<span class="w">        </span><span class="n">instance</span><span class="o">-&gt;</span><span class="n">mGround</span><span class="o">-&gt;</span><span class="n">Key</span><span class="p">(</span><span class="n">key</span><span class="p">);</span><span class="w">  </span><span class="c1">// Start at root</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="behavior-modifiers">Behavior Modifiers<a class="headerlink" href="#behavior-modifiers" title="Permanent link">&para;</a></h2>
+<h3 id="keycatcher">KeyCatcher<a class="headerlink" href="#keycatcher" title="Permanent link">&para;</a></h3>
+<p>Catches specific keys and notifies a listener.</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabBehavior.h&gt;</span>
+
+<span class="c1">// Wrap an element to catch specific keys</span>
+<span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">ElementType</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">catcher</span><span class="p">(</span><span class="n">listener</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">...);</span>
+
+<span class="c1">// Example</span>
+<span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">ScrollListbox</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">};</span>
+
+<span class="c1">// Listener receives EVENT_CATCH_KEY</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">invoke</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">eventType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EVENT_CATCH_KEY</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">eventArg</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* handle left */</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* handle right */</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="keymodifier">KeyModifier<a class="headerlink" href="#keymodifier" title="Permanent link">&para;</a></h3>
+<p>Adds increment/decrement behavior to an element.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Element with +/- keys</span>
+<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_MINUS</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_PLUS</span><span class="o">&gt;</span><span class="w"> </span><span class="n">modifier</span><span class="p">;</span>
+
+<span class="c1">// Example with listbox</span>
+<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">ScrollListbox</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listbox</span><span class="p">;</span>
+<span class="c1">// KEY_UP → Select(-1), KEY_DOWN → Select(+1)</span>
+</code></pre></div>
+
+<h3 id="keyreactor">KeyReactor<a class="headerlink" href="#keyreactor" title="Permanent link">&para;</a></h3>
+<p>Combines KeyModifier with event notification.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Reactor that notifies on value change</span>
+<span class="n">KeyReactor</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_MINUS</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_PLUS</span><span class="o">&gt;</span><span class="w"> </span><span class="n">reactor</span><span class="p">(</span><span class="n">listener</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">// Listener receives EVENT_VALUE_CHANGED</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">invoke</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">eventType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EVENT_VALUE_CHANGED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">eventArg</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">// Handle changed value</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="focus-management">Focus Management<a class="headerlink" href="#focus-management" title="Permanent link">&para;</a></h2>
+<h3 id="focus-hierarchy">Focus Hierarchy<a class="headerlink" href="#focus-hierarchy" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────┐
+│  CompositeBase                  │
+│  ┌───────────────────────────┐  │
+│  │  Focused Child            │  │
+│  │  ┌─────────────────────┐  │  │
+│  │  │  Sub-child          │  │  │
+│  │  └─────────────────────┘  │  │
+│  └───────────────────────────┘  │
+└─────────────────────────────────┘
+</code></pre></div>
+
+<h3 id="focus-control-methods">Focus Control Methods<a class="headerlink" href="#focus-control-methods" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">CompositeBase</span><span class="w"> </span><span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// Set focused child</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">focusChild</span><span class="p">(</span><span class="n">ElementBase</span><span class="o">*</span><span class="w"> </span><span class="n">child</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Check if child has focus</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsFocused</span><span class="p">(</span><span class="n">ElementBase</span><span class="o">*</span><span class="w"> </span><span class="n">child</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Override for custom focus handling</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">onResidualKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+
+<h3 id="focus-example">Focus Example<a class="headerlink" href="#focus-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MyUI</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CompositeBase</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">MyUI</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">focusChild</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mListbox</span><span class="p">);</span><span class="w">  </span><span class="c1">// Initial focus</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">onResidualKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_MENU</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Cycle focus between children</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mListbox</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">focusChild</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mButton</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">focusChild</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mListbox</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">Redraw</span><span class="p">();</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">ScrollListbox</span><span class="w"> </span><span class="n">mListbox</span><span class="p">;</span>
+<span class="w">    </span><span class="n">InputButton</span><span class="w"> </span><span class="n">mButton</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div>
+
+<h2 id="greedy-key-capture">Greedy Key Capture<a class="headerlink" href="#greedy-key-capture" title="Permanent link">&para;</a></h2>
+<p>Elements at the top of the hierarchy can "capture" keys before children.</p>
+<h3 id="key-capture-chain">Key Capture Chain<a class="headerlink" href="#key-capture-chain" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">ElementBase::Key</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Children process first</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mFocusedChild</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mFocusedChild</span><span class="o">-&gt;</span><span class="n">Key</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// Key consumed by child</span>
+
+<span class="w">    </span><span class="c1">// Then try own keys</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mOwnKeyHandler</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// Key consumed by parent</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">  </span><span class="c1">// Key not consumed</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="greedy-element-example">Greedy Element Example<a class="headerlink" href="#greedy-element-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// This element captures all keys before children can see them</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GreedyElement</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CompositeBase</span><span class="w"> </span><span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">onResidualKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Always capture keys, never pass to children</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// Consumes all keys</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// Selective greedy - captures only certain keys</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SelectiveGreedy</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CompositeBase</span><span class="w"> </span><span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">onResidualKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_MENU</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// These keys are captured</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// Other keys pass to children</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+
+<h2 id="compositebase-customization">CompositeBase Customization<a class="headerlink" href="#compositebase-customization" title="Permanent link">&para;</a></h2>
+<h3 id="overriding-key-handling">Overriding Key Handling<a class="headerlink" href="#overriding-key-handling" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MyComposite</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CompositeBase</span><span class="w"> </span><span class="p">{</span>
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">onResidualKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">switch</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">KEY_MENU</span><span class="p">:</span>
+<span class="w">                </span><span class="c1">// Toggle between views</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mView1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">focusChild</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mView2</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">focusChild</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mView1</span><span class="p">);</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">                </span><span class="n">Redraw</span><span class="p">();</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">KEY_PAGEDOWN</span><span class="p">:</span>
+<span class="w">                </span><span class="c1">// Move to next section</span>
+<span class="w">                </span><span class="n">focusChild</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mNextSection</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Redraw</span><span class="p">();</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="no">KEY_ENTER</span><span class="p">:</span>
+<span class="w">                </span><span class="c1">// Execute action</span>
+<span class="w">                </span><span class="n">executeAction</span><span class="p">();</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="w">            </span><span class="k">default</span><span class="o">:</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+
+<h2 id="complete-example">Complete Example<a class="headerlink" href="#complete-example" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabBoxy.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabBehavior.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputInt.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLabeled.h&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyUI</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CompositeBase</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">IHandler</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">MyUI</span><span class="p">()</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">mParam1</span><span class="p">(</span><span class="s">&quot;Value&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">),</span>
+<span class="w">          </span><span class="n">mParam2</span><span class="p">(</span><span class="s">&quot;Speed&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">),</span>
+<span class="w">          </span><span class="n">mButton</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mParams</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mParam1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">mParams</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mParam2</span><span class="p">;</span>
+<span class="w">        </span><span class="n">mParams</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mButton</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">mListbox</span><span class="p">.</span><span class="n">SetItems</span><span class="p">(</span><span class="n">mParams</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="n">SetItemHeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Wrap with key modifiers</span>
+<span class="w">        </span><span class="c1">// KEY_UP/DOWN for navigation</span>
+<span class="w">        </span><span class="c1">// KEY_LEFT/RIGHT for value adjustment (with notifications)</span>
+<span class="w">        </span><span class="c1">// KEY_MENU for special handling</span>
+
+<span class="w">        </span><span class="n">focusChild</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mListbox</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">protected</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">drawer</span><span class="p">(</span><span class="n">IScreen</span><span class="o">*</span><span class="w"> </span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">focused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">TextCenter</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">size</span><span class="p">.</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Settings&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">focused</span><span class="p">);</span>
+<span class="w">        </span><span class="n">mListbox</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">pos</span><span class="p">.</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="n">size</span><span class="p">.</span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span>
+<span class="w">                      </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mListbox</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">hider</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">mListbox</span><span class="p">.</span><span class="n">Hide</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">onResidualKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KEY_MENU</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Confirm selection</span>
+<span class="w">            </span><span class="n">CommandQueue</span><span class="o">::</span><span class="n">Put</span><span class="p">(</span><span class="n">ACTION_CONFIRM</span><span class="p">,</span><span class="w"> </span><span class="n">mListbox</span><span class="p">.</span><span class="n">Selected</span><span class="p">());</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">invoke</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">eventType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EVENT_VALUE_CHANGED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">eventArg</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mListbox</span><span class="p">.</span><span class="n">Selected</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// Update settings</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="n">Labeled</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mParam1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Labeled</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mParam2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">InputButton</span><span class="w"> </span><span class="n">mButton</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ElementBase</span><span class="o">*</span><span class="w"> </span><span class="n">mParams</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// Wrapped listbox with key modifiers</span>
+<span class="w">    </span><span class="n">KeyCatcher</span><span class="o">&lt;</span>
+<span class="w">        </span><span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">ScrollListbox</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span>
+<span class="w">    </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mListbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">};</span>
+<span class="p">};</span>
+</code></pre></div>
+
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Modifier</th>
+<th>Purpose</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KeyCatcher</code></td>
+<td>Catch specific keys</td>
+<td>Menu navigation</td>
+</tr>
+<tr>
+<td><code>KeyModifier</code></td>
+<td>Add +/- behavior</td>
+<td>Value adjustment</td>
+</tr>
+<tr>
+<td><code>KeyReactor</code></td>
+<td>Notify on change</td>
+<td>Real-time updates</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Points:</strong>
+- <code>Boxy::Key()</code> is the entry point for all keyboard events
+- Elements must be wrapped with modifiers for automatic handling
+- React methods use increments for value changes
+- Focus determines which element receives keys first
+- Greedy elements at the top of hierarchy can capture keys
+- <code>onResidualKey()</code> must be implemented in custom composites
+- Always check if a key was consumed before passing it on</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

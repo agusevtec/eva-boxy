@@ -4,9 +4,9 @@
 using namespace aunit;
 #include <evabScreenSerialText.h>
 #include <evabScreenSerialPixel.h>
-#include <evabFont8Thin.h>
+#include <evabFont8Narrow.h>
 #include <evabInputStretchBar.h>
-#include <evabTilesets.h>
+#include <evabPictosets.h>
 #include <evabLayoutPane.h>
 #include <evabInputButton.h>
 #include <evabInputPictogram.h>
@@ -20,7 +20,7 @@ using namespace evab;
 test(delayTimer_triggers_once)
 {
     //ScreenSerialText screen;
-     Font8Thin font;
+     Font8Narrow font;
      ScreenSerialPixel screen(&font);
 //    evab::LayoutPane lp;
 //    lp.SetItems(4321, nullptr, 0);
@@ -29,7 +29,7 @@ test(delayTimer_triggers_once)
      ib.Draw(&screen, {0, 0}, {9, 8}, 0);
     // for (int i = 0; i < 4; i++)
     // {
-    //     InputPictogram<TilesetBattery> pb(i);
+    //     InputPictogram<PictosetBattery> pb(i);
     //     pb.Draw(&screen, {0, i}, {1, 2}, 0);
     // }
 

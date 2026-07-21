@@ -4,7 +4,8 @@
     <compoundname>evab::IFont</compoundname>
     <derivedcompoundref refid="classevab_1_1_font8_bold" prot="public" virt="non-virtual">evab::Font8Bold</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_font8_compact" prot="public" virt="non-virtual">evab::Font8Compact</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_font8_thin" prot="public" virt="non-virtual">evab::Font8Thin</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_font8_narrow" prot="public" virt="non-virtual">evab::Font8Narrow</derivedcompoundref>
+    <includes refid="evab_i_font_8h" local="no">evabIFont.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>unsigned char</type>
@@ -14,7 +15,7 @@
         <qualifiedname>evab::IFont::GetVerticalSlice</qualifiedname>
         <reimplementedby refid="classevab_1_1_font8_bold_1a7a0536ad01be1f44b7622d03ead5efaa">GetVerticalSlice</reimplementedby>
         <reimplementedby refid="classevab_1_1_font8_compact_1af7ccdf9f104d645a9558a9f7cf2cdb37">GetVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_font8_thin_1adbb5876ae45ec71b7122dae3275e2b22">GetVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_font8_narrow_1a8c62a4684773a2120a1922b5fb9f1d7a">GetVerticalSlice</reimplementedby>
         <param>
           <type>char</type>
           <declname>aCharcode</declname>
@@ -24,17 +25,40 @@
           <declname>col</declname>
         </param>
         <briefdescription>
+<para>Gets a vertical slice (column) of a character. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aCharcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ASCII character code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned char Bitmap data for the specified column </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIFont.h" line="8" column="31"/>
+        <location file="src/evabIFont.h" line="21" column="31"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Abstract interface for font providers. </para>
     </briefdescription>
     <detaileddescription>
+<para>Defines the contract for font implementations that can provide vertical slices of character bitmaps. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -50,8 +74,8 @@
         </childnode>
       </node>
       <node id="4">
-        <label>evab::Font8Thin</label>
-        <link refid="classevab_1_1_font8_thin"/>
+        <label>evab::Font8Narrow</label>
+        <link refid="classevab_1_1_font8_narrow"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
@@ -60,7 +84,7 @@
         <link refid="classevab_1_1_i_font"/>
       </node>
     </inheritancegraph>
-    <location file="src/evabIFont.h" line="5" column="5" bodyfile="src/evabIFont.h" bodystart="6" bodyend="9"/>
+    <location file="src/evabIFont.h" line="11" column="5" bodyfile="src/evabIFont.h" bodystart="12" bodyend="22"/>
     <listofallmembers>
       <member refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad" prot="public" virt="pure-virtual"><scope>evab::IFont</scope><name>GetVerticalSlice</name></member>
     </listofallmembers>

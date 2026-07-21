@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -541,6 +569,10 @@
 
 <h1 id="struct-evablayoutpaneitem">Struct evab::LayoutPaneItem<a class="headerlink" href="#struct-evablayoutpaneitem" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>LayoutPaneItem</strong></a></p>
+<p><em>Structure defining a single item in a layout pane.</em> </p>
+<ul>
+<li><code>#include &lt;evabLayoutPane.h&gt;</code></li>
+</ul>
 <h2 id="public-attributes">Public Attributes<a class="headerlink" href="#public-attributes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -552,32 +584,35 @@
 <tbody>
 <tr>
 <td style="text-align: right;"><a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> *</td>
-<td style="text-align: left;"><a href="#variable-element"><strong>Element</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-element"><strong>Element</strong></a>  <br><em>Pointer to the element.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../structevab_1_1_coor/"><strong>Coor</strong></a></td>
-<td style="text-align: left;"><a href="#variable-position"><strong>Position</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-position"><strong>Position</strong></a>  <br><em>Position of the item.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../structevab_1_1_coor/"><strong>Coor</strong></a></td>
-<td style="text-align: left;"><a href="#variable-size"><strong>Size</strong></a>  <br></td>
+<td style="text-align: left;"><a href="#variable-size"><strong>Size</strong></a>  <br><em>Size of the item.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-attributes-documentation">Public Attributes Documentation<a class="headerlink" href="#public-attributes-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="variable-element">variable Element<a class="headerlink" href="#variable-element" title="Permanent link">&para;</a></h3>
+<p><em>Pointer to the element.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="n">ElementBase</span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LayoutPaneItem</span><span class="o">::</span><span class="n">Element</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="variable-position">variable Position<a class="headerlink" href="#variable-position" title="Permanent link">&para;</a></h3>
+<p><em>Position of the item.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="n">Coor</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LayoutPaneItem</span><span class="o">::</span><span class="n">Position</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="variable-size">variable Size<a class="headerlink" href="#variable-size" title="Permanent link">&para;</a></h3>
+<p><em>Size of the item.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="n">Coor</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LayoutPaneItem</span><span class="o">::</span><span class="n">Size</span><span class="p">;</span>
 </code></pre></div>
 

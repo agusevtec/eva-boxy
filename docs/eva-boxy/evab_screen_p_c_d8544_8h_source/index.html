@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/01-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/display-drivers/" class="md-nav__link">
         
   
   
@@ -320,14 +320,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/02-ui-elements/" class="md-nav__link">
+      <a href="../../tutorial/uc-paint/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    UI Elements
+    UC Paint
   
 
     
@@ -348,14 +348,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/03-user-code-organization/" class="md-nav__link">
+      <a href="../../tutorial/uc-elements-stamps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Redraw at position
+    UC Elements Stamps
   
 
     
@@ -376,7 +376,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/04-keyboard-behavior/" class="md-nav__link">
+      <a href="../../tutorial/uc-structured-ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UC Structured UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/keyboard-behavior/" class="md-nav__link">
         
   
   
@@ -404,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/05-custom-display-driver/" class="md-nav__link">
+      <a href="../../tutorial/custom-display-driver/" class="md-nav__link">
         
   
   
@@ -484,36 +512,45 @@
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">ScreenPCD8544</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ScreenPage8Base</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">ScreenPCD8544</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">IFont</span><span class="w"> </span><span class="o">*</span><span class="n">aFont</span><span class="p">,</span><span class="w"> </span>
-<span class="w">                  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aRST</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aCE</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aDC</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">ScreenPCD8544</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">IFont</span><span class="w"> </span><span class="o">*</span><span class="n">aFont</span><span class="p">,</span>
+<span class="w">                  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aRST</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aCE</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aDC</span><span class="p">,</span>
 <span class="w">                  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aDIN</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aCLK</span><span class="p">,</span>
 <span class="w">                  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aLED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span>
-<span class="w">    </span><span class="o">~</span><span class="n">ScreenPCD8544</span><span class="p">();</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setBacklight</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aState</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setContrast</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aContrast</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">SetBacklight</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aState</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">SetContrast</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aContrast</span><span class="p">);</span>
+
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="nf">Size</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">};</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="nf">Serialize</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isFocused</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Deserialize</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">aSerialized</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="o">&amp;</span><span class="n">isFocused</span><span class="p">);</span>
 
 <span class="w">  </span><span class="k">protected</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">DrawVerticalSlice</span><span class="p">(</span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aSliceColumn</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aSlice</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">ClearTile</span><span class="p">(</span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">sendCommand</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aCmd</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">clearDisplay</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendCommand</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aCmd</span><span class="p">);</span>
+
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aData</span><span class="p">);</span>
+
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">initDisplay</span><span class="p">();</span>
 
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_FUNC_SET</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mh">0x20</span><span class="p">;</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_DISP_CTRL</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mh">0x08</span><span class="p">;</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_SET_Y</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mh">0x40</span><span class="p">;</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_SET_X</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_SET_VOP</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_FUNC_SET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x20</span><span class="p">;</span><span class="w">    </span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_DISP_CTRL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x08</span><span class="p">;</span><span class="w">   </span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_SET_Y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x40</span><span class="p">;</span><span class="w">       </span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_SET_X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span><span class="w">       </span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CMD_SET_VOP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x80</span><span class="p">;</span><span class="w">     </span>
 
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mRSTPin</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mCEPin</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mDCPin</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mLEDPin</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mRSTPin</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mCEPin</span><span class="p">;</span><span class="w">   </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mDCPin</span><span class="p">;</span><span class="w">   </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mLEDPin</span><span class="p">;</span><span class="w">  </span>
 <span class="w">  </span><span class="p">};</span>
 
 <span class="p">}</span>

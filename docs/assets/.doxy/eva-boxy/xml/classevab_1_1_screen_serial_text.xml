@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_screen_serial_text" kind="class" language="C++" prot="public">
     <compoundname>evab::ScreenSerialText</compoundname>
     <basecompoundref refid="classevab_1_1_screen_base" prot="public" virt="non-virtual">evab::ScreenBase</basecompoundref>
+    <includes refid="evab_screen_serial_text_8h" local="no">evabScreenSerialText.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_screen_serial_text_1a2a49d20ec1ec627115d2e13288c1a066" prot="private" static="no" mutable="no">
         <type>char</type>
@@ -11,12 +12,13 @@
         <name>mBuffer</name>
         <qualifiedname>evab::ScreenSerialText::mBuffer</qualifiedname>
         <briefdescription>
+<para>Text buffer (16x8 characters). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSerialText.h" line="22" column="14" bodyfile="src/evabScreenSerialText.h" bodystart="22" bodyend="-1"/>
+        <location file="src/evabScreenSerialText.h" line="71" column="14" bodyfile="src/evabScreenSerialText.h" bodystart="71" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -27,12 +29,13 @@
         <name>ScreenSerialText</name>
         <qualifiedname>evab::ScreenSerialText::ScreenSerialText</qualifiedname>
         <briefdescription>
+<para>Constructor for serial text screen. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSerialText.h" line="11" column="9"/>
+        <location file="src/evabScreenSerialText.h" line="20" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_serial_text_1a5dbf20ca9158d9bf2c9897b46530266c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -41,12 +44,13 @@
         <name>clear</name>
         <qualifiedname>evab::ScreenSerialText::clear</qualifiedname>
         <briefdescription>
+<para>Clears the text buffer. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSerialText.h" line="13" column="14"/>
+        <location file="src/evabScreenSerialText.h" line="25" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_serial_text_1abb48464ec4112cd3fce6d7a6bbaca92a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -55,12 +59,13 @@
         <name>printToSerial</name>
         <qualifiedname>evab::ScreenSerialText::printToSerial</qualifiedname>
         <briefdescription>
+<para>Prints the text buffer to serial for debugging. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSerialText.h" line="14" column="14"/>
+        <location file="src/evabScreenSerialText.h" line="30" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_serial_text_1acb8f1a3983a54c1b3af9eeb2961d890d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -70,12 +75,138 @@
         <qualifiedname>evab::ScreenSerialText::Size</qualifiedname>
         <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
         <briefdescription>
+<para>Gets the screen size in characters. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Screen dimensions (16x8 chars) </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSerialText.h" line="16" column="14"/>
+        <location file="src/evabScreenSerialText.h" line="37" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_serial_text_1a6de54c87951c558b8a2d6159a354ef37" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::ScreenSerialText::Serialize</definition>
+        <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>evab::ScreenSerialText::Serialize</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352">Serialize</reimplements>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Serializes element state for 16x8 screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>unsigned short Serialized state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSerialText.h" line="47" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_serial_text_1a57b41418e58cbc04cd12c298a307e025" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void evab::ScreenSerialText::Deserialize</definition>
+        <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
+        <name>Deserialize</name>
+        <qualifiedname>evab::ScreenSerialText::Deserialize</qualifiedname>
+        <reimplements refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008">Deserialize</reimplements>
+        <param>
+          <type>unsigned short</type>
+          <declname>aSerialized</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>isFocused</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes element state for 16x8 screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSerialized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Serialized state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element (output) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (output) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSerialText.h" line="57" column="14"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -103,17 +234,54 @@
           <declname>aColor</declname>
         </param>
         <briefdescription>
+<para>Draws a symbol in the text buffer. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the symbol </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aCharcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSerialText.h" line="19" column="14"/>
+        <location file="src/evabScreenSerialText.h" line="68" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Debug screen that renders text to serial output. </para>
     </briefdescription>
     <detaileddescription>
+<para>Used for debugging UI layout without physical hardware. Displays characters in a 16x8 grid. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
@@ -151,16 +319,18 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenSerialText.h" line="8" column="5" bodyfile="src/evabScreenSerialText.h" bodystart="9" bodyend="23"/>
+    <location file="src/evabScreenSerialText.h" line="14" column="5" bodyfile="src/evabScreenSerialText.h" bodystart="15" bodyend="72"/>
     <listofallmembers>
       <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Clear</name></member>
       <member refid="classevab_1_1_screen_serial_text_1a5dbf20ca9158d9bf2c9897b46530266c" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>clear</name></member>
       <member refid="classevab_1_1_screen_base_1adcecf3475b92507656c85c7e97af5717" prot="protected" virt="virtual"><scope>evab::ScreenSerialText</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_screen_serial_text_1a57b41418e58cbc04cd12c298a307e025" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_serial_text_1a24ee44f285c2a1f2f308db7846147356" prot="protected" virt="virtual"><scope>evab::ScreenSerialText</scope><name>DrawSymbol</name></member>
       <member refid="classevab_1_1_screen_serial_text_1a2a49d20ec1ec627115d2e13288c1a066" prot="private" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>mBuffer</name></member>
       <member refid="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Picto</name></member>
       <member refid="classevab_1_1_screen_serial_text_1abb48464ec4112cd3fce6d7a6bbaca92a" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>printToSerial</name></member>
       <member refid="classevab_1_1_screen_serial_text_1a902dcf6f48744b0f1be46bdeef07074a" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>ScreenSerialText</name></member>
+      <member refid="classevab_1_1_screen_serial_text_1a6de54c87951c558b8a2d6159a354ef37" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Serialize</name></member>
       <member refid="classevab_1_1_screen_serial_text_1acb8f1a3983a54c1b3af9eeb2961d890d" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Size</name></member>
       <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>TextCenter</name></member>
       <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>TextCenter</name></member>
