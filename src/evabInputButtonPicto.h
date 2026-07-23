@@ -6,20 +6,19 @@ namespace evab
 {
 
   /**
-   * @brief Button input element
+   * @brief Pictogram button element
    * 
-   * Displays a button with a label enclosed in parentheses.
-   * The Increment method is a placeholder that does nothing.
+   * Displays a button with a pictogram enclosed in parentheses.
    */
-  class InputButton : public ElementBase
+  class InputButtonPicto : public ElementBase
   {
   public:
     /**
-     * @brief Constructor for InputButton
+     * @brief Constructor for InputButtonPicto
      * 
-     * @param aName Flash string for button label
+     * @param aPictoData Pointer to pictogram data
      */
-    InputButton(const __FlashStringHelper *aName);
+    InputButtonPicto(const unsigned char *aPictoData);
     
 
   protected:
@@ -34,7 +33,7 @@ namespace evab
     void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
-    const __FlashStringHelper * mName;  ///< Button label
+    const unsigned char * mPictoData;  ///< Pictogram data
   };
 
 }
