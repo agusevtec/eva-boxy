@@ -103,7 +103,7 @@ const unsigned char Font8Narrow::kCharmap[][7] PROGMEM = {
 unsigned char Font8Narrow::GetVerticalSlice(char aCharcode, unsigned char aSliceColumn) const
 {
     {
-        if (aCharcode > 126)
+        if (aCharcode < 32 || aCharcode > 126)
             aCharcode = 32;
 
         if (aSliceColumn > 6)

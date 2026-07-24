@@ -39,7 +39,7 @@ unsigned char ScreenBase::calcRightOffset(Coor aSize, unsigned char textLen)
 
 // ========== Базовый метод для обычных строк ==========
 void ScreenBase::printTextInArea(Coor aPosition, Coor aSize, const char *text,
-                                     unsigned char aColor, unsigned char offset)
+                                 unsigned char aColor, unsigned char offset)
 {
   Coor displaySize = Size();
   unsigned char scale = aSize.Y;
@@ -62,7 +62,7 @@ void ScreenBase::printTextInArea(Coor aPosition, Coor aSize, const char *text,
 }
 
 void ScreenBase::printTextInArea(Coor aPosition, Coor aSize, const __FlashStringHelper *text,
-                                     unsigned char aColor, unsigned char offset)
+                                 unsigned char aColor, unsigned char offset)
 {
   Coor displaySize = Size();
   unsigned char scale = aSize.Y;
@@ -86,24 +86,30 @@ void ScreenBase::printTextInArea(Coor aPosition, Coor aSize, const __FlashString
 }
 
 void ScreenBase::TextLeft(Coor aPosition, Coor aSize,
-                              const char *text, unsigned char aColor)
+                          const char *text, unsigned char aColor)
 {
+  if (!text)
+    return;
   unsigned char textLen = strlen(text);
   unsigned char offset = calcLeftOffset(aSize, textLen);
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
 void ScreenBase::TextCenter(Coor aPosition, Coor aSize,
-                                const char *text, unsigned char aColor)
+                            const char *text, unsigned char aColor)
 {
+  if (!text)
+    return;
   unsigned char textLen = strlen(text);
   unsigned char offset = calcCenterOffset(aSize, textLen);
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
 void ScreenBase::TextRight(Coor aPosition, Coor aSize,
-                               const char *text, unsigned char aColor)
+                           const char *text, unsigned char aColor)
 {
+  if (!text)
+    return;
   unsigned char textLen = strlen(text);
   unsigned char offset = calcRightOffset(aSize, textLen);
   printTextInArea(aPosition, aSize, text, aColor, offset);
@@ -111,24 +117,30 @@ void ScreenBase::TextRight(Coor aPosition, Coor aSize,
 
 // ========== Публичные методы для F-строк ==========
 void ScreenBase::TextLeft(Coor aPosition, Coor aSize,
-                              const __FlashStringHelper *text, unsigned char aColor)
+                          const __FlashStringHelper *text, unsigned char aColor)
 {
+  if (!text)
+    return;
   unsigned char textLen = flashStrLen(text);
   unsigned char offset = calcLeftOffset(aSize, textLen);
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
 void ScreenBase::TextCenter(Coor aPosition, Coor aSize,
-                                const __FlashStringHelper *text, unsigned char aColor)
+                            const __FlashStringHelper *text, unsigned char aColor)
 {
+  if (!text)
+    return;
   unsigned char textLen = flashStrLen(text);
   unsigned char offset = calcCenterOffset(aSize, textLen);
   printTextInArea(aPosition, aSize, text, aColor, offset);
 }
 
 void ScreenBase::TextRight(Coor aPosition, Coor aSize,
-                               const __FlashStringHelper *text, unsigned char aColor)
+                           const __FlashStringHelper *text, unsigned char aColor)
 {
+  if (!text)
+    return;
   unsigned char textLen = flashStrLen(text);
   unsigned char offset = calcRightOffset(aSize, textLen);
   printTextInArea(aPosition, aSize, text, aColor, offset);

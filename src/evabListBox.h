@@ -7,22 +7,22 @@ namespace evab
 {
   /**
    * @brief List box element with configurable windowing algorithm
-   * 
+   *
    * Displays a scrollable list of items with navigation support.
-   * 
+   *
    * @tparam TWindowAlgorithm Windowing algorithm for navigation (Flip/Scroll)
    */
   template <class TWindowAlgorithm>
   class ListBox : public ElementBase, public TWindowAlgorithm
   {
   private:
-    ElementBase **mItems = nullptr;  ///< Array of item pointers
-    unsigned char mItemHeight = 1;    ///< Height of each item
+    ElementBase **mItems = nullptr; ///< Array of item pointers
+    unsigned char mItemHeight = 1;  ///< Height of each item
 
   public:
     /**
      * @brief Sets the list of items to display
-     * 
+     *
      * @param aItems Array of element pointers
      * @param aCount Number of items
      * @return Reference to this list box
@@ -39,7 +39,7 @@ namespace evab
 
     /**
      * @brief Sets the height of each item
-     * 
+     *
      * @param aItemHeight Height in tiles
      * @return Reference to this list box
      */
@@ -52,7 +52,7 @@ namespace evab
 
     /**
      * @brief Selects an item by index
-     * 
+     *
      * @param aIndex Index to select
      */
     void Select(signed char aIndex) override
@@ -63,7 +63,7 @@ namespace evab
 
     /**
      * @brief Gets an item by index
-     * 
+     *
      * @param aIndex Index of the item
      * @return Pointer to the item, or nullptr if invalid
      */
@@ -76,7 +76,7 @@ namespace evab
 
     /**
      * @brief Increments the selection by a delta
-     * 
+     *
      * @param delta Amount to increment (positive or negative)
      */
     void Increment(signed char delta)
@@ -86,26 +86,30 @@ namespace evab
 
     /**
      * @brief Handles key events, forwarding to selected item
-     * 
+     *
      * @param aKey Key code to process
      * @return true if the key was handled
      */
     bool Key(Keys aKey) override
     {
+      if (!mItems)
+        return false;
+
       signed char selected = TWindowAlgorithm::Selected();
       if (selected == -1)
         return false;
 
-      if (mItems[selected]->Key(aKey))
-        return true;
+      ElementBase *item = mItems[selected];
+      if (!item)
+        return false;
 
-      return false;
+      return item->Key(aKey);
     }
 
   protected:
     /**
      * @brief Draws the list box
-     * 
+     *
      * @param aScreen Screen to draw on
      * @param aPos Position on screen
      * @param aSize Size of the element
@@ -140,6 +144,6 @@ namespace evab
   };
 
   // Convenience typedefs for common list box types
-  using ScrollListbox = ListBox<ScrollWindowAlgorithm>;  ///< Scrollable list box
-  using FlipListbox = ListBox<FlipWindowAlgorithm>;      ///< Flip-based list box
+  using ScrollListbox = ListBox<ScrollWindowAlgorithm>; ///< Scrollable list box
+  using FlipListbox = ListBox<FlipWindowAlgorithm>;     ///< Flip-based list box
 }

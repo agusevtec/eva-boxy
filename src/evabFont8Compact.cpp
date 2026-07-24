@@ -97,13 +97,13 @@ const unsigned char Font8Compact::kCharmap[][5] PROGMEM = {
     {0x00, 0x08, 0x36, 0x41, 0x41}, // '{'
     {0x00, 0x00, 0x7f, 0x00, 0x00}, // '|'
     {0x41, 0x41, 0x36, 0x08, 0x00}, // '}'
-    {0x04, 0x02, 0x04, 0x08, 0x04} // '~'
+    {0x04, 0x02, 0x04, 0x08, 0x04}  // '~'
 };
 
 unsigned char Font8Compact::GetVerticalSlice(char aCharcode, unsigned char aSliceColumn) const
 {
     {
-        if (aCharcode > 126)
+        if (aCharcode < 32 || aCharcode > 126)
             aCharcode = 32;
         if (aSliceColumn < 2 || aSliceColumn > 6)
             return 0x00;

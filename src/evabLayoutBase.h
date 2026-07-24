@@ -24,6 +24,7 @@ namespace evab
     virtual ElementBase *AsElementBase() = 0;
 
     virtual void SetNext(IFocusChain *aNext) = 0;
+
   };
 
   /**
@@ -87,7 +88,6 @@ namespace evab
     };
 
   public:
-
     /**
      * @brief Checks if a child is currently focused
      *
