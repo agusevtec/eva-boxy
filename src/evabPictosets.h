@@ -147,4 +147,11 @@ namespace evab
         static constexpr unsigned char Count = 4;  ///< Number of pictograms
     };
 
+class PictosetDash
+{
+public:
+    static const unsigned char* GetTile(unsigned char aIndex);
+    static constexpr unsigned char Count = 13;
+};
+
 }

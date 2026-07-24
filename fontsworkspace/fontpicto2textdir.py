@@ -466,7 +466,7 @@ Usage:
 
 Options:
     -w, --width WIDTH       Output field width in pixels (default: 16)
-    -H, --height HEIGHT     Output field height in pixels (default: 16)
+    -h, --height HEIGHT     Output field height in pixels (default: 16)
     -d, --descale FACTOR    Descale factor (1 - no change, 2 - reduce by 2x, etc.) (default: 1)
     -s, --size SIZE         Font size - fixed value or 'auto' for automatic optimization (default: auto)
     -r, --range RANGE       Character range(s): "32-127", "1040-1103", "0x20-0x7F,0x0410-0x044F" (default: "32-127")
@@ -493,7 +493,7 @@ Examples:
     python fontpicto2textdir.py arial.ttf -r 32-127,0x0410-0x044F,1025,0x0451
     
     # Custom size and descaling
-    python fontpicto2textdir.py arial.ttf -r 0x20-0x7F,0x0410-0x044F -w 24 -H 24 -d 2
+    python fontpicto2textdir.py arial.ttf -r 0x20-0x7F,0x0410-0x044F -w 24 -h 24 -d 2
 
 Common character ranges:
     ASCII printable:  32-127 (0x20-0x7F)
@@ -525,7 +525,7 @@ def main():
     )
     
     parser.add_argument(
-        '-H', '--height',
+        '-h', '--height',
         type=int,
         default=16,
         help='Output field height in pixels (default: 16)'
