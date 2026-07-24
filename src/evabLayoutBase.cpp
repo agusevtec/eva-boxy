@@ -5,67 +5,43 @@
 
 using namespace evab;
 
-LayoutBase::LayoutBase()
-    : mCurrentChild(nullptr)
+void LayoutBase::focusChild(IFocusChain *aChild)
 {
-}
+  if (mFocusedChild == aChild)
+    return;
 
-void LayoutBase::setCurrentChild(IFocusChain *aChild)
-{
-  Serial.print("Before: ");
-  Serial.print((int)mCurrentChild);
-  Serial.print(" ");
-  Serial.println((int)aChild);
-  mCurrentChild = aChild;
-  Serial.print("After: ");
-  Serial.println((int)mCurrentChild);
+  mFocusedChild = aChild;
   Redraw();
 }
 
-IFocusChain *LayoutBase::getCurrentChild() const
+ElementBase *LayoutBase::GetFocused() const
 {
-  return mCurrentChild;
+  return mFocusedChild->AsElementBase();
 }
 
 bool LayoutBase::IsFocused(IFocusChain *aChild)
 {
-  return aChild == mCurrentChild;
+  return aChild == mFocusedChild;
 }
 
 void LayoutBase::focusNext()
 {
-  if (!mCurrentChild)
+  if (!mFocusedChild)
     return;
 
-  // Cast to FocusChain to access next() pointer
-  IFocusChain *current = mCurrentChild;
-  IFocusChain *next = current->next();
-
-  if (next && next != mCurrentChild)
-  {
-    setCurrentChild(next);
-  }
+  focusChild(mFocusedChild->Next());
 }
 
 void LayoutBase::focusPrev()
 {
-  if (!mCurrentChild)
+  if (!mFocusedChild)
     return;
 
-  // Find previous: walk from current until we find one whose next == current
-  IFocusChain *current = mCurrentChild;
-  IFocusChain *prev = current;
+  IFocusChain *prev = mFocusedChild;
+  while (prev->Next() != mFocusedChild)
+    prev = prev->Next();
 
-  // Walk through the chain to find previous
-  while (prev->next() != current)
-  {
-    prev = prev->next();
-  }
-
-  if (prev && prev != current)
-  {
-    setCurrentChild(prev);
-  }
+  focusChild(prev);
 }
 
 void LayoutBase::Increment(signed char delta)
@@ -83,7 +59,7 @@ void LayoutBase::Increment(signed char delta)
 bool LayoutBase::Key(Keys aKey)
 {
   // Forward to focused child first
-  if (mCurrentChild && mCurrentChild->asElementBase()->Key(aKey))
+  if (mFocusedChild && mFocusedChild->AsElementBase()->Key(aKey))
     return true;
 
   // If not handled, try residual
@@ -97,18 +73,13 @@ bool LayoutBase::onResidualKey(Keys)
 
 void LayoutBase::hider()
 {
-  if (!mCurrentChild)
+  if (!mFocusedChild)
     return;
 
-  // Walk through chain and hide all children
-  IFocusChain *current = mCurrentChild;
+  IFocusChain *current = mFocusedChild;
   do
   {
-    ElementBase *elem = current->asElementBase();
-    if (elem)
-    {
-      elem->Hide();
-    }
-    current = current->next();
-  } while (current != mCurrentChild);
+    current->AsElementBase()->Hide();
+    current = current->Next();
+  } while (current != mFocusedChild);
 }

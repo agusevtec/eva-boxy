@@ -12,7 +12,7 @@ namespace evab
     {
         /**
          * @brief Calculates total number of blocks
-         * 
+         *
          * @param aSize Size of the element
          * @return Total number of blocks
          */
@@ -23,7 +23,7 @@ namespace evab
 
         /**
          * @brief Calculates resolution (number of possible positions)
-         * 
+         *
          * @param aSize Size of the element
          * @return Resolution value
          */
@@ -34,7 +34,7 @@ namespace evab
 
         /**
          * @brief Gets position of a block
-         * 
+         *
          * @param aPos Base position
          * @param aSize Size of the element
          * @param index Block index
@@ -54,7 +54,7 @@ namespace evab
     {
         /**
          * @brief Calculates total number of blocks
-         * 
+         *
          * @param aSize Size of the element
          * @return Total number of blocks
          */
@@ -65,7 +65,7 @@ namespace evab
 
         /**
          * @brief Calculates resolution (number of possible positions)
-         * 
+         *
          * @param aSize Size of the element
          * @return Resolution value
          */
@@ -76,7 +76,7 @@ namespace evab
 
         /**
          * @brief Gets position of a block
-         * 
+         *
          * @param aPos Base position
          * @param aSize Size of the element
          * @param index Block index
@@ -91,9 +91,9 @@ namespace evab
 
     /**
      * @brief Stretch bar input element with pictogram support
-     * 
+     *
      * Displays a progress/scroll bar using pictograms with variable fill levels.
-     * 
+     *
      * @tparam TPictoset Pictoset class providing pictogram data
      * @tparam OrientationPictoPolicy Policy for orientation (vertical/horizontal)
      */
@@ -103,7 +103,7 @@ namespace evab
     public:
         /**
          * @brief Constructor for InputStretchBar
-         * 
+         *
          * @param aValue Initial value (0-100)
          */
         InputStretchBar(unsigned char aValue = 0)
@@ -113,7 +113,7 @@ namespace evab
 
         /**
          * @brief Sets the value and redraws
-         * 
+         *
          * @param aValue New value (0-100)
          */
         void SetValue(unsigned char aValue)
@@ -124,7 +124,7 @@ namespace evab
 
         /**
          * @brief Increments the value by a delta
-         * 
+         *
          * @param delta Amount to add (positive or negative)
          */
         void Increment(signed char delta)
@@ -132,14 +132,10 @@ namespace evab
             SetValue(mValue + delta);
         }
 
-    private:
-        static constexpr unsigned char START_BLOCK = 1;   ///< Start block type
-        static constexpr unsigned char MIDDLE_BLOCK = 2;  ///< Middle block type
-        static constexpr unsigned char END_BLOCK = 3;     ///< End block type
-
+    protected:
         /**
          * @brief Draws the stretch bar on screen
-         * 
+         *
          * @param aScreen Screen to draw on
          * @param aPos Position on screen
          * @param aSize Size of the element
@@ -173,9 +169,10 @@ namespace evab
                 aIsFocused);
         }
 
+    private:
         /**
          * @brief Calculates fill level for a block
-         * 
+         *
          * @param blockNumber Block index
          * @param normalizedValue Normalized value (0 to resolution)
          * @return Fill level (0-4)
@@ -189,7 +186,12 @@ namespace evab
             return normalizedValue % 3 + 1;
         }
 
-        unsigned char mValue;  ///< Current value (0-100)
+    private:
+        static constexpr unsigned char START_BLOCK = 1;  ///< Start block type
+        static constexpr unsigned char MIDDLE_BLOCK = 2; ///< Middle block type
+        static constexpr unsigned char END_BLOCK = 3;    ///< End block type
+
+        unsigned char mValue; ///< Current value (0-100)
     };
 
     // Convenience typedefs for common stretch bar types

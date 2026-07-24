@@ -52,7 +52,7 @@ namespace evab
      */
     bool IsHidden();
 
-  private:
+  protected:
     /**
      * @brief Pure virtual method for drawing the element
      *

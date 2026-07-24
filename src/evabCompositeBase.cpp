@@ -25,4 +25,9 @@ namespace evab
   {
       return aChild == mFocusedChild;
   }
+  
+  ElementBase *CompositeBase::GetFocused() const
+  {
+      return mFocusedChild;
+  }
 }

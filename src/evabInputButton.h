@@ -21,7 +21,6 @@ namespace evab
      */
     InputButton(const __FlashStringHelper *aName);
     
-
   protected:
     /**
      * @brief Draws the button element

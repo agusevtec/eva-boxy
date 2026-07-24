@@ -164,10 +164,7 @@ namespace evab
         return false;
 
       if (mListener)
-      {
-        //CallbackInfo cbInfo ;
-        mListener->invoke((void *)this, {EVENT_VALUE_CHANGED, (int)T::GetValue()});
-      }
+        mListener->invoke((void *)this, {EVENT_VALUE_CHANGED, 0});
       return true;
     }
 

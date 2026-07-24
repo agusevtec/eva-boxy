@@ -12,7 +12,7 @@ namespace evab
      * @tparam TPictoset Pictoset class providing pictogram data and count
      */
     template <class TPictoset>
-    class InputPictogram : public ElementBase
+    class InputSelectorPicto : public ElementBase
     {
     public:
         /**
@@ -20,7 +20,7 @@ namespace evab
          * 
          * @param aValue Initial pictogram index (0 to TPictoset::Count - 1)
          */
-        InputPictogram(int aValue = 0)
+        InputSelectorPicto(int aValue = 0)
         {
             mValue = constrain(aValue, 0, TPictoset::Count - 1);
         }

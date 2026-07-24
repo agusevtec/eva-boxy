@@ -180,6 +180,7 @@ namespace evab
             return delay;
         }
 
+    private:
         unsigned char mValue;         ///< Current speed value (0 to tMaxSpeed)
         unsigned char mCurrentFrame;  ///< Current animation frame index
         unsigned long mLastFrameTime; ///< Timestamp of last frame change (0 = stopped)

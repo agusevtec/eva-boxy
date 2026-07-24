@@ -18,6 +18,18 @@
 #include <evabInputAnimation.h>
 
 
+struct ElementsArray {
+    ElementBase** data;
+    int size;
+};
+
+// Макрос для создания ArrayView
+#define ARRAY(...) \
+    []() { \
+        static T[] data = {__VA_ARGS__}; \
+        return ElementsArray{data, sizeof(data)/sizeof(data[0])}; \
+    }()
+
 using namespace evab;
 
 class MyListbox : public ScrollListbox {
@@ -29,15 +41,15 @@ public:
   }
 };
 
-class MyContainer : public CompositeBase {
-  InputPictogram<PictosetBattery> mBattery;
-  InputPictogram<PictosetSignal> mSignal;
+class MyContainer : public LayoutPane {
+  InputPictoSelector<PictosetBattery> mBattery;
+  InputPictoSelector<PictosetSignal> mSignal;
   KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
   InputAnimation<PictosetRainbowmeter, 10> mFan = {1};
 
 public:
   MyContainer() {
-    CompositeBase::focusChild(&test);
+    LayoutPane::focusChild(&test);
   }
 
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
