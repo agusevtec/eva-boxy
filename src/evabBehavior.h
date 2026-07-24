@@ -130,7 +130,7 @@ namespace evab
      */
     enum EventType
     {
-      EVENT_VALUE_CHANGED = 1, ///< Event triggered when value changes
+      EVENT_VALUE_CHANGED = 2, ///< Event triggered when value changes
     };
 
     /**
