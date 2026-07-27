@@ -95,7 +95,7 @@ class TxtToCharmapConverter:
         lines.append(f"class Pictoset{self.class_name}")
         lines.append("{")
         lines.append("public:")
-        lines.append(f"    static const uint8_t* GetTile(unsigned char aIndex);")
+        lines.append(f"    static const unsigned char* GetTile(unsigned char aIndex);")
         lines.append(f"    static constexpr unsigned char Count = {len(tiles)};")
         lines.append("};")
         lines.append("")
@@ -107,15 +107,14 @@ class TxtToCharmapConverter:
         lines = []
         
         lines.append(f'#include "{self.output_prefix}.h"')
-        lines.append("#include <avr/pgmspace.h>")
         lines.append("")
         
-        lines.append(f"const uint8_t* Pictoset{self.class_name}::GetTile(unsigned char aIndex)")
+        lines.append(f"const unsigned char* Pictoset{self.class_name}::GetTile(unsigned char aIndex)")
         lines.append("{")
         
         # Declare all tiles as static local variables
         for var_name, _, data, width, height in tiles:
-            lines.append(f"    static const uint8_t {var_name}[] PROGMEM = {{")
+            lines.append(f"    static const unsigned char {var_name}[] PROGMEM = {{")
             lines.append(f"        {width}, {height},  // {width}x{height}")
             
             byte_strs = [f"0x{byte:02x}" for byte in data]
@@ -144,7 +143,6 @@ class TxtToCharmapConverter:
         lines.append("")
         
         total_bytes = sum(len(data) + 2 for _, _, data, _, _ in tiles)
-        lines.append(f"// Total pictogram data size: {total_bytes} bytes")
         
         return '\n'.join(lines)
 

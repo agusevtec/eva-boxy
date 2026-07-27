@@ -23,7 +23,7 @@ class MyLayout : public LayoutBase {
   //InputButtonPicto btn2{ GalleryRemixicon24::PICTO_F371 };
   //FocusChain<InputButtonPicto> btn3{ this, PictosetRainbowmeter::GetTile(2) };
   InputAnimation<PictosetRoundmeter> btn2{  2};
-  InputAnimation<PictosetDash> btn3{  2};
+  InputAnimation<PictosetRoundmeter> btn3{  2};
   FocusChain<InputButton> btn4{ this, (const __FlashStringHelper *)OK_TEXT };
 
 protected:

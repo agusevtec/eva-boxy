@@ -10,12 +10,12 @@ namespace evab
     public:
         /**
          * @brief Gets pictogram by index
-         * 
+         *
          * @param aIndex Index (0-1)
          * @return Pointer to pictogram data
          */
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 2;  ///< Number of pictograms
+        static constexpr unsigned char Count = 2; ///< Number of pictograms
     };
 
     /**
@@ -26,28 +26,12 @@ namespace evab
     public:
         /**
          * @brief Gets pictogram by index
-         * 
+         *
          * @param aIndex Index (0-6)
          * @return Pointer to pictogram data
          */
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 7;  ///< Number of pictograms
-    };
-
-    /**
-     * @brief Roundmeter pictogram set (9 states)
-     */
-    class PictosetRoundmeter
-    {
-    public:
-        /**
-         * @brief Gets pictogram by index
-         * 
-         * @param aIndex Index (0-8)
-         * @return Pointer to pictogram data
-         */
-        static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 9;  ///< Number of pictograms
+        static constexpr unsigned char Count = 7; ///< Number of pictograms
     };
 
     /**
@@ -58,15 +42,14 @@ namespace evab
     public:
         /**
          * @brief Gets pictogram by index
-         * 
+         *
          * @param aIndex Index (0-2)
          * @return Pointer to pictogram data
          */
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 3;  ///< Number of pictograms
+        static constexpr unsigned char Count = 3; ///< Number of pictograms
     };
 
-    
     /**
      * @brief Battery pictogram set (7 states)
      */
@@ -75,12 +58,12 @@ namespace evab
     public:
         /**
          * @brief Gets pictogram by index
-         * 
+         *
          * @param aIndex Index (0-6)
          * @return Pointer to pictogram data
          */
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 7;  ///< Number of pictograms
+        static constexpr unsigned char Count = 7; ///< Number of pictograms
     };
 
     /**
@@ -91,12 +74,12 @@ namespace evab
     public:
         /**
          * @brief Gets pictogram by index
-         * 
+         *
          * @param aIndex Index (0-5)
          * @return Pointer to pictogram data
          */
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 6;  ///< Number of pictograms
+        static constexpr unsigned char Count = 6; ///< Number of pictograms
     };
 
     /**
@@ -107,12 +90,12 @@ namespace evab
     public:
         /**
          * @brief Gets pictogram by index
-         * 
+         *
          * @param aIndex Index (0-8)
          * @return Pointer to pictogram data
          */
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 9;  ///< Number of pictograms
+        static constexpr unsigned char Count = 9; ///< Number of pictograms
     };
 
     /**
@@ -123,12 +106,12 @@ namespace evab
     public:
         /**
          * @brief Gets pictogram by index
-         * 
+         *
          * @param aIndex Index (0-3)
          * @return Pointer to pictogram data
          */
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 4;  ///< Number of pictograms
+        static constexpr unsigned char Count = 4; ///< Number of pictograms
     };
 
     /**
@@ -139,19 +122,40 @@ namespace evab
     public:
         /**
          * @brief Gets pictogram by index
-         * 
+         *
          * @param aIndex Index (0-3)
          * @return Pointer to pictogram data
          */
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 4;  ///< Number of pictograms
+        static constexpr unsigned char Count = 4; ///< Number of pictograms
     };
 
-class PictosetDash
-{
-public:
-    static const unsigned char* GetTile(unsigned char aIndex);
-    static constexpr unsigned char Count = 13;
-};
+    class PictosetRoundmeter
+    {
+    public:
+        static const unsigned char *GetTile(unsigned char aIndex);
+        static constexpr unsigned char Count = 13;
+    };
+
+    class PictosetProgressV1
+    {
+    public:
+        static const unsigned char *GetTile(unsigned char aIndex);
+        static constexpr unsigned char Count = 9;
+    };
+
+    class PictosetProgress_V2
+    {
+    public:
+        static const unsigned char *GetTile(unsigned char aIndex);
+        static constexpr unsigned char Count = 9;
+    };
+
+    class PictosetProgress_V3
+    {
+    public:
+        static const unsigned char *GetTile(unsigned char aIndex);
+        static constexpr unsigned char Count = 9;
+    };
 
 }

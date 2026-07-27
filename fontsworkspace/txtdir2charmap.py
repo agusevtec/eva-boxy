@@ -179,14 +179,13 @@ class TxtToCharmapConverter:
         
         # Header
         lines.append("// Auto-generated font array")
-        lines.append(f"// Source: {num_cols*2}x{num_rows*2} -> resized to {num_cols}x{num_rows} (even rows/cols only)")
         lines.append(f"// Output format: {self.num_cols} bytes per character ({num_rows}x{self.num_cols} monochrome)")
         lines.append("// Byte bits: bit0=top row, bit7=bottom row")
         lines.append(f"// Exported columns: {self.col_from} to {self.col_to} (0-indexed)")
         lines.append("")
         lines.append("#include <Arduino.h>")
         lines.append("")
-        lines.append(f"const uint8_t Tile64PagedScreenBase::kCharmap[][{self.num_cols}] PROGMEM = {{")
+        lines.append(f"const unsigned char Tile64PagedScreenBase::kCharmap[][{self.num_cols}] PROGMEM = {{")
         
         # Create dictionary for fast lookup
         char_dict = {code: columns for code, columns in chars}
