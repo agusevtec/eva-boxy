@@ -1,15 +1,15 @@
 // evabMesh.cpp
-#include "evabMesh.h"
+#include "evabGrid.h"
 
 using namespace evab;
 
-Mesh::Mesh(Coor aPos, Coor aSize)
+Grid::Grid(Coor aPos, Coor aSize)
     : mTopLeft(aPos)
     , mBottomRight({aPos.X + aSize.X, aPos.Y + aSize.Y})
 {
 }
 
-Mesh Mesh::NextRow(unsigned char aHeight)
+Grid Grid::NextRow(unsigned char aHeight)
 {
     if (aHeight == 0)
         aHeight = mBottomRight.Y - mTopLeft.Y;
@@ -19,10 +19,10 @@ Mesh Mesh::NextRow(unsigned char aHeight)
     
     mTopLeft.Y += aHeight;
     
-    return Mesh(rowTopLeft, rowSize);
+    return Grid(rowTopLeft, rowSize);
 }
 
-Mesh Mesh::NextCol(unsigned char aWidth)
+Grid Grid::NextCol(unsigned char aWidth)
 {
     if (aWidth == 0)
         aWidth = mBottomRight.X - mTopLeft.X;
@@ -32,15 +32,15 @@ Mesh Mesh::NextCol(unsigned char aWidth)
     
     mTopLeft.X += aWidth;
     
-    return Mesh(colTopLeft, colSize);
+    return Grid(colTopLeft, colSize);
 }
 
-Mesh Mesh::Rest()
+Grid& Grid::Rest()
 {
-    return Mesh(mTopLeft, GetSize());
+    return *this;
 }
 
-Coor Mesh::GetSize() const
+Coor Grid::GetSize() const
 {
     int width = mBottomRight.X - mTopLeft.X;
     int height = mBottomRight.Y - mTopLeft.Y;
@@ -51,18 +51,18 @@ Coor Mesh::GetSize() const
     return Coor(width, height);
 }
 
-Place Mesh::GetPlace() const
+Place Grid::GetPlace() const
 {
     return Place(mTopLeft, GetSize());
 }
 
-void Mesh::Draw(IScreen *aScreen, ElementBase *aElement, unsigned char aIsFocused)
+void Grid::Draw(IScreen *aScreen, ElementBase *aElement, unsigned char aIsFocused)
 {
     if (aElement && aScreen)
         aElement->Draw(aScreen, mTopLeft, GetSize(), aIsFocused);
 }
 
-void Mesh::Clean(IScreen *aScreen)
+void Grid::Clean(IScreen *aScreen)
 {
     if (aScreen)
         aScreen->Clear(mTopLeft, GetSize(), 0);

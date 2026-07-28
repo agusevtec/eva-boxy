@@ -18,7 +18,7 @@
 #include <evabInputSelectorPicto.h>
 #include <evabInputInt.h>
 #include <evabInputFloat.h>
-#include <evabMesh.h>
+#include <evabGrid.h>
 
 using namespace eva;
 using namespace evab;
@@ -35,12 +35,12 @@ public:
 
 private:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    Mesh mesh(aPos, aSize);
+    Grid mesh(aPos, aSize);
 
     aScreen->TextCenter(aPos, mesh.NextRow(1).GetSize(), F("BOXY - DEMO"), 0);
     mesh.NextRow(1).Clean(aScreen);
 
-    Mesh row = mesh.NextRow(4);
+    Grid row = mesh.NextRow(4);
     row.NextCol(2).Clean(aScreen);
     row.NextCol(4).Draw(aScreen, &mMonitorButton, IsFocused(&mMonitorButton));
     row.NextCol(2).Clean(aScreen);

@@ -10,50 +10,50 @@ namespace evab
     /**
      * @brief Layout manager for grid-based UI arrangement
      * 
-     * Mesh provides a fluent interface for organizing UI elements in a grid.
-     * Each NextRow()/NextCol() returns a new Mesh representing the cell.
+     * Grid provides a fluent interface for organizing UI elements in a grid.
+     * Each NextRow()/NextCol() returns a new Grid representing the cell.
      * 
      * @code
-     * Mesh mesh({0,0}, {16,8});
+     * Grid mesh({0,0}, {16,8});
      * mesh.NextRow(2).Draw(screen, element1);
      * mesh.NextRow(2).NextCol(2).Draw(screen, element2);
      * mesh.NextRow(2).NextCol(2).Clean(screen);
      * mesh.Rest().Clean(screen);
      * @endcode
      */
-    class Mesh
+    class Grid
     {
     public:
         /**
-         * @brief Constructs a Mesh for a specific area
+         * @brief Constructs a Grid for a specific area
          * 
          * @param aPos Position on screen
          * @param aSize Size of the mesh area
          */
-        Mesh(Coor aPos, Coor aSize);
+        Grid(Coor aPos, Coor aSize);
 
         /**
-         * @brief Creates a new Mesh for the next row
+         * @brief Creates a new Grid for the next row
          * 
          * @param aHeight Height of the row (0 = use remaining height)
-         * @return Mesh New mesh representing the row
+         * @return Grid New mesh representing the row
          */
-        Mesh NextRow(unsigned char aHeight = 0);
+        Grid NextRow(unsigned char aHeight = 0);
 
         /**
-         * @brief Creates a new Mesh for the next column
+         * @brief Creates a new Grid for the next column
          * 
          * @param aWidth Width of the column (0 = use remaining width)
-         * @return Mesh New mesh representing the column
+         * @return Grid New mesh representing the column
          */
-        Mesh NextCol(unsigned char aWidth = 0);
+        Grid NextCol(unsigned char aWidth = 0);
 
         /**
          * @brief Returns the remaining space from current position
          * 
-         * @return Mesh New mesh representing the remaining space
+         * @return Grid New mesh representing the remaining space
          */
-        Mesh Rest();
+        Grid& Rest();
 
         /**
          * @brief Draws an element in the current cell
