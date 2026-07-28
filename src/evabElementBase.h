@@ -41,6 +41,15 @@ namespace evab
     void Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
     /**
+     * @brief Draws the element on the specified screen
+     *
+     * @param aScreen Screen to draw on
+     * @param aPlace Position and Size on screen
+     * @param aIsFocused Focus state (1 = focused, 0 = not focused)
+     */
+    void Draw(IScreen *aScreen, Place aPlace, unsigned char aIsFocused);
+
+    /**
      * @brief Redraws the element on the current screen
      */
     void Redraw();

@@ -8,13 +8,14 @@ void ElementBase::Redraw()
     return;
 
   IScreen *screen = Boxy::Screen();
-  if (screen)
-  {
-    Coor pos, sz;
-    bool focused;
-    screen->Deserialize(mSerialized, pos, sz, focused);
-    drawer(screen, pos, sz, focused);
-  }
+  if (!screen)
+    return;
+
+  Coor screenSize = screen->Size();
+  Coor currentPos, currentSize;
+  bool isFocused;
+  screen->Deserialize(mSerialized, currentPos, currentSize, isFocused);
+  drawer(screen, currentPos, currentSize, isFocused);
 }
 
 bool ElementBase::IsHidden()
@@ -39,7 +40,12 @@ void ElementBase::Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aI
     return;
   }
   drawer(aScreen, aPos, aSize, aIsFocused);
-  mSerialized =  aScreen->Serialize(aPos, aSize, aIsFocused);
+  mSerialized = aScreen->Serialize(aPos, aSize, aIsFocused);
+}
+
+void ElementBase::Draw(IScreen *aScreen, Place aPlace, unsigned char aIsFocused)
+{
+  Draw(aScreen, aPlace.Position, aPlace.Size, aIsFocused);
 }
 
 bool ElementBase::Key(Keys)

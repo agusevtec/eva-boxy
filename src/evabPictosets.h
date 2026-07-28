@@ -137,25 +137,4 @@ namespace evab
         static constexpr unsigned char Count = 13;
     };
 
-    class PictosetProgressV1
-    {
-    public:
-        static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 9;
-    };
-
-    class PictosetProgress_V2
-    {
-    public:
-        static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 9;
-    };
-
-    class PictosetProgress_V3
-    {
-    public:
-        static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 9;
-    };
-
 }
