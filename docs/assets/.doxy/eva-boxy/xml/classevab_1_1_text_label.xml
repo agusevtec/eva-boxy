@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_text_label" kind="class" language="C++" prot="public">
+    <compoundname>evab::TextLabel</compoundname>
+    <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <includes refid="evab_text_label_8h" local="no">evabTextLabel.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>typename TAlign</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_text_label_1a3b2ab8014c14256601615b30f824ad4c" prot="private" static="no" mutable="no">
+        <type>T</type>
+        <definition>T evab::TextLabel&lt; T, TAlign &gt;::mText</definition>
+        <argsstring></argsstring>
+        <name>mText</name>
+        <qualifiedname>evab::TextLabel::mText</qualifiedname>
+        <briefdescription>
+<para>Text to display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextLabel.h" line="65" column="11" bodyfile="src/evabTextLabel.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_text_label_1a9ac2f0ff514d446d6ef74d92a0558283" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>evab::TextLabel&lt; T, TAlign &gt;::TextLabel</definition>
+        <argsstring>(T aText)</argsstring>
+        <name>TextLabel</name>
+        <qualifiedname>evab::TextLabel::TextLabel</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>aText</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with text. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text to display </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextLabel.h" line="25" column="18" bodyfile="src/evabTextLabel.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_text_label_1a0262a6d18f84a8f040727cb8e2b38fed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::TextLabel&lt; T, TAlign &gt;::SetText</definition>
+        <argsstring>(T aText)</argsstring>
+        <name>SetText</name>
+        <qualifiedname>evab::TextLabel::SetText</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>aText</declname>
+        </param>
+        <briefdescription>
+<para>Sets new text and redraws. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New text </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextLabel.h" line="32" column="14" bodyfile="src/evabTextLabel.h" bodystart="32" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_text_label_1af011428d7af46fc05fd70642a3a6f45e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T evab::TextLabel&lt; T, TAlign &gt;::GetText</definition>
+        <argsstring>() const</argsstring>
+        <name>GetText</name>
+        <qualifiedname>evab::TextLabel::GetText</qualifiedname>
+        <briefdescription>
+<para>Gets current text. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current text </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextLabel.h" line="43" column="11" bodyfile="src/evabTextLabel.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void evab::TextLabel&lt; T, TAlign &gt;::drawer</definition>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::TextLabel::drawer</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144">drawer</reimplements>
+        <param>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+<para>Draws the label with alignment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextLabel.h" line="54" column="14" bodyfile="src/evabTextLabel.h" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void evab::TextLabel&lt; T, TAlign &gt;::hider</definition>
+        <argsstring>() override</argsstring>
+        <name>hider</name>
+        <qualifiedname>evab::TextLabel::hider</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703">hider</reimplements>
+        <briefdescription>
+<para>Virtual method for hiding the element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Override to implement custom hiding behavior. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextLabel.h" line="62" column="14" bodyfile="src/evabTextLabel.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Text label widget with alignment. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text type (char*, const char*, __FlashStringHelper*) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAlign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alignment strategy (<ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref>, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref>, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref>) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::TextLabel&lt; T, TAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::TextLabel&lt; T, TAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabTextLabel.h" line="17" column="5" bodyfile="src/evabTextLabel.h" bodystart="18" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::TextLabel</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f" prot="protected" virt="virtual"><scope>evab::TextLabel</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_text_label_1af011428d7af46fc05fd70642a3a6f45e" prot="public" virt="non-virtual"><scope>evab::TextLabel</scope><name>GetText</name></member>
+      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::TextLabel</scope><name>Hide</name></member>
+      <member refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed" prot="protected" virt="virtual"><scope>evab::TextLabel</scope><name>hider</name></member>
+      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::TextLabel</scope><name>IsHidden</name></member>
+      <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::TextLabel</scope><name>Key</name></member>
+      <member refid="classevab_1_1_text_label_1a3b2ab8014c14256601615b30f824ad4c" prot="private" virt="non-virtual"><scope>evab::TextLabel</scope><name>mText</name></member>
+      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::TextLabel</scope><name>Redraw</name></member>
+      <member refid="classevab_1_1_text_label_1a0262a6d18f84a8f040727cb8e2b38fed" prot="public" virt="non-virtual"><scope>evab::TextLabel</scope><name>SetText</name></member>
+      <member refid="classevab_1_1_text_label_1a9ac2f0ff514d446d6ef74d92a0558283" prot="public" virt="non-virtual"><scope>evab::TextLabel</scope><name>TextLabel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

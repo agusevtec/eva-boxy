@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespaceevab_1_1_gallery_remixicon24" kind="namespace" language="C++">
+    <compoundname>evab::GalleryRemixicon24</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="evab_gallery_remixicon24_8h_1a1477daa265d5120f30b954c5933fa392" prot="public" static="no" mutable="no">
+        <type>const unsigned char PICTO_EA01[]</type>
+        <definition>const unsigned char PICTO_F69D [] evab::GalleryRemixicon24::PROGMEM</definition>
+        <argsstring></argsstring>
+        <name>PROGMEM</name>
+        <qualifiedname>evab::GalleryRemixicon24::PROGMEM</qualifiedname>
+        <initializer>                                   = {
+24, 24, 
+0xFC, 0xF8, 0xF0, 0xF8, 0xDC, 0x8C, 0x0E, 0x06,
+0x07, 0x03, 0x03, 0x03, 0x03, 0x03, 0x03, 0x06,
+0x06, 0x0E, 0x0C, 0x18, 0x70, 0xE0, 0xC0, 0x00,
+0xF0, 0xF0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x80, 0xC0, 0xE0, 0x60, 0xE0, 0xC0, 0x80, 0x00,
+0x00, 0xE0, 0xE0, 0x00, 0x00, 0x01, 0xE7, 0xE7,
+0x00, 0x03, 0x0F, 0x1E, 0x3C, 0x78, 0x00, 0x00,
+0xC1, 0xE1, 0xF8, 0xFC, 0xDE, 0xCF, 0xC7, 0x00,
+0x00, 0x0F, 0x0F, 0x0C, 0x0C, 0x0C, 0xFF, 0xFF}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGalleryRemixicon24.h" line="9" column="40" bodyfile="src/evabGalleryRemixicon24.h" bodystart="9" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabGalleryRemixicon24.h" line="7" column="5"/>
+  </compounddef>
+</doxygen>

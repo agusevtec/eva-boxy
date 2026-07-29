@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_grid" kind="class" language="C++" prot="public">
+    <compoundname>evab::Grid</compoundname>
+    <includes refid="evab_grid_8h" local="no">evabGrid.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_grid_1a5320341c603411b1193587686bca00fa" prot="private" static="no" mutable="no">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::Grid::mTopLeft</definition>
+        <argsstring></argsstring>
+        <name>mTopLeft</name>
+        <qualifiedname>evab::Grid::mTopLeft</qualifiedname>
+        <briefdescription>
+<para>Top-left corner of current cell. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="89" column="14" bodyfile="src/evabGrid.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_grid_1aa8b617dc4491e033211ed0cd85b05b76" prot="private" static="no" mutable="no">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::Grid::mBottomRight</definition>
+        <argsstring></argsstring>
+        <name>mBottomRight</name>
+        <qualifiedname>evab::Grid::mBottomRight</qualifiedname>
+        <briefdescription>
+<para>Bottom-right corner of current cell. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="90" column="14" bodyfile="src/evabGrid.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_grid_1a5e0a0e3d5fe200873b56ac92cee19d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>evab::Grid::Grid</definition>
+        <argsstring>(Coor aPos, Coor aSize)</argsstring>
+        <name>Grid</name>
+        <qualifiedname>evab::Grid::Grid</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> for a specific area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the mesh area </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="33" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_grid_1a9cdd9b56bf792047f6e3139753a4e041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classevab_1_1_grid_1a5e0a0e3d5fe200873b56ac92cee19d66" kindref="member">Grid</ref></type>
+        <definition>Grid evab::Grid::SliceRow</definition>
+        <argsstring>(unsigned char aHeight=0)</argsstring>
+        <name>SliceRow</name>
+        <qualifiedname>evab::Grid::SliceRow</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aHeight</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> for the next row. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the row (0 = use remaining height) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> New mesh representing the row </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="41" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_grid_1a4c44117cf974c9786044bd91519e940b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classevab_1_1_grid_1a5e0a0e3d5fe200873b56ac92cee19d66" kindref="member">Grid</ref></type>
+        <definition>Grid evab::Grid::SliceCol</definition>
+        <argsstring>(unsigned char aWidth=0)</argsstring>
+        <name>SliceCol</name>
+        <qualifiedname>evab::Grid::SliceCol</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aWidth</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> for the next column. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the column (0 = use remaining width) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> New mesh representing the column </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="49" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_grid_1aadde199b2b5d0a435ab425d8c8a12a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classevab_1_1_grid_1a5e0a0e3d5fe200873b56ac92cee19d66" kindref="member">Grid</ref> &amp;</type>
+        <definition>Grid &amp; evab::Grid::Rest</definition>
+        <argsstring>()</argsstring>
+        <name>Rest</name>
+        <qualifiedname>evab::Grid::Rest</qualifiedname>
+        <briefdescription>
+<para>Returns the remaining space from current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> New mesh representing the remaining space </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="56" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_grid_1a051f7a08563ff3fea0d198e073de5b36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::Grid::Draw</definition>
+        <argsstring>(Screen *aScreen, ElementBase *aElement, unsigned char aIsFocused=0)</argsstring>
+        <name>Draw</name>
+        <qualifiedname>evab::Grid::Draw</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+          <declname>aElement</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Draws an element in the current cell. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Element to draw </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="65" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_grid_1a6cb5038cf6f3bac65b4989d626347155" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::Grid::Blank</definition>
+        <argsstring>(Screen *aScreen)</argsstring>
+        <name>Blank</name>
+        <qualifiedname>evab::Grid::Blank</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <briefdescription>
+<para>Clears the current cell area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="72" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::Grid::GetPos</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPos</name>
+        <qualifiedname>evab::Grid::GetPos</qualifiedname>
+        <briefdescription>
+<para>Gets the current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Current position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="79" column="14" bodyfile="src/evabGrid.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::Grid::GetSize</definition>
+        <argsstring>() const</argsstring>
+        <name>GetSize</name>
+        <qualifiedname>evab::Grid::GetSize</qualifiedname>
+        <briefdescription>
+<para>Gets the current size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Current size (clamped to non-negative values) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="86" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Layout manager for grid-based UI arrangement. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> provides a fluent interface for organizing UI elements in a grid. Each <ref refid="classevab_1_1_grid_1a9cdd9b56bf792047f6e3139753a4e041" kindref="member">SliceRow()</ref>/SliceCol() returns a new <ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> representing the cell.</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="classevab_1_1_grid_1a5e0a0e3d5fe200873b56ac92cee19d66" kindref="member">Grid</ref><sp/>mesh({0,0},<sp/>{16,8});</highlight></codeline>
+<codeline><highlight class="normal">mesh.SliceRow(2).Draw(screen,<sp/>element1);</highlight></codeline>
+<codeline><highlight class="normal">mesh.SliceRow(2).SliceCol(2).Draw(screen,<sp/>element2);</highlight></codeline>
+<codeline><highlight class="normal">mesh.SliceRow(2).SliceCol(2).Clean(screen);</highlight></codeline>
+<codeline><highlight class="normal">mesh.Rest().Clean(screen);</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="src/evabGrid.h" line="24" column="5" bodyfile="src/evabGrid.h" bodystart="25" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_grid_1a6cb5038cf6f3bac65b4989d626347155" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Blank</name></member>
+      <member refid="classevab_1_1_grid_1a051f7a08563ff3fea0d198e073de5b36" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>GetPos</name></member>
+      <member refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>GetSize</name></member>
+      <member refid="classevab_1_1_grid_1a5e0a0e3d5fe200873b56ac92cee19d66" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Grid</name></member>
+      <member refid="classevab_1_1_grid_1aa8b617dc4491e033211ed0cd85b05b76" prot="private" virt="non-virtual"><scope>evab::Grid</scope><name>mBottomRight</name></member>
+      <member refid="classevab_1_1_grid_1a5320341c603411b1193587686bca00fa" prot="private" virt="non-virtual"><scope>evab::Grid</scope><name>mTopLeft</name></member>
+      <member refid="classevab_1_1_grid_1aadde199b2b5d0a435ab425d8c8a12a15" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Rest</name></member>
+      <member refid="classevab_1_1_grid_1a4c44117cf974c9786044bd91519e940b" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>SliceCol</name></member>
+      <member refid="classevab_1_1_grid_1a9cdd9b56bf792047f6e3139753a4e041" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>SliceRow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

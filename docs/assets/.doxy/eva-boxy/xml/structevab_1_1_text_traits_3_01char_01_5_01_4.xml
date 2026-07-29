@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structevab_1_1_text_traits_3_01char_01_5_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>evab::TextTraits&lt; char * &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structevab_1_1_text_traits_3_01char_01_5_01_4_1a01684b669e008c82ac417b885fc1e77d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char evab::TextTraits&lt; char * &gt;::Length</definition>
+        <argsstring>(char *aText)</argsstring>
+        <name>Length</name>
+        <qualifiedname>evab::TextTraits&lt; char * &gt;::Length</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>aText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextTraits.h" line="32" column="30" bodyfile="src/evabTextTraits.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="structevab_1_1_text_traits_3_01char_01_5_01_4_1af89c64faa641d42d4959708d3bc4df3b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char</type>
+        <definition>static char evab::TextTraits&lt; char * &gt;::Read</definition>
+        <argsstring>(char *aText, unsigned char aIndex)</argsstring>
+        <name>Read</name>
+        <qualifiedname>evab::TextTraits&lt; char * &gt;::Read</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>aText</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextTraits.h" line="37" column="21" bodyfile="src/evabTextTraits.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabTextTraits.h" line="30" column="5" bodyfile="src/evabTextTraits.h" bodystart="31" bodyend="41"/>
+    <listofallmembers>
+      <member refid="structevab_1_1_text_traits_3_01char_01_5_01_4_1a01684b669e008c82ac417b885fc1e77d" prot="public" virt="non-virtual"><scope>evab::TextTraits&lt; char * &gt;</scope><name>Length</name></member>
+      <member refid="structevab_1_1_text_traits_3_01char_01_5_01_4_1af89c64faa641d42d4959708d3bc4df3b" prot="public" virt="non-virtual"><scope>evab::TextTraits&lt; char * &gt;</scope><name>Read</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>evab::TextTraits&lt; const __FlashStringHelper * &gt;</compoundname>
+    <includes refid="evab_text_traits_8h" local="no">evabTextTraits.h</includes>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4_1a5965724ba7beb162a8a37a42d3a8d29b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char evab::TextTraits&lt; const __FlashStringHelper * &gt;::Length</definition>
+        <argsstring>(const __FlashStringHelper *aText)</argsstring>
+        <name>Length</name>
+        <qualifiedname>evab::TextTraits&lt; const __FlashStringHelper * &gt;::Length</qualifiedname>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>aText</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextTraits.h" line="49" column="30" bodyfile="src/evabTextTraits.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4_1a44f4a8e28a1c610a67692c4a98dbbbd1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char</type>
+        <definition>static char evab::TextTraits&lt; const __FlashStringHelper * &gt;::Read</definition>
+        <argsstring>(const __FlashStringHelper *aText, unsigned char aIndex)</argsstring>
+        <name>Read</name>
+        <qualifiedname>evab::TextTraits&lt; const __FlashStringHelper * &gt;::Read</qualifiedname>
+        <param>
+          <type>const __FlashStringHelper *</type>
+          <declname>aText</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextTraits.h" line="54" column="21" bodyfile="src/evabTextTraits.h" bodystart="54" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Traits for Flash string (__FlashStringHelper*). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabTextTraits.h" line="47" column="5" bodyfile="src/evabTextTraits.h" bodystart="48" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4_1a5965724ba7beb162a8a37a42d3a8d29b" prot="public" virt="non-virtual"><scope>evab::TextTraits&lt; const __FlashStringHelper * &gt;</scope><name>Length</name></member>
+      <member refid="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4_1a44f4a8e28a1c610a67692c4a98dbbbd1" prot="public" virt="non-virtual"><scope>evab::TextTraits&lt; const __FlashStringHelper * &gt;</scope><name>Read</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

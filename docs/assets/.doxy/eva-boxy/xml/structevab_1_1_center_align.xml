@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structevab_1_1_center_align" kind="struct" language="C++" prot="public">
+    <compoundname>evab::CenterAlign</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structevab_1_1_center_align_1aca4a0165ce0c492767709f08de50fb52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>static unsigned char evab::CenterAlign::Offset</definition>
+        <argsstring>(Coor aSize, unsigned char textLen)</argsstring>
+        <name>Offset</name>
+        <qualifiedname>evab::CenterAlign::Offset</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>textLen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTextAlign.h" line="22" column="30" bodyfile="src/evabTextAlign.h" bodystart="22" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabTextAlign.h" line="20" column="5" bodyfile="src/evabTextAlign.h" bodystart="21" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structevab_1_1_center_align_1aca4a0165ce0c492767709f08de50fb52" prot="public" virt="non-virtual"><scope>evab::CenterAlign</scope><name>Offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

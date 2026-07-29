@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="namespaceevab_1_1_gallery_remixicon16" kind="namespace" language="C++">
+    <compoundname>evab::GalleryRemixicon16</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="evab_gallery_remixicon16_8h_1a715ffdd36fe9062e0226ee2460a6fce6" prot="public" static="no" mutable="no">
+        <type>const unsigned char PICTO_EA01[]</type>
+        <definition>const unsigned char PICTO_F69D [] evab::GalleryRemixicon16::PROGMEM</definition>
+        <argsstring></argsstring>
+        <name>PROGMEM</name>
+        <qualifiedname>evab::GalleryRemixicon16::PROGMEM</qualifiedname>
+        <initializer>                                   = {
+16, 16, 
+0x9E, 0x9C, 0x1C, 0x1E, 0x12, 0x03, 0x01, 0x01,
+0x01, 0x01, 0x03, 0x02, 0x06, 0x1C, 0x38, 0x20,
+0x03, 0x0F, 0x1C, 0x30, 0x00, 0x00, 0x46, 0x77,
+0x79, 0x5F, 0x4E, 0x00, 0x1F, 0x10, 0x7F, 0x7F}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGalleryRemixicon16.h" line="9" column="40" bodyfile="src/evabGalleryRemixicon16.h" bodystart="9" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabGalleryRemixicon16.h" line="7" column="5"/>
+  </compounddef>
+</doxygen>

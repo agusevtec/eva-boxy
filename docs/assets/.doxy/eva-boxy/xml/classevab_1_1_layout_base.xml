@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_layout_base" kind="class" language="C++" prot="public">
+    <compoundname>evab::LayoutBase</compoundname>
+    <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <includes refid="evab_layout_base_8h" local="no">evabLayoutBase.h</includes>
+    <innerclass refid="classevab_1_1_layout_base_1_1_focus_chain" prot="private">evab::LayoutBase::FocusChain</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_layout_base_1aabfadd6f4046033c784fff720eaf15ae" prot="private" static="no" mutable="no">
+        <type><ref refid="classevab_1_1_i_focus_chain" kindref="compound">IFocusChain</ref> *</type>
+        <definition>IFocusChain* evab::LayoutBase::mFocusedChild</definition>
+        <argsstring></argsstring>
+        <name>mFocusedChild</name>
+        <qualifiedname>evab::LayoutBase::mFocusedChild</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Currently focused child element (only reference needed). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="158" column="17" bodyfile="src/evabLayoutBase.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a53a88e28da114cb86c9d6044ca1fefe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool evab::LayoutBase::IsFocused</definition>
+        <argsstring>(IFocusChain *aChild)</argsstring>
+        <name>IsFocused</name>
+        <qualifiedname>evab::LayoutBase::IsFocused</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_i_focus_chain" kindref="compound">IFocusChain</ref> *</type>
+          <declname>aChild</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a child is currently focused. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aChild</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Child element to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the child is focused </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="97" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a328d6a9a3bf60afdf20269675de83e13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+        <definition>ElementBase * evab::LayoutBase::GetFocused</definition>
+        <argsstring>() const</argsstring>
+        <name>GetFocused</name>
+        <qualifiedname>evab::LayoutBase::GetFocused</qualifiedname>
+        <briefdescription>
+<para>Gets the current (focused) child. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to current child, or nullptr if none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="104" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a27d54aedee90e1d09cc55ea4745b9f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::LayoutBase::Increment</definition>
+        <argsstring>(signed char delta)</argsstring>
+        <name>Increment</name>
+        <qualifiedname>evab::LayoutBase::Increment</qualifiedname>
+        <param>
+          <type>signed char</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>Increments the selection by a delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Positive delta moves forward (next), negative moves backward (prev)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount to increment (positive or negative) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="113" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a8dd4a2350ec9ae002b538911c0dc20ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool evab::LayoutBase::Key</definition>
+        <argsstring>(Keys aKey) override</argsstring>
+        <name>Key</name>
+        <qualifiedname>evab::LayoutBase::Key</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5">Key</reimplements>
+        <param>
+          <type>Keys</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+<para>Handles key events by forwarding to focused child. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code to process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the key was handled, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="121" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a87641a868f78782aaf21d50c314465f8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::LayoutBase::focusChild</definition>
+        <argsstring>(IFocusChain *aChild)</argsstring>
+        <name>focusChild</name>
+        <qualifiedname>evab::LayoutBase::focusChild</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_i_focus_chain" kindref="compound">IFocusChain</ref> *</type>
+          <declname>aChild</declname>
+        </param>
+        <briefdescription>
+<para>Sets the current (focused) child. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aChild</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Child element to set as focused </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="129" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1add166aea3c25c38285b1c8292bef5c97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::LayoutBase::focusNext</definition>
+        <argsstring>()</argsstring>
+        <name>focusNext</name>
+        <qualifiedname>evab::LayoutBase::focusNext</qualifiedname>
+        <briefdescription>
+<para>Navigate to next element in circular chain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="135" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a11b109ea5bdc8f73cf92f5de13ac0e89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::LayoutBase::focusPrev</definition>
+        <argsstring>()</argsstring>
+        <name>focusPrev</name>
+        <qualifiedname>evab::LayoutBase::focusPrev</qualifiedname>
+        <briefdescription>
+<para>Navigate to previous element in circular chain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="140" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a19f2077c47eb065de6d8f73fa0086ac6" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool evab::LayoutBase::onResidualKey</definition>
+        <argsstring>(Keys aKey)</argsstring>
+        <name>onResidualKey</name>
+        <qualifiedname>evab::LayoutBase::onResidualKey</qualifiedname>
+        <param>
+          <type>Keys</type>
+          <declname>aKey</declname>
+        </param>
+        <briefdescription>
+<para>Handles residual keys when no child handles the event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Override this to implement custom key handling in composites.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key code to process </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the key was handled, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="150" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a579a86823144d46988f93b239b56c479" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void evab::LayoutBase::hider</definition>
+        <argsstring>()</argsstring>
+        <name>hider</name>
+        <qualifiedname>evab::LayoutBase::hider</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703">hider</reimplements>
+        <briefdescription>
+<para>Pure virtual method to hide all children. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="155" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Abstract base class for composite elements with circular focus chain. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Manages a circular linked list of child elements for focus navigation. Only stores one pointer - to the currently focused child. Children must be of type FocusChain&lt;T&gt; to form the chain. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::LayoutBase</label>
+        <link refid="classevab_1_1_layout_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::LayoutBase</label>
+        <link refid="classevab_1_1_layout_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabLayoutBase.h" line="37" column="3" bodyfile="src/evabLayoutBase.h" bodystart="38" bodyend="159"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" virt="pure-virtual"><scope>evab::LayoutBase</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_layout_base_1a87641a868f78782aaf21d50c314465f8" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusChild</name></member>
+      <member refid="classevab_1_1_layout_base_1add166aea3c25c38285b1c8292bef5c97" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusNext</name></member>
+      <member refid="classevab_1_1_layout_base_1a11b109ea5bdc8f73cf92f5de13ac0e89" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusPrev</name></member>
+      <member refid="classevab_1_1_layout_base_1a328d6a9a3bf60afdf20269675de83e13" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>GetFocused</name></member>
+      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Hide</name></member>
+      <member refid="classevab_1_1_layout_base_1a579a86823144d46988f93b239b56c479" prot="private" virt="virtual"><scope>evab::LayoutBase</scope><name>hider</name></member>
+      <member refid="classevab_1_1_layout_base_1a27d54aedee90e1d09cc55ea4745b9f4d" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_layout_base_1a53a88e28da114cb86c9d6044ca1fefe9" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>IsFocused</name></member>
+      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>IsHidden</name></member>
+      <member refid="classevab_1_1_layout_base_1a8dd4a2350ec9ae002b538911c0dc20ca" prot="public" virt="virtual"><scope>evab::LayoutBase</scope><name>Key</name></member>
+      <member refid="classevab_1_1_layout_base_1aabfadd6f4046033c784fff720eaf15ae" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>mFocusedChild</name></member>
+      <member refid="classevab_1_1_layout_base_1a19f2077c47eb065de6d8f73fa0086ac6" prot="private" virt="virtual"><scope>evab::LayoutBase</scope><name>onResidualKey</name></member>
+      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Redraw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
