@@ -1,6 +1,6 @@
-# Use as "Pencil" - IScreen Interface
+# Use as "Pencil" - Screen Interface
 
-The **Pencil use case** in EVA Boxy provides direct drawing operations on the screen through the `IScreen` interface. This mode allows you to draw text, symbols, and pictograms without using the UI element system.
+The **Pencil use case** in EVA Boxy provides direct drawing operations on the screen through the `Screen` interface. This mode allows you to draw text, symbols, and pictograms without using the UI element system.
 
 
 ## Text Rendering

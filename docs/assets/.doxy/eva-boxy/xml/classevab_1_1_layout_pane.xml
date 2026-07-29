@@ -161,12 +161,12 @@
       <memberdef kind="function" id="classevab_1_1_layout_pane_1a2a511b8bf0024ea38711a585916d9add" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void evab::LayoutPane::drawer</definition>
-        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::LayoutPane::drawer</qualifiedname>
         <reimplements refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e">drawer</reimplements>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>

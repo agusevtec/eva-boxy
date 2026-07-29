@@ -97,11 +97,11 @@
       <memberdef kind="function" id="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::ElementBase::Draw</definition>
-        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)</argsstring>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)</argsstring>
         <name>Draw</name>
         <qualifiedname>evab::ElementBase::Draw</qualifiedname>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>
@@ -197,7 +197,7 @@
       <memberdef kind="function" id="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void evab::ElementBase::drawer</definition>
-        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)=0</argsstring>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)=0</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::ElementBase::drawer</qualifiedname>
         <reimplementedby refid="classevab_1_1_input_animation_1ac59f5a42cb72cabeda522912e9017804">drawer</reimplementedby>
@@ -220,7 +220,7 @@
         <reimplementedby refid="classevab_1_1_list_box_1ad877350533d2964624f75a23caaa9034">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1ad877350533d2964624f75a23caaa9034">drawer</reimplementedby>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>

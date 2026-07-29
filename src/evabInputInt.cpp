@@ -1,5 +1,5 @@
 #include "evabInputInt.h"
-#include <evabIScreen.h>
+#include <evabScreen.h>
 namespace evab
 {
 
@@ -23,7 +23,7 @@ namespace evab
     SetValue(mValue + delta);
   }
 
-  void InputInt::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
+  void InputInt::drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
     char buffer[20];
     itoa(mValue, buffer, 10);

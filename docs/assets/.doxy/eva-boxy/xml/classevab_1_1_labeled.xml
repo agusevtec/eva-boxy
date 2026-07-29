@@ -80,11 +80,11 @@
       <memberdef kind="function" id="classevab_1_1_labeled_1a0a3a8aa9b1702a0e30eeb483f7bdb500" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void evab::Labeled&lt; T &gt;::drawer</definition>
-        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::Labeled::drawer</qualifiedname>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>

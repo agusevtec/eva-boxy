@@ -1,6 +1,6 @@
 #pragma once
 #include <evabCoor.h>
-#include <evabIScreen.h>
+#include <evabScreen.h>
 #include <evabKeys.h>
 
 namespace evab
@@ -38,7 +38,7 @@ namespace evab
      * @param aSize Size of the element
      * @param aIsFocused Focus state (1 = focused, 0 = not focused)
      */
-    void Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
+    void Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
     /**
      * @brief Redraws the element on the current screen
@@ -61,7 +61,7 @@ namespace evab
      * @param aSize Size of the element
      * @param aIsFocused Focus state (1 = focused, 0 = not focused)
      */
-    virtual void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
+    virtual void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
 
     /**
      * @brief Virtual method for hiding the element

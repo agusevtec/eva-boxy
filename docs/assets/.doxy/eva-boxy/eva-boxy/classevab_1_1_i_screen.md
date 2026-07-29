@@ -1,16 +1,16 @@
 
 
-# Class evab::IScreen
+# Class evab::Screen
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**IScreen**](classevab_1_1_i_screen.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**Screen**](classevab_1_1_i_screen.md)
 
 
 
 _Abstract interface for screen rendering._ [More...](#detailed-description)
 
-* `#include <evabIScreen.h>`
+* `#include <evabScreen.h>`
 
 
 
@@ -56,15 +56,15 @@ Inherited by the following classes: [evab::ScreenBase](classevab_1_1_screen_base
 | virtual void | [**Clear**](#function-clear) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aColor=0) = 0<br>_Clears a rectangular area on screen._  |
 | virtual void | [**Deserialize**](#function-deserialize) (unsigned short aSerialized, [**Coor**](structevab_1_1_coor.md) & aPos, [**Coor**](structevab_1_1_coor.md) & aSize, bool & isFocused) = 0<br>_Deserializes element state from 16-bit value._  |
 | virtual void | [**DrawSymbol**](#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aSymbol, unsigned char aColor) = 0<br>_Draws a single character symbol._  |
-| virtual void | [**Picto**](#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogramm, unsigned char aColor) = 0<br>_Draws a pictogram at the specified position._  |
+| virtual void | [**Picto**](#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogram, unsigned char aColor) = 0<br>_Draws a pictogram at the specified position._  |
 | virtual unsigned short | [**Serialize**](#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPos, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) = 0<br>_Serializes element state into 16-bit value._  |
 | virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](#function-size) () = 0<br>_Gets the screen size in tiles._  |
-| virtual void | [**TextCenter**](#function-textcenter-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the center._  |
-| virtual void | [**TextCenter**](#function-textcenter-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the center._  |
-| virtual void | [**TextLeft**](#function-textleft-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the left._  |
-| virtual void | [**TextLeft**](#function-textleft-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the left._  |
-| virtual void | [**TextRight**](#function-textright-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the right._  |
-| virtual void | [**TextRight**](#function-textright-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the right._  |
+| virtual void | [**TextCenter**](#function-TextCenter-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the center._  |
+| virtual void | [**TextCenter**](#function-TextCenter-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the center._  |
+| virtual void | [**TextLeft**](#function-TextLeft-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the left._  |
+| virtual void | [**TextLeft**](#function-TextLeft-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the left._  |
+| virtual void | [**TextRight**](#function-TextRight-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the right._  |
+| virtual void | [**TextRight**](#function-TextRight-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the right._  |
 
 
 
@@ -109,7 +109,7 @@ Defines the contract for display implementations, supporting text, pictograms, a
 
 _Clears a rectangular area on screen._ 
 ```C++
-virtual void evab::IScreen::Clear (
+virtual void evab::Screen::Clear (
     Coor aPosition,
     Coor aSize,
     unsigned char aColor=0
@@ -140,7 +140,7 @@ virtual void evab::IScreen::Clear (
 
 _Deserializes element state from 16-bit value._ 
 ```C++
-virtual void evab::IScreen::Deserialize (
+virtual void evab::Screen::Deserialize (
     unsigned short aSerialized,
     Coor & aPos,
     Coor & aSize,
@@ -173,7 +173,7 @@ virtual void evab::IScreen::Deserialize (
 
 _Draws a single character symbol._ 
 ```C++
-virtual void evab::IScreen::DrawSymbol (
+virtual void evab::Screen::DrawSymbol (
     Coor aPosition,
     Coor aSize,
     char aSymbol,
@@ -206,9 +206,9 @@ virtual void evab::IScreen::DrawSymbol (
 
 _Draws a pictogram at the specified position._ 
 ```C++
-virtual void evab::IScreen::Picto (
+virtual void evab::Screen::Picto (
     Coor aPosition,
-    const unsigned char * aPictogramm,
+    const unsigned char * aPictogram,
     unsigned char aColor
 ) = 0
 ```
@@ -221,7 +221,7 @@ virtual void evab::IScreen::Picto (
 
 
 * `aPosition` Position on screen 
-* `aPictogramm` Pictogram data (first two bytes: width/height in tiles) 
+* `aPictogram` Pictogram data (first two bytes: width/height in tiles) 
 * `aColor` Color/inversion flag (0 = normal, 1 = inverted) 
 
 
@@ -237,7 +237,7 @@ virtual void evab::IScreen::Picto (
 
 _Serializes element state into 16-bit value._ 
 ```C++
-virtual unsigned short evab::IScreen::Serialize (
+virtual unsigned short evab::Screen::Serialize (
     const Coor & aPos,
     const Coor & aSize,
     bool isFocused
@@ -275,7 +275,7 @@ unsigned short Serialized state
 
 _Gets the screen size in tiles._ 
 ```C++
-virtual Coor evab::IScreen::Size () = 0
+virtual Coor evab::Screen::Size () = 0
 ```
 
 
@@ -300,7 +300,7 @@ virtual Coor evab::IScreen::Size () = 0
 
 _Draws text aligned to the center._ 
 ```C++
-virtual void evab::IScreen::TextCenter (
+virtual void evab::Screen::TextCenter (
     Coor aPosition,
     Coor aSize,
     const char * text,
@@ -333,7 +333,7 @@ virtual void evab::IScreen::TextCenter (
 
 _Draws flash string text aligned to the center._ 
 ```C++
-virtual void evab::IScreen::TextCenter (
+virtual void evab::Screen::TextCenter (
     Coor aPosition,
     Coor aSize,
     const __FlashStringHelper * text,
@@ -366,7 +366,7 @@ virtual void evab::IScreen::TextCenter (
 
 _Draws text aligned to the left._ 
 ```C++
-virtual void evab::IScreen::TextLeft (
+virtual void evab::Screen::TextLeft (
     Coor aPosition,
     Coor aSize,
     const char * text,
@@ -399,7 +399,7 @@ virtual void evab::IScreen::TextLeft (
 
 _Draws flash string text aligned to the left._ 
 ```C++
-virtual void evab::IScreen::TextLeft (
+virtual void evab::Screen::TextLeft (
     Coor aPosition,
     Coor aSize,
     const __FlashStringHelper * text,
@@ -432,7 +432,7 @@ virtual void evab::IScreen::TextLeft (
 
 _Draws text aligned to the right._ 
 ```C++
-virtual void evab::IScreen::TextRight (
+virtual void evab::Screen::TextRight (
     Coor aPosition,
     Coor aSize,
     const char * text,
@@ -465,7 +465,7 @@ virtual void evab::IScreen::TextRight (
 
 _Draws flash string text aligned to the right._ 
 ```C++
-virtual void evab::IScreen::TextRight (
+virtual void evab::Screen::TextRight (
     Coor aPosition,
     Coor aSize,
     const __FlashStringHelper * text,
@@ -493,5 +493,5 @@ virtual void evab::IScreen::TextRight (
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabIScreen.h`
+The documentation for this class was generated from the following file `src/evabScreen.h`
 

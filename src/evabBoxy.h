@@ -1,11 +1,11 @@
 #pragma once
 
-#include <evabElementBase.h>
-#include <evabIScreen.h>
 #include <evaHandler.h>
 #include <evaDelayTimer.h>
-#include <evabKeys.h>
 
+#include <evabElementBase.h>
+#include <evabScreen.h>
+#include <evabKeys.h>
 
 namespace evab
 {
@@ -51,7 +51,7 @@ namespace evab
          * 
          * @return Pointer to current screen, or nullptr if modal is active
          */
-        static IScreen *Screen();
+        static Screen *GetScreen();
 
         /**
          * @brief Gets the singleton instance
@@ -66,7 +66,7 @@ namespace evab
          * @param aName Label text
          * @param aValue Integer value to show
          */
-        static void ShowInt(const char *aName, int aValue);
+        static void Message(const __FlashStringHelper*, const char *aText);
 
     private:
         /**
@@ -78,8 +78,8 @@ namespace evab
         void invoke(void *, eva::CallbackInfo) override;
 
     private:
-        IScreen *mScreen;                          ///< Current screen instance
+        Screen *mScreen;                          ///< Current screen instance
         ElementBase *mGround;                      ///< Ground element being displayed
-        eva::DelayTimer mModalShowTimer = {this};  ///< Timer for modal visibility
+        eva::DelayTimer mMessageTimer = {this};  ///< Timer for modal visibility
     };
 }

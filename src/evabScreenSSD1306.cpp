@@ -96,7 +96,7 @@ void ScreenSSD1306::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn
   sendData(aSlice);
 }
 
-void ScreenSSD1306::ClearTile(Coor aPosition, unsigned char aColor)
+void ScreenSSD1306::clearTile(Coor aPosition, unsigned char aColor)
 {
   uint8_t startX = aPosition.X * 8;
   uint8_t page = aPosition.Y;

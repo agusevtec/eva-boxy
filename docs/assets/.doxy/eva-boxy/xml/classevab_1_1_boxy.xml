@@ -6,8 +6,8 @@
     <includes refid="evab_boxy_8h" local="no">evabBoxy.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_boxy_1aa0c9017e75baac7aa95194f73bfd641a" prot="private" static="no" mutable="no">
-        <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
-        <definition>IScreen* evab::Boxy::mScreen</definition>
+        <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
+        <definition>Screen* evab::Boxy::mScreen</definition>
         <argsstring></argsstring>
         <name>mScreen</name>
         <qualifiedname>evab::Boxy::mScreen</qualifiedname>
@@ -162,8 +162,8 @@
         <location file="src/evabBoxy.h" line="47" column="21"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_1adce1596da674162398db477716fcc3f6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
-        <definition>static IScreen * evab::Boxy::Screen</definition>
+        <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
+        <definition>static Screen * evab::Boxy::Screen</definition>
         <argsstring>()</argsstring>
         <name>Screen</name>
         <qualifiedname>evab::Boxy::Screen</qualifiedname>

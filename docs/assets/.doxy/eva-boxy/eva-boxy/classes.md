@@ -68,7 +68,7 @@
 ([**evab**](namespaceevab.md))
 * [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md)
 ([**evab**](namespaceevab.md))
-* [**IScreen**](classevab_1_1_i_screen.md)
+* [**Screen**](classevab_1_1_i_screen.md)
 ([**evab**](namespaceevab.md))
 
 

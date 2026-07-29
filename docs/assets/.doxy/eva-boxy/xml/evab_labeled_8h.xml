@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="evab_labeled_8h" kind="file" language="C++">
     <compoundname>evabLabeled.h</compoundname>
-    <includes refid="evab_i_screen_8h" local="no">evabIScreen.h</includes>
+    <includes refid="evab_i_screen_8h" local="no">evabScreen.h</includes>
     <includes refid="evab_coor_8h" local="no">evabCoor.h</includes>
     <incdepgraph>
       <node id="4">
@@ -13,7 +13,7 @@
         <link refid="evab_coor_8h_source"/>
       </node>
       <node id="2">
-        <label>evabIScreen.h</label>
+        <label>evabScreen.h</label>
         <link refid="evab_i_screen_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -39,7 +39,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabIScreen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabScreen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabCoor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
@@ -56,7 +56,7 @@
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawer(<ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawer(<ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
 <codeline lineno="43"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aSize.<ref refid="structevab_1_1_coor_1a4e86713df8881404b96c63ca36652cc9" kindref="member">Y</ref><sp/>==<sp/>1)</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -88,7 +88,7 @@
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawer(<ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawer(<ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
 <codeline lineno="97"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aSize.<ref refid="structevab_1_1_coor_1a4e86713df8881404b96c63ca36652cc9" kindref="member">Y</ref><sp/>==<sp/>1)</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>

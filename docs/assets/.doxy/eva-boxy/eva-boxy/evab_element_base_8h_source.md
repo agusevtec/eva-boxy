@@ -10,7 +10,7 @@
 ```C++
 #pragma once
 #include <evabCoor.h>
-#include <evabIScreen.h>
+#include <evabScreen.h>
 #include <evabKeys.h>
 
 namespace evab
@@ -23,14 +23,14 @@ namespace evab
     
     void Hide();
     
-    void Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
+    void Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
     
     void Redraw();
     
     bool IsHidden();
 
   private:
-    virtual void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
+    virtual void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
     
     virtual void hider() {};
 

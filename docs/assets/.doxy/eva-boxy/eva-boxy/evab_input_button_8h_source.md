@@ -23,7 +23,7 @@ namespace evab
     void Increment(signed char delta);  // Placeholder, does nothing
 
   protected:
-    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
+    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
     const __FlashStringHelper * mName;  

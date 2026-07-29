@@ -24,7 +24,7 @@
     <innerclass refid="classevab_1_1_input_pictogram" prot="public">evab::InputPictogram</innerclass>
     <innerclass refid="classevab_1_1_input_stretch_bar" prot="public">evab::InputStretchBar</innerclass>
     <innerclass refid="classevab_1_1_input_text_stretch_bar" prot="public">evab::InputTextStretchBar</innerclass>
-    <innerclass refid="classevab_1_1_i_screen" prot="public">evab::IScreen</innerclass>
+    <innerclass refid="classevab_1_1_i_screen" prot="public">evab::Screen</innerclass>
     <innerclass refid="classevab_1_1_key_catcher" prot="public">evab::KeyCatcher</innerclass>
     <innerclass refid="classevab_1_1_key_modifier" prot="public">evab::KeyModifier</innerclass>
     <innerclass refid="classevab_1_1_key_reactor" prot="public">evab::KeyReactor</innerclass>

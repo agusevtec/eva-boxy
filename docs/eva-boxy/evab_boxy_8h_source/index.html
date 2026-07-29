@@ -504,7 +504,7 @@
 <div class="codehilite"><pre><span></span><code><span class="cp">#pragma once</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabElementBase.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabIScreen.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabScreen.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evaHandler.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evaDelayTimer.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeys.h&gt;</span>
@@ -529,7 +529,7 @@
 
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Key</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span><span class="p">);</span>
 
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">IScreen</span><span class="w"> </span><span class="o">*</span><span class="nf">Screen</span><span class="p">();</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="nf">Screen</span><span class="p">();</span>
 
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">Boxy</span><span class="w"> </span><span class="o">*</span><span class="nf">Instance</span><span class="p">();</span>
 
@@ -539,7 +539,7 @@
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">invoke</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">eva</span><span class="o">::</span><span class="n">CallbackInfo</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">private</span><span class="o">:</span>
-<span class="w">        </span><span class="n">IScreen</span><span class="w"> </span><span class="o">*</span><span class="n">mScreen</span><span class="p">;</span><span class="w">                          </span>
+<span class="w">        </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">mScreen</span><span class="p">;</span><span class="w">                          </span>
 <span class="w">        </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">mGround</span><span class="p">;</span><span class="w">                      </span>
 <span class="w">        </span><span class="n">eva</span><span class="o">::</span><span class="n">DelayTimer</span><span class="w"> </span><span class="n">mModalShowTimer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">};</span><span class="w">  </span>
 <span class="w">    </span><span class="p">};</span>

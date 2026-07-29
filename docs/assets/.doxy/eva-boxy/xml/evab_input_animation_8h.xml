@@ -24,7 +24,7 @@
         </childnode>
       </node>
       <node id="4">
-        <label>evabIScreen.h</label>
+        <label>evabScreen.h</label>
         <link refid="evab_i_screen_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -114,7 +114,7 @@
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="118" refid="classevab_1_1_input_animation_1ac59f5a42cb72cabeda522912e9017804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_animation_1ac59f5a42cb72cabeda522912e9017804" kindref="member">drawer</ref>(<ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
+<codeline lineno="118" refid="classevab_1_1_input_animation_1ac59f5a42cb72cabeda522912e9017804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_animation_1ac59f5a42cb72cabeda522912e9017804" kindref="member">drawer</ref>(<ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
 <codeline lineno="119"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Resume<sp/>animation<sp/>if<sp/>speed<sp/>&gt;<sp/>0<sp/>and<sp/>was<sp/>stopped</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mValue<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>mLastFrameTime<sp/>==<sp/>0)</highlight></codeline>

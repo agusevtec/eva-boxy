@@ -75,7 +75,7 @@ public:
     }
     
 protected:
-    void drawer(IScreen *screen, Coor pos, Coor size, unsigned char focused) override {
+    void drawer(Screen *screen, Coor pos, Coor size, unsigned char focused) override {
         // Picto size is fixed - cannot resize
         // Size parameter is ignored for picto elements
         screen->Picto(pos, mTiles[mIndex], 0);
@@ -113,7 +113,7 @@ public:
     }
     
 protected:
-    void drawer(IScreen *screen, Coor pos, Coor size, unsigned char focused) override {
+    void drawer(Screen *screen, Coor pos, Coor size, unsigned char focused) override {
         // No resize - uses fixed 16×8 tile
         screen->Picto(pos, PictosetBattery::GetTile(mLevel), 0);
     }
@@ -216,7 +216,7 @@ public:
     }
     
 protected:
-    void drawer(IScreen *screen, Coor pos, Coor size, unsigned char focused) override {
+    void drawer(Screen *screen, Coor pos, Coor size, unsigned char focused) override {
         // Row 0: Speed (single line)
         mSpeed.Draw(screen, {0, 0}, {8, 1}, focused && IsFocused(&mSpeed));
         

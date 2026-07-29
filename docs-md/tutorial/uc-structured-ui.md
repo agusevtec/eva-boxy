@@ -54,7 +54,7 @@ public:
     }
     
 protected:
-    void drawer(IScreen* screen, Coor pos, Coor size, unsigned char focused) override {
+    void drawer(Screen* screen, Coor pos, Coor size, unsigned char focused) override {
         // Draw title
         screen->TextCenter({pos.X, pos.Y}, {size.X, 1}, "Settings", focused);
         
@@ -123,7 +123,7 @@ public:
     void hider() override;
 
 protected:
-    void drawer(IScreen* screen, Coor pos, Coor size, unsigned char selected) override;
+    void drawer(Screen* screen, Coor pos, Coor size, unsigned char selected) override;
     bool onResidualKey(Keys key) override;
     
 private:
@@ -147,7 +147,7 @@ private:
 ### Composite Hierarchy
 
 ```cpp
-void GraficInterface::drawer(IScreen* screen, Coor pos, Coor size, unsigned char selected) {
+void GraficInterface::drawer(Screen* screen, Coor pos, Coor size, unsigned char selected) {
     if (IsFocused(&mDashboardListbox)) {
         // Dashboard view
         screen->TextCenter(pos, {size.X, 1}, F("DASHBOARD"), 0);
@@ -189,7 +189,7 @@ void SetValue(int newValue) {
 void Redraw() {
     if (IsHidden()) return;
     
-    IScreen* screen = Boxy::Screen();  // ← Requires Boxy
+    Screen* screen = Boxy::GetScreen();  // ← Requires Boxy
     if (screen) {
         Coor pos, size;
         bool focused;
@@ -307,7 +307,7 @@ void updateValue(int val) {
 ### 4. Handle Focus Properly
 
 ```cpp
-void drawer(IScreen* screen, Coor pos, Coor size, unsigned char focused) override {
+void drawer(Screen* screen, Coor pos, Coor size, unsigned char focused) override {
     // Pass focus state to children
     bool childFocused = IsFocused(&mChild) && focused;
     mChild.Draw(screen, childPos, childSize, childFocused);

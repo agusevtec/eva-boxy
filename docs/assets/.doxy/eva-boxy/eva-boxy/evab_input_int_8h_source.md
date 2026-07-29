@@ -27,7 +27,7 @@ namespace evab
     void Increment(signed char delta);
 
   protected:
-    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
+    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
     int mValue;  

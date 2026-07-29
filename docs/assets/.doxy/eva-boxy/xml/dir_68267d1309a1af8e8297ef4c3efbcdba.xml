@@ -18,7 +18,7 @@
     <innerfile refid="evab_input_pictogram_8h">evabInputPictogram.h</innerfile>
     <innerfile refid="evab_input_stretch_bar_8h">evabInputStretchBar.h</innerfile>
     <innerfile refid="evab_input_text_stretch_bar_8h">evabInputTextStretchBar.h</innerfile>
-    <innerfile refid="evab_i_screen_8h">evabIScreen.h</innerfile>
+    <innerfile refid="evab_i_screen_8h">evabScreen.h</innerfile>
     <innerfile refid="evab_keys_8h">evabKeys.h</innerfile>
     <innerfile refid="evab_labeled_8h">evabLabeled.h</innerfile>
     <innerfile refid="evab_layout_pane_8h">evabLayoutPane.h</innerfile>

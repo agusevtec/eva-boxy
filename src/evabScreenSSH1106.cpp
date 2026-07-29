@@ -84,7 +84,7 @@ void ScreenSSH1106::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn
     Wire.endTransmission();
 }
 
-void ScreenSSH1106::ClearTile(Coor aPosition, unsigned char aColor)
+void ScreenSSH1106::clearTile(Coor aPosition, unsigned char aColor)
 {
     setPage(aPosition.Y);
     setColumn(aPosition.X * 8 + 2);

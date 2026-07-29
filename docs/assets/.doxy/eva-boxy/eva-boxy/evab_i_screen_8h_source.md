@@ -1,8 +1,8 @@
 
 
-# File evabIScreen.h
+# File evabScreen.h
 
-[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabIScreen.h**](evab_i_screen_8h.md)
+[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabScreen.h**](evab_i_screen_8h.md)
 
 [Go to the documentation of this file](evab_i_screen_8h.md)
 
@@ -14,7 +14,7 @@
 
 namespace evab
 {
-    class IScreen
+    class Screen
     {
     public:
         virtual void TextLeft(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) = 0;
@@ -29,7 +29,7 @@ namespace evab
         
         virtual void TextRight(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
 
-        virtual void Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor) = 0;
+        virtual void Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor) = 0;
         
         virtual void Clear(Coor aPosition, Coor aSize, unsigned char aColor = 0) = 0;
         

@@ -15,7 +15,7 @@ EVA Boxy is a compact tile-based graphic framework designed for embedded systems
 #### Architecture Layers
 
 1. **Display Drivers Layer** - Hardware abstraction for various display types
-2. **Pencil Mode (IScreen)** - Direct drawing operations on the screen
+2. **Pencil Mode (Screen)** - Direct drawing operations on the screen
 3. **Stamp Mode (ElementBase)** - Reusable graphical elements with state management
 4. **Structured UI** - Composite elements and layout management
 5. **Keyboard Behavior** - Input handling and focus management
@@ -26,8 +26,8 @@ EVA Boxy is a compact tile-based graphic framework designed for embedded systems
 
 | Class | Purpose |
 |-------|---------|
-| `IScreen` | Interface for screen operations (text, pictograms, clearing) |
-| `ScreenBase` | Base implementation of IScreen with text rendering |
+| `Screen` | Interface for screen operations (text, pictograms, clearing) |
+| `ScreenBase` | Base implementation of Screen with text rendering |
 | `ScreenPage8Base` | Base for page-oriented displays (8-pixel vertical strips) |
 | `ElementBase` | Base class for all UI elements with drawing and hiding |
 | `CompositeBase` | Container for multiple elements with focus management |
@@ -56,7 +56,7 @@ struct Coor {
 // Define your root element
 class MyRootElement : public ElementBase {
 protected:
-    void drawer(IScreen* screen, Coor pos, Coor size, unsigned char focused) override {
+    void drawer(Screen* screen, Coor pos, Coor size, unsigned char focused) override {
         screen->TextCenter(pos, size, "Hello World", focused);
     }
     void hider() override {}
@@ -87,7 +87,7 @@ evabBoxy/
 │   ├── evabBoxy.h/cpp          - Library entry point
 │   ├── evabCoor.h/cpp          - Coordinate system
 │   ├── evabKeys.h              - Key definitions
-│   └── evabIScreen.h           - Screen interface
+│   └── evabScreen.h           - Screen interface
 ├── Screens/
 │   ├── evabScreenBase.h/cpp    - Base screen implementation
 │   ├── evabScreenPage8Base.h/cpp - Page-based screen base
@@ -156,7 +156,7 @@ Bit packing:
 ## Next Steps
 
 - [Display Drivers](display-drivers.md) - Understanding screen initialization
-- [Pencil Mode](uc-paint.md) - Direct drawing with IScreen interface
+- [Pencil Mode](uc-paint.md) - Direct drawing with Screen interface
 - [Stamp Mode](uc-elements-stamps.md) - Reusable graphical elements
 - [Structured UI](uc-structured-ui.md) - Building composite interfaces
 - [Keyboard Behavior](keyboard-behavior.md) - Input handling and focus

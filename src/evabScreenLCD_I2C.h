@@ -1,6 +1,6 @@
 #pragma once
 
-#include <evabScreenBase.h>
+#include <evabScreen.h>
 #include <Wire.h>
 
 namespace evab
@@ -11,7 +11,7 @@ namespace evab
    * 
    * Supports standard 16x2, 20x4 LCD displays with I2C backpack.
    */
-  class ScreenLCD_I2C : public ScreenBase
+  class ScreenLCD_I2C : public Screen
   {
   public:
     /**

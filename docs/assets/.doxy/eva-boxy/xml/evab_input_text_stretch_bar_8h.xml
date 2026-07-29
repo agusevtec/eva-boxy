@@ -23,7 +23,7 @@
         </childnode>
       </node>
       <node id="4">
-        <label>evabIScreen.h</label>
+        <label>evabScreen.h</label>
         <link refid="evab_i_screen_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -191,7 +191,7 @@
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="237"><highlight class="normal"></highlight></codeline>
 <codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawer(<ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawer(<ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
 <codeline lineno="248"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>resolution<sp/>=<sp/>OrientationTextPolicy::CalculateResolution(aSize);</highlight></codeline>
 <codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>normalizedValue<sp/>=<sp/>map(mValue,<sp/>0,<sp/>100,<sp/>0,<sp/>resolution);</highlight></codeline>

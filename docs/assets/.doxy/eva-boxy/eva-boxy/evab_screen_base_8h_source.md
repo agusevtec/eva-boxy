@@ -12,11 +12,11 @@
 #include "evabCoor.h"
 #include <Arduino.h>
 
-#include <evabIScreen.h>
+#include <evabScreen.h>
 
 namespace evab
 {
-    class ScreenBase : public IScreen
+    class ScreenBase : public Screen
     {
     public:
         void TextLeft(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) override;
@@ -33,7 +33,7 @@ namespace evab
         
         void Clear(Coor aPosition, Coor aSize, unsigned char aColor) override;
         
-        virtual void Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor);
+        virtual void Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor);
 
     protected:
         virtual void ClearTile(Coor position, unsigned char aColor);

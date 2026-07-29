@@ -58,7 +58,7 @@ Inherits the following classes: eva::IHandler
 |  void | [**Begin**](#function-begin) ([**ElementBase**](classevab_1_1_element_base.md) \* aGround, Args &&... args) <br>_Initializes the_ [_**Boxy**_](classevab_1_1_boxy.md) _system with a screen and ground element._ |
 |  [**Boxy**](classevab_1_1_boxy.md) \* | [**Instance**](#function-instance) () <br>_Gets the singleton instance._  |
 |  void | [**Key**](#function-key) (Keys aKey) <br>_Forwards key events to the ground element._  |
-|  [**IScreen**](classevab_1_1_i_screen.md) \* | [**Screen**](#function-screen) () <br>_Gets the current screen pointer._  |
+|  [**Screen**](classevab_1_1_i_screen.md) \* | [**Screen**](#function-screen) () <br>_Gets the current screen pointer._  |
 |  void | [**ShowInt**](#function-showint) (const char \* aName, int aValue) <br>_Displays a temporary modal with a named integer value._  |
 
 
@@ -193,7 +193,7 @@ static void evab::Boxy::Key (
 
 _Gets the current screen pointer._ 
 ```C++
-static IScreen * evab::Boxy::Screen () 
+static Screen * evab::Boxy::Screen () 
 ```
 
 

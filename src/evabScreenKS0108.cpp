@@ -155,7 +155,7 @@ void ScreenKS0108::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn,
     sendData(aSlice, chip);
 }
 
-void ScreenKS0108::ClearTile(Coor aPosition, unsigned char aColor)
+void ScreenKS0108::clearTile(Coor aPosition, unsigned char aColor)
 {
     uint8_t startCol = aPosition.X * 8;
     uint8_t page = aPosition.Y;

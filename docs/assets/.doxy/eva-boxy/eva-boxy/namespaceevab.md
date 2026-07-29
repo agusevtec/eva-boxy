@@ -44,7 +44,7 @@
 | struct | [**HorizontalPictoPolicy**](structevab_1_1_horizontal_picto_policy.md) <br>_Policy for horizontal orientation of stretch bars._  |
 | struct | [**HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md) <br>_Policy for horizontal text-based stretch bars._  |
 | class | [**IFont**](classevab_1_1_i_font.md) <br>_Abstract interface for font providers._  |
-| class | [**IScreen**](classevab_1_1_i_screen.md) <br>_Abstract interface for screen rendering._  |
+| class | [**Screen**](classevab_1_1_i_screen.md) <br>_Abstract interface for screen rendering._  |
 | class | [**InputAnimation**](classevab_1_1_input_animation.md) &lt;class TPictoset, tMaxSpeed&gt;<br>_Animation input element with configurable speed._  |
 | class | [**InputButton**](classevab_1_1_input_button.md) <br>_Button input element._  |
 | class | [**InputFloat**](classevab_1_1_input_float.md) <br>_Floating-point input element._  |

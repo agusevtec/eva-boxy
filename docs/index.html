@@ -869,7 +869,7 @@
 <h4 id="architecture-layers">Architecture Layers<a class="headerlink" href="#architecture-layers" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Display Drivers Layer</strong> - Hardware abstraction for various display types</li>
-<li><strong>Pencil Mode (IScreen)</strong> - Direct drawing operations on the screen</li>
+<li><strong>Pencil Mode (Screen)</strong> - Direct drawing operations on the screen</li>
 <li><strong>Stamp Mode (ElementBase)</strong> - Reusable graphical elements with state management</li>
 <li><strong>Structured UI</strong> - Composite elements and layout management</li>
 <li><strong>Keyboard Behavior</strong> - Input handling and focus management</li>
@@ -885,12 +885,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>IScreen</code></td>
+<td><code>Screen</code></td>
 <td>Interface for screen operations (text, pictograms, clearing)</td>
 </tr>
 <tr>
 <td><code>ScreenBase</code></td>
-<td>Base implementation of IScreen with text rendering</td>
+<td>Base implementation of Screen with text rendering</td>
 </tr>
 <tr>
 <td><code>ScreenPage8Base</code></td>
@@ -930,7 +930,7 @@
 <span class="c1">// Define your root element</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyRootElement</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ElementBase</span><span class="w"> </span><span class="p">{</span>
 <span class="k">protected</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">drawer</span><span class="p">(</span><span class="n">IScreen</span><span class="o">*</span><span class="w"> </span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">focused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="o">*</span><span class="w"> </span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">focused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">TextCenter</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello World&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">focused</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">hider</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span>
@@ -959,7 +959,7 @@
 <span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabBoxy</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="nx">Library</span><span class="w"> </span><span class="nx">entry</span><span class="w"> </span><span class="nx">point</span>
 <span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabCoor</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">          </span><span class="o">-</span><span class="w"> </span><span class="nx">Coordinate</span><span class="w"> </span><span class="nx">system</span>
 <span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabKeys</span><span class="p">.</span><span class="nx">h</span><span class="w">              </span><span class="o">-</span><span class="w"> </span><span class="nx">Key</span><span class="w"> </span><span class="nx">definitions</span>
-<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">evabIScreen</span><span class="p">.</span><span class="nx">h</span><span class="w">           </span><span class="o">-</span><span class="w"> </span><span class="nx">Screen</span><span class="w"> </span><span class="kd">interface</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="nx">evabScreen</span><span class="p">.</span><span class="nx">h</span><span class="w">           </span><span class="o">-</span><span class="w"> </span><span class="nx">Screen</span><span class="w"> </span><span class="kd">interface</span>
 <span class="err">├──</span><span class="w"> </span><span class="nx">Screens</span><span class="o">/</span>
 <span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenBase</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Base</span><span class="w"> </span><span class="nx">screen</span><span class="w"> </span><span class="nx">implementation</span>
 <span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="nx">evabScreenPage8Base</span><span class="p">.</span><span class="nx">h</span><span class="o">/</span><span class="nx">cpp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Page</span><span class="o">-</span><span class="nx">based</span><span class="w"> </span><span class="nx">screen</span><span class="w"> </span><span class="kd">base</span>
@@ -1024,7 +1024,7 @@
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="display-drivers.md">Display Drivers</a> - Understanding screen initialization</li>
-<li><a href="uc-paint.md">Pencil Mode</a> - Direct drawing with IScreen interface</li>
+<li><a href="uc-paint.md">Pencil Mode</a> - Direct drawing with Screen interface</li>
 <li><a href="uc-elements-stamps.md">Stamp Mode</a> - Reusable graphical elements</li>
 <li><a href="uc-structured-ui.md">Structured UI</a> - Building composite interfaces</li>
 <li><a href="keyboard-behavior.md">Keyboard Behavior</a> - Input handling and focus</li>

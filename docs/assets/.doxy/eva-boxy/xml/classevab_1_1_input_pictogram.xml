@@ -186,12 +186,12 @@
       <memberdef kind="function" id="classevab_1_1_input_pictogram_1af24f505c3cfa45f20a25d8d36a652d85" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>void evab::InputPictogram&lt; TPictoset &gt;::drawer</definition>
-        <argsstring>(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::InputPictogram::drawer</qualifiedname>
         <reimplements refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e">drawer</reimplements>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">IScreen</ref> *</type>
+          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>

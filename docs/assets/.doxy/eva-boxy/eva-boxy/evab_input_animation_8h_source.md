@@ -62,7 +62,7 @@ namespace evab
         }
 
     protected:
-        void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+        void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
             // Resume animation if speed > 0 and was stopped
             if (mValue > 0 && mLastFrameTime == 0)

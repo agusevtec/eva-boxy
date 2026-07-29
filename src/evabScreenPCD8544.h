@@ -87,7 +87,7 @@ namespace evab
      * @param aPosition Position of the tile
      * @param aColor Fill color
      */
-    void ClearTile(Coor aPosition, unsigned char aColor) override;
+    void clearTile(Coor aPosition, unsigned char aColor) override;
 
   private:
     /**

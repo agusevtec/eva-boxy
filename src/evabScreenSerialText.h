@@ -1,6 +1,6 @@
 #pragma once
 
-#include <evabScreenBase.h>
+#include <evabScreen.h>
 
 namespace evab
 {
@@ -11,7 +11,7 @@ namespace evab
      * Used for debugging UI layout without physical hardware.
      * Displays characters in a 16x8 grid.
      */
-    class ScreenSerialText : public ScreenBase
+    class ScreenSerialText : public Screen
     {
     public:
         /**

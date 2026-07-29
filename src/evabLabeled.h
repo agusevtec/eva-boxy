@@ -1,36 +1,61 @@
+// evabLabeled.h
 #pragma once
 
-#include <evabIScreen.h>
+#include <evabScreen.h>
 #include <evabCoor.h>
+#include <evabTextAlign.h>
 
 namespace evab
 {
 
   /**
-   * @brief Decorator that adds a label to any element
+   * @brief Decorator that adds a label to any element with alignment
    * 
    * Wraps an element and adds a text label either to the left
    * (single line) or above (multi-line).
    * 
    * @tparam T Element type to label
+   * @tparam TAlign Alignment strategy for label (LeftAlign, CenterAlign, RightAlign)
+   * @tparam TText Text type (const char*, __FlashStringHelper*)
    */
-  template <class T>
+  template <class T, typename TAlign, typename TText>
   class Labeled : public T
   {
   public:
     /**
-     * @brief Constructor for Labeled with C-string label
+     * @brief Constructor for Labeled
      * 
-     * @param aName Label text (C-string)
+     * @param aName Label text
      * @param args Arguments forwarded to the base element constructor
      */
     template<typename... Args>
-    Labeled(const char *aName, Args&&... args) 
+    Labeled(TText aName, Args&&... args) 
       : T(args...), mName(aName)
     {
     }
 
-  private:
+    /**
+     * @brief Sets new label text and redraws
+     * 
+     * @param aName New label text
+     */
+    void SetLabel(TText aName)
+    {
+      mName = aName;
+      Redraw();
+    }
+
+    /**
+     * @brief Gets current label text
+     * 
+     * @return Current label text
+     */
+    TText GetLabel() const
+    {
+      return mName;
+    }
+
+  protected:
     /**
      * @brief Draws the labeled element
      * 
@@ -39,79 +64,65 @@ namespace evab
      * @param aSize Size of the element
      * @param aIsFocused Focus state (1 = focused, 0 = not focused)
      */
-    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
+      if (!aScreen || aSize.X == 0 || aSize.Y == 0)
+        return;
+
       if (aSize.Y == 1)
       {
+        // Single line: label on the left, element on the right
         unsigned char labelWidth = 2 * aSize.X / 3;
         unsigned char inputWidth = aSize.X - labelWidth;
         
-        aScreen->TextLeft(aPos, {labelWidth, 1}, mName, aIsFocused);
+        // Draw label with specified alignment
+        aScreen->Text<TAlign>(aPos, {labelWidth, 1}, mName, aIsFocused);
+        
+        // Draw wrapped element
         T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, 1}, aIsFocused);
       }
       else
       {
-        aScreen->TextLeft(aPos, {aSize.X, 1}, mName, aIsFocused);
+        // Multi-line: label on top, element below
+        aScreen->Text<TAlign>(aPos, {aSize.X, 1}, mName, aIsFocused);
+        
+        // Draw wrapped element below label
         T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
       }
     }
 
+    void hider() override {}
+
   private:
-    const char *mName;  ///< Label text (C-string)
+    TText mName;  ///< Label text
   };
 
-  /**
-   * @brief Decorator that adds a Flash string label to any element
-   * 
-   * Wraps an element and adds a Flash string label either to the left
-   * (single line) or above (multi-line).
-   * 
-   * @tparam T Element type to label
-   */
+  // ============================================================
+  // Convenience aliases for const char* labels
+  // ============================================================
+
   template <class T>
-  class LabeledF : public T
-  {
-  public:
-    /**
-     * @brief Constructor for LabeledF with Flash string label
-     * 
-     * @param aName Label text (Flash string, PROGMEM)
-     * @param args Arguments forwarded to the base element constructor
-     */
-    template<typename... Args>
-    LabeledF(const __FlashStringHelper *aName, Args&&... args) 
-      : T(args...), mName(aName)
-    {
-    }
+  using LabeledLeft = Labeled<T, LeftAlign, const char*>;
 
-  private:
-    /**
-     * @brief Draws the labeled element
-     * 
-     * @param aScreen Screen to draw on
-     * @param aPos Position on screen
-     * @param aSize Size of the element
-     * @param aIsFocused Focus state (1 = focused, 0 = not focused)
-     */
-    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
-    {
-      if (aSize.Y == 1)
-      {
-        unsigned char labelWidth = 2 * aSize.X / 3;
-        unsigned char inputWidth = aSize.X - labelWidth;
-        
-        aScreen->TextLeft(aPos, {labelWidth, 1}, mName, aIsFocused);
-        T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, 1}, aIsFocused);
-      }
-      else
-      {
-        aScreen->TextLeft(aPos, {aSize.X, 1}, mName, aIsFocused);
-        T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
-      }
-    }
+  template <class T>
+  using LabeledCenter = Labeled<T, CenterAlign, const char*>;
 
-  private:
-    const __FlashStringHelper *mName;  ///< Label text (Flash string)
-  };
+  template <class T>
+  using LabeledRight = Labeled<T, RightAlign, const char*>;
+
+  // ============================================================
+  // Convenience aliases for Flash string labels
+  // ============================================================
+
+  template <class T>
+  using LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper*>;
+
+  template <class T>
+  using LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper*>;
+
+  template <class T>
+  using LabeledRightF = Labeled<T, RightAlign, const __FlashStringHelper*>;
+
+
 
 }

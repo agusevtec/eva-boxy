@@ -30,7 +30,7 @@ namespace evab
   private:
     bool Key(Keys aKey) override;
     
-    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
+    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
     
     void hider() override;
     

@@ -7,7 +7,7 @@ void ElementBase::Redraw()
   if (IsHidden())
     return;
 
-  IScreen *screen = Boxy::Screen();
+  Screen *screen = Boxy::GetScreen();
   if (!screen)
     return;
 
@@ -29,7 +29,7 @@ void ElementBase::Hide()
   mSerialized = 0;
 }
 
-void ElementBase::Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
+void ElementBase::Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
 {
   if (!aScreen)
     return;

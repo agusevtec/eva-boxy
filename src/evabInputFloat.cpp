@@ -24,7 +24,7 @@ namespace evab
     SetValue(mValue + delta);
   }
 
-  void InputFloat::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
+  void InputFloat::drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
     char buffer[20];
     if (abs(mValue) < 1)

@@ -32,7 +32,7 @@ public:
     MyUI() : mValue(42) {}
     
 protected:
-    void drawer(IScreen *screen, Coor pos, Coor size, unsigned char focused) override {
+    void drawer(Screen *screen, Coor pos, Coor size, unsigned char focused) override {
         mValue.Draw(screen, {0, 0}, {8, 1}, focused && IsFocused(&mValue));
     }
     
@@ -62,7 +62,7 @@ void loop() {
 
 1. **[Library Structure](structure.md)** - Core architecture and component organization
 2. **[Display Drivers](display-drivers.md)** - Available display implementations and initialization
-3. **[Pencil Mode](uc-paint.md)** - IScreen interface for drawing operations
+3. **[Pencil Mode](uc-paint.md)** - Screen interface for drawing operations
 4. **[Stamp Mode](uc-elements-stamps.md)** - ElementBase interface for UI components
 5. **[Structured UI](uc-structured-ui.md)** - Composite interfaces for complex layouts
 6. **[Keyboard Behavior](keyboard-behavior.md)** - Key handling and event management

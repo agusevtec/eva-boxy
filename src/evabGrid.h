@@ -2,7 +2,7 @@
 #pragma once
 
 #include <evabElementBase.h>
-#include <evabIScreen.h>
+#include <evabScreen.h>
 
 namespace evab
 {
@@ -62,14 +62,14 @@ namespace evab
          * @param aElement Element to draw
          * @param aIsFocused Focus state (1 = focused, 0 = not focused)
          */
-        void Draw(IScreen *aScreen, ElementBase *aElement, unsigned char aIsFocused = 0);
+        void Draw(Screen *aScreen, ElementBase *aElement, unsigned char aIsFocused = 0);
 
         /**
          * @brief Clears the current cell area
          * 
          * @param aScreen Screen to draw on
          */
-        void Blank(IScreen *aScreen);
+        void Blank(Screen *aScreen);
 
         /**
          * @brief Gets the current position

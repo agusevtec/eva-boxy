@@ -10,7 +10,7 @@
 ```C++
 #pragma once
 
-#include <evabIScreen.h>
+#include <evabScreen.h>
 #include <evabCoor.h>
 
 namespace evab
@@ -27,7 +27,7 @@ namespace evab
     }
 
   private:
-    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
       if (aSize.Y == 1)
       {
@@ -59,7 +59,7 @@ namespace evab
     }
 
   private:
-    void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
       if (aSize.Y == 1)
       {

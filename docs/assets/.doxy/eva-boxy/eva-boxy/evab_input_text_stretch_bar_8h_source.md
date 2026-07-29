@@ -139,7 +139,7 @@ namespace evab
         }
 
     private:
-        void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+        void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
             unsigned short resolution = OrientationTextPolicy::CalculateResolution(aSize);
             unsigned short normalizedValue = map(mValue, 0, 100, 0, resolution);

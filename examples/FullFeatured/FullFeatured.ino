@@ -1,14 +1,16 @@
+#include <evaTac.h>
+#include <evaHandler.h>
+#include <evaRepeatTimer.h>
+
+
 #include <evabBoxy.h>
 #include <evabFont8Narrow.h>
 #include <evabScreenSSD1306.h>
-#include <evaRepeatTimer.h>
 
 #include <evabGalleryRemixicon24.h>
 #include <evabGalleryRemixicon32.h>
 #include <evabInputButtonPicto.h>
 #include <evabBehavior.h>
-#include <evaTac.h>
-#include <evaHandler.h>
 #include <evabInputButton.h>
 #include <evabLayoutBase.h>
 #include <evabLabeled.h>
@@ -35,7 +37,7 @@ public:
   }
 
 private:
-  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     TextLabelCenterF labelTitle(F("BOXY - DEMO"));
     TextLabelCenterF labelOption(IsFocused(&mMonitorButton) ? F("DASHBOARD") : F("SETTINGS"));
 
@@ -66,9 +68,9 @@ public:
   }
 
 private:
-  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    LabeledF<InputFloat> tempField(F("TEMERATURE"), 23);
-    LabeledF<InputInt> humField(F("HUMIDITY"), 41);
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+    LabeledLeftF<InputFloat> tempField(F("TEMERATURE"), 23);
+    LabeledLeftF<InputInt> humField(F("HUMIDITY"), 41);
 
     Grid grid (aPos, aSize);
     //mesh.NextRow(1).Blank(aScreen);
@@ -129,7 +131,7 @@ private:
     Redraw();
   }
 
-  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     if (IsFocused(&mUIHome))
       mUIHome.Draw(aScreen, aPos, aSize, aIsFocused);
     else
@@ -146,23 +148,24 @@ private:
   }
 };
 
-const unsigned char gSimulateUser[5] = { KEY_RIGHT, KEY_LEFT, KEY_ENTER, KEY_ENTER};
+const unsigned char gSimulateUser[4] = { KEY_RIGHT, KEY_LEFT, KEY_ENTER, KEY_ENTER};
 unsigned char gSimulateUserIndex = 0;
 
 class App {
   RepeatTimer repeatTimer{ new Handler<App>(this, &onRepeatTimer) };
   UIGroundLayer mUIGroundLayer;
-  //UIMonitoringForm mUIGroundLayer{ nullptr };
+//  UIMonitoringForm mUIGroundLayer{ nullptr };
 
 public:
   App() {
     Boxy::Begin<ScreenSSD1306, Font8Narrow>(&mUIGroundLayer);
     repeatTimer.start(2000);
+    Boxy::Message(F("Information"), "started !");
   }
 
   void onRepeatTimer(void *, eva::CallbackInfo) {
     Boxy::Key(gSimulateUser[gSimulateUserIndex]);
-    ++gSimulateUserIndex %= 5;
+    ++gSimulateUserIndex %= 4;
   }
 };
 

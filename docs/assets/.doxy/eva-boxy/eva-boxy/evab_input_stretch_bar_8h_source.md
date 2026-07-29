@@ -76,7 +76,7 @@ namespace evab
         static constexpr unsigned char MIDDLE_BLOCK = 2;  
         static constexpr unsigned char END_BLOCK = 3;     
 
-        void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+        void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
             unsigned short resolution = OrientationPictoPolicy::CalculateResolution(aSize);
             unsigned short normalizedValue = map(mValue, 0, 100, 0, resolution);

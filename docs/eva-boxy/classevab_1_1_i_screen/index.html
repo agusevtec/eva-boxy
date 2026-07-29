@@ -21,7 +21,7 @@
     
     
       
-        <title>Class evab::IScreen - EVA Boxy</title>
+        <title>Class evab::Screen - EVA Boxy</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#class-evabiscreen" class="md-skip">
+        <a href="#class-evabScreen" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Class evab::IScreen
+              Class evab::Screen
             
           </span>
         </div>
@@ -587,7 +587,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textcenter-12" class="md-nav__link">
+  <a href="#function-TextCenter-12" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextCenter [1/2]
@@ -598,7 +598,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textcenter-22" class="md-nav__link">
+  <a href="#function-TextCenter-22" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextCenter [2/2]
@@ -609,7 +609,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textleft-12" class="md-nav__link">
+  <a href="#function-TextLeft-12" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextLeft [1/2]
@@ -620,7 +620,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textleft-22" class="md-nav__link">
+  <a href="#function-TextLeft-22" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextLeft [2/2]
@@ -631,7 +631,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textright-12" class="md-nav__link">
+  <a href="#function-TextRight-12" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextRight [1/2]
@@ -642,7 +642,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textright-22" class="md-nav__link">
+  <a href="#function-TextRight-22" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextRight [2/2]
@@ -677,11 +677,11 @@
   
 
 
-<h1 id="class-evabiscreen">Class evab::IScreen<a class="headerlink" href="#class-evabiscreen" title="Permanent link">&para;</a></h1>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>IScreen</strong></a></p>
+<h1 id="class-evabScreen">Class evab::Screen<a class="headerlink" href="#class-evabScreen" title="Permanent link">&para;</a></h1>
+<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>Screen</strong></a></p>
 <p><em>Abstract interface for screen rendering.</em> <a href="#detailed-description">More...</a></p>
 <ul>
-<li><code>#include &lt;evabIScreen.h&gt;</code></li>
+<li><code>#include &lt;evabScreen.h&gt;</code></li>
 </ul>
 <p>Inherited by the following classes: <a href="../classevab_1_1_screen_base/">evab::ScreenBase</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
@@ -707,7 +707,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * aPictogramm, unsigned char aColor) = 0<br><em>Draws a pictogram at the specified position.</em></td>
+<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * aPictogram, unsigned char aColor) = 0<br><em>Draws a pictogram at the specified position.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual unsigned short</td>
@@ -719,27 +719,27 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the center.</em></td>
+<td style="text-align: left;"><a href="#function-TextCenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the center.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the center.</em></td>
+<td style="text-align: left;"><a href="#function-TextCenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the center.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the left.</em></td>
+<td style="text-align: left;"><a href="#function-TextLeft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the left.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the left.</em></td>
+<td style="text-align: left;"><a href="#function-TextLeft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the left.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the right.</em></td>
+<td style="text-align: left;"><a href="#function-TextRight-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the right.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the right.</em></td>
+<td style="text-align: left;"><a href="#function-TextRight-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the right.</em></td>
 </tr>
 </tbody>
 </table>
@@ -748,7 +748,7 @@
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-clear">function Clear<a class="headerlink" href="#function-clear" title="Permanent link">&para;</a></h3>
 <p><em>Clears a rectangular area on screen.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Clear</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">Clear</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="o">=</span><span class="mi">0</span>
@@ -765,7 +765,7 @@
 
 <h3 id="function-deserialize">function Deserialize<a class="headerlink" href="#function-deserialize" title="Permanent link">&para;</a></h3>
 <p><em>Deserializes element state from 16-bit value.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Deserialize</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">Deserialize</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">aSerialized</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
@@ -784,7 +784,7 @@
 
 <h3 id="function-drawsymbol">function DrawSymbol<a class="headerlink" href="#function-drawsymbol" title="Permanent link">&para;</a></h3>
 <p><em>Draws a single character symbol.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">DrawSymbol</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">DrawSymbol</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">aSymbol</span><span class="p">,</span>
@@ -803,9 +803,9 @@
 
 <h3 id="function-picto">function Picto<a class="headerlink" href="#function-picto" title="Permanent link">&para;</a></h3>
 <p><em>Draws a pictogram at the specified position.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Picto</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">Picto</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aPictogramm</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aPictogram</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span>
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
@@ -813,14 +813,14 @@
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>aPosition</code> Position on screen </li>
-<li><code>aPictogramm</code> Pictogram data (first two bytes: width/height in tiles) </li>
+<li><code>aPictogram</code> Pictogram data (first two bytes: width/height in tiles) </li>
 <li><code>aColor</code> Color/inversion flag (0 = normal, 1 = inverted) </li>
 </ul>
 <hr>
 
 <h3 id="function-serialize">function Serialize<a class="headerlink" href="#function-serialize" title="Permanent link">&para;</a></h3>
 <p><em>Serializes element state into 16-bit value.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Serialize</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">Serialize</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isFocused</span>
@@ -839,16 +839,16 @@
 
 <h3 id="function-size">function Size<a class="headerlink" href="#function-size" title="Permanent link">&para;</a></h3>
 <p><em>Gets the screen size in tiles.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">Size</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">Size</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
 <p><a href="../structevab_1_1_coor/"><strong>Coor</strong></a> Screen dimensions in tiles (X, Y) </p>
 <hr>
 
-<h3 id="function-textcenter-12">function TextCenter [1/2]<a class="headerlink" href="#function-textcenter-12" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextCenter-12">function TextCenter [1/2]<a class="headerlink" href="#function-TextCenter-12" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned to the center.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">text</span><span class="p">,</span>
@@ -865,9 +865,9 @@
 </ul>
 <hr>
 
-<h3 id="function-textcenter-22">function TextCenter [2/2]<a class="headerlink" href="#function-textcenter-22" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextCenter-22">function TextCenter [2/2]<a class="headerlink" href="#function-TextCenter-22" title="Permanent link">&para;</a></h3>
 <p><em>Draws flash string text aligned to the center.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">text</span><span class="p">,</span>
@@ -884,9 +884,9 @@
 </ul>
 <hr>
 
-<h3 id="function-textleft-12">function TextLeft [1/2]<a class="headerlink" href="#function-textleft-12" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextLeft-12">function TextLeft [1/2]<a class="headerlink" href="#function-TextLeft-12" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned to the left.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">text</span><span class="p">,</span>
@@ -903,9 +903,9 @@
 </ul>
 <hr>
 
-<h3 id="function-textleft-22">function TextLeft [2/2]<a class="headerlink" href="#function-textleft-22" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextLeft-22">function TextLeft [2/2]<a class="headerlink" href="#function-TextLeft-22" title="Permanent link">&para;</a></h3>
 <p><em>Draws flash string text aligned to the left.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">text</span><span class="p">,</span>
@@ -922,9 +922,9 @@
 </ul>
 <hr>
 
-<h3 id="function-textright-12">function TextRight [1/2]<a class="headerlink" href="#function-textright-12" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextRight-12">function TextRight [1/2]<a class="headerlink" href="#function-TextRight-12" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned to the right.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">text</span><span class="p">,</span>
@@ -941,9 +941,9 @@
 </ul>
 <hr>
 
-<h3 id="function-textright-22">function TextRight [2/2]<a class="headerlink" href="#function-textright-22" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextRight-22">function TextRight [2/2]<a class="headerlink" href="#function-TextRight-22" title="Permanent link">&para;</a></h3>
 <p><em>Draws flash string text aligned to the right.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">IScreen</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Screen</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">text</span><span class="p">,</span>
@@ -961,7 +961,7 @@
 <hr>
 
 <hr />
-<p>The documentation for this class was generated from the following file <code>src/evabIScreen.h</code></p>
+<p>The documentation for this class was generated from the following file <code>src/evabScreen.h</code></p>
 
 
 

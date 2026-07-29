@@ -13,7 +13,7 @@
         <link refid="evab_coor_8h_source"/>
       </node>
       <node id="5">
-        <label>evabIScreen.h</label>
+        <label>evabScreen.h</label>
         <link refid="evab_i_screen_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>

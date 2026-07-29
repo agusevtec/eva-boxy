@@ -310,7 +310,7 @@ public:
     }
     
 protected:
-    void drawer(IScreen* screen, Coor pos, Coor size, unsigned char focused) override {
+    void drawer(Screen* screen, Coor pos, Coor size, unsigned char focused) override {
         screen->TextCenter(pos, {size.X, 1}, F("Settings"), focused);
         mListbox.Draw(screen, {pos.X, pos.Y + 1}, {size.X, size.Y - 1},
                       IsFocused(&mListbox));

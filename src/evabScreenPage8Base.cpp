@@ -30,10 +30,10 @@ namespace evab
     }
   }
 
-  void ScreenPage8Base::Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor)
+  void ScreenPage8Base::Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor)
   {
-    uint8_t tilesW = pgm_read_byte(aPictogramm + 0) / 8; // ширина в тайлах
-    uint8_t tilesH = pgm_read_byte(aPictogramm + 1) / 8; // высота в тайлах
+    uint8_t tilesW = pgm_read_byte(aPictogram + 0) / 8; // ширина в тайлах
+    uint8_t tilesH = pgm_read_byte(aPictogram + 1) / 8; // высота в тайлах
     int j = 2;
     for (uint8_t tileY = 0; tileY < tilesH; tileY++)
     {
@@ -41,7 +41,7 @@ namespace evab
       {
         for (uint8_t col = 0; col < 8; col++)
         {
-          uint8_t slice = pgm_read_byte(&aPictogramm[j++]);
+          uint8_t slice = pgm_read_byte(&aPictogram[j++]);
           if (aColor == 1)
             slice = ~slice;
           DrawVerticalSlice({aPosition.X + tileX, aPosition.Y + tileY}, col, slice);

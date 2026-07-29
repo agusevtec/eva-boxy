@@ -141,7 +141,7 @@
     <member refid="classevab_1_1_input_text_stretch_bar_1ab4ab3df83b0f0be3a48db05a0d15f2ec" kind="function"><name>drawer</name></member>
     <member refid="classevab_1_1_input_text_stretch_bar_1ab757049ce13d88293615ba330f1f7228" kind="function"><name>blockFill</name></member>
   </compound>
-  <compound refid="classevab_1_1_i_screen" kind="class"><name>evab::IScreen</name>
+  <compound refid="classevab_1_1_i_screen" kind="class"><name>evab::Screen</name>
     <member refid="classevab_1_1_i_screen_1a8af506f56d3886c03958031168f75fa1" kind="function"><name>TextLeft</name></member>
     <member refid="classevab_1_1_i_screen_1a3cfd8a521fb127b33c3ee316e06a90a2" kind="function"><name>TextCenter</name></member>
     <member refid="classevab_1_1_i_screen_1a9e64eb57249408a3adbea99a94752418" kind="function"><name>TextRight</name></member>
@@ -482,7 +482,7 @@
   </compound>
   <compound refid="evab_input_text_stretch_bar_8h" kind="file"><name>evabInputTextStretchBar.h</name>
   </compound>
-  <compound refid="evab_i_screen_8h" kind="file"><name>evabIScreen.h</name>
+  <compound refid="evab_i_screen_8h" kind="file"><name>evabScreen.h</name>
   </compound>
   <compound refid="evab_keys_8h" kind="file"><name>evabKeys.h</name>
     <member refid="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bc" kind="enum"><name>Keys</name></member>

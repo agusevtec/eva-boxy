@@ -28,7 +28,7 @@
         </childnode>
       </node>
       <node id="4">
-        <label>evabIScreen.h</label>
+        <label>evabScreen.h</label>
         <link refid="evab_i_screen_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>

@@ -27,7 +27,7 @@ class MyLayout : public LayoutBase {
   FocusChain<InputButton> btn4{ this, (const __FlashStringHelper *)OK_TEXT };
 
 protected:
-  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     btn1.Draw(aScreen, aPos, { 4, 4 }, IsFocused(&btn1));
     btn2.Draw(aScreen, { aPos.X + 4, aPos.Y + 4 }, { 4, 4 }, 0);
     btn3.Draw(aScreen, { aPos.X + 8, aPos.Y + 0 }, { 4, 4 }, 0);

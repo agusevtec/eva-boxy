@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="classevab_1_1_i_screen" kind="class" language="C++" prot="public" abstract="yes">
-    <compoundname>evab::IScreen</compoundname>
+    <compoundname>evab::Screen</compoundname>
     <derivedcompoundref refid="classevab_1_1_screen_base" prot="public" virt="non-virtual">evab::ScreenBase</derivedcompoundref>
-    <includes refid="evab_i_screen_8h" local="no">evabIScreen.h</includes>
+    <includes refid="evab_i_screen_8h" local="no">evabScreen.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_i_screen_1a8af506f56d3886c03958031168f75fa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::TextLeft</definition>
+        <definition>virtual void evab::Screen::TextLeft</definition>
         <argsstring>(Coor aPosition, Coor aSize, const char *text, unsigned char aColor)=0</argsstring>
         <name>TextLeft</name>
-        <qualifiedname>evab::IScreen::TextLeft</qualifiedname>
+        <qualifiedname>evab::Screen::TextLeft</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1af34945fb5a3fa9452f61f9f59b11f35f">TextLeft</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -69,14 +69,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="24" column="22"/>
+        <location file="src/evabScreen.h" line="24" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a3cfd8a521fb127b33c3ee316e06a90a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::TextCenter</definition>
+        <definition>virtual void evab::Screen::TextCenter</definition>
         <argsstring>(Coor aPosition, Coor aSize, const char *text, unsigned char aColor)=0</argsstring>
         <name>TextCenter</name>
-        <qualifiedname>evab::IScreen::TextCenter</qualifiedname>
+        <qualifiedname>evab::Screen::TextCenter</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50">TextCenter</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -135,14 +135,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="34" column="22"/>
+        <location file="src/evabScreen.h" line="34" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a9e64eb57249408a3adbea99a94752418" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::TextRight</definition>
+        <definition>virtual void evab::Screen::TextRight</definition>
         <argsstring>(Coor aPosition, Coor aSize, const char *text, unsigned char aColor)=0</argsstring>
         <name>TextRight</name>
-        <qualifiedname>evab::IScreen::TextRight</qualifiedname>
+        <qualifiedname>evab::Screen::TextRight</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1a3d5abf436b82c2c0498765dac9fa157b">TextRight</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -201,14 +201,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="44" column="22"/>
+        <location file="src/evabScreen.h" line="44" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a413b62fc5db49fb386f71596740ac771" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::TextLeft</definition>
+        <definition>virtual void evab::Screen::TextLeft</definition>
         <argsstring>(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor)=0</argsstring>
         <name>TextLeft</name>
-        <qualifiedname>evab::IScreen::TextLeft</qualifiedname>
+        <qualifiedname>evab::Screen::TextLeft</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1a57d68fbe93780fa7e2618f06ba13c80a">TextLeft</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -267,14 +267,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="54" column="22"/>
+        <location file="src/evabScreen.h" line="54" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1acf7da756d0282ccfe9b1ac45084e8010" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::TextCenter</definition>
+        <definition>virtual void evab::Screen::TextCenter</definition>
         <argsstring>(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor)=0</argsstring>
         <name>TextCenter</name>
-        <qualifiedname>evab::IScreen::TextCenter</qualifiedname>
+        <qualifiedname>evab::Screen::TextCenter</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9">TextCenter</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -333,14 +333,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="64" column="22"/>
+        <location file="src/evabScreen.h" line="64" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1ab06ff5b742b28cd92c84d42ae0ad3f87" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::TextRight</definition>
+        <definition>virtual void evab::Screen::TextRight</definition>
         <argsstring>(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor)=0</argsstring>
         <name>TextRight</name>
-        <qualifiedname>evab::IScreen::TextRight</qualifiedname>
+        <qualifiedname>evab::Screen::TextRight</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1abd7f2ce82a9ecc72decf3aa01d1be544">TextRight</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -399,14 +399,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="74" column="22"/>
+        <location file="src/evabScreen.h" line="74" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a856a489025c3ad7c546464c69faf9ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::Picto</definition>
-        <argsstring>(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor)=0</argsstring>
+        <definition>virtual void evab::Screen::Picto</definition>
+        <argsstring>(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor)=0</argsstring>
         <name>Picto</name>
-        <qualifiedname>evab::IScreen::Picto</qualifiedname>
+        <qualifiedname>evab::Screen::Picto</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6">Picto</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_page8_base_1aa5e0f45e049c5539df59ba5f97ef8446">Picto</reimplementedby>
         <param>
@@ -415,7 +415,7 @@
         </param>
         <param>
           <type>const unsigned char *</type>
-          <declname>aPictogramm</declname>
+          <declname>aPictogram</declname>
         </param>
         <param>
           <type>unsigned char</type>
@@ -435,7 +435,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aPictogramm</parametername>
+<parametername>aPictogram</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Pictogram data (first two bytes: width/height in tiles) </para>
@@ -454,14 +454,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="83" column="22"/>
+        <location file="src/evabScreen.h" line="83" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a990fb6e0d14b6ebc8fcc001a98623205" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::Clear</definition>
+        <definition>virtual void evab::Screen::Clear</definition>
         <argsstring>(Coor aPosition, Coor aSize, unsigned char aColor=0)=0</argsstring>
         <name>Clear</name>
-        <qualifiedname>evab::IScreen::Clear</qualifiedname>
+        <qualifiedname>evab::Screen::Clear</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4">Clear</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -509,14 +509,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="92" column="22"/>
+        <location file="src/evabScreen.h" line="92" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1aa0ad56fedd8b77765e0fece74ab14d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::DrawSymbol</definition>
+        <definition>virtual void evab::Screen::DrawSymbol</definition>
         <argsstring>(Coor aPosition, Coor aSize, char aSymbol, unsigned char aColor)=0</argsstring>
         <name>DrawSymbol</name>
-        <qualifiedname>evab::IScreen::DrawSymbol</qualifiedname>
+        <qualifiedname>evab::Screen::DrawSymbol</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_l_c_d___i2_c_1a1e087edbf58797b3a600d01a24113033">DrawSymbol</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597">DrawSymbol</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_serial_text_1a24ee44f285c2a1f2f308db7846147356">DrawSymbol</reimplementedby>
@@ -577,14 +577,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="102" column="22"/>
+        <location file="src/evabScreen.h" line="102" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
-        <definition>virtual Coor evab::IScreen::Size</definition>
+        <definition>virtual Coor evab::Screen::Size</definition>
         <argsstring>()=0</argsstring>
         <name>Size</name>
-        <qualifiedname>evab::IScreen::Size</qualifiedname>
+        <qualifiedname>evab::Screen::Size</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_k_s0108_1ae73709eb2823cda32272011a2f08b8ea">Size</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_l_c_d___i2_c_1a182aa7dc15d18fb4aed2a66575fef182">Size</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_p_c_d8544_1a9477b0447b9418287c36d9e39c539185">Size</reimplementedby>
@@ -602,14 +602,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="109" column="22"/>
+        <location file="src/evabScreen.h" line="109" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>unsigned short</type>
-        <definition>virtual unsigned short evab::IScreen::Serialize</definition>
+        <definition>virtual unsigned short evab::Screen::Serialize</definition>
         <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)=0</argsstring>
         <name>Serialize</name>
-        <qualifiedname>evab::IScreen::Serialize</qualifiedname>
+        <qualifiedname>evab::Screen::Serialize</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_k_s0108_1a37b85da65c7574bc077bf368412f4f79">Serialize</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_l_c_d___i2_c_1a297f2d8d2db51fa6a73a6fced5008165">Serialize</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_p_c_d8544_1a7401fa0b08f2cede79ccd3fff9ae971d">Serialize</reimplementedby>
@@ -664,14 +664,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="119" column="32"/>
+        <location file="src/evabScreen.h" line="119" column="32"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::IScreen::Deserialize</definition>
+        <definition>virtual void evab::Screen::Deserialize</definition>
         <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)=0</argsstring>
         <name>Deserialize</name>
-        <qualifiedname>evab::IScreen::Deserialize</qualifiedname>
+        <qualifiedname>evab::Screen::Deserialize</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_k_s0108_1afc3b7c6858d7ca964b60527cd8410126">Deserialize</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_l_c_d___i2_c_1a511ab4c467c8a21cd55fc460eeed3bac">Deserialize</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_p_c_d8544_1aa477aa8668fe7f21a21658943d4fd149">Deserialize</reimplementedby>
@@ -736,7 +736,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabIScreen.h" line="129" column="22"/>
+        <location file="src/evabScreen.h" line="129" column="22"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -747,7 +747,7 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
-        <label>evab::IScreen</label>
+        <label>evab::Screen</label>
         <link refid="classevab_1_1_i_screen"/>
       </node>
       <node id="2">
@@ -805,20 +805,20 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="src/evabIScreen.h" line="13" column="5" bodyfile="src/evabIScreen.h" bodystart="14" bodyend="130"/>
+    <location file="src/evabScreen.h" line="13" column="5" bodyfile="src/evabScreen.h" bodystart="14" bodyend="130"/>
     <listofallmembers>
-      <member refid="classevab_1_1_i_screen_1a990fb6e0d14b6ebc8fcc001a98623205" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Clear</name></member>
-      <member refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Deserialize</name></member>
-      <member refid="classevab_1_1_i_screen_1aa0ad56fedd8b77765e0fece74ab14d21" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>DrawSymbol</name></member>
-      <member refid="classevab_1_1_i_screen_1a856a489025c3ad7c546464c69faf9ecb" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Picto</name></member>
-      <member refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Serialize</name></member>
-      <member refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>Size</name></member>
-      <member refid="classevab_1_1_i_screen_1a3cfd8a521fb127b33c3ee316e06a90a2" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_i_screen_1acf7da756d0282ccfe9b1ac45084e8010" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_i_screen_1a8af506f56d3886c03958031168f75fa1" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_i_screen_1a413b62fc5db49fb386f71596740ac771" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_i_screen_1a9e64eb57249408a3adbea99a94752418" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>TextRight</name></member>
-      <member refid="classevab_1_1_i_screen_1ab06ff5b742b28cd92c84d42ae0ad3f87" prot="public" virt="pure-virtual"><scope>evab::IScreen</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_i_screen_1a990fb6e0d14b6ebc8fcc001a98623205" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>Deserialize</name></member>
+      <member refid="classevab_1_1_i_screen_1aa0ad56fedd8b77765e0fece74ab14d21" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>DrawSymbol</name></member>
+      <member refid="classevab_1_1_i_screen_1a856a489025c3ad7c546464c69faf9ecb" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>Serialize</name></member>
+      <member refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>Size</name></member>
+      <member refid="classevab_1_1_i_screen_1a3cfd8a521fb127b33c3ee316e06a90a2" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_i_screen_1acf7da756d0282ccfe9b1ac45084e8010" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_i_screen_1a8af506f56d3886c03958031168f75fa1" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_i_screen_1a413b62fc5db49fb386f71596740ac771" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_i_screen_1a9e64eb57249408a3adbea99a94752418" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_i_screen_1ab06ff5b742b28cd92c84d42ae0ad3f87" prot="public" virt="pure-virtual"><scope>evab::Screen</scope><name>TextRight</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

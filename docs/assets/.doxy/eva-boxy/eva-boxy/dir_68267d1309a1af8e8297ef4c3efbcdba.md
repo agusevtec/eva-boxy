@@ -30,7 +30,7 @@
 | file | [**evabFont8Compact.h**](evab_font8_compact_8h.md) <br> |
 | file | [**evabFont8Narrow.h**](evab_font8_narrow_8h.md) <br> |
 | file | [**evabIFont.h**](evab_i_font_8h.md) <br> |
-| file | [**evabIScreen.h**](evab_i_screen_8h.md) <br> |
+| file | [**evabScreen.h**](evab_i_screen_8h.md) <br> |
 | file | [**evabInputAnimation.h**](evab_input_animation_8h.md) <br> |
 | file | [**evabInputButton.h**](evab_input_button_8h.md) <br> |
 | file | [**evabInputFloat.h**](evab_input_float_8h.md) <br> |

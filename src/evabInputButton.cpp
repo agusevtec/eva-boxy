@@ -8,7 +8,7 @@ namespace evab
   }
 
 
-  void InputButton::drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
+  void InputButton::drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
   {
     //TODO: what if aSize.Y > 1? 
     aScreen->DrawSymbol(aPos, {1, 1}, '(', aIsFocused);

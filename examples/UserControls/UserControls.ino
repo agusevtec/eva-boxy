@@ -34,7 +34,7 @@ using namespace evab;
 
 class MyListbox : public ScrollListbox {
 public:
-  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     ScrollListbox::drawer(aScreen, { aPos.X, aPos.Y + 1 }, { aSize.X - 1, aSize.Y - 1 }, aIsFocused);
     VerticalProgressBar pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
     pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y + 1 }, { 1, aSize.Y - 1 }, 0);
@@ -52,7 +52,7 @@ public:
     LayoutPane::focusChild(&test);
   }
 
-  void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     mBattery.Draw(aScreen, aPos, aSize, 0);
     mSignal.Draw(aScreen, { aPos.X + aSize.X - 2, aPos.Y }, { 2, 1 }, 0);
     test.Draw(aScreen, { aPos.X, 2 }, { aSize.X, 1 }, 0);

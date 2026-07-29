@@ -53,7 +53,7 @@ Inherited by the following classes: [evab::InputStretchBar](classevab_1_1_input_
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Draw**](#function-draw) ([**IScreen**](classevab_1_1_i_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
+|  void | [**Draw**](#function-draw) ([**Screen**](classevab_1_1_i_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
 |  void | [**Hide**](#function-hide) () <br>_Hides the element from view._  |
 |  bool | [**IsHidden**](#function-ishidden) () <br>_Checks if the element is hidden._  |
 | virtual bool | [**Key**](#function-key) (Keys aKey) <br>_Handles key events for the element._  |
@@ -103,7 +103,7 @@ Provides the core functionality for rendering, state management, and key event h
 _Draws the element on the specified screen._ 
 ```C++
 void evab::ElementBase::Draw (
-    IScreen * aScreen,
+    Screen * aScreen,
     Coor aPos,
     Coor aSize,
     unsigned char aIsFocused

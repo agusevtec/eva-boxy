@@ -51,13 +51,13 @@ Coor Grid::GetSize() const
     return Coor(width, height);
 }
 
-void Grid::Draw(IScreen *aScreen, ElementBase *aElement, unsigned char aIsFocused)
+void Grid::Draw(Screen *aScreen, ElementBase *aElement, unsigned char aIsFocused)
 {
     if (aElement && aScreen)
         aElement->Draw(aScreen, mTopLeft, GetSize(), aIsFocused);
 }
 
-void Grid::Blank(IScreen *aScreen)
+void Grid::Blank(Screen *aScreen)
 {
     if (aScreen)
         aScreen->Clear(mTopLeft, GetSize(), 0);

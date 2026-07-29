@@ -1,8 +1,6 @@
 // evabBoxy.cpp
 #include <evabBoxy.h>
 #include <evaDelayTimer.h>
-#include <evabInputInt.h>
-#include <evabLabeled.h>
 
 using namespace eva;
 using namespace evab;
@@ -19,24 +17,40 @@ Boxy *Boxy::Instance()
     static Boxy instance;
     return &instance;
 }
-IScreen *Boxy::Screen()
+Screen *Boxy::GetScreen()
 {
     auto instance = Instance();
-    if (instance->mModalShowTimer.isRunning())
+    if (instance->mMessageTimer.isRunning())
         return nullptr;
     return instance->mScreen;
 }
 
-void Boxy::ShowInt(const char *aName, int aValue)
+void Boxy::Message(const __FlashStringHelper * aTitle, const char *aText)
 {
     auto instance = Instance();
     if (!instance->mScreen)
         return;
 
+    Coor ps(0, 0);
     Coor sz = instance->mScreen->Size();
-    Labeled<InputInt> drawer(aName, aValue);
-    drawer.Draw(instance->mScreen, {0, sz.Y / 2}, {sz.X, 1}, 0);
-    instance->mModalShowTimer.start(1200);
+
+    if (sz.X > 2)
+    {
+        ps.X += 1;
+        sz.X -= 2;
+    }
+    if (sz.Y > 2)
+    {
+        ps.Y += 1;
+        sz.Y -= 2;
+    }
+    instance->mScreen->TextCenter(ps, {sz.X, 1}, aTitle, 1);
+    for (unsigned char i = 1; i < sz.Y; i++)
+        if (i == sz.Y / 2)
+            instance->mScreen->TextCenter({ps.X, ps.Y + i}, {sz.X, 1}, aText, 1);
+        else
+            instance->mScreen->Clear({ps.X, ps.Y + i}, {sz.X, 1}, 1);
+    instance->mMessageTimer.start(1200);
 }
 
 void Boxy::invoke(void *, eva::CallbackInfo)
@@ -44,4 +58,3 @@ void Boxy::invoke(void *, eva::CallbackInfo)
     if (mGround && mScreen)
         mGround->Draw(mScreen, {0, 0}, mScreen->Size(), 1);
 }
-

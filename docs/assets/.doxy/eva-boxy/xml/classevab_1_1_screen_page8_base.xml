@@ -125,7 +125,7 @@
       <memberdef kind="function" id="classevab_1_1_screen_page8_base_1aa5e0f45e049c5539df59ba5f97ef8446" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void evab::ScreenPage8Base::Picto</definition>
-        <argsstring>(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor)</argsstring>
+        <argsstring>(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor)</argsstring>
         <name>Picto</name>
         <qualifiedname>evab::ScreenPage8Base::Picto</qualifiedname>
         <reimplements refid="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6">Picto</reimplements>
@@ -135,7 +135,7 @@
         </param>
         <param>
           <type>const unsigned char *</type>
-          <declname>aPictogramm</declname>
+          <declname>aPictogram</declname>
         </param>
         <param>
           <type>unsigned char</type>
@@ -155,7 +155,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aPictogramm</parametername>
+<parametername>aPictogram</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Pictogram data </para>
@@ -290,7 +290,7 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="3">
-        <label>evab::IScreen</label>
+        <label>evab::Screen</label>
         <link refid="classevab_1_1_i_screen"/>
       </node>
       <node id="2">
@@ -338,7 +338,7 @@
     </inheritancegraph>
     <collaborationgraph>
       <node id="3">
-        <label>evab::IScreen</label>
+        <label>evab::Screen</label>
         <link refid="classevab_1_1_i_screen"/>
       </node>
       <node id="2">

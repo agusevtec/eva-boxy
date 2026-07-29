@@ -498,10 +498,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#public-functions-inherited-from-evabiscreen" class="md-nav__link">
+  <a href="#public-functions-inherited-from-evabScreen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Public Functions inherited from evab::IScreen
+        Public Functions inherited from evab::Screen
       
     </span>
   </a>
@@ -565,7 +565,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textcenter-12" class="md-nav__link">
+  <a href="#function-TextCenter-12" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextCenter [1/2]
@@ -576,7 +576,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textcenter-22" class="md-nav__link">
+  <a href="#function-TextCenter-22" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextCenter [2/2]
@@ -587,7 +587,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textleft-12" class="md-nav__link">
+  <a href="#function-TextLeft-12" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextLeft [1/2]
@@ -598,7 +598,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textleft-22" class="md-nav__link">
+  <a href="#function-TextLeft-22" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextLeft [2/2]
@@ -609,7 +609,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textright-12" class="md-nav__link">
+  <a href="#function-TextRight-12" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextRight [1/2]
@@ -620,7 +620,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-textright-22" class="md-nav__link">
+  <a href="#function-TextRight-22" class="md-nav__link">
     <span class="md-ellipsis">
       
         function TextRight [2/2]
@@ -689,7 +689,7 @@
 <ul>
 <li><code>#include &lt;evabScreenBase.h&gt;</code></li>
 </ul>
-<p>Inherits the following classes: <a href="../classevab_1_1_i_screen/">evab::IScreen</a></p>
+<p>Inherits the following classes: <a href="../classevab_1_1_i_screen/">evab::Screen</a></p>
 <p>Inherited by the following classes: <a href="../classevab_1_1_screen_l_c_d___i2_c/">evab::ScreenLCD_I2C</a>,  <a href="../classevab_1_1_screen_page8_base/">evab::ScreenPage8Base</a>,  <a href="../classevab_1_1_screen_serial_text/">evab::ScreenSerialText</a></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -706,36 +706,36 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * aPictogramm, unsigned char aColor) <br><em>Draws a pictogram (default implementation).</em></td>
+<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * aPictogram, unsigned char aColor) <br><em>Draws a pictogram (default implementation).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned center (C-string).</em></td>
+<td style="text-align: left;"><a href="#function-TextCenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned center (C-string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned center (Flash string).</em></td>
+<td style="text-align: left;"><a href="#function-TextCenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned center (Flash string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned left (C-string).</em></td>
+<td style="text-align: left;"><a href="#function-TextLeft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned left (C-string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned left (Flash string).</em></td>
+<td style="text-align: left;"><a href="#function-TextLeft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned left (Flash string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned right (C-string).</em></td>
+<td style="text-align: left;"><a href="#function-TextRight-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) override<br><em>Draws text aligned right (C-string).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned right (Flash string).</em></td>
+<td style="text-align: left;"><a href="#function-TextRight-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) override<br><em>Draws text aligned right (Flash string).</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="public-functions-inherited-from-evabiscreen">Public Functions inherited from evab::IScreen<a class="headerlink" href="#public-functions-inherited-from-evabiscreen" title="Permanent link">&para;</a></h2>
-<p>See <a href="../classevab_1_1_i_screen/">evab::IScreen</a></p>
+<h2 id="public-functions-inherited-from-evabScreen">Public Functions inherited from evab::Screen<a class="headerlink" href="#public-functions-inherited-from-evabScreen" title="Permanent link">&para;</a></h2>
+<p>See <a href="../classevab_1_1_i_screen/">evab::Screen</a></p>
 <table>
 <thead>
 <tr>
@@ -758,7 +758,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * aPictogramm, unsigned char aColor) = 0<br><em>Draws a pictogram at the specified position.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * aPictogram, unsigned char aColor) = 0<br><em>Draws a pictogram at the specified position.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual unsigned short</td>
@@ -770,27 +770,27 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textcenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the center.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-TextCenter-12"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the center.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textcenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the center.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-TextCenter-22"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the center.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textleft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the left.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-TextLeft-12"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the left.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textleft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the left.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-TextLeft-22"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the left.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textright-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the right.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-TextRight-12"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const char * text, unsigned char aColor) = 0<br><em>Draws text aligned to the right.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-textright-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the right.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_i_screen/#function-TextRight-22"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, const __FlashStringHelper * text, unsigned char aColor) = 0<br><em>Draws flash string text aligned to the right.</em></td>
 </tr>
 </tbody>
 </table>
@@ -827,14 +827,14 @@
 <li><code>aSize</code> Size of the area </li>
 <li><code>aColor</code> Fill color (0 = clear, 1 = fill) </li>
 </ul>
-<p>Implements <a href="../classevab_1_1_i_screen/#function-clear"><em>evab::IScreen::Clear</em></a></p>
+<p>Implements <a href="../classevab_1_1_i_screen/#function-clear"><em>evab::Screen::Clear</em></a></p>
 <hr>
 
 <h3 id="function-picto">function Picto<a class="headerlink" href="#function-picto" title="Permanent link">&para;</a></h3>
 <p><em>Draws a pictogram (default implementation).</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenBase</span><span class="o">::</span><span class="n">Picto</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aPictogramm</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aPictogram</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
@@ -842,13 +842,13 @@
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>aPosition</code> Position on screen </li>
-<li><code>aPictogramm</code> Pictogram data </li>
+<li><code>aPictogram</code> Pictogram data </li>
 <li><code>aColor</code> Color/inversion flag </li>
 </ul>
-<p>Implements <a href="../classevab_1_1_i_screen/#function-picto"><em>evab::IScreen::Picto</em></a></p>
+<p>Implements <a href="../classevab_1_1_i_screen/#function-picto"><em>evab::Screen::Picto</em></a></p>
 <hr>
 
-<h3 id="function-textcenter-12">function TextCenter [1/2]<a class="headerlink" href="#function-textcenter-12" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextCenter-12">function TextCenter [1/2]<a class="headerlink" href="#function-TextCenter-12" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned center (C-string).</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenBase</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
@@ -865,10 +865,10 @@
 <li><code>text</code> Null-terminated string </li>
 <li><code>aColor</code> Color/inversion flag </li>
 </ul>
-<p>Implements <a href="../classevab_1_1_i_screen/#function-textcenter-12"><em>evab::IScreen::TextCenter</em></a></p>
+<p>Implements <a href="../classevab_1_1_i_screen/#function-TextCenter-12"><em>evab::Screen::TextCenter</em></a></p>
 <hr>
 
-<h3 id="function-textcenter-22">function TextCenter [2/2]<a class="headerlink" href="#function-textcenter-22" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextCenter-22">function TextCenter [2/2]<a class="headerlink" href="#function-TextCenter-22" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned center (Flash string).</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenBase</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
@@ -885,10 +885,10 @@
 <li><code>text</code> Flash string </li>
 <li><code>aColor</code> Color/inversion flag </li>
 </ul>
-<p>Implements <a href="../classevab_1_1_i_screen/#function-textcenter-22"><em>evab::IScreen::TextCenter</em></a></p>
+<p>Implements <a href="../classevab_1_1_i_screen/#function-TextCenter-22"><em>evab::Screen::TextCenter</em></a></p>
 <hr>
 
-<h3 id="function-textleft-12">function TextLeft [1/2]<a class="headerlink" href="#function-textleft-12" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextLeft-12">function TextLeft [1/2]<a class="headerlink" href="#function-TextLeft-12" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned left (C-string).</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenBase</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
@@ -905,10 +905,10 @@
 <li><code>text</code> Null-terminated string </li>
 <li><code>aColor</code> Color/inversion flag </li>
 </ul>
-<p>Implements <a href="../classevab_1_1_i_screen/#function-textleft-12"><em>evab::IScreen::TextLeft</em></a></p>
+<p>Implements <a href="../classevab_1_1_i_screen/#function-TextLeft-12"><em>evab::Screen::TextLeft</em></a></p>
 <hr>
 
-<h3 id="function-textleft-22">function TextLeft [2/2]<a class="headerlink" href="#function-textleft-22" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextLeft-22">function TextLeft [2/2]<a class="headerlink" href="#function-TextLeft-22" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned left (Flash string).</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenBase</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
@@ -925,10 +925,10 @@
 <li><code>text</code> Flash string </li>
 <li><code>aColor</code> Color/inversion flag </li>
 </ul>
-<p>Implements <a href="../classevab_1_1_i_screen/#function-textleft-22"><em>evab::IScreen::TextLeft</em></a></p>
+<p>Implements <a href="../classevab_1_1_i_screen/#function-TextLeft-22"><em>evab::Screen::TextLeft</em></a></p>
 <hr>
 
-<h3 id="function-textright-12">function TextRight [1/2]<a class="headerlink" href="#function-textright-12" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextRight-12">function TextRight [1/2]<a class="headerlink" href="#function-TextRight-12" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned right (C-string).</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenBase</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
@@ -945,10 +945,10 @@
 <li><code>text</code> Null-terminated string </li>
 <li><code>aColor</code> Color/inversion flag </li>
 </ul>
-<p>Implements <a href="../classevab_1_1_i_screen/#function-textright-12"><em>evab::IScreen::TextRight</em></a></p>
+<p>Implements <a href="../classevab_1_1_i_screen/#function-TextRight-12"><em>evab::Screen::TextRight</em></a></p>
 <hr>
 
-<h3 id="function-textright-22">function TextRight [2/2]<a class="headerlink" href="#function-textright-22" title="Permanent link">&para;</a></h3>
+<h3 id="function-TextRight-22">function TextRight [2/2]<a class="headerlink" href="#function-TextRight-22" title="Permanent link">&para;</a></h3>
 <p><em>Draws text aligned right (Flash string).</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenBase</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span>
@@ -965,7 +965,7 @@
 <li><code>text</code> Flash string </li>
 <li><code>aColor</code> Color/inversion flag </li>
 </ul>
-<p>Implements <a href="../classevab_1_1_i_screen/#function-textright-22"><em>evab::IScreen::TextRight</em></a></p>
+<p>Implements <a href="../classevab_1_1_i_screen/#function-TextRight-22"><em>evab::Screen::TextRight</em></a></p>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-cleartile">function ClearTile<a class="headerlink" href="#function-cleartile" title="Permanent link">&para;</a></h3>

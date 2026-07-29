@@ -141,7 +141,7 @@ namespace evab
          * @param aSize Size of the element
          * @param aIsFocused Focus state (1 = focused, 0 = not focused)
          */
-        void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+        void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
             unsigned short resolution = OrientationPictoPolicy::CalculateResolution(aSize);
             unsigned short normalizedValue = map(mValue, 0, 100, 0, resolution);

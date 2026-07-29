@@ -503,7 +503,7 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="4">
-        <label>evab::IScreen</label>
+        <label>evab::Screen</label>
         <link refid="classevab_1_1_i_screen"/>
       </node>
       <node id="3">
@@ -527,7 +527,7 @@
     </inheritancegraph>
     <collaborationgraph>
       <node id="4">
-        <label>evab::IScreen</label>
+        <label>evab::Screen</label>
         <link refid="classevab_1_1_i_screen"/>
       </node>
       <node id="3">

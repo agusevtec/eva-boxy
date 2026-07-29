@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="classevab_1_1_screen_base" kind="class" language="C++" prot="public">
     <compoundname>evab::ScreenBase</compoundname>
-    <basecompoundref refid="classevab_1_1_i_screen" prot="public" virt="non-virtual">evab::IScreen</basecompoundref>
+    <basecompoundref refid="classevab_1_1_i_screen" prot="public" virt="non-virtual">evab::Screen</basecompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_l_c_d___i2_c" prot="public" virt="non-virtual">evab::ScreenLCD_I2C</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_page8_base" prot="public" virt="non-virtual">evab::ScreenPage8Base</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_serial_text" prot="public" virt="non-virtual">evab::ScreenSerialText</derivedcompoundref>
@@ -461,7 +461,7 @@
       <memberdef kind="function" id="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void evab::ScreenBase::Picto</definition>
-        <argsstring>(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor)</argsstring>
+        <argsstring>(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor)</argsstring>
         <name>Picto</name>
         <qualifiedname>evab::ScreenBase::Picto</qualifiedname>
         <reimplements refid="classevab_1_1_i_screen_1a856a489025c3ad7c546464c69faf9ecb">Picto</reimplements>
@@ -472,7 +472,7 @@
         </param>
         <param>
           <type>const unsigned char *</type>
-          <declname>aPictogramm</declname>
+          <declname>aPictogram</declname>
         </param>
         <param>
           <type>unsigned char</type>
@@ -492,7 +492,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aPictogramm</parametername>
+<parametername>aPictogram</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Pictogram data </para>
@@ -928,7 +928,7 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
-        <label>evab::IScreen</label>
+        <label>evab::Screen</label>
         <link refid="classevab_1_1_i_screen"/>
       </node>
       <node id="1">
@@ -988,7 +988,7 @@
     </inheritancegraph>
     <collaborationgraph>
       <node id="2">
-        <label>evab::IScreen</label>
+        <label>evab::Screen</label>
         <link refid="classevab_1_1_i_screen"/>
       </node>
       <node id="1">

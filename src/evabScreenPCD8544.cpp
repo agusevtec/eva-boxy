@@ -97,7 +97,7 @@ void ScreenPCD8544::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn
   sendData(aSlice);
 }
 
-void ScreenPCD8544::ClearTile(Coor aPosition, unsigned char aColor)
+void ScreenPCD8544::clearTile(Coor aPosition, unsigned char aColor)
 {
   for (uint8_t col = 0; col < 8; col++)
   {

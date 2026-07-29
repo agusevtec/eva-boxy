@@ -3,7 +3,7 @@
   <compounddef id="evab_coor_8h" kind="file" language="C++">
     <compoundname>evabCoor.h</compoundname>
     <includedby refid="evab_element_base_8h" local="no">src/evabElementBase.h</includedby>
-    <includedby refid="evab_i_screen_8h" local="no">src/evabIScreen.h</includedby>
+    <includedby refid="evab_i_screen_8h" local="no">src/evabScreen.h</includedby>
     <includedby refid="evab_labeled_8h" local="no">src/evabLabeled.h</includedby>
     <includedby refid="evab_screen_base_8h" local="yes">src/evabScreenBase.h</includedby>
     <includedby refid="evab_screen_page8_base_8h" local="no">src/evabScreenPage8Base.h</includedby>
@@ -63,7 +63,7 @@
         </childnode>
       </node>
       <node id="14">
-        <label>src/evabIScreen.h</label>
+        <label>src/evabScreen.h</label>
         <link refid="evab_i_screen_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>

@@ -11,7 +11,7 @@
 #pragma once
 
 #include <evabElementBase.h>
-#include <evabIScreen.h>
+#include <evabScreen.h>
 #include <evaHandler.h>
 #include <evaDelayTimer.h>
 #include <evabKeys.h>
@@ -36,7 +36,7 @@ namespace evab
 
         static void Key(Keys aKey);
 
-        static IScreen *Screen();
+        static Screen *Screen();
 
         static Boxy *Instance();
 
@@ -46,7 +46,7 @@ namespace evab
         void invoke(void *, eva::CallbackInfo) override;
 
     private:
-        IScreen *mScreen;                          
+        Screen *mScreen;                          
         ElementBase *mGround;                      
         eva::DelayTimer mModalShowTimer = {this};  
     };

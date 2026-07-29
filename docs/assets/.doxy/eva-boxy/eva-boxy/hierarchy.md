@@ -34,7 +34,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::Font8Bold**](classevab_1_1_font8_bold.md) _8x8 bold font implementation_ 
     * **class** [**evab::Font8Compact**](classevab_1_1_font8_compact.md) _8x8 compact font implementation_ 
     * **class** [**evab::Font8Narrow**](classevab_1_1_font8_narrow.md) _8x8 thin font implementation_ 
-* **class** [**evab::IScreen**](classevab_1_1_i_screen.md) _Abstract interface for screen rendering._     
+* **class** [**evab::Screen**](classevab_1_1_i_screen.md) _Abstract interface for screen rendering._     
     * **class** [**evab::ScreenBase**](classevab_1_1_screen_base.md) _Base class for screen implementations._     
         * **class** [**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) _I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._ 
         * **class** [**evab::ScreenPage8Base**](classevab_1_1_screen_page8_base.md) _Base class for page-based 8-bit screens._     

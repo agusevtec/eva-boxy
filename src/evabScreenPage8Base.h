@@ -1,7 +1,7 @@
 #pragma once
 
 #include <evabCoor.h>
-#include <evabScreenBase.h>
+#include <evabScreen.h>
 #include <evabIFont.h>
 
 namespace evab
@@ -12,7 +12,7 @@ namespace evab
    * Provides common rendering for screens organized in 8-pixel pages.
    * Used by SSD1306, KS0108, PCD8544, and similar displays.
    */
-  class ScreenPage8Base : public ScreenBase
+  class ScreenPage8Base : public Screen
   {
   public:
     /**
@@ -36,10 +36,10 @@ namespace evab
      * @brief Draws a pictogram at the specified position
      *
      * @param aPosition Position on screen
-     * @param aPictogramm Pictogram data
+     * @param aPictogram Pictogram data
      * @param aColor Color/inversion flag
      */
-    void Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor);
+    void Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor);
 
   private:
     /**
