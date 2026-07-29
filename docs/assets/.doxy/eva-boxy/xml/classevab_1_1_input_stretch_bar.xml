@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="136" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="136" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="190" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="190" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1afa6deeec50f3270d36f85cd935eb0883" prot="private" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="137" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="137" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="191" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="191" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a6dffa09542b5dc9251508e23901d4ef5" prot="private" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="138" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="138" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="192" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="192" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="192" column="23" bodyfile="src/evabInputStretchBar.h" bodystart="192" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="194" column="23" bodyfile="src/evabInputStretchBar.h" bodystart="194" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -169,16 +169,16 @@
         <location file="src/evabInputStretchBar.h" line="130" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="130" bodyend="133"/>
       </memberdef>
     </sectiondef>
-    <sectiondef kind="private-func">
-      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a5b195c01bcf8c34755f7cd92145ea261" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>void evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::InputStretchBar::drawer</qualifiedname>
-        <reimplements refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e">drawer</reimplements>
+        <reimplements refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144">drawer</reimplements>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>
@@ -202,7 +202,7 @@
 <parametername>aScreen</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Screen to draw on </para>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -234,8 +234,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="148" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="148" bodyend="174"/>
+        <location file="src/evabInputStretchBar.h" line="144" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="144" bodyend="170"/>
       </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
       <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1ab78fe73ecfbd69f8ef3f38604680e054" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char</type>
         <definition>char evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::blockFill</definition>
@@ -277,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="183" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="183" bodyend="190"/>
+        <location file="src/evabInputStretchBar.h" line="180" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="180" bodyend="187"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -328,13 +330,14 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputStretchBar.h" line="101" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="102" bodyend="193"/>
+    <location file="src/evabInputStretchBar.h" line="101" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="102" bodyend="195"/>
     <listofallmembers>
       <member refid="classevab_1_1_input_stretch_bar_1ab78fe73ecfbd69f8ef3f38604680e054" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>blockFill</name></member>
-      <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Draw</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1a5b195c01bcf8c34755f7cd92145ea261" prot="private" virt="virtual"><scope>evab::InputStretchBar</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6" prot="protected" virt="virtual"><scope>evab::InputStretchBar</scope><name>drawer</name></member>
       <member refid="classevab_1_1_input_stretch_bar_1a6dffa09542b5dc9251508e23901d4ef5" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>END_BLOCK</name></member>
       <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Hide</name></member>
+      <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="protected" virt="virtual"><scope>evab::InputStretchBar</scope><name>hider</name></member>
       <member refid="classevab_1_1_input_stretch_bar_1aeafd457320264f3957405e427f9343cb" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Increment</name></member>
       <member refid="classevab_1_1_input_stretch_bar_1a1f434f3c6cf9ffd4ba3710b148468161" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>InputStretchBar</name></member>
       <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>IsHidden</name></member>

@@ -23,6 +23,15 @@ namespace evab
     ScreenPage8Base(const IFont *aFont);
 
     /**
+     * @brief Draws a pictogram at the specified position
+     *
+     * @param aPosition Position on screen
+     * @param aPictogram Pictogram data
+     * @param aColor Color/inversion flag
+     */
+    void Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor);
+
+    /**
      * @brief Draws a symbol at the specified position with scaling
      *
      * @param aPosition Position on screen
@@ -32,15 +41,6 @@ namespace evab
      */
     void DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor);
 
-    /**
-     * @brief Draws a pictogram at the specified position
-     *
-     * @param aPosition Position on screen
-     * @param aPictogram Pictogram data
-     * @param aColor Color/inversion flag
-     */
-    void Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor);
-
   private:
     /**
      * @brief Pure virtual method to draw a vertical slice
@@ -49,7 +49,8 @@ namespace evab
      * @param aSliceColumn Column within the tile (0-7)
      * @param aSlice Bitmap data for the slice
      */
-    virtual void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0;
+
+    virtual void drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0;
 
     /**
      * @brief Upscales a byte vertically by repeating bits

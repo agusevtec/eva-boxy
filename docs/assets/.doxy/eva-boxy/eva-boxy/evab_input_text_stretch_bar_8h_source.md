@@ -138,7 +138,7 @@ namespace evab
             SetValue(mValue + delta);
         }
 
-    private:
+    protected:
         void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
             unsigned short resolution = OrientationTextPolicy::CalculateResolution(aSize);
@@ -158,6 +158,7 @@ namespace evab
             }
         }
 
+    private:
         char blockFill(unsigned char blockNumber, unsigned short normalizedValue)
         {
             if (normalizedValue > blockNumber)
@@ -167,7 +168,8 @@ namespace evab
             return 1;
         }
 
-        unsigned char mValue;  
+    private:
+        unsigned char mValue; 
     };
 
     // Convenience typedefs for common text stretch bar types

@@ -58,7 +58,6 @@ namespace evab
      */
     void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
-  protected:
     /**
      * @brief Draws a symbol at the specified position
      * 

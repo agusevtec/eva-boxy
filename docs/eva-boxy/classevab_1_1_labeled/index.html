@@ -460,6 +460,144 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -498,6 +636,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#protected-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protected Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#detailed-description" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -521,10 +670,71 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#function-getlabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function GetLabel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-labeled" class="md-nav__link">
     <span class="md-ellipsis">
       
         function Labeled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setlabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function SetLabel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protected Functions Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protected Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-drawer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function drawer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-hider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function hider
       
     </span>
   </a>
@@ -557,9 +767,9 @@
 
 
 <h1 id="class-evablabeled">Class evab::Labeled<a class="headerlink" href="#class-evablabeled" title="Permanent link">&para;</a></h1>
-<p><strong>template &lt;class T&gt;</strong></p>
+<p><strong>template &lt;class T, typename TAlign, typename TText&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>Labeled</strong></a></p>
-<p><em>Decorator that adds a label to any element.</em> <a href="#detailed-description">More...</a></p>
+<p><em>Decorator that adds a label to any element with alignment.</em> <a href="#detailed-description">More...</a></p>
 <ul>
 <li><code>#include &lt;evabLabeled.h&gt;</code></li>
 </ul>
@@ -574,8 +784,35 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align: right;">TText</td>
+<td style="text-align: left;"><a href="#function-getlabel"><strong>GetLabel</strong></a> () const<br><em>Gets current label text.</em></td>
+</tr>
+<tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-labeled"><strong>Labeled</strong></a> (const char * aName, Args &amp;&amp;... args) <br><em>Constructor for</em> <a href="./"><em><strong>Labeled</strong></em></a> <em>with C-string label.</em></td>
+<td style="text-align: left;"><a href="#function-labeled"><strong>Labeled</strong></a> (TText aName, Args &amp;&amp;... args) <br><em>Constructor for</em> <a href="./"><em><strong>Labeled</strong></em></a> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-setlabel"><strong>SetLabel</strong></a> (TText aName) <br><em>Sets new label text and redraws.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-functions">Protected Functions<a class="headerlink" href="#protected-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Draws the labeled element.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-hider"><strong>hider</strong></a> () override<br></td>
 </tr>
 </tbody>
 </table>
@@ -584,22 +821,71 @@
 <p><strong>Template parameters:</strong></p>
 <ul>
 <li><code>T</code> Element type to label </li>
+<li><code>TAlign</code> Alignment strategy for label (<a href="../structevab_1_1_left_align/"><strong>LeftAlign</strong></a>, <a href="../structevab_1_1_center_align/"><strong>CenterAlign</strong></a>, <a href="../structevab_1_1_right_align/"><strong>RightAlign</strong></a>) </li>
+<li><code>TText</code> Text type (const char*, __FlashStringHelper*) </li>
 </ul>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-getlabel">function GetLabel<a class="headerlink" href="#function-getlabel" title="Permanent link">&para;</a></h3>
+<p><em>Gets current label text.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">TText</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Labeled</span><span class="o">::</span><span class="n">GetLabel</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+
+<p><strong>Returns:</strong></p>
+<p>Current label text </p>
+<hr>
+
 <h3 id="function-labeled">function Labeled<a class="headerlink" href="#function-labeled" title="Permanent link">&para;</a></h3>
-<p><em>Constructor for</em> <a href="./"><em><strong>Labeled</strong></em></a> <em>with C-string label.</em></p>
+<p><em>Constructor for</em> <a href="./"><em><strong>Labeled</strong></em></a> <em>.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
 <span class="kr">inline</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Labeled</span><span class="o">::</span><span class="n">Labeled</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aName</span><span class="p">,</span>
+<span class="w">    </span><span class="n">TText</span><span class="w"> </span><span class="n">aName</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aName</code> Label text (C-string) </li>
+<li><code>aName</code> Label text </li>
 <li><code>args</code> Arguments forwarded to the base element constructor </li>
 </ul>
+<hr>
+
+<h3 id="function-setlabel">function SetLabel<a class="headerlink" href="#function-setlabel" title="Permanent link">&para;</a></h3>
+<p><em>Sets new label text and redraws.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Labeled</span><span class="o">::</span><span class="n">SetLabel</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">TText</span><span class="w"> </span><span class="n">aName</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aName</code> New label text </li>
+</ul>
+<hr>
+<h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-drawer">function drawer<a class="headerlink" href="#function-drawer" title="Permanent link">&para;</a></h3>
+<p><em>Draws the labeled element.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Labeled</span><span class="o">::</span><span class="n">drawer</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIsFocused</span>
+<span class="p">)</span><span class="w"> </span><span class="k">override</span>
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aScreen</code> <a href="../classevab_1_1_screen/"><strong>Screen</strong></a> to draw on </li>
+<li><code>aPos</code> Position on screen </li>
+<li><code>aSize</code> Size of the element </li>
+<li><code>aIsFocused</code> Focus state (1 = focused, 0 = not focused) </li>
+</ul>
+<hr>
+
+<h3 id="function-hider">function hider<a class="headerlink" href="#function-hider" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Labeled</span><span class="o">::</span><span class="n">hider</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
+</code></pre></div>
+
 <hr>
 
 <hr />

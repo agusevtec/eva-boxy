@@ -22,7 +22,7 @@ namespace evab
 
         void clear();
         
-        void printToSerial();
+        void PrintToSerial();
 
         Coor Size() override;
         
@@ -30,8 +30,8 @@ namespace evab
         
         void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
-    protected:
-        void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
+    private:
+        void drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
 
     private:
         uint8_t mBuffer[1024]; // 8 pages * 128 bytes = 1024 bytes

@@ -54,7 +54,7 @@ void ScreenPCD8544::clearDisplay()
   {
     for (uint8_t col = 0; col < 84; col++)
     {
-      DrawVerticalSlice({(uint8_t)(col / 8), page}, col % 8, 0x00);
+      drawVerticalSlice({(uint8_t)(col / 8), page}, col % 8, 0x00);
     }
   }
 }
@@ -84,7 +84,7 @@ void ScreenPCD8544::initDisplay()
   SetContrast(0x30);
 }
 
-void ScreenPCD8544::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+void ScreenPCD8544::drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
 {
   uint8_t x = aPosition.X * 8 + aSliceColumn;
   uint8_t page = aPosition.Y;
@@ -101,7 +101,7 @@ void ScreenPCD8544::clearTile(Coor aPosition, unsigned char aColor)
 {
   for (uint8_t col = 0; col < 8; col++)
   {
-    DrawVerticalSlice({aPosition.X, aPosition.Y}, col, aColor ? 0xFF : 0x00);
+    drawVerticalSlice({aPosition.X, aPosition.Y}, col, aColor ? 0xFF : 0x00);
   }
 }
 

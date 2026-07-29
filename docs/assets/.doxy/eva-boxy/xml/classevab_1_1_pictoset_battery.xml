@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPictosets.h" line="83" column="40" bodyfile="src/evabPictosets.h" bodystart="83" bodyend="-1"/>
+        <location file="src/evabPictosets.h" line="66" column="40" bodyfile="src/evabPictosets.h" bodystart="66" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPictosets.h" line="82" column="36"/>
+        <location file="src/evabPictosets.h" line="65" column="36"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -59,7 +59,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabPictosets.h" line="73" column="5" bodyfile="src/evabPictosets.h" bodystart="74" bodyend="84"/>
+    <location file="src/evabPictosets.h" line="56" column="5" bodyfile="src/evabPictosets.h" bodystart="57" bodyend="67"/>
     <listofallmembers>
       <member refid="classevab_1_1_pictoset_battery_1a584403583ee3dba52a7bc7266eca7634" prot="public" virt="non-virtual"><scope>evab::PictosetBattery</scope><name>Count</name></member>
       <member refid="classevab_1_1_pictoset_battery_1a01b965052710ed18d619b921d5135f67" prot="public" virt="non-virtual"><scope>evab::PictosetBattery</scope><name>GetTile</name></member>

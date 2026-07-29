@@ -28,7 +28,7 @@ namespace evab
         /**
          * @brief Prints the pixel buffer to serial for debugging
          */
-        void printToSerial();
+        void PrintToSerial();
 
         /**
          * @brief Gets the screen size in tiles
@@ -57,7 +57,7 @@ namespace evab
          */
         void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
-    protected:
+    private:
         /**
          * @brief Draws a vertical slice in the pixel buffer
          * 
@@ -65,7 +65,7 @@ namespace evab
          * @param aSliceColumn Column within the tile (0-7)
          * @param aSlice Bitmap data for the slice
          */
-        void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
+        void drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
 
     private:
         uint8_t mBuffer[1024]; // 8 pages * 128 bytes = 1024 bytes

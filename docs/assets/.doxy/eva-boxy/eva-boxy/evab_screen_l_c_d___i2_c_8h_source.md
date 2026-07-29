@@ -10,13 +10,13 @@
 ```C++
 #pragma once
 
-#include <evabScreenBase.h>
+#include <evabScreen.h>
 #include <Wire.h>
 
 namespace evab
 {
 
-  class ScreenLCD_I2C : public ScreenBase
+  class ScreenLCD_I2C : public Screen
   {
   public:
     ScreenLCD_I2C(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uint8_t aBacklightPin);
@@ -29,7 +29,6 @@ namespace evab
     
     void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
-  protected:
     void DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor) override;
 
   private:

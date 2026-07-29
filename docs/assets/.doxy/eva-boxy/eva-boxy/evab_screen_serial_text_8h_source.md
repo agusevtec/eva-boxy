@@ -10,19 +10,19 @@
 ```C++
 #pragma once
 
-#include <evabScreenBase.h>
+#include <evabScreen.h>
 
 namespace evab
 {
 
-    class ScreenSerialText : public ScreenBase
+    class ScreenSerialText : public Screen
     {
     public:
         ScreenSerialText();
 
-        void clear();
+        void Clear();
         
-        void printToSerial();
+        void PrintToSerial();
 
         Coor Size() override;
         
@@ -30,7 +30,6 @@ namespace evab
         
         void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
-    protected:
         void DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor) override;
 
     private:

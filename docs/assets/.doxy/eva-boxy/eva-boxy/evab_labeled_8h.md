@@ -12,6 +12,7 @@
 
 * `#include <evabScreen.h>`
 * `#include <evabCoor.h>`
+* `#include <evabTextAlign.h>`
 
 
 
@@ -36,8 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Labeled**](classevab_1_1_labeled.md) &lt;class T&gt;<br>_Decorator that adds a label to any element._  |
-| class | [**LabeledF**](classevab_1_1_labeled_f.md) &lt;class T&gt;<br>_Decorator that adds a Flash string label to any element._  |
+| class | [**Labeled**](classevab_1_1_labeled.md) &lt;class T, typename TAlign, typename TText&gt;<br>_Decorator that adds a label to any element with alignment._  |
 
 
 

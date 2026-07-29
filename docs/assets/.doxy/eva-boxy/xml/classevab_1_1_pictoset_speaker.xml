@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPictosets.h" line="131" column="40" bodyfile="src/evabPictosets.h" bodystart="131" bodyend="-1"/>
+        <location file="src/evabPictosets.h" line="114" column="40" bodyfile="src/evabPictosets.h" bodystart="114" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPictosets.h" line="130" column="36"/>
+        <location file="src/evabPictosets.h" line="113" column="36"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -59,7 +59,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabPictosets.h" line="121" column="5" bodyfile="src/evabPictosets.h" bodystart="122" bodyend="132"/>
+    <location file="src/evabPictosets.h" line="104" column="5" bodyfile="src/evabPictosets.h" bodystart="105" bodyend="115"/>
     <listofallmembers>
       <member refid="classevab_1_1_pictoset_speaker_1a87665ef42e8456a4b78bcbe878d4101e" prot="public" virt="non-virtual"><scope>evab::PictosetSpeaker</scope><name>Count</name></member>
       <member refid="classevab_1_1_pictoset_speaker_1a657ff2e642f614f6b0b1936496ab0d75" prot="public" virt="non-virtual"><scope>evab::PictosetSpeaker</scope><name>GetTile</name></member>

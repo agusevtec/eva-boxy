@@ -460,6 +460,144 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -503,12 +641,12 @@
 <p><a href="../evab_boxy_8h/">Go to the documentation of this file</a></p>
 <div class="codehilite"><pre><span></span><code><span class="cp">#pragma once</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabElementBase.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabScreen.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evaHandler.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evaDelayTimer.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeys.h&gt;</span>
 
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabElementBase.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabScreen.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeys.h&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">evab</span>
 <span class="p">{</span>
@@ -529,11 +667,11 @@
 
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">Key</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span><span class="p">);</span>
 
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="nf">Screen</span><span class="p">();</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="nf">GetScreen</span><span class="p">();</span>
 
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="n">Boxy</span><span class="w"> </span><span class="o">*</span><span class="nf">Instance</span><span class="p">();</span>
 
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ShowInt</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">aName</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">aValue</span><span class="p">);</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">Message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">aText</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">private</span><span class="o">:</span>
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">invoke</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">eva</span><span class="o">::</span><span class="n">CallbackInfo</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
@@ -541,7 +679,7 @@
 <span class="w">    </span><span class="k">private</span><span class="o">:</span>
 <span class="w">        </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">mScreen</span><span class="p">;</span><span class="w">                          </span>
 <span class="w">        </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">mGround</span><span class="p">;</span><span class="w">                      </span>
-<span class="w">        </span><span class="n">eva</span><span class="o">::</span><span class="n">DelayTimer</span><span class="w"> </span><span class="n">mModalShowTimer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">};</span><span class="w">  </span>
+<span class="w">        </span><span class="n">eva</span><span class="o">::</span><span class="n">DelayTimer</span><span class="w"> </span><span class="n">mMessageTimer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">};</span><span class="w">  </span>
 <span class="w">    </span><span class="p">};</span>
 <span class="p">}</span>
 </code></pre></div>

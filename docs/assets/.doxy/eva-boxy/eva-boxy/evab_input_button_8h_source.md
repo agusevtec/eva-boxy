@@ -20,8 +20,6 @@ namespace evab
   public:
     InputButton(const __FlashStringHelper *aName);
     
-    void Increment(signed char delta);  // Placeholder, does nothing
-
   protected:
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 

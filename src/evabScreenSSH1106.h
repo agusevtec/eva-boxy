@@ -43,7 +43,14 @@ namespace evab
          */
         void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
-    protected:
+        /**
+         * @brief Gets the screen size in tiles
+         * 
+         * @return Coor Screen dimensions (16x8 tiles)
+         */
+        Coor Size() override;
+
+  private:
         /**
          * @brief Draws a vertical slice at the specified position
          * 
@@ -51,7 +58,7 @@ namespace evab
          * @param aSliceColumn Column within the tile (0-7)
          * @param aSlice Bitmap data for the slice
          */
-        void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
+        void drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
         
         /**
          * @brief Clears a tile at the specified position
@@ -61,14 +68,6 @@ namespace evab
          */
         void clearTile(Coor aPosition, unsigned char aColor) override;
         
-        /**
-         * @brief Gets the screen size in tiles
-         * 
-         * @return Coor Screen dimensions (16x8 tiles)
-         */
-        Coor Size() override;
-
-    private:
         /**
          * @brief Clears the entire display
          */

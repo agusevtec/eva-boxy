@@ -73,13 +73,15 @@ namespace evab
         }
 
         virtual void Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor = 0);
+        virtual void DrawSymbol(Coor aPosition, Coor aSize, char aSymbol, unsigned char aColor = 0) = 0;
         virtual void Clear(Coor aPosition, Coor aSize, unsigned char aColor = 0);
         virtual Coor Size() = 0;
-        virtual void DrawSymbol(Coor aPosition, Coor aSize, char aSymbol, unsigned char aColor = 0) = 0;
+
         virtual unsigned short Serialize(const Coor &aPosition, const Coor &aSize, bool isFocused) = 0;
         virtual void Deserialize(unsigned short aSerialized, Coor &aPosition, Coor &aSize, bool &isFocused) = 0;
 
     private:
+
         virtual void clearTile(Coor position, unsigned char aColor);
     };
 }

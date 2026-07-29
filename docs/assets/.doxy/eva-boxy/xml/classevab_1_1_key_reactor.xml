@@ -26,7 +26,7 @@
         <qualifiedname>evab::KeyReactor::EventType</qualifiedname>
         <enumvalue id="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adba9e339d50c53f9e5e5fad794046472241" prot="public">
           <name>EVENT_VALUE_CHANGED</name>
-          <initializer>= 1</initializer>
+          <initializer>= 2</initializer>
           <briefdescription>
 <para>Event triggered when value changes. </para>
           </briefdescription>

@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSH1106.h" line="98" column="17" bodyfile="src/evabScreenSSH1106.h" bodystart="98" bodyend="-1"/>
+        <location file="src/evabScreenSSH1106.h" line="97" column="17" bodyfile="src/evabScreenSSH1106.h" bodystart="97" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -70,7 +70,7 @@
         <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
         <name>Serialize</name>
         <qualifiedname>evab::ScreenSSH1106::Serialize</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352">Serialize</reimplements>
+        <reimplements refid="classevab_1_1_screen_1a34321b9419ca20ab846670f0e3dad7ab">Serialize</reimplements>
         <param>
           <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
           <declname>aPos</declname>
@@ -126,7 +126,7 @@
         <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
         <name>Deserialize</name>
         <qualifiedname>evab::ScreenSSH1106::Deserialize</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008">Deserialize</reimplements>
+        <reimplements refid="classevab_1_1_screen_1a79b60a47dd4115bd1470d42798811726">Deserialize</reimplements>
         <param>
           <type>unsigned short</type>
           <declname>aSerialized</declname>
@@ -186,15 +186,34 @@
         </inbodydescription>
         <location file="src/evabScreenSSH1106.h" line="44" column="14"/>
       </memberdef>
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::ScreenSSH1106::Size</definition>
+        <argsstring>() override</argsstring>
+        <name>Size</name>
+        <qualifiedname>evab::ScreenSSH1106::Size</qualifiedname>
+        <reimplements refid="classevab_1_1_screen_1a769dc42b12f8eaa3bb605bf17cdb040f">Size</reimplements>
+        <briefdescription>
+<para>Gets the screen size in tiles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> <ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> dimensions (16x8 tiles) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabScreenSSH1106.h" line="51" column="14"/>
+      </memberdef>
     </sectiondef>
-    <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1a3fe57bde2c49a5f2672692a31fe753f2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1aca17153a104628276c6dae0c995cede4" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void evab::ScreenSSH1106::DrawVerticalSlice</definition>
+        <definition>void evab::ScreenSSH1106::drawVerticalSlice</definition>
         <argsstring>(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override</argsstring>
-        <name>DrawVerticalSlice</name>
-        <qualifiedname>evab::ScreenSSH1106::DrawVerticalSlice</qualifiedname>
-        <reimplements refid="classevab_1_1_screen_page8_base_1a2291c5edbcd8a7e0a694595a1fcd7454">DrawVerticalSlice</reimplements>
+        <name>drawVerticalSlice</name>
+        <qualifiedname>evab::ScreenSSH1106::drawVerticalSlice</qualifiedname>
+        <reimplements refid="classevab_1_1_screen_page8_base_1a70351a018f4af4d046c312c18accfac7">drawVerticalSlice</reimplements>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
@@ -240,15 +259,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSH1106.h" line="54" column="14"/>
+        <location file="src/evabScreenSSH1106.h" line="61" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1a64ac49ebcfc58a0e71254e04ba1449c2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1a2a398710e701f0520fa0d792bd051719" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void evab::ScreenSSH1106::ClearTile</definition>
+        <definition>void evab::ScreenSSH1106::clearTile</definition>
         <argsstring>(Coor aPosition, unsigned char aColor) override</argsstring>
-        <name>ClearTile</name>
-        <qualifiedname>evab::ScreenSSH1106::ClearTile</qualifiedname>
-        <reimplements refid="classevab_1_1_screen_base_1adcecf3475b92507656c85c7e97af5717">ClearTile</reimplements>
+        <name>clearTile</name>
+        <qualifiedname>evab::ScreenSSH1106::clearTile</qualifiedname>
+        <reimplements refid="classevab_1_1_screen_1a5d8592a14ffba36493effb2045d47bc5">clearTile</reimplements>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
@@ -282,29 +301,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSH1106.h" line="62" column="14"/>
-      </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
-        <definition>Coor evab::ScreenSSH1106::Size</definition>
-        <argsstring>() override</argsstring>
-        <name>Size</name>
-        <qualifiedname>evab::ScreenSSH1106::Size</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
-        <briefdescription>
-<para>Gets the screen size in tiles. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Screen dimensions (16x8 tiles) </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
         <location file="src/evabScreenSSH1106.h" line="69" column="14"/>
       </memberdef>
-    </sectiondef>
-    <sectiondef kind="private-func">
       <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1afdb0477aec02aa7aca2ec6e48387d572" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::ScreenSSH1106::clearDisplay</definition>
@@ -318,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSH1106.h" line="75" column="14"/>
+        <location file="src/evabScreenSSH1106.h" line="74" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1a5169043e0ebaee909683bce07ce2f73b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -347,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSH1106.h" line="82" column="14"/>
+        <location file="src/evabScreenSSH1106.h" line="81" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1a4c6970863675ff1a2546a9d41d0ca3b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -376,7 +374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSH1106.h" line="89" column="14"/>
+        <location file="src/evabScreenSSH1106.h" line="88" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1ac670c5adad1d53e44511bc109d0de635" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -405,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSSH1106.h" line="96" column="14"/>
+        <location file="src/evabScreenSSH1106.h" line="95" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -415,15 +413,9 @@
 <para>Supports 128x64 OLED displays with I2C interface. Similar to SSD1306 but with different initialization sequence. </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4">
-        <label>evab::Screen</label>
-        <link refid="classevab_1_1_i_screen"/>
-      </node>
       <node id="3">
-        <label>evab::ScreenBase</label>
-        <link refid="classevab_1_1_screen_base"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
+        <label>evab::Screen</label>
+        <link refid="classevab_1_1_screen"/>
       </node>
       <node id="2">
         <label>evab::ScreenPage8Base</label>
@@ -439,15 +431,9 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4">
-        <label>evab::Screen</label>
-        <link refid="classevab_1_1_i_screen"/>
-      </node>
       <node id="3">
-        <label>evab::ScreenBase</label>
-        <link refid="classevab_1_1_screen_base"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
+        <label>evab::Screen</label>
+        <link refid="classevab_1_1_screen"/>
       </node>
       <node id="2">
         <label>evab::ScreenPage8Base</label>
@@ -462,29 +448,27 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenSSH1106.h" line="15" column="5" bodyfile="src/evabScreenSSH1106.h" bodystart="16" bodyend="99"/>
+    <location file="src/evabScreenSSH1106.h" line="15" column="5" bodyfile="src/evabScreenSSH1106.h" bodystart="16" bodyend="98"/>
     <listofallmembers>
-      <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_screen_1a6700eb9fa6e99cc9c6590d8f67d4f057" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>Clear</name></member>
       <member refid="classevab_1_1_screen_s_s_h1106_1afdb0477aec02aa7aca2ec6e48387d572" prot="private" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>clearDisplay</name></member>
-      <member refid="classevab_1_1_screen_s_s_h1106_1a64ac49ebcfc58a0e71254e04ba1449c2" prot="protected" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_screen_s_s_h1106_1a2a398710e701f0520fa0d792bd051719" prot="private" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>clearTile</name></member>
       <member refid="classevab_1_1_screen_s_s_h1106_1a21264b69f031c5d30985b48230aeb132" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>DrawSymbol</name></member>
-      <member refid="classevab_1_1_screen_s_s_h1106_1a3fe57bde2c49a5f2672692a31fe753f2" prot="protected" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>DrawVerticalSlice</name></member>
+      <member refid="classevab_1_1_screen_s_s_h1106_1aca17153a104628276c6dae0c995cede4" prot="private" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>drawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_s_s_h1106_1a7f7e9e5f4781d9633b00e51c5c047b92" prot="private" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>mAddress</name></member>
-      <member refid="classevab_1_1_screen_page8_base_1aa5e0f45e049c5539df59ba5f97ef8446" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>Picto</name></member>
-      <member refid="classevab_1_1_screen_page8_base_1aaf41c535c3c37a3c908803e7138bc326" prot="public" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>ScreenPage8Base</name></member>
+      <member refid="classevab_1_1_screen_page8_base_1a836a340d23a631a4661f5a6165103037" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_screen_page8_base_1a769fc315283a7fd62db3ee4a38e5dfb2" prot="public" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>ScreenPage8Base</name></member>
       <member refid="classevab_1_1_screen_s_s_h1106_1ad3c7f49cb86c3feff4cdc45c0320a8dd" prot="public" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>ScreenSSH1106</name></member>
       <member refid="classevab_1_1_screen_s_s_h1106_1a5169043e0ebaee909683bce07ce2f73b" prot="private" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>sendCommand</name></member>
       <member refid="classevab_1_1_screen_s_s_h1106_1a80e2cdf993dfdb565a21f4f593559732" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>Serialize</name></member>
       <member refid="classevab_1_1_screen_s_s_h1106_1ac670c5adad1d53e44511bc109d0de635" prot="private" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>setColumn</name></member>
       <member refid="classevab_1_1_screen_s_s_h1106_1a4c6970863675ff1a2546a9d41d0ca3b1" prot="private" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>setPage</name></member>
-      <member refid="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa" prot="protected" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>Size</name></member>
-      <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_screen_base_1af34945fb5a3fa9452f61f9f59b11f35f" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_screen_base_1a57d68fbe93780fa7e2618f06ba13c80a" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_screen_base_1a3d5abf436b82c2c0498765dac9fa157b" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>TextRight</name></member>
-      <member refid="classevab_1_1_screen_base_1abd7f2ce82a9ecc72decf3aa01d1be544" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa" prot="public" virt="virtual"><scope>evab::ScreenSSH1106</scope><name>Size</name></member>
+      <member refid="classevab_1_1_screen_1a474f9a72cd8f60bdb5d13c717eb8741c" prot="public" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>Text</name></member>
+      <member refid="classevab_1_1_screen_1acab6e3c9cf01250a6ce61ab7e2732898" prot="public" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_screen_1a5b07acac62ca5bb43a529e9512b4b0f9" prot="public" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_screen_1a9dcf79b61f33f64bbb98f3a53448769a" prot="public" virt="non-virtual"><scope>evab::ScreenSSH1106</scope><name>TextRight</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

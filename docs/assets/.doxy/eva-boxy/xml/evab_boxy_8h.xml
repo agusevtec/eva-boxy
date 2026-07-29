@@ -2,13 +2,13 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="evab_boxy_8h" kind="file" language="C++">
     <compoundname>evabBoxy.h</compoundname>
-    <includes refid="evab_element_base_8h" local="no">evabElementBase.h</includes>
-    <includes refid="evab_i_screen_8h" local="no">evabScreen.h</includes>
     <includes local="no">evaHandler.h</includes>
     <includes local="no">evaDelayTimer.h</includes>
+    <includes refid="evab_element_base_8h" local="no">evabElementBase.h</includes>
+    <includes refid="evab_screen_8h" local="no">evabScreen.h</includes>
     <includes refid="evab_keys_8h" local="no">evabKeys.h</includes>
     <incdepgraph>
-      <node id="5">
+      <node id="7">
         <label>Arduino.h</label>
       </node>
       <node id="1">
@@ -16,45 +16,63 @@
         <link refid="evab_boxy_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>evabCoor.h</label>
+        <link refid="evab_coor_8h_source"/>
+      </node>
+      <node id="4">
+        <label>evabElementBase.h</label>
+        <link refid="evab_element_base_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>evabKeys.h</label>
+        <link refid="evab_keys_8h_source"/>
+      </node>
+      <node id="6">
+        <label>evabScreen.h</label>
+        <link refid="evab_screen_8h_source"/>
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>evabTextAlign.h</label>
+        <link refid="evab_text_align_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>evabTextTraits.h</label>
+        <link refid="evab_text_traits_8h_source"/>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>evabCoor.h</label>
-        <link refid="evab_coor_8h_source"/>
-      </node>
-      <node id="2">
-        <label>evabElementBase.h</label>
-        <link refid="evab_element_base_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>evabScreen.h</label>
-        <link refid="evab_i_screen_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>evabKeys.h</label>
-        <link refid="evab_keys_8h_source"/>
-      </node>
-      <node id="8">
         <label>evaDelayTimer.h</label>
       </node>
-      <node id="7">
+      <node id="2">
         <label>evaHandler.h</label>
       </node>
     </incdepgraph>
@@ -67,12 +85,12 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabElementBase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabScreen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evaHandler.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evaDelayTimer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabKeys.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evaHandler.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evaDelayTimer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabElementBase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabScreen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabKeys.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
 <codeline lineno="11"><highlight class="normal">{</highlight></codeline>
@@ -88,24 +106,24 @@
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>instance-&gt;mScreen<sp/>=<sp/>&amp;screen;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>instance-&gt;mGround<sp/>=<sp/>aGround;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(instance-&gt;mGround)</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>instance-&gt;mGround-&gt;<ref refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" kindref="member">Draw</ref>(instance-&gt;mScreen,<sp/>{0,<sp/>0},<sp/>instance-&gt;mScreen-&gt;Size(),<sp/>1);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>instance-&gt;mGround-&gt;<ref refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" kindref="member">Draw</ref>(instance-&gt;mScreen,<sp/>{0,<sp/>0},<sp/>instance-&gt;mScreen-&gt;Size(),<sp/>1);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47" refid="classevab_1_1_boxy_1a087c7b44197fde12c104519ac261a04e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_boxy_1a087c7b44197fde12c104519ac261a04e" kindref="member">Key</ref>(Keys<sp/>aKey);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="classevab_1_1_boxy_1adce1596da674162398db477716fcc3f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref><sp/>*<ref refid="classevab_1_1_boxy_1adce1596da674162398db477716fcc3f6" kindref="member">Screen</ref>();</highlight></codeline>
+<codeline lineno="54" refid="classevab_1_1_boxy_1a412dad651445acc7bcd0e34de373dc99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref><sp/>*<ref refid="classevab_1_1_boxy_1a412dad651445acc7bcd0e34de373dc99" kindref="member">GetScreen</ref>();</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61" refid="classevab_1_1_boxy_1ad497c4dfe6634762aa2a1cee62a0e7a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_boxy" kindref="compound">Boxy</ref><sp/>*<ref refid="classevab_1_1_boxy_1ad497c4dfe6634762aa2a1cee62a0e7a8" kindref="member">Instance</ref>();</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69" refid="classevab_1_1_boxy_1a6a8436a7b2ebd0e87fc82e39bcd670af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_boxy_1a6a8436a7b2ebd0e87fc82e39bcd670af" kindref="member">ShowInt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*aName,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aValue);</highlight></codeline>
+<codeline lineno="69" refid="classevab_1_1_boxy_1a4d5ebf6df96aa1edf1d5b3e2468856aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_boxy_1a4d5ebf6df96aa1edf1d5b3e2468856aa" kindref="member">Message</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__FlashStringHelper*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*aText);</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>invoke(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/>eva::CallbackInfo)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref><sp/>*mScreen;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref><sp/>*mScreen;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref><sp/>*mGround;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eva::DelayTimer<sp/>mModalShowTimer<sp/>=<sp/>{</highlight><highlight class="keyword">this</highlight><highlight class="normal">};<sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eva::DelayTimer<sp/>mMessageTimer<sp/>=<sp/>{</highlight><highlight class="keyword">this</highlight><highlight class="normal">};<sp/><sp/></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="85"><highlight class="normal">}</highlight></codeline>
     </programlisting>

@@ -71,11 +71,7 @@ namespace evab
             SetValue(mValue + delta);
         }
 
-    private:
-        static constexpr unsigned char START_BLOCK = 1;   
-        static constexpr unsigned char MIDDLE_BLOCK = 2;  
-        static constexpr unsigned char END_BLOCK = 3;     
-
+    protected:
         void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
             unsigned short resolution = OrientationPictoPolicy::CalculateResolution(aSize);
@@ -104,6 +100,7 @@ namespace evab
                 aIsFocused);
         }
 
+    private:
         char blockFill(unsigned char blockNumber, unsigned short normalizedValue)
         {
             if (normalizedValue / 3 < blockNumber)
@@ -113,7 +110,12 @@ namespace evab
             return normalizedValue % 3 + 1;
         }
 
-        unsigned char mValue;  
+    private:
+        static constexpr unsigned char START_BLOCK = 1;  
+        static constexpr unsigned char MIDDLE_BLOCK = 2; 
+        static constexpr unsigned char END_BLOCK = 3;    
+
+        unsigned char mValue; 
     };
 
     // Convenience typedefs for common stretch bar types

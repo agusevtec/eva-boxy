@@ -9,7 +9,7 @@ Grid::Grid(Coor aPos, Coor aSize)
 {
 }
 
-Grid Grid::NextRow(unsigned char aHeight)
+Grid Grid::SliceRow(unsigned char aHeight)
 {
     if (aHeight == 0)
         aHeight = mBottomRight.Y - mTopLeft.Y;
@@ -22,7 +22,7 @@ Grid Grid::NextRow(unsigned char aHeight)
     return Grid(rowTopLeft, rowSize);
 }
 
-Grid Grid::NextCol(unsigned char aWidth)
+Grid Grid::SliceCol(unsigned char aWidth)
 {
     if (aWidth == 0)
         aWidth = mBottomRight.X - mTopLeft.X;

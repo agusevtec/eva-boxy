@@ -71,22 +71,14 @@ namespace evab
 
       if (aSize.Y == 1)
       {
-        // Single line: label on the left, element on the right
         unsigned char labelWidth = 2 * aSize.X / 3;
         unsigned char inputWidth = aSize.X - labelWidth;
-        
-        // Draw label with specified alignment
         aScreen->Text<TAlign>(aPos, {labelWidth, 1}, mName, aIsFocused);
-        
-        // Draw wrapped element
         T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, 1}, aIsFocused);
       }
       else
       {
-        // Multi-line: label on top, element below
         aScreen->Text<TAlign>(aPos, {aSize.X, 1}, mName, aIsFocused);
-        
-        // Draw wrapped element below label
         T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
       }
     }

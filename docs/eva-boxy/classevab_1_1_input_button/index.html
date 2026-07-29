@@ -460,6 +460,144 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -520,6 +658,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#protected-functions-inherited-from-evabelementbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protected Functions inherited from evab::ElementBase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#detailed-description" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -541,17 +690,6 @@
   
     <nav class="md-nav" aria-label="Public Functions Documentation">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-increment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function Increment
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#function-inputbutton" class="md-nav__link">
@@ -634,10 +772,6 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-increment"><strong>Increment</strong></a> (signed char delta) <br><em>Placeholder increment method (does nothing).</em></td>
-</tr>
-<tr>
 <td style="text-align: right;"></td>
 <td style="text-align: left;"><a href="#function-inputbutton"><strong>InputButton</strong></a> (const __FlashStringHelper * aName) <br><em>Constructor for</em> <a href="./"><em><strong>InputButton</strong></em></a> <em>.</em></td>
 </tr>
@@ -655,7 +789,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -686,26 +820,33 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Draws the button element.</em></td>
+<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Draws the button element.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-functions-inherited-from-evabelementbase">Protected Functions inherited from evab::ElementBase<a class="headerlink" href="#protected-functions-inherited-from-evabelementbase" title="Permanent link">&para;</a></h2>
+<p>See <a href="../classevab_1_1_element_base/">evab::ElementBase</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) = 0<br><em>Pure virtual method for drawing the element.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hider"><strong>hider</strong></a> () <br><em>Virtual method for hiding the element.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
 <p>Displays a button with a label enclosed in parentheses. The Increment method is a placeholder that does nothing. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
-<h3 id="function-increment">function Increment<a class="headerlink" href="#function-increment" title="Permanent link">&para;</a></h3>
-<p><em>Placeholder increment method (does nothing).</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputButton</span><span class="o">::</span><span class="n">Increment</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">delta</span>
-<span class="p">)</span><span class="w"> </span>
-</code></pre></div>
-
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>delta</code> Unused parameter </li>
-</ul>
-<hr>
-
 <h3 id="function-inputbutton">function InputButton<a class="headerlink" href="#function-inputbutton" title="Permanent link">&para;</a></h3>
 <p><em>Constructor for</em> <a href="./"><em><strong>InputButton</strong></em></a> <em>.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">InputButton</span><span class="o">::</span><span class="n">InputButton</span><span class="w"> </span><span class="p">(</span>
@@ -731,7 +872,7 @@
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aScreen</code> Screen to draw on </li>
+<li><code>aScreen</code> <a href="../classevab_1_1_screen/"><strong>Screen</strong></a> to draw on </li>
 <li><code>aPos</code> Position on screen </li>
 <li><code>aSize</code> Size of the element </li>
 <li><code>aIsFocused</code> Focus state (1 = focused, 0 = not focused) </li>

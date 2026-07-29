@@ -14,8 +14,10 @@ nav:
       - Keyboard behavior: tutorial/keyboard-behavior.md
       - Custom display: tutorial/custom-display-driver.md
 
-
-
+  - API Reference:
+      - Classes: eva-boxy/annotated.md
+      - Hierarchy: eva-boxy/hierarchy.md
+      - Files: eva-boxy/files.md
 
 markdown_extensions:
   - admonition

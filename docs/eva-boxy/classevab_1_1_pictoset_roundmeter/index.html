@@ -460,6 +460,144 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -586,10 +724,6 @@
 
 <h1 id="class-evabpictosetroundmeter">Class evab::PictosetRoundmeter<a class="headerlink" href="#class-evabpictosetroundmeter" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>PictosetRoundmeter</strong></a></p>
-<p><em>Roundmeter pictogram set (9 states).</em> </p>
-<ul>
-<li><code>#include &lt;evabPictosets.h&gt;</code></li>
-</ul>
 <h2 id="public-static-attributes">Public Static Attributes<a class="headerlink" href="#public-static-attributes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -601,7 +735,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">unsigned char</td>
-<td style="text-align: left;"><a href="#variable-count"><strong>Count</strong></a>   = <code>9</code><br><em>Number of pictograms.</em></td>
+<td style="text-align: left;"><a href="#variable-count"><strong>Count</strong></a>   = <code>13</code><br></td>
 </tr>
 </tbody>
 </table>
@@ -616,31 +750,23 @@
 <tbody>
 <tr>
 <td style="text-align: right;">const unsigned char *</td>
-<td style="text-align: left;"><a href="#function-gettile"><strong>GetTile</strong></a> (unsigned char aIndex) <br><em>Gets pictogram by index.</em></td>
+<td style="text-align: left;"><a href="#function-gettile"><strong>GetTile</strong></a> (unsigned char aIndex) <br></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-attributes-documentation">Public Static Attributes Documentation<a class="headerlink" href="#public-static-attributes-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="variable-count">variable Count<a class="headerlink" href="#variable-count" title="Permanent link">&para;</a></h3>
-<p><em>Number of pictograms.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">PictosetRoundmeter</span><span class="o">::</span><span class="n">Count</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation<a class="headerlink" href="#public-static-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-gettile">function GetTile<a class="headerlink" href="#function-gettile" title="Permanent link">&para;</a></h3>
-<p><em>Gets pictogram by index.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">PictosetRoundmeter</span><span class="o">::</span><span class="n">GetTile</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>aIndex</code> Index (0-8) </li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>Pointer to pictogram data </p>
 <hr>
 
 <hr />

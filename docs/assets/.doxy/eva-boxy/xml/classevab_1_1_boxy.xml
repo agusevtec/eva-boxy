@@ -5,8 +5,8 @@
     <basecompoundref prot="public" virt="non-virtual">eva::IHandler</basecompoundref>
     <includes refid="evab_boxy_8h" local="no">evabBoxy.h</includes>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classevab_1_1_boxy_1aa0c9017e75baac7aa95194f73bfd641a" prot="private" static="no" mutable="no">
-        <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
+      <memberdef kind="variable" id="classevab_1_1_boxy_1a7123b40e88502c467d28f7af27ffe369" prot="private" static="no" mutable="no">
+        <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
         <definition>Screen* evab::Boxy::mScreen</definition>
         <argsstring></argsstring>
         <name>mScreen</name>
@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="81" column="17" bodyfile="src/evabBoxy.h" bodystart="81" bodyend="-1"/>
+        <location file="src/evabBoxy.h" line="81" column="16" bodyfile="src/evabBoxy.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_boxy_1a19139a262d040ad6307416a87f1dcfbc" prot="private" static="no" mutable="no">
         <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
@@ -35,12 +35,12 @@
         </inbodydescription>
         <location file="src/evabBoxy.h" line="82" column="21" bodyfile="src/evabBoxy.h" bodystart="82" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classevab_1_1_boxy_1a1f6c8d9667d25c68e7a38b3c84c27d52" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classevab_1_1_boxy_1add3cf5026659bdd377f6c99e5dd96214" prot="private" static="no" mutable="no">
         <type>eva::DelayTimer</type>
-        <definition>eva::DelayTimer evab::Boxy::mModalShowTimer</definition>
+        <definition>eva::DelayTimer evab::Boxy::mMessageTimer</definition>
         <argsstring></argsstring>
-        <name>mModalShowTimer</name>
-        <qualifiedname>evab::Boxy::mModalShowTimer</qualifiedname>
+        <name>mMessageTimer</name>
+        <qualifiedname>evab::Boxy::mMessageTimer</qualifiedname>
         <initializer>= {this}</initializer>
         <briefdescription>
 <para>Timer for modal visibility. </para>
@@ -89,7 +89,7 @@
 <parametername>TScreen</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Screen type to use </para>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> type to use </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -161,12 +161,12 @@
         </inbodydescription>
         <location file="src/evabBoxy.h" line="47" column="21"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_boxy_1adce1596da674162398db477716fcc3f6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
-        <definition>static Screen * evab::Boxy::Screen</definition>
+      <memberdef kind="function" id="classevab_1_1_boxy_1a412dad651445acc7bcd0e34de373dc99" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+        <definition>static Screen * evab::Boxy::GetScreen</definition>
         <argsstring>()</argsstring>
-        <name>Screen</name>
-        <qualifiedname>evab::Boxy::Screen</qualifiedname>
+        <name>GetScreen</name>
+        <qualifiedname>evab::Boxy::GetScreen</qualifiedname>
         <briefdescription>
 <para>Gets the current screen pointer. </para>
         </briefdescription>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBoxy.h" line="54" column="24"/>
+        <location file="src/evabBoxy.h" line="54" column="23"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_1ad497c4dfe6634762aa2a1cee62a0e7a8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classevab_1_1_boxy" kindref="compound">Boxy</ref> *</type>
@@ -197,19 +197,18 @@
         </inbodydescription>
         <location file="src/evabBoxy.h" line="61" column="21"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_boxy_1a6a8436a7b2ebd0e87fc82e39bcd670af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_boxy_1a4d5ebf6df96aa1edf1d5b3e2468856aa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void evab::Boxy::ShowInt</definition>
-        <argsstring>(const char *aName, int aValue)</argsstring>
-        <name>ShowInt</name>
-        <qualifiedname>evab::Boxy::ShowInt</qualifiedname>
+        <definition>static void evab::Boxy::Message</definition>
+        <argsstring>(const __FlashStringHelper *, const char *aText)</argsstring>
+        <name>Message</name>
+        <qualifiedname>evab::Boxy::Message</qualifiedname>
         <param>
-          <type>const char *</type>
-          <declname>aName</declname>
+          <type>const __FlashStringHelper *</type>
         </param>
         <param>
-          <type>int</type>
-          <declname>aValue</declname>
+          <type>const char *</type>
+          <declname>aText</declname>
         </param>
         <briefdescription>
 <para>Displays a temporary modal with a named integer value. </para>
@@ -311,14 +310,14 @@
     <location file="src/evabBoxy.h" line="18" column="5" bodyfile="src/evabBoxy.h" bodystart="19" bodyend="84"/>
     <listofallmembers>
       <member refid="classevab_1_1_boxy_1a8feff22f64a5b6fb21fecfd986bcc1e4" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>Begin</name></member>
+      <member refid="classevab_1_1_boxy_1a412dad651445acc7bcd0e34de373dc99" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>GetScreen</name></member>
       <member refid="classevab_1_1_boxy_1ad497c4dfe6634762aa2a1cee62a0e7a8" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>Instance</name></member>
       <member refid="classevab_1_1_boxy_1ab2ef4e020e421bdaf47556e62444f391" prot="private" virt="non-virtual"><scope>evab::Boxy</scope><name>invoke</name></member>
       <member refid="classevab_1_1_boxy_1a087c7b44197fde12c104519ac261a04e" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>Key</name></member>
+      <member refid="classevab_1_1_boxy_1a4d5ebf6df96aa1edf1d5b3e2468856aa" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>Message</name></member>
       <member refid="classevab_1_1_boxy_1a19139a262d040ad6307416a87f1dcfbc" prot="private" virt="non-virtual"><scope>evab::Boxy</scope><name>mGround</name></member>
-      <member refid="classevab_1_1_boxy_1a1f6c8d9667d25c68e7a38b3c84c27d52" prot="private" virt="non-virtual"><scope>evab::Boxy</scope><name>mModalShowTimer</name></member>
-      <member refid="classevab_1_1_boxy_1aa0c9017e75baac7aa95194f73bfd641a" prot="private" virt="non-virtual"><scope>evab::Boxy</scope><name>mScreen</name></member>
-      <member refid="classevab_1_1_boxy_1adce1596da674162398db477716fcc3f6" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>Screen</name></member>
-      <member refid="classevab_1_1_boxy_1a6a8436a7b2ebd0e87fc82e39bcd670af" prot="public" virt="non-virtual"><scope>evab::Boxy</scope><name>ShowInt</name></member>
+      <member refid="classevab_1_1_boxy_1add3cf5026659bdd377f6c99e5dd96214" prot="private" virt="non-virtual"><scope>evab::Boxy</scope><name>mMessageTimer</name></member>
+      <member refid="classevab_1_1_boxy_1a7123b40e88502c467d28f7af27ffe369" prot="private" virt="non-virtual"><scope>evab::Boxy</scope><name>mScreen</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

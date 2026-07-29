@@ -8,26 +8,32 @@
       <param>
         <type>class T</type>
       </param>
+      <param>
+        <type>typename TAlign</type>
+      </param>
+      <param>
+        <type>typename TText</type>
+      </param>
     </templateparamlist>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classevab_1_1_labeled_1ac96616145d5274e945d7fd0a1ae7fbd2" prot="private" static="no" mutable="no">
-        <type>const char *</type>
-        <definition>const char* evab::Labeled&lt; T &gt;::mName</definition>
+      <memberdef kind="variable" id="classevab_1_1_labeled_1a6689d3f69cafef608f4540a962d0ba56" prot="private" static="no" mutable="no">
+        <type>TText</type>
+        <definition>TText evab::Labeled&lt; T, TAlign, TText &gt;::mName</definition>
         <argsstring></argsstring>
         <name>mName</name>
         <qualifiedname>evab::Labeled::mName</qualifiedname>
         <briefdescription>
-<para>Label text (C-string). </para>
+<para>Label text. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="60" column="16" bodyfile="src/evabLabeled.h" bodystart="60" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="89" column="11" bodyfile="src/evabLabeled.h" bodystart="89" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_labeled_1aababced9d4e4e91174a365e365ffeb71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_labeled_1a5fb6daf0071c512ea5bc206c1e27134e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -36,12 +42,12 @@
           </param>
         </templateparamlist>
         <type></type>
-        <definition>evab::Labeled&lt; T &gt;::Labeled</definition>
-        <argsstring>(const char *aName, Args &amp;&amp;... args)</argsstring>
+        <definition>evab::Labeled&lt; T, TAlign, TText &gt;::Labeled</definition>
+        <argsstring>(TText aName, Args &amp;&amp;... args)</argsstring>
         <name>Labeled</name>
         <qualifiedname>evab::Labeled::Labeled</qualifiedname>
         <param>
-          <type>const char *</type>
+          <type>TText</type>
           <declname>aName</declname>
         </param>
         <param>
@@ -49,7 +55,7 @@
           <declname>args</declname>
         </param>
         <briefdescription>
-<para>Constructor for <ref refid="classevab_1_1_labeled" kindref="compound">Labeled</ref> with C-string label. </para>
+<para>Constructor for <ref refid="classevab_1_1_labeled" kindref="compound">Labeled</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -57,7 +63,7 @@
 <parametername>aName</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Label text (C-string) </para>
+<para>Label text </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -73,18 +79,65 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="28" column="5" bodyfile="src/evabLabeled.h" bodystart="28" bodyend="31"/>
+        <location file="src/evabLabeled.h" line="32" column="5" bodyfile="src/evabLabeled.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_labeled_1a16441832385aaa9bac602fbe0785bcb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::Labeled&lt; T, TAlign, TText &gt;::SetLabel</definition>
+        <argsstring>(TText aName)</argsstring>
+        <name>SetLabel</name>
+        <qualifiedname>evab::Labeled::SetLabel</qualifiedname>
+        <param>
+          <type>TText</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+<para>Sets new label text and redraws. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New label text </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLabeled.h" line="42" column="10" bodyfile="src/evabLabeled.h" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_labeled_1a910de10f3f5e7f116e24035f69251756" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>TText</type>
+        <definition>TText evab::Labeled&lt; T, TAlign, TText &gt;::GetLabel</definition>
+        <argsstring>() const</argsstring>
+        <name>GetLabel</name>
+        <qualifiedname>evab::Labeled::GetLabel</qualifiedname>
+        <briefdescription>
+<para>Gets current label text. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current label text </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLabeled.h" line="53" column="11" bodyfile="src/evabLabeled.h" bodystart="53" bodyend="56"/>
       </memberdef>
     </sectiondef>
-    <sectiondef kind="private-func">
-      <memberdef kind="function" id="classevab_1_1_labeled_1a0a3a8aa9b1702a0e30eeb483f7bdb500" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_labeled_1afa6f2c9e3657e37e5b50096d78eddb29" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::Labeled&lt; T &gt;::drawer</definition>
+        <definition>void evab::Labeled&lt; T, TAlign, TText &gt;::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::Labeled::drawer</qualifiedname>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>
@@ -108,7 +161,7 @@
 <parametername>aScreen</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Screen to draw on </para>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -140,11 +193,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="42" column="10" bodyfile="src/evabLabeled.h" bodystart="42" bodyend="57"/>
+        <location file="src/evabLabeled.h" line="67" column="10" bodyfile="src/evabLabeled.h" bodystart="67" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_labeled_1af504548d9334c28c9871b2c74f339816" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::Labeled&lt; T, TAlign, TText &gt;::hider</definition>
+        <argsstring>() override</argsstring>
+        <name>hider</name>
+        <qualifiedname>evab::Labeled::hider</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLabeled.h" line="86" column="10" bodyfile="src/evabLabeled.h" bodystart="86" bodyend="86"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Decorator that adds a label to any element. </para>
+<para>Decorator that adds a label to any element with alignment. </para>
     </briefdescription>
     <detaileddescription>
 <para>Wraps an element and adds a text label either to the left (single line) or above (multi-line).</para>
@@ -156,6 +223,22 @@
 <para>Element type to label </para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAlign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alignment strategy for label (<ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref>, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref>, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text type (const char*, __FlashStringHelper*) </para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
 </para>
     </detaileddescription>
@@ -164,7 +247,7 @@
         <label>T</label>
       </node>
       <node id="1">
-        <label>evab::Labeled&lt; T &gt;</label>
+        <label>evab::Labeled&lt; T, TAlign, TText &gt;</label>
         <link refid="classevab_1_1_labeled"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
@@ -175,17 +258,20 @@
         <label>T</label>
       </node>
       <node id="1">
-        <label>evab::Labeled&lt; T &gt;</label>
+        <label>evab::Labeled&lt; T, TAlign, TText &gt;</label>
         <link refid="classevab_1_1_labeled"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabLabeled.h" line="18" column="3" bodyfile="src/evabLabeled.h" bodystart="19" bodyend="61"/>
+    <location file="src/evabLabeled.h" line="22" column="3" bodyfile="src/evabLabeled.h" bodystart="23" bodyend="90"/>
     <listofallmembers>
-      <member refid="classevab_1_1_labeled_1a0a3a8aa9b1702a0e30eeb483f7bdb500" prot="private" virt="non-virtual"><scope>evab::Labeled</scope><name>drawer</name></member>
-      <member refid="classevab_1_1_labeled_1aababced9d4e4e91174a365e365ffeb71" prot="public" virt="non-virtual"><scope>evab::Labeled</scope><name>Labeled</name></member>
-      <member refid="classevab_1_1_labeled_1ac96616145d5274e945d7fd0a1ae7fbd2" prot="private" virt="non-virtual"><scope>evab::Labeled</scope><name>mName</name></member>
+      <member refid="classevab_1_1_labeled_1afa6f2c9e3657e37e5b50096d78eddb29" prot="protected" virt="non-virtual"><scope>evab::Labeled</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_labeled_1a910de10f3f5e7f116e24035f69251756" prot="public" virt="non-virtual"><scope>evab::Labeled</scope><name>GetLabel</name></member>
+      <member refid="classevab_1_1_labeled_1af504548d9334c28c9871b2c74f339816" prot="protected" virt="non-virtual"><scope>evab::Labeled</scope><name>hider</name></member>
+      <member refid="classevab_1_1_labeled_1a5fb6daf0071c512ea5bc206c1e27134e" prot="public" virt="non-virtual"><scope>evab::Labeled</scope><name>Labeled</name></member>
+      <member refid="classevab_1_1_labeled_1a6689d3f69cafef608f4540a962d0ba56" prot="private" virt="non-virtual"><scope>evab::Labeled</scope><name>mName</name></member>
+      <member refid="classevab_1_1_labeled_1a16441832385aaa9bac602fbe0785bcb7" prot="public" virt="non-virtual"><scope>evab::Labeled</scope><name>SetLabel</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

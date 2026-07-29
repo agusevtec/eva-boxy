@@ -56,7 +56,6 @@ namespace evab
             if (!aScreen || aSize.Y == 0 || aSize.X == 0)
                 return;
 
-            // Use Screen's Text method with alignment template
             aScreen->Text<TAlign>(aPos, aSize, mText, aIsFocused);
         }
 

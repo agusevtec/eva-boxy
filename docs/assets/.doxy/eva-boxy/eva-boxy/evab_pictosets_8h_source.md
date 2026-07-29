@@ -16,64 +16,63 @@ namespace evab
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 2;  
+        static constexpr unsigned char Count = 2; 
     };
 
     class PictosetRainbowmeter
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 7;  
-    };
-
-    class PictosetRoundmeter
-    {
-    public:
-        static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 9;  
+        static constexpr unsigned char Count = 7; 
     };
 
     class PictosetFan
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 3;  
+        static constexpr unsigned char Count = 3; 
     };
 
-    
     class PictosetBattery
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 7;  
+        static constexpr unsigned char Count = 7; 
     };
 
     class PictosetLamp
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 6;  
+        static constexpr unsigned char Count = 6; 
     };
 
     class PictosetProgress
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 9;  
+        static constexpr unsigned char Count = 9; 
     };
 
     class PictosetSpeaker
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 4;  
+        static constexpr unsigned char Count = 4; 
     };
 
     class PictosetSignal
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
-        static constexpr unsigned char Count = 4;  
+        static constexpr unsigned char Count = 4; 
+    };
+
+    class PictosetRoundmeter
+    {
+    public:
+        static const unsigned char *GetTile(unsigned char aIndex);
+        static constexpr unsigned char Count = 13;
     };
 
 }

@@ -15,7 +15,7 @@ using namespace evab;
             mBuffer[i] = 0x00;
     }
 
-    void ScreenSerialPixel::printToSerial()
+    void ScreenSerialPixel::PrintToSerial()
     {
         for (unsigned char page = 0; page < 8; page++)
         {
@@ -37,7 +37,7 @@ using namespace evab;
         return {16, 8}; 
     }
 
-    void ScreenSerialPixel::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+    void ScreenSerialPixel::drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
     {
         unsigned char x = aPosition.X * 8 + aSliceColumn;
         unsigned char page = aPosition.Y;

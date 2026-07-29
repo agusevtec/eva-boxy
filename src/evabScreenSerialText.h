@@ -22,12 +22,12 @@ namespace evab
         /**
          * @brief Clears the text buffer
          */
-        void clear();
+        void Clear();
         
         /**
          * @brief Prints the text buffer to serial for debugging
          */
-        void printToSerial();
+        void PrintToSerial();
 
         /**
          * @brief Gets the screen size in characters
@@ -56,7 +56,6 @@ namespace evab
          */
         void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
-    protected:
         /**
          * @brief Draws a symbol in the text buffer
          * 

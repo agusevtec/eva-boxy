@@ -109,6 +109,7 @@ namespace evab
             return delay;
         }
 
+    private:
         unsigned char mValue;         
         unsigned char mCurrentFrame;  
         unsigned long mLastFrameTime; 

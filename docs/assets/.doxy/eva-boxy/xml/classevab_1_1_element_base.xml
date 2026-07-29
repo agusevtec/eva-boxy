@@ -12,16 +12,27 @@
     <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; CharsetHorizontalScrollBar, HorizontalTextPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; ScrollWindowAlgorithm &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; FlipWindowAlgorithm &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; char *, LeftAlign &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; char *, CenterAlign &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; char *, RightAlign &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const char *, LeftAlign &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const char *, CenterAlign &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const char *, RightAlign &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const __FlashStringHelper *, LeftAlign &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const __FlashStringHelper *, CenterAlign &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const __FlashStringHelper *, RightAlign &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_composite_base" prot="public" virt="non-virtual">evab::CompositeBase</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_animation" prot="public" virt="non-virtual">evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_button" prot="public" virt="non-virtual">evab::InputButton</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_button_picto" prot="public" virt="non-virtual">evab::InputButtonPicto</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_float" prot="public" virt="non-virtual">evab::InputFloat</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_int" prot="public" virt="non-virtual">evab::InputInt</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_pictogram" prot="public" virt="non-virtual">evab::InputPictogram&lt; TPictoset &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_selector_picto" prot="public" virt="non-virtual">evab::InputSelectorPicto&lt; TPictoset &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_layout_pane" prot="public" virt="non-virtual">evab::LayoutPane</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_layout_base" prot="public" virt="non-virtual">evab::LayoutBase</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; TWindowAlgorithm &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; T, TAlign &gt;</derivedcompoundref>
     <includes refid="evab_element_base_8h" local="no">evabElementBase.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_element_base_1a0484daf10dc5a40d804b50f42f022aaa" prot="private" static="no" mutable="no">
@@ -49,7 +60,7 @@
         <name>Key</name>
         <qualifiedname>evab::ElementBase::Key</qualifiedname>
         <reimplementedby refid="classevab_1_1_composite_base_1a04b3cdb0c1fb134e78624e44cc75a95d">Key</reimplementedby>
-        <reimplementedby refid="classevab_1_1_layout_pane_1a6eede8e680b27e48e815ac914fcc3ea5">Key</reimplementedby>
+        <reimplementedby refid="classevab_1_1_layout_base_1a8dd4a2350ec9ae002b538911c0dc20ca">Key</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a5faf9890ff8dce44e7eec53b6d119630">Key</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a5faf9890ff8dce44e7eec53b6d119630">Key</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a5faf9890ff8dce44e7eec53b6d119630">Key</reimplementedby>
@@ -94,14 +105,14 @@
         </inbodydescription>
         <location file="src/evabElementBase.h" line="31" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::ElementBase::Draw</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)</argsstring>
         <name>Draw</name>
         <qualifiedname>evab::ElementBase::Draw</qualifiedname>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>
@@ -125,7 +136,7 @@
 <parametername>aScreen</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Screen to draw on </para>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -193,34 +204,44 @@
         <location file="src/evabElementBase.h" line="53" column="10"/>
       </memberdef>
     </sectiondef>
-    <sectiondef kind="private-func">
-      <memberdef kind="function" id="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void evab::ElementBase::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)=0</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::ElementBase::drawer</qualifiedname>
-        <reimplementedby refid="classevab_1_1_input_animation_1ac59f5a42cb72cabeda522912e9017804">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_button_1aeff1acaf2760ffe34b65cd83b92feb85">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_float_1acfa08df4550aaad3a79e368470bacc00">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_int_1abfef31986b1b4ade1a661a9b1c8144c9">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_pictogram_1af24f505c3cfa45f20a25d8d36a652d85">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a5b195c01bcf8c34755f7cd92145ea261">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a5b195c01bcf8c34755f7cd92145ea261">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a5b195c01bcf8c34755f7cd92145ea261">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a5b195c01bcf8c34755f7cd92145ea261">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a5b195c01bcf8c34755f7cd92145ea261">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1ab4ab3df83b0f0be3a48db05a0d15f2ec">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1ab4ab3df83b0f0be3a48db05a0d15f2ec">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1ab4ab3df83b0f0be3a48db05a0d15f2ec">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1ab4ab3df83b0f0be3a48db05a0d15f2ec">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1ab4ab3df83b0f0be3a48db05a0d15f2ec">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_layout_pane_1a2a511b8bf0024ea38711a585916d9add">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_list_box_1ad877350533d2964624f75a23caaa9034">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_list_box_1ad877350533d2964624f75a23caaa9034">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_list_box_1ad877350533d2964624f75a23caaa9034">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_animation_1ac62f92c6ef303664e38919ffc9b2aca8">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_button_1a72049ea923d87d45709d24d4c256e9ce">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_button_picto_1adb782695b2bbca9ec6380110c9f2884b">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_float_1a17fa953f42dfaee582fdfb471d8823d5">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_int_1aaee5d4fe0d95f0a10259add2165710f6">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_selector_picto_1afd4994c61c476379a0d1831d66746c78">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a18568595571f2fe4f8ec7d1cc85ea4b8">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a18568595571f2fe4f8ec7d1cc85ea4b8">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a18568595571f2fe4f8ec7d1cc85ea4b8">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a18568595571f2fe4f8ec7d1cc85ea4b8">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a18568595571f2fe4f8ec7d1cc85ea4b8">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>
@@ -244,7 +265,7 @@
 <parametername>aScreen</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Screen to draw on </para>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -278,7 +299,7 @@
         </inbodydescription>
         <location file="src/evabElementBase.h" line="64" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>virtual void evab::ElementBase::hider</definition>
         <argsstring>()</argsstring>
@@ -286,10 +307,20 @@
         <qualifiedname>evab::ElementBase::hider</qualifiedname>
         <reimplementedby refid="classevab_1_1_composite_base_1a03ddf518a77efc13f3109bf41c43bb0d">hider</reimplementedby>
         <reimplementedby refid="classevab_1_1_input_animation_1a065bfe875ab4c8273d2ff0c30ddd6015">hider</reimplementedby>
-        <reimplementedby refid="classevab_1_1_layout_pane_1a902802c1ad7d5016d8f8ca6885655a1f">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_layout_base_1a579a86823144d46988f93b239b56c479">hider</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a9c64349ba298d36609ba46d65d6ceec2">hider</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a9c64349ba298d36609ba46d65d6ceec2">hider</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a9c64349ba298d36609ba46d65d6ceec2">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
+        <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
         <briefdescription>
 <para>Virtual method for hiding the element. </para>
         </briefdescription>
@@ -308,7 +339,7 @@
 <para>Provides the core functionality for rendering, state management, and key event handling for visual elements. </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="12">
+      <node id="21">
         <label>evab::CompositeBase</label>
         <link refid="classevab_1_1_composite_base"/>
         <childnode refid="1" relation="public-inheritance">
@@ -318,37 +349,43 @@
         <label>evab::ElementBase</label>
         <link refid="classevab_1_1_element_base"/>
       </node>
-      <node id="13">
+      <node id="22">
         <label>evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;</label>
         <link refid="classevab_1_1_input_animation"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="14">
+      <node id="23">
         <label>evab::InputButton</label>
         <link refid="classevab_1_1_input_button"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="15">
+      <node id="24">
+        <label>evab::InputButtonPicto</label>
+        <link refid="classevab_1_1_input_button_picto"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
         <label>evab::InputFloat</label>
         <link refid="classevab_1_1_input_float"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="16">
+      <node id="26">
         <label>evab::InputInt</label>
         <link refid="classevab_1_1_input_int"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="17">
-        <label>evab::InputPictogram&lt; TPictoset &gt;</label>
-        <link refid="classevab_1_1_input_pictogram"/>
+      <node id="27">
+        <label>evab::InputSelectorPicto&lt; TPictoset &gt;</label>
+        <link refid="classevab_1_1_input_selector_picto"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="18">
+      <node id="28">
         <label>evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="1" relation="public-inheritance">
@@ -378,7 +415,7 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="19">
+      <node id="29">
         <label>evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;</label>
         <link refid="classevab_1_1_input_text_stretch_bar"/>
         <childnode refid="1" relation="public-inheritance">
@@ -408,13 +445,13 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="20">
-        <label>evab::LayoutPane</label>
-        <link refid="classevab_1_1_layout_pane"/>
+      <node id="30">
+        <label>evab::LayoutBase</label>
+        <link refid="classevab_1_1_layout_base"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="21">
+      <node id="31">
         <label>evab::ListBox&lt; TWindowAlgorithm &gt;</label>
         <link refid="classevab_1_1_list_box"/>
         <childnode refid="1" relation="public-inheritance">
@@ -432,13 +469,73 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="32">
+        <label>evab::TextLabel&lt; T, TAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>evab::TextLabel&lt; char *, CenterAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>evab::TextLabel&lt; char *, LeftAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>evab::TextLabel&lt; char *, RightAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>evab::TextLabel&lt; const __FlashStringHelper *, CenterAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>evab::TextLabel&lt; const __FlashStringHelper *, LeftAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>evab::TextLabel&lt; const __FlashStringHelper *, RightAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>evab::TextLabel&lt; const char *, CenterAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>evab::TextLabel&lt; const char *, LeftAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>evab::TextLabel&lt; const char *, RightAlign &gt;</label>
+        <link refid="classevab_1_1_text_label"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
     <location file="src/evabElementBase.h" line="15" column="3" bodyfile="src/evabElementBase.h" bodystart="16" bodyend="75"/>
     <listofallmembers>
-      <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>Draw</name></member>
-      <member refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e" prot="private" virt="pure-virtual"><scope>evab::ElementBase</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" virt="pure-virtual"><scope>evab::ElementBase</scope><name>drawer</name></member>
       <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>Hide</name></member>
-      <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="private" virt="virtual"><scope>evab::ElementBase</scope><name>hider</name></member>
+      <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="protected" virt="virtual"><scope>evab::ElementBase</scope><name>hider</name></member>
       <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>IsHidden</name></member>
       <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::ElementBase</scope><name>Key</name></member>
       <member refid="classevab_1_1_element_base_1a0484daf10dc5a40d804b50f42f022aaa" prot="private" virt="non-virtual"><scope>evab::ElementBase</scope><name>mSerialized</name></member>

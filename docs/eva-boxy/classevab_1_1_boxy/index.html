@@ -460,6 +460,144 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -532,6 +670,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-getscreen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function GetScreen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-instance" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -554,21 +703,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-screen" class="md-nav__link">
+  <a href="#function-message" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function Screen
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-showint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function ShowInt
+        function Message
       
     </span>
   </a>
@@ -621,6 +759,10 @@
 <td style="text-align: left;"><a href="#function-begin"><strong>Begin</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aGround, Args &amp;&amp;... args) <br><em>Initializes the</em> <a href="./"><em><strong>Boxy</strong></em></a> <em>system with a screen and ground element.</em></td>
 </tr>
 <tr>
+<td style="text-align: right;"><a href="../classevab_1_1_screen/"><strong>Screen</strong></a> *</td>
+<td style="text-align: left;"><a href="#function-getscreen"><strong>GetScreen</strong></a> () <br><em>Gets the current screen pointer.</em></td>
+</tr>
+<tr>
 <td style="text-align: right;"><a href="./"><strong>Boxy</strong></a> *</td>
 <td style="text-align: left;"><a href="#function-instance"><strong>Instance</strong></a> () <br><em>Gets the singleton instance.</em></td>
 </tr>
@@ -629,12 +771,8 @@
 <td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Forwards key events to the ground element.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;"><a href="../classevab_1_1_i_screen/"><strong>Screen</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-screen"><strong>Screen</strong></a> () <br><em>Gets the current screen pointer.</em></td>
-</tr>
-<tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-showint"><strong>ShowInt</strong></a> (const char * aName, int aValue) <br><em>Displays a temporary modal with a named integer value.</em></td>
+<td style="text-align: left;"><a href="#function-message"><strong>Message</strong></a> (const __FlashStringHelper *, const char * aText) <br><em>Displays a temporary modal with a named integer value.</em></td>
 </tr>
 </tbody>
 </table>
@@ -652,7 +790,7 @@
 
 <p><strong>Template parameters:</strong></p>
 <ul>
-<li><code>TScreen</code> Screen type to use </li>
+<li><code>TScreen</code> <a href="../classevab_1_1_screen/"><strong>Screen</strong></a> type to use </li>
 <li><code>TFont</code> Font type to use </li>
 <li><code>Args</code> Additional arguments for screen constructor </li>
 </ul>
@@ -661,6 +799,15 @@
 <li><code>aGround</code> Base element to display </li>
 <li><code>args</code> Arguments forwarded to screen constructor </li>
 </ul>
+<hr>
+
+<h3 id="function-getscreen">function GetScreen<a class="headerlink" href="#function-getscreen" title="Permanent link">&para;</a></h3>
+<p><em>Gets the current screen pointer.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">GetScreen</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+
+<p><strong>Returns:</strong></p>
+<p>Pointer to current screen, or nullptr if modal is active </p>
 <hr>
 
 <h3 id="function-instance">function Instance<a class="headerlink" href="#function-instance" title="Permanent link">&para;</a></h3>
@@ -685,20 +832,11 @@
 </ul>
 <hr>
 
-<h3 id="function-screen">function Screen<a class="headerlink" href="#function-screen" title="Permanent link">&para;</a></h3>
-<p><em>Gets the current screen pointer.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Screen</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div>
-
-<p><strong>Returns:</strong></p>
-<p>Pointer to current screen, or nullptr if modal is active </p>
-<hr>
-
-<h3 id="function-showint">function ShowInt<a class="headerlink" href="#function-showint" title="Permanent link">&para;</a></h3>
+<h3 id="function-message">function Message<a class="headerlink" href="#function-message" title="Permanent link">&para;</a></h3>
 <p><em>Displays a temporary modal with a named integer value.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">ShowInt</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aName</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">aValue</span>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Boxy</span><span class="o">::</span><span class="n">Message</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 

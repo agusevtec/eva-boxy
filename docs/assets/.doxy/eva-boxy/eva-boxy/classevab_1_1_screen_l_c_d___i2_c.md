@@ -14,27 +14,7 @@ _I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._ [More...](#detailed
 
 
 
-Inherits the following classes: [evab::ScreenBase](classevab_1_1_screen_base.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Inherits the following classes: [evab::Screen](classevab_1_1_screen.md)
 
 
 
@@ -94,46 +74,29 @@ Inherits the following classes: [evab::ScreenBase](classevab_1_1_screen_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**Deserialize**](#function-deserialize) (unsigned short aSerialized, [**Coor**](structevab_1_1_coor.md) & aPos, [**Coor**](structevab_1_1_coor.md) & aSize, bool & isFocused) <br>_Deserializes element state for 32x4 screen._  |
+| virtual void | [**DrawSymbol**](#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aCharcode, unsigned char aColor) override<br>_Draws a symbol at the specified position._  |
 |   | [**ScreenLCD\_I2C**](#function-screenlcd_i2c) (uint8\_t aAddress, uint8\_t aCols, uint8\_t aRows, uint8\_t aBacklightPin) <br>_Constructor for I2C LCD screen driver._  |
 | virtual unsigned short | [**Serialize**](#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPos, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) <br>_Serializes element state for 32x4 screen._  |
 |  void | [**SetBacklight**](#function-setbacklight) (uint8\_t aState) <br>_Sets backlight state._  |
 | virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](#function-size) () override<br>_Gets the screen size._  |
 
 
-## Public Functions inherited from evab::ScreenBase
-
-See [evab::ScreenBase](classevab_1_1_screen_base.md)
-
-| Type | Name |
-| ---: | :--- |
-| virtual void | [**Clear**](classevab_1_1_screen_base.md#function-clear) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aColor) override<br>_Clears a rectangular area._  |
-| virtual void | [**Picto**](classevab_1_1_screen_base.md#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogram, unsigned char aColor) <br>_Draws a pictogram (default implementation)._  |
-| virtual void | [**TextCenter**](classevab_1_1_screen_base.md#function-TextCenter-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) override<br>_Draws text aligned center (C-string)._  |
-| virtual void | [**TextCenter**](classevab_1_1_screen_base.md#function-TextCenter-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) override<br>_Draws text aligned center (Flash string)._  |
-| virtual void | [**TextLeft**](classevab_1_1_screen_base.md#function-TextLeft-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) override<br>_Draws text aligned left (C-string)._  |
-| virtual void | [**TextLeft**](classevab_1_1_screen_base.md#function-TextLeft-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) override<br>_Draws text aligned left (Flash string)._  |
-| virtual void | [**TextRight**](classevab_1_1_screen_base.md#function-TextRight-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) override<br>_Draws text aligned right (C-string)._  |
-| virtual void | [**TextRight**](classevab_1_1_screen_base.md#function-TextRight-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) override<br>_Draws text aligned right (Flash string)._  |
-
-
 ## Public Functions inherited from evab::Screen
 
-See [evab::Screen](classevab_1_1_i_screen.md)
+See [evab::Screen](classevab_1_1_screen.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**Clear**](classevab_1_1_i_screen.md#function-clear) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aColor=0) = 0<br>_Clears a rectangular area on screen._  |
-| virtual void | [**Deserialize**](classevab_1_1_i_screen.md#function-deserialize) (unsigned short aSerialized, [**Coor**](structevab_1_1_coor.md) & aPos, [**Coor**](structevab_1_1_coor.md) & aSize, bool & isFocused) = 0<br>_Deserializes element state from 16-bit value._  |
-| virtual void | [**DrawSymbol**](classevab_1_1_i_screen.md#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aSymbol, unsigned char aColor) = 0<br>_Draws a single character symbol._  |
-| virtual void | [**Picto**](classevab_1_1_i_screen.md#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogram, unsigned char aColor) = 0<br>_Draws a pictogram at the specified position._  |
-| virtual unsigned short | [**Serialize**](classevab_1_1_i_screen.md#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPos, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) = 0<br>_Serializes element state into 16-bit value._  |
-| virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](classevab_1_1_i_screen.md#function-size) () = 0<br>_Gets the screen size in tiles._  |
-| virtual void | [**TextCenter**](classevab_1_1_i_screen.md#function-TextCenter-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the center._  |
-| virtual void | [**TextCenter**](classevab_1_1_i_screen.md#function-TextCenter-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the center._  |
-| virtual void | [**TextLeft**](classevab_1_1_i_screen.md#function-TextLeft-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the left._  |
-| virtual void | [**TextLeft**](classevab_1_1_i_screen.md#function-TextLeft-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the left._  |
-| virtual void | [**TextRight**](classevab_1_1_i_screen.md#function-TextRight-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the right._  |
-| virtual void | [**TextRight**](classevab_1_1_i_screen.md#function-TextRight-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the right._  |
+| virtual void | [**Clear**](classevab_1_1_screen.md#function-clear) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aColor=0) <br> |
+| virtual void | [**Deserialize**](classevab_1_1_screen.md#function-deserialize) (unsigned short aSerialized, [**Coor**](structevab_1_1_coor.md) & aPosition, [**Coor**](structevab_1_1_coor.md) & aSize, bool & isFocused) = 0<br> |
+| virtual void | [**DrawSymbol**](classevab_1_1_screen.md#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aSymbol, unsigned char aColor=0) = 0<br> |
+| virtual void | [**Picto**](classevab_1_1_screen.md#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogram, unsigned char aColor=0) <br> |
+| virtual unsigned short | [**Serialize**](classevab_1_1_screen.md#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPosition, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) = 0<br> |
+| virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](classevab_1_1_screen.md#function-size) () = 0<br> |
+|  void | [**Text**](classevab_1_1_screen.md#function-text) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, TText aText, unsigned char aColor=0) <br>_Draws text with specified alignment strategy._  |
+|  void | [**TextCenter**](classevab_1_1_screen.md#function-textcenter) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, T aText, unsigned char aColor=0) <br> |
+|  void | [**TextLeft**](classevab_1_1_screen.md#function-textleft) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, T aText, unsigned char aColor=0) <br> |
+|  void | [**TextRight**](classevab_1_1_screen.md#function-textright) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, T aText, unsigned char aColor=0) <br> |
 
 
 
@@ -178,44 +141,6 @@ See [evab::Screen](classevab_1_1_i_screen.md)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Protected Functions
-
-| Type | Name |
-| ---: | :--- |
-| virtual void | [**DrawSymbol**](#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aCharcode, unsigned char aColor) override<br>_Draws a symbol at the specified position._  |
-
-
-## Protected Functions inherited from evab::ScreenBase
-
-See [evab::ScreenBase](classevab_1_1_screen_base.md)
-
-| Type | Name |
-| ---: | :--- |
-| virtual void | [**ClearTile**](classevab_1_1_screen_base.md#function-cleartile) ([**Coor**](structevab_1_1_coor.md) position, unsigned char aColor) <br>_Clears a single tile._  |
 
 
 
@@ -266,7 +191,42 @@ virtual void evab::ScreenLCD_I2C::Deserialize (
 
 
         
-Implements [*evab::Screen::Deserialize*](classevab_1_1_i_screen.md#function-deserialize)
+Implements [*evab::Screen::Deserialize*](classevab_1_1_screen.md#function-deserialize)
+
+
+<hr>
+
+
+
+### function DrawSymbol 
+
+_Draws a symbol at the specified position._ 
+```C++
+virtual void evab::ScreenLCD_I2C::DrawSymbol (
+    Coor aPosition,
+    Coor aSize,
+    char aCharcode,
+    unsigned char aColor
+) override
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aPosition` Position on screen 
+* `aSize` Size of the symbol 
+* `aCharcode` Character code 
+* `aColor` Color/inversion flag 
+
+
+
+
+        
+Implements [*evab::Screen::DrawSymbol*](classevab_1_1_screen.md#function-drawsymbol)
 
 
 <hr>
@@ -339,7 +299,7 @@ unsigned short Serialized state
 
 
         
-Implements [*evab::Screen::Serialize*](classevab_1_1_i_screen.md#function-serialize)
+Implements [*evab::Screen::Serialize*](classevab_1_1_screen.md#function-serialize)
 
 
 <hr>
@@ -386,51 +346,14 @@ inline virtual Coor evab::ScreenLCD_I2C::Size () override
 
 **Returns:**
 
-[**Coor**](structevab_1_1_coor.md) Screen dimensions (cols, rows) 
+[**Coor**](structevab_1_1_coor.md) [**Screen**](classevab_1_1_screen.md) dimensions (cols, rows) 
 
 
 
 
 
         
-Implements [*evab::Screen::Size*](classevab_1_1_i_screen.md#function-size)
-
-
-<hr>
-## Protected Functions Documentation
-
-
-
-
-### function DrawSymbol 
-
-_Draws a symbol at the specified position._ 
-```C++
-virtual void evab::ScreenLCD_I2C::DrawSymbol (
-    Coor aPosition,
-    Coor aSize,
-    char aCharcode,
-    unsigned char aColor
-) override
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `aPosition` Position on screen 
-* `aSize` Size of the symbol 
-* `aCharcode` Character code 
-* `aColor` Color/inversion flag 
-
-
-
-
-        
-Implements [*evab::Screen::DrawSymbol*](classevab_1_1_i_screen.md#function-drawsymbol)
+Implements [*evab::Screen::Size*](classevab_1_1_screen.md#function-size)
 
 
 <hr>

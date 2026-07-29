@@ -12,26 +12,20 @@
         <label>evabCoor.h</label>
         <link refid="evab_coor_8h_source"/>
       </node>
-      <node id="7">
+      <node id="8">
         <label>evabIFont.h</label>
         <link refid="evab_i_font_8h_source"/>
       </node>
-      <node id="6">
-        <label>evabScreen.h</label>
-        <link refid="evab_i_screen_8h_source"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-      </node>
       <node id="4">
-        <label>evabScreenBase.h</label>
-        <link refid="evab_screen_base_8h_source"/>
+        <label>evabScreen.h</label>
+        <link refid="evab_screen_8h_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -41,7 +35,7 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -49,7 +43,21 @@
         <link refid="evab_screen_serial_pixel_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>evabTextAlign.h</label>
+        <link refid="evab_text_align_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>evabTextTraits.h</label>
+        <link refid="evab_text_traits_8h_source"/>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -67,14 +75,14 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="13" refid="classevab_1_1_screen_serial_pixel" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_screen_serial_pixel_1ad5360f75704adbc00ea7f0c1c08bd412" kindref="member">ScreenSerialPixel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_page8_base_1aaf41c535c3c37a3c908803e7138bc326" kindref="member">ScreenPage8Base</ref></highlight></codeline>
+<codeline lineno="13" refid="classevab_1_1_screen_serial_pixel" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_screen_serial_pixel_1ad5360f75704adbc00ea7f0c1c08bd412" kindref="member">ScreenSerialPixel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_page8_base_1a769fc315283a7fd62db3ee4a38e5dfb2" kindref="member">ScreenPage8Base</ref></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="21" refid="classevab_1_1_screen_serial_pixel_1ad5360f75704adbc00ea7f0c1c08bd412" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_screen_serial_pixel_1ad5360f75704adbc00ea7f0c1c08bd412" kindref="member">ScreenSerialPixel</ref>(<ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref><sp/>*aFont);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26" refid="classevab_1_1_screen_serial_pixel_1a24c0580bbdfe35298b7d5d06d8b39d19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_serial_pixel_1a24c0580bbdfe35298b7d5d06d8b39d19" kindref="member">clear</ref>();</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="31" refid="classevab_1_1_screen_serial_pixel_1a8832c9b07bf54593b667ca711512c3b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_serial_pixel_1a8832c9b07bf54593b667ca711512c3b8" kindref="member">printToSerial</ref>();</highlight></codeline>
+<codeline lineno="31" refid="classevab_1_1_screen_serial_pixel_1a284b90ffc249679ab086deba97a39484" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_serial_pixel_1a284b90ffc249679ab086deba97a39484" kindref="member">PrintToSerial</ref>();</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38" refid="classevab_1_1_screen_serial_pixel_1a9b53f05004a3fd1b3b608967588ff168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/><ref refid="classevab_1_1_screen_serial_pixel_1a9b53f05004a3fd1b3b608967588ff168" kindref="member">Size</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -82,8 +90,8 @@
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="58" refid="classevab_1_1_screen_serial_pixel_1a204afb81d0ade103dd72b316bef83100" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_serial_pixel_1a204afb81d0ade103dd72b316bef83100" kindref="member">Deserialize</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>aSerialized,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;isFocused);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="68" refid="classevab_1_1_screen_serial_pixel_1a3807390c9eb53f3077d3ef87f447d10e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_serial_pixel_1a3807390c9eb53f3077d3ef87f447d10e" kindref="member">DrawVerticalSlice</ref>(<ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPosition,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSliceColumn,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSlice)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawVerticalSlice(<ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPosition,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSliceColumn,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSlice)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>mBuffer[1024];<sp/></highlight><highlight class="comment">//<sp/>8<sp/>pages<sp/>*<sp/>128<sp/>bytes<sp/>=<sp/>1024<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>

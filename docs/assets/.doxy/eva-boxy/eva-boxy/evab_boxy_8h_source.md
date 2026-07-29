@@ -10,12 +10,12 @@
 ```C++
 #pragma once
 
-#include <evabElementBase.h>
-#include <evabScreen.h>
 #include <evaHandler.h>
 #include <evaDelayTimer.h>
-#include <evabKeys.h>
 
+#include <evabElementBase.h>
+#include <evabScreen.h>
+#include <evabKeys.h>
 
 namespace evab
 {
@@ -36,11 +36,11 @@ namespace evab
 
         static void Key(Keys aKey);
 
-        static Screen *Screen();
+        static Screen *GetScreen();
 
         static Boxy *Instance();
 
-        static void ShowInt(const char *aName, int aValue);
+        static void Message(const __FlashStringHelper*, const char *aText);
 
     private:
         void invoke(void *, eva::CallbackInfo) override;
@@ -48,7 +48,7 @@ namespace evab
     private:
         Screen *mScreen;                          
         ElementBase *mGround;                      
-        eva::DelayTimer mModalShowTimer = {this};  
+        eva::DelayTimer mMessageTimer = {this};  
     };
 }
 ```

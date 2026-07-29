@@ -82,7 +82,7 @@ void ScreenSSD1306::clearDisplay()
   }
 }
 
-void ScreenSSD1306::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+void ScreenSSD1306::drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
 {
   uint8_t x = aPosition.X * 8 + aSliceColumn;
   uint8_t page = aPosition.Y;

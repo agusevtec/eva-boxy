@@ -40,7 +40,7 @@
 | class | [**PictosetOnOff**](classevab_1_1_pictoset_on_off.md) <br>_On/Off pictogram set (2 states)._  |
 | class | [**PictosetProgress**](classevab_1_1_pictoset_progress.md) <br>_Progress pictogram set (9 states)._  |
 | class | [**PictosetRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md) <br>_Rainbowmeter pictogram set (7 states)._  |
-| class | [**PictosetRoundmeter**](classevab_1_1_pictoset_roundmeter.md) <br>_Roundmeter pictogram set (9 states)._  |
+| class | [**PictosetRoundmeter**](classevab_1_1_pictoset_roundmeter.md) <br> |
 | class | [**PictosetSignal**](classevab_1_1_pictoset_signal.md) <br>_Signal pictogram set (4 states)._  |
 | class | [**PictosetSpeaker**](classevab_1_1_pictoset_speaker.md) <br>_Speaker pictogram set (4 states)._  |
 

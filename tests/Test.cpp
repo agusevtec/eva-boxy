@@ -39,6 +39,6 @@ test(delayTimer_triggers_once)
     //     pb.Draw(&screen, {0, i}, {1, 2}, 0);
     // }
 
-    screen.printToSerial();
+    screen.PrintToSerial();
     assertEqual(1, 1);
 }

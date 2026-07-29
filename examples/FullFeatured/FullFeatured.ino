@@ -42,18 +42,18 @@ private:
     TextLabelCenterF labelOption(IsFocused(&mMonitorButton) ? F("DASHBOARD") : F("SETTINGS"));
 
     Grid grid(aPos, aSize);
-    grid.NextRow(1).Draw(aScreen, &labelTitle);
-    grid.NextRow(1).Blank(aScreen);
+    grid.SliceRow(1).Draw(aScreen, &labelTitle);
+    grid.SliceRow(1).Blank(aScreen);
 
-    Grid row = grid.NextRow(4);
-    row.NextCol(2).Blank(aScreen);
-    row.NextCol(4).Draw(aScreen, &mMonitorButton, IsFocused(&mMonitorButton));
-    row.NextCol(4).Blank(aScreen);
-    row.NextCol(4).Draw(aScreen, &mSettingsButton, IsFocused(&mSettingsButton));
+    Grid row = grid.SliceRow(4);
+    row.SliceCol(2).Blank(aScreen);
+    row.SliceCol(4).Draw(aScreen, &mMonitorButton, IsFocused(&mMonitorButton));
+    row.SliceCol(4).Blank(aScreen);
+    row.SliceCol(4).Draw(aScreen, &mSettingsButton, IsFocused(&mSettingsButton));
     row.Rest().Blank(aScreen);
 
-    grid.NextRow(1).Blank(aScreen);
-    grid.NextRow(1).Draw(aScreen, &labelOption);
+    grid.SliceRow(1).Blank(aScreen);
+    grid.SliceRow(1).Draw(aScreen, &labelOption);
   }
 };
 
@@ -73,18 +73,18 @@ private:
     LabeledLeftF<InputInt> humField(F("HUMIDITY"), 41);
 
     Grid grid (aPos, aSize);
-    //mesh.NextRow(1).Blank(aScreen);
+    //mesh.SliceRow(1).Blank(aScreen);
 
-    Grid row = grid.NextRow(3);
-    aScreen->Picto(row.NextCol(3).GetPos(), GalleryRemixicon24::PICTO_F1F2, 0);
-    row.NextCol(1).Blank(aScreen);
+    Grid row = grid.SliceRow(3);
+    aScreen->Picto(row.SliceCol(3).GetPos(), GalleryRemixicon24::PICTO_F1F2, 0);
+    row.SliceCol(1).Blank(aScreen);
     row.Rest().Draw(aScreen, &tempField);
 
-    grid.NextRow(2).Blank(aScreen);
+    grid.SliceRow(2).Blank(aScreen);
 
-    row = grid.NextRow(3);
-    aScreen->Picto(row.NextCol(3).GetPos(), GalleryRemixicon24::PICTO_EBD8, 0);
-    row.NextCol(1).Blank(aScreen);
+    row = grid.SliceRow(3);
+    aScreen->Picto(row.SliceCol(3).GetPos(), GalleryRemixicon24::PICTO_EBD8, 0);
+    row.SliceCol(1).Blank(aScreen);
     row.Rest().Draw(aScreen, &humField);
   
     grid.Rest().Blank(aScreen);

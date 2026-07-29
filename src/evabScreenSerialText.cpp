@@ -5,16 +5,16 @@ using namespace evab;
 
 ScreenSerialText::ScreenSerialText()
 {
-    clear();
+    Clear();
 }
 
-void ScreenSerialText::clear()
+void ScreenSerialText::Clear()
 {
     for (unsigned char i = 0; i < 128; i++)
         mBuffer[i] = '.';
 }
 
-void ScreenSerialText::printToSerial()
+void ScreenSerialText::PrintToSerial()
 {
     for (unsigned char y = 0; y < 8; y++)
     {

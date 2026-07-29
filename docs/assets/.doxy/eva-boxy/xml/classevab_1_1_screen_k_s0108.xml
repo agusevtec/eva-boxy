@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="149" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="149" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="148" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="148" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1a8dcc4b0867290d032975c4a735eabedf" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="150" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="150" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="149" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="149" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1ab87dccb493415c5136b6c7be70b01c31" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="151" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="151" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="150" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="150" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1a96b228087ec2a5819c3afa946e67a200" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="152" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="152" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="151" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="151" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1ac2a3472a4b4f0a96301b4398a265026a" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="153" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="153" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="152" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="152" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1aa4fb0b79fae727041418636822a028ee" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="154" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="154" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="153" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="153" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1a1a6096fc14e7d9e9bb07c090da0dee02" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="155" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="155" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="154" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="154" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_screen_k_s0108_1af30ebcd42e890bfa71af5b1399747f70" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="156" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="156" bodyend="-1"/>
+        <location file="src/evabScreenKS0108.h" line="155" column="17" bodyfile="src/evabScreenKS0108.h" bodystart="155" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -333,12 +333,12 @@
         <argsstring>() override</argsstring>
         <name>Size</name>
         <qualifiedname>evab::ScreenKS0108::Size</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
+        <reimplements refid="classevab_1_1_screen_1a769dc42b12f8eaa3bb605bf17cdb040f">Size</reimplements>
         <briefdescription>
 <para>Gets the screen size in tiles. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Screen dimensions (16x8 tiles) </para>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> <ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> dimensions (16x8 tiles) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -352,7 +352,7 @@
         <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
         <name>Serialize</name>
         <qualifiedname>evab::ScreenKS0108::Serialize</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352">Serialize</reimplements>
+        <reimplements refid="classevab_1_1_screen_1a34321b9419ca20ab846670f0e3dad7ab">Serialize</reimplements>
         <param>
           <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
           <declname>aPos</declname>
@@ -408,7 +408,7 @@
         <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
         <name>Deserialize</name>
         <qualifiedname>evab::ScreenKS0108::Deserialize</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008">Deserialize</reimplements>
+        <reimplements refid="classevab_1_1_screen_1a79b60a47dd4115bd1470d42798811726">Deserialize</reimplements>
         <param>
           <type>unsigned short</type>
           <declname>aSerialized</declname>
@@ -469,14 +469,14 @@
         <location file="src/evabScreenKS0108.h" line="74" column="14"/>
       </memberdef>
     </sectiondef>
-    <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1aa50cc147a07f93fd6c0b3edd33134aa6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a55f6c68e3dbadd1ffde32ef0ef859d3c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void evab::ScreenKS0108::DrawVerticalSlice</definition>
+        <definition>void evab::ScreenKS0108::drawVerticalSlice</definition>
         <argsstring>(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override</argsstring>
-        <name>DrawVerticalSlice</name>
-        <qualifiedname>evab::ScreenKS0108::DrawVerticalSlice</qualifiedname>
-        <reimplements refid="classevab_1_1_screen_page8_base_1a2291c5edbcd8a7e0a694595a1fcd7454">DrawVerticalSlice</reimplements>
+        <name>drawVerticalSlice</name>
+        <qualifiedname>evab::ScreenKS0108::drawVerticalSlice</qualifiedname>
+        <reimplements refid="classevab_1_1_screen_page8_base_1a70351a018f4af4d046c312c18accfac7">drawVerticalSlice</reimplements>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
@@ -524,13 +524,13 @@
         </inbodydescription>
         <location file="src/evabScreenKS0108.h" line="84" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a18e1970f2e83f64251c2aa3fd0443b7d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a5ddae703ff57a9c176c7e9176e896e33" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
-        <definition>void evab::ScreenKS0108::ClearTile</definition>
+        <definition>void evab::ScreenKS0108::clearTile</definition>
         <argsstring>(Coor aPosition, unsigned char aColor) override</argsstring>
-        <name>ClearTile</name>
-        <qualifiedname>evab::ScreenKS0108::ClearTile</qualifiedname>
-        <reimplements refid="classevab_1_1_screen_base_1adcecf3475b92507656c85c7e97af5717">ClearTile</reimplements>
+        <name>clearTile</name>
+        <qualifiedname>evab::ScreenKS0108::clearTile</qualifiedname>
+        <reimplements refid="classevab_1_1_screen_1a5d8592a14ffba36493effb2045d47bc5">clearTile</reimplements>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
@@ -566,8 +566,6 @@
         </inbodydescription>
         <location file="src/evabScreenKS0108.h" line="92" column="14"/>
       </memberdef>
-    </sectiondef>
-    <sectiondef kind="private-func">
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a05e23f666e5894455e14734317332480" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::ScreenKS0108::sendCommand</definition>
@@ -607,7 +605,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="101" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="100" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a15b9f6cf7e8f6b8c555fa922a0e32a80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -648,7 +646,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="109" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="108" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a279c3bcab5839669639f8e557ec44926" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -677,7 +675,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="116" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="115" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a23cb3a95a6fe351ce9e8a4dfe9afdf55" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -706,7 +704,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="123" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="122" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1af1ff6f196ee38f0886799740c94d5476" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -735,7 +733,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="130" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="129" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a0787687c76c804ea6caf3f8c73758041" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -750,7 +748,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="135" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="134" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a6ed04598b6ef6580f3d6160585f46174" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -779,7 +777,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="142" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="141" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_k_s0108_1a9a9e47aa964596a3ca43e21d0ebd9166" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -794,7 +792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenKS0108.h" line="147" column="14"/>
+        <location file="src/evabScreenKS0108.h" line="146" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -804,15 +802,9 @@
 <para>Supports 128x64 pixel displays with two KS0108 chips. </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4">
-        <label>evab::Screen</label>
-        <link refid="classevab_1_1_i_screen"/>
-      </node>
       <node id="3">
-        <label>evab::ScreenBase</label>
-        <link refid="classevab_1_1_screen_base"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
+        <label>evab::Screen</label>
+        <link refid="classevab_1_1_screen"/>
       </node>
       <node id="1">
         <label>evab::ScreenKS0108</label>
@@ -828,15 +820,9 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4">
-        <label>evab::Screen</label>
-        <link refid="classevab_1_1_i_screen"/>
-      </node>
       <node id="3">
-        <label>evab::ScreenBase</label>
-        <link refid="classevab_1_1_screen_base"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
+        <label>evab::Screen</label>
+        <link refid="classevab_1_1_screen"/>
       </node>
       <node id="1">
         <label>evab::ScreenKS0108</label>
@@ -851,14 +837,14 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenKS0108.h" line="14" column="5" bodyfile="src/evabScreenKS0108.h" bodystart="15" bodyend="157"/>
+    <location file="src/evabScreenKS0108.h" line="14" column="5" bodyfile="src/evabScreenKS0108.h" bodystart="15" bodyend="156"/>
     <listofallmembers>
-      <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_screen_1a6700eb9fa6e99cc9c6590d8f67d4f057" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Clear</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a2ecad38d92bae38f94f7d6afd90529e0" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>clearDisplay</name></member>
-      <member refid="classevab_1_1_screen_k_s0108_1a18e1970f2e83f64251c2aa3fd0443b7d" prot="protected" virt="virtual"><scope>evab::ScreenKS0108</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_screen_k_s0108_1a5ddae703ff57a9c176c7e9176e896e33" prot="private" virt="virtual"><scope>evab::ScreenKS0108</scope><name>clearTile</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1afc3b7c6858d7ca964b60527cd8410126" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>DrawSymbol</name></member>
-      <member refid="classevab_1_1_screen_k_s0108_1aa50cc147a07f93fd6c0b3edd33134aa6" prot="protected" virt="virtual"><scope>evab::ScreenKS0108</scope><name>DrawVerticalSlice</name></member>
+      <member refid="classevab_1_1_screen_k_s0108_1a55f6c68e3dbadd1ffde32ef0ef859d3c" prot="private" virt="virtual"><scope>evab::ScreenKS0108</scope><name>drawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a0787687c76c804ea6caf3f8c73758041" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>initDisplay</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a96b228087ec2a5819c3afa946e67a200" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>mCS1Pin</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1ac2a3472a4b4f0a96301b4398a265026a" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>mCS2Pin</name></member>
@@ -868,10 +854,10 @@
       <member refid="classevab_1_1_screen_k_s0108_1a1a6096fc14e7d9e9bb07c090da0dee02" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>mLEDPin</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a8b966bbebffa75f0b900d93b70b73413" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>mRSPin</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a8dcc4b0867290d032975c4a735eabedf" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>mRWPin</name></member>
-      <member refid="classevab_1_1_screen_page8_base_1aa5e0f45e049c5539df59ba5f97ef8446" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_screen_page8_base_1a836a340d23a631a4661f5a6165103037" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Picto</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a9a9e47aa964596a3ca43e21d0ebd9166" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>pulseE</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a232242e94eed92469ee6f57902b2972d" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>ScreenKS0108</name></member>
-      <member refid="classevab_1_1_screen_page8_base_1aaf41c535c3c37a3c908803e7138bc326" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>ScreenPage8Base</name></member>
+      <member refid="classevab_1_1_screen_page8_base_1a769fc315283a7fd62db3ee4a38e5dfb2" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>ScreenPage8Base</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a05e23f666e5894455e14734317332480" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>sendCommand</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a15b9f6cf7e8f6b8c555fa922a0e32a80" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>sendData</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a37b85da65c7574bc077bf368412f4f79" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Serialize</name></member>
@@ -880,12 +866,10 @@
       <member refid="classevab_1_1_screen_k_s0108_1af1ff6f196ee38f0886799740c94d5476" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>setColumn</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a23cb3a95a6fe351ce9e8a4dfe9afdf55" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>setPage</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1ae73709eb2823cda32272011a2f08b8ea" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>Size</name></member>
-      <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_screen_base_1af34945fb5a3fa9452f61f9f59b11f35f" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_screen_base_1a57d68fbe93780fa7e2618f06ba13c80a" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_screen_base_1a3d5abf436b82c2c0498765dac9fa157b" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>TextRight</name></member>
-      <member refid="classevab_1_1_screen_base_1abd7f2ce82a9ecc72decf3aa01d1be544" prot="public" virt="virtual"><scope>evab::ScreenKS0108</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_screen_1a474f9a72cd8f60bdb5d13c717eb8741c" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>Text</name></member>
+      <member refid="classevab_1_1_screen_1acab6e3c9cf01250a6ce61ab7e2732898" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_screen_1a5b07acac62ca5bb43a529e9512b4b0f9" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_screen_1a9dcf79b61f33f64bbb98f3a53448769a" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>TextRight</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a6ed04598b6ef6580f3d6160585f46174" prot="private" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>writeByte</name></member>
       <member refid="classevab_1_1_screen_k_s0108_1a883c97db6211549b7526aae2238a2633" prot="public" virt="non-virtual"><scope>evab::ScreenKS0108</scope><name>~ScreenKS0108</name></member>
     </listofallmembers>

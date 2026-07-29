@@ -460,6 +460,144 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -512,8 +650,8 @@
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">ListBox</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ElementBase</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">TWindowAlgorithm</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">**</span><span class="n">mItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span><span class="w">  </span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">mItemHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">    </span>
+<span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">**</span><span class="n">mItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">mItemHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span>
 
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="n">ListBox</span><span class="o">&lt;</span><span class="n">TWindowAlgorithm</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SetItems</span><span class="p">(</span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">aItems</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">aCount</span><span class="p">)</span>
@@ -553,14 +691,18 @@
 
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">Key</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span><span class="p">)</span><span class="w"> </span><span class="k">override</span>
 <span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mItems</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
 <span class="w">      </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">selected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TWindowAlgorithm</span><span class="o">::</span><span class="n">Selected</span><span class="p">();</span>
 <span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">selected</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mItems</span><span class="p">[</span><span class="n">selected</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">Key</span><span class="p">(</span><span class="n">aKey</span><span class="p">))</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">      </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mItems</span><span class="p">[</span><span class="n">selected</span><span class="p">];</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">item</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">item</span><span class="o">-&gt;</span><span class="n">Key</span><span class="p">(</span><span class="n">aKey</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">  </span><span class="k">protected</span><span class="o">:</span>
@@ -590,8 +732,8 @@
 <span class="w">  </span><span class="p">};</span>
 
 <span class="w">  </span><span class="c1">// Convenience typedefs for common list box types</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">ScrollListbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ListBox</span><span class="o">&lt;</span><span class="n">ScrollWindowAlgorithm</span><span class="o">&gt;</span><span class="p">;</span><span class="w">  </span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">FlipListbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ListBox</span><span class="o">&lt;</span><span class="n">FlipWindowAlgorithm</span><span class="o">&gt;</span><span class="p">;</span><span class="w">      </span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">ScrollListbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ListBox</span><span class="o">&lt;</span><span class="n">ScrollWindowAlgorithm</span><span class="o">&gt;</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">FlipListbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ListBox</span><span class="o">&lt;</span><span class="n">FlipWindowAlgorithm</span><span class="o">&gt;</span><span class="p">;</span><span class="w">     </span>
 <span class="p">}</span>
 </code></pre></div>
 

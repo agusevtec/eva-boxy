@@ -11,13 +11,13 @@ namespace evab
      * @brief Layout manager for grid-based UI arrangement
      * 
      * Grid provides a fluent interface for organizing UI elements in a grid.
-     * Each NextRow()/NextCol() returns a new Grid representing the cell.
+     * Each SliceRow()/SliceCol() returns a new Grid representing the cell.
      * 
      * @code
      * Grid mesh({0,0}, {16,8});
-     * mesh.NextRow(2).Draw(screen, element1);
-     * mesh.NextRow(2).NextCol(2).Draw(screen, element2);
-     * mesh.NextRow(2).NextCol(2).Clean(screen);
+     * mesh.SliceRow(2).Draw(screen, element1);
+     * mesh.SliceRow(2).SliceCol(2).Draw(screen, element2);
+     * mesh.SliceRow(2).SliceCol(2).Clean(screen);
      * mesh.Rest().Clean(screen);
      * @endcode
      */
@@ -38,7 +38,7 @@ namespace evab
          * @param aHeight Height of the row (0 = use remaining height)
          * @return Grid New mesh representing the row
          */
-        Grid NextRow(unsigned char aHeight = 0);
+        Grid SliceRow(unsigned char aHeight = 0);
 
         /**
          * @brief Creates a new Grid for the next column
@@ -46,7 +46,7 @@ namespace evab
          * @param aWidth Width of the column (0 = use remaining width)
          * @return Grid New mesh representing the column
          */
-        Grid NextCol(unsigned char aWidth = 0);
+        Grid SliceCol(unsigned char aWidth = 0);
 
         /**
          * @brief Returns the remaining space from current position

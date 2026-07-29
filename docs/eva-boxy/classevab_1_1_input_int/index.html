@@ -460,6 +460,144 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hierarchy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -513,6 +651,17 @@
     <span class="md-ellipsis">
       
         Protected Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protected-functions-inherited-from-evabelementbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protected Functions inherited from evab::ElementBase
       
     </span>
   </a>
@@ -685,7 +834,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) <br><em>Draws the element on the specified screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -716,7 +865,27 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_i_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Draws the integer value centered on screen.</em></td>
+<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Draws the integer value centered on screen.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="protected-functions-inherited-from-evabelementbase">Protected Functions inherited from evab::ElementBase<a class="headerlink" href="#protected-functions-inherited-from-evabelementbase" title="Permanent link">&para;</a></h2>
+<p>See <a href="../classevab_1_1_element_base/">evab::ElementBase</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) = 0<br><em>Pure virtual method for drawing the element.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">virtual void</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hider"><strong>hider</strong></a> () <br><em>Virtual method for hiding the element.</em></td>
 </tr>
 </tbody>
 </table>
@@ -783,7 +952,7 @@
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aScreen</code> Screen to draw on </li>
+<li><code>aScreen</code> <a href="../classevab_1_1_screen/"><strong>Screen</strong></a> to draw on </li>
 <li><code>aPos</code> Position on screen </li>
 <li><code>aSize</code> Size of the element </li>
 <li><code>aIsFocused</code> Focus state (1 = focused, 0 = not focused) </li>

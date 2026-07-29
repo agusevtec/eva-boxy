@@ -8,9 +8,8 @@
 
 
 
-_Roundmeter pictogram set (9 states)._ 
 
-* `#include <evabPictosets.h>`
+
 
 
 
@@ -38,7 +37,7 @@ _Roundmeter pictogram set (9 states)._
 
 | Type | Name |
 | ---: | :--- |
-|  unsigned char | [**Count**](#variable-count)   = `9`<br>_Number of pictograms._  |
+|  unsigned char | [**Count**](#variable-count)   = `13`<br> |
 
 
 
@@ -59,7 +58,7 @@ _Roundmeter pictogram set (9 states)._
 
 | Type | Name |
 | ---: | :--- |
-|  const unsigned char \* | [**GetTile**](#function-gettile) (unsigned char aIndex) <br>_Gets pictogram by index._  |
+|  const unsigned char \* | [**GetTile**](#function-gettile) (unsigned char aIndex) <br> |
 
 
 
@@ -93,7 +92,6 @@ _Roundmeter pictogram set (9 states)._
 
 ### variable Count 
 
-_Number of pictograms._ 
 ```C++
 unsigned char evab::PictosetRoundmeter::Count;
 ```
@@ -109,7 +107,6 @@ unsigned char evab::PictosetRoundmeter::Count;
 
 ### function GetTile 
 
-_Gets pictogram by index._ 
 ```C++
 static const unsigned char * evab::PictosetRoundmeter::GetTile (
     unsigned char aIndex
@@ -118,24 +115,6 @@ static const unsigned char * evab::PictosetRoundmeter::GetTile (
 
 
 
-
-
-**Parameters:**
-
-
-* `aIndex` Index (0-8) 
-
-
-
-**Returns:**
-
-Pointer to pictogram data 
-
-
-
-
-
-        
 
 <hr>
 

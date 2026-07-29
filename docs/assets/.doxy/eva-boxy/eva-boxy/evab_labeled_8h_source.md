@@ -8,77 +8,90 @@
 
 
 ```C++
+// evabLabeled.h
 #pragma once
 
 #include <evabScreen.h>
 #include <evabCoor.h>
+#include <evabTextAlign.h>
 
 namespace evab
 {
 
-  template <class T>
+  template <class T, typename TAlign, typename TText>
   class Labeled : public T
   {
   public:
     template<typename... Args>
-    Labeled(const char *aName, Args&&... args) 
+    Labeled(TText aName, Args&&... args) 
       : T(args...), mName(aName)
     {
     }
 
-  private:
+    void SetLabel(TText aName)
+    {
+      mName = aName;
+      Redraw();
+    }
+
+    TText GetLabel() const
+    {
+      return mName;
+    }
+
+  protected:
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
+      if (!aScreen || aSize.X == 0 || aSize.Y == 0)
+        return;
+
       if (aSize.Y == 1)
       {
         unsigned char labelWidth = 2 * aSize.X / 3;
         unsigned char inputWidth = aSize.X - labelWidth;
-        
-        aScreen->TextLeft(aPos, {labelWidth, 1}, mName, aIsFocused);
+        aScreen->Text<TAlign>(aPos, {labelWidth, 1}, mName, aIsFocused);
         T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, 1}, aIsFocused);
       }
       else
       {
-        aScreen->TextLeft(aPos, {aSize.X, 1}, mName, aIsFocused);
+        aScreen->Text<TAlign>(aPos, {aSize.X, 1}, mName, aIsFocused);
         T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
       }
     }
 
+    void hider() override {}
+
   private:
-    const char *mName;  
+    TText mName;  
   };
+
+  // ============================================================
+  // Convenience aliases for const char* labels
+  // ============================================================
 
   template <class T>
-  class LabeledF : public T
-  {
-  public:
-    template<typename... Args>
-    LabeledF(const __FlashStringHelper *aName, Args&&... args) 
-      : T(args...), mName(aName)
-    {
-    }
+  using LabeledLeft = Labeled<T, LeftAlign, const char*>;
 
-  private:
-    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
-    {
-      if (aSize.Y == 1)
-      {
-        unsigned char labelWidth = 2 * aSize.X / 3;
-        unsigned char inputWidth = aSize.X - labelWidth;
-        
-        aScreen->TextLeft(aPos, {labelWidth, 1}, mName, aIsFocused);
-        T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, 1}, aIsFocused);
-      }
-      else
-      {
-        aScreen->TextLeft(aPos, {aSize.X, 1}, mName, aIsFocused);
-        T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
-      }
-    }
+  template <class T>
+  using LabeledCenter = Labeled<T, CenterAlign, const char*>;
 
-  private:
-    const __FlashStringHelper *mName;  
-  };
+  template <class T>
+  using LabeledRight = Labeled<T, RightAlign, const char*>;
+
+  // ============================================================
+  // Convenience aliases for Flash string labels
+  // ============================================================
+
+  template <class T>
+  using LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper*>;
+
+  template <class T>
+  using LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper*>;
+
+  template <class T>
+  using LabeledRightF = Labeled<T, RightAlign, const __FlashStringHelper*>;
+
+
 
 }
 ```

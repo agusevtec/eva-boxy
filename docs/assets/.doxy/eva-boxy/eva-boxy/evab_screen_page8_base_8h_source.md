@@ -11,27 +11,28 @@
 #pragma once
 
 #include <evabCoor.h>
-#include <evabScreenBase.h>
+#include <evabScreen.h>
 #include <evabIFont.h>
 
 namespace evab
 {
-  class ScreenPage8Base : public ScreenBase
+  class ScreenPage8Base : public Screen
   {
   public:
-    ScreenPage8Base(const IFont* mFont);
-    
-    void DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor);
-    
+    ScreenPage8Base(const IFont *aFont);
+
     void Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor);
- 
-  protected:
-    virtual void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0;
+
+    void DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor);
 
   private:
-    const IFont* mFont;  
-    
-    uint32_t upscaleY(uint8_t x, uint8_t scale);
+
+    virtual void drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0;
+
+    uint32_t upscaleY(uint8_t aSlice, uint8_t aScale);
+
+  private:
+    const IFont *mFont; 
   };
 
 }

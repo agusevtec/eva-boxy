@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="classevab_1_1_screen_serial_text" kind="class" language="C++" prot="public">
     <compoundname>evab::ScreenSerialText</compoundname>
-    <basecompoundref refid="classevab_1_1_screen_base" prot="public" virt="non-virtual">evab::ScreenBase</basecompoundref>
+    <basecompoundref refid="classevab_1_1_screen" prot="public" virt="non-virtual">evab::Screen</basecompoundref>
     <includes refid="evab_screen_serial_text_8h" local="no">evabScreenSerialText.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_screen_serial_text_1a2a49d20ec1ec627115d2e13288c1a066" prot="private" static="no" mutable="no">
@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSerialText.h" line="71" column="14" bodyfile="src/evabScreenSerialText.h" bodystart="71" bodyend="-1"/>
+        <location file="src/evabScreenSerialText.h" line="70" column="14" bodyfile="src/evabScreenSerialText.h" bodystart="70" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -37,12 +37,12 @@
         </inbodydescription>
         <location file="src/evabScreenSerialText.h" line="20" column="9"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_serial_text_1a5dbf20ca9158d9bf2c9897b46530266c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_serial_text_1abf2fe3e522553884b9fd93de3674d51e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::ScreenSerialText::clear</definition>
+        <definition>void evab::ScreenSerialText::Clear</definition>
         <argsstring>()</argsstring>
-        <name>clear</name>
-        <qualifiedname>evab::ScreenSerialText::clear</qualifiedname>
+        <name>Clear</name>
+        <qualifiedname>evab::ScreenSerialText::Clear</qualifiedname>
         <briefdescription>
 <para>Clears the text buffer. </para>
         </briefdescription>
@@ -52,12 +52,12 @@
         </inbodydescription>
         <location file="src/evabScreenSerialText.h" line="25" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_screen_serial_text_1abb48464ec4112cd3fce6d7a6bbaca92a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_serial_text_1a9bb13c78dff38818dc2375f55a8bee95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::ScreenSerialText::printToSerial</definition>
+        <definition>void evab::ScreenSerialText::PrintToSerial</definition>
         <argsstring>()</argsstring>
-        <name>printToSerial</name>
-        <qualifiedname>evab::ScreenSerialText::printToSerial</qualifiedname>
+        <name>PrintToSerial</name>
+        <qualifiedname>evab::ScreenSerialText::PrintToSerial</qualifiedname>
         <briefdescription>
 <para>Prints the text buffer to serial for debugging. </para>
         </briefdescription>
@@ -73,12 +73,12 @@
         <argsstring>() override</argsstring>
         <name>Size</name>
         <qualifiedname>evab::ScreenSerialText::Size</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a79b6828b3bee58596c6509f1174399e3">Size</reimplements>
+        <reimplements refid="classevab_1_1_screen_1a769dc42b12f8eaa3bb605bf17cdb040f">Size</reimplements>
         <briefdescription>
 <para>Gets the screen size in characters. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Screen dimensions (16x8 chars) </para>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> <ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> dimensions (16x8 chars) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -92,7 +92,7 @@
         <argsstring>(const Coor &amp;aPos, const Coor &amp;aSize, bool isFocused)</argsstring>
         <name>Serialize</name>
         <qualifiedname>evab::ScreenSerialText::Serialize</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a5f37bab7096f5fc23160639d41cfc352">Serialize</reimplements>
+        <reimplements refid="classevab_1_1_screen_1a34321b9419ca20ab846670f0e3dad7ab">Serialize</reimplements>
         <param>
           <type>const <ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> &amp;</type>
           <declname>aPos</declname>
@@ -148,7 +148,7 @@
         <argsstring>(unsigned short aSerialized, Coor &amp;aPos, Coor &amp;aSize, bool &amp;isFocused)</argsstring>
         <name>Deserialize</name>
         <qualifiedname>evab::ScreenSerialText::Deserialize</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1a10665ef6680a5c43bf6b85fd23427008">Deserialize</reimplements>
+        <reimplements refid="classevab_1_1_screen_1a79b60a47dd4115bd1470d42798811726">Deserialize</reimplements>
         <param>
           <type>unsigned short</type>
           <declname>aSerialized</declname>
@@ -208,15 +208,13 @@
         </inbodydescription>
         <location file="src/evabScreenSerialText.h" line="57" column="14"/>
       </memberdef>
-    </sectiondef>
-    <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classevab_1_1_screen_serial_text_1a24ee44f285c2a1f2f308db7846147356" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_serial_text_1a24ee44f285c2a1f2f308db7846147356" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void evab::ScreenSerialText::DrawSymbol</definition>
         <argsstring>(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor) override</argsstring>
         <name>DrawSymbol</name>
         <qualifiedname>evab::ScreenSerialText::DrawSymbol</qualifiedname>
-        <reimplements refid="classevab_1_1_i_screen_1aa0ad56fedd8b77765e0fece74ab14d21">DrawSymbol</reimplements>
+        <reimplements refid="classevab_1_1_screen_1aa82d545935808d37fadb662bd041a86e">DrawSymbol</reimplements>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
@@ -274,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreenSerialText.h" line="68" column="14"/>
+        <location file="src/evabScreenSerialText.h" line="67" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -284,15 +282,9 @@
 <para>Used for debugging UI layout without physical hardware. Displays characters in a 16x8 grid. </para>
     </detaileddescription>
     <inheritancegraph>
-      <node id="3">
-        <label>evab::Screen</label>
-        <link refid="classevab_1_1_i_screen"/>
-      </node>
       <node id="2">
-        <label>evab::ScreenBase</label>
-        <link refid="classevab_1_1_screen_base"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
+        <label>evab::Screen</label>
+        <link refid="classevab_1_1_screen"/>
       </node>
       <node id="1">
         <label>evab::ScreenSerialText</label>
@@ -302,15 +294,9 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="3">
-        <label>evab::Screen</label>
-        <link refid="classevab_1_1_i_screen"/>
-      </node>
       <node id="2">
-        <label>evab::ScreenBase</label>
-        <link refid="classevab_1_1_screen_base"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
+        <label>evab::Screen</label>
+        <link refid="classevab_1_1_screen"/>
       </node>
       <node id="1">
         <label>evab::ScreenSerialText</label>
@@ -319,25 +305,22 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabScreenSerialText.h" line="14" column="5" bodyfile="src/evabScreenSerialText.h" bodystart="15" bodyend="72"/>
+    <location file="src/evabScreenSerialText.h" line="14" column="5" bodyfile="src/evabScreenSerialText.h" bodystart="15" bodyend="71"/>
     <listofallmembers>
-      <member refid="classevab_1_1_screen_base_1a45c241ae6b8fdf22fa8564393cc410d4" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Clear</name></member>
-      <member refid="classevab_1_1_screen_serial_text_1a5dbf20ca9158d9bf2c9897b46530266c" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>clear</name></member>
-      <member refid="classevab_1_1_screen_base_1adcecf3475b92507656c85c7e97af5717" prot="protected" virt="virtual"><scope>evab::ScreenSerialText</scope><name>ClearTile</name></member>
+      <member refid="classevab_1_1_screen_serial_text_1abf2fe3e522553884b9fd93de3674d51e" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_screen_1a6700eb9fa6e99cc9c6590d8f67d4f057" prot="public" virt="virtual" ambiguityscope="evab::Screen::"><scope>evab::ScreenSerialText</scope><name>Clear</name></member>
       <member refid="classevab_1_1_screen_serial_text_1a57b41418e58cbc04cd12c298a307e025" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Deserialize</name></member>
-      <member refid="classevab_1_1_screen_serial_text_1a24ee44f285c2a1f2f308db7846147356" prot="protected" virt="virtual"><scope>evab::ScreenSerialText</scope><name>DrawSymbol</name></member>
+      <member refid="classevab_1_1_screen_serial_text_1a24ee44f285c2a1f2f308db7846147356" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>DrawSymbol</name></member>
       <member refid="classevab_1_1_screen_serial_text_1a2a49d20ec1ec627115d2e13288c1a066" prot="private" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>mBuffer</name></member>
-      <member refid="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Picto</name></member>
-      <member refid="classevab_1_1_screen_serial_text_1abb48464ec4112cd3fce6d7a6bbaca92a" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>printToSerial</name></member>
+      <member refid="classevab_1_1_screen_1aa8dc78436b340b1c4eef2567348d4399" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_screen_serial_text_1a9bb13c78dff38818dc2375f55a8bee95" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>PrintToSerial</name></member>
       <member refid="classevab_1_1_screen_serial_text_1a902dcf6f48744b0f1be46bdeef07074a" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>ScreenSerialText</name></member>
       <member refid="classevab_1_1_screen_serial_text_1a6de54c87951c558b8a2d6159a354ef37" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Serialize</name></member>
       <member refid="classevab_1_1_screen_serial_text_1acb8f1a3983a54c1b3af9eeb2961d890d" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>Size</name></member>
-      <member refid="classevab_1_1_screen_base_1a631282267985a3e85319e48319c26c50" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_screen_base_1aa78cddbb7c80a5d30aa001e6ac083ff9" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_screen_base_1af34945fb5a3fa9452f61f9f59b11f35f" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_screen_base_1a57d68fbe93780fa7e2618f06ba13c80a" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_screen_base_1a3d5abf436b82c2c0498765dac9fa157b" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>TextRight</name></member>
-      <member refid="classevab_1_1_screen_base_1abd7f2ce82a9ecc72decf3aa01d1be544" prot="public" virt="virtual"><scope>evab::ScreenSerialText</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_screen_1a474f9a72cd8f60bdb5d13c717eb8741c" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>Text</name></member>
+      <member refid="classevab_1_1_screen_1acab6e3c9cf01250a6ce61ab7e2732898" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_screen_1a5b07acac62ca5bb43a529e9512b4b0f9" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_screen_1a9dcf79b61f33f64bbb98f3a53448769a" prot="public" virt="non-virtual"><scope>evab::ScreenSerialText</scope><name>TextRight</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -19,8 +19,8 @@ namespace evab
   class ListBox : public ElementBase, public TWindowAlgorithm
   {
   private:
-    ElementBase **mItems = nullptr;  
-    unsigned char mItemHeight = 1;    
+    ElementBase **mItems = nullptr; 
+    unsigned char mItemHeight = 1;  
 
   public:
     ListBox<TWindowAlgorithm> &SetItems(ElementBase *aItems[], int aCount)
@@ -60,14 +60,18 @@ namespace evab
 
     bool Key(Keys aKey) override
     {
+      if (!mItems)
+        return false;
+
       signed char selected = TWindowAlgorithm::Selected();
       if (selected == -1)
         return false;
 
-      if (mItems[selected]->Key(aKey))
-        return true;
+      ElementBase *item = mItems[selected];
+      if (!item)
+        return false;
 
-      return false;
+      return item->Key(aKey);
     }
 
   protected:
@@ -97,8 +101,8 @@ namespace evab
   };
 
   // Convenience typedefs for common list box types
-  using ScrollListbox = ListBox<ScrollWindowAlgorithm>;  
-  using FlipListbox = ListBox<FlipWindowAlgorithm>;      
+  using ScrollListbox = ListBox<ScrollWindowAlgorithm>; 
+  using FlipListbox = ListBox<FlipWindowAlgorithm>;     
 }
 ```
 

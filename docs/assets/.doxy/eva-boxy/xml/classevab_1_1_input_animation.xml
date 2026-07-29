@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputAnimation.h" line="183" column="23" bodyfile="src/evabInputAnimation.h" bodystart="183" bodyend="-1"/>
+        <location file="src/evabInputAnimation.h" line="184" column="23" bodyfile="src/evabInputAnimation.h" bodystart="184" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_animation_1aa1e6edd9a1857d835a7a3a474cb08f41" prot="private" static="no" mutable="no">
         <type>unsigned char</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputAnimation.h" line="184" column="23" bodyfile="src/evabInputAnimation.h" bodystart="184" bodyend="-1"/>
+        <location file="src/evabInputAnimation.h" line="185" column="23" bodyfile="src/evabInputAnimation.h" bodystart="185" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_animation_1a860c6fd13bfb3e43c49b271ea10fc1be" prot="private" static="no" mutable="no">
         <type>unsigned long</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputAnimation.h" line="185" column="23" bodyfile="src/evabInputAnimation.h" bodystart="185" bodyend="-1"/>
+        <location file="src/evabInputAnimation.h" line="186" column="23" bodyfile="src/evabInputAnimation.h" bodystart="186" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -234,15 +234,15 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classevab_1_1_input_animation_1ac59f5a42cb72cabeda522912e9017804" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_input_animation_1ac62f92c6ef303664e38919ffc9b2aca8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
         <definition>void evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::InputAnimation::drawer</qualifiedname>
-        <reimplements refid="classevab_1_1_element_base_1ad2c77cc8f2e2494b41e91d955649fa0e">drawer</reimplements>
+        <reimplements refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144">drawer</reimplements>
         <param>
-          <type><ref refid="classevab_1_1_i_screen" kindref="compound">Screen</ref> *</type>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
           <declname>aScreen</declname>
         </param>
         <param>
@@ -267,7 +267,7 @@
 <parametername>aScreen</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Screen to draw on </para>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -379,7 +379,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="see"><para><ref refid="classevab_1_1_input_pictogram" kindref="compound">InputPictogram</ref> For static pictogram selection </para>
+<simplesect kind="see"><para>InputPictogram For static pictogram selection </para>
 </simplesect>
 <simplesect kind="see"><para>eva::Tickable Base class for periodic updates </para>
 </simplesect>
@@ -419,11 +419,11 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputAnimation.h" line="31" column="5" bodyfile="src/evabInputAnimation.h" bodystart="32" bodyend="186"/>
+    <location file="src/evabInputAnimation.h" line="31" column="5" bodyfile="src/evabInputAnimation.h" bodystart="32" bodyend="187"/>
     <listofallmembers>
       <member refid="classevab_1_1_input_animation_1aa73460b275a751e893f0c3df1361d017" prot="private" virt="non-virtual"><scope>evab::InputAnimation</scope><name>calculateFrameDelay</name></member>
-      <member refid="classevab_1_1_element_base_1a187d84deada9eb8c03f6900c6960537f" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>Draw</name></member>
-      <member refid="classevab_1_1_input_animation_1ac59f5a42cb72cabeda522912e9017804" prot="protected" virt="virtual"><scope>evab::InputAnimation</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_input_animation_1ac62f92c6ef303664e38919ffc9b2aca8" prot="protected" virt="virtual"><scope>evab::InputAnimation</scope><name>drawer</name></member>
       <member refid="classevab_1_1_input_animation_1a27eda1533d4c87f2e401f9a7db449ac2" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>GetValue</name></member>
       <member refid="classevab_1_1_input_animation_1aca6bb9db0f4086a4a3c4f1a6d3eded5e" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>GetValuePercent</name></member>
       <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>Hide</name></member>

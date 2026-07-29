@@ -23,7 +23,7 @@ namespace evab
       {
         for (int k = 0; k < aSize.X; k++)
         {
-          DrawVerticalSlice({aPosition.X + (colno + k) / 8, aPosition.Y + j}, (colno + k) % 8, scaledSlice & 0xff);
+          drawVerticalSlice({aPosition.X + (colno + k) / 8, aPosition.Y + j}, (colno + k) % 8, scaledSlice & 0xff);
         }
         scaledSlice >>= 8;
       }
@@ -44,7 +44,7 @@ namespace evab
           uint8_t slice = pgm_read_byte(&aPictogram[j++]);
           if (aColor == 1)
             slice = ~slice;
-          DrawVerticalSlice({aPosition.X + tileX, aPosition.Y + tileY}, col, slice);
+          drawVerticalSlice({aPosition.X + tileX, aPosition.Y + tileY}, col, slice);
         }
       }
     }

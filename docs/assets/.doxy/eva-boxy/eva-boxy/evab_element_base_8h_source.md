@@ -20,22 +20,22 @@ namespace evab
   {
   public:
     virtual bool Key(Keys aKey);
-    
+
     void Hide();
-    
+
     void Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
-    
+
     void Redraw();
-    
+
     bool IsHidden();
 
-  private:
+  protected:
     virtual void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
-    
+
     virtual void hider() {};
 
   private:
-    unsigned short mSerialized = 0;  
+    unsigned short mSerialized = 0; 
   };
 
 }

@@ -69,7 +69,7 @@ void ScreenSSH1106::clearDisplay()
     }
 }
 
-void ScreenSSH1106::DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+void ScreenSSH1106::drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
 {
     // aPosition.X: 0-15 (16 тайлов по горизонтали)
     // aPosition.Y: 0-7 (8 тайлов по вертикали)

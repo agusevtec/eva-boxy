@@ -119,7 +119,7 @@ Similar to [**KeyModifier**](classevab_1_1_key_modifier.md) but additionally sen
 _Event types for_ [_**KeyReactor**_](classevab_1_1_key_reactor.md) _notifications._
 ```C++
 enum evab::KeyReactor::EventType {
-    EVENT_VALUE_CHANGED = 1
+    EVENT_VALUE_CHANGED = 2
 };
 ```
 

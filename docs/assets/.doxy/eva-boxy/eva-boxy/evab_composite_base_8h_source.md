@@ -18,20 +18,22 @@ namespace evab
   class CompositeBase : public ElementBase
   {
   public:
-    virtual bool onResidualKey(Keys aKey);
-    
-    virtual void hider() = 0;
-    
+    bool Key(Keys aKey) override;
+
     bool IsFocused(ElementBase *aChild);
+
+    ElementBase *GetFocused() const;
 
   protected:
     void focusChild(ElementBase *aChild);
 
   private:
-    bool Key(Keys aKey) override;
+    virtual bool onResidualKey(Keys aKey);
+
+    virtual void hider() = 0;
 
   private:
-    ElementBase *mFocusedChild = nullptr;  
+    ElementBase *mFocusedChild = nullptr; 
   };
 
 }

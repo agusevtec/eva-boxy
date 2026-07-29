@@ -89,26 +89,6 @@ Inherits the following classes: [evab::ScreenPage8Base](classevab_1_1_screen_pag
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Public Functions
 
 | Type | Name |
@@ -130,43 +110,25 @@ See [evab::ScreenPage8Base](classevab_1_1_screen_page8_base.md)
 | ---: | :--- |
 | virtual void | [**DrawSymbol**](classevab_1_1_screen_page8_base.md#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aCharcode, unsigned char aColor) <br>_Draws a symbol at the specified position with scaling._  |
 | virtual void | [**Picto**](classevab_1_1_screen_page8_base.md#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogram, unsigned char aColor) <br>_Draws a pictogram at the specified position._  |
-|   | [**ScreenPage8Base**](classevab_1_1_screen_page8_base.md#function-screenpage8base) (const [**IFont**](classevab_1_1_i_font.md) \* mFont) <br>_Constructor for page-based 8-bit screen base._  |
-
-
-## Public Functions inherited from evab::ScreenBase
-
-See [evab::ScreenBase](classevab_1_1_screen_base.md)
-
-| Type | Name |
-| ---: | :--- |
-| virtual void | [**Clear**](classevab_1_1_screen_base.md#function-clear) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aColor) override<br>_Clears a rectangular area._  |
-| virtual void | [**Picto**](classevab_1_1_screen_base.md#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogram, unsigned char aColor) <br>_Draws a pictogram (default implementation)._  |
-| virtual void | [**TextCenter**](classevab_1_1_screen_base.md#function-TextCenter-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) override<br>_Draws text aligned center (C-string)._  |
-| virtual void | [**TextCenter**](classevab_1_1_screen_base.md#function-TextCenter-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) override<br>_Draws text aligned center (Flash string)._  |
-| virtual void | [**TextLeft**](classevab_1_1_screen_base.md#function-TextLeft-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) override<br>_Draws text aligned left (C-string)._  |
-| virtual void | [**TextLeft**](classevab_1_1_screen_base.md#function-TextLeft-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) override<br>_Draws text aligned left (Flash string)._  |
-| virtual void | [**TextRight**](classevab_1_1_screen_base.md#function-TextRight-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) override<br>_Draws text aligned right (C-string)._  |
-| virtual void | [**TextRight**](classevab_1_1_screen_base.md#function-TextRight-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) override<br>_Draws text aligned right (Flash string)._  |
+|   | [**ScreenPage8Base**](classevab_1_1_screen_page8_base.md#function-screenpage8base) (const [**IFont**](classevab_1_1_i_font.md) \* aFont) <br>_Constructor for page-based 8-bit screen base._  |
 
 
 ## Public Functions inherited from evab::Screen
 
-See [evab::Screen](classevab_1_1_i_screen.md)
+See [evab::Screen](classevab_1_1_screen.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**Clear**](classevab_1_1_i_screen.md#function-clear) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aColor=0) = 0<br>_Clears a rectangular area on screen._  |
-| virtual void | [**Deserialize**](classevab_1_1_i_screen.md#function-deserialize) (unsigned short aSerialized, [**Coor**](structevab_1_1_coor.md) & aPos, [**Coor**](structevab_1_1_coor.md) & aSize, bool & isFocused) = 0<br>_Deserializes element state from 16-bit value._  |
-| virtual void | [**DrawSymbol**](classevab_1_1_i_screen.md#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aSymbol, unsigned char aColor) = 0<br>_Draws a single character symbol._  |
-| virtual void | [**Picto**](classevab_1_1_i_screen.md#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogram, unsigned char aColor) = 0<br>_Draws a pictogram at the specified position._  |
-| virtual unsigned short | [**Serialize**](classevab_1_1_i_screen.md#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPos, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) = 0<br>_Serializes element state into 16-bit value._  |
-| virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](classevab_1_1_i_screen.md#function-size) () = 0<br>_Gets the screen size in tiles._  |
-| virtual void | [**TextCenter**](classevab_1_1_i_screen.md#function-TextCenter-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the center._  |
-| virtual void | [**TextCenter**](classevab_1_1_i_screen.md#function-TextCenter-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the center._  |
-| virtual void | [**TextLeft**](classevab_1_1_i_screen.md#function-TextLeft-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the left._  |
-| virtual void | [**TextLeft**](classevab_1_1_i_screen.md#function-TextLeft-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the left._  |
-| virtual void | [**TextRight**](classevab_1_1_i_screen.md#function-TextRight-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the right._  |
-| virtual void | [**TextRight**](classevab_1_1_i_screen.md#function-TextRight-22) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const \_\_FlashStringHelper \* text, unsigned char aColor) = 0<br>_Draws flash string text aligned to the right._  |
+| virtual void | [**Clear**](classevab_1_1_screen.md#function-clear) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aColor=0) <br> |
+| virtual void | [**Deserialize**](classevab_1_1_screen.md#function-deserialize) (unsigned short aSerialized, [**Coor**](structevab_1_1_coor.md) & aPosition, [**Coor**](structevab_1_1_coor.md) & aSize, bool & isFocused) = 0<br> |
+| virtual void | [**DrawSymbol**](classevab_1_1_screen.md#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aSymbol, unsigned char aColor=0) = 0<br> |
+| virtual void | [**Picto**](classevab_1_1_screen.md#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogram, unsigned char aColor=0) <br> |
+| virtual unsigned short | [**Serialize**](classevab_1_1_screen.md#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPosition, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) = 0<br> |
+| virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](classevab_1_1_screen.md#function-size) () = 0<br> |
+|  void | [**Text**](classevab_1_1_screen.md#function-text) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, TText aText, unsigned char aColor=0) <br>_Draws text with specified alignment strategy._  |
+|  void | [**TextCenter**](classevab_1_1_screen.md#function-textcenter) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, T aText, unsigned char aColor=0) <br> |
+|  void | [**TextLeft**](classevab_1_1_screen.md#function-textleft) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, T aText, unsigned char aColor=0) <br> |
+|  void | [**TextRight**](classevab_1_1_screen.md#function-textright) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, T aText, unsigned char aColor=0) <br> |
 
 
 
@@ -235,52 +197,6 @@ See [evab::Screen](classevab_1_1_i_screen.md)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Protected Functions
-
-| Type | Name |
-| ---: | :--- |
-| virtual void | [**ClearTile**](#function-cleartile) ([**Coor**](structevab_1_1_coor.md) aPosition, unsigned char aColor) override<br>_Clears a tile at the specified position._  |
-| virtual void | [**DrawVerticalSlice**](#function-drawverticalslice) ([**Coor**](structevab_1_1_coor.md) aPosition, unsigned char aSliceColumn, unsigned char aSlice) override<br>_Draws a vertical slice at the specified position._  |
-
-
-## Protected Functions inherited from evab::ScreenPage8Base
-
-See [evab::ScreenPage8Base](classevab_1_1_screen_page8_base.md)
-
-| Type | Name |
-| ---: | :--- |
-| virtual void | [**DrawVerticalSlice**](classevab_1_1_screen_page8_base.md#function-drawverticalslice) ([**Coor**](structevab_1_1_coor.md) aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0<br>_Pure virtual method to draw a vertical slice._  |
-
-
-## Protected Functions inherited from evab::ScreenBase
-
-See [evab::ScreenBase](classevab_1_1_screen_base.md)
-
-| Type | Name |
-| ---: | :--- |
-| virtual void | [**ClearTile**](classevab_1_1_screen_base.md#function-cleartile) ([**Coor**](structevab_1_1_coor.md) position, unsigned char aColor) <br>_Clears a single tile._  |
 
 
 
@@ -333,7 +249,7 @@ virtual void evab::ScreenKS0108::Deserialize (
 
 
         
-Implements [*evab::Screen::Deserialize*](classevab_1_1_i_screen.md#function-deserialize)
+Implements [*evab::Screen::Deserialize*](classevab_1_1_screen.md#function-deserialize)
 
 
 <hr>
@@ -421,7 +337,7 @@ unsigned short Serialized state
 
 
         
-Implements [*evab::Screen::Serialize*](classevab_1_1_i_screen.md#function-serialize)
+Implements [*evab::Screen::Serialize*](classevab_1_1_screen.md#function-serialize)
 
 
 <hr>
@@ -468,14 +384,14 @@ virtual Coor evab::ScreenKS0108::Size () override
 
 **Returns:**
 
-[**Coor**](structevab_1_1_coor.md) Screen dimensions (16x8 tiles) 
+[**Coor**](structevab_1_1_coor.md) [**Screen**](classevab_1_1_screen.md) dimensions (16x8 tiles) 
 
 
 
 
 
         
-Implements [*evab::Screen::Size*](classevab_1_1_i_screen.md#function-size)
+Implements [*evab::Screen::Size*](classevab_1_1_screen.md#function-size)
 
 
 <hr>
@@ -503,72 +419,6 @@ evab::ScreenKS0108::~ScreenKS0108 ()
 ```
 
 
-
-
-<hr>
-## Protected Functions Documentation
-
-
-
-
-### function ClearTile 
-
-_Clears a tile at the specified position._ 
-```C++
-virtual void evab::ScreenKS0108::ClearTile (
-    Coor aPosition,
-    unsigned char aColor
-) override
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `aPosition` Position of the tile 
-* `aColor` Fill color 
-
-
-
-
-        
-Implements [*evab::ScreenBase::ClearTile*](classevab_1_1_screen_base.md#function-cleartile)
-
-
-<hr>
-
-
-
-### function DrawVerticalSlice 
-
-_Draws a vertical slice at the specified position._ 
-```C++
-virtual void evab::ScreenKS0108::DrawVerticalSlice (
-    Coor aPosition,
-    unsigned char aSliceColumn,
-    unsigned char aSlice
-) override
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `aPosition` Position on screen 
-* `aSliceColumn` Column within the tile (0-7) 
-* `aSlice` Bitmap data for the slice 
-
-
-
-
-        
-Implements [*evab::ScreenPage8Base::DrawVerticalSlice*](classevab_1_1_screen_page8_base.md#function-drawverticalslice)
 
 
 <hr>
