@@ -11,7 +11,6 @@ void ElementBase::Redraw()
   if (!screen)
     return;
 
-  Coor screenSize = screen->Size();
   Coor currentPos, currentSize;
   bool isFocused;
   screen->Deserialize(mSerialized, currentPos, currentSize, isFocused);
