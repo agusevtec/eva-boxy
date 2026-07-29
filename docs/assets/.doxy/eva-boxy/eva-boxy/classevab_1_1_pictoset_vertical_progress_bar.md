@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetVerticalProgressBar
+# Class evab::AlbumVerticalProgressBar
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md)
 
 
 
 _Vertical progress bar pictogram set._ 
 
-* `#include <evabPictosetsStretchy.h>`
+* `#include <evabAlbumsStretchy.h>`
 
 
 
@@ -90,7 +90,7 @@ _Vertical progress bar pictogram set._
 
 _Gets pictogram for vertical progress bar._ 
 ```C++
-static const unsigned char * evab::PictosetVerticalProgressBar::GetTile (
+static const unsigned char * evab::AlbumVerticalProgressBar::GetTile (
     unsigned char blockType,
     unsigned char fillNumber
 ) 
@@ -121,5 +121,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosetsStretchy.h`
+The documentation for this class was generated from the following file `src/evabAlbumsStretchy.h`
 

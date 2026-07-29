@@ -11,13 +11,13 @@
 #pragma once
 
 #include <evabElementBase.h>
-#include <evabPictosets.h>
+#include <evabAlbums.h>
 #include <evaTickable.h>
 
 namespace evab
 {
 
-    template <class TPictoset, unsigned char tMaxSpeed = 10>
+    template <class TAlbum, unsigned char tMaxSpeed = 10>
     class InputAnimation : public ElementBase, private eva::Tickable
     {
         static_assert(tMaxSpeed > 0, "tMaxSpeed must be greater than 0");
@@ -70,7 +70,7 @@ namespace evab
                 mLastFrameTime = millis();
             }
 
-            aScreen->Picto(aPos, TPictoset::GetTile(mCurrentFrame), aIsFocused);
+            aScreen->Picto(aPos, TAlbum::GetTile(mCurrentFrame), aIsFocused);
         }
 
         void hider() override
@@ -90,7 +90,7 @@ namespace evab
             if (now - mLastFrameTime >= frameDelay)
             {
                 mLastFrameTime = now;
-                mCurrentFrame = (mCurrentFrame + 1) % TPictoset::Count;
+                mCurrentFrame = (mCurrentFrame + 1) % TAlbum::Count;
                 Redraw();
             }
         }

@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetSignal
+# Class evab::AlbumSignal
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetSignal**](classevab_1_1_pictoset_signal.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumSignal**](classevab_1_1_pictoset_signal.md)
 
 
 
 _Signal pictogram set (4 states)._ 
 
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 
 
 
@@ -95,7 +95,7 @@ _Signal pictogram set (4 states)._
 
 _Number of pictograms._ 
 ```C++
-unsigned char evab::PictosetSignal::Count;
+unsigned char evab::AlbumSignal::Count;
 ```
 
 
@@ -111,7 +111,7 @@ unsigned char evab::PictosetSignal::Count;
 
 _Gets pictogram by index._ 
 ```C++
-static const unsigned char * evab::PictosetSignal::GetTile (
+static const unsigned char * evab::AlbumSignal::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -140,5 +140,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

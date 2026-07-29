@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetSpeaker
+# Class evab::AlbumSpeaker
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetSpeaker**](classevab_1_1_pictoset_speaker.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumSpeaker**](classevab_1_1_pictoset_speaker.md)
 
 
 
 _Speaker pictogram set (4 states)._ 
 
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 
 
 
@@ -95,7 +95,7 @@ _Speaker pictogram set (4 states)._
 
 _Number of pictograms._ 
 ```C++
-unsigned char evab::PictosetSpeaker::Count;
+unsigned char evab::AlbumSpeaker::Count;
 ```
 
 
@@ -111,7 +111,7 @@ unsigned char evab::PictosetSpeaker::Count;
 
 _Gets pictogram by index._ 
 ```C++
-static const unsigned char * evab::PictosetSpeaker::GetTile (
+static const unsigned char * evab::AlbumSpeaker::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -140,5 +140,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetFan
+# Class evab::AlbumFan
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetFan**](classevab_1_1_pictoset_fan.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumFan**](classevab_1_1_pictoset_fan.md)
 
 
 
 _Fan pictogram set (3 states)._ 
 
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 
 
 
@@ -95,7 +95,7 @@ _Fan pictogram set (3 states)._
 
 _Number of pictograms._ 
 ```C++
-unsigned char evab::PictosetFan::Count;
+unsigned char evab::AlbumFan::Count;
 ```
 
 
@@ -111,7 +111,7 @@ unsigned char evab::PictosetFan::Count;
 
 _Gets pictogram by index._ 
 ```C++
-static const unsigned char * evab::PictosetFan::GetTile (
+static const unsigned char * evab::AlbumFan::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -140,5 +140,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

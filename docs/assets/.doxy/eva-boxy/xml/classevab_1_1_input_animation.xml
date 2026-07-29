@@ -7,7 +7,7 @@
     <includes refid="evab_input_animation_8h" local="no">evabInputAnimation.h</includes>
     <templateparamlist>
       <param>
-        <type>class TPictoset</type>
+        <type>class TAlbum</type>
       </param>
       <param>
         <type>unsigned char</type>
@@ -19,7 +19,7 @@
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_animation_1a0436325018bb62b00689b078c30e68bf" prot="private" static="no" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::mValue</definition>
+        <definition>unsigned char evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::mValue</definition>
         <argsstring></argsstring>
         <name>mValue</name>
         <qualifiedname>evab::InputAnimation::mValue</qualifiedname>
@@ -34,7 +34,7 @@
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_animation_1aa1e6edd9a1857d835a7a3a474cb08f41" prot="private" static="no" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::mCurrentFrame</definition>
+        <definition>unsigned char evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::mCurrentFrame</definition>
         <argsstring></argsstring>
         <name>mCurrentFrame</name>
         <qualifiedname>evab::InputAnimation::mCurrentFrame</qualifiedname>
@@ -49,7 +49,7 @@
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_animation_1a860c6fd13bfb3e43c49b271ea10fc1be" prot="private" static="no" mutable="no">
         <type>unsigned long</type>
-        <definition>unsigned long evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::mLastFrameTime</definition>
+        <definition>unsigned long evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::mLastFrameTime</definition>
         <argsstring></argsstring>
         <name>mLastFrameTime</name>
         <qualifiedname>evab::InputAnimation::mLastFrameTime</qualifiedname>
@@ -66,7 +66,7 @@
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_input_animation_1a7cc0d5e55320b800047a278a4fdf295a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::InputAnimation</definition>
+        <definition>evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::InputAnimation</definition>
         <argsstring>(unsigned char aValue=0)</argsstring>
         <name>InputAnimation</name>
         <qualifiedname>evab::InputAnimation::InputAnimation</qualifiedname>
@@ -96,7 +96,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_animation_1a570aa0844721feca591de719e798ddd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
-        <definition>virtual evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::~InputAnimation</definition>
+        <definition>virtual evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::~InputAnimation</definition>
         <argsstring>()</argsstring>
         <name>~InputAnimation</name>
         <qualifiedname>evab::InputAnimation::~InputAnimation</qualifiedname>
@@ -111,7 +111,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_animation_1ab8c8ab0217cf4a92506970d99c7d8b76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::SetValue</definition>
+        <definition>void evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::SetValue</definition>
         <argsstring>(unsigned char aValue)</argsstring>
         <name>SetValue</name>
         <qualifiedname>evab::InputAnimation::SetValue</qualifiedname>
@@ -140,7 +140,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_animation_1a27eda1533d4c87f2e401f9a7db449ac2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::GetValue</definition>
+        <definition>unsigned char evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::GetValue</definition>
         <argsstring>() const</argsstring>
         <name>GetValue</name>
         <qualifiedname>evab::InputAnimation::GetValue</qualifiedname>
@@ -158,7 +158,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_animation_1aca6bb9db0f4086a4a3c4f1a6d3eded5e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::GetValuePercent</definition>
+        <definition>unsigned char evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::GetValuePercent</definition>
         <argsstring>() const</argsstring>
         <name>GetValuePercent</name>
         <qualifiedname>evab::InputAnimation::GetValuePercent</qualifiedname>
@@ -176,7 +176,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_animation_1a2aeea201ea91c66107b5a66d1e80a8f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::SetValuePercent</definition>
+        <definition>void evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::SetValuePercent</definition>
         <argsstring>(unsigned char aValue)</argsstring>
         <name>SetValuePercent</name>
         <qualifiedname>evab::InputAnimation::SetValuePercent</qualifiedname>
@@ -205,7 +205,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_animation_1aa00ff60aff5b6b2e83a06a5aedd5f483" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::Increment</definition>
+        <definition>void evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::Increment</definition>
         <argsstring>(signed char delta)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputAnimation::Increment</qualifiedname>
@@ -236,7 +236,7 @@
     <sectiondef kind="protected-func">
       <memberdef kind="function" id="classevab_1_1_input_animation_1ac62f92c6ef303664e38919ffc9b2aca8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
-        <definition>void evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::drawer</definition>
+        <definition>void evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::InputAnimation::drawer</qualifiedname>
@@ -303,7 +303,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_animation_1a065bfe875ab4c8273d2ff0c30ddd6015" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
-        <definition>void evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::hider</definition>
+        <definition>void evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::hider</definition>
         <argsstring>() override</argsstring>
         <name>hider</name>
         <qualifiedname>evab::InputAnimation::hider</qualifiedname>
@@ -321,7 +321,7 @@
     <sectiondef kind="private-func">
       <memberdef kind="function" id="classevab_1_1_input_animation_1a7d53eccdbab96a3b94df0e834da69a67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::tick</definition>
+        <definition>void evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::tick</definition>
         <argsstring>() override</argsstring>
         <name>tick</name>
         <qualifiedname>evab::InputAnimation::tick</qualifiedname>
@@ -337,7 +337,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_animation_1aa73460b275a751e893f0c3df1361d017" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned long</type>
-        <definition>unsigned long evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;::calculateFrameDelay</definition>
+        <definition>unsigned long evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::calculateFrameDelay</definition>
         <argsstring>() const</argsstring>
         <name>calculateFrameDelay</name>
         <qualifiedname>evab::InputAnimation::calculateFrameDelay</qualifiedname>
@@ -364,10 +364,10 @@
 <para>Redraws occur only on timer ticks to maintain consistent animation timing.</para>
 <para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
-<parametername>TPictoset</parametername>
+<parametername>TAlbum</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pictoset class providing pictogram data and count </para>
+<para>Album class providing pictogram data and count </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -394,7 +394,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;</label>
+        <label>evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;</label>
         <link refid="classevab_1_1_input_animation"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
@@ -411,7 +411,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;</label>
+        <label>evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;</label>
         <link refid="classevab_1_1_input_animation"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>

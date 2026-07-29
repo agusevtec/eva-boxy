@@ -6,13 +6,13 @@
     <includes refid="evab_input_selector_picto_8h" local="no">evabInputSelectorPicto.h</includes>
     <templateparamlist>
       <param>
-        <type>class TPictoset</type>
+        <type>class TAlbum</type>
       </param>
     </templateparamlist>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_selector_picto_1a13045f2b18ae8daa5964b018deb170be" prot="private" static="no" mutable="no">
         <type>signed char</type>
-        <definition>signed char evab::InputSelectorPicto&lt; TPictoset &gt;::mValue</definition>
+        <definition>signed char evab::InputSelectorPicto&lt; TAlbum &gt;::mValue</definition>
         <argsstring></argsstring>
         <name>mValue</name>
         <qualifiedname>evab::InputSelectorPicto::mValue</qualifiedname>
@@ -29,7 +29,7 @@
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_input_selector_picto_1a9de56867981d167a653707e707f3327c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>evab::InputSelectorPicto&lt; TPictoset &gt;::InputSelectorPicto</definition>
+        <definition>evab::InputSelectorPicto&lt; TAlbum &gt;::InputSelectorPicto</definition>
         <argsstring>(int aValue=0)</argsstring>
         <name>InputSelectorPicto</name>
         <qualifiedname>evab::InputSelectorPicto::InputSelectorPicto</qualifiedname>
@@ -47,7 +47,7 @@
 <parametername>aValue</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Initial pictogram index (0 to TPictoset::Count - 1) </para>
+<para>Initial pictogram index (0 to TAlbum::Count - 1) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -59,7 +59,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_picto_1ac18c3bb85c1c7f5567385f7e3c3c1cca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputSelectorPicto&lt; TPictoset &gt;::SetValue</definition>
+        <definition>void evab::InputSelectorPicto&lt; TAlbum &gt;::SetValue</definition>
         <argsstring>(int aValue)</argsstring>
         <name>SetValue</name>
         <qualifiedname>evab::InputSelectorPicto::SetValue</qualifiedname>
@@ -88,7 +88,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_picto_1a9007faeb398163a006105b3a08aafd4e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>signed char</type>
-        <definition>signed char evab::InputSelectorPicto&lt; TPictoset &gt;::GetValue</definition>
+        <definition>signed char evab::InputSelectorPicto&lt; TAlbum &gt;::GetValue</definition>
         <argsstring>() const</argsstring>
         <name>GetValue</name>
         <qualifiedname>evab::InputSelectorPicto::GetValue</qualifiedname>
@@ -106,7 +106,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_picto_1a55b1cfd5b476823e7d4339dcf60b4b85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputSelectorPicto&lt; TPictoset &gt;::SetValuePercent</definition>
+        <definition>void evab::InputSelectorPicto&lt; TAlbum &gt;::SetValuePercent</definition>
         <argsstring>(int aValue)</argsstring>
         <name>SetValuePercent</name>
         <qualifiedname>evab::InputSelectorPicto::SetValuePercent</qualifiedname>
@@ -136,7 +136,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_picto_1a6594b63d367f48ed0c4f19795c4dae27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>signed char</type>
-        <definition>signed char evab::InputSelectorPicto&lt; TPictoset &gt;::GetValuePercent</definition>
+        <definition>signed char evab::InputSelectorPicto&lt; TAlbum &gt;::GetValuePercent</definition>
         <argsstring>() const</argsstring>
         <name>GetValuePercent</name>
         <qualifiedname>evab::InputSelectorPicto::GetValuePercent</qualifiedname>
@@ -154,7 +154,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_picto_1a7a8ff0ccd89770cffa0541cf2f273000" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputSelectorPicto&lt; TPictoset &gt;::Increment</definition>
+        <definition>void evab::InputSelectorPicto&lt; TAlbum &gt;::Increment</definition>
         <argsstring>(signed char delta)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputSelectorPicto::Increment</qualifiedname>
@@ -185,7 +185,7 @@
     <sectiondef kind="protected-func">
       <memberdef kind="function" id="classevab_1_1_input_selector_picto_1afd4994c61c476379a0d1831d66746c78" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
-        <definition>void evab::InputSelectorPicto&lt; TPictoset &gt;::drawer</definition>
+        <definition>void evab::InputSelectorPicto&lt; TAlbum &gt;::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::InputSelectorPicto::drawer</qualifiedname>
@@ -257,10 +257,10 @@
 <para>Displays a pictogram from a pictoset and manages its index value.</para>
 <para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
-<parametername>TPictoset</parametername>
+<parametername>TAlbum</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pictoset class providing pictogram data and count </para>
+<para>Album class providing pictogram data and count </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -272,7 +272,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputSelectorPicto&lt; TPictoset &gt;</label>
+        <label>evab::InputSelectorPicto&lt; TAlbum &gt;</label>
         <link refid="classevab_1_1_input_selector_picto"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
@@ -284,7 +284,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputSelectorPicto&lt; TPictoset &gt;</label>
+        <label>evab::InputSelectorPicto&lt; TAlbum &gt;</label>
         <link refid="classevab_1_1_input_selector_picto"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>

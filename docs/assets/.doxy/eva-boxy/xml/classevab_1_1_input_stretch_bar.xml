@@ -6,7 +6,7 @@
     <includes refid="evab_input_stretch_bar_8h" local="no">evabInputStretchBar.h</includes>
     <templateparamlist>
       <param>
-        <type>typename TPictoset</type>
+        <type>typename TAlbum</type>
       </param>
       <param>
         <type>typename OrientationPictoPolicy</type>
@@ -15,7 +15,7 @@
     <sectiondef kind="private-static-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a8ec383cde9c12b4a0ce9d5861f5773d9" prot="private" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::START_BLOCK</definition>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::START_BLOCK</definition>
         <argsstring></argsstring>
         <name>START_BLOCK</name>
         <qualifiedname>evab::InputStretchBar::START_BLOCK</qualifiedname>
@@ -31,7 +31,7 @@
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1afa6deeec50f3270d36f85cd935eb0883" prot="private" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::MIDDLE_BLOCK</definition>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::MIDDLE_BLOCK</definition>
         <argsstring></argsstring>
         <name>MIDDLE_BLOCK</name>
         <qualifiedname>evab::InputStretchBar::MIDDLE_BLOCK</qualifiedname>
@@ -47,7 +47,7 @@
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a6dffa09542b5dc9251508e23901d4ef5" prot="private" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::END_BLOCK</definition>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::END_BLOCK</definition>
         <argsstring></argsstring>
         <name>END_BLOCK</name>
         <qualifiedname>evab::InputStretchBar::END_BLOCK</qualifiedname>
@@ -65,7 +65,7 @@
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a71a60e8a5638d2165b56bd5948d250d8" prot="private" static="no" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::mValue</definition>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::mValue</definition>
         <argsstring></argsstring>
         <name>mValue</name>
         <qualifiedname>evab::InputStretchBar::mValue</qualifiedname>
@@ -82,7 +82,7 @@
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a1f434f3c6cf9ffd4ba3710b148468161" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::InputStretchBar</definition>
+        <definition>evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::InputStretchBar</definition>
         <argsstring>(unsigned char aValue=0)</argsstring>
         <name>InputStretchBar</name>
         <qualifiedname>evab::InputStretchBar::InputStretchBar</qualifiedname>
@@ -112,7 +112,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1abaf2f42b98b6db67987057235a48add5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::SetValue</definition>
+        <definition>void evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::SetValue</definition>
         <argsstring>(unsigned char aValue)</argsstring>
         <name>SetValue</name>
         <qualifiedname>evab::InputStretchBar::SetValue</qualifiedname>
@@ -141,7 +141,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1aeafd457320264f3957405e427f9343cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::Increment</definition>
+        <definition>void evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::Increment</definition>
         <argsstring>(signed char delta)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputStretchBar::Increment</qualifiedname>
@@ -172,7 +172,7 @@
     <sectiondef kind="protected-func">
       <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
-        <definition>void evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::drawer</definition>
+        <definition>void evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::InputStretchBar::drawer</qualifiedname>
@@ -240,7 +240,7 @@
     <sectiondef kind="private-func">
       <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1ab78fe73ecfbd69f8ef3f38604680e054" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char</type>
-        <definition>char evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;::blockFill</definition>
+        <definition>char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::blockFill</definition>
         <argsstring>(unsigned char blockNumber, unsigned short normalizedValue)</argsstring>
         <name>blockFill</name>
         <qualifiedname>evab::InputStretchBar::blockFill</qualifiedname>
@@ -289,10 +289,10 @@
 <para>Displays a progress/scroll bar using pictograms with variable fill levels.</para>
 <para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
-<parametername>TPictoset</parametername>
+<parametername>TAlbum</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Pictoset class providing pictogram data </para>
+<para>Album class providing pictogram data </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -312,7 +312,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
@@ -324,7 +324,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>

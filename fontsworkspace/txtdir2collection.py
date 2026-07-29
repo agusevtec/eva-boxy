@@ -5,7 +5,7 @@ from typing import List, Tuple
 
 class TxtToCharmapConverter:
     """
-    Converts a directory with txt files to a C++ Pictoset class.
+    Converts a directory with txt files to a C++ Album class.
     """
 
     def __init__(self, input_dir: str, output_prefix: str = "pictograms"):
@@ -92,7 +92,7 @@ class TxtToCharmapConverter:
         lines.append("")
         lines.append("#include <Arduino.h>")
         lines.append("")
-        lines.append(f"class Pictoset{self.class_name}")
+        lines.append(f"class Album{self.class_name}")
         lines.append("{")
         lines.append("public:")
         lines.append(f"    static const unsigned char* GetTile(unsigned char aIndex);")
@@ -109,7 +109,7 @@ class TxtToCharmapConverter:
         lines.append(f'#include "{self.output_prefix}.h"')
         lines.append("")
         
-        lines.append(f"const unsigned char* Pictoset{self.class_name}::GetTile(unsigned char aIndex)")
+        lines.append(f"const unsigned char* Album{self.class_name}::GetTile(unsigned char aIndex)")
         lines.append("{")
         
         # Declare all tiles as static local variables
@@ -153,7 +153,7 @@ class TxtToCharmapConverter:
             return False
         
         print(f"Directory: {self.input_dir}")
-        print(f"Class: Pictoset{self.class_name}")
+        print(f"Class: Album{self.class_name}")
         print(f"\nTiles:")
         
         tiles = self.scan_directory()
@@ -184,7 +184,7 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python txtdir2collection.py <directory> [prefix]")
         print("")
-        print("  directory - directory with .txt files (one directory = one Pictoset)")
+        print("  directory - directory with .txt files (one directory = one Album)")
         print("  prefix    - output files name prefix (default = directory name)")
         print("")
         print("Example:")
@@ -200,7 +200,7 @@ def main():
         print(f"\nDone!")
         print(f"\nUsage:")
         print(f"  #include \"{output_prefix}.h\"")
-        print(f"  aScreen->Picto({{0,0}}, Pictoset{converter.class_name}::GetTile(0), false);")
+        print(f"  aScreen->Picto({{0,0}}, Album{converter.class_name}::GetTile(0), false);")
     else:
         sys.exit(1)
 

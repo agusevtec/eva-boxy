@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="classevab_1_1_pictoset_horizontal_progress_bar" kind="class" language="C++" prot="public">
-    <compoundname>evab::PictosetHorizontalProgressBar</compoundname>
-    <includes refid="evab_pictosets_stretchy_8h" local="no">evabPictosetsStretchy.h</includes>
+    <compoundname>evab::AlbumHorizontalProgressBar</compoundname>
+    <includes refid="evab_pictosets_stretchy_8h" local="no">evabAlbumsStretchy.h</includes>
     <sectiondef kind="public-static-func">
       <memberdef kind="function" id="classevab_1_1_pictoset_horizontal_progress_bar_1a9a1905b5f822fb76ab02ce39acb03f6f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const unsigned char *</type>
-        <definition>static const unsigned char * evab::PictosetHorizontalProgressBar::GetTile</definition>
+        <definition>static const unsigned char * evab::AlbumHorizontalProgressBar::GetTile</definition>
         <argsstring>(unsigned char blockType, unsigned char fillNumber)</argsstring>
         <name>GetTile</name>
-        <qualifiedname>evab::PictosetHorizontalProgressBar::GetTile</qualifiedname>
+        <qualifiedname>evab::AlbumHorizontalProgressBar::GetTile</qualifiedname>
         <param>
           <type>unsigned char</type>
           <declname>blockType</declname>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPictosetsStretchy.h" line="34" column="36"/>
+        <location file="src/evabAlbumsStretchy.h" line="34" column="36"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -53,9 +53,9 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabPictosetsStretchy.h" line="24" column="5" bodyfile="src/evabPictosetsStretchy.h" bodystart="25" bodyend="35"/>
+    <location file="src/evabAlbumsStretchy.h" line="24" column="5" bodyfile="src/evabAlbumsStretchy.h" bodystart="25" bodyend="35"/>
     <listofallmembers>
-      <member refid="classevab_1_1_pictoset_horizontal_progress_bar_1a9a1905b5f822fb76ab02ce39acb03f6f" prot="public" virt="non-virtual"><scope>evab::PictosetHorizontalProgressBar</scope><name>GetTile</name></member>
+      <member refid="classevab_1_1_pictoset_horizontal_progress_bar_1a9a1905b5f822fb76ab02ce39acb03f6f" prot="public" virt="non-virtual"><scope>evab::AlbumHorizontalProgressBar</scope><name>GetTile</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

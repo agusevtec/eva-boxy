@@ -11,7 +11,7 @@
 #include <evabLayoutBase.h>
 #include <evabLabeled.h>
 #include <evabInputAnimation.h>
-#include <evabPictosets.h>
+#include <evabAlbums.h>
 
 using namespace eva;
 using namespace evab;
@@ -21,9 +21,9 @@ static const char OK_TEXT[] PROGMEM = "OK";
 class MyLayout : public LayoutBase {
   FocusChain<InputButtonPicto> btn1{ this, GalleryRemixicon24::PICTO_EC10 };
   //InputButtonPicto btn2{ GalleryRemixicon24::PICTO_F371 };
-  //FocusChain<InputButtonPicto> btn3{ this, PictosetRainbowmeter::GetTile(2) };
-  InputAnimation<PictosetProgress> btn2{  2};
-  InputAnimation<PictosetRoundmeter> btn3{  2};
+  //FocusChain<InputButtonPicto> btn3{ this, AlbumRainbowmeter::GetTile(2) };
+  InputAnimation<AlbumProgress> btn2{  2};
+  InputAnimation<AlbumRoundmeter> btn3{  2};
   FocusChain<InputButton> btn4{ this, (const __FlashStringHelper *)OK_TEXT };
 
 protected:

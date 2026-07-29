@@ -11,7 +11,7 @@
 #pragma once
 
 #include <evabElementBase.h>
-#include <evabPictosetsStretchy.h>
+#include <evabAlbumsStretchy.h>
 
 namespace evab
 {
@@ -51,7 +51,7 @@ namespace evab
         }
     };
 
-    template <typename TPictoset, typename OrientationPictoPolicy>
+    template <typename TAlbum, typename OrientationPictoPolicy>
     class InputStretchBar : public ElementBase
     {
     public:
@@ -83,20 +83,20 @@ namespace evab
 
             aScreen->Picto(
                 OrientationPictoPolicy::GetTilePosition(aPos, aSize, 0, totalBlocks),
-                TPictoset::GetTile(START_BLOCK, blockFill(0, normalizedValue)),
+                TAlbum::GetTile(START_BLOCK, blockFill(0, normalizedValue)),
                 aIsFocused);
 
             for (unsigned char i = 1; i < totalBlocks - 1; i++)
             {
                 aScreen->Picto(
                     OrientationPictoPolicy::GetTilePosition(aPos, aSize, i, totalBlocks),
-                    TPictoset::GetTile(MIDDLE_BLOCK, blockFill(i, normalizedValue)),
+                    TAlbum::GetTile(MIDDLE_BLOCK, blockFill(i, normalizedValue)),
                     aIsFocused);
             }
 
             aScreen->Picto(
                 OrientationPictoPolicy::GetTilePosition(aPos, aSize, totalBlocks - 1, totalBlocks),
-                TPictoset::GetTile(END_BLOCK, blockFill(totalBlocks - 1, normalizedValue)),
+                TAlbum::GetTile(END_BLOCK, blockFill(totalBlocks - 1, normalizedValue)),
                 aIsFocused);
         }
 
@@ -119,10 +119,10 @@ namespace evab
     };
 
     // Convenience typedefs for common stretch bar types
-    using VerticalProgressBar = InputStretchBar<PictosetVerticalProgressBar, VerticalPictoPolicy>;
-    using HorizontalProgressBar = InputStretchBar<PictosetHorizontalProgressBar, HorizontalPictoPolicy>;
-    using VerticalScrollBar = InputStretchBar<PictosetVerticalScrollBar, VerticalPictoPolicy>;
-    using HorizontalScrollBar = InputStretchBar<PictosetHorizontalScrollBar, HorizontalPictoPolicy>;
+    using VerticalProgressBar = InputStretchBar<AlbumVerticalProgressBar, VerticalPictoPolicy>;
+    using HorizontalProgressBar = InputStretchBar<AlbumHorizontalProgressBar, HorizontalPictoPolicy>;
+    using VerticalScrollBar = InputStretchBar<AlbumVerticalScrollBar, VerticalPictoPolicy>;
+    using HorizontalScrollBar = InputStretchBar<AlbumHorizontalScrollBar, HorizontalPictoPolicy>;
 }
 ```
 

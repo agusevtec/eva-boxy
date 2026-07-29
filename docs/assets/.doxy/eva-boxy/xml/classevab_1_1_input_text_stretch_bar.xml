@@ -6,7 +6,7 @@
     <includes refid="evab_input_text_stretch_bar_8h" local="no">evabInputTextStretchBar.h</includes>
     <templateparamlist>
       <param>
-        <type>typename TPictoset</type>
+        <type>typename TAlbum</type>
       </param>
       <param>
         <type>typename OrientationTextPolicy</type>
@@ -15,7 +15,7 @@
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_text_stretch_bar_1ae8a908d1e06d229cbf2157c12bab6211" prot="private" static="no" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::mValue</definition>
+        <definition>unsigned char evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;::mValue</definition>
         <argsstring></argsstring>
         <name>mValue</name>
         <qualifiedname>evab::InputTextStretchBar::mValue</qualifiedname>
@@ -32,7 +32,7 @@
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1ab4e3f6400340b440effe4a826337a737" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::InputTextStretchBar</definition>
+        <definition>evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;::InputTextStretchBar</definition>
         <argsstring>(unsigned char aValue=0)</argsstring>
         <name>InputTextStretchBar</name>
         <qualifiedname>evab::InputTextStretchBar::InputTextStretchBar</qualifiedname>
@@ -62,7 +62,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1a43dfe12c6dae484f8651b3170603db93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::SetValue</definition>
+        <definition>void evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;::SetValue</definition>
         <argsstring>(unsigned char aValue)</argsstring>
         <name>SetValue</name>
         <qualifiedname>evab::InputTextStretchBar::SetValue</qualifiedname>
@@ -91,7 +91,7 @@
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1a124045da73d9912358daf72ffb658bba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::Increment</definition>
+        <definition>void evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;::Increment</definition>
         <argsstring>(signed char delta)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputTextStretchBar::Increment</qualifiedname>
@@ -122,7 +122,7 @@
     <sectiondef kind="protected-func">
       <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1a18568595571f2fe4f8ec7d1cc85ea4b8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
-        <definition>void evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::drawer</definition>
+        <definition>void evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::InputTextStretchBar::drawer</qualifiedname>
@@ -190,7 +190,7 @@
     <sectiondef kind="private-func">
       <memberdef kind="function" id="classevab_1_1_input_text_stretch_bar_1ab757049ce13d88293615ba330f1f7228" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char</type>
-        <definition>char evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;::blockFill</definition>
+        <definition>char evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;::blockFill</definition>
         <argsstring>(unsigned char blockNumber, unsigned short normalizedValue)</argsstring>
         <name>blockFill</name>
         <qualifiedname>evab::InputTextStretchBar::blockFill</qualifiedname>
@@ -239,7 +239,7 @@
 <para>Displays a progress/scroll bar using characters instead of pictograms.</para>
 <para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
-<parametername>TPictoset</parametername>
+<parametername>TAlbum</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Character set class providing GetChar method </para>
@@ -262,7 +262,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;</label>
+        <label>evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;</label>
         <link refid="classevab_1_1_input_text_stretch_bar"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
@@ -274,7 +274,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;</label>
+        <label>evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;</label>
         <link refid="classevab_1_1_input_text_stretch_bar"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>

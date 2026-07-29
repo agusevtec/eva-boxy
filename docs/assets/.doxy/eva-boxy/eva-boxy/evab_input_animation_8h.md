@@ -11,7 +11,7 @@
 
 
 * `#include <evabElementBase.h>`
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 * `#include <evaTickable.h>`
 
 
@@ -37,7 +37,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InputAnimation**](classevab_1_1_input_animation.md) &lt;class TPictoset, tMaxSpeed&gt;<br>_Animation input element with configurable speed._  |
+| class | [**InputAnimation**](classevab_1_1_input_animation.md) &lt;class TAlbum, tMaxSpeed&gt;<br>_Animation input element with configurable speed._  |
 
 
 

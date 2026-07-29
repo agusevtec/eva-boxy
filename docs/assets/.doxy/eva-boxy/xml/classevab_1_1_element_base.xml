@@ -2,10 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="classevab_1_1_element_base" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>evab::ElementBase</compoundname>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; PictosetVerticalProgressBar, VerticalPictoPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; PictosetHorizontalProgressBar, HorizontalPictoPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; PictosetVerticalScrollBar, VerticalPictoPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; PictosetHorizontalScrollBar, HorizontalPictoPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; AlbumVerticalProgressBar, VerticalPictoPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; AlbumHorizontalProgressBar, HorizontalPictoPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; AlbumVerticalScrollBar, VerticalPictoPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; AlbumHorizontalScrollBar, HorizontalPictoPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; CharsetVerticalProgressBar, VerticalTextPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; CharsetHorizontalProgressBar, HorizontalTextPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; CharsetVerticalScrollBar, VerticalTextPolicy &gt;</derivedcompoundref>
@@ -22,14 +22,14 @@
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const __FlashStringHelper *, CenterAlign &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const __FlashStringHelper *, RightAlign &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_composite_base" prot="public" virt="non-virtual">evab::CompositeBase</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_animation" prot="public" virt="non-virtual">evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_animation" prot="public" virt="non-virtual">evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_button" prot="public" virt="non-virtual">evab::InputButton</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_button_picto" prot="public" virt="non-virtual">evab::InputButtonPicto</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_float" prot="public" virt="non-virtual">evab::InputFloat</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_int" prot="public" virt="non-virtual">evab::InputInt</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_selector_picto" prot="public" virt="non-virtual">evab::InputSelectorPicto&lt; TPictoset &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_selector_picto" prot="public" virt="non-virtual">evab::InputSelectorPicto&lt; TAlbum &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_layout_base" prot="public" virt="non-virtual">evab::LayoutBase</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; TWindowAlgorithm &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; T, TAlign &gt;</derivedcompoundref>
@@ -350,7 +350,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="22">
-        <label>evab::InputAnimation&lt; TPictoset, tMaxSpeed &gt;</label>
+        <label>evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;</label>
         <link refid="classevab_1_1_input_animation"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
@@ -380,43 +380,43 @@
         </childnode>
       </node>
       <node id="27">
-        <label>evab::InputSelectorPicto&lt; TPictoset &gt;</label>
+        <label>evab::InputSelectorPicto&lt; TAlbum &gt;</label>
         <link refid="classevab_1_1_input_selector_picto"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="28">
-        <label>evab::InputStretchBar&lt; TPictoset, OrientationPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="3">
-        <label>evab::InputStretchBar&lt; PictosetHorizontalProgressBar, HorizontalPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; AlbumHorizontalProgressBar, HorizontalPictoPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="5">
-        <label>evab::InputStretchBar&lt; PictosetHorizontalScrollBar, HorizontalPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; AlbumHorizontalScrollBar, HorizontalPictoPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="2">
-        <label>evab::InputStretchBar&lt; PictosetVerticalProgressBar, VerticalPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; AlbumVerticalProgressBar, VerticalPictoPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4">
-        <label>evab::InputStretchBar&lt; PictosetVerticalScrollBar, VerticalPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; AlbumVerticalScrollBar, VerticalPictoPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="29">
-        <label>evab::InputTextStretchBar&lt; TPictoset, OrientationTextPolicy &gt;</label>
+        <label>evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;</label>
         <link refid="classevab_1_1_input_text_stretch_bar"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>

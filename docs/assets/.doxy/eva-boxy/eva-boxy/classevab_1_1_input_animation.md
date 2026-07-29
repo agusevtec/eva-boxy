@@ -2,7 +2,7 @@
 
 # Class evab::InputAnimation
 
-**template &lt;class TPictoset, unsigned char tMaxSpeed&gt;**
+**template &lt;class TAlbum, unsigned char tMaxSpeed&gt;**
 
 
 
@@ -180,7 +180,7 @@ Redraws occur only on timer ticks to maintain consistent animation timing.
 **Template parameters:**
 
 
-* `TPictoset` Pictoset class providing pictogram data and count 
+* `TAlbum` Album class providing pictogram data and count 
 * `tMaxSpeed` Maximum speed value (must be &gt; 0)
 
 

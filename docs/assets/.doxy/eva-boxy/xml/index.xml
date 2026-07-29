@@ -226,52 +226,52 @@
     <member refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5" kind="function"><name>drawer</name></member>
     <member refid="classevab_1_1_list_box_1a9c64349ba298d36609ba46d65d6ceec2" kind="function"><name>hider</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_battery" kind="class"><name>evab::PictosetBattery</name>
+  <compound refid="classevab_1_1_pictoset_battery" kind="class"><name>evab::AlbumBattery</name>
     <member refid="classevab_1_1_pictoset_battery_1a584403583ee3dba52a7bc7266eca7634" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_battery_1a01b965052710ed18d619b921d5135f67" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_fan" kind="class"><name>evab::PictosetFan</name>
+  <compound refid="classevab_1_1_pictoset_fan" kind="class"><name>evab::AlbumFan</name>
     <member refid="classevab_1_1_pictoset_fan_1a58708583debefff10ee784aba5d073dd" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_fan_1a5099b9489cafd4aa57d250041396e749" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_horizontal_progress_bar" kind="class"><name>evab::PictosetHorizontalProgressBar</name>
+  <compound refid="classevab_1_1_pictoset_horizontal_progress_bar" kind="class"><name>evab::AlbumHorizontalProgressBar</name>
     <member refid="classevab_1_1_pictoset_horizontal_progress_bar_1a9a1905b5f822fb76ab02ce39acb03f6f" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_horizontal_scroll_bar" kind="class"><name>evab::PictosetHorizontalScrollBar</name>
+  <compound refid="classevab_1_1_pictoset_horizontal_scroll_bar" kind="class"><name>evab::AlbumHorizontalScrollBar</name>
     <member refid="classevab_1_1_pictoset_horizontal_scroll_bar_1a77b5e8a6e8cd8c44f597458474e04e16" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_lamp" kind="class"><name>evab::PictosetLamp</name>
+  <compound refid="classevab_1_1_pictoset_lamp" kind="class"><name>evab::AlbumLamp</name>
     <member refid="classevab_1_1_pictoset_lamp_1a73b97b40491c572b1c61d811a4efee7c" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_lamp_1ab4916467cb9ccaa90d2f36e9fca1ffd8" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_on_off" kind="class"><name>evab::PictosetOnOff</name>
+  <compound refid="classevab_1_1_pictoset_on_off" kind="class"><name>evab::AlbumOnOff</name>
     <member refid="classevab_1_1_pictoset_on_off_1ab96a686e19ab9abc882d3d35e7caf3de" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_on_off_1a4c2f25c92aa51e8e862f2a0c4379f522" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_progress" kind="class"><name>evab::PictosetProgress</name>
+  <compound refid="classevab_1_1_pictoset_progress" kind="class"><name>evab::AlbumProgress</name>
     <member refid="classevab_1_1_pictoset_progress_1a57dadc63a2d661bd6cafbfc13eae4bda" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_progress_1ab6df4dfde8e89733ad963ee7bed507d8" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_rainbowmeter" kind="class"><name>evab::PictosetRainbowmeter</name>
+  <compound refid="classevab_1_1_pictoset_rainbowmeter" kind="class"><name>evab::AlbumRainbowmeter</name>
     <member refid="classevab_1_1_pictoset_rainbowmeter_1a3701a3997c3d49dd6e1591e26adc399c" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_rainbowmeter_1aac1e175e0fcd60e8e7863ab3513552ea" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_roundmeter" kind="class"><name>evab::PictosetRoundmeter</name>
+  <compound refid="classevab_1_1_pictoset_roundmeter" kind="class"><name>evab::AlbumRoundmeter</name>
     <member refid="classevab_1_1_pictoset_roundmeter_1af863daefb65ff061a33c4e959aa004a0" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_roundmeter_1a2c51b4354a87f3bc4695e8a94c78c7d1" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_signal" kind="class"><name>evab::PictosetSignal</name>
+  <compound refid="classevab_1_1_pictoset_signal" kind="class"><name>evab::AlbumSignal</name>
     <member refid="classevab_1_1_pictoset_signal_1a4168563bf6bde0a2dac1b13cafe484cd" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_signal_1a72507fc27621ced3f9a4d92d07d2de29" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_speaker" kind="class"><name>evab::PictosetSpeaker</name>
+  <compound refid="classevab_1_1_pictoset_speaker" kind="class"><name>evab::AlbumSpeaker</name>
     <member refid="classevab_1_1_pictoset_speaker_1a87665ef42e8456a4b78bcbe878d4101e" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_pictoset_speaker_1a657ff2e642f614f6b0b1936496ab0d75" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_vertical_progress_bar" kind="class"><name>evab::PictosetVerticalProgressBar</name>
+  <compound refid="classevab_1_1_pictoset_vertical_progress_bar" kind="class"><name>evab::AlbumVerticalProgressBar</name>
     <member refid="classevab_1_1_pictoset_vertical_progress_bar_1aa7fcfcecba428cb0a5d7b60a94431e41" kind="function"><name>GetTile</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_vertical_scroll_bar" kind="class"><name>evab::PictosetVerticalScrollBar</name>
+  <compound refid="classevab_1_1_pictoset_vertical_scroll_bar" kind="class"><name>evab::AlbumVerticalScrollBar</name>
     <member refid="classevab_1_1_pictoset_vertical_scroll_bar_1ad61f67ba3416d0feb9983053b0f6b439" kind="function"><name>GetTile</name></member>
   </compound>
   <compound refid="structevab_1_1_right_align" kind="struct"><name>evab::RightAlign</name>
@@ -586,9 +586,9 @@
   </compound>
   <compound refid="evab_list_box_8h" kind="file"><name>evabListBox.h</name>
   </compound>
-  <compound refid="evab_pictosets_8h" kind="file"><name>evabPictosets.h</name>
+  <compound refid="evab_pictosets_8h" kind="file"><name>evabAlbums.h</name>
   </compound>
-  <compound refid="evab_pictosets_stretchy_8h" kind="file"><name>evabPictosetsStretchy.h</name>
+  <compound refid="evab_pictosets_stretchy_8h" kind="file"><name>evabAlbumsStretchy.h</name>
   </compound>
   <compound refid="evab_screen_8h" kind="file"><name>evabScreen.h</name>
   </compound>

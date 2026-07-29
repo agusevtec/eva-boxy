@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetVerticalScrollBar
+# Class evab::AlbumVerticalScrollBar
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md)
 
 
 
 _Vertical scroll bar pictogram set._ 
 
-* `#include <evabPictosetsStretchy.h>`
+* `#include <evabAlbumsStretchy.h>`
 
 
 
@@ -90,7 +90,7 @@ _Vertical scroll bar pictogram set._
 
 _Gets pictogram for vertical scroll bar._ 
 ```C++
-static const unsigned char * evab::PictosetVerticalScrollBar::GetTile (
+static const unsigned char * evab::AlbumVerticalScrollBar::GetTile (
     unsigned char blockType,
     unsigned char fillNumber
 ) 
@@ -121,5 +121,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosetsStretchy.h`
+The documentation for this class was generated from the following file `src/evabAlbumsStretchy.h`
 

@@ -27,8 +27,8 @@
     <innerfile refid="evab_labeled_8h">evabLabeled.h</innerfile>
     <innerfile refid="evab_layout_base_8h">evabLayoutBase.h</innerfile>
     <innerfile refid="evab_list_box_8h">evabListBox.h</innerfile>
-    <innerfile refid="evab_pictosets_8h">evabPictosets.h</innerfile>
-    <innerfile refid="evab_pictosets_stretchy_8h">evabPictosetsStretchy.h</innerfile>
+    <innerfile refid="evab_pictosets_8h">evabAlbums.h</innerfile>
+    <innerfile refid="evab_pictosets_stretchy_8h">evabAlbumsStretchy.h</innerfile>
     <innerfile refid="evab_screen_8h">evabScreen.h</innerfile>
     <innerfile refid="evab_screen_k_s0108_8h">evabScreenKS0108.h</innerfile>
     <innerfile refid="evab_screen_l_c_d___i2_c_8h">evabScreenLCD_I2C.h</innerfile>

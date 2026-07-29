@@ -42,19 +42,19 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**LayoutBase**](classevab_1_1_layout_base.md) _Abstract base class for composite elements with circular focus chain._     
     * **struct** [**LeftAlign**](structevab_1_1_left_align.md)     
     * **class** [**ListBox**](classevab_1_1_list_box.md) _List box element with configurable windowing algorithm._     
-    * **class** [**PictosetBattery**](classevab_1_1_pictoset_battery.md) _Battery pictogram set (7 states)._     
-    * **class** [**PictosetFan**](classevab_1_1_pictoset_fan.md) _Fan pictogram set (3 states)._     
-    * **class** [**PictosetHorizontalProgressBar**](classevab_1_1_pictoset_horizontal_progress_bar.md) _Horizontal progress bar pictogram set._     
-    * **class** [**PictosetHorizontalScrollBar**](classevab_1_1_pictoset_horizontal_scroll_bar.md) _Horizontal scroll bar pictogram set._     
-    * **class** [**PictosetLamp**](classevab_1_1_pictoset_lamp.md) _Lamp pictogram set (6 states)._     
-    * **class** [**PictosetOnOff**](classevab_1_1_pictoset_on_off.md) _On/Off pictogram set (2 states)._     
-    * **class** [**PictosetProgress**](classevab_1_1_pictoset_progress.md) _Progress pictogram set (9 states)._     
-    * **class** [**PictosetRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md) _Rainbowmeter pictogram set (7 states)._     
-    * **class** [**PictosetRoundmeter**](classevab_1_1_pictoset_roundmeter.md)     
-    * **class** [**PictosetSignal**](classevab_1_1_pictoset_signal.md) _Signal pictogram set (4 states)._     
-    * **class** [**PictosetSpeaker**](classevab_1_1_pictoset_speaker.md) _Speaker pictogram set (4 states)._     
-    * **class** [**PictosetVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md) _Vertical progress bar pictogram set._     
-    * **class** [**PictosetVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md) _Vertical scroll bar pictogram set._     
+    * **class** [**AlbumBattery**](classevab_1_1_pictoset_battery.md) _Battery pictogram set (7 states)._     
+    * **class** [**AlbumFan**](classevab_1_1_pictoset_fan.md) _Fan pictogram set (3 states)._     
+    * **class** [**AlbumHorizontalProgressBar**](classevab_1_1_pictoset_horizontal_progress_bar.md) _Horizontal progress bar pictogram set._     
+    * **class** [**AlbumHorizontalScrollBar**](classevab_1_1_pictoset_horizontal_scroll_bar.md) _Horizontal scroll bar pictogram set._     
+    * **class** [**AlbumLamp**](classevab_1_1_pictoset_lamp.md) _Lamp pictogram set (6 states)._     
+    * **class** [**AlbumOnOff**](classevab_1_1_pictoset_on_off.md) _On/Off pictogram set (2 states)._     
+    * **class** [**AlbumProgress**](classevab_1_1_pictoset_progress.md) _Progress pictogram set (9 states)._     
+    * **class** [**AlbumRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md) _Rainbowmeter pictogram set (7 states)._     
+    * **class** [**AlbumRoundmeter**](classevab_1_1_pictoset_roundmeter.md)     
+    * **class** [**AlbumSignal**](classevab_1_1_pictoset_signal.md) _Signal pictogram set (4 states)._     
+    * **class** [**AlbumSpeaker**](classevab_1_1_pictoset_speaker.md) _Speaker pictogram set (4 states)._     
+    * **class** [**AlbumVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md) _Vertical progress bar pictogram set._     
+    * **class** [**AlbumVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md) _Vertical scroll bar pictogram set._     
     * **struct** [**RightAlign**](structevab_1_1_right_align.md)     
     * **class** [**Screen**](classevab_1_1_screen.md) _Base class for screen implementations._     
     * **class** [**ScreenKS0108**](classevab_1_1_screen_k_s0108.md) _KS0108-based GLCD screen driver._     

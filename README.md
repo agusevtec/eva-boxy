@@ -93,15 +93,15 @@ void loop() {
 
 | Tile Set | Count | Size | Use Case |
 |----------|-------|------|----------|
-| `PictosetOnOff` | 2 | 16×8 | Toggle states |
-| `PictosetBattery` | 7 | 16×8 | Battery level |
-| `PictosetSignal` | 4 | 16×8 | Signal strength |
-| `PictosetLamp` | 6 | 16×16 | Lamp brightness |
-| `PictosetProgress` | 9 | 16×16 | Progress indicator |
-| `PictosetSpeaker` | 4 | 16×16 | Audio states |
-| `PictosetFan` | 3 | 24×24 | Fan animation |
-| `PictosetRoundmeter` | 9 | 32×24 | Circular gauge |
-| `PictosetRainbowmeter` | 7 | 32×16 | Color gradient |
+| `AlbumOnOff` | 2 | 16×8 | Toggle states |
+| `AlbumBattery` | 7 | 16×8 | Battery level |
+| `AlbumSignal` | 4 | 16×8 | Signal strength |
+| `AlbumLamp` | 6 | 16×16 | Lamp brightness |
+| `AlbumProgress` | 9 | 16×16 | Progress indicator |
+| `AlbumSpeaker` | 4 | 16×16 | Audio states |
+| `AlbumFan` | 3 | 24×24 | Fan animation |
+| `AlbumRoundmeter` | 9 | 32×24 | Circular gauge |
+| `AlbumRainbowmeter` | 7 | 32×16 | Color gradient |
 
 ### Key Codes
 

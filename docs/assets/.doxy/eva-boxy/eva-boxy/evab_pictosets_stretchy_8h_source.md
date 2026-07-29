@@ -1,8 +1,8 @@
 
 
-# File evabPictosetsStretchy.h
+# File evabAlbumsStretchy.h
 
-[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabPictosetsStretchy.h**](evab_pictosets_stretchy_8h.md)
+[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabAlbumsStretchy.h**](evab_pictosets_stretchy_8h.md)
 
 [Go to the documentation of this file](evab_pictosets_stretchy_8h.md)
 
@@ -12,25 +12,25 @@
 
 namespace evab
 {
-    class PictosetVerticalProgressBar
+    class AlbumVerticalProgressBar
     {
         public:
         static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
-    class PictosetHorizontalProgressBar
+    class AlbumHorizontalProgressBar
     {
         public:
         static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
-    class PictosetVerticalScrollBar
+    class AlbumVerticalScrollBar
     {
         public:
         static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
-    class PictosetHorizontalScrollBar
+    class AlbumHorizontalScrollBar
     {
         public:
         static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);

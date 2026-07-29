@@ -1163,7 +1163,7 @@
 <h2 id="inputpicto-controls">InputPicto Controls<a class="headerlink" href="#inputpicto-controls" title="Permanent link">&para;</a></h2>
 <p>InputPicto displays graphical icons from tile sets. <strong>Resize is not supported</strong> - picto tiles have fixed dimensions.</p>
 <h3 id="tile-set-usage">Tile Set Usage<a class="headerlink" href="#tile-set-usage" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabPictosets.h&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabAlbums.h&gt;</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">InputPicto</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ElementBase</span><span class="w"> </span><span class="p">{</span>
 <span class="k">private</span><span class="o">:</span>
@@ -1201,55 +1201,55 @@
 </thead>
 <tbody>
 <tr>
-<td><code>PictosetOnOff</code></td>
+<td><code>AlbumOnOff</code></td>
 <td>2</td>
 <td>16×8</td>
 <td>On/off indicator</td>
 </tr>
 <tr>
-<td><code>PictosetRainbowmeter</code></td>
+<td><code>AlbumRainbowmeter</code></td>
 <td>7</td>
 <td>32×16</td>
 <td>Rainbow gradient</td>
 </tr>
 <tr>
-<td><code>PictosetRoundmeter</code></td>
+<td><code>AlbumRoundmeter</code></td>
 <td>9</td>
 <td>32×24</td>
 <td>Circular gauge</td>
 </tr>
 <tr>
-<td><code>PictosetFan</code></td>
+<td><code>AlbumFan</code></td>
 <td>3</td>
 <td>24×24</td>
 <td>Fan animation</td>
 </tr>
 <tr>
-<td><code>PictosetBattery</code></td>
+<td><code>AlbumBattery</code></td>
 <td>7</td>
 <td>16×8</td>
 <td>Battery indicator</td>
 </tr>
 <tr>
-<td><code>PictosetLamp</code></td>
+<td><code>AlbumLamp</code></td>
 <td>6</td>
 <td>16×16</td>
 <td>Lamp status</td>
 </tr>
 <tr>
-<td><code>PictosetProgress</code></td>
+<td><code>AlbumProgress</code></td>
 <td>9</td>
 <td>16×16</td>
 <td>Progress indicator</td>
 </tr>
 <tr>
-<td><code>PictosetSpeaker</code></td>
+<td><code>AlbumSpeaker</code></td>
 <td>4</td>
 <td>16×16</td>
 <td>Speaker states</td>
 </tr>
 <tr>
-<td><code>PictosetSignal</code></td>
+<td><code>AlbumSignal</code></td>
 <td>4</td>
 <td>16×8</td>
 <td>Signal meter</td>
@@ -1272,7 +1272,7 @@
 <span class="k">protected</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">focused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// No resize - uses fixed 16×8 tile</span>
-<span class="w">        </span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">Picto</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">PictosetBattery</span><span class="o">::</span><span class="n">GetTile</span><span class="p">(</span><span class="n">mLevel</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">Picto</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">AlbumBattery</span><span class="o">::</span><span class="n">GetTile</span><span class="p">(</span><span class="n">mLevel</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 
@@ -1336,7 +1336,7 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputInt.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputFloat.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLabeled.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabPictosets.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabAlbums.h&gt;</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">MyComposite</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">CompositeBase</span><span class="w"> </span><span class="p">{</span>
 <span class="k">private</span><span class="o">:</span>

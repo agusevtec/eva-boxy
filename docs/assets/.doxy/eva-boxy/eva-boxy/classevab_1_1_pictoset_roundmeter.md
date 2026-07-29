@@ -1,10 +1,10 @@
 
 
-# Class evab::PictosetRoundmeter
+# Class evab::AlbumRoundmeter
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetRoundmeter**](classevab_1_1_pictoset_roundmeter.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumRoundmeter**](classevab_1_1_pictoset_roundmeter.md)
 
 
 
@@ -93,7 +93,7 @@
 ### variable Count 
 
 ```C++
-unsigned char evab::PictosetRoundmeter::Count;
+unsigned char evab::AlbumRoundmeter::Count;
 ```
 
 
@@ -108,7 +108,7 @@ unsigned char evab::PictosetRoundmeter::Count;
 ### function GetTile 
 
 ```C++
-static const unsigned char * evab::PictosetRoundmeter::GetTile (
+static const unsigned char * evab::AlbumRoundmeter::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -119,5 +119,5 @@ static const unsigned char * evab::PictosetRoundmeter::GetTile (
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

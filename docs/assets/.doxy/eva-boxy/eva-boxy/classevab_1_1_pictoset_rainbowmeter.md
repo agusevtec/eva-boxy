@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetRainbowmeter
+# Class evab::AlbumRainbowmeter
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md)
 
 
 
 _Rainbowmeter pictogram set (7 states)._ 
 
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 
 
 
@@ -95,7 +95,7 @@ _Rainbowmeter pictogram set (7 states)._
 
 _Number of pictograms._ 
 ```C++
-unsigned char evab::PictosetRainbowmeter::Count;
+unsigned char evab::AlbumRainbowmeter::Count;
 ```
 
 
@@ -111,7 +111,7 @@ unsigned char evab::PictosetRainbowmeter::Count;
 
 _Gets pictogram by index._ 
 ```C++
-static const unsigned char * evab::PictosetRainbowmeter::GetTile (
+static const unsigned char * evab::AlbumRainbowmeter::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -140,5 +140,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

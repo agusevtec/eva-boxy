@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetLamp
+# Class evab::AlbumLamp
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetLamp**](classevab_1_1_pictoset_lamp.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumLamp**](classevab_1_1_pictoset_lamp.md)
 
 
 
 _Lamp pictogram set (6 states)._ 
 
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 
 
 
@@ -95,7 +95,7 @@ _Lamp pictogram set (6 states)._
 
 _Number of pictograms._ 
 ```C++
-unsigned char evab::PictosetLamp::Count;
+unsigned char evab::AlbumLamp::Count;
 ```
 
 
@@ -111,7 +111,7 @@ unsigned char evab::PictosetLamp::Count;
 
 _Gets pictogram by index._ 
 ```C++
-static const unsigned char * evab::PictosetLamp::GetTile (
+static const unsigned char * evab::AlbumLamp::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -140,5 +140,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

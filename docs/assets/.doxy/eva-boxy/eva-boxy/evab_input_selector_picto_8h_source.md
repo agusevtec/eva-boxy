@@ -14,18 +14,18 @@
 namespace evab
 {
 
-    template <class TPictoset>
+    template <class TAlbum>
     class InputSelectorPicto : public ElementBase
     {
     public:
         InputSelectorPicto(int aValue = 0)
         {
-            mValue = constrain(aValue, 0, TPictoset::Count - 1);
+            mValue = constrain(aValue, 0, TAlbum::Count - 1);
         }
         
         void SetValue(int aValue)
         {
-            mValue = constrain(aValue, 0, TPictoset::Count - 1);
+            mValue = constrain(aValue, 0, TAlbum::Count - 1);
             Redraw();
         }
         
@@ -36,12 +36,12 @@ namespace evab
 
         void SetValuePercent(int aValue)
         {
-            SetValue(map(aValue, 0, 100, 0, TPictoset::Count - 1));
+            SetValue(map(aValue, 0, 100, 0, TAlbum::Count - 1));
         }
 
         signed char GetValuePercent() const
         {
-            return map(mValue, 0, TPictoset::Count - 1, 0, 100);
+            return map(mValue, 0, TAlbum::Count - 1, 0, 100);
         }
 
         void Increment(signed char delta)
@@ -52,7 +52,7 @@ namespace evab
     protected:
         void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
-            aScreen->Picto(aPos, TPictoset::GetTile(mValue), aIsFocused);
+            aScreen->Picto(aPos, TAlbum::GetTile(mValue), aIsFocused);
         }
 
     private:

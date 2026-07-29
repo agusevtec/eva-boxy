@@ -2,7 +2,7 @@
 
 # Class evab::InputSelectorPicto
 
-**template &lt;class TPictoset&gt;**
+**template &lt;class TAlbum&gt;**
 
 
 
@@ -172,7 +172,7 @@ Displays a pictogram from a pictoset and manages its index value.
 **Template parameters:**
 
 
-* `TPictoset` Pictoset class providing pictogram data and count 
+* `TAlbum` Album class providing pictogram data and count 
 
 
 
@@ -276,7 +276,7 @@ inline evab::InputSelectorPicto::InputSelectorPicto (
 **Parameters:**
 
 
-* `aValue` Initial pictogram index (0 to TPictoset::Count - 1) 
+* `aValue` Initial pictogram index (0 to TAlbum::Count - 1) 
 
 
 

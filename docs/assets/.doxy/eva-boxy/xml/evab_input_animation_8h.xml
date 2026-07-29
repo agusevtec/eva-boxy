@@ -3,7 +3,7 @@
   <compounddef id="evab_input_animation_8h" kind="file" language="C++">
     <compoundname>evabInputAnimation.h</compoundname>
     <includes refid="evab_element_base_8h" local="no">evabElementBase.h</includes>
-    <includes refid="evab_pictosets_8h" local="no">evabPictosets.h</includes>
+    <includes refid="evab_pictosets_8h" local="no">evabAlbums.h</includes>
     <includes local="no">evaTickable.h</includes>
     <incdepgraph>
       <node id="5">
@@ -38,7 +38,7 @@
         <link refid="evab_keys_8h_source"/>
       </node>
       <node id="9">
-        <label>evabPictosets.h</label>
+        <label>evabAlbums.h</label>
         <link refid="evab_pictosets_8h_source"/>
       </node>
       <node id="4">
@@ -81,13 +81,13 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabElementBase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabPictosets.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabAlbums.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evaTickable.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
 <codeline lineno="8"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TPictoset,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tMaxSpeed<sp/>=<sp/>10&gt;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TAlbum,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tMaxSpeed<sp/>=<sp/>10&gt;</highlight></codeline>
 <codeline lineno="31" refid="classevab_1_1_input_animation" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_input_animation_1a7cc0d5e55320b800047a278a4fdf295a" kindref="member">InputAnimation</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref>,<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>eva::Tickable</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(tMaxSpeed<sp/>&gt;<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;tMaxSpeed<sp/>must<sp/>be<sp/>greater<sp/>than<sp/>0&quot;</highlight><highlight class="normal">);</highlight></codeline>
@@ -140,7 +140,7 @@
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLastFrameTime<sp/>=<sp/>millis();</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aScreen-&gt;Picto(aPos,<sp/>TPictoset::GetTile(mCurrentFrame),<sp/>aIsFocused);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aScreen-&gt;Picto(aPos,<sp/>TAlbum::GetTile(mCurrentFrame),<sp/>aIsFocused);</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
 <codeline lineno="132" refid="classevab_1_1_input_animation_1a065bfe875ab4c8273d2ff0c30ddd6015" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_animation_1a065bfe875ab4c8273d2ff0c30ddd6015" kindref="member">hider</ref>()</highlight><highlight class="keyword"><sp/>override</highlight></codeline>
@@ -160,7 +160,7 @@
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(now<sp/>-<sp/>mLastFrameTime<sp/>&gt;=<sp/>frameDelay)</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mLastFrameTime<sp/>=<sp/>now;</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mCurrentFrame<sp/>=<sp/>(mCurrentFrame<sp/>+<sp/>1)<sp/>%<sp/>TPictoset::Count;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mCurrentFrame<sp/>=<sp/>(mCurrentFrame<sp/>+<sp/>1)<sp/>%<sp/>TAlbum::Count;</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" kindref="member">Redraw</ref>();</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>

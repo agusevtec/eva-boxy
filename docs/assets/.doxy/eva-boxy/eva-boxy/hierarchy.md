@@ -47,19 +47,19 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::Font8Narrow**](classevab_1_1_font8_narrow.md) _8x8 thin font implementation_ 
 * **class** [**evab::Grid**](classevab_1_1_grid.md) _Layout manager for grid-based UI arrangement._ 
 * **class** [**evab::IFocusChain**](classevab_1_1_i_focus_chain.md) 
-* **class** [**evab::PictosetBattery**](classevab_1_1_pictoset_battery.md) _Battery pictogram set (7 states)._ 
-* **class** [**evab::PictosetFan**](classevab_1_1_pictoset_fan.md) _Fan pictogram set (3 states)._ 
-* **class** [**evab::PictosetHorizontalProgressBar**](classevab_1_1_pictoset_horizontal_progress_bar.md) _Horizontal progress bar pictogram set._ 
-* **class** [**evab::PictosetHorizontalScrollBar**](classevab_1_1_pictoset_horizontal_scroll_bar.md) _Horizontal scroll bar pictogram set._ 
-* **class** [**evab::PictosetLamp**](classevab_1_1_pictoset_lamp.md) _Lamp pictogram set (6 states)._ 
-* **class** [**evab::PictosetOnOff**](classevab_1_1_pictoset_on_off.md) _On/Off pictogram set (2 states)._ 
-* **class** [**evab::PictosetProgress**](classevab_1_1_pictoset_progress.md) _Progress pictogram set (9 states)._ 
-* **class** [**evab::PictosetRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md) _Rainbowmeter pictogram set (7 states)._ 
-* **class** [**evab::PictosetRoundmeter**](classevab_1_1_pictoset_roundmeter.md) 
-* **class** [**evab::PictosetSignal**](classevab_1_1_pictoset_signal.md) _Signal pictogram set (4 states)._ 
-* **class** [**evab::PictosetSpeaker**](classevab_1_1_pictoset_speaker.md) _Speaker pictogram set (4 states)._ 
-* **class** [**evab::PictosetVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md) _Vertical progress bar pictogram set._ 
-* **class** [**evab::PictosetVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md) _Vertical scroll bar pictogram set._ 
+* **class** [**evab::AlbumBattery**](classevab_1_1_pictoset_battery.md) _Battery pictogram set (7 states)._ 
+* **class** [**evab::AlbumFan**](classevab_1_1_pictoset_fan.md) _Fan pictogram set (3 states)._ 
+* **class** [**evab::AlbumHorizontalProgressBar**](classevab_1_1_pictoset_horizontal_progress_bar.md) _Horizontal progress bar pictogram set._ 
+* **class** [**evab::AlbumHorizontalScrollBar**](classevab_1_1_pictoset_horizontal_scroll_bar.md) _Horizontal scroll bar pictogram set._ 
+* **class** [**evab::AlbumLamp**](classevab_1_1_pictoset_lamp.md) _Lamp pictogram set (6 states)._ 
+* **class** [**evab::AlbumOnOff**](classevab_1_1_pictoset_on_off.md) _On/Off pictogram set (2 states)._ 
+* **class** [**evab::AlbumProgress**](classevab_1_1_pictoset_progress.md) _Progress pictogram set (9 states)._ 
+* **class** [**evab::AlbumRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md) _Rainbowmeter pictogram set (7 states)._ 
+* **class** [**evab::AlbumRoundmeter**](classevab_1_1_pictoset_roundmeter.md) 
+* **class** [**evab::AlbumSignal**](classevab_1_1_pictoset_signal.md) _Signal pictogram set (4 states)._ 
+* **class** [**evab::AlbumSpeaker**](classevab_1_1_pictoset_speaker.md) _Speaker pictogram set (4 states)._ 
+* **class** [**evab::AlbumVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md) _Vertical progress bar pictogram set._ 
+* **class** [**evab::AlbumVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md) _Vertical scroll bar pictogram set._ 
 * **class** [**evab::Screen**](classevab_1_1_screen.md) _Base class for screen implementations._     
     * **class** [**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) _I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._ 
     * **class** [**evab::ScreenPage8Base**](classevab_1_1_screen_page8_base.md) _Base class for page-based 8-bit screens._     

@@ -57,7 +57,7 @@ InputPicto displays graphical icons from tile sets. **Resize is not supported** 
 ### Tile Set Usage
 
 ```cpp
-#include <evabPictosets.h>
+#include <evabAlbums.h>
 
 class InputPicto : public ElementBase {
 private:
@@ -87,15 +87,15 @@ protected:
 
 | Tile Set | Tile Count | Tile Size | Usage |
 |----------|------------|-----------|-------|
-| `PictosetOnOff` | 2 | 16×8 | On/off indicator |
-| `PictosetRainbowmeter` | 7 | 32×16 | Rainbow gradient |
-| `PictosetRoundmeter` | 9 | 32×24 | Circular gauge |
-| `PictosetFan` | 3 | 24×24 | Fan animation |
-| `PictosetBattery` | 7 | 16×8 | Battery indicator |
-| `PictosetLamp` | 6 | 16×16 | Lamp status |
-| `PictosetProgress` | 9 | 16×16 | Progress indicator |
-| `PictosetSpeaker` | 4 | 16×16 | Speaker states |
-| `PictosetSignal` | 4 | 16×8 | Signal meter |
+| `AlbumOnOff` | 2 | 16×8 | On/off indicator |
+| `AlbumRainbowmeter` | 7 | 32×16 | Rainbow gradient |
+| `AlbumRoundmeter` | 9 | 32×24 | Circular gauge |
+| `AlbumFan` | 3 | 24×24 | Fan animation |
+| `AlbumBattery` | 7 | 16×8 | Battery indicator |
+| `AlbumLamp` | 6 | 16×16 | Lamp status |
+| `AlbumProgress` | 9 | 16×16 | Progress indicator |
+| `AlbumSpeaker` | 4 | 16×16 | Speaker states |
+| `AlbumSignal` | 4 | 16×8 | Signal meter |
 
 ### InputPicto Example
 
@@ -115,7 +115,7 @@ public:
 protected:
     void drawer(Screen *screen, Coor pos, Coor size, unsigned char focused) override {
         // No resize - uses fixed 16×8 tile
-        screen->Picto(pos, PictosetBattery::GetTile(mLevel), 0);
+        screen->Picto(pos, AlbumBattery::GetTile(mLevel), 0);
     }
 };
 
@@ -192,7 +192,7 @@ height.Draw(screen, {0, 4}, {16, 1}, 0);   // Single line with flash label
 #include <evabInputInt.h>
 #include <evabInputFloat.h>
 #include <evabLabeled.h>
-#include <evabPictosets.h>
+#include <evabAlbums.h>
 
 class MyComposite : public CompositeBase {
 private:

@@ -15,9 +15,9 @@
 #include <evabLayoutBase.h>
 #include <evabLabeled.h>
 #include <evabInputAnimation.h>
-#include <evabPictosets.h>
+#include <evabAlbums.h>
 #include <evabCompositeBase.h>
-#include <evabInputSelectorPicto.h>
+#include <evabInputSelectorAlbum.h>
 #include <evabInputInt.h>
 #include <evabInputFloat.h>
 #include <evabGrid.h>
@@ -59,8 +59,8 @@ private:
 
 class UIMonitoringForm : public ElementBase {
   IHandler *mLeaveHandler;
-  InputAnimation<PictosetFan> mFanIndicator{ 2 };
-  InputSelectorPicto<PictosetRoundmeter> mMeterIndicator{ 2 };
+  InputAnimation<AlbumFan> mFanIndicator{ 2 };
+  InputSelectorAlbum<AlbumRoundmeter> mMeterIndicator{ 2 };
 
 public:
   UIMonitoringForm(IHandler *aLeaveHandler)

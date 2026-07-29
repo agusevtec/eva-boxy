@@ -3,7 +3,7 @@
   <compounddef id="evab_input_text_stretch_bar_8h" kind="file" language="C++">
     <compoundname>evabInputTextStretchBar.h</compoundname>
     <includes refid="evab_element_base_8h" local="no">evabElementBase.h</includes>
-    <includes refid="evab_pictosets_stretchy_8h" local="no">evabPictosetsStretchy.h</includes>
+    <includes refid="evab_pictosets_stretchy_8h" local="no">evabAlbumsStretchy.h</includes>
     <incdepgraph>
       <node id="5">
         <label>Arduino.h</label>
@@ -35,7 +35,7 @@
         <link refid="evab_keys_8h_source"/>
       </node>
       <node id="9">
-        <label>evabPictosetsStretchy.h</label>
+        <label>evabAlbumsStretchy.h</label>
         <link refid="evab_pictosets_stretchy_8h_source"/>
       </node>
       <node id="4">
@@ -80,7 +80,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabElementBase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabPictosetsStretchy.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabAlbumsStretchy.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
 <codeline lineno="6"><highlight class="normal">{</highlight></codeline>
@@ -188,7 +188,7 @@
 <codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TPictoset,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OrientationTextPolicy&gt;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TAlbum,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OrientationTextPolicy&gt;</highlight></codeline>
 <codeline lineno="204" refid="classevab_1_1_input_text_stretch_bar" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_input_text_stretch_bar_1ab4e3f6400340b440effe4a826337a737" kindref="member">InputTextStretchBar</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref></highlight></codeline>
 <codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
@@ -223,7 +223,7 @@
 <codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aScreen-&gt;DrawSymbol(</highlight></codeline>
 <codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OrientationTextPolicy::GetTilePosition(aPos,<sp/>aSize,<sp/>i,<sp/>totalBlocks),</highlight></codeline>
 <codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{1,<sp/>1},</highlight></codeline>
-<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TPictoset::GetChar(blockFill(i,<sp/>normalizedValue)),</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAlbum::GetChar(blockFill(i,<sp/>normalizedValue)),</highlight></codeline>
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aIsFocused);</highlight></codeline>
 <codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>

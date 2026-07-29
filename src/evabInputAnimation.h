@@ -1,7 +1,7 @@
 #pragma once
 
 #include <evabElementBase.h>
-#include <evabPictosets.h>
+#include <evabAlbums.h>
 #include <evaTickable.h>
 
 namespace evab
@@ -21,13 +21,13 @@ namespace evab
      *
      * Redraws occur only on timer ticks to maintain consistent animation timing.
      *
-     * @tparam TPictoset Pictoset class providing pictogram data and count
+     * @tparam TAlbum Album class providing pictogram data and count
      * @tparam tMaxSpeed Maximum speed value (must be > 0)
      *
      * @see InputPictogram For static pictogram selection
      * @see eva::Tickable Base class for periodic updates
      */
-    template <class TPictoset, unsigned char tMaxSpeed = 10>
+    template <class TAlbum, unsigned char tMaxSpeed = 10>
     class InputAnimation : public ElementBase, private eva::Tickable
     {
         static_assert(tMaxSpeed > 0, "tMaxSpeed must be greater than 0");
@@ -123,7 +123,7 @@ namespace evab
                 mLastFrameTime = millis();
             }
 
-            aScreen->Picto(aPos, TPictoset::GetTile(mCurrentFrame), aIsFocused);
+            aScreen->Picto(aPos, TAlbum::GetTile(mCurrentFrame), aIsFocused);
         }
 
         /**
@@ -153,7 +153,7 @@ namespace evab
             if (now - mLastFrameTime >= frameDelay)
             {
                 mLastFrameTime = now;
-                mCurrentFrame = (mCurrentFrame + 1) % TPictoset::Count;
+                mCurrentFrame = (mCurrentFrame + 1) % TAlbum::Count;
                 Redraw();
             }
         }

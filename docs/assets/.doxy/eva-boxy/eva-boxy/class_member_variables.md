@@ -5,7 +5,7 @@
 
 ## c
 
-* **Count** ([**evab::PictosetBattery**](classevab_1_1_pictoset_battery.md), [**evab::PictosetFan**](classevab_1_1_pictoset_fan.md), [**evab::PictosetLamp**](classevab_1_1_pictoset_lamp.md), [**evab::PictosetOnOff**](classevab_1_1_pictoset_on_off.md), [**evab::PictosetProgress**](classevab_1_1_pictoset_progress.md), [**evab::PictosetRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md), [**evab::PictosetRoundmeter**](classevab_1_1_pictoset_roundmeter.md), [**evab::PictosetSignal**](classevab_1_1_pictoset_signal.md), [**evab::PictosetSpeaker**](classevab_1_1_pictoset_speaker.md))
+* **Count** ([**evab::AlbumBattery**](classevab_1_1_pictoset_battery.md), [**evab::AlbumFan**](classevab_1_1_pictoset_fan.md), [**evab::AlbumLamp**](classevab_1_1_pictoset_lamp.md), [**evab::AlbumOnOff**](classevab_1_1_pictoset_on_off.md), [**evab::AlbumProgress**](classevab_1_1_pictoset_progress.md), [**evab::AlbumRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md), [**evab::AlbumRoundmeter**](classevab_1_1_pictoset_roundmeter.md), [**evab::AlbumSignal**](classevab_1_1_pictoset_signal.md), [**evab::AlbumSpeaker**](classevab_1_1_pictoset_speaker.md))
 * **CMD\_DISP\_CTRL** ([**evab::ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md))
 * **CMD\_FUNC\_SET** ([**evab::ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md))
 * **CMD\_SET\_VOP** ([**evab::ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md))

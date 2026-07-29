@@ -10,7 +10,7 @@
 ```C++
 #pragma once
 #include <evabElementBase.h>
-#include <evabPictosetsStretchy.h>
+#include <evabAlbumsStretchy.h>
 
 namespace evab
 {
@@ -118,7 +118,7 @@ namespace evab
         }
     };
 
-    template <typename TPictoset, typename OrientationTextPolicy>
+    template <typename TAlbum, typename OrientationTextPolicy>
     class InputTextStretchBar : public ElementBase
     {
     public:
@@ -153,7 +153,7 @@ namespace evab
                 aScreen->DrawSymbol(
                     OrientationTextPolicy::GetTilePosition(aPos, aSize, i, totalBlocks),
                     {1, 1},
-                    TPictoset::GetChar(blockFill(i, normalizedValue)),
+                    TAlbum::GetChar(blockFill(i, normalizedValue)),
                     aIsFocused);
             }
         }

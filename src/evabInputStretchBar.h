@@ -1,14 +1,14 @@
 #pragma once
 
 #include <evabElementBase.h>
-#include <evabPictosetsStretchy.h>
+#include <evabAlbumsStretchy.h>
 
 namespace evab
 {
     /**
      * @brief Policy for vertical orientation of stretch bars
      */
-    struct VerticalPictoPolicy
+    struct VerticalAlbumPolicy
     {
         /**
          * @brief Calculates total number of blocks
@@ -50,7 +50,7 @@ namespace evab
     /**
      * @brief Policy for horizontal orientation of stretch bars
      */
-    struct HorizontalPictoPolicy
+    struct HorizontalAlbumPolicy
     {
         /**
          * @brief Calculates total number of blocks
@@ -90,14 +90,14 @@ namespace evab
     };
 
     /**
-     * @brief Stretch bar input element with pictogram support
+     * @brief Stretch bar input element with Albumgram support
      *
-     * Displays a progress/scroll bar using pictograms with variable fill levels.
+     * Displays a progress/scroll bar using Albumgrams with variable fill levels.
      *
-     * @tparam TPictoset Pictoset class providing pictogram data
-     * @tparam OrientationPictoPolicy Policy for orientation (vertical/horizontal)
+     * @tparam TAlbumStretchy Album class providing Albumgram data
+     * @tparam OrientationAlbumPolicy Policy for orientation (vertical/horizontal)
      */
-    template <typename TPictoset, typename OrientationPictoPolicy>
+    template <typename TAlbumStretchy, typename OrientationAlbumPolicy>
     class InputStretchBar : public ElementBase
     {
     public:
@@ -145,29 +145,29 @@ namespace evab
          */
         void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
-            unsigned short resolution = OrientationPictoPolicy::CalculateResolution(aSize);
+            unsigned short resolution = OrientationAlbumPolicy::CalculateResolution(aSize);
             unsigned short normalizedValue = map(mValue, 0, 100, 0, resolution);
-            unsigned char totalBlocks = OrientationPictoPolicy::CalculateTotalBlocks(aSize);
+            unsigned char totalBlocks = OrientationAlbumPolicy::CalculateTotalBlocks(aSize);
 
             if (totalBlocks < 2)
                 return;
 
-            aScreen->Picto(
-                OrientationPictoPolicy::GetTilePosition(aPos, aSize, 0, totalBlocks),
-                TPictoset::GetTile(START_BLOCK, blockFill(0, normalizedValue)),
+            aScreen->Album(
+                OrientationAlbumPolicy::GetTilePosition(aPos, aSize, 0, totalBlocks),
+                TAlbumStretchy::GetTile(START_BLOCK, blockFill(0, normalizedValue)),
                 aIsFocused);
 
             for (unsigned char i = 1; i < totalBlocks - 1; i++)
             {
-                aScreen->Picto(
-                    OrientationPictoPolicy::GetTilePosition(aPos, aSize, i, totalBlocks),
-                    TPictoset::GetTile(MIDDLE_BLOCK, blockFill(i, normalizedValue)),
+                aScreen->Album(
+                    OrientationAlbumPolicy::GetTilePosition(aPos, aSize, i, totalBlocks),
+                    TAlbumStretchy::GetTile(MIDDLE_BLOCK, blockFill(i, normalizedValue)),
                     aIsFocused);
             }
 
-            aScreen->Picto(
-                OrientationPictoPolicy::GetTilePosition(aPos, aSize, totalBlocks - 1, totalBlocks),
-                TPictoset::GetTile(END_BLOCK, blockFill(totalBlocks - 1, normalizedValue)),
+            aScreen->Album(
+                OrientationAlbumPolicy::GetTilePosition(aPos, aSize, totalBlocks - 1, totalBlocks),
+                TAlbumStretchy::GetTile(END_BLOCK, blockFill(totalBlocks - 1, normalizedValue)),
                 aIsFocused);
         }
 
@@ -197,8 +197,8 @@ namespace evab
     };
 
     // Convenience typedefs for common stretch bar types
-    using VerticalProgressBar = InputStretchBar<PictosetVerticalProgressBar, VerticalPictoPolicy>;
-    using HorizontalProgressBar = InputStretchBar<PictosetHorizontalProgressBar, HorizontalPictoPolicy>;
-    using VerticalScrollBar = InputStretchBar<PictosetVerticalScrollBar, VerticalPictoPolicy>;
-    using HorizontalScrollBar = InputStretchBar<PictosetHorizontalScrollBar, HorizontalPictoPolicy>;
+    using VerticalProgressBar = InputStretchBar<AlbumStretchyVerticalProgressBar, VerticalAlbumPolicy>;
+    using HorizontalProgressBar = InputStretchBar<AlbumStretchyHorizontalProgressBar, HorizontalAlbumPolicy>;
+    using VerticalScrollBar = InputStretchBar<AlbumStretchyVerticalScrollBar, VerticalAlbumPolicy>;
+    using HorizontalScrollBar = InputStretchBar<AlbumStretchyHorizontalScrollBar, HorizontalAlbumPolicy>;
 }

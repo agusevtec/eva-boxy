@@ -2,7 +2,7 @@
 
 # Class evab::InputStretchBar
 
-**template &lt;typename TPictoset, typename OrientationPictoPolicy&gt;**
+**template &lt;typename TAlbum, typename OrientationPictoPolicy&gt;**
 
 
 
@@ -169,7 +169,7 @@ Displays a progress/scroll bar using pictograms with variable fill levels.
 **Template parameters:**
 
 
-* `TPictoset` Pictoset class providing pictogram data 
+* `TAlbum` Album class providing pictogram data 
 * `OrientationPictoPolicy` Policy for orientation (vertical/horizontal) 
 
 

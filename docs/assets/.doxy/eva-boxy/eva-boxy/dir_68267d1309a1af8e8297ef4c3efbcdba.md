@@ -46,8 +46,8 @@
 | file | [**evabLabeled.h**](evab_labeled_8h.md) <br> |
 | file | [**evabLayoutBase.h**](evab_layout_base_8h.md) <br> |
 | file | [**evabListBox.h**](evab_list_box_8h.md) <br> |
-| file | [**evabPictosets.h**](evab_pictosets_8h.md) <br> |
-| file | [**evabPictosetsStretchy.h**](evab_pictosets_stretchy_8h.md) <br> |
+| file | [**evabAlbums.h**](evab_pictosets_8h.md) <br> |
+| file | [**evabAlbumsStretchy.h**](evab_pictosets_stretchy_8h.md) <br> |
 | file | [**evabScreen.h**](evab_screen_8h.md) <br> |
 | file | [**evabScreenKS0108.h**](evab_screen_k_s0108_8h.md) <br> |
 | file | [**evabScreenLCD\_I2C.h**](evab_screen_l_c_d___i2_c_8h.md) <br> |

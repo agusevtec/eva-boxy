@@ -10,7 +10,7 @@
 // #include <evabInputTextStretchbar.h>
 // #include <evabInputSelectorPicto.h>
 // #include <evabInputTextStretchBar.h>
-// #include <evabPictosets.h>
+// #include <evabAlbums.h>
 // #include <evabGalleryRemixicon16.h>
 
 using namespace evab;
@@ -25,10 +25,10 @@ using namespace evab;
 // };
 
 // class MyContainer : public LayoutPane {
-//   InputPictoSelector<PictosetBattery> mBattery;
-//   InputPictoSelector<PictosetSignal> mSignal;
+//   InputPictoSelector<AlbumBattery> mBattery;
+//   InputPictoSelector<AlbumSignal> mSignal;
 //   KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
-//   InputAnimation<PictosetRainbowmeter, 10> mFan = {1};
+//   InputAnimation<AlbumRainbowmeter, 10> mFan = {1};
 
 // public:
 //   MyContainer() {

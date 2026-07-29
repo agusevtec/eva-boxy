@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetOnOff
+# Class evab::AlbumOnOff
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetOnOff**](classevab_1_1_pictoset_on_off.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumOnOff**](classevab_1_1_pictoset_on_off.md)
 
 
 
 _On/Off pictogram set (2 states)._ 
 
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 
 
 
@@ -95,7 +95,7 @@ _On/Off pictogram set (2 states)._
 
 _Number of pictograms._ 
 ```C++
-unsigned char evab::PictosetOnOff::Count;
+unsigned char evab::AlbumOnOff::Count;
 ```
 
 
@@ -111,7 +111,7 @@ unsigned char evab::PictosetOnOff::Count;
 
 _Gets pictogram by index._ 
 ```C++
-static const unsigned char * evab::PictosetOnOff::GetTile (
+static const unsigned char * evab::AlbumOnOff::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -140,5 +140,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

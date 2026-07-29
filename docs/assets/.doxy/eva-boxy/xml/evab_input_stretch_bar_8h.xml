@@ -3,7 +3,7 @@
   <compounddef id="evab_input_stretch_bar_8h" kind="file" language="C++">
     <compoundname>evabInputStretchBar.h</compoundname>
     <includes refid="evab_element_base_8h" local="no">evabElementBase.h</includes>
-    <includes refid="evab_pictosets_stretchy_8h" local="no">evabPictosetsStretchy.h</includes>
+    <includes refid="evab_pictosets_stretchy_8h" local="no">evabAlbumsStretchy.h</includes>
     <incdepgraph>
       <node id="5">
         <label>Arduino.h</label>
@@ -35,7 +35,7 @@
         <link refid="evab_keys_8h_source"/>
       </node>
       <node id="9">
-        <label>evabPictosetsStretchy.h</label>
+        <label>evabAlbumsStretchy.h</label>
         <link refid="evab_pictosets_stretchy_8h_source"/>
       </node>
       <node id="4">
@@ -77,7 +77,7 @@
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabElementBase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabPictosetsStretchy.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabAlbumsStretchy.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">{</highlight></codeline>
@@ -117,7 +117,7 @@
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TPictoset,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OrientationPictoPolicy&gt;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TAlbum,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>OrientationPictoPolicy&gt;</highlight></codeline>
 <codeline lineno="101" refid="classevab_1_1_input_stretch_bar" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_input_stretch_bar_1a1f434f3c6cf9ffd4ba3710b148468161" kindref="member">InputStretchBar</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref></highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
@@ -149,20 +149,20 @@
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aScreen-&gt;Picto(</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OrientationPictoPolicy::GetTilePosition(aPos,<sp/>aSize,<sp/>0,<sp/>totalBlocks),</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TPictoset::GetTile(START_BLOCK,<sp/>blockFill(0,<sp/>normalizedValue)),</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAlbum::GetTile(START_BLOCK,<sp/>blockFill(0,<sp/>normalizedValue)),</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aIsFocused);</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"></highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>totalBlocks<sp/>-<sp/>1;<sp/>i++)</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aScreen-&gt;Picto(</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OrientationPictoPolicy::GetTilePosition(aPos,<sp/>aSize,<sp/>i,<sp/>totalBlocks),</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TPictoset::GetTile(MIDDLE_BLOCK,<sp/>blockFill(i,<sp/>normalizedValue)),</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAlbum::GetTile(MIDDLE_BLOCK,<sp/>blockFill(i,<sp/>normalizedValue)),</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aIsFocused);</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"></highlight></codeline>
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aScreen-&gt;Picto(</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OrientationPictoPolicy::GetTilePosition(aPos,<sp/>aSize,<sp/>totalBlocks<sp/>-<sp/>1,<sp/>totalBlocks),</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TPictoset::GetTile(END_BLOCK,<sp/>blockFill(totalBlocks<sp/>-<sp/>1,<sp/>normalizedValue)),</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TAlbum::GetTile(END_BLOCK,<sp/>blockFill(totalBlocks<sp/>-<sp/>1,<sp/>normalizedValue)),</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aIsFocused);</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"></highlight></codeline>
@@ -185,10 +185,10 @@
 <codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="196"><highlight class="normal"></highlight></codeline>
 <codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convenience<sp/>typedefs<sp/>for<sp/>common<sp/>stretch<sp/>bar<sp/>types</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">VerticalProgressBar<sp/>=<sp/><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar&lt;PictosetVerticalProgressBar, VerticalPictoPolicy&gt;</ref>;</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">HorizontalProgressBar<sp/>=<sp/><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar&lt;PictosetHorizontalProgressBar, HorizontalPictoPolicy&gt;</ref>;</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">VerticalScrollBar<sp/>=<sp/><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar&lt;PictosetVerticalScrollBar, VerticalPictoPolicy&gt;</ref>;</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">HorizontalScrollBar<sp/>=<sp/><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar&lt;PictosetHorizontalScrollBar, HorizontalPictoPolicy&gt;</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">VerticalProgressBar<sp/>=<sp/><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar&lt;AlbumVerticalProgressBar, VerticalPictoPolicy&gt;</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">HorizontalProgressBar<sp/>=<sp/><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar&lt;AlbumHorizontalProgressBar, HorizontalPictoPolicy&gt;</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">VerticalScrollBar<sp/>=<sp/><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar&lt;AlbumVerticalScrollBar, VerticalPictoPolicy&gt;</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">HorizontalScrollBar<sp/>=<sp/><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar&lt;AlbumHorizontalScrollBar, HorizontalPictoPolicy&gt;</ref>;</highlight></codeline>
 <codeline lineno="202"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/evabInputStretchBar.h"/>

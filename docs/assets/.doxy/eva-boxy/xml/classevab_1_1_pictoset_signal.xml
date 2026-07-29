@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="classevab_1_1_pictoset_signal" kind="class" language="C++" prot="public">
-    <compoundname>evab::PictosetSignal</compoundname>
-    <includes refid="evab_pictosets_8h" local="no">evabPictosets.h</includes>
+    <compoundname>evab::AlbumSignal</compoundname>
+    <includes refid="evab_pictosets_8h" local="no">evabAlbums.h</includes>
     <sectiondef kind="public-static-attrib">
       <memberdef kind="variable" id="classevab_1_1_pictoset_signal_1a4168563bf6bde0a2dac1b13cafe484cd" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::PictosetSignal::Count</definition>
+        <definition>unsigned char evab::AlbumSignal::Count</definition>
         <argsstring></argsstring>
         <name>Count</name>
-        <qualifiedname>evab::PictosetSignal::Count</qualifiedname>
+        <qualifiedname>evab::AlbumSignal::Count</qualifiedname>
         <initializer>= 4</initializer>
         <briefdescription>
 <para>Number of pictograms. </para>
@@ -18,16 +18,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPictosets.h" line="130" column="40" bodyfile="src/evabPictosets.h" bodystart="130" bodyend="-1"/>
+        <location file="src/evabAlbums.h" line="130" column="40" bodyfile="src/evabAlbums.h" bodystart="130" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
       <memberdef kind="function" id="classevab_1_1_pictoset_signal_1a72507fc27621ced3f9a4d92d07d2de29" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const unsigned char *</type>
-        <definition>static const unsigned char * evab::PictosetSignal::GetTile</definition>
+        <definition>static const unsigned char * evab::AlbumSignal::GetTile</definition>
         <argsstring>(unsigned char aIndex)</argsstring>
         <name>GetTile</name>
-        <qualifiedname>evab::PictosetSignal::GetTile</qualifiedname>
+        <qualifiedname>evab::AlbumSignal::GetTile</qualifiedname>
         <param>
           <type>unsigned char</type>
           <declname>aIndex</declname>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPictosets.h" line="129" column="36"/>
+        <location file="src/evabAlbums.h" line="129" column="36"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -59,10 +59,10 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabPictosets.h" line="120" column="5" bodyfile="src/evabPictosets.h" bodystart="121" bodyend="131"/>
+    <location file="src/evabAlbums.h" line="120" column="5" bodyfile="src/evabAlbums.h" bodystart="121" bodyend="131"/>
     <listofallmembers>
-      <member refid="classevab_1_1_pictoset_signal_1a4168563bf6bde0a2dac1b13cafe484cd" prot="public" virt="non-virtual"><scope>evab::PictosetSignal</scope><name>Count</name></member>
-      <member refid="classevab_1_1_pictoset_signal_1a72507fc27621ced3f9a4d92d07d2de29" prot="public" virt="non-virtual"><scope>evab::PictosetSignal</scope><name>GetTile</name></member>
+      <member refid="classevab_1_1_pictoset_signal_1a4168563bf6bde0a2dac1b13cafe484cd" prot="public" virt="non-virtual"><scope>evab::AlbumSignal</scope><name>Count</name></member>
+      <member refid="classevab_1_1_pictoset_signal_1a72507fc27621ced3f9a4d92d07d2de29" prot="public" virt="non-virtual"><scope>evab::AlbumSignal</scope><name>GetTile</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

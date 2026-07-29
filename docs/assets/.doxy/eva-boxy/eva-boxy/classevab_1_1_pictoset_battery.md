@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetBattery
+# Class evab::AlbumBattery
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetBattery**](classevab_1_1_pictoset_battery.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumBattery**](classevab_1_1_pictoset_battery.md)
 
 
 
 _Battery pictogram set (7 states)._ 
 
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 
 
 
@@ -95,7 +95,7 @@ _Battery pictogram set (7 states)._
 
 _Number of pictograms._ 
 ```C++
-unsigned char evab::PictosetBattery::Count;
+unsigned char evab::AlbumBattery::Count;
 ```
 
 
@@ -111,7 +111,7 @@ unsigned char evab::PictosetBattery::Count;
 
 _Gets pictogram by index._ 
 ```C++
-static const unsigned char * evab::PictosetBattery::GetTile (
+static const unsigned char * evab::AlbumBattery::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -140,5 +140,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

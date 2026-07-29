@@ -1,8 +1,8 @@
 
 
-# File evabPictosets.h
+# File evabAlbums.h
 
-[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabPictosets.h**](evab_pictosets_8h.md)
+[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabAlbums.h**](evab_pictosets_8h.md)
 
 [Go to the documentation of this file](evab_pictosets_8h.md)
 
@@ -12,63 +12,63 @@
 namespace evab
 {
 
-    class PictosetOnOff
+    class AlbumOnOff
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 2; 
     };
 
-    class PictosetRainbowmeter
+    class AlbumRainbowmeter
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 7; 
     };
 
-    class PictosetFan
+    class AlbumFan
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 3; 
     };
 
-    class PictosetBattery
+    class AlbumBattery
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 7; 
     };
 
-    class PictosetLamp
+    class AlbumLamp
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 6; 
     };
 
-    class PictosetProgress
+    class AlbumProgress
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 9; 
     };
 
-    class PictosetSpeaker
+    class AlbumSpeaker
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 4; 
     };
 
-    class PictosetSignal
+    class AlbumSignal
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);
         static constexpr unsigned char Count = 4; 
     };
 
-    class PictosetRoundmeter
+    class AlbumRoundmeter
     {
     public:
         static const unsigned char *GetTile(unsigned char aIndex);

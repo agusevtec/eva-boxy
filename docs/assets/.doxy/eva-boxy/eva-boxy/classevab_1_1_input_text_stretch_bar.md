@@ -2,7 +2,7 @@
 
 # Class evab::InputTextStretchBar
 
-**template &lt;typename TPictoset, typename OrientationTextPolicy&gt;**
+**template &lt;typename TAlbum, typename OrientationTextPolicy&gt;**
 
 
 
@@ -169,7 +169,7 @@ Displays a progress/scroll bar using characters instead of pictograms.
 **Template parameters:**
 
 
-* `TPictoset` Character set class providing GetChar method 
+* `TAlbum` Character set class providing GetChar method 
 * `OrientationTextPolicy` Policy for orientation (vertical/horizontal) 
 
 

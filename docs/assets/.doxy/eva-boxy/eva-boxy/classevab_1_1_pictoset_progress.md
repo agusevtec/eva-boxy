@@ -1,16 +1,16 @@
 
 
-# Class evab::PictosetProgress
+# Class evab::AlbumProgress
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**PictosetProgress**](classevab_1_1_pictoset_progress.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**AlbumProgress**](classevab_1_1_pictoset_progress.md)
 
 
 
 _Progress pictogram set (9 states)._ 
 
-* `#include <evabPictosets.h>`
+* `#include <evabAlbums.h>`
 
 
 
@@ -95,7 +95,7 @@ _Progress pictogram set (9 states)._
 
 _Number of pictograms._ 
 ```C++
-unsigned char evab::PictosetProgress::Count;
+unsigned char evab::AlbumProgress::Count;
 ```
 
 
@@ -111,7 +111,7 @@ unsigned char evab::PictosetProgress::Count;
 
 _Gets pictogram by index._ 
 ```C++
-static const unsigned char * evab::PictosetProgress::GetTile (
+static const unsigned char * evab::AlbumProgress::GetTile (
     unsigned char aIndex
 ) 
 ```
@@ -140,5 +140,5 @@ Pointer to pictogram data
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabPictosets.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

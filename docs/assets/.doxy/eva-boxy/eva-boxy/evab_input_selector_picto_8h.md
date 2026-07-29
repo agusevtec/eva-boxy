@@ -35,7 +35,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InputSelectorPicto**](classevab_1_1_input_selector_picto.md) &lt;class TPictoset&gt;<br>_Pictogram-based input element._  |
+| class | [**InputSelectorPicto**](classevab_1_1_input_selector_picto.md) &lt;class TAlbum&gt;<br>_Pictogram-based input element._  |
 
 
 

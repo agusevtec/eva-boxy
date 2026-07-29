@@ -35,19 +35,19 @@
     <innerclass refid="classevab_1_1_layout_base" prot="public">evab::LayoutBase</innerclass>
     <innerclass refid="structevab_1_1_left_align" prot="public">evab::LeftAlign</innerclass>
     <innerclass refid="classevab_1_1_list_box" prot="public">evab::ListBox</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_battery" prot="public">evab::PictosetBattery</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_fan" prot="public">evab::PictosetFan</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_horizontal_progress_bar" prot="public">evab::PictosetHorizontalProgressBar</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_horizontal_scroll_bar" prot="public">evab::PictosetHorizontalScrollBar</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_lamp" prot="public">evab::PictosetLamp</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_on_off" prot="public">evab::PictosetOnOff</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_progress" prot="public">evab::PictosetProgress</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_rainbowmeter" prot="public">evab::PictosetRainbowmeter</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_roundmeter" prot="public">evab::PictosetRoundmeter</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_signal" prot="public">evab::PictosetSignal</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_speaker" prot="public">evab::PictosetSpeaker</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_vertical_progress_bar" prot="public">evab::PictosetVerticalProgressBar</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_vertical_scroll_bar" prot="public">evab::PictosetVerticalScrollBar</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_battery" prot="public">evab::AlbumBattery</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_fan" prot="public">evab::AlbumFan</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_horizontal_progress_bar" prot="public">evab::AlbumHorizontalProgressBar</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_horizontal_scroll_bar" prot="public">evab::AlbumHorizontalScrollBar</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_lamp" prot="public">evab::AlbumLamp</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_on_off" prot="public">evab::AlbumOnOff</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_progress" prot="public">evab::AlbumProgress</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_rainbowmeter" prot="public">evab::AlbumRainbowmeter</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_roundmeter" prot="public">evab::AlbumRoundmeter</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_signal" prot="public">evab::AlbumSignal</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_speaker" prot="public">evab::AlbumSpeaker</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_vertical_progress_bar" prot="public">evab::AlbumVerticalProgressBar</innerclass>
+    <innerclass refid="classevab_1_1_pictoset_vertical_scroll_bar" prot="public">evab::AlbumVerticalScrollBar</innerclass>
     <innerclass refid="structevab_1_1_right_align" prot="public">evab::RightAlign</innerclass>
     <innerclass refid="classevab_1_1_screen" prot="public">evab::Screen</innerclass>
     <innerclass refid="classevab_1_1_screen_k_s0108" prot="public">evab::ScreenKS0108</innerclass>
@@ -73,8 +73,8 @@
     <innernamespace refid="namespaceevab_1_1_gallery_remixicon32">evab::GalleryRemixicon32</innernamespace>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a9b6f4f26a39daff7e004b650952fae54" prot="public" static="no">
-        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_vertical_progress_bar" kindref="compound">PictosetVerticalProgressBar</ref>, <ref refid="structevab_1_1_vertical_picto_policy" kindref="compound">VerticalPictoPolicy</ref> &gt;</type>
-        <definition>using evab::VerticalProgressBar = InputStretchBar&lt;PictosetVerticalProgressBar, VerticalPictoPolicy&gt;</definition>
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_vertical_progress_bar" kindref="compound">AlbumVerticalProgressBar</ref>, <ref refid="structevab_1_1_vertical_picto_policy" kindref="compound">VerticalPictoPolicy</ref> &gt;</type>
+        <definition>using evab::VerticalProgressBar = InputStretchBar&lt;AlbumVerticalProgressBar, VerticalPictoPolicy&gt;</definition>
         <argsstring></argsstring>
         <name>VerticalProgressBar</name>
         <qualifiedname>evab::VerticalProgressBar</qualifiedname>
@@ -87,8 +87,8 @@
         <location file="src/evabInputStretchBar.h" line="198" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="198" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a5e8178ef64dfcb0c6a0c2457ed589ea6" prot="public" static="no">
-        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_horizontal_progress_bar" kindref="compound">PictosetHorizontalProgressBar</ref>, <ref refid="structevab_1_1_horizontal_picto_policy" kindref="compound">HorizontalPictoPolicy</ref> &gt;</type>
-        <definition>using evab::HorizontalProgressBar = InputStretchBar&lt;PictosetHorizontalProgressBar, HorizontalPictoPolicy&gt;</definition>
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_horizontal_progress_bar" kindref="compound">AlbumHorizontalProgressBar</ref>, <ref refid="structevab_1_1_horizontal_picto_policy" kindref="compound">HorizontalPictoPolicy</ref> &gt;</type>
+        <definition>using evab::HorizontalProgressBar = InputStretchBar&lt;AlbumHorizontalProgressBar, HorizontalPictoPolicy&gt;</definition>
         <argsstring></argsstring>
         <name>HorizontalProgressBar</name>
         <qualifiedname>evab::HorizontalProgressBar</qualifiedname>
@@ -101,8 +101,8 @@
         <location file="src/evabInputStretchBar.h" line="199" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="199" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1aeb9e8805e2478ea44de99e90365cbe64" prot="public" static="no">
-        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_vertical_scroll_bar" kindref="compound">PictosetVerticalScrollBar</ref>, <ref refid="structevab_1_1_vertical_picto_policy" kindref="compound">VerticalPictoPolicy</ref> &gt;</type>
-        <definition>using evab::VerticalScrollBar = InputStretchBar&lt;PictosetVerticalScrollBar, VerticalPictoPolicy&gt;</definition>
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_vertical_scroll_bar" kindref="compound">AlbumVerticalScrollBar</ref>, <ref refid="structevab_1_1_vertical_picto_policy" kindref="compound">VerticalPictoPolicy</ref> &gt;</type>
+        <definition>using evab::VerticalScrollBar = InputStretchBar&lt;AlbumVerticalScrollBar, VerticalPictoPolicy&gt;</definition>
         <argsstring></argsstring>
         <name>VerticalScrollBar</name>
         <qualifiedname>evab::VerticalScrollBar</qualifiedname>
@@ -115,8 +115,8 @@
         <location file="src/evabInputStretchBar.h" line="200" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="200" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a6e1a9e218c26afa41f01615605a01d8e" prot="public" static="no">
-        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_horizontal_scroll_bar" kindref="compound">PictosetHorizontalScrollBar</ref>, <ref refid="structevab_1_1_horizontal_picto_policy" kindref="compound">HorizontalPictoPolicy</ref> &gt;</type>
-        <definition>using evab::HorizontalScrollBar = InputStretchBar&lt;PictosetHorizontalScrollBar, HorizontalPictoPolicy&gt;</definition>
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_horizontal_scroll_bar" kindref="compound">AlbumHorizontalScrollBar</ref>, <ref refid="structevab_1_1_horizontal_picto_policy" kindref="compound">HorizontalPictoPolicy</ref> &gt;</type>
+        <definition>using evab::HorizontalScrollBar = InputStretchBar&lt;AlbumHorizontalScrollBar, HorizontalPictoPolicy&gt;</definition>
         <argsstring></argsstring>
         <name>HorizontalScrollBar</name>
         <qualifiedname>evab::HorizontalScrollBar</qualifiedname>

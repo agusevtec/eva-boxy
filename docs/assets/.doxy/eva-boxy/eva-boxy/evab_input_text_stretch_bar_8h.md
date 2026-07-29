@@ -11,7 +11,7 @@
 
 
 * `#include <evabElementBase.h>`
-* `#include <evabPictosetsStretchy.h>`
+* `#include <evabAlbumsStretchy.h>`
 
 
 
@@ -41,7 +41,7 @@
 | struct | [**CharsetVerticalProgressBar**](structevab_1_1_charset_vertical_progress_bar.md) <br>_Character set for vertical progress bar._  |
 | struct | [**CharsetVerticalScrollBar**](structevab_1_1_charset_vertical_scroll_bar.md) <br>_Character set for vertical scroll bar._  |
 | struct | [**HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md) <br>_Policy for horizontal text-based stretch bars._  |
-| class | [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) &lt;typename TPictoset, typename OrientationTextPolicy&gt;<br>_Text-based stretch bar element._  |
+| class | [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) &lt;typename TAlbum, typename OrientationTextPolicy&gt;<br>_Text-based stretch bar element._  |
 | struct | [**VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) <br>_Policy for vertical text-based stretch bars._  |
 
 
