@@ -24,7 +24,7 @@ public:
     void Clear(Coor pos, Coor size, unsigned char color);
     
     // Pictogram (can be overridden)
-    virtual void Picto(Coor pos, const unsigned char* pictoData, unsigned char color);
+    virtual void Picto(Coor pos, const unsigned char* aPictogramm, unsigned char color);
     
 protected:
     // Must implement
@@ -45,7 +45,7 @@ class ScreenPage8Base : public ScreenBase {
 public:
     // Implements DrawSymbol and Picto using vertical slices
     void DrawSymbol(Coor pos, Coor size, char symbol, unsigned char color);
-    void Picto(Coor pos, const unsigned char* pictoData, unsigned char color);
+    void Picto(Coor pos, const unsigned char* aPictogramm, unsigned char color);
     
 protected:
     // Must implement - write one 8-pixel vertical slice
@@ -252,9 +252,9 @@ public:
     }
     
     // Override for custom pictogram handling
-    void Picto(Coor pos, const unsigned char* pictoData, unsigned char color) override {
+    void Picto(Coor pos, const unsigned char* aPictogramm, unsigned char color) override {
         // Custom pictogram rendering if needed
-        ScreenBase::Picto(pos, pictoData, color);
+        ScreenBase::Picto(pos, aPictogramm, color);
     }
 
 private:

@@ -19,13 +19,5 @@ namespace evab
     Coor(int x = 0, int y = 0);
   };
 
-  struct Place
-  {
-    const Coor Position;
-    const Coor Size;
-
-    Place(Coor aPosition, Coor aSize);
-  };
-
 }
 #endif

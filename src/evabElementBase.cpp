@@ -43,11 +43,6 @@ void ElementBase::Draw(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aI
   mSerialized = aScreen->Serialize(aPos, aSize, aIsFocused);
 }
 
-void ElementBase::Draw(IScreen *aScreen, Place aPlace, unsigned char aIsFocused)
-{
-  Draw(aScreen, aPlace.Position, aPlace.Size, aIsFocused);
-}
-
 bool ElementBase::Key(Keys)
 {
   return false;

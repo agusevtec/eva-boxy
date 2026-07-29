@@ -56,7 +56,7 @@ Inherited by the following classes: [evab::ScreenBase](classevab_1_1_screen_base
 | virtual void | [**Clear**](#function-clear) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aColor=0) = 0<br>_Clears a rectangular area on screen._  |
 | virtual void | [**Deserialize**](#function-deserialize) (unsigned short aSerialized, [**Coor**](structevab_1_1_coor.md) & aPos, [**Coor**](structevab_1_1_coor.md) & aSize, bool & isFocused) = 0<br>_Deserializes element state from 16-bit value._  |
 | virtual void | [**DrawSymbol**](#function-drawsymbol) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, char aSymbol, unsigned char aColor) = 0<br>_Draws a single character symbol._  |
-| virtual void | [**Picto**](#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* pictoData, unsigned char aColor) = 0<br>_Draws a pictogram at the specified position._  |
+| virtual void | [**Picto**](#function-picto) ([**Coor**](structevab_1_1_coor.md) aPosition, const unsigned char \* aPictogramm, unsigned char aColor) = 0<br>_Draws a pictogram at the specified position._  |
 | virtual unsigned short | [**Serialize**](#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPos, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) = 0<br>_Serializes element state into 16-bit value._  |
 | virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](#function-size) () = 0<br>_Gets the screen size in tiles._  |
 | virtual void | [**TextCenter**](#function-textcenter-12) ([**Coor**](structevab_1_1_coor.md) aPosition, [**Coor**](structevab_1_1_coor.md) aSize, const char \* text, unsigned char aColor) = 0<br>_Draws text aligned to the center._  |
@@ -208,7 +208,7 @@ _Draws a pictogram at the specified position._
 ```C++
 virtual void evab::IScreen::Picto (
     Coor aPosition,
-    const unsigned char * pictoData,
+    const unsigned char * aPictogramm,
     unsigned char aColor
 ) = 0
 ```
@@ -221,7 +221,7 @@ virtual void evab::IScreen::Picto (
 
 
 * `aPosition` Position on screen 
-* `pictoData` Pictogram data (first two bytes: width/height in tiles) 
+* `aPictogramm` Pictogram data (first two bytes: width/height in tiles) 
 * `aColor` Color/inversion flag (0 = normal, 1 = inverted) 
 
 

@@ -19,6 +19,7 @@
 #include <evabInputInt.h>
 #include <evabInputFloat.h>
 #include <evabGrid.h>
+#include <evabTextLabel.h>
 
 using namespace eva;
 using namespace evab;
@@ -35,22 +36,22 @@ public:
 
 private:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    Grid mesh(aPos, aSize);
+    TextLabelCenterF labelTitle(F("BOXY - DEMO"));
+    TextLabelCenterF labelOption(IsFocused(&mMonitorButton) ? F("DASHBOARD") : F("SETTINGS"));
 
-    aScreen->TextCenter(aPos, mesh.NextRow(1).GetSize(), F("BOXY - DEMO"), 0);
-    mesh.NextRow(1).Clean(aScreen);
+    Grid grid(aPos, aSize);
+    grid.NextRow(1).Draw(aScreen, &labelTitle);
+    grid.NextRow(1).Blank(aScreen);
 
-    Grid row = mesh.NextRow(4);
-    row.NextCol(2).Clean(aScreen);
+    Grid row = grid.NextRow(4);
+    row.NextCol(2).Blank(aScreen);
     row.NextCol(4).Draw(aScreen, &mMonitorButton, IsFocused(&mMonitorButton));
-    row.NextCol(2).Clean(aScreen);
+    row.NextCol(4).Blank(aScreen);
     row.NextCol(4).Draw(aScreen, &mSettingsButton, IsFocused(&mSettingsButton));
-    row.Rest().Clean(aScreen);
+    row.Rest().Blank(aScreen);
 
-    mesh.NextRow(1).Clean(aScreen);
-
-    row = mesh.NextRow(1);
-    aScreen->TextCenter(row.GetPos(), row.GetSize(), IsFocused(&mMonitorButton) ? F("DASHBOARD") : F("SETTINGS"), 0);
+    grid.NextRow(1).Blank(aScreen);
+    grid.NextRow(1).Draw(aScreen, &labelOption);
   }
 };
 
@@ -66,19 +67,25 @@ public:
 
 private:
   void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    
-
-
-    aScreen->Clear({ aPos.X, aPos.Y }, { aSize.X, 1 });
-    aScreen->Clear({ aPos.X, aPos.Y + 4 }, { aSize.X, 1 });
-    aScreen->Clear({ aPos.X + 3, aPos.Y}, { 1, aSize.Y });
-
-    aScreen->Picto({ aPos.X, aPos.Y + 1 }, GalleryRemixicon24::PICTO_F1F2, 0);
     LabeledF<InputFloat> tempField(F("TEMERATURE"), 23);
-    tempField.Draw(aScreen, { aPos.X + 4, aPos.Y + 1 }, { aSize.X - 4, 3 }, 0);
-    aScreen->Picto({ aPos.X, aPos.Y + 5 }, GalleryRemixicon24::PICTO_EBD8, 0);
     LabeledF<InputInt> humField(F("HUMIDITY"), 41);
-    humField.Draw(aScreen, { aPos.X + 4, aPos.Y + 5 }, { aSize.X - 4, 3 }, 0);
+
+    Grid grid (aPos, aSize);
+    //mesh.NextRow(1).Blank(aScreen);
+
+    Grid row = grid.NextRow(3);
+    aScreen->Picto(row.NextCol(3).GetPos(), GalleryRemixicon24::PICTO_F1F2, 0);
+    row.NextCol(1).Blank(aScreen);
+    row.Rest().Draw(aScreen, &tempField);
+
+    grid.NextRow(2).Blank(aScreen);
+
+    row = grid.NextRow(3);
+    aScreen->Picto(row.NextCol(3).GetPos(), GalleryRemixicon24::PICTO_EBD8, 0);
+    row.NextCol(1).Blank(aScreen);
+    row.Rest().Draw(aScreen, &humField);
+  
+    grid.Rest().Blank(aScreen);
   }
 
   bool Key(Keys aKey) override {

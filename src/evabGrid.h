@@ -69,7 +69,7 @@ namespace evab
          * 
          * @param aScreen Screen to draw on
          */
-        void Clean(IScreen *aScreen);
+        void Blank(IScreen *aScreen);
 
         /**
          * @brief Gets the current position
@@ -84,13 +84,6 @@ namespace evab
          * @return Coor Current size (clamped to non-negative values)
          */
         Coor GetSize() const;
-
-        /**
-         * @brief Gets the current place (position + size)
-         * 
-         * @return Place Current place
-         */
-        Place GetPlace() const;
 
     private:
         Coor mTopLeft;      ///< Top-left corner of current cell

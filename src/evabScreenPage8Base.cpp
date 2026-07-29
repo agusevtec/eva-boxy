@@ -4,8 +4,8 @@
 namespace evab
 {
 
-  ScreenPage8Base::ScreenPage8Base(const IFont* font)
-    : mFont(font)
+  ScreenPage8Base::ScreenPage8Base(const IFont *aFont)
+      : mFont(aFont)
   {
   }
 
@@ -30,10 +30,10 @@ namespace evab
     }
   }
 
-  void ScreenPage8Base::Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor)
+  void ScreenPage8Base::Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor)
   {
-    uint8_t tilesW = pgm_read_byte(pictoData + 0) / 8; // ширина в тайлах
-    uint8_t tilesH = pgm_read_byte(pictoData + 1) / 8; // высота в тайлах
+    uint8_t tilesW = pgm_read_byte(aPictogramm + 0) / 8; // ширина в тайлах
+    uint8_t tilesH = pgm_read_byte(aPictogramm + 1) / 8; // высота в тайлах
     int j = 2;
     for (uint8_t tileY = 0; tileY < tilesH; tileY++)
     {
@@ -41,7 +41,7 @@ namespace evab
       {
         for (uint8_t col = 0; col < 8; col++)
         {
-          uint8_t slice = pgm_read_byte(&pictoData[j++]);
+          uint8_t slice = pgm_read_byte(&aPictogramm[j++]);
           if (aColor == 1)
             slice = ~slice;
           DrawVerticalSlice({aPosition.X + tileX, aPosition.Y + tileY}, col, slice);
@@ -50,17 +50,17 @@ namespace evab
     }
   }
 
-  uint32_t ScreenPage8Base::upscaleY(uint8_t x, uint8_t scale)
+  uint32_t ScreenPage8Base::upscaleY(uint8_t aSlice, uint8_t aScale)
   {
     uint32_t result = 0;
     uint32_t weight = 1;
-    uint32_t multiplier = (1 << scale) - 1;
+    uint32_t multiplier = (1 << aScale) - 1;
 
     for (uint8_t i = 0; i < 8; i++)
     {
-      if (x & (1 << i))
+      if (aSlice & (1 << i))
         result += multiplier * weight;
-      weight <<= scale;
+      weight <<= aScale;
     }
     return result;
   }

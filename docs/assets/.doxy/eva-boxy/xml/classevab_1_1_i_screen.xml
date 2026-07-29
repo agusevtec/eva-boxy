@@ -404,7 +404,7 @@
       <memberdef kind="function" id="classevab_1_1_i_screen_1a856a489025c3ad7c546464c69faf9ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void evab::IScreen::Picto</definition>
-        <argsstring>(Coor aPosition, const unsigned char *pictoData, unsigned char aColor)=0</argsstring>
+        <argsstring>(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor)=0</argsstring>
         <name>Picto</name>
         <qualifiedname>evab::IScreen::Picto</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_base_1af413c1b5c1d2d5f9cef906e82ff867b6">Picto</reimplementedby>
@@ -415,7 +415,7 @@
         </param>
         <param>
           <type>const unsigned char *</type>
-          <declname>pictoData</declname>
+          <declname>aPictogramm</declname>
         </param>
         <param>
           <type>unsigned char</type>
@@ -435,7 +435,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>pictoData</parametername>
+<parametername>aPictogramm</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Pictogram data (first two bytes: width/height in tiles) </para>

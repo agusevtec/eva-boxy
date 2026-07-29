@@ -8,79 +8,79 @@ namespace evab
      * @brief Abstract interface for screen rendering
      * 
      * Defines the contract for display implementations,
-     * supporting text, pictograms, and state serialization.
+     * supporting aText, pictograms, and state serialization.
      */
     class IScreen
     {
     public:
         /**
-         * @brief Draws text aligned to the left
+         * @brief Draws aText aligned to the left
          * 
          * @param aPosition Position on screen
-         * @param aSize Size of the text area
-         * @param text Null-terminated string
+         * @param aSize Size of the aText area
+         * @param aText Null-terminated string
          * @param aColor Color/inversion flag (0 = normal, 1 = inverted)
          */
-        virtual void TextLeft(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) = 0;
+        virtual void TextLeft(Coor aPosition, Coor aSize, const char *aText, unsigned char aColor) = 0;
         
         /**
-         * @brief Draws text aligned to the center
+         * @brief Draws aText aligned to the center
          * 
          * @param aPosition Position on screen
-         * @param aSize Size of the text area
-         * @param text Null-terminated string
+         * @param aSize Size of the aText area
+         * @param aText Null-terminated string
          * @param aColor Color/inversion flag (0 = normal, 1 = inverted)
          */
-        virtual void TextCenter(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) = 0;
+        virtual void TextCenter(Coor aPosition, Coor aSize, const char *aText, unsigned char aColor) = 0;
         
         /**
-         * @brief Draws text aligned to the right
+         * @brief Draws aText aligned to the right
          * 
          * @param aPosition Position on screen
-         * @param aSize Size of the text area
-         * @param text Null-terminated string
+         * @param aSize Size of the aText area
+         * @param aText Null-terminated string
          * @param aColor Color/inversion flag (0 = normal, 1 = inverted)
          */
-        virtual void TextRight(Coor aPosition, Coor aSize, const char *text, unsigned char aColor) = 0;
+        virtual void TextRight(Coor aPosition, Coor aSize, const char *aText, unsigned char aColor) = 0;
 
         /**
-         * @brief Draws flash string text aligned to the left
+         * @brief Draws flash string aText aligned to the left
          * 
          * @param aPosition Position on screen
-         * @param aSize Size of the text area
-         * @param text Flash string (PROGMEM)
+         * @param aSize Size of the aText area
+         * @param aText Flash string (PROGMEM)
          * @param aColor Color/inversion flag (0 = normal, 1 = inverted)
          */
-        virtual void TextLeft(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
+        virtual void TextLeft(Coor aPosition, Coor aSize, const __FlashStringHelper *aText, unsigned char aColor) = 0;
         
         /**
-         * @brief Draws flash string text aligned to the center
+         * @brief Draws flash string aText aligned to the center
          * 
          * @param aPosition Position on screen
-         * @param aSize Size of the text area
-         * @param text Flash string (PROGMEM)
+         * @param aSize Size of the aText area
+         * @param aText Flash string (PROGMEM)
          * @param aColor Color/inversion flag (0 = normal, 1 = inverted)
          */
-        virtual void TextCenter(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
+        virtual void TextCenter(Coor aPosition, Coor aSize, const __FlashStringHelper *aText, unsigned char aColor) = 0;
         
         /**
-         * @brief Draws flash string text aligned to the right
+         * @brief Draws flash string aText aligned to the right
          * 
          * @param aPosition Position on screen
-         * @param aSize Size of the text area
-         * @param text Flash string (PROGMEM)
+         * @param aSize Size of the aText area
+         * @param aText Flash string (PROGMEM)
          * @param aColor Color/inversion flag (0 = normal, 1 = inverted)
          */
-        virtual void TextRight(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
+        virtual void TextRight(Coor aPosition, Coor aSize, const __FlashStringHelper *aText, unsigned char aColor) = 0;
 
         /**
          * @brief Draws a pictogram at the specified position
          * 
          * @param aPosition Position on screen
-         * @param pictoData Pictogram data (first two bytes: width/height in tiles)
+         * @param aPictogramm Pictogram data (first two bytes: width/height in tiles)
          * @param aColor Color/inversion flag (0 = normal, 1 = inverted)
          */
-        virtual void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor) = 0;
+        virtual void Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor) = 0;
         
         /**
          * @brief Clears a rectangular area on screen

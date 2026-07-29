@@ -29,7 +29,7 @@ namespace evab
         
         virtual void TextRight(Coor aPosition, Coor aSize, const __FlashStringHelper *text, unsigned char aColor) = 0;
 
-        virtual void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor) = 0;
+        virtual void Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor) = 0;
         
         virtual void Clear(Coor aPosition, Coor aSize, unsigned char aColor = 0) = 0;
         

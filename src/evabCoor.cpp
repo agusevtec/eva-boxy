@@ -7,7 +7,4 @@ namespace evab
     {
     }
     
-    Place::Place(Coor aPosition, Coor aSize): Position(aPosition), Size(aSize)
-    {
-    }
 }

@@ -16,9 +16,9 @@ namespace evab
     /**
      * @brief Constructor for InputButtonPicto
      *
-     * @param aPictoData Pointer to pictogram data
+     * @param aaPictogramm Pointer to pictogram data
      */
-    InputButtonPicto(const unsigned char *aPictoData);
+    InputButtonPicto(const unsigned char *aaPictogramm);
 
   protected:
     /**
@@ -32,7 +32,7 @@ namespace evab
     void drawer(IScreen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
-    const unsigned char *mPictoData; ///< Pictogram data
+    const unsigned char *maPictogramm; ///< Pictogram data
   };
 
 }

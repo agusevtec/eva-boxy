@@ -33,7 +33,7 @@ namespace evab
         
         void Clear(Coor aPosition, Coor aSize, unsigned char aColor) override;
         
-        virtual void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor);
+        virtual void Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor);
 
     protected:
         virtual void ClearTile(Coor position, unsigned char aColor);

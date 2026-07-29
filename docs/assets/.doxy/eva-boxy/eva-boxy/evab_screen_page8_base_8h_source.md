@@ -23,7 +23,7 @@ namespace evab
     
     void DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor);
     
-    void Picto(Coor aPosition, const unsigned char *pictoData, unsigned char aColor);
+    void Picto(Coor aPosition, const unsigned char *aPictogramm, unsigned char aColor);
  
   protected:
     virtual void DrawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) = 0;
