@@ -32,14 +32,14 @@ class UIHomeForm : public KeyModifier<LayoutBase, KEY_LEFT, KEY_RIGHT> {
 
 public:
   UIHomeForm(IHandler *aOnMonitorHandler, IHandler *aOnSettingsHandler)
-    : mMonitorButton(this, aOnMonitorHandler,  GalleryRemixicon32::PICTO_EC12),
+    : mMonitorButton(this, aOnMonitorHandler,  GalleryRemixicon32::PICTO_F243),
       mSettingsButton(this, aOnSettingsHandler, GalleryRemixicon32::PICTO_F0E4) {
   }
 
 private:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     TextLabelCenterF labelTitle(F("BOXY - DEMO"));
-    TextLabelCenterF labelOption(IsFocused(&mMonitorButton) ? F("DASHBOARD") : F("SETTINGS"));
+    TextLabelCenterF labelOption(IsFocused(&mMonitorButton) ? F("CLIMAT") : F("SETTINGS"));
 
     Grid grid(aPos, aSize);
     grid.SliceRow(1).Draw(aScreen, &labelTitle);
