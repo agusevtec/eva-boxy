@@ -52,7 +52,7 @@ void ScreenSSH1106::clearDisplay()
     for (unsigned char page = 0; page < 8; page++)
     {
         for (unsigned char seg = 0; seg < 8; seg++)
-        { // 16 сегментов по 8 пикселей = 128
+        { 
             setPage(page);
             setColumn(seg * 16 + 2);
 
@@ -71,10 +71,6 @@ void ScreenSSH1106::clearDisplay()
 
 void ScreenSSH1106::drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
 {
-    // aPosition.X: 0-15 (16 тайлов по горизонтали)
-    // aPosition.Y: 0-7 (8 тайлов по вертикали)
-    // aSlice: байт для записи в этот тайл (8 пикселей вертикально)
-
     setPage(aPosition.Y);
     setColumn(aPosition.X * 8 + aSliceColumn + 2);
 

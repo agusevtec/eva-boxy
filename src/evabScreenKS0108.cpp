@@ -137,7 +137,7 @@ void ScreenKS0108::clearDisplay()
 
 Coor ScreenKS0108::Size()
 {
-    return {16, 8}; // 128/8 = 16 тайлов, 8 страниц
+    return {16, 8}; 
 }
 
 void ScreenKS0108::drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)

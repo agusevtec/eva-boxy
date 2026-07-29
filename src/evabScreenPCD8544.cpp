@@ -18,7 +18,6 @@ ScreenPCD8544::ScreenPCD8544(const IFont *aFont,
 
   digitalWrite(mCEPin, HIGH);
 
-  // Аппаратный сброс
   digitalWrite(mRSTPin, LOW);
   delay(10);
   digitalWrite(mRSTPin, HIGH);

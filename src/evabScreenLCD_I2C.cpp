@@ -10,7 +10,6 @@ ScreenLCD_I2C::ScreenLCD_I2C(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uin
 
   Wire.begin();
 
-  // Инициализация HD44780 через I2C
   delay(50);
   sendNibble(0x30, true);
   delay(5);

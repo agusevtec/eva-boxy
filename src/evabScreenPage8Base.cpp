@@ -32,8 +32,8 @@ namespace evab
 
   void ScreenPage8Base::Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor)
   {
-    uint8_t tilesW = pgm_read_byte(aPictogram + 0) / 8; // ширина в тайлах
-    uint8_t tilesH = pgm_read_byte(aPictogram + 1) / 8; // высота в тайлах
+    uint8_t tilesW = pgm_read_byte(aPictogram + 0) / 8; 
+    uint8_t tilesH = pgm_read_byte(aPictogram + 1) / 8; 
     int j = 2;
     for (uint8_t tileY = 0; tileY < tilesH; tileY++)
     {
