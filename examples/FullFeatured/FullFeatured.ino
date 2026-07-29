@@ -10,14 +10,14 @@
 #include <evabGalleryRemixicon24.h>
 #include <evabGalleryRemixicon32.h>
 #include <evabInputButtonPicto.h>
-#include <evabBehavior.h>
+#include <evabReactions.h>
 #include <evabInputButton.h>
 #include <evabLayoutBase.h>
 #include <evabLabeled.h>
-#include <evabInputAnimation.h>
-#include <evabAlbums.h>
+//#include <evabInputAnimation.h>
 #include <evabCompositeBase.h>
-#include <evabInputSelectorAlbum.h>
+//#include <evabAlbums.h>
+//#include <evabInputAlbumSelector.h>
 #include <evabInputInt.h>
 #include <evabInputFloat.h>
 #include <evabGrid.h>
@@ -59,8 +59,7 @@ private:
 
 class UIMonitoringForm : public ElementBase {
   IHandler *mLeaveHandler;
-  InputAnimation<AlbumFan> mFanIndicator{ 2 };
-  InputSelectorAlbum<AlbumRoundmeter> mMeterIndicator{ 2 };
+
 
 public:
   UIMonitoringForm(IHandler *aLeaveHandler)

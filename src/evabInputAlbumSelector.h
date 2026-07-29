@@ -12,7 +12,7 @@ namespace evab
      * @tparam TAlbum Album class providing pictogram data and count
      */
     template <class TAlbum>
-    class InputSelectorAlbum : public ElementBase
+    class InputAlbumSelector : public ElementBase
     {
     public:
         /**
@@ -20,7 +20,7 @@ namespace evab
          * 
          * @param aValue Initial pictogram index (0 to TAlbum::Count - 1)
          */
-        InputSelectorAlbum(int aValue = 0)
+        InputAlbumSelector(int aValue = 0)
         {
             mValue = constrain(aValue, 0, TAlbum::Count - 1);
         }
