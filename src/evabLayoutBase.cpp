@@ -16,6 +16,8 @@ void LayoutBase::focusChild(IFocusChain *aChild)
 
 ElementBase *LayoutBase::GetFocused() const
 {
+  if (!mFocusedChild)
+    return nullptr;
   return mFocusedChild->AsElementBase();
 }
 
@@ -58,11 +60,9 @@ void LayoutBase::Increment(signed char delta)
 
 bool LayoutBase::Key(Keys aKey)
 {
-  // Forward to focused child first
   if (mFocusedChild && mFocusedChild->AsElementBase()->Key(aKey))
     return true;
 
-  // If not handled, try residual
   return onResidualKey(aKey);
 }
 

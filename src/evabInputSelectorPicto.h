@@ -32,7 +32,9 @@ namespace evab
          */
         void SetValue(int aValue)
         {
-            mValue = constrain(aValue, 0, TPictoset::Count - 1);
+            aValue = constrain(aValue, 0, TPictoset::Count - 1);
+            if (mValue == aValue)
+                 return;
             Redraw();
         }
         

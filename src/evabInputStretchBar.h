@@ -118,6 +118,8 @@ namespace evab
          */
         void SetValue(unsigned char aValue)
         {
+            if (mValue == aValue)
+                 return;
             mValue = constrain(aValue, 0, 100);
             Redraw();
         }

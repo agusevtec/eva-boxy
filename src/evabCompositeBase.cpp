@@ -5,7 +5,11 @@ namespace evab
 
   void CompositeBase::focusChild(ElementBase *aChild)
   {
+    if (mFocusedChild == aChild)
+      return;
+
     mFocusedChild = aChild;
+    Redraw();
   }
 
   bool CompositeBase::Key(Keys aKey)
@@ -18,7 +22,7 @@ namespace evab
 
   bool CompositeBase::onResidualKey(Keys)
   {
-    return false;
+      return false;
   }
 
   bool CompositeBase::IsFocused(ElementBase *aChild)
