@@ -59,9 +59,14 @@ namespace evab
          *
          * @param aValue Speed value (0 = stopped, 1..tMaxSpeed = animation speed)
          */
-        void SetValue(unsigned char aValue)
+        void Select(unsigned char aValue)
         {
-            mValue = constrain(aValue, 0, tMaxSpeed);
+            aValue = constrain(aValue, 0, tMaxSpeed); 
+            if (mValue == aValue)
+                return;
+            mValue = aValue;
+
+            Redraw();
         }
 
         /**
@@ -69,29 +74,9 @@ namespace evab
          *
          * @return Current speed value (0 to tMaxSpeed)
          */
-        unsigned char GetValue() const
+        unsigned char Selected() const
         {
             return mValue;
-        }
-
-        /**
-         * @brief Gets the current speed as percentage (0-100)
-         *
-         * @return Percentage value (0-100)
-         */
-        unsigned char GetValuePercent() const
-        {
-            return map(mValue, 0, tMaxSpeed, 0, 100);
-        }
-
-        /**
-         * @brief Sets speed from percentage value
-         *
-         * @param aValue Percentage value (0-100)
-         */
-        void SetValuePercent(unsigned char aValue)
-        {
-            SetValue(map(constrain(aValue, 0, 100), 0, 100, 0, tMaxSpeed));
         }
 
         /**
@@ -101,7 +86,12 @@ namespace evab
          */
         void Increment(signed char delta)
         {
-            SetValue(mValue + delta);
+            Select(mValue + delta);
+        }
+
+        unsigned char Count() const
+        {
+            return tMaxSpeed + 1; // 0..tMaxSpeed → tMaxSpeed+1 позиций
         }
 
     protected:

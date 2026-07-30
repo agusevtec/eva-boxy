@@ -117,7 +117,7 @@ namespace evab
    * Similar to KeyModifier but additionally sends event notifications
    * when the value changes through increment/decrement operations.
    *
-   * @tparam T Base element type (must have Increment(signed char) and GetValue() methods)
+   * @tparam T Base element type (must have Increment(signed char) and Selected() methods)
    * @tparam kDec Key code for decrement
    * @tparam kInc Key code for increment
    */

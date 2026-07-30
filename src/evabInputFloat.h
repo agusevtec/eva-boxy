@@ -1,12 +1,13 @@
+// evabInputFloat.h
 #pragma once
 
-#include <evabElementBase.h>
+#include "evabElementBase.h"
 
 namespace evab
 {
 
   /**
-   * @brief Floating-point input element
+   * @brief Float input element
    *
    * Displays and manages a floating-point value.
    */
@@ -35,11 +36,11 @@ namespace evab
     float GetValue() const;
 
     /**
-     * @brief Increments the value by a delta
+     * @brief Increments the value by a step
      *
-     * @param delta Amount to add (positive or negative)
+     * @param aSteps Amount to add (positive or negative)
      */
-    void Increment(signed char delta);
+    void Increment(signed char aSteps);
 
   protected:
     /**
@@ -54,6 +55,25 @@ namespace evab
 
   private:
     float mValue; ///< Current float value
+  };
+
+  /**
+   * @brief Discrete float input element
+   *
+   * Adds index-based control to InputFloat.
+   */
+  class InputFloatDiscrete : public InputFloat
+  {
+    unsigned char mCount;
+    float mMin;
+    float mMax;
+
+  public:
+    InputFloatDiscrete(float aValue, unsigned char aCount, float aMin, float aMax);
+    void Select(unsigned char aIndex);
+    signed short Selected() const;
+    unsigned char Count() const { return mCount; }
+    void Increment(int aSteps);
   };
 
 }

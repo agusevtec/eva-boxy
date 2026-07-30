@@ -18,7 +18,7 @@ namespace evab
   public:
     WindowAlgorithmBase();
     
-    virtual void Select(signed char aIndex) = 0;
+    virtual void Select(unsigned char aIndex) = 0;
     
     signed char Selected();
     
@@ -43,13 +43,13 @@ namespace evab
   class FlipWindowAlgorithm : public WindowAlgorithmBase
   {
   public:
-    void Select(signed char aIndex) override;
+    void Select(unsigned char aIndex) override;
   };
 
   class ScrollWindowAlgorithm : public WindowAlgorithmBase
   {
   public:
-    void Select(signed char aIndex) override;
+    void Select(unsigned char aIndex) override;
   };
 
 }

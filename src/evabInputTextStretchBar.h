@@ -207,11 +207,12 @@ namespace evab
         /**
          * @brief Constructor for InputTextStretchBar
          *
-         * @param aValue Initial value (0-100)
+         * @param aValue Initial percent value (0-100)
+         * @param aStep Increment step (0 = auto-calculate from resolution)
          */
-        InputTextStretchBar(unsigned char aValue = 0)
+        InputTextStretchBar(unsigned char aValue = 0, unsigned char aStep = 0)
+            : mPercent(constrain(aValue, 0, 100)), mStep(aStep)
         {
-            mValue = constrain(aValue, 0, 100);
         }
 
         /**
@@ -219,13 +220,18 @@ namespace evab
          *
          * @param aValue New value (0-100)
          */
-        void SetValue(unsigned char aValue)
+        void SetPercent(unsigned char aPercent)
         {
-            aValue = constrain(aValue, 0, 100);
-            if (mValue == aValue)
-                 return;
-            mValue = aValue;
+            aPercent = constrain(aPercent, 0, 100);
+            if (mPercent == aPercent)
+                return;
+            mPercent = aPercent;
             Redraw();
+        }
+
+        unsigned char GetPercent()
+        {
+            return mPercent;
         }
 
         /**
@@ -235,7 +241,7 @@ namespace evab
          */
         void Increment(signed char delta)
         {
-            SetValue(mValue + delta);
+            SetPercent(mPercent + mStep * delta);
         }
 
     protected:
@@ -250,7 +256,13 @@ namespace evab
         void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
             unsigned short resolution = OrientationTextPolicy::CalculateResolution(aSize);
-            unsigned short normalizedValue = map(mValue, 0, 100, 0, resolution);
+            if (mStep == 0 && resolution > 0)
+            {
+                mStep = 100 / resolution;
+                if (mStep == 0)
+                    mStep = 1;
+            }
+            unsigned short normalizedValue = map(mPercent, 0, 100, 0, resolution);
             unsigned char totalBlocks = OrientationTextPolicy::CalculateTotalBlocks(aSize);
 
             if (totalBlocks < 2)
@@ -284,7 +296,8 @@ namespace evab
         }
 
     private:
-        unsigned char mValue; ///< Current value (0-100)
+        unsigned char mPercent; ///< Current percent value (0-100)
+        unsigned char mStep;    ///< Increment step (0 = auto-calculate)
     };
 
     // Convenience typedefs for common text stretch bar types

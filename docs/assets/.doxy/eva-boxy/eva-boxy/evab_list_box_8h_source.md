@@ -40,7 +40,7 @@ namespace evab
       return *this;
     }
 
-    void Select(signed char aIndex) override
+    void Select(unsigned char aIndex) override
     {
       TWindowAlgorithm::Select(aIndex);
       Redraw();

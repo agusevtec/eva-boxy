@@ -21,28 +21,28 @@ namespace evab
      * 
      * @param aIndex Index to select
      */
-    virtual void Select(signed char aIndex) = 0;
+    virtual void Select(unsigned char aIndex) = 0;
     
     /**
      * @brief Gets the currently selected item index
      * 
      * @return Selected index, or -1 if empty
      */
-    signed char Selected();
+    signed short Selected();
     
     /**
      * @brief Gets the total number of items
      * 
      * @return Total number of items
      */
-    signed char Count();
+    unsigned char Count();
     
     /**
      * @brief Gets the window size
      * 
      * @return Window size
      */
-    signed char WindowSize();
+    unsigned char WindowSize();
 
   protected:
     /**
@@ -51,27 +51,27 @@ namespace evab
      * @param aPosition Absolute position of the item
      * @return Visual index, or -1 if not visible
      */
-    signed char indexInWindow(signed char aPosition);
+    signed char indexInWindow(unsigned char aPosition);
     
     /**
      * @brief Sets the total number of items
      * 
      * @param Count Total number of items
      */
-    void setCount(signed char Count);
+    void setCount(unsigned char Count);
     
     /**
      * @brief Resizes the window
      * 
      * @param aWindowSize New window size
      */
-    void resizeWindow(signed char aWindowSize);
+    void resizeWindow(unsigned char aWindowSize);
 
   protected:
-    signed char mSelected;     ///< Currently selected index
-    signed char mCount;        ///< Total number of items
-    signed char mWindowStart;  ///< Start of the current window
-    signed char mWindowSize;   ///< Window size
+    unsigned char mSelected;     ///< Currently selected index
+    unsigned char mCount;        ///< Total number of items
+    unsigned char mWindowStart;  ///< Start of the current window
+    unsigned char mWindowSize;   ///< Window size
   };
 
   /**
@@ -87,7 +87,7 @@ namespace evab
      * 
      * @param aIndex Index to select
      */
-    void Select(signed char aIndex) override;
+    void Select(unsigned char aIndex) override;
   };
 
   /**
@@ -103,7 +103,7 @@ namespace evab
      * 
      * @param aIndex Index to select
      */
-    void Select(signed char aIndex) override;
+    void Select(unsigned char aIndex) override;
   };
 
 }

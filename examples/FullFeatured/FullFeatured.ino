@@ -22,6 +22,7 @@
 #include <evabInputFloat.h>
 #include <evabGrid.h>
 #include <evabTextLabel.h>
+#include <evabInputStretchBar.h>
 
 using namespace eva;
 using namespace evab;
@@ -32,7 +33,7 @@ class UIHomeForm : public KeyModifier<LayoutBase, KEY_LEFT, KEY_RIGHT> {
 
 public:
   UIHomeForm(IHandler *aOnMonitorHandler, IHandler *aOnSettingsHandler)
-    : mMonitorButton(this, aOnMonitorHandler,  GalleryRemixicon32::PICTO_F243),
+    : mMonitorButton(this, aOnMonitorHandler, GalleryRemixicon32::PICTO_F243),
       mSettingsButton(this, aOnSettingsHandler, GalleryRemixicon32::PICTO_F0E4) {
   }
 
@@ -41,19 +42,19 @@ private:
     TextLabelCenterF labelTitle(F("BOXY - DEMO"));
     TextLabelCenterF labelOption(IsFocused(&mMonitorButton) ? F("CLIMAT") : F("SETTINGS"));
 
-    Grid grid(aPos, aSize);
-    grid.SliceRow(1).Draw(aScreen, &labelTitle);
-    grid.SliceRow(1).Blank(aScreen);
+    Grid grid(aScreen, aPos, aSize);
+    grid.SliceRow(1).Draw(&labelTitle);
+    grid.SliceRow(1).Clear();
 
     Grid row = grid.SliceRow(4);
-    row.SliceCol(2).Blank(aScreen);
-    row.SliceCol(4).Draw(aScreen, &mMonitorButton, IsFocused(&mMonitorButton));
-    row.SliceCol(4).Blank(aScreen);
-    row.SliceCol(4).Draw(aScreen, &mSettingsButton, IsFocused(&mSettingsButton));
-    row.Rest().Blank(aScreen);
+    row.SliceCol(2).Clear();
+    row.SliceCol(4).Draw(&mMonitorButton, IsFocused(&mMonitorButton));
+    row.SliceCol(4).Clear();
+    row.SliceCol(4).Draw(&mSettingsButton, IsFocused(&mSettingsButton));
+    row.Rest().Clear();
 
-    grid.SliceRow(1).Blank(aScreen);
-    grid.SliceRow(1).Draw(aScreen, &labelOption);
+    grid.SliceRow(1).Clear();
+    grid.SliceRow(1).Draw(&labelOption);
   }
 };
 
@@ -71,22 +72,22 @@ private:
     LabeledLeftF<InputFloat> tempField(F("TEMERATURE"), 23);
     LabeledLeftF<InputInt> humField(F("HUMIDITY"), 41);
 
-    Grid grid (aPos, aSize);
-    //mesh.SliceRow(1).Blank(aScreen);
+    Grid grid(aScreen, aPos, aSize);
+    //mesh.SliceRow(1).Clear();
 
     Grid row = grid.SliceRow(3);
-    aScreen->Picto(row.SliceCol(3).GetPos(), GalleryRemixicon24::PICTO_F1F2, 0);
-    row.SliceCol(1).Blank(aScreen);
-    row.Rest().Draw(aScreen, &tempField);
+    row.SliceCol(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);
+    row.SliceCol(1).Clear();
+    row.Rest().Draw(&tempField);
 
-    grid.SliceRow(2).Blank(aScreen);
+    grid.SliceRow(2).Clear();
 
     row = grid.SliceRow(3);
-    aScreen->Picto(row.SliceCol(3).GetPos(), GalleryRemixicon24::PICTO_EBD8, 0);
-    row.SliceCol(1).Blank(aScreen);
-    row.Rest().Draw(aScreen, &humField);
-  
-    grid.Rest().Blank(aScreen);
+    row.SliceCol(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);
+    row.SliceCol(1).Clear();
+    row.Rest().Draw(&humField);
+
+    grid.Rest().Clear();
   }
 
   bool Key(Keys aKey) override {
@@ -96,8 +97,35 @@ private:
   }
 };
 
-// static const char OK_TEXT[] PROGMEM = "OK";
 //   FocusChain<InputButton> btn4{ this, (const __FlashStringHelper *)OK_TEXT };
+
+static const char OK_TEXT[] PROGMEM = "Item 1";
+
+class UISettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
+
+  FocusChain<KeyModifier<LabeledLeftF<HorizontalScrollBar>, KEY_LEFT, KEY_RIGHT>> mItem1{ this, (const __FlashStringHelper *)OK_TEXT };
+  FocusChain<KeyCatcher<InputButton, KEY_RIGHT>> mSaveButton;
+
+public:
+  UISettingsForm(IHandler *aOnSettingsSaved)
+    : mSaveButton(this, aOnSettingsSaved, F("SAVE")) {
+  }
+
+private:
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+    TextLabelCenterF labelTitle(F("Settings"));
+
+    Grid grid(aScreen, aPos, aSize);
+    grid.SliceRow(1).Draw(&labelTitle);
+    grid.SliceRow(1).Clear();
+    grid.SliceRow(1).Draw(&mItem1, IsFocused(&mItem1));
+    grid.SliceRow(1).Clear();
+    grid.SliceRow(1).Draw(&mSaveButton, IsFocused(&mSaveButton));
+    grid.Rest().Clear();
+  }
+};
+
+
 
 class UIGroundLayer : public CompositeBase {
   UIHomeForm mUIHome{
@@ -147,19 +175,20 @@ private:
   }
 };
 
-const unsigned char gSimulateUser[4] = { KEY_RIGHT, KEY_LEFT, KEY_ENTER, KEY_ENTER};
+//const unsigned char gSimulateUser[4] = { KEY_RIGHT, KEY_RIGHT, KEY_RIGHT, KEY_RIGHT };
+const unsigned char gSimulateUser[4] = { KEY_RIGHT, KEY_LEFT, KEY_ENTER, KEY_ENTER };
 unsigned char gSimulateUserIndex = 0;
 
 class App {
   RepeatTimer repeatTimer{ new Handler<App>(this, &onRepeatTimer) };
   UIGroundLayer mUIGroundLayer;
-//  UIMonitoringForm mUIGroundLayer{ nullptr };
+  //UISettingsForm mUIGroundLayer{ nullptr };
 
 public:
   App() {
     Boxy::Begin<ScreenSSD1306, Font8Narrow>(&mUIGroundLayer);
     repeatTimer.start(2000);
-    Boxy::Message(F("Information"), "started !");
+    //Boxy::Message(F("Information"), "started !");
   }
 
   void onRepeatTimer(void *, eva::CallbackInfo) {
@@ -167,6 +196,7 @@ public:
     ++gSimulateUserIndex %= 4;
   }
 };
+
 
 void setup() {
   Serial.begin(9600);

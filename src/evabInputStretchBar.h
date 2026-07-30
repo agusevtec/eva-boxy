@@ -104,24 +104,31 @@ namespace evab
         /**
          * @brief Constructor for InputStretchBar
          *
-         * @param aValue Initial value (0-100)
+         * @param aValue Initial percent value (0-100)
+         * @param aStep Increment step (0 = auto-calculate from resolution)
          */
-        InputStretchBar(unsigned char aValue = 0)
+        InputStretchBar(unsigned char aValue = 0, unsigned char aStep = 0)
+            : mPercent(constrain(aValue, 0, 100)), mStep(aStep)
         {
-            mValue = constrain(aValue, 0, 100);
         }
 
         /**
          * @brief Sets the value and redraws
          *
-         * @param aValue New value (0-100)
+         * @param aPercent New value (0-100)
          */
-        void SetValue(unsigned char aValue)
+        void SetPercent(unsigned char aPercent)
         {
-            if (mValue == aValue)
-                 return;
-            mValue = constrain(aValue, 0, 100);
+            aPercent = constrain(aPercent, 0, 100);
+            if (mPercent == aPercent)
+                return;
+            mPercent = aPercent;
             Redraw();
+        }
+
+        unsigned char GetPercent()
+        {
+            return mPercent;
         }
 
         /**
@@ -131,7 +138,7 @@ namespace evab
          */
         void Increment(signed char delta)
         {
-            SetValue(mValue + delta);
+            SetPercent(mPercent + mStep*delta);
         }
 
     protected:
@@ -146,26 +153,34 @@ namespace evab
         void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
             unsigned short resolution = OrientationAlbumPolicy::CalculateResolution(aSize);
-            unsigned short normalizedValue = map(mValue, 0, 100, 0, resolution);
+
+            if (mStep == 0 && resolution > 0)
+            {
+                mStep = 100 / resolution;
+                if (mStep == 0)
+                    mStep = 1;
+            }
+
+            unsigned short normalizedValue = map(mPercent, 0, 100, 0, resolution);
             unsigned char totalBlocks = OrientationAlbumPolicy::CalculateTotalBlocks(aSize);
 
             if (totalBlocks < 2)
                 return;
 
-            aScreen->Album(
+            aScreen->Picto(
                 OrientationAlbumPolicy::GetTilePosition(aPos, aSize, 0, totalBlocks),
                 TAlbumStretchy::GetTile(START_BLOCK, blockFill(0, normalizedValue)),
                 aIsFocused);
 
             for (unsigned char i = 1; i < totalBlocks - 1; i++)
             {
-                aScreen->Album(
+                aScreen->Picto(
                     OrientationAlbumPolicy::GetTilePosition(aPos, aSize, i, totalBlocks),
                     TAlbumStretchy::GetTile(MIDDLE_BLOCK, blockFill(i, normalizedValue)),
                     aIsFocused);
             }
 
-            aScreen->Album(
+            aScreen->Picto(
                 OrientationAlbumPolicy::GetTilePosition(aPos, aSize, totalBlocks - 1, totalBlocks),
                 TAlbumStretchy::GetTile(END_BLOCK, blockFill(totalBlocks - 1, normalizedValue)),
                 aIsFocused);
@@ -193,7 +208,8 @@ namespace evab
         static constexpr unsigned char MIDDLE_BLOCK = 2; ///< Middle block type
         static constexpr unsigned char END_BLOCK = 3;    ///< End block type
 
-        unsigned char mValue; ///< Current value (0-100)
+        unsigned char mPercent; ///< Current percent value (0-100)
+        unsigned char mStep;    ///< Increment step (0 = auto-calculate)
     };
 
     // Convenience typedefs for common stretch bar types

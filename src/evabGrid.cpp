@@ -1,11 +1,12 @@
-// evabMesh.cpp
+// evabGrid.cpp
 #include "evabGrid.h"
 
 using namespace evab;
 
-Grid::Grid(Coor aPos, Coor aSize)
+Grid::Grid(Screen *aScreen, Coor aPos, Coor aSize)
     : mTopLeft(aPos)
     , mBottomRight({aPos.X + aSize.X, aPos.Y + aSize.Y})
+    , mScreen(aScreen)
 {
 }
 
@@ -19,7 +20,7 @@ Grid Grid::SliceRow(unsigned char aHeight)
     
     mTopLeft.Y += aHeight;
     
-    return Grid(rowTopLeft, rowSize);
+    return Grid(mScreen, rowTopLeft, rowSize);
 }
 
 Grid Grid::SliceCol(unsigned char aWidth)
@@ -32,13 +33,14 @@ Grid Grid::SliceCol(unsigned char aWidth)
     
     mTopLeft.X += aWidth;
     
-    return Grid(colTopLeft, colSize);
+    return Grid (mScreen, colTopLeft, colSize);
 }
 
 Grid& Grid::Rest()
 {
     return *this;
 }
+
 
 Coor Grid::GetSize() const
 {
@@ -51,14 +53,8 @@ Coor Grid::GetSize() const
     return Coor(width, height);
 }
 
-void Grid::Draw(Screen *aScreen, ElementBase *aElement, unsigned char aIsFocused)
+void Grid::Draw(ElementBase *aElement, unsigned char aIsFocused)
 {
-    if (aElement && aScreen)
-        aElement->Draw(aScreen, mTopLeft, GetSize(), aIsFocused);
-}
-
-void Grid::Blank(Screen *aScreen)
-{
-    if (aScreen)
-        aScreen->Clear(mTopLeft, GetSize(), 0);
+    if (aElement && mScreen)
+        aElement->Draw(mScreen, mTopLeft, GetSize(), aIsFocused);
 }

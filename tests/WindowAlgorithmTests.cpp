@@ -14,7 +14,7 @@
 //     using WindowAlgorithmBase::resizeWindow;
     
 //     // Реализуем pure virtual Select
-//     void Select(signed char aIndex) override
+//     void Select(unsigned char aIndex) override
 //     {
 //         if (mCount == 0 || mWindowSize == 0)
 //             return;
