@@ -9,7 +9,7 @@ void Boxy::Key(Keys aKey)
 {
     auto instance = Instance();
     if (instance->mGround)
-        instance->mGround->Key(aKey);
+        instance->mGround->OnKey(aKey);
 }
 
 Boxy *Boxy::Instance()

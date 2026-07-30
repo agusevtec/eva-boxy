@@ -90,7 +90,7 @@ namespace evab
      * @param aKey Key code to process
      * @return true if the key was handled
      */
-    bool Key(Keys aKey) override
+    bool OnKey(Keys aKey) override
     {
       if (!mItems)
         return false;
@@ -103,7 +103,7 @@ namespace evab
       if (!item)
         return false;
 
-      return item->Key(aKey);
+      return item->OnKey(aKey);
     }
 
   protected:

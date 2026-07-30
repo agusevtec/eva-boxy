@@ -58,9 +58,9 @@ void LayoutBase::Increment(signed char delta)
   }
 }
 
-bool LayoutBase::Key(Keys aKey)
+bool LayoutBase::OnKey(Keys aKey)
 {
-  if (mFocusedChild && mFocusedChild->AsElementBase()->Key(aKey))
+  if (mFocusedChild && mFocusedChild->AsElementBase()->OnKey(aKey))
     return true;
 
   return onResidualKey(aKey);

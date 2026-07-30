@@ -42,7 +42,7 @@ void ElementBase::Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIs
   mSerialized = aScreen->Serialize(aPos, aSize, aIsFocused);
 }
 
-bool ElementBase::Key(Keys)
+bool ElementBase::OnKey(Keys)
 {
   return false;
 }

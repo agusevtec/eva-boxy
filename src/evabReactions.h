@@ -12,7 +12,7 @@ namespace evab
    * When a matching key is pressed, it invokes the listener with an event callback.
    *
    * @tparam T Base element type to decorate
-   * @tparam KEYS Key codes to catch (variadic template parameters)
+   * @tparam KEYS OnKey codes to catch (variadic template parameters)
    */
   template <class T, Keys... KEYS>
   class KeyCatcher : public T
@@ -44,9 +44,9 @@ namespace evab
      * @param aKey The key code to process
      * @return true if the key was handled, false otherwise
      */
-    bool Key(Keys aKey) override
+    bool OnKey(Keys aKey) override
     {
-      if (T::Key(aKey))
+      if (T::OnKey(aKey))
         return true;
 
       if ((... || (aKey == KEYS)))
@@ -95,9 +95,9 @@ namespace evab
      * @param aKey The key code to process
      * @return true if the key was handled, false otherwise
      */
-    bool Key(Keys aKey) override
+    bool OnKey(Keys aKey) override
     {
-      if (T::Key(aKey))
+      if (T::OnKey(aKey))
         return true;
 
       if (aKey == kDec)
@@ -151,9 +151,9 @@ namespace evab
      * @param aKey The key code to process
      * @return true if the key was handled, false otherwise
      */
-    bool Key(Keys aKey) override
+    bool OnKey(Keys aKey) override
     {
-      if (T::Key(aKey))
+      if (T::OnKey(aKey))
         return true;
 
       if (aKey == kDec)

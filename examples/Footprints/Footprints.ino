@@ -73,7 +73,7 @@ using namespace evab;
 //   }
 
 //   void invoke(void *, eva::CallbackInfo) {
-//     Boxy::Key(KEY_UP);
+//     Boxy::OnKey(KEY_UP);
 //   }
 // };
 

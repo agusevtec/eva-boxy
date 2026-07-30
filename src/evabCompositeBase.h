@@ -16,10 +16,10 @@ namespace evab
     /**
      * @brief Handles key events by forwarding to focused child
      *
-     * @param aKey Key code to process
+     * @param aKey OnKey code to process
      * @return true if the key was handled, false otherwise
      */
-    bool Key(Keys aKey) override;
+    bool OnKey(Keys aKey) override;
 
     /**
      * @brief Checks if a child is currently focused
@@ -50,7 +50,7 @@ namespace evab
      *
      * Override this to implement custom key handling in composites.
      *
-     * @param aKey Key code to process
+     * @param aKey OnKey code to process
      * @return true if the key was handled, false otherwise
      */
     virtual bool onResidualKey(Keys aKey);

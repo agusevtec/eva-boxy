@@ -12,9 +12,9 @@ namespace evab
     Redraw();
   }
 
-  bool CompositeBase::Key(Keys aKey)
+  bool CompositeBase::OnKey(Keys aKey)
   {
-    if (mFocusedChild && mFocusedChild->Key(aKey))
+    if (mFocusedChild && mFocusedChild->OnKey(aKey))
       return true;
     return onResidualKey(aKey);
   }

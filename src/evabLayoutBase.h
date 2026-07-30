@@ -118,7 +118,7 @@ namespace evab
      * @param aKey Key code to process
      * @return true if the key was handled, false otherwise
      */
-    bool Key(Keys aKey) override;
+    bool OnKey(Keys aKey) override;
 
   protected:
     /**

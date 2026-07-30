@@ -23,7 +23,7 @@ namespace evab
      * @param aKey Key code to process
      * @return true if the key was handled, false otherwise
      */
-    virtual bool Key(Keys aKey);
+    virtual bool OnKey(Keys aKey);
 
     /**
      * @brief Hides the element from view

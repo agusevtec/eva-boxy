@@ -47,7 +47,7 @@ public:
   }
 
   void onRepeatTimer(void *, eva::CallbackInfo) {
-    Boxy::Key(KEY_RIGHT);
+    Boxy::OnKey(KEY_RIGHT);
   }
 };
 
