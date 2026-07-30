@@ -45,9 +45,9 @@ private:
 
     Grid row = grid.SliceRow(4);
     row.SliceCol(2).Clear();
-    row.SliceCol(4).Draw(&mMonitorButton, IsFocused(&mMonitorButton));
+    row.SliceCol(4).Draw(&mMonitorButton, aIsFocused && IsFocused(&mMonitorButton));
     row.SliceCol(4).Clear();
-    row.SliceCol(4).Draw(&mSettingsButton, IsFocused(&mSettingsButton));
+    row.SliceCol(4).Draw(&mSettingsButton, aIsFocused && IsFocused(&mSettingsButton));
     row.Rest().Clear();
 
     grid.SliceRow(1).Clear();
@@ -115,9 +115,9 @@ private:
     Grid grid(aScreen, aPos, aSize);
     grid.SliceRow(1).TextCenter(F("Settings"));
     grid.SliceRow(1).Clear();
-    grid.SliceRow(1).Draw(&mItem1, IsFocused(&mItem1));
+    grid.SliceRow(1).Draw(&mItem1, aIsFocused && IsFocused(&mItem1));
     grid.SliceRow(1).Clear();
-    grid.SliceRow(1).Draw(&mSaveButton, IsFocused(&mSaveButton));
+    grid.SliceRow(1).Draw(&mSaveButton, aIsFocused && IsFocused(&mSaveButton));
     grid.Rest().Clear();
   }
 };
