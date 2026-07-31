@@ -35,6 +35,7 @@ namespace evab
             aValue = constrain(aValue, 0, TAlbum::Count - 1);
             if (mValue == aValue)
                 return;
+            mValue = aValue;
             redraw();
         }
 
@@ -74,6 +75,7 @@ namespace evab
          */
         void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
+            aScreen->Clear(aPos, aSize, aIsFocused);
             aScreen->Picto(aPos, TAlbum::GetTile(mValue), aIsFocused);
         }
 

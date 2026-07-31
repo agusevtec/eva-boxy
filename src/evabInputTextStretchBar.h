@@ -258,9 +258,7 @@ namespace evab
             unsigned short resolution = OrientationTextPolicy::CalculateResolution(aSize);
             if (mStep == 0 && resolution > 0)
             {
-                mStep = 100 / resolution;
-                if (mStep == 0)
-                    mStep = 1;
+                mStep = 100 / resolution + 1;
             }
             unsigned short normalizedValue = map(mPercent, 0, 100, 0, resolution);
             unsigned char totalBlocks = OrientationTextPolicy::CalculateTotalBlocks(aSize);
