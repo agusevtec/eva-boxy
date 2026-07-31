@@ -18,7 +18,7 @@ namespace evab
   class CompositeBase : public ElementBase
   {
   public:
-    bool Key(Keys aKey) override;
+    bool OnKey(Keys aKey) override;
 
     bool IsFocused(ElementBase *aChild);
 
@@ -30,7 +30,7 @@ namespace evab
   private:
     virtual bool onResidualKey(Keys aKey);
 
-    virtual void hider() = 0;
+    virtual void freezer() = 0;
 
   private:
     ElementBase *mFocusedChild = nullptr; 

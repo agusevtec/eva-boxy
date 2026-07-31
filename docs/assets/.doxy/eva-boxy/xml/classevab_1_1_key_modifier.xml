@@ -3,7 +3,7 @@
   <compounddef id="classevab_1_1_key_modifier" kind="class" language="C++" prot="public">
     <compoundname>evab::KeyModifier</compoundname>
     <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
-    <includes refid="evab_behavior_8h" local="no">evabBehavior.h</includes>
+    <includes refid="evab_reactions_8h" local="no">evabReactions.h</includes>
     <templateparamlist>
       <param>
         <type>class T</type>
@@ -54,14 +54,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="87" column="5" bodyfile="src/evabBehavior.h" bodystart="87" bodyend="90"/>
+        <location file="src/evabReactions.h" line="87" column="5" bodyfile="src/evabReactions.h" bodystart="87" bodyend="90"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_key_modifier_1a3f7a058708b289a742aa8e6dd8e6f24d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_key_modifier_1a000b3244852a5b36eab0e54d0b8019be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
-        <definition>bool evab::KeyModifier&lt; T, kDec, kInc &gt;::Key</definition>
+        <definition>bool evab::KeyModifier&lt; T, kDec, kInc &gt;::OnKey</definition>
         <argsstring>(Keys aKey) override</argsstring>
-        <name>Key</name>
-        <qualifiedname>evab::KeyModifier::Key</qualifiedname>
+        <name>OnKey</name>
+        <qualifiedname>evab::KeyModifier::OnKey</qualifiedname>
         <param>
           <type>Keys</type>
           <declname>aKey</declname>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="98" column="10" bodyfile="src/evabBehavior.h" bodystart="98" bodyend="111"/>
+        <location file="src/evabReactions.h" line="98" column="10" bodyfile="src/evabReactions.h" bodystart="98" bodyend="111"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -142,10 +142,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabBehavior.h" line="78" column="3" bodyfile="src/evabBehavior.h" bodystart="79" bodyend="112"/>
+    <location file="src/evabReactions.h" line="78" column="3" bodyfile="src/evabReactions.h" bodystart="79" bodyend="112"/>
     <listofallmembers>
-      <member refid="classevab_1_1_key_modifier_1a3f7a058708b289a742aa8e6dd8e6f24d" prot="public" virt="non-virtual"><scope>evab::KeyModifier</scope><name>Key</name></member>
       <member refid="classevab_1_1_key_modifier_1a3195a8c0a81cfcbcd39e7a19f3f853dc" prot="public" virt="non-virtual"><scope>evab::KeyModifier</scope><name>KeyModifier</name></member>
+      <member refid="classevab_1_1_key_modifier_1a000b3244852a5b36eab0e54d0b8019be" prot="public" virt="non-virtual"><scope>evab::KeyModifier</scope><name>OnKey</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

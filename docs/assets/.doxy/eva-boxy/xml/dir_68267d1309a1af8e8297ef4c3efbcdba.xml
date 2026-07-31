@@ -2,7 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
-    <innerfile refid="evab_behavior_8h">evabBehavior.h</innerfile>
+    <innerfile refid="evab_albums_8h">evabAlbums.h</innerfile>
+    <innerfile refid="evab_albums_stretchy_8h">evabAlbumsStretchy.h</innerfile>
     <innerfile refid="evab_boxy_8h">evabBoxy.h</innerfile>
     <innerfile refid="evab_composite_base_8h">evabCompositeBase.h</innerfile>
     <innerfile refid="evab_coor_8h">evabCoor.h</innerfile>
@@ -20,15 +21,15 @@
     <innerfile refid="evab_input_button_picto_8h">evabInputButtonPicto.h</innerfile>
     <innerfile refid="evab_input_float_8h">evabInputFloat.h</innerfile>
     <innerfile refid="evab_input_int_8h">evabInputInt.h</innerfile>
-    <innerfile refid="evab_input_selector_picto_8h">evabInputSelectorPicto.h</innerfile>
+    <innerfile refid="evab_input_selector_album_8h">evabInputSelectorAlbum.h</innerfile>
     <innerfile refid="evab_input_stretch_bar_8h">evabInputStretchBar.h</innerfile>
     <innerfile refid="evab_input_text_stretch_bar_8h">evabInputTextStretchBar.h</innerfile>
     <innerfile refid="evab_keys_8h">evabKeys.h</innerfile>
     <innerfile refid="evab_labeled_8h">evabLabeled.h</innerfile>
     <innerfile refid="evab_layout_base_8h">evabLayoutBase.h</innerfile>
     <innerfile refid="evab_list_box_8h">evabListBox.h</innerfile>
-    <innerfile refid="evab_pictosets_8h">evabAlbums.h</innerfile>
-    <innerfile refid="evab_pictosets_stretchy_8h">evabAlbumsStretchy.h</innerfile>
+    <innerfile refid="evab_percent_8h">evabPercent.h</innerfile>
+    <innerfile refid="evab_reactions_8h">evabReactions.h</innerfile>
     <innerfile refid="evab_screen_8h">evabScreen.h</innerfile>
     <innerfile refid="evab_screen_k_s0108_8h">evabScreenKS0108.h</innerfile>
     <innerfile refid="evab_screen_l_c_d___i2_c_8h">evabScreenLCD_I2C.h</innerfile>

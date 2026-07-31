@@ -24,13 +24,27 @@ namespace evab
 
     int GetValue() const;
 
-    void Increment(signed char delta);
+    void Increment(signed char aSteps);
 
   protected:
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
     int mValue; 
+  };
+
+  class InputIntDiscrete : public InputInt
+  {
+    unsigned char mCount;
+    int mMin;
+    int mMax;
+
+  public:
+    InputIntDiscrete(int aValue, unsigned char aCount, int aMin, int aMax);
+    void Select(unsigned char aIndex);
+    signed short Selected() const;
+    unsigned char Count() const { return mCount; }
+    void Increment(int aSteps);
   };
 
 }

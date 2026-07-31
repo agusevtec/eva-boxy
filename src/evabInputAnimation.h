@@ -119,7 +119,7 @@ namespace evab
         /**
          * @brief Hides the element and pauses animation
          */
-        void muter() override
+        void freezer() override
         {
             mLastFrameTime = 0;
         }

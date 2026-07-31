@@ -4,7 +4,7 @@ using namespace evab;
 
 void ElementBase::redraw()
 {
-  if (isMuted())
+  if (isFrozen())
     return;
 
   Screen *screen = Boxy::GetScreen();
@@ -17,15 +17,15 @@ void ElementBase::redraw()
   drawer(screen, currentPos, currentSize, isFocused);
 }
 
-bool ElementBase::isMuted()
+bool ElementBase::isFrozen()
 {
   return mSerialized == 0;
 }
 
-void ElementBase::Mute()
+void ElementBase::Freeze()
 {
   mSerialized = 0;
-  muter();
+  freezer();
 }
 
 void ElementBase::Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
@@ -35,7 +35,7 @@ void ElementBase::Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIs
 
   if (aSize.X == 0 || aSize.Y == 0)
   {
-    muter();
+    freezer();
     return;
   }
   drawer(aScreen, aPos, aSize, aIsFocused);

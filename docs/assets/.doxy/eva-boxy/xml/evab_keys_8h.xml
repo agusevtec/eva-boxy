@@ -30,8 +30,6 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
@@ -43,6 +41,8 @@
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -64,20 +64,24 @@
       <node id="9">
         <label>src/evabInputFloat.h</label>
         <link refid="evab_input_float_8h_source"/>
-      </node>
-      <node id="10">
-        <label>src/evabInputInt.h</label>
-        <link refid="evab_input_int_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="11">
-        <label>src/evabInputSelectorPicto.h</label>
-        <link refid="evab_input_selector_picto_8h_source"/>
+        <label>src/evabInputInt.h</label>
+        <link refid="evab_input_int_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="12">
+        <label>src/evabInputSelectorAlbum.h</label>
+        <link refid="evab_input_selector_album_8h_source"/>
+      </node>
+      <node id="13">
         <label>src/evabInputStretchBar.h</label>
         <link refid="evab_input_stretch_bar_8h_source"/>
       </node>
-      <node id="13">
+      <node id="14">
         <label>src/evabInputTextStretchBar.h</label>
         <link refid="evab_input_text_stretch_bar_8h_source"/>
       </node>
@@ -89,15 +93,19 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>src/evabLayoutBase.h</label>
         <link refid="evab_layout_base_8h_source"/>
       </node>
-      <node id="15">
+      <node id="16">
         <label>src/evabListBox.h</label>
         <link refid="evab_list_box_8h_source"/>
       </node>
-      <node id="16">
+      <node id="10">
+        <label>src/evabPercent.h</label>
+        <link refid="evab_percent_8h_source"/>
+      </node>
+      <node id="17">
         <label>src/evabTextLabel.h</label>
         <link refid="evab_text_label_8h_source"/>
       </node>

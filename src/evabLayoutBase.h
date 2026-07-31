@@ -150,9 +150,9 @@ namespace evab
     virtual bool onResidualKey(Keys aKey);
 
     /**
-     * @brief mutes all children
+     * @brief freezes all children
      */
-    virtual void muter();
+    virtual void freezer();
 
   private:
     IFocusChain *mFocusedChild = nullptr; ///< Currently focused child element (only reference needed)

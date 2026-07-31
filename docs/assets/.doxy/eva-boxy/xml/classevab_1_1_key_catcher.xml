@@ -3,7 +3,7 @@
   <compounddef id="classevab_1_1_key_catcher" kind="class" language="C++" prot="public">
     <compoundname>evab::KeyCatcher</compoundname>
     <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
-    <includes refid="evab_behavior_8h" local="no">evabBehavior.h</includes>
+    <includes refid="evab_reactions_8h" local="no">evabReactions.h</includes>
     <templateparamlist>
       <param>
         <type>class T</type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="24" column="5" bodyfile="src/evabBehavior.h" bodystart="25" bodyend="27"/>
+        <location file="src/evabReactions.h" line="24" column="5" bodyfile="src/evabReactions.h" bodystart="25" bodyend="27"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="64" column="19" bodyfile="src/evabBehavior.h" bodystart="64" bodyend="-1"/>
+        <location file="src/evabReactions.h" line="64" column="19" bodyfile="src/evabReactions.h" bodystart="64" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -103,14 +103,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="36" column="5" bodyfile="src/evabBehavior.h" bodystart="36" bodyend="39"/>
+        <location file="src/evabReactions.h" line="36" column="5" bodyfile="src/evabReactions.h" bodystart="36" bodyend="39"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_key_catcher_1a0033ef4e9d4a29bf4ef02155be41aec3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_key_catcher_1aca34e483a7f7b1a0aaac5426c4b7fbec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
-        <definition>bool evab::KeyCatcher&lt; T, KEYS &gt;::Key</definition>
+        <definition>bool evab::KeyCatcher&lt; T, KEYS &gt;::OnKey</definition>
         <argsstring>(Keys aKey) override</argsstring>
-        <name>Key</name>
-        <qualifiedname>evab::KeyCatcher::Key</qualifiedname>
+        <name>OnKey</name>
+        <qualifiedname>evab::KeyCatcher::OnKey</qualifiedname>
         <param>
           <type>Keys</type>
           <declname>aKey</declname>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabBehavior.h" line="47" column="10" bodyfile="src/evabBehavior.h" bodystart="47" bodyend="61"/>
+        <location file="src/evabReactions.h" line="47" column="10" bodyfile="src/evabReactions.h" bodystart="47" bodyend="61"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -155,7 +155,7 @@
 <parametername>KEYS</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Key codes to catch (variadic template parameters) </para>
+<para>OnKey codes to catch (variadic template parameters) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -183,13 +183,13 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabBehavior.h" line="18" column="3" bodyfile="src/evabBehavior.h" bodystart="19" bodyend="65"/>
+    <location file="src/evabReactions.h" line="18" column="3" bodyfile="src/evabReactions.h" bodystart="19" bodyend="65"/>
     <listofallmembers>
       <member refid="classevab_1_1_key_catcher_1a6e5feb01ca6ee3b28f868db64b853981a844b3980654ebb960c5e163931c92e0f" prot="public" virt="non-virtual"><scope>evab::KeyCatcher</scope><name>EVENT_CATCH_KEY</name></member>
       <member refid="classevab_1_1_key_catcher_1a6e5feb01ca6ee3b28f868db64b853981" prot="public" virt="non-virtual"><scope>evab::KeyCatcher</scope><name>EventType</name></member>
-      <member refid="classevab_1_1_key_catcher_1a0033ef4e9d4a29bf4ef02155be41aec3" prot="public" virt="non-virtual"><scope>evab::KeyCatcher</scope><name>Key</name></member>
       <member refid="classevab_1_1_key_catcher_1aba5d8d213e39d560ed7260db73c291e2" prot="public" virt="non-virtual"><scope>evab::KeyCatcher</scope><name>KeyCatcher</name></member>
       <member refid="classevab_1_1_key_catcher_1ab0a787dfab54c1274f6514062d9353c9" prot="private" virt="non-virtual"><scope>evab::KeyCatcher</scope><name>mListener</name></member>
+      <member refid="classevab_1_1_key_catcher_1aca34e483a7f7b1a0aaac5426c4b7fbec" prot="public" virt="non-virtual"><scope>evab::KeyCatcher</scope><name>OnKey</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -6,15 +6,15 @@
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; ScrollWindowAlgorithm &gt;</derivedcompoundref>
     <includes refid="evab_window_algorithms_8h" local="no">evabWindowAlgorithms.h</includes>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_scroll_window_algorithm_1ae8ba2a3db17d9ca40f53317e0b304126" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_scroll_window_algorithm_1ac4b713b71b2eb92edc7fed245c3af426" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void evab::ScrollWindowAlgorithm::Select</definition>
-        <argsstring>(signed char aIndex) override</argsstring>
+        <argsstring>(unsigned char aIndex) override</argsstring>
         <name>Select</name>
         <qualifiedname>evab::ScrollWindowAlgorithm::Select</qualifiedname>
-        <reimplements refid="classevab_1_1_window_algorithm_base_1a022903ad9e9100b92f81c6b10737f8ea">Select</reimplements>
+        <reimplements refid="classevab_1_1_window_algorithm_base_1a64f7b5f3026d02f69dbfdce8d52c4a89">Select</reimplements>
         <param>
-          <type>signed char</type>
+          <type>unsigned char</type>
           <declname>aIndex</declname>
         </param>
         <briefdescription>
@@ -75,18 +75,18 @@
     </collaborationgraph>
     <location file="src/evabWindowAlgorithms.h" line="98" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="99" bodyend="107"/>
     <listofallmembers>
-      <member refid="classevab_1_1_window_algorithm_base_1a5477e753aea1c5bcaff5b0f9240cd0fd" prot="public" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>Count</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1acd6b3bd987a44454afcc8a148d4cc3c6" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>indexInWindow</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a8881fd816814115cbdc8d45e508d054c" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>mCount</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1ad4350c862eb5257a467623e5bd0918c5" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>mSelected</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a3037a5d364ac13f0031ef977864feab6" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>mWindowSize</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a1f7536774485ca911d1daf7d569b2f5d" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>mWindowStart</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1ae05ad89a293255d891685c08c60f4b2a" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>resizeWindow</name></member>
-      <member refid="classevab_1_1_scroll_window_algorithm_1ae8ba2a3db17d9ca40f53317e0b304126" prot="public" virt="virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>Select</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1aa0bf5cb24c9b5aee7312798e465d6596" prot="public" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>Selected</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a300de90f05a5544c3b92debbbcb355b8" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>setCount</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a7f3ed7df6d39609211d04da29495751b" prot="public" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>Count</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a4f13e98ae4ace7ec0993a5ea9788a483" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>indexInWindow</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a4497e65bb6a552bbfb5cee546ec01754" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>mCount</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a4ead34a5407a0ab37716258bca1900ba" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>mSelected</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1aa52d795bb2867c194b512badeeeb4c4e" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>mWindowSize</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a7d09fb0297ad04dc361d2295c71d3ddd" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>mWindowStart</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a768533f33c2366e719dcb6fa59f04c65" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>resizeWindow</name></member>
+      <member refid="classevab_1_1_scroll_window_algorithm_1ac4b713b71b2eb92edc7fed245c3af426" prot="public" virt="virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>Select</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a58020e092373f757dcf6105f5ee80da4" prot="public" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>Selected</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a2df38e0073bb276e00271f2dd947a534" prot="protected" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>setCount</name></member>
       <member refid="classevab_1_1_window_algorithm_base_1a49ff76a91bd5eb6f61195da64824d310" prot="public" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>WindowAlgorithmBase</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a6f19b87f40b6cc235b9e7ceee79a4195" prot="public" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>WindowSize</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a722790197126e550bc96800acd38faa6" prot="public" virt="non-virtual"><scope>evab::ScrollWindowAlgorithm</scope><name>WindowSize</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

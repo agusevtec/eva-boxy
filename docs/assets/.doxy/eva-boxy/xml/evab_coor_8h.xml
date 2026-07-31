@@ -23,17 +23,17 @@
         <link refid="evab_coor_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="20" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -53,8 +53,6 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
@@ -66,6 +64,8 @@
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
       <node id="5">
@@ -87,36 +87,44 @@
       <node id="9">
         <label>src/evabInputFloat.h</label>
         <link refid="evab_input_float_8h_source"/>
-      </node>
-      <node id="10">
-        <label>src/evabInputInt.h</label>
-        <link refid="evab_input_int_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="11">
-        <label>src/evabInputSelectorPicto.h</label>
-        <link refid="evab_input_selector_picto_8h_source"/>
+        <label>src/evabInputInt.h</label>
+        <link refid="evab_input_int_8h_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="12">
+        <label>src/evabInputSelectorAlbum.h</label>
+        <link refid="evab_input_selector_album_8h_source"/>
+      </node>
+      <node id="13">
         <label>src/evabInputStretchBar.h</label>
         <link refid="evab_input_stretch_bar_8h_source"/>
       </node>
-      <node id="13">
+      <node id="14">
         <label>src/evabInputTextStretchBar.h</label>
         <link refid="evab_input_text_stretch_bar_8h_source"/>
       </node>
-      <node id="17">
+      <node id="18">
         <label>src/evabLabeled.h</label>
         <link refid="evab_labeled_8h_source"/>
       </node>
-      <node id="14">
+      <node id="15">
         <label>src/evabLayoutBase.h</label>
         <link refid="evab_layout_base_8h_source"/>
       </node>
-      <node id="15">
+      <node id="16">
         <label>src/evabListBox.h</label>
         <link refid="evab_list_box_8h_source"/>
       </node>
-      <node id="18">
+      <node id="10">
+        <label>src/evabPercent.h</label>
+        <link refid="evab_percent_8h_source"/>
+      </node>
+      <node id="19">
         <label>src/evabScreen.h</label>
         <link refid="evab_screen_8h_source"/>
         <childnode refid="3" relation="include">
@@ -125,32 +133,30 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
         </childnode>
       </node>
-      <node id="21">
+      <node id="22">
         <label>src/evabScreenKS0108.h</label>
         <link refid="evab_screen_k_s0108_8h_source"/>
       </node>
-      <node id="19">
+      <node id="20">
         <label>src/evabScreenLCD_I2C.h</label>
         <link refid="evab_screen_l_c_d___i2_c_8h_source"/>
       </node>
-      <node id="22">
+      <node id="23">
         <label>src/evabScreenPCD8544.h</label>
         <link refid="evab_screen_p_c_d8544_8h_source"/>
       </node>
-      <node id="20">
+      <node id="21">
         <label>src/evabScreenPage8Base.h</label>
         <link refid="evab_screen_page8_base_8h_source"/>
-        <childnode refid="21" relation="include">
-        </childnode>
         <childnode refid="22" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
@@ -159,38 +165,40 @@
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
       </node>
-      <node id="23">
+      <node id="24">
         <label>src/evabScreenSSD1306.h</label>
         <link refid="evab_screen_s_s_d1306_8h_source"/>
       </node>
-      <node id="24">
+      <node id="25">
         <label>src/evabScreenSSH1106.h</label>
         <link refid="evab_screen_s_s_h1106_8h_source"/>
       </node>
-      <node id="25">
+      <node id="26">
         <label>src/evabScreenSerialPixel.h</label>
         <link refid="evab_screen_serial_pixel_8h_source"/>
       </node>
-      <node id="26">
+      <node id="27">
         <label>src/evabScreenSerialText.h</label>
         <link refid="evab_screen_serial_text_8h_source"/>
       </node>
-      <node id="27">
+      <node id="28">
         <label>src/evabSerializers.h</label>
         <link refid="evab_serializers_8h_source"/>
       </node>
-      <node id="28">
+      <node id="29">
         <label>src/evabTextAlign.h</label>
         <link refid="evab_text_align_8h_source"/>
-        <childnode refid="17" relation="include">
-        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>src/evabTextLabel.h</label>
         <link refid="evab_text_label_8h_source"/>
       </node>

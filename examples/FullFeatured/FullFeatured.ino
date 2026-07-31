@@ -156,22 +156,22 @@ private:
     if (IsFocused(&mUIHome))
       mUIHome.Draw(aScreen, aPos, aSize, aIsFocused);
     else
-      mUIHome.Mute();
+      mUIHome.Freeze();
 
     if (IsFocused(&mUIMonitoring))
       mUIMonitoring.Draw(aScreen, aPos, aSize, aIsFocused);
     else
-      mUIMonitoring.Mute();
+      mUIMonitoring.Freeze();
     if (IsFocused(&mUISettingsForm))
       mUISettingsForm.Draw(aScreen, aPos, aSize, aIsFocused);
     else
-      mUISettingsForm.Mute();
+      mUISettingsForm.Freeze();
   }
 
-  void muter() override {
-    mUIHome.Mute();
-    mUIMonitoring.Mute();
-    mUISettingsForm.Mute();
+  void freezer() override {
+    mUIHome.Freeze();
+    mUIMonitoring.Freeze();
+    mUISettingsForm.Freeze();
   }
 };
 

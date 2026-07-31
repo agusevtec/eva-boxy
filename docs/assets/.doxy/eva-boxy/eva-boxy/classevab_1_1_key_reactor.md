@@ -12,7 +12,7 @@
 
 _Decorator that triggers events when values change via increment/decrement._ [More...](#detailed-description)
 
-* `#include <evabBehavior.h>`
+* `#include <evabReactions.h>`
 
 
 
@@ -60,8 +60,8 @@ Inherits the following classes: T
 
 | Type | Name |
 | ---: | :--- |
-|  bool | [**Key**](#function-key) (Keys aKey) override<br>_Handles key events, triggers event on value change._  |
 |   | [**KeyReactor**](#function-keyreactor) (eva::IHandler \* aListener, Args &&... args) <br>_Constructor for_ [_**KeyReactor**_](classevab_1_1_key_reactor.md) _._ |
+|  bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events, triggers event on value change._  |
 
 
 
@@ -101,7 +101,7 @@ Similar to [**KeyModifier**](classevab_1_1_key_modifier.md) but additionally sen
 **Template parameters:**
 
 
-* `T` Base element type (must have Increment(signed char) and GetValue() methods) 
+* `T` Base element type (must have Increment(signed char) and Selected() methods) 
 * `kDec` Key code for decrement 
 * `kInc` Key code for increment 
 
@@ -129,40 +129,6 @@ enum evab::KeyReactor::EventType {
 <hr>
 ## Public Functions Documentation
 
-
-
-
-### function Key 
-
-_Handles key events, triggers event on value change._ 
-```C++
-inline bool evab::KeyReactor::Key (
-    Keys aKey
-) override
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `aKey` The key code to process 
-
-
-
-**Returns:**
-
-true if the key was handled, false otherwise 
-
-
-
-
-
-        
-
-<hr>
 
 
 
@@ -194,6 +160,40 @@ inline evab::KeyReactor::KeyReactor (
 
 <hr>
 
+
+
+### function OnKey 
+
+_Handles key events, triggers event on value change._ 
+```C++
+inline bool evab::KeyReactor::OnKey (
+    Keys aKey
+) override
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aKey` The key code to process 
+
+
+
+**Returns:**
+
+true if the key was handled, false otherwise 
+
+
+
+
+
+        
+
+<hr>
+
 ------------------------------
-The documentation for this class was generated from the following file `src/evabBehavior.h`
+The documentation for this class was generated from the following file `src/evabReactions.h`
 

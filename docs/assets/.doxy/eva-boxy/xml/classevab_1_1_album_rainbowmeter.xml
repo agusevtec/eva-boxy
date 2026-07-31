@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_album_rainbowmeter" kind="class" language="C++" prot="public">
+    <compoundname>evab::AlbumRainbowmeter</compoundname>
+    <includes refid="evab_albums_8h" local="no">evabAlbums.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_album_rainbowmeter_1a71534891780705ac94cf1de13e789414" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::AlbumRainbowmeter::Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <qualifiedname>evab::AlbumRainbowmeter::Count</qualifiedname>
+        <initializer>= 7</initializer>
+        <briefdescription>
+<para>Number of pictograms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabAlbums.h" line="34" column="40" bodyfile="src/evabAlbums.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_album_rainbowmeter_1a6bfea304f016b2aec75079cbd3424ca7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::AlbumRainbowmeter::GetTile</definition>
+        <argsstring>(unsigned char aIndex)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::AlbumRainbowmeter::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index (0-6) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabAlbums.h" line="33" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Rainbowmeter pictogram set (7 states). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabAlbums.h" line="24" column="5" bodyfile="src/evabAlbums.h" bodystart="25" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_album_rainbowmeter_1a71534891780705ac94cf1de13e789414" prot="public" virt="non-virtual"><scope>evab::AlbumRainbowmeter</scope><name>Count</name></member>
+      <member refid="classevab_1_1_album_rainbowmeter_1a6bfea304f016b2aec75079cbd3424ca7" prot="public" virt="non-virtual"><scope>evab::AlbumRainbowmeter</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

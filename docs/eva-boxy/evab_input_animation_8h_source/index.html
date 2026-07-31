@@ -667,29 +667,29 @@
 <span class="w">            </span><span class="c1">// Tickable destructor handles removal from list</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">SetValue</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aValue</span><span class="p">)</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Select</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aValue</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">mValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constrain</span><span class="p">(</span><span class="n">aValue</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">tMaxSpeed</span><span class="p">);</span>
+<span class="w">            </span><span class="n">aValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">constrain</span><span class="p">(</span><span class="n">aValue</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">tMaxSpeed</span><span class="p">);</span><span class="w"> </span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mValue</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">aValue</span><span class="p">)</span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span>
+<span class="w">            </span><span class="n">mValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aValue</span><span class="p">;</span>
+
+<span class="w">            </span><span class="n">redraw</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">GetValue</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+<span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">Selected</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">GetValuePercent</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">mValue</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">tMaxSpeed</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">SetValuePercent</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aValue</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">SetValue</span><span class="p">(</span><span class="n">map</span><span class="p">(</span><span class="n">constrain</span><span class="p">(</span><span class="n">aValue</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">tMaxSpeed</span><span class="p">));</span>
-<span class="w">        </span><span class="p">}</span>
-
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Increment</span><span class="p">(</span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">SetValue</span><span class="p">(</span><span class="n">mValue</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Select</span><span class="p">(</span><span class="n">mValue</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">Count</span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">tMaxSpeed</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0..tMaxSpeed → tMaxSpeed+1 позиций</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">protected</span><span class="o">:</span>
@@ -704,7 +704,7 @@
 <span class="w">            </span><span class="n">aScreen</span><span class="o">-&gt;</span><span class="n">Picto</span><span class="p">(</span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">TAlbum</span><span class="o">::</span><span class="n">GetTile</span><span class="p">(</span><span class="n">mCurrentFrame</span><span class="p">),</span><span class="w"> </span><span class="n">aIsFocused</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">hider</span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">freezer</span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">mLastFrameTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
@@ -722,7 +722,7 @@
 <span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="n">mLastFrameTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">now</span><span class="p">;</span>
 <span class="w">                </span><span class="n">mCurrentFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">mCurrentFrame</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">TAlbum</span><span class="o">::</span><span class="n">Count</span><span class="p">;</span>
-<span class="w">                </span><span class="n">Redraw</span><span class="p">();</span>
+<span class="w">                </span><span class="n">redraw</span><span class="p">();</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 

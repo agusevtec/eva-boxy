@@ -77,8 +77,8 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 | ---: | :--- |
 |  [**ElementBase**](classevab_1_1_element_base.md) \* | [**GetItem**](#function-getitem) (unsigned char aIndex) <br>_Gets an item by index._  |
 |  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the selection by a delta._  |
-| virtual bool | [**Key**](#function-key) (Keys aKey) override<br>_Handles key events, forwarding to selected item._  |
-|  void | [**Select**](#function-select) (signed char aIndex) override<br>_Selects an item by index._  |
+| virtual bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events, forwarding to selected item._  |
+|  void | [**Select**](#function-select) (unsigned char aIndex) override<br>_Selects an item by index._  |
 |  [**ListBox**](classevab_1_1_list_box.md)&lt; TWindowAlgorithm &gt; & | [**SetItemHeight**](#function-setitemheight) (unsigned char aItemHeight) <br>_Sets the height of each item._  |
 |  [**ListBox**](classevab_1_1_list_box.md)&lt; TWindowAlgorithm &gt; & | [**SetItems**](#function-setitems) ([**ElementBase**](classevab_1_1_element_base.md) \* aItems, int aCount) <br>_Sets the list of items to display._  |
 
@@ -90,10 +90,8 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 |  void | [**Draw**](classevab_1_1_element_base.md#function-draw) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
-|  void | [**Hide**](classevab_1_1_element_base.md#function-mute) () <br>_Hides the element from view._  |
-|  bool | [**IsHidden**](classevab_1_1_element_base.md#function-ishidden) () <br>_Checks if the element is hidden._  |
-| virtual bool | [**Key**](classevab_1_1_element_base.md#function-key) (Keys aKey) <br>_Handles key events for the element._  |
-|  void | [**Redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
+|  void | [**Freeze**](classevab_1_1_element_base.md#function-freeze) () <br>_Make element insensitive to redraw method._  |
+| virtual bool | [**OnKey**](classevab_1_1_element_base.md#function-onkey) (Keys aKey) <br>_Handles key events for the element._  |
 
 
 
@@ -145,7 +143,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) override<br>_Draws the list box._  |
-| virtual void | [**hider**](#function-hider) () override<br>_Hides all items._  |
+| virtual void | [**freezer**](#function-freezer) () override<br>_Hides all items._  |
 
 
 ## Protected Functions inherited from evab::ElementBase
@@ -155,7 +153,9 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](classevab_1_1_element_base.md#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) = 0<br>_Pure virtual method for drawing the element._  |
-| virtual void | [**hider**](classevab_1_1_element_base.md#function-hider) () <br>_Virtual method for muting the element._  |
+| virtual void | [**freezer**](classevab_1_1_element_base.md#function-freezer) () <br>_Virtual method for freezing the element._  |
+|  bool | [**isFrozen**](classevab_1_1_element_base.md#function-isfrozen) () <br>_Checks if the element is currently freezed._  |
+|  void | [**redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
 
 
 
@@ -245,11 +245,11 @@ inline void evab::ListBox::Increment (
 
 
 
-### function Key 
+### function OnKey 
 
 _Handles key events, forwarding to selected item._ 
 ```C++
-inline virtual bool evab::ListBox::Key (
+inline virtual bool evab::ListBox::OnKey (
     Keys aKey
 ) override
 ```
@@ -274,7 +274,7 @@ true if the key was handled
 
 
         
-Implements [*evab::ElementBase::Key*](classevab_1_1_element_base.md#function-key)
+Implements [*evab::ElementBase::OnKey*](classevab_1_1_element_base.md#function-onkey)
 
 
 <hr>
@@ -286,7 +286,7 @@ Implements [*evab::ElementBase::Key*](classevab_1_1_element_base.md#function-key
 _Selects an item by index._ 
 ```C++
 inline void evab::ListBox::Select (
-    signed char aIndex
+    unsigned char aIndex
 ) override
 ```
 
@@ -415,16 +415,16 @@ Implements [*evab::ElementBase::drawer*](classevab_1_1_element_base.md#function-
 
 
 
-### function hider 
+### function freezer 
 
 _Hides all items._ 
 ```C++
-inline virtual void evab::ListBox::hider () override
+inline virtual void evab::ListBox::freezer () override
 ```
 
 
 
-Implements [*evab::ElementBase::hider*](classevab_1_1_element_base.md#function-hider)
+Implements [*evab::ElementBase::freezer*](classevab_1_1_element_base.md#function-freezer)
 
 
 <hr>

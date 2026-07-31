@@ -1,5 +1,53 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.17.0" xml:lang="en-US">
+  <compound refid="classevab_1_1_album_battery" kind="class"><name>evab::AlbumBattery</name>
+    <member refid="classevab_1_1_album_battery_1a50fd5467a07d1f602adcbc53902a3303" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_battery_1aebe1a4bc1bf862c599f5e83fb831d790" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_fan" kind="class"><name>evab::AlbumFan</name>
+    <member refid="classevab_1_1_album_fan_1a491073bab235d13c415d1139e6d4328f" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_fan_1a605959ffc41f2e3594a90e52d6860c90" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_lamp" kind="class"><name>evab::AlbumLamp</name>
+    <member refid="classevab_1_1_album_lamp_1a8ad2c87bbd7b69243266039c714dd788" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_lamp_1acb2855a67151825734e2e83ef95914e2" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_on_off" kind="class"><name>evab::AlbumOnOff</name>
+    <member refid="classevab_1_1_album_on_off_1a68ed5603cf1cca4814e0a58e18f54621" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_on_off_1aa17b792bd52d4ea6013e00301d9ca56d" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_progress" kind="class"><name>evab::AlbumProgress</name>
+    <member refid="classevab_1_1_album_progress_1a91a30cac81b767ade20a50f2918d6e08" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_progress_1ad9c4e40553e0d6da635259c56826d828" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_rainbowmeter" kind="class"><name>evab::AlbumRainbowmeter</name>
+    <member refid="classevab_1_1_album_rainbowmeter_1a71534891780705ac94cf1de13e789414" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_rainbowmeter_1a6bfea304f016b2aec75079cbd3424ca7" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_roundmeter" kind="class"><name>evab::AlbumRoundmeter</name>
+    <member refid="classevab_1_1_album_roundmeter_1a8f1a57c2c2c8396d20de2d8f295f3662" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_roundmeter_1adb59e4adbbde805ba580d9e8ed737d02" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_signal" kind="class"><name>evab::AlbumSignal</name>
+    <member refid="classevab_1_1_album_signal_1a17309e3f69eca3b84598c3050cbd8a8f" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_signal_1ac03654155e8fa5f80b04e240c601d62d" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_speaker" kind="class"><name>evab::AlbumSpeaker</name>
+    <member refid="classevab_1_1_album_speaker_1aafb306de658dbc56ebfaedfc42bf5252" kind="variable"><name>Count</name></member>
+    <member refid="classevab_1_1_album_speaker_1adf7e6c4502bfca2635f8462ddcae7ae4" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_stretchy_horizontal_progress_bar" kind="class"><name>evab::AlbumStretchyHorizontalProgressBar</name>
+    <member refid="classevab_1_1_album_stretchy_horizontal_progress_bar_1af1fc9156361b3972a257e6aa9d668229" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_stretchy_horizontal_scroll_bar" kind="class"><name>evab::AlbumStretchyHorizontalScrollBar</name>
+    <member refid="classevab_1_1_album_stretchy_horizontal_scroll_bar_1a039552e742dbed3d6fa4692e5b80f3f9" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_stretchy_vertical_progress_bar" kind="class"><name>evab::AlbumStretchyVerticalProgressBar</name>
+    <member refid="classevab_1_1_album_stretchy_vertical_progress_bar_1a5ce29a536e1bd644ff3a3fa64ccf4ae7" kind="function"><name>GetTile</name></member>
+  </compound>
+  <compound refid="classevab_1_1_album_stretchy_vertical_scroll_bar" kind="class"><name>evab::AlbumStretchyVerticalScrollBar</name>
+    <member refid="classevab_1_1_album_stretchy_vertical_scroll_bar_1a5e157597783688dfa504b41b6060346f" kind="function"><name>GetTile</name></member>
+  </compound>
   <compound refid="classevab_1_1_boxy" kind="class"><name>evab::Boxy</name>
     <member refid="classevab_1_1_boxy_1a7123b40e88502c467d28f7af27ffe369" kind="variable"><name>mScreen</name></member>
     <member refid="classevab_1_1_boxy_1a19139a262d040ad6307416a87f1dcfbc" kind="variable"><name>mGround</name></member>
@@ -28,12 +76,12 @@
   </compound>
   <compound refid="classevab_1_1_composite_base" kind="class"><name>evab::CompositeBase</name>
     <member refid="classevab_1_1_composite_base_1a3a3a987ae08713a09c798e96f38ab169" kind="variable"><name>mFocusedChild</name></member>
-    <member refid="classevab_1_1_composite_base_1a04b3cdb0c1fb134e78624e44cc75a95d" kind="function"><name>Key</name></member>
+    <member refid="classevab_1_1_composite_base_1af9a5574e31d837af9169acb6a6bf23ec" kind="function"><name>OnKey</name></member>
     <member refid="classevab_1_1_composite_base_1ac6a7c9c5d50a6c27ea3d1348aa66f9c1" kind="function"><name>IsFocused</name></member>
     <member refid="classevab_1_1_composite_base_1a57b22b464cd1ec0984e8eaba1091ff59" kind="function"><name>GetFocused</name></member>
     <member refid="classevab_1_1_composite_base_1af353c1f95e7835298d2420002ccb6a68" kind="function"><name>focusChild</name></member>
     <member refid="classevab_1_1_composite_base_1a8f8254f07c5d194bf4da33d597848057" kind="function"><name>onResidualKey</name></member>
-    <member refid="classevab_1_1_composite_base_1a03ddf518a77efc13f3109bf41c43bb0d" kind="function"><name>hider</name></member>
+    <member refid="classevab_1_1_composite_base_1a549745886246a86545a2cb3ab224941e" kind="function"><name>freezer</name></member>
   </compound>
   <compound refid="structevab_1_1_coor" kind="struct"><name>evab::Coor</name>
     <member refid="structevab_1_1_coor_1a9b9b4735343dac04d9337fac235b2670" kind="variable"><name>X</name></member>
@@ -42,16 +90,16 @@
   </compound>
   <compound refid="classevab_1_1_element_base" kind="class"><name>evab::ElementBase</name>
     <member refid="classevab_1_1_element_base_1a0484daf10dc5a40d804b50f42f022aaa" kind="variable"><name>mSerialized</name></member>
-    <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" kind="function"><name>Key</name></member>
-    <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" kind="function"><name>Hide</name></member>
+    <member refid="classevab_1_1_element_base_1ad088e430fee933d67248ea9242e8ddf7" kind="function"><name>OnKey</name></member>
     <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" kind="function"><name>Draw</name></member>
-    <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" kind="function"><name>Redraw</name></member>
-    <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" kind="function"><name>IsHidden</name></member>
+    <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" kind="function"><name>Freeze</name></member>
+    <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" kind="function"><name>isFrozen</name></member>
     <member refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" kind="function"><name>drawer</name></member>
-    <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" kind="function"><name>hider</name></member>
+    <member refid="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124" kind="function"><name>freezer</name></member>
+    <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" kind="function"><name>redraw</name></member>
   </compound>
   <compound refid="classevab_1_1_flip_window_algorithm" kind="class"><name>evab::FlipWindowAlgorithm</name>
-    <member refid="classevab_1_1_flip_window_algorithm_1aae9f7251d9e739b99119871e78cdcca6" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_flip_window_algorithm_1aac2d515d87926e57f4255638a7bcf1da" kind="function"><name>Select</name></member>
   </compound>
   <compound refid="classevab_1_1_layout_base_1_1_focus_chain" kind="class"><name>evab::LayoutBase::FocusChain</name>
     <member refid="classevab_1_1_layout_base_1_1_focus_chain_1af26f1bee593b2bdc448437919ce1d2a3" kind="variable"><name>mNext</name></member>
@@ -75,19 +123,26 @@
   <compound refid="classevab_1_1_grid" kind="class"><name>evab::Grid</name>
     <member refid="classevab_1_1_grid_1a5320341c603411b1193587686bca00fa" kind="variable"><name>mTopLeft</name></member>
     <member refid="classevab_1_1_grid_1aa8b617dc4491e033211ed0cd85b05b76" kind="variable"><name>mBottomRight</name></member>
-    <member refid="classevab_1_1_grid_1a5e0a0e3d5fe200873b56ac92cee19d66" kind="function"><name>Grid</name></member>
+    <member refid="classevab_1_1_grid_1afe665007c97eafedf5d15840e9ec7a79" kind="variable"><name>mScreen</name></member>
+    <member refid="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" kind="function"><name>Grid</name></member>
     <member refid="classevab_1_1_grid_1a9cdd9b56bf792047f6e3139753a4e041" kind="function"><name>SliceRow</name></member>
     <member refid="classevab_1_1_grid_1a4c44117cf974c9786044bd91519e940b" kind="function"><name>SliceCol</name></member>
     <member refid="classevab_1_1_grid_1aadde199b2b5d0a435ab425d8c8a12a15" kind="function"><name>Rest</name></member>
-    <member refid="classevab_1_1_grid_1a051f7a08563ff3fea0d198e073de5b36" kind="function"><name>Draw</name></member>
-    <member refid="classevab_1_1_grid_1a6cb5038cf6f3bac65b4989d626347155" kind="function"><name>Blank</name></member>
+    <member refid="classevab_1_1_grid_1afa6c51abd57f4042955d4a88321d5a49" kind="function"><name>Draw</name></member>
+    <member refid="classevab_1_1_grid_1a3d61965bcc004248b6594a8156503822" kind="function"><name>Text</name></member>
+    <member refid="classevab_1_1_grid_1a4811bf26337113b8a408875abe71e079" kind="function"><name>TextLeft</name></member>
+    <member refid="classevab_1_1_grid_1af913e3e9c82bd407f77e72dc6aee5884" kind="function"><name>TextCenter</name></member>
+    <member refid="classevab_1_1_grid_1ae9e362a4b3272230c3a70fad964f6097" kind="function"><name>TextRight</name></member>
+    <member refid="classevab_1_1_grid_1a5a7ba3fc18befe626da750004c8c886b" kind="function"><name>Picto</name></member>
+    <member refid="classevab_1_1_grid_1a18c93524c7f9f9d8ee24d5142c69a619" kind="function"><name>Clear</name></member>
     <member refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" kind="function"><name>GetPos</name></member>
     <member refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" kind="function"><name>GetSize</name></member>
+    <member refid="classevab_1_1_grid_1a141d7374a8a4653657add5da1af2c72d" kind="function"><name>GetScreen</name></member>
   </compound>
-  <compound refid="structevab_1_1_horizontal_picto_policy" kind="struct"><name>evab::HorizontalPictoPolicy</name>
-    <member refid="structevab_1_1_horizontal_picto_policy_1ae3136b0ccac4572d67dedbca19d78f66" kind="function"><name>CalculateTotalBlocks</name></member>
-    <member refid="structevab_1_1_horizontal_picto_policy_1ac3431f07ca97f46fe79e3bd3898a6aa9" kind="function"><name>CalculateResolution</name></member>
-    <member refid="structevab_1_1_horizontal_picto_policy_1a78fe87f4fabe86c14fd0767ad875d129" kind="function"><name>GetTilePosition</name></member>
+  <compound refid="structevab_1_1_horizontal_album_policy" kind="struct"><name>evab::HorizontalAlbumPolicy</name>
+    <member refid="structevab_1_1_horizontal_album_policy_1abb27014660d5ff3c28a31f4fd27e1f10" kind="function"><name>CalculateTotalBlocks</name></member>
+    <member refid="structevab_1_1_horizontal_album_policy_1ac87bd9ca25de70b82e3fc3f8202433f3" kind="function"><name>CalculateResolution</name></member>
+    <member refid="structevab_1_1_horizontal_album_policy_1a05307cabfecd9cdb0bad1edd02a70623" kind="function"><name>GetTilePosition</name></member>
   </compound>
   <compound refid="structevab_1_1_horizontal_text_policy" kind="struct"><name>evab::HorizontalTextPolicy</name>
     <member refid="structevab_1_1_horizontal_text_policy_1a5d14494b4021c124585642624f418ce0" kind="function"><name>CalculateTotalBlocks</name></member>
@@ -103,20 +158,19 @@
     <member refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad" kind="function"><name>GetVerticalSlice</name></member>
   </compound>
   <compound refid="classevab_1_1_input_animation" kind="class"><name>evab::InputAnimation</name>
-    <member refid="classevab_1_1_input_animation_1a0436325018bb62b00689b078c30e68bf" kind="variable"><name>mValue</name></member>
-    <member refid="classevab_1_1_input_animation_1aa1e6edd9a1857d835a7a3a474cb08f41" kind="variable"><name>mCurrentFrame</name></member>
-    <member refid="classevab_1_1_input_animation_1a860c6fd13bfb3e43c49b271ea10fc1be" kind="variable"><name>mLastFrameTime</name></member>
-    <member refid="classevab_1_1_input_animation_1a7cc0d5e55320b800047a278a4fdf295a" kind="function"><name>InputAnimation</name></member>
-    <member refid="classevab_1_1_input_animation_1a570aa0844721feca591de719e798ddd0" kind="function"><name>~InputAnimation</name></member>
-    <member refid="classevab_1_1_input_animation_1ab8c8ab0217cf4a92506970d99c7d8b76" kind="function"><name>SetValue</name></member>
-    <member refid="classevab_1_1_input_animation_1a27eda1533d4c87f2e401f9a7db449ac2" kind="function"><name>GetValue</name></member>
-    <member refid="classevab_1_1_input_animation_1aca6bb9db0f4086a4a3c4f1a6d3eded5e" kind="function"><name>GetValuePercent</name></member>
-    <member refid="classevab_1_1_input_animation_1a2aeea201ea91c66107b5a66d1e80a8f7" kind="function"><name>SetValuePercent</name></member>
-    <member refid="classevab_1_1_input_animation_1aa00ff60aff5b6b2e83a06a5aedd5f483" kind="function"><name>Increment</name></member>
-    <member refid="classevab_1_1_input_animation_1ac62f92c6ef303664e38919ffc9b2aca8" kind="function"><name>drawer</name></member>
-    <member refid="classevab_1_1_input_animation_1a065bfe875ab4c8273d2ff0c30ddd6015" kind="function"><name>hider</name></member>
-    <member refid="classevab_1_1_input_animation_1a7d53eccdbab96a3b94df0e834da69a67" kind="function"><name>tick</name></member>
-    <member refid="classevab_1_1_input_animation_1aa73460b275a751e893f0c3df1361d017" kind="function"><name>calculateFrameDelay</name></member>
+    <member refid="classevab_1_1_input_animation_1a1700e8ae099576efb257b6cfd1d6d003" kind="variable"><name>mValue</name></member>
+    <member refid="classevab_1_1_input_animation_1a18411e4e8b1489fedee55fe2674632cd" kind="variable"><name>mCurrentFrame</name></member>
+    <member refid="classevab_1_1_input_animation_1a7e38362e014d67f25bbfac9cd30bcb28" kind="variable"><name>mLastFrameTime</name></member>
+    <member refid="classevab_1_1_input_animation_1a676c683ffbea0c2ffa0973d4d13cb9d8" kind="function"><name>InputAnimation</name></member>
+    <member refid="classevab_1_1_input_animation_1a92cfcd52e1e47c7395262f46a65a5f38" kind="function"><name>~InputAnimation</name></member>
+    <member refid="classevab_1_1_input_animation_1a3edaa1f764be50e1a69321cd1b3b3ce5" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_input_animation_1a97154ea202d7f49409d509ca6a4b4f03" kind="function"><name>Selected</name></member>
+    <member refid="classevab_1_1_input_animation_1a332f279279ccca033f82e9d6b72bd27d" kind="function"><name>Increment</name></member>
+    <member refid="classevab_1_1_input_animation_1ac0a404c643c0ec3e045ffe17d3ccc4a6" kind="function"><name>Count</name></member>
+    <member refid="classevab_1_1_input_animation_1a345f41086e051dc3a55b2bb85a393251" kind="function"><name>drawer</name></member>
+    <member refid="classevab_1_1_input_animation_1a572f935838f4044db6add055ff8b7dea" kind="function"><name>freezer</name></member>
+    <member refid="classevab_1_1_input_animation_1aaf9054e8d30dec5960d8a8ab26334207" kind="function"><name>tick</name></member>
+    <member refid="classevab_1_1_input_animation_1af6858386a701ae86334643afa6be4b9c" kind="function"><name>calculateFrameDelay</name></member>
   </compound>
   <compound refid="classevab_1_1_input_button" kind="class"><name>evab::InputButton</name>
     <member refid="classevab_1_1_input_button_1a4aae7083737250daac9307caf8bf242a" kind="variable"><name>mName</name></member>
@@ -133,63 +187,86 @@
     <member refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" kind="function"><name>InputFloat</name></member>
     <member refid="classevab_1_1_input_float_1a2c458fd33df72334c05a9f0dd1f6f887" kind="function"><name>SetValue</name></member>
     <member refid="classevab_1_1_input_float_1ad726fd1724ca5091418203bcdd63801c" kind="function"><name>GetValue</name></member>
-    <member refid="classevab_1_1_input_float_1ab41ba1f0e7254592a36312bc8ebf6bea" kind="function"><name>Increment</name></member>
+    <member refid="classevab_1_1_input_float_1ac2d83357511b0fe0c9dfd1ff8d53a3f5" kind="function"><name>Increment</name></member>
     <member refid="classevab_1_1_input_float_1a17fa953f42dfaee582fdfb471d8823d5" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="classevab_1_1_input_float_discrete" kind="class"><name>evab::InputFloatDiscrete</name>
+    <member refid="classevab_1_1_input_float_discrete_1adb58141e21b38ce5b7166d15aeaf4c52" kind="variable"><name>mCount</name></member>
+    <member refid="classevab_1_1_input_float_discrete_1a6a57bfdd14ca9d1d2e40c2666fc81513" kind="variable"><name>mMin</name></member>
+    <member refid="classevab_1_1_input_float_discrete_1a0876bf4ad87bcf026d823201a6e7e9d0" kind="variable"><name>mMax</name></member>
+    <member refid="classevab_1_1_input_float_discrete_1a77f43812bd8269d55c6c2a7bdf58841d" kind="function"><name>InputFloatDiscrete</name></member>
+    <member refid="classevab_1_1_input_float_discrete_1abd22f24281fa1b1d765c0aad20c0a0a9" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_input_float_discrete_1a5bd855e678e8eb956217f0c30cf60df9" kind="function"><name>Selected</name></member>
+    <member refid="classevab_1_1_input_float_discrete_1ab3e61270f77bce7b7f5128f9da81ed97" kind="function"><name>Count</name></member>
+    <member refid="classevab_1_1_input_float_discrete_1a9c9f37219e7c5bc29465a30b48cbcac1" kind="function"><name>Increment</name></member>
   </compound>
   <compound refid="classevab_1_1_input_int" kind="class"><name>evab::InputInt</name>
     <member refid="classevab_1_1_input_int_1a4e796e046e457432648db7c7763ca005" kind="variable"><name>mValue</name></member>
     <member refid="classevab_1_1_input_int_1a71f63e01bba7f2e83326897c5ee16f09" kind="function"><name>InputInt</name></member>
     <member refid="classevab_1_1_input_int_1ab94428a72666e1384fd6c10a20e7a03c" kind="function"><name>SetValue</name></member>
     <member refid="classevab_1_1_input_int_1acd95020d7bff5880dc4091fe7e8b1a04" kind="function"><name>GetValue</name></member>
-    <member refid="classevab_1_1_input_int_1a0aed4c88950d1266043fbd8b54207208" kind="function"><name>Increment</name></member>
+    <member refid="classevab_1_1_input_int_1ada8b54f6adc5a287ed73dc6ffde18846" kind="function"><name>Increment</name></member>
     <member refid="classevab_1_1_input_int_1aaee5d4fe0d95f0a10259add2165710f6" kind="function"><name>drawer</name></member>
   </compound>
-  <compound refid="classevab_1_1_input_selector_picto" kind="class"><name>evab::InputSelectorPicto</name>
-    <member refid="classevab_1_1_input_selector_picto_1a13045f2b18ae8daa5964b018deb170be" kind="variable"><name>mValue</name></member>
-    <member refid="classevab_1_1_input_selector_picto_1a9de56867981d167a653707e707f3327c" kind="function"><name>InputSelectorPicto</name></member>
-    <member refid="classevab_1_1_input_selector_picto_1ac18c3bb85c1c7f5567385f7e3c3c1cca" kind="function"><name>SetValue</name></member>
-    <member refid="classevab_1_1_input_selector_picto_1a9007faeb398163a006105b3a08aafd4e" kind="function"><name>GetValue</name></member>
-    <member refid="classevab_1_1_input_selector_picto_1a55b1cfd5b476823e7d4339dcf60b4b85" kind="function"><name>SetValuePercent</name></member>
-    <member refid="classevab_1_1_input_selector_picto_1a6594b63d367f48ed0c4f19795c4dae27" kind="function"><name>GetValuePercent</name></member>
-    <member refid="classevab_1_1_input_selector_picto_1a7a8ff0ccd89770cffa0541cf2f273000" kind="function"><name>Increment</name></member>
-    <member refid="classevab_1_1_input_selector_picto_1afd4994c61c476379a0d1831d66746c78" kind="function"><name>drawer</name></member>
+  <compound refid="classevab_1_1_input_int_discrete" kind="class"><name>evab::InputIntDiscrete</name>
+    <member refid="classevab_1_1_input_int_discrete_1a31fd49d7bcf65792e8fc06fe119d6c16" kind="variable"><name>mCount</name></member>
+    <member refid="classevab_1_1_input_int_discrete_1a42233db46524fbfbc7b77218bb2f1d58" kind="variable"><name>mMin</name></member>
+    <member refid="classevab_1_1_input_int_discrete_1a30d32025505636ced120f0494b1b8252" kind="variable"><name>mMax</name></member>
+    <member refid="classevab_1_1_input_int_discrete_1af182963ac7a1cb1dc1636eb6111295a3" kind="function"><name>InputIntDiscrete</name></member>
+    <member refid="classevab_1_1_input_int_discrete_1aad5ad378cf455b5a77371c27ad9f7c0f" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_input_int_discrete_1ac25be0e7fc6372414279e48837fe0d88" kind="function"><name>Selected</name></member>
+    <member refid="classevab_1_1_input_int_discrete_1a5256cd090855f5beafcdfb65dc3105e0" kind="function"><name>Count</name></member>
+    <member refid="classevab_1_1_input_int_discrete_1aa41e12c8aa88ae30b28fe1863c621ad9" kind="function"><name>Increment</name></member>
+  </compound>
+  <compound refid="classevab_1_1_input_selector_album" kind="class"><name>evab::InputSelectorAlbum</name>
+    <member refid="classevab_1_1_input_selector_album_1a843011c962bedd998926b559b045e4f9" kind="variable"><name>mValue</name></member>
+    <member refid="classevab_1_1_input_selector_album_1a8a32c42052ccbee75b96177077e5e84d" kind="function"><name>InputSelectorAlbum</name></member>
+    <member refid="classevab_1_1_input_selector_album_1a6d17d02843944c4252485f657829090d" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_input_selector_album_1af24f1cdb88175bb7419744899803e687" kind="function"><name>Selected</name></member>
+    <member refid="classevab_1_1_input_selector_album_1a34042de0169de257d304bafbf0e8365d" kind="function"><name>Increment</name></member>
+    <member refid="classevab_1_1_input_selector_album_1a7d30fc321d621f4bebce4a9a52385ef8" kind="function"><name>Count</name></member>
+    <member refid="classevab_1_1_input_selector_album_1a14690e2ee4213c0ece17b5ddadd2681e" kind="function"><name>drawer</name></member>
   </compound>
   <compound refid="classevab_1_1_input_stretch_bar" kind="class"><name>evab::InputStretchBar</name>
-    <member refid="classevab_1_1_input_stretch_bar_1a8ec383cde9c12b4a0ce9d5861f5773d9" kind="variable"><name>START_BLOCK</name></member>
-    <member refid="classevab_1_1_input_stretch_bar_1afa6deeec50f3270d36f85cd935eb0883" kind="variable"><name>MIDDLE_BLOCK</name></member>
-    <member refid="classevab_1_1_input_stretch_bar_1a6dffa09542b5dc9251508e23901d4ef5" kind="variable"><name>END_BLOCK</name></member>
-    <member refid="classevab_1_1_input_stretch_bar_1a71a60e8a5638d2165b56bd5948d250d8" kind="variable"><name>mValue</name></member>
-    <member refid="classevab_1_1_input_stretch_bar_1a1f434f3c6cf9ffd4ba3710b148468161" kind="function"><name>InputStretchBar</name></member>
-    <member refid="classevab_1_1_input_stretch_bar_1abaf2f42b98b6db67987057235a48add5" kind="function"><name>SetValue</name></member>
-    <member refid="classevab_1_1_input_stretch_bar_1aeafd457320264f3957405e427f9343cb" kind="function"><name>Increment</name></member>
-    <member refid="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6" kind="function"><name>drawer</name></member>
-    <member refid="classevab_1_1_input_stretch_bar_1ab78fe73ecfbd69f8ef3f38604680e054" kind="function"><name>blockFill</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1aeb3f8de26e17c370fbf604c7d2c9a29c" kind="variable"><name>START_BLOCK</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1aba9c9173c4420833ee720b5b771cca19" kind="variable"><name>MIDDLE_BLOCK</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1a8ffc6a3f1670e0397cd45d191b166511" kind="variable"><name>END_BLOCK</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1ac58afbd3d079bb09ec272397f7792e17" kind="variable"><name>mPercent</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1a418bacd679a4864cec8e3bca403b974c" kind="variable"><name>mStep</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1a2f309ed70d62e118c9d902f0663ed97f" kind="function"><name>InputStretchBar</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1ae9df1586ba9bbb5adaf60da80a4367a8" kind="function"><name>SetPercent</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1a33298ab06ab12d2237c92a4d8011aa1b" kind="function"><name>GetPercent</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1ae21c3f8ea7c422a68d7220f66c6db180" kind="function"><name>Increment</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1a30ea75aabbe86745bfebde137f344c94" kind="function"><name>drawer</name></member>
+    <member refid="classevab_1_1_input_stretch_bar_1a076eb41561f48ea5bbd125d9c55348b6" kind="function"><name>blockFill</name></member>
   </compound>
   <compound refid="classevab_1_1_input_text_stretch_bar" kind="class"><name>evab::InputTextStretchBar</name>
-    <member refid="classevab_1_1_input_text_stretch_bar_1ae8a908d1e06d229cbf2157c12bab6211" kind="variable"><name>mValue</name></member>
-    <member refid="classevab_1_1_input_text_stretch_bar_1ab4e3f6400340b440effe4a826337a737" kind="function"><name>InputTextStretchBar</name></member>
-    <member refid="classevab_1_1_input_text_stretch_bar_1a43dfe12c6dae484f8651b3170603db93" kind="function"><name>SetValue</name></member>
-    <member refid="classevab_1_1_input_text_stretch_bar_1a124045da73d9912358daf72ffb658bba" kind="function"><name>Increment</name></member>
-    <member refid="classevab_1_1_input_text_stretch_bar_1a18568595571f2fe4f8ec7d1cc85ea4b8" kind="function"><name>drawer</name></member>
-    <member refid="classevab_1_1_input_text_stretch_bar_1ab757049ce13d88293615ba330f1f7228" kind="function"><name>blockFill</name></member>
+    <member refid="classevab_1_1_input_text_stretch_bar_1a7aecc5da9c78ad0927461ce28f55dd69" kind="variable"><name>mPercent</name></member>
+    <member refid="classevab_1_1_input_text_stretch_bar_1a51ec1887fd373f9009ca4fb42605a05e" kind="variable"><name>mStep</name></member>
+    <member refid="classevab_1_1_input_text_stretch_bar_1a037c6b41b5b9264b4d28b28960efefc8" kind="function"><name>InputTextStretchBar</name></member>
+    <member refid="classevab_1_1_input_text_stretch_bar_1adb6697f055ad95b6c0b6d2e3f9194c52" kind="function"><name>SetPercent</name></member>
+    <member refid="classevab_1_1_input_text_stretch_bar_1af7d572a50c67157363b2ac9234aabcde" kind="function"><name>GetPercent</name></member>
+    <member refid="classevab_1_1_input_text_stretch_bar_1ab45cfa1bb251863dc01b00b1ee02d54d" kind="function"><name>Increment</name></member>
+    <member refid="classevab_1_1_input_text_stretch_bar_1a66e258a4501b4c70f0f4de974acb7de1" kind="function"><name>drawer</name></member>
+    <member refid="classevab_1_1_input_text_stretch_bar_1ac63de1a315133dd32f89b8faedde3636" kind="function"><name>blockFill</name></member>
   </compound>
   <compound refid="classevab_1_1_key_catcher" kind="class"><name>evab::KeyCatcher</name>
     <member refid="classevab_1_1_key_catcher_1a6e5feb01ca6ee3b28f868db64b853981" kind="enum"><name>EventType</name></member>
     <member refid="classevab_1_1_key_catcher_1a6e5feb01ca6ee3b28f868db64b853981a844b3980654ebb960c5e163931c92e0f" kind="enumvalue"><name>EVENT_CATCH_KEY</name></member>
     <member refid="classevab_1_1_key_catcher_1ab0a787dfab54c1274f6514062d9353c9" kind="variable"><name>mListener</name></member>
     <member refid="classevab_1_1_key_catcher_1aba5d8d213e39d560ed7260db73c291e2" kind="function"><name>KeyCatcher</name></member>
-    <member refid="classevab_1_1_key_catcher_1a0033ef4e9d4a29bf4ef02155be41aec3" kind="function"><name>Key</name></member>
+    <member refid="classevab_1_1_key_catcher_1aca34e483a7f7b1a0aaac5426c4b7fbec" kind="function"><name>OnKey</name></member>
   </compound>
   <compound refid="classevab_1_1_key_modifier" kind="class"><name>evab::KeyModifier</name>
     <member refid="classevab_1_1_key_modifier_1a3195a8c0a81cfcbcd39e7a19f3f853dc" kind="function"><name>KeyModifier</name></member>
-    <member refid="classevab_1_1_key_modifier_1a3f7a058708b289a742aa8e6dd8e6f24d" kind="function"><name>Key</name></member>
+    <member refid="classevab_1_1_key_modifier_1a000b3244852a5b36eab0e54d0b8019be" kind="function"><name>OnKey</name></member>
   </compound>
   <compound refid="classevab_1_1_key_reactor" kind="class"><name>evab::KeyReactor</name>
     <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adb" kind="enum"><name>EventType</name></member>
     <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adba9e339d50c53f9e5e5fad794046472241" kind="enumvalue"><name>EVENT_VALUE_CHANGED</name></member>
     <member refid="classevab_1_1_key_reactor_1a9074e6080556052703c2c4a6a1695479" kind="variable"><name>mListener</name></member>
     <member refid="classevab_1_1_key_reactor_1ab6048049cec3a2eadf0c33bd45744b2a" kind="function"><name>KeyReactor</name></member>
-    <member refid="classevab_1_1_key_reactor_1add03501f9e93c3fca17c685a4735a6f3" kind="function"><name>Key</name></member>
+    <member refid="classevab_1_1_key_reactor_1a4f40a9c50194a96da70b5d6075c6dce3" kind="function"><name>OnKey</name></member>
   </compound>
   <compound refid="classevab_1_1_labeled" kind="class"><name>evab::Labeled</name>
     <member refid="classevab_1_1_labeled_1a6689d3f69cafef608f4540a962d0ba56" kind="variable"><name>mName</name></member>
@@ -197,19 +274,19 @@
     <member refid="classevab_1_1_labeled_1a16441832385aaa9bac602fbe0785bcb7" kind="function"><name>SetLabel</name></member>
     <member refid="classevab_1_1_labeled_1a910de10f3f5e7f116e24035f69251756" kind="function"><name>GetLabel</name></member>
     <member refid="classevab_1_1_labeled_1afa6f2c9e3657e37e5b50096d78eddb29" kind="function"><name>drawer</name></member>
-    <member refid="classevab_1_1_labeled_1af504548d9334c28c9871b2c74f339816" kind="function"><name>hider</name></member>
+    <member refid="classevab_1_1_labeled_1a56f9cc57754ca42aacc672362599e6fa" kind="function"><name>freezer</name></member>
   </compound>
   <compound refid="classevab_1_1_layout_base" kind="class"><name>evab::LayoutBase</name>
     <member refid="classevab_1_1_layout_base_1aabfadd6f4046033c784fff720eaf15ae" kind="variable"><name>mFocusedChild</name></member>
     <member refid="classevab_1_1_layout_base_1a53a88e28da114cb86c9d6044ca1fefe9" kind="function"><name>IsFocused</name></member>
     <member refid="classevab_1_1_layout_base_1a328d6a9a3bf60afdf20269675de83e13" kind="function"><name>GetFocused</name></member>
     <member refid="classevab_1_1_layout_base_1a27d54aedee90e1d09cc55ea4745b9f4d" kind="function"><name>Increment</name></member>
-    <member refid="classevab_1_1_layout_base_1a8dd4a2350ec9ae002b538911c0dc20ca" kind="function"><name>Key</name></member>
+    <member refid="classevab_1_1_layout_base_1a000e80032f71921ba1b04296c4d0eae1" kind="function"><name>OnKey</name></member>
     <member refid="classevab_1_1_layout_base_1a87641a868f78782aaf21d50c314465f8" kind="function"><name>focusChild</name></member>
     <member refid="classevab_1_1_layout_base_1add166aea3c25c38285b1c8292bef5c97" kind="function"><name>focusNext</name></member>
     <member refid="classevab_1_1_layout_base_1a11b109ea5bdc8f73cf92f5de13ac0e89" kind="function"><name>focusPrev</name></member>
     <member refid="classevab_1_1_layout_base_1a19f2077c47eb065de6d8f73fa0086ac6" kind="function"><name>onResidualKey</name></member>
-    <member refid="classevab_1_1_layout_base_1a579a86823144d46988f93b239b56c479" kind="function"><name>hider</name></member>
+    <member refid="classevab_1_1_layout_base_1a6c6e9092d6242cfe65a31c365229e597" kind="function"><name>freezer</name></member>
   </compound>
   <compound refid="structevab_1_1_left_align" kind="struct"><name>evab::LeftAlign</name>
     <member refid="structevab_1_1_left_align_1a4d78eb355a68d67bab21b4ecdb3df892" kind="function"><name>Offset</name></member>
@@ -219,60 +296,19 @@
     <member refid="classevab_1_1_list_box_1a5b808c111b6340facf18cc7d4db995ab" kind="variable"><name>mItemHeight</name></member>
     <member refid="classevab_1_1_list_box_1a917ef4c39172d9049d7e05d9f0892e51" kind="function"><name>SetItems</name></member>
     <member refid="classevab_1_1_list_box_1a66346e4bce8db02561578824dc11136f" kind="function"><name>SetItemHeight</name></member>
-    <member refid="classevab_1_1_list_box_1a3c75f0fa37cac0b461de0991d3961d0f" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_list_box_1aca63169d0cf1992e2db5c1de2e86e650" kind="function"><name>Select</name></member>
     <member refid="classevab_1_1_list_box_1abc1820aba632f45d2a25bce7da84decb" kind="function"><name>GetItem</name></member>
     <member refid="classevab_1_1_list_box_1a940b2683cc7c2ff8fb5b73811b6f6803" kind="function"><name>Increment</name></member>
-    <member refid="classevab_1_1_list_box_1a5faf9890ff8dce44e7eec53b6d119630" kind="function"><name>Key</name></member>
+    <member refid="classevab_1_1_list_box_1a6118e90323c529f34bfb5fa3dbafdc35" kind="function"><name>OnKey</name></member>
     <member refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5" kind="function"><name>drawer</name></member>
-    <member refid="classevab_1_1_list_box_1a9c64349ba298d36609ba46d65d6ceec2" kind="function"><name>hider</name></member>
+    <member refid="classevab_1_1_list_box_1a54b5f34924f25c1066393ca958c046b3" kind="function"><name>freezer</name></member>
   </compound>
-  <compound refid="classevab_1_1_pictoset_battery" kind="class"><name>evab::AlbumBattery</name>
-    <member refid="classevab_1_1_pictoset_battery_1a584403583ee3dba52a7bc7266eca7634" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_battery_1a01b965052710ed18d619b921d5135f67" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_fan" kind="class"><name>evab::AlbumFan</name>
-    <member refid="classevab_1_1_pictoset_fan_1a58708583debefff10ee784aba5d073dd" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_fan_1a5099b9489cafd4aa57d250041396e749" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_horizontal_progress_bar" kind="class"><name>evab::AlbumHorizontalProgressBar</name>
-    <member refid="classevab_1_1_pictoset_horizontal_progress_bar_1a9a1905b5f822fb76ab02ce39acb03f6f" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_horizontal_scroll_bar" kind="class"><name>evab::AlbumHorizontalScrollBar</name>
-    <member refid="classevab_1_1_pictoset_horizontal_scroll_bar_1a77b5e8a6e8cd8c44f597458474e04e16" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_lamp" kind="class"><name>evab::AlbumLamp</name>
-    <member refid="classevab_1_1_pictoset_lamp_1a73b97b40491c572b1c61d811a4efee7c" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_lamp_1ab4916467cb9ccaa90d2f36e9fca1ffd8" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_on_off" kind="class"><name>evab::AlbumOnOff</name>
-    <member refid="classevab_1_1_pictoset_on_off_1ab96a686e19ab9abc882d3d35e7caf3de" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_on_off_1a4c2f25c92aa51e8e862f2a0c4379f522" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_progress" kind="class"><name>evab::AlbumProgress</name>
-    <member refid="classevab_1_1_pictoset_progress_1a57dadc63a2d661bd6cafbfc13eae4bda" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_progress_1ab6df4dfde8e89733ad963ee7bed507d8" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_rainbowmeter" kind="class"><name>evab::AlbumRainbowmeter</name>
-    <member refid="classevab_1_1_pictoset_rainbowmeter_1a3701a3997c3d49dd6e1591e26adc399c" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_rainbowmeter_1aac1e175e0fcd60e8e7863ab3513552ea" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_roundmeter" kind="class"><name>evab::AlbumRoundmeter</name>
-    <member refid="classevab_1_1_pictoset_roundmeter_1af863daefb65ff061a33c4e959aa004a0" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_roundmeter_1a2c51b4354a87f3bc4695e8a94c78c7d1" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_signal" kind="class"><name>evab::AlbumSignal</name>
-    <member refid="classevab_1_1_pictoset_signal_1a4168563bf6bde0a2dac1b13cafe484cd" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_signal_1a72507fc27621ced3f9a4d92d07d2de29" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_speaker" kind="class"><name>evab::AlbumSpeaker</name>
-    <member refid="classevab_1_1_pictoset_speaker_1a87665ef42e8456a4b78bcbe878d4101e" kind="variable"><name>Count</name></member>
-    <member refid="classevab_1_1_pictoset_speaker_1a657ff2e642f614f6b0b1936496ab0d75" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_vertical_progress_bar" kind="class"><name>evab::AlbumVerticalProgressBar</name>
-    <member refid="classevab_1_1_pictoset_vertical_progress_bar_1aa7fcfcecba428cb0a5d7b60a94431e41" kind="function"><name>GetTile</name></member>
-  </compound>
-  <compound refid="classevab_1_1_pictoset_vertical_scroll_bar" kind="class"><name>evab::AlbumVerticalScrollBar</name>
-    <member refid="classevab_1_1_pictoset_vertical_scroll_bar_1ad61f67ba3416d0feb9983053b0f6b439" kind="function"><name>GetTile</name></member>
+  <compound refid="classevab_1_1_percent" kind="class"><name>evab::Percent</name>
+    <member refid="classevab_1_1_percent_1a40eaaf971934719bb1d4ea9fe6b4a3b9" kind="variable"><name>mStep</name></member>
+    <member refid="classevab_1_1_percent_1a76b8e4b4cba86eb29ba575fa9f0ab573" kind="function"><name>Percent</name></member>
+    <member refid="classevab_1_1_percent_1ae6cec21962fb4985171ae69dfb7e74ed" kind="function"><name>SetPercent</name></member>
+    <member refid="classevab_1_1_percent_1acbcb66cbb725a747a55cc0c52f0b3612" kind="function"><name>GetPercent</name></member>
+    <member refid="classevab_1_1_percent_1a14928548e8f00e7c1faabf2fa9d68db4" kind="function"><name>GetStep</name></member>
   </compound>
   <compound refid="structevab_1_1_right_align" kind="struct"><name>evab::RightAlign</name>
     <member refid="structevab_1_1_right_align_1a549892adcc4fff3c5a8a8a2852580743" kind="function"><name>Offset</name></member>
@@ -417,7 +453,7 @@
     <member refid="classevab_1_1_screen_s_s_h1106_1ac670c5adad1d53e44511bc109d0de635" kind="function"><name>setColumn</name></member>
   </compound>
   <compound refid="classevab_1_1_scroll_window_algorithm" kind="class"><name>evab::ScrollWindowAlgorithm</name>
-    <member refid="classevab_1_1_scroll_window_algorithm_1ae8ba2a3db17d9ca40f53317e0b304126" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_scroll_window_algorithm_1ac4b713b71b2eb92edc7fed245c3af426" kind="function"><name>Select</name></member>
   </compound>
   <compound refid="classevab_1_1_text_label" kind="class"><name>evab::TextLabel</name>
     <member refid="classevab_1_1_text_label_1a3b2ab8014c14256601615b30f824ad4c" kind="variable"><name>mText</name></member>
@@ -425,7 +461,7 @@
     <member refid="classevab_1_1_text_label_1a0262a6d18f84a8f040727cb8e2b38fed" kind="function"><name>SetText</name></member>
     <member refid="classevab_1_1_text_label_1af011428d7af46fc05fd70642a3a6f45e" kind="function"><name>GetText</name></member>
     <member refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f" kind="function"><name>drawer</name></member>
-    <member refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed" kind="function"><name>hider</name></member>
+    <member refid="classevab_1_1_text_label_1a59bde6aea39896ecd58c8cc4fafe083b" kind="function"><name>freezer</name></member>
   </compound>
   <compound refid="structevab_1_1_text_traits" kind="struct"><name>evab::TextTraits</name>
   </compound>
@@ -445,10 +481,10 @@
     <member refid="structevab_1_1_text_traits_3_01const_01char_01_5_01_4_1a5303199e42e091b06b3524066b4237e5" kind="function"><name>Length</name></member>
     <member refid="structevab_1_1_text_traits_3_01const_01char_01_5_01_4_1a9101cd7492e1dc789a6c25a3146af2c5" kind="function"><name>Read</name></member>
   </compound>
-  <compound refid="structevab_1_1_vertical_picto_policy" kind="struct"><name>evab::VerticalPictoPolicy</name>
-    <member refid="structevab_1_1_vertical_picto_policy_1a04851cecf27252522bfd71b8f2626f64" kind="function"><name>CalculateTotalBlocks</name></member>
-    <member refid="structevab_1_1_vertical_picto_policy_1a8b2860b56de6b1d359cbee16b231d2ed" kind="function"><name>CalculateResolution</name></member>
-    <member refid="structevab_1_1_vertical_picto_policy_1a8eadd222379ecac5da28654339179dbf" kind="function"><name>GetTilePosition</name></member>
+  <compound refid="structevab_1_1_vertical_album_policy" kind="struct"><name>evab::VerticalAlbumPolicy</name>
+    <member refid="structevab_1_1_vertical_album_policy_1aee1fa087d7fccbded4678c14fe4108b1" kind="function"><name>CalculateTotalBlocks</name></member>
+    <member refid="structevab_1_1_vertical_album_policy_1a6f89212d16f2293b592568e83ba4abb4" kind="function"><name>CalculateResolution</name></member>
+    <member refid="structevab_1_1_vertical_album_policy_1add3e31fd106684ec41c82ed771a2dea0" kind="function"><name>GetTilePosition</name></member>
   </compound>
   <compound refid="structevab_1_1_vertical_text_policy" kind="struct"><name>evab::VerticalTextPolicy</name>
     <member refid="structevab_1_1_vertical_text_policy_1af2de32784aaa20492f791705de6cfd38" kind="function"><name>CalculateTotalBlocks</name></member>
@@ -456,26 +492,26 @@
     <member refid="structevab_1_1_vertical_text_policy_1a130d039ece35492a293bcedd3495cc1d" kind="function"><name>GetTilePosition</name></member>
   </compound>
   <compound refid="classevab_1_1_window_algorithm_base" kind="class"><name>evab::WindowAlgorithmBase</name>
-    <member refid="classevab_1_1_window_algorithm_base_1ad4350c862eb5257a467623e5bd0918c5" kind="variable"><name>mSelected</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a8881fd816814115cbdc8d45e508d054c" kind="variable"><name>mCount</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a1f7536774485ca911d1daf7d569b2f5d" kind="variable"><name>mWindowStart</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a3037a5d364ac13f0031ef977864feab6" kind="variable"><name>mWindowSize</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a4ead34a5407a0ab37716258bca1900ba" kind="variable"><name>mSelected</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a4497e65bb6a552bbfb5cee546ec01754" kind="variable"><name>mCount</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a7d09fb0297ad04dc361d2295c71d3ddd" kind="variable"><name>mWindowStart</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1aa52d795bb2867c194b512badeeeb4c4e" kind="variable"><name>mWindowSize</name></member>
     <member refid="classevab_1_1_window_algorithm_base_1a49ff76a91bd5eb6f61195da64824d310" kind="function"><name>WindowAlgorithmBase</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a022903ad9e9100b92f81c6b10737f8ea" kind="function"><name>Select</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1aa0bf5cb24c9b5aee7312798e465d6596" kind="function"><name>Selected</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a5477e753aea1c5bcaff5b0f9240cd0fd" kind="function"><name>Count</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a6f19b87f40b6cc235b9e7ceee79a4195" kind="function"><name>WindowSize</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1acd6b3bd987a44454afcc8a148d4cc3c6" kind="function"><name>indexInWindow</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a300de90f05a5544c3b92debbbcb355b8" kind="function"><name>setCount</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1ae05ad89a293255d891685c08c60f4b2a" kind="function"><name>resizeWindow</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a64f7b5f3026d02f69dbfdce8d52c4a89" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a58020e092373f757dcf6105f5ee80da4" kind="function"><name>Selected</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a7f3ed7df6d39609211d04da29495751b" kind="function"><name>Count</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a722790197126e550bc96800acd38faa6" kind="function"><name>WindowSize</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a4f13e98ae4ace7ec0993a5ea9788a483" kind="function"><name>indexInWindow</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a2df38e0073bb276e00271f2dd947a534" kind="function"><name>setCount</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a768533f33c2366e719dcb6fa59f04c65" kind="function"><name>resizeWindow</name></member>
   </compound>
   <compound refid="namespaceeva" kind="namespace"><name>eva</name>
   </compound>
   <compound refid="namespaceevab" kind="namespace"><name>evab</name>
-    <member refid="evab_input_stretch_bar_8h_1a9b6f4f26a39daff7e004b650952fae54" kind="typedef"><name>VerticalProgressBar</name></member>
-    <member refid="evab_input_stretch_bar_8h_1a5e8178ef64dfcb0c6a0c2457ed589ea6" kind="typedef"><name>HorizontalProgressBar</name></member>
-    <member refid="evab_input_stretch_bar_8h_1aeb9e8805e2478ea44de99e90365cbe64" kind="typedef"><name>VerticalScrollBar</name></member>
-    <member refid="evab_input_stretch_bar_8h_1a6e1a9e218c26afa41f01615605a01d8e" kind="typedef"><name>HorizontalScrollBar</name></member>
+    <member refid="evab_input_stretch_bar_8h_1a6d1c2722507b2ef54e2fcfeefbeb5823" kind="typedef"><name>VerticalProgressBar</name></member>
+    <member refid="evab_input_stretch_bar_8h_1afe36e7995f3b59ee90e1a0aa73d54261" kind="typedef"><name>HorizontalProgressBar</name></member>
+    <member refid="evab_input_stretch_bar_8h_1a3a1f45d0e31f277a12c7a1184068f3b8" kind="typedef"><name>VerticalScrollBar</name></member>
+    <member refid="evab_input_stretch_bar_8h_1ae046b61648bdec8e48de41f67f360bed" kind="typedef"><name>HorizontalScrollBar</name></member>
     <member refid="evab_input_text_stretch_bar_8h_1a57671f379e3ab4bf45737a960a5433d9" kind="typedef"><name>TextVerticalProgressBar</name></member>
     <member refid="evab_input_text_stretch_bar_8h_1a3084ed355ae65ee08396b93acc689db8" kind="typedef"><name>TextHorizontalProgressBar</name></member>
     <member refid="evab_input_text_stretch_bar_8h_1a96206b0bc1ad82a113b01953e5529e2f" kind="typedef"><name>TextVerticalScrollBar</name></member>
@@ -511,7 +547,9 @@
   <compound refid="namespaceevab_1_1_gallery_remixicon32" kind="namespace"><name>evab::GalleryRemixicon32</name>
     <member refid="evab_gallery_remixicon32_8h_1a2c5031d3a54b2a139e64820ded28f0c1" kind="variable"><name>PROGMEM</name></member>
   </compound>
-  <compound refid="evab_behavior_8h" kind="file"><name>evabBehavior.h</name>
+  <compound refid="evab_albums_8h" kind="file"><name>evabAlbums.h</name>
+  </compound>
+  <compound refid="evab_albums_stretchy_8h" kind="file"><name>evabAlbumsStretchy.h</name>
   </compound>
   <compound refid="evab_boxy_8h" kind="file"><name>evabBoxy.h</name>
   </compound>
@@ -547,7 +585,7 @@
   </compound>
   <compound refid="evab_input_int_8h" kind="file"><name>evabInputInt.h</name>
   </compound>
-  <compound refid="evab_input_selector_picto_8h" kind="file"><name>evabInputSelectorPicto.h</name>
+  <compound refid="evab_input_selector_album_8h" kind="file"><name>evabInputSelectorAlbum.h</name>
   </compound>
   <compound refid="evab_input_stretch_bar_8h" kind="file"><name>evabInputStretchBar.h</name>
   </compound>
@@ -586,9 +624,9 @@
   </compound>
   <compound refid="evab_list_box_8h" kind="file"><name>evabListBox.h</name>
   </compound>
-  <compound refid="evab_pictosets_8h" kind="file"><name>evabAlbums.h</name>
+  <compound refid="evab_percent_8h" kind="file"><name>evabPercent.h</name>
   </compound>
-  <compound refid="evab_pictosets_stretchy_8h" kind="file"><name>evabAlbumsStretchy.h</name>
+  <compound refid="evab_reactions_8h" kind="file"><name>evabReactions.h</name>
   </compound>
   <compound refid="evab_screen_8h" kind="file"><name>evabScreen.h</name>
   </compound>

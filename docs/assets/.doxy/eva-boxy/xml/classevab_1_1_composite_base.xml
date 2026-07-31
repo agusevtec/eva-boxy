@@ -23,13 +23,13 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_composite_base_1a04b3cdb0c1fb134e78624e44cc75a95d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_composite_base_1af9a5574e31d837af9169acb6a6bf23ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
-        <definition>bool evab::CompositeBase::Key</definition>
+        <definition>bool evab::CompositeBase::OnKey</definition>
         <argsstring>(Keys aKey) override</argsstring>
-        <name>Key</name>
-        <qualifiedname>evab::CompositeBase::Key</qualifiedname>
-        <reimplements refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5">Key</reimplements>
+        <name>OnKey</name>
+        <qualifiedname>evab::CompositeBase::OnKey</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1ad088e430fee933d67248ea9242e8ddf7">OnKey</reimplements>
         <param>
           <type>Keys</type>
           <declname>aKey</declname>
@@ -43,7 +43,7 @@
 <parametername>aKey</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Key code to process </para>
+<para>OnKey code to process </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -157,7 +157,7 @@
 <parametername>aKey</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Key code to process </para>
+<para>OnKey code to process </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -169,15 +169,15 @@
         </inbodydescription>
         <location file="src/evabCompositeBase.h" line="56" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_composite_base_1a03ddf518a77efc13f3109bf41c43bb0d" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="classevab_1_1_composite_base_1a549745886246a86545a2cb3ab224941e" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
-        <definition>virtual void evab::CompositeBase::hider</definition>
+        <definition>virtual void evab::CompositeBase::freezer</definition>
         <argsstring>()=0</argsstring>
-        <name>hider</name>
-        <qualifiedname>evab::CompositeBase::hider</qualifiedname>
-        <reimplements refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703">hider</reimplements>
+        <name>freezer</name>
+        <qualifiedname>evab::CompositeBase::freezer</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124">freezer</reimplements>
         <briefdescription>
-<para>Pure virtual method to mute all children. </para>
+<para>Pure virtual method to freeze all children. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -221,15 +221,15 @@
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Draw</name></member>
       <member refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" virt="pure-virtual"><scope>evab::CompositeBase</scope><name>drawer</name></member>
       <member refid="classevab_1_1_composite_base_1af353c1f95e7835298d2420002ccb6a68" prot="protected" virt="non-virtual"><scope>evab::CompositeBase</scope><name>focusChild</name></member>
+      <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Freeze</name></member>
+      <member refid="classevab_1_1_composite_base_1a549745886246a86545a2cb3ab224941e" prot="private" virt="pure-virtual"><scope>evab::CompositeBase</scope><name>freezer</name></member>
       <member refid="classevab_1_1_composite_base_1a57b22b464cd1ec0984e8eaba1091ff59" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>GetFocused</name></member>
-      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Hide</name></member>
-      <member refid="classevab_1_1_composite_base_1a03ddf518a77efc13f3109bf41c43bb0d" prot="private" virt="pure-virtual"><scope>evab::CompositeBase</scope><name>hider</name></member>
       <member refid="classevab_1_1_composite_base_1ac6a7c9c5d50a6c27ea3d1348aa66f9c1" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>IsFocused</name></member>
-      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>IsHidden</name></member>
-      <member refid="classevab_1_1_composite_base_1a04b3cdb0c1fb134e78624e44cc75a95d" prot="public" virt="virtual"><scope>evab::CompositeBase</scope><name>Key</name></member>
+      <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::CompositeBase</scope><name>isFrozen</name></member>
       <member refid="classevab_1_1_composite_base_1a3a3a987ae08713a09c798e96f38ab169" prot="private" virt="non-virtual"><scope>evab::CompositeBase</scope><name>mFocusedChild</name></member>
+      <member refid="classevab_1_1_composite_base_1af9a5574e31d837af9169acb6a6bf23ec" prot="public" virt="virtual"><scope>evab::CompositeBase</scope><name>OnKey</name></member>
       <member refid="classevab_1_1_composite_base_1a8f8254f07c5d194bf4da33d597848057" prot="private" virt="virtual"><scope>evab::CompositeBase</scope><name>onResidualKey</name></member>
-      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Redraw</name></member>
+      <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::CompositeBase</scope><name>redraw</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

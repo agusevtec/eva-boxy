@@ -16,7 +16,7 @@ _Abstract base class for all UI elements._ [More...](#detailed-description)
 
 
 
-Inherited by the following classes: [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::ListBox](classevab_1_1_list_box.md),  [evab::ListBox](classevab_1_1_list_box.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::CompositeBase](classevab_1_1_composite_base.md),  [evab::InputAnimation](classevab_1_1_input_animation.md),  [evab::InputButton](classevab_1_1_input_button.md),  [evab::InputButtonPicto](classevab_1_1_input_button_picto.md),  [evab::InputFloat](classevab_1_1_input_float.md),  [evab::InputInt](classevab_1_1_input_int.md),  [evab::InputSelectorPicto](classevab_1_1_input_selector_picto.md),  [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::LayoutBase](classevab_1_1_layout_base.md),  [evab::ListBox](classevab_1_1_list_box.md),  [evab::TextLabel](classevab_1_1_text_label.md)
+Inherited by the following classes: [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::ListBox](classevab_1_1_list_box.md),  [evab::ListBox](classevab_1_1_list_box.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::TextLabel](classevab_1_1_text_label.md),  [evab::CompositeBase](classevab_1_1_composite_base.md),  [evab::InputAnimation](classevab_1_1_input_animation.md),  [evab::InputButton](classevab_1_1_input_button.md),  [evab::InputButtonPicto](classevab_1_1_input_button_picto.md),  [evab::InputFloat](classevab_1_1_input_float.md),  [evab::InputInt](classevab_1_1_input_int.md),  [evab::InputSelectorAlbum](classevab_1_1_input_selector_album.md),  [evab::InputStretchBar](classevab_1_1_input_stretch_bar.md),  [evab::InputTextStretchBar](classevab_1_1_input_text_stretch_bar.md),  [evab::LayoutBase](classevab_1_1_layout_base.md),  [evab::ListBox](classevab_1_1_list_box.md),  [evab::TextLabel](classevab_1_1_text_label.md)
 
 
 
@@ -54,10 +54,8 @@ Inherited by the following classes: [evab::InputStretchBar](classevab_1_1_input_
 | Type | Name |
 | ---: | :--- |
 |  void | [**Draw**](#function-draw) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
-|  void | [**Hide**](#function-mute) () <br>_Hides the element from view._  |
-|  bool | [**IsHidden**](#function-ishidden) () <br>_Checks if the element is hidden._  |
-| virtual bool | [**Key**](#function-key) (Keys aKey) <br>_Handles key events for the element._  |
-|  void | [**Redraw**](#function-redraw) () <br>_Redraws the element on the current screen._  |
+|  void | [**Freeze**](#function-freeze) () <br>_Make element insensitive to redraw method._  |
+| virtual bool | [**OnKey**](#function-onkey) (Keys aKey) <br>_Handles key events for the element._  |
 
 
 
@@ -87,7 +85,9 @@ Inherited by the following classes: [evab::InputStretchBar](classevab_1_1_input_
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) = 0<br>_Pure virtual method for drawing the element._  |
-| virtual void | [**hider**](#function-hider) () <br>_Virtual method for muting the element._  |
+| virtual void | [**freezer**](#function-freezer) () <br>_Virtual method for freezing the element._  |
+|  bool | [**isFrozen**](#function-isfrozen) () <br>_Checks if the element is currently freezed._  |
+|  void | [**redraw**](#function-redraw) () <br>_Redraws the element on the current screen._  |
 
 
 
@@ -137,11 +137,11 @@ void evab::ElementBase::Draw (
 
 
 
-### function Hide 
+### function Freeze 
 
-_Hides the element from view._ 
+_Make element insensitive to redraw method._ 
 ```C++
-void evab::ElementBase::Hide () 
+void evab::ElementBase::Freeze () 
 ```
 
 
@@ -151,36 +151,11 @@ void evab::ElementBase::Hide ()
 
 
 
-### function IsHidden 
-
-_Checks if the element is hidden._ 
-```C++
-bool evab::ElementBase::IsHidden () 
-```
-
-
-
-
-
-**Returns:**
-
-true if hidden, false otherwise 
-
-
-
-
-
-        
-
-<hr>
-
-
-
-### function Key 
+### function OnKey 
 
 _Handles key events for the element._ 
 ```C++
-virtual bool evab::ElementBase::Key (
+virtual bool evab::ElementBase::OnKey (
     Keys aKey
 ) 
 ```
@@ -208,20 +183,6 @@ true if the key was handled, false otherwise
 
 
         
-
-<hr>
-
-
-
-### function Redraw 
-
-_Redraws the element on the current screen._ 
-```C++
-void evab::ElementBase::Redraw () 
-```
-
-
-
 
 <hr>
 ## Protected Functions Documentation
@@ -262,19 +223,58 @@ virtual void evab::ElementBase::drawer (
 
 
 
-### function hider 
+### function freezer 
 
-_Virtual method for muting the element._ 
+_Virtual method for freezing the element._ 
 ```C++
-inline virtual void evab::ElementBase::hider () 
+inline virtual void evab::ElementBase::freezer () 
 ```
 
 
 
-Override to implement custom muting behavior. 
+Override to implement custom freezing behavior. 
 
 
         
+
+<hr>
+
+
+
+### function isFrozen 
+
+_Checks if the element is currently freezed._ 
+```C++
+bool evab::ElementBase::isFrozen () 
+```
+
+
+
+
+
+**Returns:**
+
+true if the element is freezed and ignores redraw requests, false otherwise. 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function redraw 
+
+_Redraws the element on the current screen._ 
+```C++
+void evab::ElementBase::redraw () 
+```
+
+
+
 
 <hr>
 

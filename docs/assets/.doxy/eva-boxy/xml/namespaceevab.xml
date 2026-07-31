@@ -2,6 +2,19 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="namespaceevab" kind="namespace" language="C++">
     <compoundname>evab</compoundname>
+    <innerclass refid="classevab_1_1_album_battery" prot="public">evab::AlbumBattery</innerclass>
+    <innerclass refid="classevab_1_1_album_fan" prot="public">evab::AlbumFan</innerclass>
+    <innerclass refid="classevab_1_1_album_lamp" prot="public">evab::AlbumLamp</innerclass>
+    <innerclass refid="classevab_1_1_album_on_off" prot="public">evab::AlbumOnOff</innerclass>
+    <innerclass refid="classevab_1_1_album_progress" prot="public">evab::AlbumProgress</innerclass>
+    <innerclass refid="classevab_1_1_album_rainbowmeter" prot="public">evab::AlbumRainbowmeter</innerclass>
+    <innerclass refid="classevab_1_1_album_roundmeter" prot="public">evab::AlbumRoundmeter</innerclass>
+    <innerclass refid="classevab_1_1_album_signal" prot="public">evab::AlbumSignal</innerclass>
+    <innerclass refid="classevab_1_1_album_speaker" prot="public">evab::AlbumSpeaker</innerclass>
+    <innerclass refid="classevab_1_1_album_stretchy_horizontal_progress_bar" prot="public">evab::AlbumStretchyHorizontalProgressBar</innerclass>
+    <innerclass refid="classevab_1_1_album_stretchy_horizontal_scroll_bar" prot="public">evab::AlbumStretchyHorizontalScrollBar</innerclass>
+    <innerclass refid="classevab_1_1_album_stretchy_vertical_progress_bar" prot="public">evab::AlbumStretchyVerticalProgressBar</innerclass>
+    <innerclass refid="classevab_1_1_album_stretchy_vertical_scroll_bar" prot="public">evab::AlbumStretchyVerticalScrollBar</innerclass>
     <innerclass refid="classevab_1_1_boxy" prot="public">evab::Boxy</innerclass>
     <innerclass refid="structevab_1_1_center_align" prot="public">evab::CenterAlign</innerclass>
     <innerclass refid="structevab_1_1_charset_horizontal_progress_bar" prot="public">evab::CharsetHorizontalProgressBar</innerclass>
@@ -16,7 +29,7 @@
     <innerclass refid="classevab_1_1_font8_compact" prot="public">evab::Font8Compact</innerclass>
     <innerclass refid="classevab_1_1_font8_narrow" prot="public">evab::Font8Narrow</innerclass>
     <innerclass refid="classevab_1_1_grid" prot="public">evab::Grid</innerclass>
-    <innerclass refid="structevab_1_1_horizontal_picto_policy" prot="public">evab::HorizontalPictoPolicy</innerclass>
+    <innerclass refid="structevab_1_1_horizontal_album_policy" prot="public">evab::HorizontalAlbumPolicy</innerclass>
     <innerclass refid="structevab_1_1_horizontal_text_policy" prot="public">evab::HorizontalTextPolicy</innerclass>
     <innerclass refid="classevab_1_1_i_focus_chain" prot="public">evab::IFocusChain</innerclass>
     <innerclass refid="classevab_1_1_i_font" prot="public">evab::IFont</innerclass>
@@ -24,8 +37,10 @@
     <innerclass refid="classevab_1_1_input_button" prot="public">evab::InputButton</innerclass>
     <innerclass refid="classevab_1_1_input_button_picto" prot="public">evab::InputButtonPicto</innerclass>
     <innerclass refid="classevab_1_1_input_float" prot="public">evab::InputFloat</innerclass>
+    <innerclass refid="classevab_1_1_input_float_discrete" prot="public">evab::InputFloatDiscrete</innerclass>
     <innerclass refid="classevab_1_1_input_int" prot="public">evab::InputInt</innerclass>
-    <innerclass refid="classevab_1_1_input_selector_picto" prot="public">evab::InputSelectorPicto</innerclass>
+    <innerclass refid="classevab_1_1_input_int_discrete" prot="public">evab::InputIntDiscrete</innerclass>
+    <innerclass refid="classevab_1_1_input_selector_album" prot="public">evab::InputSelectorAlbum</innerclass>
     <innerclass refid="classevab_1_1_input_stretch_bar" prot="public">evab::InputStretchBar</innerclass>
     <innerclass refid="classevab_1_1_input_text_stretch_bar" prot="public">evab::InputTextStretchBar</innerclass>
     <innerclass refid="classevab_1_1_key_catcher" prot="public">evab::KeyCatcher</innerclass>
@@ -35,19 +50,7 @@
     <innerclass refid="classevab_1_1_layout_base" prot="public">evab::LayoutBase</innerclass>
     <innerclass refid="structevab_1_1_left_align" prot="public">evab::LeftAlign</innerclass>
     <innerclass refid="classevab_1_1_list_box" prot="public">evab::ListBox</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_battery" prot="public">evab::AlbumBattery</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_fan" prot="public">evab::AlbumFan</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_horizontal_progress_bar" prot="public">evab::AlbumHorizontalProgressBar</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_horizontal_scroll_bar" prot="public">evab::AlbumHorizontalScrollBar</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_lamp" prot="public">evab::AlbumLamp</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_on_off" prot="public">evab::AlbumOnOff</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_progress" prot="public">evab::AlbumProgress</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_rainbowmeter" prot="public">evab::AlbumRainbowmeter</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_roundmeter" prot="public">evab::AlbumRoundmeter</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_signal" prot="public">evab::AlbumSignal</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_speaker" prot="public">evab::AlbumSpeaker</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_vertical_progress_bar" prot="public">evab::AlbumVerticalProgressBar</innerclass>
-    <innerclass refid="classevab_1_1_pictoset_vertical_scroll_bar" prot="public">evab::AlbumVerticalScrollBar</innerclass>
+    <innerclass refid="classevab_1_1_percent" prot="public">evab::Percent</innerclass>
     <innerclass refid="structevab_1_1_right_align" prot="public">evab::RightAlign</innerclass>
     <innerclass refid="classevab_1_1_screen" prot="public">evab::Screen</innerclass>
     <innerclass refid="classevab_1_1_screen_k_s0108" prot="public">evab::ScreenKS0108</innerclass>
@@ -65,16 +68,16 @@
     <innerclass refid="structevab_1_1_text_traits_3_01char_01_5_01_4" prot="public">evab::TextTraits&lt; char * &gt;</innerclass>
     <innerclass refid="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4" prot="public">evab::TextTraits&lt; const __FlashStringHelper * &gt;</innerclass>
     <innerclass refid="structevab_1_1_text_traits_3_01const_01char_01_5_01_4" prot="public">evab::TextTraits&lt; const char * &gt;</innerclass>
-    <innerclass refid="structevab_1_1_vertical_picto_policy" prot="public">evab::VerticalPictoPolicy</innerclass>
+    <innerclass refid="structevab_1_1_vertical_album_policy" prot="public">evab::VerticalAlbumPolicy</innerclass>
     <innerclass refid="structevab_1_1_vertical_text_policy" prot="public">evab::VerticalTextPolicy</innerclass>
     <innerclass refid="classevab_1_1_window_algorithm_base" prot="public">evab::WindowAlgorithmBase</innerclass>
     <innernamespace refid="namespaceevab_1_1_gallery_remixicon16">evab::GalleryRemixicon16</innernamespace>
     <innernamespace refid="namespaceevab_1_1_gallery_remixicon24">evab::GalleryRemixicon24</innernamespace>
     <innernamespace refid="namespaceevab_1_1_gallery_remixicon32">evab::GalleryRemixicon32</innernamespace>
     <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a9b6f4f26a39daff7e004b650952fae54" prot="public" static="no">
-        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_vertical_progress_bar" kindref="compound">AlbumVerticalProgressBar</ref>, <ref refid="structevab_1_1_vertical_picto_policy" kindref="compound">VerticalPictoPolicy</ref> &gt;</type>
-        <definition>using evab::VerticalProgressBar = InputStretchBar&lt;AlbumVerticalProgressBar, VerticalPictoPolicy&gt;</definition>
+      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a6d1c2722507b2ef54e2fcfeefbeb5823" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_album_stretchy_vertical_progress_bar" kindref="compound">AlbumStretchyVerticalProgressBar</ref>, <ref refid="structevab_1_1_vertical_album_policy" kindref="compound">VerticalAlbumPolicy</ref> &gt;</type>
+        <definition>using evab::VerticalProgressBar = InputStretchBar&lt;AlbumStretchyVerticalProgressBar, VerticalAlbumPolicy&gt;</definition>
         <argsstring></argsstring>
         <name>VerticalProgressBar</name>
         <qualifiedname>evab::VerticalProgressBar</qualifiedname>
@@ -84,11 +87,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="198" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="198" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="214" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="214" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a5e8178ef64dfcb0c6a0c2457ed589ea6" prot="public" static="no">
-        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_horizontal_progress_bar" kindref="compound">AlbumHorizontalProgressBar</ref>, <ref refid="structevab_1_1_horizontal_picto_policy" kindref="compound">HorizontalPictoPolicy</ref> &gt;</type>
-        <definition>using evab::HorizontalProgressBar = InputStretchBar&lt;AlbumHorizontalProgressBar, HorizontalPictoPolicy&gt;</definition>
+      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1afe36e7995f3b59ee90e1a0aa73d54261" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_album_stretchy_horizontal_progress_bar" kindref="compound">AlbumStretchyHorizontalProgressBar</ref>, <ref refid="structevab_1_1_horizontal_album_policy" kindref="compound">HorizontalAlbumPolicy</ref> &gt;</type>
+        <definition>using evab::HorizontalProgressBar = InputStretchBar&lt;AlbumStretchyHorizontalProgressBar, HorizontalAlbumPolicy&gt;</definition>
         <argsstring></argsstring>
         <name>HorizontalProgressBar</name>
         <qualifiedname>evab::HorizontalProgressBar</qualifiedname>
@@ -98,11 +101,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="199" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="199" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="215" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="215" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1aeb9e8805e2478ea44de99e90365cbe64" prot="public" static="no">
-        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_vertical_scroll_bar" kindref="compound">AlbumVerticalScrollBar</ref>, <ref refid="structevab_1_1_vertical_picto_policy" kindref="compound">VerticalPictoPolicy</ref> &gt;</type>
-        <definition>using evab::VerticalScrollBar = InputStretchBar&lt;AlbumVerticalScrollBar, VerticalPictoPolicy&gt;</definition>
+      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a3a1f45d0e31f277a12c7a1184068f3b8" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_album_stretchy_vertical_scroll_bar" kindref="compound">AlbumStretchyVerticalScrollBar</ref>, <ref refid="structevab_1_1_vertical_album_policy" kindref="compound">VerticalAlbumPolicy</ref> &gt;</type>
+        <definition>using evab::VerticalScrollBar = InputStretchBar&lt;AlbumStretchyVerticalScrollBar, VerticalAlbumPolicy&gt;</definition>
         <argsstring></argsstring>
         <name>VerticalScrollBar</name>
         <qualifiedname>evab::VerticalScrollBar</qualifiedname>
@@ -112,11 +115,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="200" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="200" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="216" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="216" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1a6e1a9e218c26afa41f01615605a01d8e" prot="public" static="no">
-        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_pictoset_horizontal_scroll_bar" kindref="compound">AlbumHorizontalScrollBar</ref>, <ref refid="structevab_1_1_horizontal_picto_policy" kindref="compound">HorizontalPictoPolicy</ref> &gt;</type>
-        <definition>using evab::HorizontalScrollBar = InputStretchBar&lt;AlbumHorizontalScrollBar, HorizontalPictoPolicy&gt;</definition>
+      <memberdef kind="typedef" id="evab_input_stretch_bar_8h_1ae046b61648bdec8e48de41f67f360bed" prot="public" static="no">
+        <type><ref refid="classevab_1_1_input_stretch_bar" kindref="compound">InputStretchBar</ref>&lt; <ref refid="classevab_1_1_album_stretchy_horizontal_scroll_bar" kindref="compound">AlbumStretchyHorizontalScrollBar</ref>, <ref refid="structevab_1_1_horizontal_album_policy" kindref="compound">HorizontalAlbumPolicy</ref> &gt;</type>
+        <definition>using evab::HorizontalScrollBar = InputStretchBar&lt;AlbumStretchyHorizontalScrollBar, HorizontalAlbumPolicy&gt;</definition>
         <argsstring></argsstring>
         <name>HorizontalScrollBar</name>
         <qualifiedname>evab::HorizontalScrollBar</qualifiedname>
@@ -126,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="201" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="201" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="217" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="217" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_input_text_stretch_bar_8h_1a57671f379e3ab4bf45737a960a5433d9" prot="public" static="no">
         <type><ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>&lt; <ref refid="structevab_1_1_charset_vertical_progress_bar" kindref="compound">CharsetVerticalProgressBar</ref>, <ref refid="structevab_1_1_vertical_text_policy" kindref="compound">VerticalTextPolicy</ref> &gt;</type>
@@ -140,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputTextStretchBar.h" line="288" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="288" bodyend="-1"/>
+        <location file="src/evabInputTextStretchBar.h" line="302" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="302" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_input_text_stretch_bar_8h_1a3084ed355ae65ee08396b93acc689db8" prot="public" static="no">
         <type><ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>&lt; <ref refid="structevab_1_1_charset_horizontal_progress_bar" kindref="compound">CharsetHorizontalProgressBar</ref>, <ref refid="structevab_1_1_horizontal_text_policy" kindref="compound">HorizontalTextPolicy</ref> &gt;</type>
@@ -154,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputTextStretchBar.h" line="289" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="289" bodyend="-1"/>
+        <location file="src/evabInputTextStretchBar.h" line="303" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="303" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_input_text_stretch_bar_8h_1a96206b0bc1ad82a113b01953e5529e2f" prot="public" static="no">
         <type><ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>&lt; <ref refid="structevab_1_1_charset_vertical_scroll_bar" kindref="compound">CharsetVerticalScrollBar</ref>, <ref refid="structevab_1_1_vertical_text_policy" kindref="compound">VerticalTextPolicy</ref> &gt;</type>
@@ -168,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputTextStretchBar.h" line="290" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="290" bodyend="-1"/>
+        <location file="src/evabInputTextStretchBar.h" line="304" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="304" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_input_text_stretch_bar_8h_1ad9e6b3b839d3249d214c9051c3d363cb" prot="public" static="no">
         <type><ref refid="classevab_1_1_input_text_stretch_bar" kindref="compound">InputTextStretchBar</ref>&lt; <ref refid="structevab_1_1_charset_horizontal_scroll_bar" kindref="compound">CharsetHorizontalScrollBar</ref>, <ref refid="structevab_1_1_horizontal_text_policy" kindref="compound">HorizontalTextPolicy</ref> &gt;</type>
@@ -182,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputTextStretchBar.h" line="291" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="291" bodyend="-1"/>
+        <location file="src/evabInputTextStretchBar.h" line="305" column="5" bodyfile="src/evabInputTextStretchBar.h" bodystart="305" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_labeled_8h_1aefeb2bf275dc393403a1507ab027e177" prot="public" static="no">
         <templateparamlist>
@@ -701,6 +704,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabBehavior.h" line="5" column="1"/>
+    <location file="src/evabAlbums.h" line="2" column="1"/>
   </compounddef>
 </doxygen>

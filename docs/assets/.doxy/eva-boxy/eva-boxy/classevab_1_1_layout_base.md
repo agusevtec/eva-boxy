@@ -76,7 +76,7 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 |  [**ElementBase**](classevab_1_1_element_base.md) \* | [**GetFocused**](#function-getfocused) () const<br>_Gets the current (focused) child._  |
 |  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the selection by a delta._  |
 |  bool | [**IsFocused**](#function-isfocused) ([**IFocusChain**](classevab_1_1_i_focus_chain.md) \* aChild) <br>_Checks if a child is currently focused._  |
-| virtual bool | [**Key**](#function-key) (Keys aKey) override<br>_Handles key events by forwarding to focused child._  |
+| virtual bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events by forwarding to focused child._  |
 
 
 ## Public Functions inherited from evab::ElementBase
@@ -86,10 +86,8 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 |  void | [**Draw**](classevab_1_1_element_base.md#function-draw) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
-|  void | [**Hide**](classevab_1_1_element_base.md#function-mute) () <br>_Hides the element from view._  |
-|  bool | [**IsHidden**](classevab_1_1_element_base.md#function-ishidden) () <br>_Checks if the element is hidden._  |
-| virtual bool | [**Key**](classevab_1_1_element_base.md#function-key) (Keys aKey) <br>_Handles key events for the element._  |
-|  void | [**Redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
+|  void | [**Freeze**](classevab_1_1_element_base.md#function-freeze) () <br>_Make element insensitive to redraw method._  |
+| virtual bool | [**OnKey**](classevab_1_1_element_base.md#function-onkey) (Keys aKey) <br>_Handles key events for the element._  |
 
 
 
@@ -150,7 +148,9 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](classevab_1_1_element_base.md#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) = 0<br>_Pure virtual method for drawing the element._  |
-| virtual void | [**hider**](classevab_1_1_element_base.md#function-hider) () <br>_Virtual method for muting the element._  |
+| virtual void | [**freezer**](classevab_1_1_element_base.md#function-freezer) () <br>_Virtual method for freezing the element._  |
+|  bool | [**isFrozen**](classevab_1_1_element_base.md#function-isfrozen) () <br>_Checks if the element is currently freezed._  |
+|  void | [**redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
 
 
 
@@ -258,11 +258,11 @@ true if the child is focused
 
 
 
-### function Key 
+### function OnKey 
 
 _Handles key events by forwarding to focused child._ 
 ```C++
-virtual bool evab::LayoutBase::Key (
+virtual bool evab::LayoutBase::OnKey (
     Keys aKey
 ) override
 ```
@@ -287,7 +287,7 @@ true if the key was handled, false otherwise
 
 
         
-Implements [*evab::ElementBase::Key*](classevab_1_1_element_base.md#function-key)
+Implements [*evab::ElementBase::OnKey*](classevab_1_1_element_base.md#function-onkey)
 
 
 <hr>

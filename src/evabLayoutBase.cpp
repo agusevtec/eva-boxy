@@ -71,7 +71,7 @@ bool LayoutBase::onResidualKey(Keys)
   return false;
 }
 
-void LayoutBase::muter()
+void LayoutBase::freezer()
 {
   if (!mFocusedChild)
     return;
@@ -79,7 +79,7 @@ void LayoutBase::muter()
   IFocusChain *current = mFocusedChild;
   do
   {
-    current->AsElementBase()->Mute();
+    current->AsElementBase()->Freeze();
     current = current->Next();
   } while (current != mFocusedChild);
 }

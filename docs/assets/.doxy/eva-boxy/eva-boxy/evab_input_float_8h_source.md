@@ -8,9 +8,10 @@
 
 
 ```C++
+// evabInputFloat.h
 #pragma once
 
-#include <evabElementBase.h>
+#include "evabElementBase.h"
 
 namespace evab
 {
@@ -24,13 +25,27 @@ namespace evab
 
     float GetValue() const;
 
-    void Increment(signed char delta);
+    void Increment(signed char aSteps);
 
   protected:
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
     float mValue; 
+  };
+
+  class InputFloatDiscrete : public InputFloat
+  {
+    unsigned char mCount;
+    float mMin;
+    float mMax;
+
+  public:
+    InputFloatDiscrete(float aValue, unsigned char aCount, float aMin, float aMax);
+    void Select(unsigned char aIndex);
+    signed short Selected() const;
+    unsigned char Count() const { return mCount; }
+    void Increment(int aSteps);
   };
 
 }

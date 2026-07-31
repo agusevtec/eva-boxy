@@ -2,7 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="evab_input_float_8h" kind="file" language="C++">
     <compoundname>evabInputFloat.h</compoundname>
-    <includes refid="evab_element_base_8h" local="no">evabElementBase.h</includes>
+    <includes refid="evab_element_base_8h" local="yes">evabElementBase.h</includes>
+    <includedby refid="evab_percent_8h" local="yes">src/evabPercent.h</includedby>
     <incdepgraph>
       <node id="5">
         <label>Arduino.h</label>
@@ -58,39 +59,67 @@
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/evabInputFloat.h</label>
+        <link refid="evab_input_float_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/evabPercent.h</label>
+        <link refid="evab_percent_8h_source"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classevab_1_1_input_float" prot="public">evab::InputFloat</innerclass>
+    <innerclass refid="classevab_1_1_input_float_discrete" prot="public">evab::InputFloatDiscrete</innerclass>
     <innernamespace refid="namespaceevab">evab</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;evabElementBase.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="classevab_1_1_input_float" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" kindref="member">InputFloat</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="21" refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" kindref="member">InputFloat</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aValue<sp/>=<sp/>0);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="classevab_1_1_input_float_1a2c458fd33df72334c05a9f0dd1f6f887" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1a2c458fd33df72334c05a9f0dd1f6f887" kindref="member">SetValue</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aValue);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="classevab_1_1_input_float_1ad726fd1724ca5091418203bcdd63801c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1ad726fd1724ca5091418203bcdd63801c" kindref="member">GetValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="classevab_1_1_input_float_1ab41ba1f0e7254592a36312bc8ebf6bea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1ab41ba1f0e7254592a36312bc8ebf6bea" kindref="member">Increment</ref>(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>delta);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="53" refid="classevab_1_1_input_float_1a17fa953f42dfaee582fdfb471d8823d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1a17fa953f42dfaee582fdfb471d8823d5" kindref="member">drawer</ref>(<ref refid="classevab_1_1_screen" kindref="compound">Screen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mValue;<sp/></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">//<sp/>evabInputFloat.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;evabElementBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classevab_1_1_input_float" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" kindref="member">InputFloat</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" kindref="member">InputFloat</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aValue<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classevab_1_1_input_float_1a2c458fd33df72334c05a9f0dd1f6f887" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1a2c458fd33df72334c05a9f0dd1f6f887" kindref="member">SetValue</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aValue);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classevab_1_1_input_float_1ad726fd1724ca5091418203bcdd63801c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1ad726fd1724ca5091418203bcdd63801c" kindref="member">GetValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classevab_1_1_input_float_1ac2d83357511b0fe0c9dfd1ff8d53a3f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1ac2d83357511b0fe0c9dfd1ff8d53a3f5" kindref="member">Increment</ref>(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSteps);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="classevab_1_1_input_float_1a17fa953f42dfaee582fdfb471d8823d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1a17fa953f42dfaee582fdfb471d8823d5" kindref="member">drawer</ref>(<ref refid="classevab_1_1_screen" kindref="compound">Screen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mValue;<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classevab_1_1_input_float_discrete" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">InputFloatDiscrete<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" kindref="member">InputFloat</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>mCount;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mMin;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mMax;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>InputFloatDiscrete(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aValue,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aCount,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aMin,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aMax);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Select(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIndex);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>Selected()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>Count()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mCount;<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Increment(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aSteps);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/evabInputFloat.h"/>
   </compounddef>

@@ -2,7 +2,7 @@
 
 # Class evab::InputStretchBar
 
-**template &lt;typename TAlbum, typename OrientationPictoPolicy&gt;**
+**template &lt;typename TAlbumStretchy, typename OrientationAlbumPolicy&gt;**
 
 
 
@@ -10,7 +10,7 @@
 
 
 
-_Stretch bar input element with pictogram support._ [More...](#detailed-description)
+_Stretch bar input element with Albumgram support._ [More...](#detailed-description)
 
 * `#include <evabInputStretchBar.h>`
 
@@ -75,9 +75,10 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 
 | Type | Name |
 | ---: | :--- |
+|  unsigned char | [**GetPercent**](#function-getpercent) () <br> |
 |  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the value by a delta._  |
-|   | [**InputStretchBar**](#function-inputstretchbar) (unsigned char aValue=0) <br>_Constructor for_ [_**InputStretchBar**_](classevab_1_1_input_stretch_bar.md) _._ |
-|  void | [**SetValue**](#function-setvalue) (unsigned char aValue) <br>_Sets the value and redraws._  |
+|   | [**InputStretchBar**](#function-inputstretchbar) (unsigned char aValue=0, unsigned char aStep=0) <br>_Constructor for_ [_**InputStretchBar**_](classevab_1_1_input_stretch_bar.md) _._ |
+|  void | [**SetPercent**](#function-setpercent) (unsigned char aPercent) <br>_Sets the value and redraws._  |
 
 
 ## Public Functions inherited from evab::ElementBase
@@ -87,10 +88,8 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 |  void | [**Draw**](classevab_1_1_element_base.md#function-draw) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
-|  void | [**Hide**](classevab_1_1_element_base.md#function-mute) () <br>_Hides the element from view._  |
-|  bool | [**IsHidden**](classevab_1_1_element_base.md#function-ishidden) () <br>_Checks if the element is hidden._  |
-| virtual bool | [**Key**](classevab_1_1_element_base.md#function-key) (Keys aKey) <br>_Handles key events for the element._  |
-|  void | [**Redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
+|  void | [**Freeze**](classevab_1_1_element_base.md#function-freeze) () <br>_Make element insensitive to redraw method._  |
+| virtual bool | [**OnKey**](classevab_1_1_element_base.md#function-onkey) (Keys aKey) <br>_Handles key events for the element._  |
 
 
 
@@ -151,7 +150,9 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](classevab_1_1_element_base.md#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) = 0<br>_Pure virtual method for drawing the element._  |
-| virtual void | [**hider**](classevab_1_1_element_base.md#function-hider) () <br>_Virtual method for muting the element._  |
+| virtual void | [**freezer**](classevab_1_1_element_base.md#function-freezer) () <br>_Virtual method for freezing the element._  |
+|  bool | [**isFrozen**](classevab_1_1_element_base.md#function-isfrozen) () <br>_Checks if the element is currently freezed._  |
+|  void | [**redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
 
 
 
@@ -161,7 +162,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 ## Detailed Description
 
 
-Displays a progress/scroll bar using pictograms with variable fill levels.
+Displays a progress/scroll bar using Albumgrams with variable fill levels.
 
 
 
@@ -169,8 +170,8 @@ Displays a progress/scroll bar using pictograms with variable fill levels.
 **Template parameters:**
 
 
-* `TAlbum` Album class providing pictogram data 
-* `OrientationPictoPolicy` Policy for orientation (vertical/horizontal) 
+* `TAlbumStretchy` Album class providing Albumgram data 
+* `OrientationAlbumPolicy` Policy for orientation (vertical/horizontal) 
 
 
 
@@ -178,6 +179,19 @@ Displays a progress/scroll bar using pictograms with variable fill levels.
     
 ## Public Functions Documentation
 
+
+
+
+### function GetPercent 
+
+```C++
+inline unsigned char evab::InputStretchBar::GetPercent () 
+```
+
+
+
+
+<hr>
 
 
 
@@ -213,7 +227,8 @@ inline void evab::InputStretchBar::Increment (
 _Constructor for_ [_**InputStretchBar**_](classevab_1_1_input_stretch_bar.md) _._
 ```C++
 inline evab::InputStretchBar::InputStretchBar (
-    unsigned char aValue=0
+    unsigned char aValue=0,
+    unsigned char aStep=0
 ) 
 ```
 
@@ -224,7 +239,8 @@ inline evab::InputStretchBar::InputStretchBar (
 **Parameters:**
 
 
-* `aValue` Initial value (0-100) 
+* `aValue` Initial percent value (0-100) 
+* `aStep` Increment step (0 = auto-calculate from resolution) 
 
 
 
@@ -235,12 +251,12 @@ inline evab::InputStretchBar::InputStretchBar (
 
 
 
-### function SetValue 
+### function SetPercent 
 
 _Sets the value and redraws._ 
 ```C++
-inline void evab::InputStretchBar::SetValue (
-    unsigned char aValue
+inline void evab::InputStretchBar::SetPercent (
+    unsigned char aPercent
 ) 
 ```
 
@@ -251,7 +267,7 @@ inline void evab::InputStretchBar::SetValue (
 **Parameters:**
 
 
-* `aValue` New value (0-100) 
+* `aPercent` New value (0-100) 
 
 
 

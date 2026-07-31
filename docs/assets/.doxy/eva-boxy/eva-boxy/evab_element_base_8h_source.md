@@ -19,20 +19,19 @@ namespace evab
   class ElementBase
   {
   public:
-    virtual bool Key(Keys aKey);
-
-    void Hide();
+    virtual bool OnKey(Keys aKey);
 
     void Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
-    void Redraw();
-
-    bool IsHidden();
+    void Freeze();
 
   protected:
+    bool isFrozen();
     virtual void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
 
-    virtual void hider() {};
+    virtual void freezer() {};
+
+    void redraw();
 
   private:
     unsigned short mSerialized = 0; 

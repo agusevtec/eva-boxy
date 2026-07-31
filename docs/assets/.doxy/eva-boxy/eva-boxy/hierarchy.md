@@ -4,11 +4,24 @@
 This inheritance list is sorted roughly, but not completely, alphabetically:
 
 
+* **class** [**evab::AlbumBattery**](classevab_1_1_album_battery.md) _Battery pictogram set (7 states)._ 
+* **class** [**evab::AlbumFan**](classevab_1_1_album_fan.md) _Fan pictogram set (3 states)._ 
+* **class** [**evab::AlbumLamp**](classevab_1_1_album_lamp.md) _Lamp pictogram set (6 states)._ 
+* **class** [**evab::AlbumOnOff**](classevab_1_1_album_on_off.md) _On/Off pictogram set (2 states)._ 
+* **class** [**evab::AlbumProgress**](classevab_1_1_album_progress.md) _Progress pictogram set (9 states)._ 
+* **class** [**evab::AlbumRainbowmeter**](classevab_1_1_album_rainbowmeter.md) _Rainbowmeter pictogram set (7 states)._ 
+* **class** [**evab::AlbumRoundmeter**](classevab_1_1_album_roundmeter.md) 
+* **class** [**evab::AlbumSignal**](classevab_1_1_album_signal.md) _Signal pictogram set (4 states)._ 
+* **class** [**evab::AlbumSpeaker**](classevab_1_1_album_speaker.md) _Speaker pictogram set (4 states)._ 
+* **class** [**evab::AlbumStretchyHorizontalProgressBar**](classevab_1_1_album_stretchy_horizontal_progress_bar.md) _Horizontal progress bar pictogram set._ 
+* **class** [**evab::AlbumStretchyHorizontalScrollBar**](classevab_1_1_album_stretchy_horizontal_scroll_bar.md) _Horizontal scroll bar pictogram set._ 
+* **class** [**evab::AlbumStretchyVerticalProgressBar**](classevab_1_1_album_stretchy_vertical_progress_bar.md) _Vertical progress bar pictogram set._ 
+* **class** [**evab::AlbumStretchyVerticalScrollBar**](classevab_1_1_album_stretchy_vertical_scroll_bar.md) _Vertical scroll bar pictogram set._ 
 * **class** [**evab::ElementBase**](classevab_1_1_element_base.md) _Abstract base class for all UI elements._     
-    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with pictogram support._ 
-    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with pictogram support._ 
-    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with pictogram support._ 
-    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with pictogram support._ 
+    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with Albumgram support._ 
+    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with Albumgram support._ 
+    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with Albumgram support._ 
+    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with Albumgram support._ 
     * **class** [**evab::InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) _Text-based stretch bar element._ 
     * **class** [**evab::InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) _Text-based stretch bar element._ 
     * **class** [**evab::InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) _Text-based stretch bar element._ 
@@ -28,10 +41,12 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::InputAnimation**](classevab_1_1_input_animation.md) _Animation input element with configurable speed._ 
     * **class** [**evab::InputButton**](classevab_1_1_input_button.md) _Button input element._ 
     * **class** [**evab::InputButtonPicto**](classevab_1_1_input_button_picto.md) _Pictogram button element._ 
-    * **class** [**evab::InputFloat**](classevab_1_1_input_float.md) _Floating-point input element._ 
-    * **class** [**evab::InputInt**](classevab_1_1_input_int.md) _Integer input element._ 
-    * **class** [**evab::InputSelectorPicto**](classevab_1_1_input_selector_picto.md) _Pictogram-based input element._ 
-    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with pictogram support._ 
+    * **class** [**evab::InputFloat**](classevab_1_1_input_float.md) _Float input element._     
+        * **class** [**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md) _Discrete float input element._ 
+    * **class** [**evab::InputInt**](classevab_1_1_input_int.md) _Integer input element._     
+        * **class** [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md) 
+    * **class** [**evab::InputSelectorAlbum**](classevab_1_1_input_selector_album.md) _Pictogram-based input element._ 
+    * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with Albumgram support._ 
     * **class** [**evab::InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) _Text-based stretch bar element._ 
     * **class** [**evab::LayoutBase**](classevab_1_1_layout_base.md) _Abstract base class for composite elements with circular focus chain._ 
     * **class** [**evab::ListBox**](classevab_1_1_list_box.md) _List box element with configurable windowing algorithm._ 
@@ -47,19 +62,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::Font8Narrow**](classevab_1_1_font8_narrow.md) _8x8 thin font implementation_ 
 * **class** [**evab::Grid**](classevab_1_1_grid.md) _Layout manager for grid-based UI arrangement._ 
 * **class** [**evab::IFocusChain**](classevab_1_1_i_focus_chain.md) 
-* **class** [**evab::AlbumBattery**](classevab_1_1_pictoset_battery.md) _Battery pictogram set (7 states)._ 
-* **class** [**evab::AlbumFan**](classevab_1_1_pictoset_fan.md) _Fan pictogram set (3 states)._ 
-* **class** [**evab::AlbumHorizontalProgressBar**](classevab_1_1_pictoset_horizontal_progress_bar.md) _Horizontal progress bar pictogram set._ 
-* **class** [**evab::AlbumHorizontalScrollBar**](classevab_1_1_pictoset_horizontal_scroll_bar.md) _Horizontal scroll bar pictogram set._ 
-* **class** [**evab::AlbumLamp**](classevab_1_1_pictoset_lamp.md) _Lamp pictogram set (6 states)._ 
-* **class** [**evab::AlbumOnOff**](classevab_1_1_pictoset_on_off.md) _On/Off pictogram set (2 states)._ 
-* **class** [**evab::AlbumProgress**](classevab_1_1_pictoset_progress.md) _Progress pictogram set (9 states)._ 
-* **class** [**evab::AlbumRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md) _Rainbowmeter pictogram set (7 states)._ 
-* **class** [**evab::AlbumRoundmeter**](classevab_1_1_pictoset_roundmeter.md) 
-* **class** [**evab::AlbumSignal**](classevab_1_1_pictoset_signal.md) _Signal pictogram set (4 states)._ 
-* **class** [**evab::AlbumSpeaker**](classevab_1_1_pictoset_speaker.md) _Speaker pictogram set (4 states)._ 
-* **class** [**evab::AlbumVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md) _Vertical progress bar pictogram set._ 
-* **class** [**evab::AlbumVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md) _Vertical scroll bar pictogram set._ 
 * **class** [**evab::Screen**](classevab_1_1_screen.md) _Base class for screen implementations._     
     * **class** [**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) _I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._ 
     * **class** [**evab::ScreenPage8Base**](classevab_1_1_screen_page8_base.md) _Base class for page-based 8-bit screens._     
@@ -75,7 +77,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **struct** [**evab::CharsetVerticalProgressBar**](structevab_1_1_charset_vertical_progress_bar.md) _Character set for vertical progress bar._ 
 * **struct** [**evab::CharsetVerticalScrollBar**](structevab_1_1_charset_vertical_scroll_bar.md) _Character set for vertical scroll bar._ 
 * **struct** [**evab::Coor**](structevab_1_1_coor.md) _Coordinate structure for positions and sizes on screen._ 
-* **struct** [**evab::HorizontalPictoPolicy**](structevab_1_1_horizontal_picto_policy.md) _Policy for horizontal orientation of stretch bars._ 
+* **struct** [**evab::HorizontalAlbumPolicy**](structevab_1_1_horizontal_album_policy.md) _Policy for horizontal orientation of stretch bars._ 
 * **struct** [**evab::HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md) _Policy for horizontal text-based stretch bars._ 
 * **struct** [**evab::LeftAlign**](structevab_1_1_left_align.md) 
 * **struct** [**evab::RightAlign**](structevab_1_1_right_align.md) 
@@ -84,7 +86,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **struct** [**evab::TextTraits&lt; char \* &gt;**](structevab_1_1_text_traits_3_01char_01_5_01_4.md) 
 * **struct** [**evab::TextTraits&lt; const \_\_FlashStringHelper \* &gt;**](structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4.md) _Traits for Flash string (\_\_FlashStringHelper\*)._ 
 * **struct** [**evab::TextTraits&lt; const char \* &gt;**](structevab_1_1_text_traits_3_01const_01char_01_5_01_4.md) 
-* **struct** [**evab::VerticalPictoPolicy**](structevab_1_1_vertical_picto_policy.md) _Policy for vertical orientation of stretch bars._ 
+* **struct** [**evab::VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) _Policy for vertical orientation of stretch bars._ 
 * **struct** [**evab::VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) _Policy for vertical text-based stretch bars._ 
 * **class** **eva::IHandler**    
     * **class** [**evab::Boxy**](classevab_1_1_boxy.md) _Main application controller managing screen, input, and modal overlays._ 
@@ -98,4 +100,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::LayoutBase::FocusChain**](classevab_1_1_layout_base_1_1_focus_chain.md) _Wrapper that chains elements in a circular doubly-linked list._ 
 * **class** **TWindowAlgorithm**    
     * **class** [**evab::ListBox**](classevab_1_1_list_box.md) _List box element with configurable windowing algorithm._ 
+* **class** **TElement**    
+    * **class** [**evab::Percent**](classevab_1_1_percent.md) [_**Percent**_](classevab_1_1_percent.md) _modifier for discrete inputs._
 

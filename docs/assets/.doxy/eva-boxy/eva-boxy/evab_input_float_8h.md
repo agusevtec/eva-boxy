@@ -10,7 +10,7 @@
 
 
 
-* `#include <evabElementBase.h>`
+* `#include "evabElementBase.h"`
 
 
 
@@ -35,7 +35,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InputFloat**](classevab_1_1_input_float.md) <br>_Floating-point input element._  |
+| class | [**InputFloat**](classevab_1_1_input_float.md) <br>_Float input element._  |
+| class | [**InputFloatDiscrete**](classevab_1_1_input_float_discrete.md) <br>_Discrete float input element._  |
 
 
 

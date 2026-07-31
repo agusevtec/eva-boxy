@@ -8,7 +8,7 @@
 
 
 ```C++
-// evabMesh.h
+// evabGrid.h
 #pragma once
 
 #include <evabElementBase.h>
@@ -20,25 +20,68 @@ namespace evab
     class Grid
     {
     public:
-        Grid(Coor aPos, Coor aSize);
+        Grid(Screen *aScreen, Coor aPos, Coor aSize);
 
         Grid SliceRow(unsigned char aHeight = 0);
 
         Grid SliceCol(unsigned char aWidth = 0);
 
-        Grid& Rest();
+        Grid &Rest();
 
-        void Draw(Screen *aScreen, ElementBase *aElement, unsigned char aIsFocused = 0);
+        void Draw(ElementBase *aElement, unsigned char aIsFocused = 0);
 
-        void Blank(Screen *aScreen);
+        template <typename TAlign, typename TText>
+        void Text(TText aText, unsigned char aColor = 0)
+        {
+            if (mScreen)
+                mScreen->Text<TAlign>(mTopLeft, GetSize(), aText, aColor);
+        }
+
+        template <typename T>
+        void TextLeft(T aText, unsigned char aColor = 0)
+        {
+            if (mScreen)
+                mScreen->TextLeft(mTopLeft, GetSize(), aText, aColor);
+        }
+
+        template <typename T>
+        void TextCenter(T aText, unsigned char aColor = 0)
+        {
+            if (mScreen)
+                mScreen->TextCenter(mTopLeft, GetSize(), aText, aColor);
+        }
+
+        template <typename T>
+        void TextRight(T aText, unsigned char aColor = 0)
+        {
+            if (mScreen)
+                mScreen->TextRight(mTopLeft, GetSize(), aText, aColor);
+        }
+
+        void Picto(const unsigned char *aPictogram, unsigned char aColor = 0)
+        {
+            if (mScreen)
+                mScreen->Picto(mTopLeft, aPictogram, aColor);
+        }
+
+        void Clear()
+        {
+            if (mScreen)
+                mScreen->Clear(mTopLeft, GetSize(), 0);
+        }
+
+        // ========== Getters ==========
 
         Coor GetPos() const { return mTopLeft; }
 
         Coor GetSize() const;
 
+        Screen *GetScreen() const { return mScreen; }
+
     private:
-        Coor mTopLeft;      
-        Coor mBottomRight;  
+        Coor mTopLeft;     
+        Coor mBottomRight; 
+        const Screen *mScreen;   
     };
 
 }

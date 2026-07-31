@@ -21,7 +21,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| file | [**evabBehavior.h**](evab_behavior_8h.md) <br> |
+| file | [**evabAlbums.h**](evab_albums_8h.md) <br> |
+| file | [**evabAlbumsStretchy.h**](evab_albums_stretchy_8h.md) <br> |
 | file | [**evabBoxy.h**](evab_boxy_8h.md) <br> |
 | file | [**evabCompositeBase.h**](evab_composite_base_8h.md) <br> |
 | file | [**evabCoor.h**](evab_coor_8h.md) <br> |
@@ -39,15 +40,15 @@
 | file | [**evabInputButtonPicto.h**](evab_input_button_picto_8h.md) <br> |
 | file | [**evabInputFloat.h**](evab_input_float_8h.md) <br> |
 | file | [**evabInputInt.h**](evab_input_int_8h.md) <br> |
-| file | [**evabInputSelectorPicto.h**](evab_input_selector_picto_8h.md) <br> |
+| file | [**evabInputSelectorAlbum.h**](evab_input_selector_album_8h.md) <br> |
 | file | [**evabInputStretchBar.h**](evab_input_stretch_bar_8h.md) <br> |
 | file | [**evabInputTextStretchBar.h**](evab_input_text_stretch_bar_8h.md) <br> |
 | file | [**evabKeys.h**](evab_keys_8h.md) <br> |
 | file | [**evabLabeled.h**](evab_labeled_8h.md) <br> |
 | file | [**evabLayoutBase.h**](evab_layout_base_8h.md) <br> |
 | file | [**evabListBox.h**](evab_list_box_8h.md) <br> |
-| file | [**evabAlbums.h**](evab_pictosets_8h.md) <br> |
-| file | [**evabAlbumsStretchy.h**](evab_pictosets_stretchy_8h.md) <br> |
+| file | [**evabPercent.h**](evab_percent_8h.md) <br> |
+| file | [**evabReactions.h**](evab_reactions_8h.md) <br> |
 | file | [**evabScreen.h**](evab_screen_8h.md) <br> |
 | file | [**evabScreenKS0108.h**](evab_screen_k_s0108_8h.md) <br> |
 | file | [**evabScreenLCD\_I2C.h**](evab_screen_l_c_d___i2_c_8h.md) <br> |

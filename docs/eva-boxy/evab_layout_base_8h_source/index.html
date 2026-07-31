@@ -713,7 +713,7 @@
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Increment</span><span class="p">(</span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">delta</span><span class="p">);</span>
 
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">Key</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">OnKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">protected</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">focusChild</span><span class="p">(</span><span class="n">IFocusChain</span><span class="w"> </span><span class="o">*</span><span class="n">aChild</span><span class="p">);</span>
@@ -725,7 +725,7 @@
 
 <span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">onResidualKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hider</span><span class="p">();</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">freezer</span><span class="p">();</span>
 
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="n">IFocusChain</span><span class="w"> </span><span class="o">*</span><span class="n">mFocusedChild</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span><span class="w"> </span>

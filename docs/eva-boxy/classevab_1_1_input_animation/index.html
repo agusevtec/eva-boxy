@@ -692,21 +692,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-getvalue" class="md-nav__link">
+  <a href="#function-count" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function GetValue
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-getvaluepercent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function GetValuePercent
+        function Count
       
     </span>
   </a>
@@ -736,10 +725,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setvalue" class="md-nav__link">
+  <a href="#function-select" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function SetValue
+        function Select
       
     </span>
   </a>
@@ -747,10 +736,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setvaluepercent" class="md-nav__link">
+  <a href="#function-selected" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function SetValuePercent
+        function Selected
       
     </span>
   </a>
@@ -797,10 +786,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-hider" class="md-nav__link">
+  <a href="#function-freezer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function hider
+        function freezer
       
     </span>
   </a>
@@ -851,11 +840,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">unsigned char</td>
-<td style="text-align: left;"><a href="#function-getvalue"><strong>GetValue</strong></a> () const<br><em>Gets the current speed value.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">unsigned char</td>
-<td style="text-align: left;"><a href="#function-getvaluepercent"><strong>GetValuePercent</strong></a> () const<br><em>Gets the current speed as percentage (0-100).</em></td>
+<td style="text-align: left;"><a href="#function-count"><strong>Count</strong></a> () const<br></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -867,11 +852,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setvalue"><strong>SetValue</strong></a> (unsigned char aValue) <br><em>Sets the animation speed.</em></td>
+<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (unsigned char aValue) <br><em>Sets the animation speed.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setvaluepercent"><strong>SetValuePercent</strong></a> (unsigned char aValue) <br><em>Sets speed from percentage value.</em></td>
+<td style="text-align: right;">unsigned char</td>
+<td style="text-align: left;"><a href="#function-selected"><strong>Selected</strong></a> () const<br><em>Gets the current speed value.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual</td>
@@ -895,19 +880,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-mute"><strong>Hide</strong></a> () <br><em>Hides the element from view.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br><em>Checks if the element is hidden.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-freeze"><strong>Freeze</strong></a> () <br><em>Make element insensitive to redraw method.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-onkey"><strong>OnKey</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
 </tr>
 </tbody>
 </table>
@@ -926,7 +903,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-hider"><strong>hider</strong></a> () override<br><em>Hides the element and pauses animation.</em></td>
+<td style="text-align: left;"><a href="#function-freezer"><strong>freezer</strong></a> () override<br><em>Hides the element and pauses animation.</em></td>
 </tr>
 </tbody>
 </table>
@@ -946,7 +923,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hider"><strong>hider</strong></a> () <br><em>Virtual method for muting the element.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-freezer"><strong>freezer</strong></a> () <br><em>Virtual method for freezing the element.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-isfrozen"><strong>isFrozen</strong></a> () <br><em>Checks if the element is currently freezed.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
 </tr>
 </tbody>
 </table>
@@ -962,22 +947,10 @@
 <p><strong>See also:</strong> InputPictogram For static pictogram selection </p>
 <p><strong>See also:</strong> eva::Tickable Base class for periodic updates </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
-<h3 id="function-getvalue">function GetValue<a class="headerlink" href="#function-getvalue" title="Permanent link">&para;</a></h3>
-<p><em>Gets the current speed value.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">GetValue</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+<h3 id="function-count">function Count<a class="headerlink" href="#function-count" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">Count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
 </code></pre></div>
 
-<p><strong>Returns:</strong></p>
-<p>Current speed value (0 to tMaxSpeed) </p>
-<hr>
-
-<h3 id="function-getvaluepercent">function GetValuePercent<a class="headerlink" href="#function-getvaluepercent" title="Permanent link">&para;</a></h3>
-<p><em>Gets the current speed as percentage (0-100).</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">GetValuePercent</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
-</code></pre></div>
-
-<p><strong>Returns:</strong></p>
-<p>Percentage value (0-100) </p>
 <hr>
 
 <h3 id="function-increment">function Increment<a class="headerlink" href="#function-increment" title="Permanent link">&para;</a></h3>
@@ -1006,9 +979,9 @@
 </ul>
 <hr>
 
-<h3 id="function-setvalue">function SetValue<a class="headerlink" href="#function-setvalue" title="Permanent link">&para;</a></h3>
+<h3 id="function-select">function Select<a class="headerlink" href="#function-select" title="Permanent link">&para;</a></h3>
 <p><em>Sets the animation speed.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">SetValue</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">Select</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aValue</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
@@ -1019,17 +992,13 @@
 </ul>
 <hr>
 
-<h3 id="function-setvaluepercent">function SetValuePercent<a class="headerlink" href="#function-setvaluepercent" title="Permanent link">&para;</a></h3>
-<p><em>Sets speed from percentage value.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">SetValuePercent</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aValue</span>
-<span class="p">)</span><span class="w"> </span>
+<h3 id="function-selected">function Selected<a class="headerlink" href="#function-selected" title="Permanent link">&para;</a></h3>
+<p><em>Gets the current speed value.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">Selected</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
 </code></pre></div>
 
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>aValue</code> Percentage value (0-100) </li>
-</ul>
+<p><strong>Returns:</strong></p>
+<p>Current speed value (0 to tMaxSpeed) </p>
 <hr>
 
 <h3 id="function-inputanimation_1">function ~InputAnimation<a class="headerlink" href="#function-inputanimation_1" title="Permanent link">&para;</a></h3>
@@ -1060,12 +1029,12 @@
 <p>Implements <a href="../classevab_1_1_element_base/#function-drawer"><em>evab::ElementBase::drawer</em></a></p>
 <hr>
 
-<h3 id="function-hider">function hider<a class="headerlink" href="#function-hider" title="Permanent link">&para;</a></h3>
+<h3 id="function-freezer">function freezer<a class="headerlink" href="#function-freezer" title="Permanent link">&para;</a></h3>
 <p><em>Hides the element and pauses animation.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">hider</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputAnimation</span><span class="o">::</span><span class="n">freezer</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
-<p>Implements <a href="../classevab_1_1_element_base/#function-hider"><em>evab::ElementBase::hider</em></a></p>
+<p>Implements <a href="../classevab_1_1_element_base/#function-freezer"><em>evab::ElementBase::freezer</em></a></p>
 <hr>
 
 <hr />

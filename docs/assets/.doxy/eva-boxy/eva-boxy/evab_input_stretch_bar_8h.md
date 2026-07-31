@@ -36,9 +36,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**HorizontalPictoPolicy**](structevab_1_1_horizontal_picto_policy.md) <br>_Policy for horizontal orientation of stretch bars._  |
-| class | [**InputStretchBar**](classevab_1_1_input_stretch_bar.md) &lt;typename TAlbum, typename OrientationPictoPolicy&gt;<br>_Stretch bar input element with pictogram support._  |
-| struct | [**VerticalPictoPolicy**](structevab_1_1_vertical_picto_policy.md) <br>_Policy for vertical orientation of stretch bars._  |
+| struct | [**HorizontalAlbumPolicy**](structevab_1_1_horizontal_album_policy.md) <br>_Policy for horizontal orientation of stretch bars._  |
+| class | [**InputStretchBar**](classevab_1_1_input_stretch_bar.md) &lt;typename TAlbumStretchy, typename OrientationAlbumPolicy&gt;<br>_Stretch bar input element with Albumgram support._  |
+| struct | [**VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) <br>_Policy for vertical orientation of stretch bars._  |
 
 
 

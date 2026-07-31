@@ -26,7 +26,7 @@ namespace evab
         void SetText(T aText) 
         { 
             mText = aText; 
-            Redraw(); 
+            redraw(); 
         }
 
         T GetText() const { return mText; }
@@ -40,7 +40,7 @@ namespace evab
             aScreen->Text<TAlign>(aPos, aSize, mText, aIsFocused);
         }
 
-        void hider() override {}
+        void freezer() override {}
 
     private:
         T mText;  

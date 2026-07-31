@@ -62,7 +62,7 @@ namespace evab
                 aScreen->DrawSymbol(aPos, {1, 1}, mId[0], aIsFocused);
         }
         
-        void muter() override {}
+        void freezer() override {}
         
         void reset()
         {

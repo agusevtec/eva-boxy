@@ -38,15 +38,15 @@ namespace evab
     /**
      * @brief Make element insensitive to redraw method
      */
-    void Mute();
+    void Freeze();
 
   protected:
     /**
-     * @brief Checks if the element is currently muted.
+     * @brief Checks if the element is currently freezed.
      *
-     * @return true if the element is muted and ignores redraw requests, false otherwise.
+     * @return true if the element is freezed and ignores redraw requests, false otherwise.
      */
-    bool isMuted();
+    bool isFrozen();
     /**
      * @brief Pure virtual method for drawing the element
      *
@@ -58,11 +58,11 @@ namespace evab
     virtual void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
 
     /**
-     * @brief Virtual method for muting the element
+     * @brief Virtual method for freezing the element
      *
-     * Override to implement custom muting behavior.
+     * Override to implement custom freezing behavior.
      */
-    virtual void muter() {};
+    virtual void freezer() {};
 
     /**
      * @brief Redraws the element on the current screen

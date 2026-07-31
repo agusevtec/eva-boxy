@@ -20,24 +20,24 @@ namespace evab
     
     virtual void Select(unsigned char aIndex) = 0;
     
-    signed char Selected();
+    signed short Selected();
     
-    signed char Count();
+    unsigned char Count();
     
-    signed char WindowSize();
+    unsigned char WindowSize();
 
   protected:
-    signed char indexInWindow(signed char aPosition);
+    signed char indexInWindow(unsigned char aPosition);
     
-    void setCount(signed char Count);
+    void setCount(unsigned char Count);
     
-    void resizeWindow(signed char aWindowSize);
+    void resizeWindow(unsigned char aWindowSize);
 
   protected:
-    signed char mSelected;     
-    signed char mCount;        
-    signed char mWindowStart;  
-    signed char mWindowSize;   
+    unsigned char mSelected;     
+    unsigned char mCount;        
+    unsigned char mWindowStart;  
+    unsigned char mWindowSize;   
   };
 
   class FlipWindowAlgorithm : public WindowAlgorithmBase

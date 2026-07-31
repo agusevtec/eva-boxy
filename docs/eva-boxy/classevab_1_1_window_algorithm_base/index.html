@@ -888,15 +888,15 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">signed char</td>
+<td style="text-align: right;">unsigned char</td>
 <td style="text-align: left;"><a href="#function-count"><strong>Count</strong></a> () <br><em>Gets the total number of items.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (signed char aIndex) = 0<br><em>Pure virtual method to select an item.</em></td>
+<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (unsigned char aIndex) = 0<br><em>Pure virtual method to select an item.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">signed char</td>
+<td style="text-align: right;">signed short</td>
 <td style="text-align: left;"><a href="#function-selected"><strong>Selected</strong></a> () <br><em>Gets the currently selected item index.</em></td>
 </tr>
 <tr>
@@ -904,7 +904,7 @@
 <td style="text-align: left;"><a href="#function-windowalgorithmbase"><strong>WindowAlgorithmBase</strong></a> () <br><em>Constructor for window algorithm base.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">signed char</td>
+<td style="text-align: right;">unsigned char</td>
 <td style="text-align: left;"><a href="#function-windowsize"><strong>WindowSize</strong></a> () <br><em>Gets the window size.</em></td>
 </tr>
 </tbody>
@@ -919,19 +919,19 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">signed char</td>
+<td style="text-align: right;">unsigned char</td>
 <td style="text-align: left;"><a href="#variable-mcount"><strong>mCount</strong></a>  <br><em>Total number of items.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">signed char</td>
+<td style="text-align: right;">unsigned char</td>
 <td style="text-align: left;"><a href="#variable-mselected"><strong>mSelected</strong></a>  <br><em>Currently selected index.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">signed char</td>
+<td style="text-align: right;">unsigned char</td>
 <td style="text-align: left;"><a href="#variable-mwindowsize"><strong>mWindowSize</strong></a>  <br><em>Window size.</em></td>
 </tr>
 <tr>
-<td style="text-align: right;">signed char</td>
+<td style="text-align: right;">unsigned char</td>
 <td style="text-align: left;"><a href="#variable-mwindowstart"><strong>mWindowStart</strong></a>  <br><em>Start of the current window.</em></td>
 </tr>
 </tbody>
@@ -947,15 +947,15 @@
 <tbody>
 <tr>
 <td style="text-align: right;">signed char</td>
-<td style="text-align: left;"><a href="#function-indexinwindow"><strong>indexInWindow</strong></a> (signed char aPosition) <br><em>Calculates the visual index of an item in the current window.</em></td>
+<td style="text-align: left;"><a href="#function-indexinwindow"><strong>indexInWindow</strong></a> (unsigned char aPosition) <br><em>Calculates the visual index of an item in the current window.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-resizewindow"><strong>resizeWindow</strong></a> (signed char aWindowSize) <br><em>Resizes the window.</em></td>
+<td style="text-align: left;"><a href="#function-resizewindow"><strong>resizeWindow</strong></a> (unsigned char aWindowSize) <br><em>Resizes the window.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setcount"><strong>setCount</strong></a> (signed char Count) <br><em>Sets the total number of items.</em></td>
+<td style="text-align: left;"><a href="#function-setcount"><strong>setCount</strong></a> (unsigned char Count) <br><em>Sets the total number of items.</em></td>
 </tr>
 </tbody>
 </table>
@@ -964,7 +964,7 @@
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-count">function Count<a class="headerlink" href="#function-count" title="Permanent link">&para;</a></h3>
 <p><em>Gets the total number of items.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">Count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">Count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -974,7 +974,7 @@
 <h3 id="function-select">function Select<a class="headerlink" href="#function-select" title="Permanent link">&para;</a></h3>
 <p><em>Pure virtual method to select an item.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">Select</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
 <span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div>
 
@@ -986,7 +986,7 @@
 
 <h3 id="function-selected">function Selected<a class="headerlink" href="#function-selected" title="Permanent link">&para;</a></h3>
 <p><em>Gets the currently selected item index.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">Selected</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">Selected</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -1002,7 +1002,7 @@
 
 <h3 id="function-windowsize">function WindowSize<a class="headerlink" href="#function-windowsize" title="Permanent link">&para;</a></h3>
 <p><em>Gets the window size.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">WindowSize</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">WindowSize</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
@@ -1011,28 +1011,28 @@
 <h2 id="protected-attributes-documentation">Protected Attributes Documentation<a class="headerlink" href="#protected-attributes-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="variable-mcount">variable mCount<a class="headerlink" href="#variable-mcount" title="Permanent link">&para;</a></h3>
 <p><em>Total number of items.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mCount</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mCount</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="variable-mselected">variable mSelected<a class="headerlink" href="#variable-mselected" title="Permanent link">&para;</a></h3>
 <p><em>Currently selected index.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mSelected</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mSelected</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="variable-mwindowsize">variable mWindowSize<a class="headerlink" href="#variable-mwindowsize" title="Permanent link">&para;</a></h3>
 <p><em>Window size.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mWindowSize</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mWindowSize</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="variable-mwindowstart">variable mWindowStart<a class="headerlink" href="#variable-mwindowstart" title="Permanent link">&para;</a></h3>
 <p><em>Start of the current window.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mWindowStart</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">mWindowStart</span><span class="p">;</span>
 </code></pre></div>
 
 <hr>
@@ -1040,7 +1040,7 @@
 <h3 id="function-indexinwindow">function indexInWindow<a class="headerlink" href="#function-indexinwindow" title="Permanent link">&para;</a></h3>
 <p><em>Calculates the visual index of an item in the current window.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">indexInWindow</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aPosition</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aPosition</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
@@ -1055,7 +1055,7 @@
 <h3 id="function-resizewindow">function resizeWindow<a class="headerlink" href="#function-resizewindow" title="Permanent link">&para;</a></h3>
 <p><em>Resizes the window.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">resizeWindow</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aWindowSize</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aWindowSize</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
@@ -1068,7 +1068,7 @@
 <h3 id="function-setcount">function setCount<a class="headerlink" href="#function-setcount" title="Permanent link">&para;</a></h3>
 <p><em>Sets the total number of items.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">setCount</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">Count</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">Count</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 

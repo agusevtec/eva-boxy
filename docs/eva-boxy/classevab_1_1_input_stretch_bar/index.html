@@ -692,6 +692,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#function-getpercent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function GetPercent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-increment" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -714,10 +725,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setvalue" class="md-nav__link">
+  <a href="#function-setpercent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function SetValue
+        function SetPercent
       
     </span>
   </a>
@@ -778,9 +789,9 @@
 
 
 <h1 id="class-evabinputstretchbar">Class evab::InputStretchBar<a class="headerlink" href="#class-evabinputstretchbar" title="Permanent link">&para;</a></h1>
-<p><strong>template &lt;typename TAlbum, typename OrientationPictoPolicy&gt;</strong></p>
+<p><strong>template &lt;typename TAlbumStretchy, typename OrientationAlbumPolicy&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>InputStretchBar</strong></a></p>
-<p><em>Stretch bar input element with pictogram support.</em> <a href="#detailed-description">More...</a></p>
+<p><em>Stretch bar input element with Albumgram support.</em> <a href="#detailed-description">More...</a></p>
 <ul>
 <li><code>#include &lt;evabInputStretchBar.h&gt;</code></li>
 </ul>
@@ -795,16 +806,20 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align: right;">unsigned char</td>
+<td style="text-align: left;"><a href="#function-getpercent"><strong>GetPercent</strong></a> () <br></td>
+</tr>
+<tr>
 <td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-increment"><strong>Increment</strong></a> (signed char delta) <br><em>Increments the value by a delta.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-inputstretchbar"><strong>InputStretchBar</strong></a> (unsigned char aValue=0) <br><em>Constructor for</em> <a href="./"><em><strong>InputStretchBar</strong></em></a> <em>.</em></td>
+<td style="text-align: left;"><a href="#function-inputstretchbar"><strong>InputStretchBar</strong></a> (unsigned char aValue=0, unsigned char aStep=0) <br><em>Constructor for</em> <a href="./"><em><strong>InputStretchBar</strong></em></a> <em>.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setvalue"><strong>SetValue</strong></a> (unsigned char aValue) <br><em>Sets the value and redraws.</em></td>
+<td style="text-align: left;"><a href="#function-setpercent"><strong>SetPercent</strong></a> (unsigned char aPercent) <br><em>Sets the value and redraws.</em></td>
 </tr>
 </tbody>
 </table>
@@ -824,19 +839,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-mute"><strong>Hide</strong></a> () <br><em>Hides the element from view.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br><em>Checks if the element is hidden.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-freeze"><strong>Freeze</strong></a> () <br><em>Make element insensitive to redraw method.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-onkey"><strong>OnKey</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
 </tr>
 </tbody>
 </table>
@@ -871,18 +878,32 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hider"><strong>hider</strong></a> () <br><em>Virtual method for muting the element.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-freezer"><strong>freezer</strong></a> () <br><em>Virtual method for freezing the element.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-isfrozen"><strong>isFrozen</strong></a> () <br><em>Checks if the element is currently freezed.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
-<p>Displays a progress/scroll bar using pictograms with variable fill levels.</p>
+<p>Displays a progress/scroll bar using Albumgrams with variable fill levels.</p>
 <p><strong>Template parameters:</strong></p>
 <ul>
-<li><code>TAlbum</code> Album class providing pictogram data </li>
-<li><code>OrientationPictoPolicy</code> Policy for orientation (vertical/horizontal) </li>
+<li><code>TAlbumStretchy</code> Album class providing Albumgram data </li>
+<li><code>OrientationAlbumPolicy</code> Policy for orientation (vertical/horizontal) </li>
 </ul>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-getpercent">function GetPercent<a class="headerlink" href="#function-getpercent" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputStretchBar</span><span class="o">::</span><span class="n">GetPercent</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
 <h3 id="function-increment">function Increment<a class="headerlink" href="#function-increment" title="Permanent link">&para;</a></h3>
 <p><em>Increments the value by a delta.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputStretchBar</span><span class="o">::</span><span class="n">Increment</span><span class="w"> </span><span class="p">(</span>
@@ -899,26 +920,28 @@
 <h3 id="function-inputstretchbar">function InputStretchBar<a class="headerlink" href="#function-inputstretchbar" title="Permanent link">&para;</a></h3>
 <p><em>Constructor for</em> <a href="./"><em><strong>InputStretchBar</strong></em></a> <em>.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputStretchBar</span><span class="o">::</span><span class="n">InputStretchBar</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aValue</span><span class="o">=</span><span class="mi">0</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aValue</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aStep</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aValue</code> Initial value (0-100) </li>
+<li><code>aValue</code> Initial percent value (0-100) </li>
+<li><code>aStep</code> Increment step (0 = auto-calculate from resolution) </li>
 </ul>
 <hr>
 
-<h3 id="function-setvalue">function SetValue<a class="headerlink" href="#function-setvalue" title="Permanent link">&para;</a></h3>
+<h3 id="function-setpercent">function SetPercent<a class="headerlink" href="#function-setpercent" title="Permanent link">&para;</a></h3>
 <p><em>Sets the value and redraws.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputStretchBar</span><span class="o">::</span><span class="n">SetValue</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aValue</span>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputStretchBar</span><span class="o">::</span><span class="n">SetPercent</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aPercent</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aValue</code> New value (0-100) </li>
+<li><code>aPercent</code> New value (0-100) </li>
 </ul>
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>

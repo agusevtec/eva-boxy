@@ -12,7 +12,7 @@
 
 _Decorator that modifies values using increment/decrement keys._ [More...](#detailed-description)
 
-* `#include <evabBehavior.h>`
+* `#include <evabReactions.h>`
 
 
 
@@ -55,8 +55,8 @@ Inherits the following classes: T
 
 | Type | Name |
 | ---: | :--- |
-|  bool | [**Key**](#function-key) (Keys aKey) override<br>_Handles key events for increment/decrement._  |
 |   | [**KeyModifier**](#function-keymodifier) (Args &&... args) <br>_Constructor for_ [_**KeyModifier**_](classevab_1_1_key_modifier.md) _._ |
+|  bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events for increment/decrement._  |
 
 
 
@@ -109,11 +109,39 @@ This class wraps any element and adds behavior for increment and decrement keys.
 
 
 
-### function Key 
+### function KeyModifier 
+
+_Constructor for_ [_**KeyModifier**_](classevab_1_1_key_modifier.md) _._
+```C++
+template<typename... Args>
+inline evab::KeyModifier::KeyModifier (
+    Args &&... args
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `args` Arguments forwarded to the base element constructor 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function OnKey 
 
 _Handles key events for increment/decrement._ 
 ```C++
-inline bool evab::KeyModifier::Key (
+inline bool evab::KeyModifier::OnKey (
     Keys aKey
 ) override
 ```
@@ -141,34 +169,6 @@ true if the key was handled, false otherwise
 
 <hr>
 
-
-
-### function KeyModifier 
-
-_Constructor for_ [_**KeyModifier**_](classevab_1_1_key_modifier.md) _._
-```C++
-template<typename... Args>
-inline evab::KeyModifier::KeyModifier (
-    Args &&... args
-) 
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `args` Arguments forwarded to the base element constructor 
-
-
-
-
-        
-
-<hr>
-
 ------------------------------
-The documentation for this class was generated from the following file `src/evabBehavior.h`
+The documentation for this class was generated from the following file `src/evabReactions.h`
 

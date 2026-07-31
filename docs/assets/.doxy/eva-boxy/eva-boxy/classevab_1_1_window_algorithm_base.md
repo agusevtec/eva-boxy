@@ -53,11 +53,11 @@ Inherited by the following classes: [evab::FlipWindowAlgorithm](classevab_1_1_fl
 
 | Type | Name |
 | ---: | :--- |
-|  signed char | [**Count**](#function-count) () <br>_Gets the total number of items._  |
-| virtual void | [**Select**](#function-select) (signed char aIndex) = 0<br>_Pure virtual method to select an item._  |
-|  signed char | [**Selected**](#function-selected) () <br>_Gets the currently selected item index._  |
+|  unsigned char | [**Count**](#function-count) () <br>_Gets the total number of items._  |
+| virtual void | [**Select**](#function-select) (unsigned char aIndex) = 0<br>_Pure virtual method to select an item._  |
+|  signed short | [**Selected**](#function-selected) () <br>_Gets the currently selected item index._  |
 |   | [**WindowAlgorithmBase**](#function-windowalgorithmbase) () <br>_Constructor for window algorithm base._  |
-|  signed char | [**WindowSize**](#function-windowsize) () <br>_Gets the window size._  |
+|  unsigned char | [**WindowSize**](#function-windowsize) () <br>_Gets the window size._  |
 
 
 
@@ -70,10 +70,10 @@ Inherited by the following classes: [evab::FlipWindowAlgorithm](classevab_1_1_fl
 
 | Type | Name |
 | ---: | :--- |
-|  signed char | [**mCount**](#variable-mcount)  <br>_Total number of items._  |
-|  signed char | [**mSelected**](#variable-mselected)  <br>_Currently selected index._  |
-|  signed char | [**mWindowSize**](#variable-mwindowsize)  <br>_Window size._  |
-|  signed char | [**mWindowStart**](#variable-mwindowstart)  <br>_Start of the current window._  |
+|  unsigned char | [**mCount**](#variable-mcount)  <br>_Total number of items._  |
+|  unsigned char | [**mSelected**](#variable-mselected)  <br>_Currently selected index._  |
+|  unsigned char | [**mWindowSize**](#variable-mwindowsize)  <br>_Window size._  |
+|  unsigned char | [**mWindowStart**](#variable-mwindowstart)  <br>_Start of the current window._  |
 
 
 
@@ -94,9 +94,9 @@ Inherited by the following classes: [evab::FlipWindowAlgorithm](classevab_1_1_fl
 
 | Type | Name |
 | ---: | :--- |
-|  signed char | [**indexInWindow**](#function-indexinwindow) (signed char aPosition) <br>_Calculates the visual index of an item in the current window._  |
-|  void | [**resizeWindow**](#function-resizewindow) (signed char aWindowSize) <br>_Resizes the window._  |
-|  void | [**setCount**](#function-setcount) (signed char Count) <br>_Sets the total number of items._  |
+|  signed char | [**indexInWindow**](#function-indexinwindow) (unsigned char aPosition) <br>_Calculates the visual index of an item in the current window._  |
+|  void | [**resizeWindow**](#function-resizewindow) (unsigned char aWindowSize) <br>_Resizes the window._  |
+|  void | [**setCount**](#function-setcount) (unsigned char Count) <br>_Sets the total number of items._  |
 
 
 
@@ -117,7 +117,7 @@ Provides common functionality for list box navigation strategies.
 
 _Gets the total number of items._ 
 ```C++
-signed char evab::WindowAlgorithmBase::Count () 
+unsigned char evab::WindowAlgorithmBase::Count () 
 ```
 
 
@@ -143,7 +143,7 @@ Total number of items
 _Pure virtual method to select an item._ 
 ```C++
 virtual void evab::WindowAlgorithmBase::Select (
-    signed char aIndex
+    unsigned char aIndex
 ) = 0
 ```
 
@@ -169,7 +169,7 @@ virtual void evab::WindowAlgorithmBase::Select (
 
 _Gets the currently selected item index._ 
 ```C++
-signed char evab::WindowAlgorithmBase::Selected () 
+signed short evab::WindowAlgorithmBase::Selected () 
 ```
 
 
@@ -208,7 +208,7 @@ evab::WindowAlgorithmBase::WindowAlgorithmBase ()
 
 _Gets the window size._ 
 ```C++
-signed char evab::WindowAlgorithmBase::WindowSize () 
+unsigned char evab::WindowAlgorithmBase::WindowSize () 
 ```
 
 
@@ -235,7 +235,7 @@ Window size
 
 _Total number of items._ 
 ```C++
-signed char evab::WindowAlgorithmBase::mCount;
+unsigned char evab::WindowAlgorithmBase::mCount;
 ```
 
 
@@ -249,7 +249,7 @@ signed char evab::WindowAlgorithmBase::mCount;
 
 _Currently selected index._ 
 ```C++
-signed char evab::WindowAlgorithmBase::mSelected;
+unsigned char evab::WindowAlgorithmBase::mSelected;
 ```
 
 
@@ -263,7 +263,7 @@ signed char evab::WindowAlgorithmBase::mSelected;
 
 _Window size._ 
 ```C++
-signed char evab::WindowAlgorithmBase::mWindowSize;
+unsigned char evab::WindowAlgorithmBase::mWindowSize;
 ```
 
 
@@ -277,7 +277,7 @@ signed char evab::WindowAlgorithmBase::mWindowSize;
 
 _Start of the current window._ 
 ```C++
-signed char evab::WindowAlgorithmBase::mWindowStart;
+unsigned char evab::WindowAlgorithmBase::mWindowStart;
 ```
 
 
@@ -294,7 +294,7 @@ signed char evab::WindowAlgorithmBase::mWindowStart;
 _Calculates the visual index of an item in the current window._ 
 ```C++
 signed char evab::WindowAlgorithmBase::indexInWindow (
-    signed char aPosition
+    unsigned char aPosition
 ) 
 ```
 
@@ -328,7 +328,7 @@ Visual index, or -1 if not visible
 _Resizes the window._ 
 ```C++
 void evab::WindowAlgorithmBase::resizeWindow (
-    signed char aWindowSize
+    unsigned char aWindowSize
 ) 
 ```
 
@@ -355,7 +355,7 @@ void evab::WindowAlgorithmBase::resizeWindow (
 _Sets the total number of items._ 
 ```C++
 void evab::WindowAlgorithmBase::setCount (
-    signed char Count
+    unsigned char Count
 ) 
 ```
 

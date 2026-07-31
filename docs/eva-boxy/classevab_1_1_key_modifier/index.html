@@ -659,10 +659,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-key" class="md-nav__link">
+  <a href="#function-keymodifier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function Key
+        function KeyModifier
       
     </span>
   </a>
@@ -670,10 +670,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-keymodifier" class="md-nav__link">
+  <a href="#function-onkey" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function KeyModifier
+        function OnKey
       
     </span>
   </a>
@@ -710,7 +710,7 @@
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>KeyModifier</strong></a></p>
 <p><em>Decorator that modifies values using increment/decrement keys.</em> <a href="#detailed-description">More...</a></p>
 <ul>
-<li><code>#include &lt;evabBehavior.h&gt;</code></li>
+<li><code>#include &lt;evabReactions.h&gt;</code></li>
 </ul>
 <p>Inherits the following classes: T</p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
@@ -723,12 +723,12 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-key"><strong>Key</strong></a> (Keys aKey) override<br><em>Handles key events for increment/decrement.</em></td>
-</tr>
-<tr>
 <td style="text-align: right;"></td>
 <td style="text-align: left;"><a href="#function-keymodifier"><strong>KeyModifier</strong></a> (Args &amp;&amp;... args) <br><em>Constructor for</em> <a href="./"><em><strong>KeyModifier</strong></em></a> <em>.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="#function-onkey"><strong>OnKey</strong></a> (Keys aKey) override<br><em>Handles key events for increment/decrement.</em></td>
 </tr>
 </tbody>
 </table>
@@ -741,21 +741,6 @@
 <li><code>kInc</code> Key code for increment </li>
 </ul>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
-<h3 id="function-key">function Key<a class="headerlink" href="#function-key" title="Permanent link">&para;</a></h3>
-<p><em>Handles key events for increment/decrement.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">KeyModifier</span><span class="o">::</span><span class="n">Key</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span>
-<span class="p">)</span><span class="w"> </span><span class="k">override</span>
-</code></pre></div>
-
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>aKey</code> The key code to process </li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>true if the key was handled, false otherwise </p>
-<hr>
-
 <h3 id="function-keymodifier">function KeyModifier<a class="headerlink" href="#function-keymodifier" title="Permanent link">&para;</a></h3>
 <p><em>Constructor for</em> <a href="./"><em><strong>KeyModifier</strong></em></a> <em>.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
@@ -770,8 +755,23 @@
 </ul>
 <hr>
 
+<h3 id="function-onkey">function OnKey<a class="headerlink" href="#function-onkey" title="Permanent link">&para;</a></h3>
+<p><em>Handles key events for increment/decrement.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">KeyModifier</span><span class="o">::</span><span class="n">OnKey</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span>
+<span class="p">)</span><span class="w"> </span><span class="k">override</span>
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aKey</code> The key code to process </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>true if the key was handled, false otherwise </p>
+<hr>
+
 <hr />
-<p>The documentation for this class was generated from the following file <code>src/evabBehavior.h</code></p>
+<p>The documentation for this class was generated from the following file <code>src/evabReactions.h</code></p>
 
 
 

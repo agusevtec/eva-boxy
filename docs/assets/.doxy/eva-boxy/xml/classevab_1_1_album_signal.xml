@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_album_signal" kind="class" language="C++" prot="public">
+    <compoundname>evab::AlbumSignal</compoundname>
+    <includes refid="evab_albums_8h" local="no">evabAlbums.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classevab_1_1_album_signal_1a17309e3f69eca3b84598c3050cbd8a8f" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::AlbumSignal::Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <qualifiedname>evab::AlbumSignal::Count</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+<para>Number of pictograms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabAlbums.h" line="130" column="40" bodyfile="src/evabAlbums.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_album_signal_1ac03654155e8fa5f80b04e240c601d62d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::AlbumSignal::GetTile</definition>
+        <argsstring>(unsigned char aIndex)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::AlbumSignal::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIndex</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram by index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index (0-3) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabAlbums.h" line="129" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Signal pictogram set (4 states). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabAlbums.h" line="120" column="5" bodyfile="src/evabAlbums.h" bodystart="121" bodyend="131"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_album_signal_1a17309e3f69eca3b84598c3050cbd8a8f" prot="public" virt="non-virtual"><scope>evab::AlbumSignal</scope><name>Count</name></member>
+      <member refid="classevab_1_1_album_signal_1ac03654155e8fa5f80b04e240c601d62d" prot="public" virt="non-virtual"><scope>evab::AlbumSignal</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

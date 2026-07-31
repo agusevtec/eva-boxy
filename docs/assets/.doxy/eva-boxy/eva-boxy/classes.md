@@ -2,6 +2,36 @@
 # Class Index
 
 
+## a
+
+* [**AlbumBattery**](classevab_1_1_album_battery.md)
+([**evab**](namespaceevab.md))
+* [**AlbumFan**](classevab_1_1_album_fan.md)
+([**evab**](namespaceevab.md))
+* [**AlbumLamp**](classevab_1_1_album_lamp.md)
+([**evab**](namespaceevab.md))
+* [**AlbumOnOff**](classevab_1_1_album_on_off.md)
+([**evab**](namespaceevab.md))
+* [**AlbumProgress**](classevab_1_1_album_progress.md)
+([**evab**](namespaceevab.md))
+* [**AlbumRainbowmeter**](classevab_1_1_album_rainbowmeter.md)
+([**evab**](namespaceevab.md))
+* [**AlbumRoundmeter**](classevab_1_1_album_roundmeter.md)
+([**evab**](namespaceevab.md))
+* [**AlbumSignal**](classevab_1_1_album_signal.md)
+([**evab**](namespaceevab.md))
+* [**AlbumSpeaker**](classevab_1_1_album_speaker.md)
+([**evab**](namespaceevab.md))
+* [**AlbumStretchyHorizontalProgressBar**](classevab_1_1_album_stretchy_horizontal_progress_bar.md)
+([**evab**](namespaceevab.md))
+* [**AlbumStretchyHorizontalScrollBar**](classevab_1_1_album_stretchy_horizontal_scroll_bar.md)
+([**evab**](namespaceevab.md))
+* [**AlbumStretchyVerticalProgressBar**](classevab_1_1_album_stretchy_vertical_progress_bar.md)
+([**evab**](namespaceevab.md))
+* [**AlbumStretchyVerticalScrollBar**](classevab_1_1_album_stretchy_vertical_scroll_bar.md)
+([**evab**](namespaceevab.md))
+
+
 ## b
 
 * [**Boxy**](classevab_1_1_boxy.md)
@@ -53,7 +83,7 @@
 
 ## h
 
-* [**HorizontalPictoPolicy**](structevab_1_1_horizontal_picto_policy.md)
+* [**HorizontalAlbumPolicy**](structevab_1_1_horizontal_album_policy.md)
 ([**evab**](namespaceevab.md))
 * [**HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md)
 ([**evab**](namespaceevab.md))
@@ -73,9 +103,13 @@
 ([**evab**](namespaceevab.md))
 * [**InputFloat**](classevab_1_1_input_float.md)
 ([**evab**](namespaceevab.md))
+* [**InputFloatDiscrete**](classevab_1_1_input_float_discrete.md)
+([**evab**](namespaceevab.md))
 * [**InputInt**](classevab_1_1_input_int.md)
 ([**evab**](namespaceevab.md))
-* [**InputSelectorPicto**](classevab_1_1_input_selector_picto.md)
+* [**InputIntDiscrete**](classevab_1_1_input_int_discrete.md)
+([**evab**](namespaceevab.md))
+* [**InputSelectorAlbum**](classevab_1_1_input_selector_album.md)
 ([**evab**](namespaceevab.md))
 * [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)
 ([**evab**](namespaceevab.md))
@@ -107,31 +141,7 @@
 
 ## p
 
-* [**AlbumBattery**](classevab_1_1_pictoset_battery.md)
-([**evab**](namespaceevab.md))
-* [**AlbumFan**](classevab_1_1_pictoset_fan.md)
-([**evab**](namespaceevab.md))
-* [**AlbumHorizontalProgressBar**](classevab_1_1_pictoset_horizontal_progress_bar.md)
-([**evab**](namespaceevab.md))
-* [**AlbumHorizontalScrollBar**](classevab_1_1_pictoset_horizontal_scroll_bar.md)
-([**evab**](namespaceevab.md))
-* [**AlbumLamp**](classevab_1_1_pictoset_lamp.md)
-([**evab**](namespaceevab.md))
-* [**AlbumOnOff**](classevab_1_1_pictoset_on_off.md)
-([**evab**](namespaceevab.md))
-* [**AlbumProgress**](classevab_1_1_pictoset_progress.md)
-([**evab**](namespaceevab.md))
-* [**AlbumRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md)
-([**evab**](namespaceevab.md))
-* [**AlbumRoundmeter**](classevab_1_1_pictoset_roundmeter.md)
-([**evab**](namespaceevab.md))
-* [**AlbumSignal**](classevab_1_1_pictoset_signal.md)
-([**evab**](namespaceevab.md))
-* [**AlbumSpeaker**](classevab_1_1_pictoset_speaker.md)
-([**evab**](namespaceevab.md))
-* [**AlbumVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md)
-([**evab**](namespaceevab.md))
-* [**AlbumVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md)
+* [**Percent**](classevab_1_1_percent.md)
 ([**evab**](namespaceevab.md))
 
 
@@ -183,7 +193,7 @@
 
 ## v
 
-* [**VerticalPictoPolicy**](structevab_1_1_vertical_picto_policy.md)
+* [**VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md)
 ([**evab**](namespaceevab.md))
 * [**VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md)
 ([**evab**](namespaceevab.md))

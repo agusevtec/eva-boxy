@@ -6,16 +6,16 @@
     <includes refid="evab_input_stretch_bar_8h" local="no">evabInputStretchBar.h</includes>
     <templateparamlist>
       <param>
-        <type>typename TAlbum</type>
+        <type>typename TAlbumStretchy</type>
       </param>
       <param>
-        <type>typename OrientationPictoPolicy</type>
+        <type>typename OrientationAlbumPolicy</type>
       </param>
     </templateparamlist>
     <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a8ec383cde9c12b4a0ce9d5861f5773d9" prot="private" static="yes" constexpr="yes" mutable="no">
+      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1aeb3f8de26e17c370fbf604c7d2c9a29c" prot="private" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::START_BLOCK</definition>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::START_BLOCK</definition>
         <argsstring></argsstring>
         <name>START_BLOCK</name>
         <qualifiedname>evab::InputStretchBar::START_BLOCK</qualifiedname>
@@ -27,11 +27,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="190" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="190" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="205" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="205" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1afa6deeec50f3270d36f85cd935eb0883" prot="private" static="yes" constexpr="yes" mutable="no">
+      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1aba9c9173c4420833ee720b5b771cca19" prot="private" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::MIDDLE_BLOCK</definition>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::MIDDLE_BLOCK</definition>
         <argsstring></argsstring>
         <name>MIDDLE_BLOCK</name>
         <qualifiedname>evab::InputStretchBar::MIDDLE_BLOCK</qualifiedname>
@@ -43,11 +43,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="191" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="191" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="206" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="206" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a6dffa09542b5dc9251508e23901d4ef5" prot="private" static="yes" constexpr="yes" mutable="no">
+      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a8ffc6a3f1670e0397cd45d191b166511" prot="private" static="yes" constexpr="yes" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::END_BLOCK</definition>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::END_BLOCK</definition>
         <argsstring></argsstring>
         <name>END_BLOCK</name>
         <qualifiedname>evab::InputStretchBar::END_BLOCK</qualifiedname>
@@ -59,36 +59,56 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="192" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="192" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="207" column="40" bodyfile="src/evabInputStretchBar.h" bodystart="207" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a71a60e8a5638d2165b56bd5948d250d8" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1ac58afbd3d079bb09ec272397f7792e17" prot="private" static="no" mutable="no">
         <type>unsigned char</type>
-        <definition>unsigned char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::mValue</definition>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::mPercent</definition>
         <argsstring></argsstring>
-        <name>mValue</name>
-        <qualifiedname>evab::InputStretchBar::mValue</qualifiedname>
+        <name>mPercent</name>
+        <qualifiedname>evab::InputStretchBar::mPercent</qualifiedname>
         <briefdescription>
-<para>Current value (0-100). </para>
+<para>Current percent value (0-100). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="194" column="23" bodyfile="src/evabInputStretchBar.h" bodystart="194" bodyend="-1"/>
+        <location file="src/evabInputStretchBar.h" line="209" column="23" bodyfile="src/evabInputStretchBar.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_input_stretch_bar_1a418bacd679a4864cec8e3bca403b974c" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::mStep</definition>
+        <argsstring></argsstring>
+        <name>mStep</name>
+        <qualifiedname>evab::InputStretchBar::mStep</qualifiedname>
+        <briefdescription>
+<para>Increment step (0 = auto-calculate). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputStretchBar.h" line="210" column="23" bodyfile="src/evabInputStretchBar.h" bodystart="210" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a1f434f3c6cf9ffd4ba3710b148468161" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a2f309ed70d62e118c9d902f0663ed97f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::InputStretchBar</definition>
-        <argsstring>(unsigned char aValue=0)</argsstring>
+        <definition>evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::InputStretchBar</definition>
+        <argsstring>(unsigned char aValue=0, unsigned char aStep=0)</argsstring>
         <name>InputStretchBar</name>
         <qualifiedname>evab::InputStretchBar::InputStretchBar</qualifiedname>
         <param>
           <type>unsigned char</type>
           <declname>aValue</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aStep</declname>
           <defval>0</defval>
         </param>
         <briefdescription>
@@ -100,7 +120,15 @@
 <parametername>aValue</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Initial value (0-100) </para>
+<para>Initial percent value (0-100) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aStep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Increment step (0 = auto-calculate from resolution) </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -108,17 +136,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="109" column="9" bodyfile="src/evabInputStretchBar.h" bodystart="109" bodyend="112"/>
+        <location file="src/evabInputStretchBar.h" line="110" column="9" bodyfile="src/evabInputStretchBar.h" bodystart="110" bodyend="113"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1abaf2f42b98b6db67987057235a48add5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1ae9df1586ba9bbb5adaf60da80a4367a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::SetValue</definition>
-        <argsstring>(unsigned char aValue)</argsstring>
-        <name>SetValue</name>
-        <qualifiedname>evab::InputStretchBar::SetValue</qualifiedname>
+        <definition>void evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::SetPercent</definition>
+        <argsstring>(unsigned char aPercent)</argsstring>
+        <name>SetPercent</name>
+        <qualifiedname>evab::InputStretchBar::SetPercent</qualifiedname>
         <param>
           <type>unsigned char</type>
-          <declname>aValue</declname>
+          <declname>aPercent</declname>
         </param>
         <briefdescription>
 <para>Sets the value and redraws. </para>
@@ -126,7 +154,7 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>aValue</parametername>
+<parametername>aPercent</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>New value (0-100) </para>
@@ -137,11 +165,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="119" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="119" bodyend="123"/>
+        <location file="src/evabInputStretchBar.h" line="120" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="120" bodyend="127"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1aeafd457320264f3957405e427f9343cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a33298ab06ab12d2237c92a4d8011aa1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::GetPercent</definition>
+        <argsstring>()</argsstring>
+        <name>GetPercent</name>
+        <qualifiedname>evab::InputStretchBar::GetPercent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputStretchBar.h" line="129" column="23" bodyfile="src/evabInputStretchBar.h" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1ae21c3f8ea7c422a68d7220f66c6db180" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::Increment</definition>
+        <definition>void evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::Increment</definition>
         <argsstring>(signed char delta)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputStretchBar::Increment</qualifiedname>
@@ -166,13 +208,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="130" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="130" bodyend="133"/>
+        <location file="src/evabInputStretchBar.h" line="139" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="139" bodyend="142"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a30ea75aabbe86745bfebde137f344c94" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
-        <definition>void evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::drawer</definition>
+        <definition>void evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::drawer</definition>
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::InputStretchBar::drawer</qualifiedname>
@@ -234,13 +276,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="144" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="144" bodyend="170"/>
+        <location file="src/evabInputStretchBar.h" line="153" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="153" bodyend="185"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
-      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1ab78fe73ecfbd69f8ef3f38604680e054" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_stretch_bar_1a076eb41561f48ea5bbd125d9c55348b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char</type>
-        <definition>char evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;::blockFill</definition>
+        <definition>char evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;::blockFill</definition>
         <argsstring>(unsigned char blockNumber, unsigned short normalizedValue)</argsstring>
         <name>blockFill</name>
         <qualifiedname>evab::InputStretchBar::blockFill</qualifiedname>
@@ -279,25 +321,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputStretchBar.h" line="180" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="180" bodyend="187"/>
+        <location file="src/evabInputStretchBar.h" line="195" column="14" bodyfile="src/evabInputStretchBar.h" bodystart="195" bodyend="202"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Stretch bar input element with pictogram support. </para>
+<para>Stretch bar input element with Albumgram support. </para>
     </briefdescription>
     <detaileddescription>
-<para>Displays a progress/scroll bar using pictograms with variable fill levels.</para>
+<para>Displays a progress/scroll bar using Albumgrams with variable fill levels.</para>
 <para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
-<parametername>TAlbum</parametername>
+<parametername>TAlbumStretchy</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Album class providing pictogram data </para>
+<para>Album class providing Albumgram data </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>OrientationPictoPolicy</parametername>
+<parametername>OrientationAlbumPolicy</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Policy for orientation (vertical/horizontal) </para>
@@ -312,7 +354,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
@@ -324,29 +366,31 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="1">
-        <label>evab::InputStretchBar&lt; TAlbum, OrientationPictoPolicy &gt;</label>
+        <label>evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;</label>
         <link refid="classevab_1_1_input_stretch_bar"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputStretchBar.h" line="101" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="102" bodyend="195"/>
+    <location file="src/evabInputStretchBar.h" line="101" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="102" bodyend="211"/>
     <listofallmembers>
-      <member refid="classevab_1_1_input_stretch_bar_1ab78fe73ecfbd69f8ef3f38604680e054" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>blockFill</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1a076eb41561f48ea5bbd125d9c55348b6" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>blockFill</name></member>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Draw</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1a1ad0be4ca01a7692c44b7f1f7a8eedb6" prot="protected" virt="virtual"><scope>evab::InputStretchBar</scope><name>drawer</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1a6dffa09542b5dc9251508e23901d4ef5" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>END_BLOCK</name></member>
-      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Hide</name></member>
-      <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="protected" virt="virtual"><scope>evab::InputStretchBar</scope><name>hider</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1aeafd457320264f3957405e427f9343cb" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Increment</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1a1f434f3c6cf9ffd4ba3710b148468161" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>InputStretchBar</name></member>
-      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>IsHidden</name></member>
-      <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::InputStretchBar</scope><name>Key</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1afa6deeec50f3270d36f85cd935eb0883" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>MIDDLE_BLOCK</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1a71a60e8a5638d2165b56bd5948d250d8" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>mValue</name></member>
-      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Redraw</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1abaf2f42b98b6db67987057235a48add5" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>SetValue</name></member>
-      <member refid="classevab_1_1_input_stretch_bar_1a8ec383cde9c12b4a0ce9d5861f5773d9" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>START_BLOCK</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1a30ea75aabbe86745bfebde137f344c94" prot="protected" virt="virtual"><scope>evab::InputStretchBar</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1a8ffc6a3f1670e0397cd45d191b166511" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>END_BLOCK</name></member>
+      <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Freeze</name></member>
+      <member refid="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124" prot="protected" virt="virtual"><scope>evab::InputStretchBar</scope><name>freezer</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1a33298ab06ab12d2237c92a4d8011aa1b" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>GetPercent</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1ae21c3f8ea7c422a68d7220f66c6db180" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1a2f309ed70d62e118c9d902f0663ed97f" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>InputStretchBar</name></member>
+      <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>isFrozen</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1aba9c9173c4420833ee720b5b771cca19" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>MIDDLE_BLOCK</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1ac58afbd3d079bb09ec272397f7792e17" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>mPercent</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1a418bacd679a4864cec8e3bca403b974c" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>mStep</name></member>
+      <member refid="classevab_1_1_element_base_1ad088e430fee933d67248ea9242e8ddf7" prot="public" virt="virtual"><scope>evab::InputStretchBar</scope><name>OnKey</name></member>
+      <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>redraw</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1ae9df1586ba9bbb5adaf60da80a4367a8" prot="public" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>SetPercent</name></member>
+      <member refid="classevab_1_1_input_stretch_bar_1aeb3f8de26e17c370fbf604c7d2c9a29c" prot="private" virt="non-virtual"><scope>evab::InputStretchBar</scope><name>START_BLOCK</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

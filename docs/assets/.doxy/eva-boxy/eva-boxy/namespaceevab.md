@@ -36,6 +36,19 @@
 
 | Type | Name |
 | ---: | :--- |
+| class | [**AlbumBattery**](classevab_1_1_album_battery.md) <br>_Battery pictogram set (7 states)._  |
+| class | [**AlbumFan**](classevab_1_1_album_fan.md) <br>_Fan pictogram set (3 states)._  |
+| class | [**AlbumLamp**](classevab_1_1_album_lamp.md) <br>_Lamp pictogram set (6 states)._  |
+| class | [**AlbumOnOff**](classevab_1_1_album_on_off.md) <br>_On/Off pictogram set (2 states)._  |
+| class | [**AlbumProgress**](classevab_1_1_album_progress.md) <br>_Progress pictogram set (9 states)._  |
+| class | [**AlbumRainbowmeter**](classevab_1_1_album_rainbowmeter.md) <br>_Rainbowmeter pictogram set (7 states)._  |
+| class | [**AlbumRoundmeter**](classevab_1_1_album_roundmeter.md) <br> |
+| class | [**AlbumSignal**](classevab_1_1_album_signal.md) <br>_Signal pictogram set (4 states)._  |
+| class | [**AlbumSpeaker**](classevab_1_1_album_speaker.md) <br>_Speaker pictogram set (4 states)._  |
+| class | [**AlbumStretchyHorizontalProgressBar**](classevab_1_1_album_stretchy_horizontal_progress_bar.md) <br>_Horizontal progress bar pictogram set._  |
+| class | [**AlbumStretchyHorizontalScrollBar**](classevab_1_1_album_stretchy_horizontal_scroll_bar.md) <br>_Horizontal scroll bar pictogram set._  |
+| class | [**AlbumStretchyVerticalProgressBar**](classevab_1_1_album_stretchy_vertical_progress_bar.md) <br>_Vertical progress bar pictogram set._  |
+| class | [**AlbumStretchyVerticalScrollBar**](classevab_1_1_album_stretchy_vertical_scroll_bar.md) <br>_Vertical scroll bar pictogram set._  |
 | class | [**Boxy**](classevab_1_1_boxy.md) <br>_Main application controller managing screen, input, and modal overlays._  |
 | struct | [**CenterAlign**](structevab_1_1_center_align.md) <br> |
 | struct | [**CharsetHorizontalProgressBar**](structevab_1_1_charset_horizontal_progress_bar.md) <br>_Character set for horizontal progress bar._  |
@@ -50,17 +63,19 @@
 | class | [**Font8Compact**](classevab_1_1_font8_compact.md) <br>_8x8 compact font implementation_  |
 | class | [**Font8Narrow**](classevab_1_1_font8_narrow.md) <br>_8x8 thin font implementation_  |
 | class | [**Grid**](classevab_1_1_grid.md) <br>_Layout manager for grid-based UI arrangement._  |
-| struct | [**HorizontalPictoPolicy**](structevab_1_1_horizontal_picto_policy.md) <br>_Policy for horizontal orientation of stretch bars._  |
+| struct | [**HorizontalAlbumPolicy**](structevab_1_1_horizontal_album_policy.md) <br>_Policy for horizontal orientation of stretch bars._  |
 | struct | [**HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md) <br>_Policy for horizontal text-based stretch bars._  |
 | class | [**IFocusChain**](classevab_1_1_i_focus_chain.md) <br> |
 | class | [**IFont**](classevab_1_1_i_font.md) <br>_Abstract interface for font providers._  |
 | class | [**InputAnimation**](classevab_1_1_input_animation.md) &lt;class TAlbum, tMaxSpeed&gt;<br>_Animation input element with configurable speed._  |
 | class | [**InputButton**](classevab_1_1_input_button.md) <br>_Button input element._  |
 | class | [**InputButtonPicto**](classevab_1_1_input_button_picto.md) <br>_Pictogram button element._  |
-| class | [**InputFloat**](classevab_1_1_input_float.md) <br>_Floating-point input element._  |
+| class | [**InputFloat**](classevab_1_1_input_float.md) <br>_Float input element._  |
+| class | [**InputFloatDiscrete**](classevab_1_1_input_float_discrete.md) <br>_Discrete float input element._  |
 | class | [**InputInt**](classevab_1_1_input_int.md) <br>_Integer input element._  |
-| class | [**InputSelectorPicto**](classevab_1_1_input_selector_picto.md) &lt;class TAlbum&gt;<br>_Pictogram-based input element._  |
-| class | [**InputStretchBar**](classevab_1_1_input_stretch_bar.md) &lt;typename TAlbum, typename OrientationPictoPolicy&gt;<br>_Stretch bar input element with pictogram support._  |
+| class | [**InputIntDiscrete**](classevab_1_1_input_int_discrete.md) <br> |
+| class | [**InputSelectorAlbum**](classevab_1_1_input_selector_album.md) &lt;class TAlbum&gt;<br>_Pictogram-based input element._  |
+| class | [**InputStretchBar**](classevab_1_1_input_stretch_bar.md) &lt;typename TAlbumStretchy, typename OrientationAlbumPolicy&gt;<br>_Stretch bar input element with Albumgram support._  |
 | class | [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) &lt;typename TAlbum, typename OrientationTextPolicy&gt;<br>_Text-based stretch bar element._  |
 | class | [**KeyCatcher**](classevab_1_1_key_catcher.md) &lt;class T, KEYS&gt;<br>_Decorator that catches specified key events and forwards them to a listener._  |
 | class | [**KeyModifier**](classevab_1_1_key_modifier.md) &lt;class T, kDec, kInc&gt;<br>_Decorator that modifies values using increment/decrement keys._  |
@@ -69,19 +84,7 @@
 | class | [**LayoutBase**](classevab_1_1_layout_base.md) <br>_Abstract base class for composite elements with circular focus chain._  |
 | struct | [**LeftAlign**](structevab_1_1_left_align.md) <br> |
 | class | [**ListBox**](classevab_1_1_list_box.md) &lt;class TWindowAlgorithm&gt;<br>_List box element with configurable windowing algorithm._  |
-| class | [**AlbumBattery**](classevab_1_1_pictoset_battery.md) <br>_Battery pictogram set (7 states)._  |
-| class | [**AlbumFan**](classevab_1_1_pictoset_fan.md) <br>_Fan pictogram set (3 states)._  |
-| class | [**AlbumHorizontalProgressBar**](classevab_1_1_pictoset_horizontal_progress_bar.md) <br>_Horizontal progress bar pictogram set._  |
-| class | [**AlbumHorizontalScrollBar**](classevab_1_1_pictoset_horizontal_scroll_bar.md) <br>_Horizontal scroll bar pictogram set._  |
-| class | [**AlbumLamp**](classevab_1_1_pictoset_lamp.md) <br>_Lamp pictogram set (6 states)._  |
-| class | [**AlbumOnOff**](classevab_1_1_pictoset_on_off.md) <br>_On/Off pictogram set (2 states)._  |
-| class | [**AlbumProgress**](classevab_1_1_pictoset_progress.md) <br>_Progress pictogram set (9 states)._  |
-| class | [**AlbumRainbowmeter**](classevab_1_1_pictoset_rainbowmeter.md) <br>_Rainbowmeter pictogram set (7 states)._  |
-| class | [**AlbumRoundmeter**](classevab_1_1_pictoset_roundmeter.md) <br> |
-| class | [**AlbumSignal**](classevab_1_1_pictoset_signal.md) <br>_Signal pictogram set (4 states)._  |
-| class | [**AlbumSpeaker**](classevab_1_1_pictoset_speaker.md) <br>_Speaker pictogram set (4 states)._  |
-| class | [**AlbumVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md) <br>_Vertical progress bar pictogram set._  |
-| class | [**AlbumVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md) <br>_Vertical scroll bar pictogram set._  |
+| class | [**Percent**](classevab_1_1_percent.md) &lt;typename TElement, kStep&gt;<br>[_**Percent**_](classevab_1_1_percent.md) _modifier for discrete inputs._ |
 | struct | [**RightAlign**](structevab_1_1_right_align.md) <br> |
 | class | [**Screen**](classevab_1_1_screen.md) <br>_Base class for screen implementations._  |
 | class | [**ScreenKS0108**](classevab_1_1_screen_k_s0108.md) <br>_KS0108-based GLCD screen driver._  |
@@ -99,7 +102,7 @@
 | struct | [**TextTraits&lt; char \* &gt;**](structevab_1_1_text_traits_3_01char_01_5_01_4.md) &lt;&gt;<br> |
 | struct | [**TextTraits&lt; const \_\_FlashStringHelper \* &gt;**](structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4.md) &lt;&gt;<br>_Traits for Flash string (\_\_FlashStringHelper\*)._  |
 | struct | [**TextTraits&lt; const char \* &gt;**](structevab_1_1_text_traits_3_01const_01char_01_5_01_4.md) &lt;&gt;<br> |
-| struct | [**VerticalPictoPolicy**](structevab_1_1_vertical_picto_policy.md) <br>_Policy for vertical orientation of stretch bars._  |
+| struct | [**VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) <br>_Policy for vertical orientation of stretch bars._  |
 | struct | [**VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) <br>_Policy for vertical text-based stretch bars._  |
 | class | [**WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md) <br>_Abstract base class for window navigation algorithms._  |
 
@@ -109,8 +112,8 @@
 | Type | Name |
 | ---: | :--- |
 | typedef [**ListBox**](classevab_1_1_list_box.md)&lt; [**FlipWindowAlgorithm**](classevab_1_1_flip_window_algorithm.md) &gt; | [**FlipListbox**](#typedef-fliplistbox)  <br>_Flip-based list box._  |
-| typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumHorizontalProgressBar**](classevab_1_1_pictoset_horizontal_progress_bar.md), [**HorizontalPictoPolicy**](structevab_1_1_horizontal_picto_policy.md) &gt; | [**HorizontalProgressBar**](#typedef-horizontalprogressbar)  <br> |
-| typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumHorizontalScrollBar**](classevab_1_1_pictoset_horizontal_scroll_bar.md), [**HorizontalPictoPolicy**](structevab_1_1_horizontal_picto_policy.md) &gt; | [**HorizontalScrollBar**](#typedef-horizontalscrollbar)  <br> |
+| typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumStretchyHorizontalProgressBar**](classevab_1_1_album_stretchy_horizontal_progress_bar.md), [**HorizontalAlbumPolicy**](structevab_1_1_horizontal_album_policy.md) &gt; | [**HorizontalProgressBar**](#typedef-horizontalprogressbar)  <br> |
+| typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumStretchyHorizontalScrollBar**](classevab_1_1_album_stretchy_horizontal_scroll_bar.md), [**HorizontalAlbumPolicy**](structevab_1_1_horizontal_album_policy.md) &gt; | [**HorizontalScrollBar**](#typedef-horizontalscrollbar)  <br> |
 | typedef [**Labeled**](classevab_1_1_labeled.md)&lt; T, [**CenterAlign**](structevab_1_1_center_align.md), const char \* &gt; | [**LabeledCenter**](#typedef-labeledcenter)  <br> |
 | typedef [**Labeled**](classevab_1_1_labeled.md)&lt; T, [**CenterAlign**](structevab_1_1_center_align.md), const \_\_FlashStringHelper \* &gt; | [**LabeledCenterF**](#typedef-labeledcenterf)  <br> |
 | typedef [**Labeled**](classevab_1_1_labeled.md)&lt; T, [**LeftAlign**](structevab_1_1_left_align.md), const char \* &gt; | [**LabeledLeft**](#typedef-labeledleft)  <br> |
@@ -131,8 +134,8 @@
 | typedef [**TextLabel**](classevab_1_1_text_label.md)&lt; const \_\_FlashStringHelper \*, [**RightAlign**](structevab_1_1_right_align.md) &gt; | [**TextLabelRightF**](#typedef-textlabelrightf)  <br> |
 | typedef [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md)&lt; [**CharsetVerticalProgressBar**](structevab_1_1_charset_vertical_progress_bar.md), [**VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) &gt; | [**TextVerticalProgressBar**](#typedef-textverticalprogressbar)  <br> |
 | typedef [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md)&lt; [**CharsetVerticalScrollBar**](structevab_1_1_charset_vertical_scroll_bar.md), [**VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) &gt; | [**TextVerticalScrollBar**](#typedef-textverticalscrollbar)  <br> |
-| typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumVerticalProgressBar**](classevab_1_1_pictoset_vertical_progress_bar.md), [**VerticalPictoPolicy**](structevab_1_1_vertical_picto_policy.md) &gt; | [**VerticalProgressBar**](#typedef-verticalprogressbar)  <br> |
-| typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumVerticalScrollBar**](classevab_1_1_pictoset_vertical_scroll_bar.md), [**VerticalPictoPolicy**](structevab_1_1_vertical_picto_policy.md) &gt; | [**VerticalScrollBar**](#typedef-verticalscrollbar)  <br> |
+| typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumStretchyVerticalProgressBar**](classevab_1_1_album_stretchy_vertical_progress_bar.md), [**VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) &gt; | [**VerticalProgressBar**](#typedef-verticalprogressbar)  <br> |
+| typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumStretchyVerticalScrollBar**](classevab_1_1_album_stretchy_vertical_scroll_bar.md), [**VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) &gt; | [**VerticalScrollBar**](#typedef-verticalscrollbar)  <br> |
 
 
 
@@ -211,7 +214,7 @@ using evab::FlipListbox = ListBox<FlipWindowAlgorithm>;
 ### typedef HorizontalProgressBar 
 
 ```C++
-using evab::HorizontalProgressBar = InputStretchBar<AlbumHorizontalProgressBar, HorizontalPictoPolicy>;
+using evab::HorizontalProgressBar = InputStretchBar<AlbumStretchyHorizontalProgressBar, HorizontalAlbumPolicy>;
 ```
 
 
@@ -224,7 +227,7 @@ using evab::HorizontalProgressBar = InputStretchBar<AlbumHorizontalProgressBar, 
 ### typedef HorizontalScrollBar 
 
 ```C++
-using evab::HorizontalScrollBar = InputStretchBar<AlbumHorizontalScrollBar, HorizontalPictoPolicy>;
+using evab::HorizontalScrollBar = InputStretchBar<AlbumStretchyHorizontalScrollBar, HorizontalAlbumPolicy>;
 ```
 
 
@@ -498,7 +501,7 @@ using evab::TextVerticalScrollBar = InputTextStretchBar<CharsetVerticalScrollBar
 ### typedef VerticalProgressBar 
 
 ```C++
-using evab::VerticalProgressBar = InputStretchBar<AlbumVerticalProgressBar, VerticalPictoPolicy>;
+using evab::VerticalProgressBar = InputStretchBar<AlbumStretchyVerticalProgressBar, VerticalAlbumPolicy>;
 ```
 
 
@@ -511,7 +514,7 @@ using evab::VerticalProgressBar = InputStretchBar<AlbumVerticalProgressBar, Vert
 ### typedef VerticalScrollBar 
 
 ```C++
-using evab::VerticalScrollBar = InputStretchBar<AlbumVerticalScrollBar, VerticalPictoPolicy>;
+using evab::VerticalScrollBar = InputStretchBar<AlbumStretchyVerticalScrollBar, VerticalAlbumPolicy>;
 ```
 
 
@@ -664,5 +667,5 @@ unsigned short Serialized state
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabBehavior.h`
+The documentation for this class was generated from the following file `src/evabAlbums.h`
 

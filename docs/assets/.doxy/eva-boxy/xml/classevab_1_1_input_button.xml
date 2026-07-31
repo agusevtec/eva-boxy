@@ -154,13 +154,13 @@
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>Draw</name></member>
       <member refid="classevab_1_1_input_button_1a72049ea923d87d45709d24d4c256e9ce" prot="protected" virt="virtual"><scope>evab::InputButton</scope><name>drawer</name></member>
-      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>Hide</name></member>
-      <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="protected" virt="virtual"><scope>evab::InputButton</scope><name>hider</name></member>
+      <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>Freeze</name></member>
+      <member refid="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124" prot="protected" virt="virtual"><scope>evab::InputButton</scope><name>freezer</name></member>
       <member refid="classevab_1_1_input_button_1a05c6d004438a14a2da6501a3f4a065c2" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>InputButton</name></member>
-      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>IsHidden</name></member>
-      <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::InputButton</scope><name>Key</name></member>
+      <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::InputButton</scope><name>isFrozen</name></member>
       <member refid="classevab_1_1_input_button_1a4aae7083737250daac9307caf8bf242a" prot="private" virt="non-virtual"><scope>evab::InputButton</scope><name>mName</name></member>
-      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::InputButton</scope><name>Redraw</name></member>
+      <member refid="classevab_1_1_element_base_1ad088e430fee933d67248ea9242e8ddf7" prot="public" virt="virtual"><scope>evab::InputButton</scope><name>OnKey</name></member>
+      <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::InputButton</scope><name>redraw</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

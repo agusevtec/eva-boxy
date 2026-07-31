@@ -36,29 +36,29 @@ namespace evab
             // Tickable destructor handles removal from list
         }
 
-        void SetValue(unsigned char aValue)
+        void Select(unsigned char aValue)
         {
-            mValue = constrain(aValue, 0, tMaxSpeed);
+            aValue = constrain(aValue, 0, tMaxSpeed); 
+            if (mValue == aValue)
+                return;
+            mValue = aValue;
+
+            redraw();
         }
 
-        unsigned char GetValue() const
+        unsigned char Selected() const
         {
             return mValue;
         }
 
-        unsigned char GetValuePercent() const
-        {
-            return map(mValue, 0, tMaxSpeed, 0, 100);
-        }
-
-        void SetValuePercent(unsigned char aValue)
-        {
-            SetValue(map(constrain(aValue, 0, 100), 0, 100, 0, tMaxSpeed));
-        }
-
         void Increment(signed char delta)
         {
-            SetValue(mValue + delta);
+            Select(mValue + delta);
+        }
+
+        unsigned char Count() const
+        {
+            return tMaxSpeed + 1; // 0..tMaxSpeed → tMaxSpeed+1 позиций
         }
 
     protected:
@@ -73,7 +73,7 @@ namespace evab
             aScreen->Picto(aPos, TAlbum::GetTile(mCurrentFrame), aIsFocused);
         }
 
-        void hider() override
+        void freezer() override
         {
             mLastFrameTime = 0;
         }
@@ -91,7 +91,7 @@ namespace evab
             {
                 mLastFrameTime = now;
                 mCurrentFrame = (mCurrentFrame + 1) % TAlbum::Count;
-                Redraw();
+                redraw();
             }
         }
 

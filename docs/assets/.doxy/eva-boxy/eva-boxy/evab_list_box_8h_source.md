@@ -29,21 +29,21 @@ namespace evab
       TWindowAlgorithm::setCount(aCount);
       if (aCount)
         Select(0);
-      Redraw();
+      redraw();
       return *this;
     }
 
     ListBox<TWindowAlgorithm> &SetItemHeight(unsigned char aItemHeight)
     {
       mItemHeight = aItemHeight;
-      Redraw();
+      redraw();
       return *this;
     }
 
     void Select(unsigned char aIndex) override
     {
       TWindowAlgorithm::Select(aIndex);
-      Redraw();
+      redraw();
     }
 
     ElementBase *GetItem(unsigned char aIndex)
@@ -58,7 +58,7 @@ namespace evab
       Select(Selected() + delta);
     }
 
-    bool Key(Keys aKey) override
+    bool OnKey(Keys aKey) override
     {
       if (!mItems)
         return false;
@@ -71,7 +71,7 @@ namespace evab
       if (!item)
         return false;
 
-      return item->Key(aKey);
+      return item->OnKey(aKey);
     }
 
   protected:
@@ -80,7 +80,7 @@ namespace evab
       TWindowAlgorithm::resizeWindow(aSize.Y / mItemHeight);
       unsigned char visibleElementsCount = 0;
       signed char selected = TWindowAlgorithm::Selected();
-      hider();
+      freezer();
       for (int i = 0; i < TWindowAlgorithm::Count(); i++)
       {
         int offset = TWindowAlgorithm::indexInWindow(i) * mItemHeight;
@@ -93,10 +93,10 @@ namespace evab
       aScreen->Clear({aPos.X, aPos.Y + visibleElementsCount * mItemHeight}, {aSize.X, aSize.Y - visibleElementsCount * mItemHeight});
     }
 
-    void hider() override
+    void freezer() override
     {
       for (int i = 0; i < TWindowAlgorithm::Count(); i++)
-        mItems[i]->Hide();
+        mItems[i]->Freeze();
     }
   };
 

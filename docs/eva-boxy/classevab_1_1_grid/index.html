@@ -659,10 +659,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-blank" class="md-nav__link">
+  <a href="#function-clear" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function Blank
+        function Clear
       
     </span>
   </a>
@@ -692,6 +692,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-getscreen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function GetScreen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-getsize" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -707,6 +718,17 @@
     <span class="md-ellipsis">
       
         function Grid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-picto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Picto
       
     </span>
   </a>
@@ -740,6 +762,50 @@
     <span class="md-ellipsis">
       
         function SliceRow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Text
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-textcenter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function TextCenter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-textleft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function TextLeft
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-textright" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function TextRight
       
     </span>
   </a>
@@ -788,15 +854,19 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-blank"><strong>Blank</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen) <br><em>Clears the current cell area.</em></td>
+<td style="text-align: left;"><a href="#function-clear"><strong>Clear</strong></a> () <br><em>Clears the current cell area.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aElement, unsigned char aIsFocused=0) <br><em>Draws an element in the current cell.</em></td>
+<td style="text-align: left;"><a href="#function-draw"><strong>Draw</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aElement, unsigned char aIsFocused=0) <br><em>Draws an element in the current cell.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../structevab_1_1_coor/"><strong>Coor</strong></a></td>
 <td style="text-align: left;"><a href="#function-getpos"><strong>GetPos</strong></a> () const<br><em>Gets the current position.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../classevab_1_1_screen/"><strong>Screen</strong></a> *</td>
+<td style="text-align: left;"><a href="#function-getscreen"><strong>GetScreen</strong></a> () const<br><em>Gets the screen.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="../structevab_1_1_coor/"><strong>Coor</strong></a></td>
@@ -804,7 +874,11 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-grid"><strong>Grid</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize) <br><em>Constructs a</em> <a href="./"><em><strong>Grid</strong></em></a> <em>for a specific area.</em></td>
+<td style="text-align: left;"><a href="#function-grid"><strong>Grid</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize) <br><em>Constructs a</em> <a href="./"><em><strong>Grid</strong></em></a> <em>for a specific area.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (const unsigned char * aPictogram, unsigned char aColor=0) <br><em>Draws a pictogram in the current cell.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./#function-grid"><strong>Grid</strong></a> &amp;</td>
@@ -818,35 +892,44 @@
 <td style="text-align: right;"><a href="./#function-grid"><strong>Grid</strong></a></td>
 <td style="text-align: left;"><a href="#function-slicerow"><strong>SliceRow</strong></a> (unsigned char aHeight=0) <br><em>Creates a new</em> <a href="./"><em><strong>Grid</strong></em></a> <em>for the next row.</em></td>
 </tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-text"><strong>Text</strong></a> (TText aText, unsigned char aColor=0) <br><em>Draws text with specified alignment.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-textcenter"><strong>TextCenter</strong></a> (T aText, unsigned char aColor=0) <br><em>Draws center-aligned text.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-textleft"><strong>TextLeft</strong></a> (T aText, unsigned char aColor=0) <br><em>Draws left-aligned text.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-textright"><strong>TextRight</strong></a> (T aText, unsigned char aColor=0) <br><em>Draws right-aligned text.</em></td>
+</tr>
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
 <p><a href="./"><strong>Grid</strong></a> provides a fluent interface for organizing UI elements in a grid. Each <a href="./#function-slicerow"><strong>SliceRow()</strong></a>/SliceCol() returns a new <a href="./"><strong>Grid</strong></a> representing the cell.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Grid</span><span class="w"> </span><span class="nf">mesh</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">});</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">SliceRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">element1</span><span class="p">);</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">SliceRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">SliceCol</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">element2</span><span class="p">);</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">SliceRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">SliceCol</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Clean</span><span class="p">(</span><span class="n">screen</span><span class="p">);</span>
-<span class="n">mesh</span><span class="p">.</span><span class="n">Rest</span><span class="p">().</span><span class="n">Clean</span><span class="p">(</span><span class="n">screen</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Grid</span><span class="w"> </span><span class="nf">grid</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">});</span>
+<span class="n">grid</span><span class="p">.</span><span class="n">SliceRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">element1</span><span class="p">);</span>
+<span class="n">grid</span><span class="p">.</span><span class="n">SliceRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">SliceCol</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">element2</span><span class="p">);</span>
+<span class="n">grid</span><span class="p">.</span><span class="n">SliceRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">SliceCol</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Clear</span><span class="p">();</span>
+<span class="n">grid</span><span class="p">.</span><span class="n">Rest</span><span class="p">().</span><span class="n">Clear</span><span class="p">();</span>
 </code></pre></div>
 
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
-<h3 id="function-blank">function Blank<a class="headerlink" href="#function-blank" title="Permanent link">&para;</a></h3>
+<h3 id="function-clear">function Clear<a class="headerlink" href="#function-clear" title="Permanent link">&para;</a></h3>
 <p><em>Clears the current cell area.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">Blank</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span>
-<span class="p">)</span><span class="w"> </span>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">Clear</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
 </code></pre></div>
 
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>aScreen</code> <a href="../classevab_1_1_screen/"><strong>Screen</strong></a> to draw on </li>
-</ul>
 <hr>
 
 <h3 id="function-draw">function Draw<a class="headerlink" href="#function-draw" title="Permanent link">&para;</a></h3>
 <p><em>Draws an element in the current cell.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">Draw</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span><span class="p">,</span>
 <span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aElement</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIsFocused</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span><span class="w"> </span>
@@ -854,7 +937,6 @@
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aScreen</code> <a href="../classevab_1_1_screen/"><strong>Screen</strong></a> to draw on </li>
 <li><code>aElement</code> Element to draw </li>
 <li><code>aIsFocused</code> Focus state (1 = focused, 0 = not focused) </li>
 </ul>
@@ -869,6 +951,15 @@
 <p><a href="../structevab_1_1_coor/"><strong>Coor</strong></a> Current position </p>
 <hr>
 
+<h3 id="function-getscreen">function GetScreen<a class="headerlink" href="#function-getscreen" title="Permanent link">&para;</a></h3>
+<p><em>Gets the screen.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">GetScreen</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+
+<p><strong>Returns:</strong></p>
+<p>Screen* Current screen </p>
+<hr>
+
 <h3 id="function-getsize">function GetSize<a class="headerlink" href="#function-getsize" title="Permanent link">&para;</a></h3>
 <p><em>Gets the current size.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="n">Coor</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">GetSize</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
@@ -881,6 +972,7 @@
 <h3 id="function-grid">function Grid<a class="headerlink" href="#function-grid" title="Permanent link">&para;</a></h3>
 <p><em>Constructs a</em> <a href="./"><em><strong>Grid</strong></em></a> <em>for a specific area.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">Grid</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span>
 <span class="p">)</span><span class="w"> </span>
@@ -888,8 +980,27 @@
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aPos</code> Position on screen </li>
-<li><code>aSize</code> Size of the mesh area </li>
+<li><code>aScreen</code> <a href="../classevab_1_1_screen/"><strong>Screen</strong></a> to draw on</li>
+<li></li>
+<li>
+<p><code>aPos</code> Position on screen </p>
+</li>
+<li><code>aSize</code> Size of the grid area </li>
+</ul>
+<hr>
+
+<h3 id="function-picto">function Picto<a class="headerlink" href="#function-picto" title="Permanent link">&para;</a></h3>
+<p><em>Draws a pictogram in the current cell.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">Picto</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aPictogram</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aPictogram</code> Pictogram data </li>
+<li><code>aColor</code> Color/inversion flag </li>
 </ul>
 <hr>
 
@@ -899,7 +1010,7 @@
 </code></pre></div>
 
 <p><strong>Returns:</strong></p>
-<p><a href="./"><strong>Grid</strong></a> New mesh representing the remaining space </p>
+<p><a href="./"><strong>Grid</strong></a>&amp; Reference to this grid </p>
 <hr>
 
 <h3 id="function-slicecol">function SliceCol<a class="headerlink" href="#function-slicecol" title="Permanent link">&para;</a></h3>
@@ -914,7 +1025,7 @@
 <li><code>aWidth</code> Width of the column (0 = use remaining width) </li>
 </ul>
 <p><strong>Returns:</strong></p>
-<p><a href="./"><strong>Grid</strong></a> New mesh representing the column </p>
+<p><a href="./"><strong>Grid</strong></a> New grid representing the column </p>
 <hr>
 
 <h3 id="function-slicerow">function SliceRow<a class="headerlink" href="#function-slicerow" title="Permanent link">&para;</a></h3>
@@ -929,7 +1040,61 @@
 <li><code>aHeight</code> Height of the row (0 = use remaining height) </li>
 </ul>
 <p><strong>Returns:</strong></p>
-<p><a href="./"><strong>Grid</strong></a> New mesh representing the row </p>
+<p><a href="./"><strong>Grid</strong></a> New grid representing the row </p>
+<hr>
+
+<h3 id="function-text">function Text<a class="headerlink" href="#function-text" title="Permanent link">&para;</a></h3>
+<p><em>Draws text with specified alignment.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">TAlign</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">TText</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">Text</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">TText</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<p><strong>Template parameters:</strong></p>
+<ul>
+<li><code>TAlign</code> Alignment strategy (<a href="../structevab_1_1_left_align/"><strong>LeftAlign</strong></a>, <a href="../structevab_1_1_center_align/"><strong>CenterAlign</strong></a>, <a href="../structevab_1_1_right_align/"><strong>RightAlign</strong></a>) </li>
+<li><code>TText</code> Text type </li>
+</ul>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aText</code> Text to draw </li>
+<li><code>aColor</code> Color/inversion flag </li>
+</ul>
+<hr>
+
+<h3 id="function-textcenter">function TextCenter<a class="headerlink" href="#function-textcenter" title="Permanent link">&para;</a></h3>
+<p><em>Draws center-aligned text.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">TextCenter</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-textleft">function TextLeft<a class="headerlink" href="#function-textleft" title="Permanent link">&para;</a></h3>
+<p><em>Draws left-aligned text.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">TextLeft</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-textright">function TextRight<a class="headerlink" href="#function-textright" title="Permanent link">&para;</a></h3>
+<p><em>Draws right-aligned text.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">Grid</span><span class="o">::</span><span class="n">TextRight</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
 <hr>
 
 <hr />

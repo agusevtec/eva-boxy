@@ -29,7 +29,7 @@ EVA Boxy is a compact tile-based graphic framework designed for embedded systems
 | `Screen` | Interface for screen operations (text, pictograms, clearing) |
 | `ScreenBase` | Base implementation of Screen with text rendering |
 | `ScreenPage8Base` | Base for page-oriented displays (8-pixel vertical strips) |
-| `ElementBase` | Base class for all UI elements with drawing and muting |
+| `ElementBase` | Base class for all UI elements with drawing and freezing |
 | `CompositeBase` | Container for multiple elements with focus management |
 | `Boxy` | Global library manager and entry point |
 

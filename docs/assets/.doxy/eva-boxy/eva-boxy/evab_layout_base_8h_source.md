@@ -82,7 +82,7 @@ namespace evab
 
     void Increment(signed char delta);
 
-    bool Key(Keys aKey) override;
+    bool OnKey(Keys aKey) override;
 
   protected:
     void focusChild(IFocusChain *aChild);
@@ -94,7 +94,7 @@ namespace evab
 
     virtual bool onResidualKey(Keys aKey);
 
-    virtual void hider();
+    virtual void freezer();
 
   private:
     IFocusChain *mFocusedChild = nullptr; 

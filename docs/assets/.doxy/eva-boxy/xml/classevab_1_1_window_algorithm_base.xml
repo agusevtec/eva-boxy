@@ -6,9 +6,9 @@
     <derivedcompoundref refid="classevab_1_1_scroll_window_algorithm" prot="public" virt="non-virtual">evab::ScrollWindowAlgorithm</derivedcompoundref>
     <includes refid="evab_window_algorithms_8h" local="no">evabWindowAlgorithms.h</includes>
     <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1ad4350c862eb5257a467623e5bd0918c5" prot="protected" static="no" mutable="no">
-        <type>signed char</type>
-        <definition>signed char evab::WindowAlgorithmBase::mSelected</definition>
+      <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a4ead34a5407a0ab37716258bca1900ba" prot="protected" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::WindowAlgorithmBase::mSelected</definition>
         <argsstring></argsstring>
         <name>mSelected</name>
         <qualifiedname>evab::WindowAlgorithmBase::mSelected</qualifiedname>
@@ -19,11 +19,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="71" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="71" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="71" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="71" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a8881fd816814115cbdc8d45e508d054c" prot="protected" static="no" mutable="no">
-        <type>signed char</type>
-        <definition>signed char evab::WindowAlgorithmBase::mCount</definition>
+      <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a4497e65bb6a552bbfb5cee546ec01754" prot="protected" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::WindowAlgorithmBase::mCount</definition>
         <argsstring></argsstring>
         <name>mCount</name>
         <qualifiedname>evab::WindowAlgorithmBase::mCount</qualifiedname>
@@ -34,11 +34,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="72" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="72" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="72" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="72" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a1f7536774485ca911d1daf7d569b2f5d" prot="protected" static="no" mutable="no">
-        <type>signed char</type>
-        <definition>signed char evab::WindowAlgorithmBase::mWindowStart</definition>
+      <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a7d09fb0297ad04dc361d2295c71d3ddd" prot="protected" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::WindowAlgorithmBase::mWindowStart</definition>
         <argsstring></argsstring>
         <name>mWindowStart</name>
         <qualifiedname>evab::WindowAlgorithmBase::mWindowStart</qualifiedname>
@@ -49,11 +49,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="73" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="73" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="73" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="73" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a3037a5d364ac13f0031ef977864feab6" prot="protected" static="no" mutable="no">
-        <type>signed char</type>
-        <definition>signed char evab::WindowAlgorithmBase::mWindowSize</definition>
+      <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1aa52d795bb2867c194b512badeeeb4c4e" prot="protected" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::WindowAlgorithmBase::mWindowSize</definition>
         <argsstring></argsstring>
         <name>mWindowSize</name>
         <qualifiedname>evab::WindowAlgorithmBase::mWindowSize</qualifiedname>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="74" column="17" bodyfile="src/evabWindowAlgorithms.h" bodystart="74" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="74" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -83,18 +83,18 @@
         </inbodydescription>
         <location file="src/evabWindowAlgorithms.h" line="17" column="5"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a022903ad9e9100b92f81c6b10737f8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a64f7b5f3026d02f69dbfdce8d52c4a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void evab::WindowAlgorithmBase::Select</definition>
-        <argsstring>(signed char aIndex)=0</argsstring>
+        <argsstring>(unsigned char aIndex)=0</argsstring>
         <name>Select</name>
         <qualifiedname>evab::WindowAlgorithmBase::Select</qualifiedname>
-        <reimplementedby refid="classevab_1_1_flip_window_algorithm_1aae9f7251d9e739b99119871e78cdcca6">Select</reimplementedby>
-        <reimplementedby refid="classevab_1_1_list_box_1a3c75f0fa37cac0b461de0991d3961d0f">Select</reimplementedby>
-        <reimplementedby refid="classevab_1_1_list_box_1a3c75f0fa37cac0b461de0991d3961d0f">Select</reimplementedby>
-        <reimplementedby refid="classevab_1_1_scroll_window_algorithm_1ae8ba2a3db17d9ca40f53317e0b304126">Select</reimplementedby>
+        <reimplementedby refid="classevab_1_1_flip_window_algorithm_1aac2d515d87926e57f4255638a7bcf1da">Select</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1aca63169d0cf1992e2db5c1de2e86e650">Select</reimplementedby>
+        <reimplementedby refid="classevab_1_1_list_box_1aca63169d0cf1992e2db5c1de2e86e650">Select</reimplementedby>
+        <reimplementedby refid="classevab_1_1_scroll_window_algorithm_1ac4b713b71b2eb92edc7fed245c3af426">Select</reimplementedby>
         <param>
-          <type>signed char</type>
+          <type>unsigned char</type>
           <declname>aIndex</declname>
         </param>
         <briefdescription>
@@ -116,9 +116,9 @@
         </inbodydescription>
         <location file="src/evabWindowAlgorithms.h" line="24" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1aa0bf5cb24c9b5aee7312798e465d6596" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>signed char</type>
-        <definition>signed char evab::WindowAlgorithmBase::Selected</definition>
+      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a58020e092373f757dcf6105f5ee80da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>signed short</type>
+        <definition>signed short evab::WindowAlgorithmBase::Selected</definition>
         <argsstring>()</argsstring>
         <name>Selected</name>
         <qualifiedname>evab::WindowAlgorithmBase::Selected</qualifiedname>
@@ -132,11 +132,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="31" column="17"/>
+        <location file="src/evabWindowAlgorithms.h" line="31" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a5477e753aea1c5bcaff5b0f9240cd0fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>signed char</type>
-        <definition>signed char evab::WindowAlgorithmBase::Count</definition>
+      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a7f3ed7df6d39609211d04da29495751b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::WindowAlgorithmBase::Count</definition>
         <argsstring>()</argsstring>
         <name>Count</name>
         <qualifiedname>evab::WindowAlgorithmBase::Count</qualifiedname>
@@ -150,11 +150,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="38" column="17"/>
+        <location file="src/evabWindowAlgorithms.h" line="38" column="19"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a6f19b87f40b6cc235b9e7ceee79a4195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>signed char</type>
-        <definition>signed char evab::WindowAlgorithmBase::WindowSize</definition>
+      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a722790197126e550bc96800acd38faa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::WindowAlgorithmBase::WindowSize</definition>
         <argsstring>()</argsstring>
         <name>WindowSize</name>
         <qualifiedname>evab::WindowAlgorithmBase::WindowSize</qualifiedname>
@@ -168,18 +168,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="45" column="17"/>
+        <location file="src/evabWindowAlgorithms.h" line="45" column="19"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1acd6b3bd987a44454afcc8a148d4cc3c6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a4f13e98ae4ace7ec0993a5ea9788a483" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>signed char</type>
         <definition>signed char evab::WindowAlgorithmBase::indexInWindow</definition>
-        <argsstring>(signed char aPosition)</argsstring>
+        <argsstring>(unsigned char aPosition)</argsstring>
         <name>indexInWindow</name>
         <qualifiedname>evab::WindowAlgorithmBase::indexInWindow</qualifiedname>
         <param>
-          <type>signed char</type>
+          <type>unsigned char</type>
           <declname>aPosition</declname>
         </param>
         <briefdescription>
@@ -203,14 +203,14 @@
         </inbodydescription>
         <location file="src/evabWindowAlgorithms.h" line="54" column="17"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a300de90f05a5544c3b92debbbcb355b8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a2df38e0073bb276e00271f2dd947a534" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::WindowAlgorithmBase::setCount</definition>
-        <argsstring>(signed char Count)</argsstring>
+        <argsstring>(unsigned char Count)</argsstring>
         <name>setCount</name>
         <qualifiedname>evab::WindowAlgorithmBase::setCount</qualifiedname>
         <param>
-          <type>signed char</type>
+          <type>unsigned char</type>
           <declname>Count</declname>
         </param>
         <briefdescription>
@@ -232,14 +232,14 @@
         </inbodydescription>
         <location file="src/evabWindowAlgorithms.h" line="61" column="10"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1ae05ad89a293255d891685c08c60f4b2a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a768533f33c2366e719dcb6fa59f04c65" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::WindowAlgorithmBase::resizeWindow</definition>
-        <argsstring>(signed char aWindowSize)</argsstring>
+        <argsstring>(unsigned char aWindowSize)</argsstring>
         <name>resizeWindow</name>
         <qualifiedname>evab::WindowAlgorithmBase::resizeWindow</qualifiedname>
         <param>
-          <type>signed char</type>
+          <type>unsigned char</type>
           <declname>aWindowSize</declname>
         </param>
         <briefdescription>
@@ -300,18 +300,18 @@
     </inheritancegraph>
     <location file="src/evabWindowAlgorithms.h" line="11" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="12" bodyend="75"/>
     <listofallmembers>
-      <member refid="classevab_1_1_window_algorithm_base_1a5477e753aea1c5bcaff5b0f9240cd0fd" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>Count</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1acd6b3bd987a44454afcc8a148d4cc3c6" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>indexInWindow</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a8881fd816814115cbdc8d45e508d054c" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>mCount</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1ad4350c862eb5257a467623e5bd0918c5" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>mSelected</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a3037a5d364ac13f0031ef977864feab6" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>mWindowSize</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a1f7536774485ca911d1daf7d569b2f5d" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>mWindowStart</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1ae05ad89a293255d891685c08c60f4b2a" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>resizeWindow</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a022903ad9e9100b92f81c6b10737f8ea" prot="public" virt="pure-virtual"><scope>evab::WindowAlgorithmBase</scope><name>Select</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1aa0bf5cb24c9b5aee7312798e465d6596" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>Selected</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a300de90f05a5544c3b92debbbcb355b8" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>setCount</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a7f3ed7df6d39609211d04da29495751b" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>Count</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a4f13e98ae4ace7ec0993a5ea9788a483" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>indexInWindow</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a4497e65bb6a552bbfb5cee546ec01754" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>mCount</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a4ead34a5407a0ab37716258bca1900ba" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>mSelected</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1aa52d795bb2867c194b512badeeeb4c4e" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>mWindowSize</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a7d09fb0297ad04dc361d2295c71d3ddd" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>mWindowStart</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a768533f33c2366e719dcb6fa59f04c65" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>resizeWindow</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a64f7b5f3026d02f69dbfdce8d52c4a89" prot="public" virt="pure-virtual"><scope>evab::WindowAlgorithmBase</scope><name>Select</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a58020e092373f757dcf6105f5ee80da4" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>Selected</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a2df38e0073bb276e00271f2dd947a534" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>setCount</name></member>
       <member refid="classevab_1_1_window_algorithm_base_1a49ff76a91bd5eb6f61195da64824d310" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>WindowAlgorithmBase</name></member>
-      <member refid="classevab_1_1_window_algorithm_base_1a6f19b87f40b6cc235b9e7ceee79a4195" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>WindowSize</name></member>
+      <member refid="classevab_1_1_window_algorithm_base_1a722790197126e550bc96800acd38faa6" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>WindowSize</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

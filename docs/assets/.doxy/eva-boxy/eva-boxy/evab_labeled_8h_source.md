@@ -31,7 +31,7 @@ namespace evab
     void SetLabel(TText aName)
     {
       mName = aName;
-      Redraw();
+      redraw();
     }
 
     TText GetLabel() const
@@ -59,7 +59,7 @@ namespace evab
       }
     }
 
-    void hider() override {}
+    void freezer() override {}
 
   private:
     TText mName;  

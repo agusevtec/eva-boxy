@@ -75,12 +75,11 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 
 | Type | Name |
 | ---: | :--- |
-|  unsigned char | [**GetValue**](#function-getvalue) () const<br>_Gets the current speed value._  |
-|  unsigned char | [**GetValuePercent**](#function-getvaluepercent) () const<br>_Gets the current speed as percentage (0-100)._  |
+|  unsigned char | [**Count**](#function-count) () const<br> |
 |  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the speed value by a delta._  |
 |   | [**InputAnimation**](#function-inputanimation) (unsigned char aValue=0) <br>_Constructor for_ [_**InputAnimation**_](classevab_1_1_input_animation.md) _._ |
-|  void | [**SetValue**](#function-setvalue) (unsigned char aValue) <br>_Sets the animation speed._  |
-|  void | [**SetValuePercent**](#function-setvaluepercent) (unsigned char aValue) <br>_Sets speed from percentage value._  |
+|  void | [**Select**](#function-select) (unsigned char aValue) <br>_Sets the animation speed._  |
+|  unsigned char | [**Selected**](#function-selected) () const<br>_Gets the current speed value._  |
 | virtual  | [**~InputAnimation**](#function-inputanimation) () <br>_Destructor - removes from Tickable list._  |
 
 
@@ -91,10 +90,8 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 |  void | [**Draw**](classevab_1_1_element_base.md#function-draw) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
-|  void | [**Hide**](classevab_1_1_element_base.md#function-mute) () <br>_Hides the element from view._  |
-|  bool | [**IsHidden**](classevab_1_1_element_base.md#function-ishidden) () <br>_Checks if the element is hidden._  |
-| virtual bool | [**Key**](classevab_1_1_element_base.md#function-key) (Keys aKey) <br>_Handles key events for the element._  |
-|  void | [**Redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
+|  void | [**Freeze**](classevab_1_1_element_base.md#function-freeze) () <br>_Make element insensitive to redraw method._  |
+| virtual bool | [**OnKey**](classevab_1_1_element_base.md#function-onkey) (Keys aKey) <br>_Handles key events for the element._  |
 
 
 
@@ -146,7 +143,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) override<br>_Draws the animation on screen._  |
-| virtual void | [**hider**](#function-hider) () override<br>_Hides the element and pauses animation._  |
+| virtual void | [**freezer**](#function-freezer) () override<br>_Hides the element and pauses animation._  |
 
 
 ## Protected Functions inherited from evab::ElementBase
@@ -156,7 +153,9 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](classevab_1_1_element_base.md#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) = 0<br>_Pure virtual method for drawing the element._  |
-| virtual void | [**hider**](classevab_1_1_element_base.md#function-hider) () <br>_Virtual method for muting the element._  |
+| virtual void | [**freezer**](classevab_1_1_element_base.md#function-freezer) () <br>_Virtual method for freezing the element._  |
+|  bool | [**isFrozen**](classevab_1_1_element_base.md#function-isfrozen) () <br>_Checks if the element is currently freezed._  |
+|  void | [**redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
 
 
 
@@ -198,51 +197,14 @@ Redraws occur only on timer ticks to maintain consistent animation timing.
 
 
 
-### function GetValue 
+### function Count 
 
-_Gets the current speed value._ 
 ```C++
-inline unsigned char evab::InputAnimation::GetValue () const
+inline unsigned char evab::InputAnimation::Count () const
 ```
 
 
 
-
-
-**Returns:**
-
-Current speed value (0 to tMaxSpeed) 
-
-
-
-
-
-        
-
-<hr>
-
-
-
-### function GetValuePercent 
-
-_Gets the current speed as percentage (0-100)._ 
-```C++
-inline unsigned char evab::InputAnimation::GetValuePercent () const
-```
-
-
-
-
-
-**Returns:**
-
-Percentage value (0-100) 
-
-
-
-
-
-        
 
 <hr>
 
@@ -302,11 +264,11 @@ inline evab::InputAnimation::InputAnimation (
 
 
 
-### function SetValue 
+### function Select 
 
 _Sets the animation speed._ 
 ```C++
-inline void evab::InputAnimation::SetValue (
+inline void evab::InputAnimation::Select (
     unsigned char aValue
 ) 
 ```
@@ -329,23 +291,21 @@ inline void evab::InputAnimation::SetValue (
 
 
 
-### function SetValuePercent 
+### function Selected 
 
-_Sets speed from percentage value._ 
+_Gets the current speed value._ 
 ```C++
-inline void evab::InputAnimation::SetValuePercent (
-    unsigned char aValue
-) 
+inline unsigned char evab::InputAnimation::Selected () const
 ```
 
 
 
 
 
-**Parameters:**
+**Returns:**
 
+Current speed value (0 to tMaxSpeed) 
 
-* `aValue` Percentage value (0-100) 
 
 
 
@@ -410,16 +370,16 @@ Implements [*evab::ElementBase::drawer*](classevab_1_1_element_base.md#function-
 
 
 
-### function hider 
+### function freezer 
 
 _Hides the element and pauses animation._ 
 ```C++
-inline virtual void evab::InputAnimation::hider () override
+inline virtual void evab::InputAnimation::freezer () override
 ```
 
 
 
-Implements [*evab::ElementBase::hider*](classevab_1_1_element_base.md#function-hider)
+Implements [*evab::ElementBase::freezer*](classevab_1_1_element_base.md#function-freezer)
 
 
 <hr>

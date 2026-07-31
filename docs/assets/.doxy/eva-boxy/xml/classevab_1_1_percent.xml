@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_percent" kind="class" language="C++" prot="public">
+    <compoundname>evab::Percent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TElement</basecompoundref>
+    <includes refid="evab_percent_8h" local="no">evabPercent.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TElement</type>
+      </param>
+      <param>
+        <type>unsigned char</type>
+        <declname>kStep</declname>
+        <defname>kStep</defname>
+        <defval>0</defval>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_percent_1a40eaaf971934719bb1d4ea9fe6b4a3b9" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::Percent&lt; TElement, kStep &gt;::mStep</definition>
+        <argsstring></argsstring>
+        <name>mStep</name>
+        <qualifiedname>evab::Percent::mStep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPercent.h" line="23" column="23" bodyfile="src/evabPercent.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_percent_1a76b8e4b4cba86eb29ba575fa9f0ab573" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>evab::Percent&lt; TElement, kStep &gt;::Percent</definition>
+        <argsstring>(Args &amp;&amp;...args)</argsstring>
+        <name>Percent</name>
+        <qualifiedname>evab::Percent::Percent</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPercent.h" line="27" column="9" bodyfile="src/evabPercent.h" bodystart="27" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_percent_1ae6cec21962fb4985171ae69dfb7e74ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::Percent&lt; TElement, kStep &gt;::SetPercent</definition>
+        <argsstring>(unsigned char aPercent)</argsstring>
+        <name>SetPercent</name>
+        <qualifiedname>evab::Percent::SetPercent</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aPercent</declname>
+        </param>
+        <briefdescription>
+<para>Sets value by percent (0-100). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPercent.h" line="45" column="14" bodyfile="src/evabPercent.h" bodystart="45" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_percent_1acbcb66cbb725a747a55cc0c52f0b3612" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::Percent&lt; TElement, kStep &gt;::GetPercent</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPercent</name>
+        <qualifiedname>evab::Percent::GetPercent</qualifiedname>
+        <briefdescription>
+<para>Gets current value as percent (0-100). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPercent.h" line="57" column="23" bodyfile="src/evabPercent.h" bodystart="57" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_percent_1a14928548e8f00e7c1faabf2fa9d68db4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::Percent&lt; TElement, kStep &gt;::GetStep</definition>
+        <argsstring>() const</argsstring>
+        <name>GetStep</name>
+        <qualifiedname>evab::Percent::GetStep</qualifiedname>
+        <briefdescription>
+<para>Gets the step size in percent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPercent.h" line="68" column="23" bodyfile="src/evabPercent.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevab_1_1_percent" kindref="compound">Percent</ref> modifier for discrete inputs. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Adds percent-based control (0-100) to any discrete input.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base element type (must have Select, Selected, Count methods) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kStep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Step size in percent (default: 100 / Count) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>TElement</label>
+      </node>
+      <node id="1">
+        <label>evab::Percent&lt; TElement, kStep &gt;</label>
+        <link refid="classevab_1_1_percent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>TElement</label>
+      </node>
+      <node id="1">
+        <label>evab::Percent&lt; TElement, kStep &gt;</label>
+        <link refid="classevab_1_1_percent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabPercent.h" line="19" column="5" bodyfile="src/evabPercent.h" bodystart="20" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_percent_1acbcb66cbb725a747a55cc0c52f0b3612" prot="public" virt="non-virtual"><scope>evab::Percent</scope><name>GetPercent</name></member>
+      <member refid="classevab_1_1_percent_1a14928548e8f00e7c1faabf2fa9d68db4" prot="public" virt="non-virtual"><scope>evab::Percent</scope><name>GetStep</name></member>
+      <member refid="classevab_1_1_percent_1a40eaaf971934719bb1d4ea9fe6b4a3b9" prot="private" virt="non-virtual"><scope>evab::Percent</scope><name>mStep</name></member>
+      <member refid="classevab_1_1_percent_1a76b8e4b4cba86eb29ba575fa9f0ab573" prot="public" virt="non-virtual"><scope>evab::Percent</scope><name>Percent</name></member>
+      <member refid="classevab_1_1_percent_1ae6cec21962fb4985171ae69dfb7e74ed" prot="public" virt="non-virtual"><scope>evab::Percent</scope><name>SetPercent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -639,9 +639,10 @@
 <h1 id="file-evabinputfloath">File evabInputFloat.h<a class="headerlink" href="#file-evabinputfloath" title="Permanent link">&para;</a></h1>
 <p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_68267d1309a1af8e8297ef4c3efbcdba/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../evab_input_float_8h/"><strong>evabInputFloat.h</strong></a></p>
 <p><a href="../evab_input_float_8h/">Go to the documentation of this file</a></p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#pragma once</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">// evabInputFloat.h</span>
+<span class="cp">#pragma once</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabElementBase.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;evabElementBase.h&quot;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">evab</span>
 <span class="p">{</span>
@@ -655,13 +656,27 @@
 
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="nf">GetValue</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Increment</span><span class="p">(</span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">delta</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Increment</span><span class="p">(</span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aSteps</span><span class="p">);</span>
 
 <span class="w">  </span><span class="k">protected</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">aScreen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIsFocused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mValue</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">InputFloatDiscrete</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">InputFloat</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">mCount</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mMin</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mMax</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">InputFloatDiscrete</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">aValue</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aCount</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">aMin</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">aMax</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Select</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="nf">Selected</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">Count</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mCount</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Increment</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">aSteps</span><span class="p">);</span>
 <span class="w">  </span><span class="p">};</span>
 
 <span class="p">}</span>

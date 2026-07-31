@@ -59,7 +59,7 @@ namespace evab
             aScreen->Text<TAlign>(aPos, aSize, mText, aIsFocused);
         }
 
-        void muter() override {}
+        void freezer() override {}
 
     private:
         T mText;  ///< Text to display

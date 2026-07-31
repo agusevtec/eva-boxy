@@ -120,7 +120,7 @@ namespace evab
       TWindowAlgorithm::resizeWindow(aSize.Y / mItemHeight);
       unsigned char visibleElementsCount = 0;
       signed char selected = TWindowAlgorithm::Selected();
-      muter();
+      freezer();
       for (int i = 0; i < TWindowAlgorithm::Count(); i++)
       {
         int offset = TWindowAlgorithm::indexInWindow(i) * mItemHeight;
@@ -136,10 +136,10 @@ namespace evab
     /**
      * @brief Hides all items
      */
-    void muter() override
+    void freezer() override
     {
       for (int i = 0; i < TWindowAlgorithm::Count(); i++)
-        mItems[i]->Mute();
+        mItems[i]->Freeze();
     }
   };
 

@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_input_int" kind="class" language="C++" prot="public">
     <compoundname>evab::InputInt</compoundname>
     <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_int_discrete" prot="public" virt="non-virtual">evab::InputIntDiscrete</derivedcompoundref>
     <includes refid="evab_input_int_8h" local="no">evabInputInt.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_int_1a4e796e046e457432648db7c7763ca005" prot="private" static="no" mutable="no">
@@ -99,23 +100,23 @@
         </inbodydescription>
         <location file="src/evabInputInt.h" line="35" column="9"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_input_int_1a0aed4c88950d1266043fbd8b54207208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_int_1ada8b54f6adc5a287ed73dc6ffde18846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::InputInt::Increment</definition>
-        <argsstring>(signed char delta)</argsstring>
+        <argsstring>(signed char aSteps)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputInt::Increment</qualifiedname>
         <param>
           <type>signed char</type>
-          <declname>delta</declname>
+          <declname>aSteps</declname>
         </param>
         <briefdescription>
-<para>Increments the value by a delta. </para>
+<para>Increments the value by a step. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>delta</parametername>
+<parametername>aSteps</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Amount to add (positive or negative) </para>
@@ -214,6 +215,12 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="3">
+        <label>evab::InputIntDiscrete</label>
+        <link refid="classevab_1_1_input_int_discrete"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
     <collaborationgraph>
       <node id="2">
@@ -231,15 +238,15 @@
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>Draw</name></member>
       <member refid="classevab_1_1_input_int_1aaee5d4fe0d95f0a10259add2165710f6" prot="protected" virt="virtual"><scope>evab::InputInt</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>Freeze</name></member>
+      <member refid="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124" prot="protected" virt="virtual"><scope>evab::InputInt</scope><name>freezer</name></member>
       <member refid="classevab_1_1_input_int_1acd95020d7bff5880dc4091fe7e8b1a04" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>GetValue</name></member>
-      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>Hide</name></member>
-      <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="protected" virt="virtual"><scope>evab::InputInt</scope><name>hider</name></member>
-      <member refid="classevab_1_1_input_int_1a0aed4c88950d1266043fbd8b54207208" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_input_int_1ada8b54f6adc5a287ed73dc6ffde18846" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>Increment</name></member>
       <member refid="classevab_1_1_input_int_1a71f63e01bba7f2e83326897c5ee16f09" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>InputInt</name></member>
-      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>IsHidden</name></member>
-      <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::InputInt</scope><name>Key</name></member>
+      <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::InputInt</scope><name>isFrozen</name></member>
       <member refid="classevab_1_1_input_int_1a4e796e046e457432648db7c7763ca005" prot="private" virt="non-virtual"><scope>evab::InputInt</scope><name>mValue</name></member>
-      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>Redraw</name></member>
+      <member refid="classevab_1_1_element_base_1ad088e430fee933d67248ea9242e8ddf7" prot="public" virt="virtual"><scope>evab::InputInt</scope><name>OnKey</name></member>
+      <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::InputInt</scope><name>redraw</name></member>
       <member refid="classevab_1_1_input_int_1ab94428a72666e1384fd6c10a20e7a03c" prot="public" virt="non-virtual"><scope>evab::InputInt</scope><name>SetValue</name></member>
     </listofallmembers>
   </compounddef>

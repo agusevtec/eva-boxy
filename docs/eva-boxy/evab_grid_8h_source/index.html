@@ -639,7 +639,7 @@
 <h1 id="file-evabgridh">File evabGrid.h<a class="headerlink" href="#file-evabgridh" title="Permanent link">&para;</a></h1>
 <p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_68267d1309a1af8e8297ef4c3efbcdba/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../evab_grid_8h/"><strong>evabGrid.h</strong></a></p>
 <p><a href="../evab_grid_8h/">Go to the documentation of this file</a></p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// evabMesh.h</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">// evabGrid.h</span>
 <span class="cp">#pragma once</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabElementBase.h&gt;</span>
@@ -651,25 +651,68 @@
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Grid</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">    </span><span class="k">public</span><span class="o">:</span>
-<span class="w">        </span><span class="n">Grid</span><span class="p">(</span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Grid</span><span class="p">(</span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">aScreen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">);</span>
 
 <span class="w">        </span><span class="n">Grid</span><span class="w"> </span><span class="nf">SliceRow</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
 <span class="w">        </span><span class="n">Grid</span><span class="w"> </span><span class="nf">SliceCol</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="w">        </span><span class="n">Grid</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">Rest</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Grid</span><span class="w"> </span><span class="o">&amp;</span><span class="nf">Rest</span><span class="p">();</span>
 
-<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">aScreen</span><span class="p">,</span><span class="w"> </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">aElement</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIsFocused</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">Draw</span><span class="p">(</span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">aElement</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIsFocused</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">Blank</span><span class="p">(</span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">aScreen</span><span class="p">);</span>
+<span class="w">        </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">TAlign</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">TText</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="n">TText</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mScreen</span><span class="p">)</span>
+<span class="w">                </span><span class="n">mScreen</span><span class="o">-&gt;</span><span class="n">Text</span><span class="o">&lt;</span><span class="n">TAlign</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mTopLeft</span><span class="p">,</span><span class="w"> </span><span class="n">GetSize</span><span class="p">(),</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span><span class="w"> </span><span class="n">aColor</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="nf">GetPos</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mTopLeft</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">TextLeft</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mScreen</span><span class="p">)</span>
+<span class="w">                </span><span class="n">mScreen</span><span class="o">-&gt;</span><span class="n">TextLeft</span><span class="p">(</span><span class="n">mTopLeft</span><span class="p">,</span><span class="w"> </span><span class="n">GetSize</span><span class="p">(),</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span><span class="w"> </span><span class="n">aColor</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="nf">GetSize</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">        </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">TextCenter</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mScreen</span><span class="p">)</span>
+<span class="w">                </span><span class="n">mScreen</span><span class="o">-&gt;</span><span class="n">TextCenter</span><span class="p">(</span><span class="n">mTopLeft</span><span class="p">,</span><span class="w"> </span><span class="n">GetSize</span><span class="p">(),</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span><span class="w"> </span><span class="n">aColor</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">TextRight</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mScreen</span><span class="p">)</span>
+<span class="w">                </span><span class="n">mScreen</span><span class="o">-&gt;</span><span class="n">TextRight</span><span class="p">(</span><span class="n">mTopLeft</span><span class="p">,</span><span class="w"> </span><span class="n">GetSize</span><span class="p">(),</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span><span class="w"> </span><span class="n">aColor</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Picto</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">aPictogram</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mScreen</span><span class="p">)</span>
+<span class="w">                </span><span class="n">mScreen</span><span class="o">-&gt;</span><span class="n">Picto</span><span class="p">(</span><span class="n">mTopLeft</span><span class="p">,</span><span class="w"> </span><span class="n">aPictogram</span><span class="p">,</span><span class="w"> </span><span class="n">aColor</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">Clear</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mScreen</span><span class="p">)</span>
+<span class="w">                </span><span class="n">mScreen</span><span class="o">-&gt;</span><span class="n">Clear</span><span class="p">(</span><span class="n">mTopLeft</span><span class="p">,</span><span class="w"> </span><span class="n">GetSize</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// ========== Getters ==========</span>
+
+<span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="n">GetPos</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mTopLeft</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="n">GetSize</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="nf">GetScreen</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mScreen</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">private</span><span class="o">:</span>
-<span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="n">mTopLeft</span><span class="p">;</span><span class="w">      </span>
-<span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="n">mBottomRight</span><span class="p">;</span><span class="w">  </span>
+<span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="n">mTopLeft</span><span class="p">;</span><span class="w">     </span>
+<span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="n">mBottomRight</span><span class="p">;</span><span class="w"> </span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">mScreen</span><span class="p">;</span><span class="w">   </span>
 <span class="w">    </span><span class="p">};</span>
 
 <span class="p">}</span>

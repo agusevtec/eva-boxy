@@ -12,7 +12,7 @@
 
 _Decorator that catches specified key events and forwards them to a listener._ [More...](#detailed-description)
 
-* `#include <evabBehavior.h>`
+* `#include <evabReactions.h>`
 
 
 
@@ -60,8 +60,8 @@ Inherits the following classes: T
 
 | Type | Name |
 | ---: | :--- |
-|  bool | [**Key**](#function-key) (Keys aKey) override<br>_Handles key events, catching specified keys._  |
 |   | [**KeyCatcher**](#function-keycatcher) (eva::IHandler \* aListener, Args &&... args) <br>_Constructor for_ [_**KeyCatcher**_](classevab_1_1_key_catcher.md) _._ |
+|  bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events, catching specified keys._  |
 
 
 
@@ -102,7 +102,7 @@ This class wraps any element and intercepts key presses matching the specified k
 
 
 * `T` Base element type to decorate 
-* `KEYS` Key codes to catch (variadic template parameters) 
+* `KEYS` OnKey codes to catch (variadic template parameters) 
 
 
 
@@ -128,40 +128,6 @@ enum evab::KeyCatcher::EventType {
 <hr>
 ## Public Functions Documentation
 
-
-
-
-### function Key 
-
-_Handles key events, catching specified keys._ 
-```C++
-inline bool evab::KeyCatcher::Key (
-    Keys aKey
-) override
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `aKey` The key code to process 
-
-
-
-**Returns:**
-
-true if the key was handled, false otherwise 
-
-
-
-
-
-        
-
-<hr>
 
 
 
@@ -193,6 +159,40 @@ inline evab::KeyCatcher::KeyCatcher (
 
 <hr>
 
+
+
+### function OnKey 
+
+_Handles key events, catching specified keys._ 
+```C++
+inline bool evab::KeyCatcher::OnKey (
+    Keys aKey
+) override
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aKey` The key code to process 
+
+
+
+**Returns:**
+
+true if the key was handled, false otherwise 
+
+
+
+
+
+        
+
+<hr>
+
 ------------------------------
-The documentation for this class was generated from the following file `src/evabBehavior.h`
+The documentation for this class was generated from the following file `src/evabReactions.h`
 

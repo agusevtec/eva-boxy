@@ -15,7 +15,7 @@
 
 namespace evab
 {
-    struct VerticalPictoPolicy
+    struct VerticalAlbumPolicy
     {
         static unsigned short CalculateTotalBlocks(Coor aSize)
         {
@@ -33,7 +33,7 @@ namespace evab
         }
     };
 
-    struct HorizontalPictoPolicy
+    struct HorizontalAlbumPolicy
     {
         static unsigned short CalculateTotalBlocks(Coor aSize)
         {
@@ -51,52 +51,66 @@ namespace evab
         }
     };
 
-    template <typename TAlbum, typename OrientationPictoPolicy>
+    template <typename TAlbumStretchy, typename OrientationAlbumPolicy>
     class InputStretchBar : public ElementBase
     {
     public:
-        InputStretchBar(unsigned char aValue = 0)
+        InputStretchBar(unsigned char aValue = 0, unsigned char aStep = 0)
+            : mPercent(constrain(aValue, 0, 100)), mStep(aStep)
         {
-            mValue = constrain(aValue, 0, 100);
         }
 
-        void SetValue(unsigned char aValue)
+        void SetPercent(unsigned char aPercent)
         {
-            mValue = constrain(aValue, 0, 100);
-            Redraw();
+            aPercent = constrain(aPercent, 0, 100);
+            if (mPercent == aPercent)
+                return;
+            mPercent = aPercent;
+            redraw();
+        }
+
+        unsigned char GetPercent()
+        {
+            return mPercent;
         }
 
         void Increment(signed char delta)
         {
-            SetValue(mValue + delta);
+            SetPercent(mPercent + mStep * delta);
         }
 
     protected:
         void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
         {
-            unsigned short resolution = OrientationPictoPolicy::CalculateResolution(aSize);
-            unsigned short normalizedValue = map(mValue, 0, 100, 0, resolution);
-            unsigned char totalBlocks = OrientationPictoPolicy::CalculateTotalBlocks(aSize);
+            unsigned short resolution = OrientationAlbumPolicy::CalculateResolution(aSize);
+
+            if (mStep == 0 && resolution > 0)
+            {
+                mStep = 100 / resolution + 1;
+            }
+
+            unsigned short normalizedValue = map(mPercent, 0, 100, 0, resolution);
+            unsigned char totalBlocks = OrientationAlbumPolicy::CalculateTotalBlocks(aSize);
 
             if (totalBlocks < 2)
                 return;
 
             aScreen->Picto(
-                OrientationPictoPolicy::GetTilePosition(aPos, aSize, 0, totalBlocks),
-                TAlbum::GetTile(START_BLOCK, blockFill(0, normalizedValue)),
+                OrientationAlbumPolicy::GetTilePosition(aPos, aSize, 0, totalBlocks),
+                TAlbumStretchy::GetTile(START_BLOCK, blockFill(0, normalizedValue)),
                 aIsFocused);
 
             for (unsigned char i = 1; i < totalBlocks - 1; i++)
             {
                 aScreen->Picto(
-                    OrientationPictoPolicy::GetTilePosition(aPos, aSize, i, totalBlocks),
-                    TAlbum::GetTile(MIDDLE_BLOCK, blockFill(i, normalizedValue)),
+                    OrientationAlbumPolicy::GetTilePosition(aPos, aSize, i, totalBlocks),
+                    TAlbumStretchy::GetTile(MIDDLE_BLOCK, blockFill(i, normalizedValue)),
                     aIsFocused);
             }
 
             aScreen->Picto(
-                OrientationPictoPolicy::GetTilePosition(aPos, aSize, totalBlocks - 1, totalBlocks),
-                TAlbum::GetTile(END_BLOCK, blockFill(totalBlocks - 1, normalizedValue)),
+                OrientationAlbumPolicy::GetTilePosition(aPos, aSize, totalBlocks - 1, totalBlocks),
+                TAlbumStretchy::GetTile(END_BLOCK, blockFill(totalBlocks - 1, normalizedValue)),
                 aIsFocused);
         }
 
@@ -115,14 +129,15 @@ namespace evab
         static constexpr unsigned char MIDDLE_BLOCK = 2; 
         static constexpr unsigned char END_BLOCK = 3;    
 
-        unsigned char mValue; 
+        unsigned char mPercent; 
+        unsigned char mStep;    
     };
 
     // Convenience typedefs for common stretch bar types
-    using VerticalProgressBar = InputStretchBar<AlbumVerticalProgressBar, VerticalPictoPolicy>;
-    using HorizontalProgressBar = InputStretchBar<AlbumHorizontalProgressBar, HorizontalPictoPolicy>;
-    using VerticalScrollBar = InputStretchBar<AlbumVerticalScrollBar, VerticalPictoPolicy>;
-    using HorizontalScrollBar = InputStretchBar<AlbumHorizontalScrollBar, HorizontalPictoPolicy>;
+    using VerticalProgressBar = InputStretchBar<AlbumStretchyVerticalProgressBar, VerticalAlbumPolicy>;
+    using HorizontalProgressBar = InputStretchBar<AlbumStretchyHorizontalProgressBar, HorizontalAlbumPolicy>;
+    using VerticalScrollBar = InputStretchBar<AlbumStretchyVerticalScrollBar, VerticalAlbumPolicy>;
+    using HorizontalScrollBar = InputStretchBar<AlbumStretchyHorizontalScrollBar, HorizontalAlbumPolicy>;
 }
 ```
 

@@ -56,9 +56,9 @@ namespace evab
     virtual bool onResidualKey(Keys aKey);
 
     /**
-     * @brief Pure virtual method to mute all children
+     * @brief Pure virtual method to freeze all children
      */
-    virtual void muter() = 0;
+    virtual void freezer() = 0;
 
   private:
     ElementBase *mFocusedChild = nullptr; ///< Currently focused child element

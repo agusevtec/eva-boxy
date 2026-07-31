@@ -753,10 +753,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-hider" class="md-nav__link">
+  <a href="#function-freezer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function hider
+        function freezer
       
     </span>
   </a>
@@ -835,19 +835,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-mute"><strong>Hide</strong></a> () <br><em>Hides the element from view.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-ishidden"><strong>IsHidden</strong></a> () <br><em>Checks if the element is hidden.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-freeze"><strong>Freeze</strong></a> () <br><em>Make element insensitive to redraw method.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-key"><strong>Key</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>Redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-onkey"><strong>OnKey</strong></a> (Keys aKey) <br><em>Handles key events for the element.</em></td>
 </tr>
 </tbody>
 </table>
@@ -866,7 +858,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-hider"><strong>hider</strong></a> () override<br><em>Virtual method for muting the element.</em></td>
+<td style="text-align: left;"><a href="#function-freezer"><strong>freezer</strong></a> () override<br><em>Virtual method for freezing the element.</em></td>
 </tr>
 </tbody>
 </table>
@@ -886,7 +878,15 @@
 </tr>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-hider"><strong>hider</strong></a> () <br><em>Virtual method for muting the element.</em></td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-freezer"><strong>freezer</strong></a> () <br><em>Virtual method for freezing the element.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">bool</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-isfrozen"><strong>isFrozen</strong></a> () <br><em>Checks if the element is currently freezed.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="../classevab_1_1_element_base/#function-redraw"><strong>redraw</strong></a> () <br><em>Redraws the element on the current screen.</em></td>
 </tr>
 </tbody>
 </table>
@@ -952,13 +952,13 @@
 <p>Implements <a href="../classevab_1_1_element_base/#function-drawer"><em>evab::ElementBase::drawer</em></a></p>
 <hr>
 
-<h3 id="function-hider">function hider<a class="headerlink" href="#function-hider" title="Permanent link">&para;</a></h3>
-<p><em>Virtual method for muting the element.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextLabel</span><span class="o">::</span><span class="n">hider</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
+<h3 id="function-freezer">function freezer<a class="headerlink" href="#function-freezer" title="Permanent link">&para;</a></h3>
+<p><em>Virtual method for freezing the element.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextLabel</span><span class="o">::</span><span class="n">freezer</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
-<p>Override to implement custom muting behavior. </p>
-<p>Implements <a href="../classevab_1_1_element_base/#function-hider"><em>evab::ElementBase::hider</em></a></p>
+<p>Override to implement custom freezing behavior. </p>
+<p>Implements <a href="../classevab_1_1_element_base/#function-freezer"><em>evab::ElementBase::freezer</em></a></p>
 <hr>
 
 <hr />

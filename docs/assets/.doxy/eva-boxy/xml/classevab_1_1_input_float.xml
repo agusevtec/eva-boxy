@@ -3,6 +3,7 @@
   <compounddef id="classevab_1_1_input_float" kind="class" language="C++" prot="public">
     <compoundname>evab::InputFloat</compoundname>
     <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_float_discrete" prot="public" virt="non-virtual">evab::InputFloatDiscrete</derivedcompoundref>
     <includes refid="evab_input_float_8h" local="no">evabInputFloat.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_input_float_1a22eaf1e38a7c238e64f098702552ade0" prot="private" static="no" mutable="no">
@@ -18,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="56" column="11" bodyfile="src/evabInputFloat.h" bodystart="56" bodyend="-1"/>
+        <location file="src/evabInputFloat.h" line="57" column="11" bodyfile="src/evabInputFloat.h" bodystart="57" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -50,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="21" column="5"/>
+        <location file="src/evabInputFloat.h" line="22" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_1a2c458fd33df72334c05a9f0dd1f6f887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -79,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="28" column="10"/>
+        <location file="src/evabInputFloat.h" line="29" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_1ad726fd1724ca5091418203bcdd63801c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -97,25 +98,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="35" column="11"/>
+        <location file="src/evabInputFloat.h" line="36" column="11"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_input_float_1ab41ba1f0e7254592a36312bc8ebf6bea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_float_1ac2d83357511b0fe0c9dfd1ff8d53a3f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::InputFloat::Increment</definition>
-        <argsstring>(signed char delta)</argsstring>
+        <argsstring>(signed char aSteps)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputFloat::Increment</qualifiedname>
         <param>
           <type>signed char</type>
-          <declname>delta</declname>
+          <declname>aSteps</declname>
         </param>
         <briefdescription>
-<para>Increments the value by a delta. </para>
+<para>Increments the value by a step. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>delta</parametername>
+<parametername>aSteps</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Amount to add (positive or negative) </para>
@@ -126,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="42" column="10"/>
+        <location file="src/evabInputFloat.h" line="43" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -194,11 +195,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="53" column="10"/>
+        <location file="src/evabInputFloat.h" line="54" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Floating-point input element. </para>
+<para>Float input element. </para>
     </briefdescription>
     <detaileddescription>
 <para>Displays and manages a floating-point value. </para>
@@ -214,6 +215,12 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="3">
+        <label>evab::InputFloatDiscrete</label>
+        <link refid="classevab_1_1_input_float_discrete"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
     </inheritancegraph>
     <collaborationgraph>
       <node id="2">
@@ -227,19 +234,19 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputFloat.h" line="13" column="3" bodyfile="src/evabInputFloat.h" bodystart="14" bodyend="57"/>
+    <location file="src/evabInputFloat.h" line="14" column="3" bodyfile="src/evabInputFloat.h" bodystart="15" bodyend="58"/>
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>Draw</name></member>
       <member refid="classevab_1_1_input_float_1a17fa953f42dfaee582fdfb471d8823d5" prot="protected" virt="virtual"><scope>evab::InputFloat</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>Freeze</name></member>
+      <member refid="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124" prot="protected" virt="virtual"><scope>evab::InputFloat</scope><name>freezer</name></member>
       <member refid="classevab_1_1_input_float_1ad726fd1724ca5091418203bcdd63801c" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>GetValue</name></member>
-      <member refid="classevab_1_1_element_base_1af71af1fb53fe78d5ea223c2fe41303fc" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>Hide</name></member>
-      <member refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703" prot="protected" virt="virtual"><scope>evab::InputFloat</scope><name>hider</name></member>
-      <member refid="classevab_1_1_input_float_1ab41ba1f0e7254592a36312bc8ebf6bea" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_input_float_1ac2d83357511b0fe0c9dfd1ff8d53a3f5" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>Increment</name></member>
       <member refid="classevab_1_1_input_float_1ad3d33d7a8f00542b5f0b219f68516112" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>InputFloat</name></member>
-      <member refid="classevab_1_1_element_base_1ac09cb2ba8bf19f73cb0cb6ce2c6be9ad" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>IsHidden</name></member>
-      <member refid="classevab_1_1_element_base_1a33c334694d0d776e791d5af679df79b5" prot="public" virt="virtual"><scope>evab::InputFloat</scope><name>Key</name></member>
+      <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::InputFloat</scope><name>isFrozen</name></member>
       <member refid="classevab_1_1_input_float_1a22eaf1e38a7c238e64f098702552ade0" prot="private" virt="non-virtual"><scope>evab::InputFloat</scope><name>mValue</name></member>
-      <member refid="classevab_1_1_element_base_1aaff3f13bf61dfa4acd2a3280125705d6" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>Redraw</name></member>
+      <member refid="classevab_1_1_element_base_1ad088e430fee933d67248ea9242e8ddf7" prot="public" virt="virtual"><scope>evab::InputFloat</scope><name>OnKey</name></member>
+      <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::InputFloat</scope><name>redraw</name></member>
       <member refid="classevab_1_1_input_float_1a2c458fd33df72334c05a9f0dd1f6f887" prot="public" virt="non-virtual"><scope>evab::InputFloat</scope><name>SetValue</name></member>
     </listofallmembers>
   </compounddef>

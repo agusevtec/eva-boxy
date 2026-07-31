@@ -83,7 +83,7 @@ namespace evab
       }
     }
 
-    void muter() override {}
+    void freezer() override {}
 
   private:
     TText mName;  ///< Label text

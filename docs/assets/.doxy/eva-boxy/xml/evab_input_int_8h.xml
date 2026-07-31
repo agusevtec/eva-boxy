@@ -3,6 +3,7 @@
   <compounddef id="evab_input_int_8h" kind="file" language="C++">
     <compoundname>evabInputInt.h</compoundname>
     <includes refid="evab_element_base_8h" local="yes">evabElementBase.h</includes>
+    <includedby refid="evab_percent_8h" local="yes">src/evabPercent.h</includedby>
     <incdepgraph>
       <node id="5">
         <label>Arduino.h</label>
@@ -58,7 +59,20 @@
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/evabInputInt.h</label>
+        <link refid="evab_input_int_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/evabPercent.h</label>
+        <link refid="evab_percent_8h_source"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classevab_1_1_input_int" prot="public">evab::InputInt</innerclass>
+    <innerclass refid="classevab_1_1_input_int_discrete" prot="public">evab::InputIntDiscrete</innerclass>
     <innernamespace refid="namespaceevab">evab</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -81,7 +95,7 @@
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35" refid="classevab_1_1_input_int_1acd95020d7bff5880dc4091fe7e8b1a04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_int_1acd95020d7bff5880dc4091fe7e8b1a04" kindref="member">GetValue</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="classevab_1_1_input_int_1a0aed4c88950d1266043fbd8b54207208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_int_1a0aed4c88950d1266043fbd8b54207208" kindref="member">Increment</ref>(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>delta);</highlight></codeline>
+<codeline lineno="42" refid="classevab_1_1_input_int_1ada8b54f6adc5a287ed73dc6ffde18846" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_int_1ada8b54f6adc5a287ed73dc6ffde18846" kindref="member">Increment</ref>(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSteps);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="53" refid="classevab_1_1_input_int_1aaee5d4fe0d95f0a10259add2165710f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_int_1aaee5d4fe0d95f0a10259add2165710f6" kindref="member">drawer</ref>(<ref refid="classevab_1_1_screen" kindref="compound">Screen</ref><sp/>*aScreen,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aSize,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIsFocused)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
@@ -90,7 +104,21 @@
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mValue;<sp/></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59" refid="classevab_1_1_input_int_discrete" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">InputIntDiscrete<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_input_int_1a71f63e01bba7f2e83326897c5ee16f09" kindref="member">InputInt</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>mCount;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mMin;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mMax;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>InputIntDiscrete(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aValue,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aCount,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aMin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aMax);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Select(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aIndex);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>Selected()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>Count()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mCount;<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Increment(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>aSteps);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/evabInputInt.h"/>
   </compounddef>

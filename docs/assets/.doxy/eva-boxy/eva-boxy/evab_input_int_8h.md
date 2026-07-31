@@ -36,6 +36,7 @@
 | Type | Name |
 | ---: | :--- |
 | class | [**InputInt**](classevab_1_1_input_int.md) <br>_Integer input element._  |
+| class | [**InputIntDiscrete**](classevab_1_1_input_int_discrete.md) <br> |
 
 
 
