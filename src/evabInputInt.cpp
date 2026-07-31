@@ -10,7 +10,7 @@ namespace evab
   void InputInt::SetValue(int aValue)
   {
     mValue = aValue;
-    Redraw();
+    redraw();
   }
 
   int InputInt::GetValue() const

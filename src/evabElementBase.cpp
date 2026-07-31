@@ -2,9 +2,9 @@
 #include <evabBoxy.h>
 using namespace evab;
 
-void ElementBase::Redraw()
+void ElementBase::redraw()
 {
-  if (IsHidden())
+  if (isMuted())
     return;
 
   Screen *screen = Boxy::GetScreen();
@@ -17,15 +17,15 @@ void ElementBase::Redraw()
   drawer(screen, currentPos, currentSize, isFocused);
 }
 
-bool ElementBase::IsHidden()
+bool ElementBase::isMuted()
 {
-  return !((mSerialized >> 0) & 1);
+  return mSerialized == 0;
 }
 
-void ElementBase::Hide()
+void ElementBase::Mute()
 {
-  hider();
   mSerialized = 0;
+  muter();
 }
 
 void ElementBase::Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
@@ -35,7 +35,7 @@ void ElementBase::Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIs
 
   if (aSize.X == 0 || aSize.Y == 0)
   {
-    hider();
+    muter();
     return;
   }
   drawer(aScreen, aPos, aSize, aIsFocused);

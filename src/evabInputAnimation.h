@@ -66,7 +66,7 @@ namespace evab
                 return;
             mValue = aValue;
 
-            Redraw();
+            redraw();
         }
 
         /**
@@ -119,7 +119,7 @@ namespace evab
         /**
          * @brief Hides the element and pauses animation
          */
-        void hider() override
+        void muter() override
         {
             mLastFrameTime = 0;
         }
@@ -144,7 +144,7 @@ namespace evab
             {
                 mLastFrameTime = now;
                 mCurrentFrame = (mCurrentFrame + 1) % TAlbum::Count;
-                Redraw();
+                redraw();
             }
         }
 

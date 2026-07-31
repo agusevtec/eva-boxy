@@ -32,7 +32,7 @@ namespace evab
         void SetText(T aText) 
         { 
             mText = aText; 
-            Redraw(); 
+            redraw(); 
         }
 
         /**
@@ -59,7 +59,7 @@ namespace evab
             aScreen->Text<TAlign>(aPos, aSize, mText, aIsFocused);
         }
 
-        void hider() override {}
+        void muter() override {}
 
     private:
         T mText;  ///< Text to display

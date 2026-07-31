@@ -26,11 +26,6 @@ namespace evab
     virtual bool OnKey(Keys aKey);
 
     /**
-     * @brief Hides the element from view
-     */
-    void Hide();
-
-    /**
      * @brief Draws the element on the specified screen
      *
      * @param aScreen Screen to draw on
@@ -41,18 +36,17 @@ namespace evab
     void Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
     /**
-     * @brief Redraws the element on the current screen
+     * @brief Make element insensitive to redraw method
      */
-    void Redraw();
-
-    /**
-     * @brief Checks if the element is hidden
-     *
-     * @return true if hidden, false otherwise
-     */
-    bool IsHidden();
+    void Mute();
 
   protected:
+    /**
+     * @brief Checks if the element is currently muted.
+     *
+     * @return true if the element is muted and ignores redraw requests, false otherwise.
+     */
+    bool isMuted();
     /**
      * @brief Pure virtual method for drawing the element
      *
@@ -64,11 +58,16 @@ namespace evab
     virtual void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) = 0;
 
     /**
-     * @brief Virtual method for hiding the element
+     * @brief Virtual method for muting the element
      *
-     * Override to implement custom hiding behavior.
+     * Override to implement custom muting behavior.
      */
-    virtual void hider() {};
+    virtual void muter() {};
+
+    /**
+     * @brief Redraws the element on the current screen
+     */
+    void redraw();
 
   private:
     unsigned short mSerialized = 0; ///< Serialized state (position, size, visibility, focus)

@@ -42,7 +42,7 @@ namespace evab
     void SetLabel(TText aName)
     {
       mName = aName;
-      Redraw();
+      redraw();
     }
 
     /**
@@ -83,7 +83,7 @@ namespace evab
       }
     }
 
-    void hider() override {}
+    void muter() override {}
 
   private:
     TText mName;  ///< Label text

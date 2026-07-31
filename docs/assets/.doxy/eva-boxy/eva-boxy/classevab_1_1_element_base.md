@@ -54,7 +54,7 @@ Inherited by the following classes: [evab::InputStretchBar](classevab_1_1_input_
 | Type | Name |
 | ---: | :--- |
 |  void | [**Draw**](#function-draw) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
-|  void | [**Hide**](#function-hide) () <br>_Hides the element from view._  |
+|  void | [**Hide**](#function-mute) () <br>_Hides the element from view._  |
 |  bool | [**IsHidden**](#function-ishidden) () <br>_Checks if the element is hidden._  |
 | virtual bool | [**Key**](#function-key) (Keys aKey) <br>_Handles key events for the element._  |
 |  void | [**Redraw**](#function-redraw) () <br>_Redraws the element on the current screen._  |
@@ -87,7 +87,7 @@ Inherited by the following classes: [evab::InputStretchBar](classevab_1_1_input_
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) = 0<br>_Pure virtual method for drawing the element._  |
-| virtual void | [**hider**](#function-hider) () <br>_Virtual method for hiding the element._  |
+| virtual void | [**hider**](#function-hider) () <br>_Virtual method for muting the element._  |
 
 
 
@@ -264,14 +264,14 @@ virtual void evab::ElementBase::drawer (
 
 ### function hider 
 
-_Virtual method for hiding the element._ 
+_Virtual method for muting the element._ 
 ```C++
 inline virtual void evab::ElementBase::hider () 
 ```
 
 
 
-Override to implement custom hiding behavior. 
+Override to implement custom muting behavior. 
 
 
         

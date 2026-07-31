@@ -11,7 +11,7 @@ void LayoutBase::focusChild(IFocusChain *aChild)
     return;
 
   mFocusedChild = aChild;
-  Redraw();
+  redraw();
 }
 
 ElementBase *LayoutBase::GetFocused() const
@@ -71,7 +71,7 @@ bool LayoutBase::onResidualKey(Keys)
   return false;
 }
 
-void LayoutBase::hider()
+void LayoutBase::muter()
 {
   if (!mFocusedChild)
     return;
@@ -79,7 +79,7 @@ void LayoutBase::hider()
   IFocusChain *current = mFocusedChild;
   do
   {
-    current->AsElementBase()->Hide();
+    current->AsElementBase()->Mute();
     current = current->Next();
   } while (current != mFocusedChild);
 }

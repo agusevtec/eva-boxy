@@ -43,10 +43,10 @@ using namespace evab;
 //     aScreen->Picto({aPos.X, 4}, picto_remixicon16_f110, 0);
 //     mFan.Draw(aScreen, { aPos.X + 10, 4}, {3, 3}, 0);
 //   }
-//   void hider() override {
-//     mBattery.Hide();
-//     mSignal.Hide();
-//     test.Hide();
+//   void muter() override {
+//     mBattery.Mute();
+//     mSignal.Mute();
+//     test.Mute();
 //   }
 // };
 

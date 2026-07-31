@@ -33,7 +33,7 @@ namespace evab
       TWindowAlgorithm::setCount(aCount);
       if (aCount)
         Select(0);
-      Redraw();
+      redraw();
       return *this;
     }
 
@@ -46,7 +46,7 @@ namespace evab
     ListBox<TWindowAlgorithm> &SetItemHeight(unsigned char aItemHeight)
     {
       mItemHeight = aItemHeight;
-      Redraw();
+      redraw();
       return *this;
     }
 
@@ -58,7 +58,7 @@ namespace evab
     void Select(unsigned char aIndex) override
     {
       TWindowAlgorithm::Select(aIndex);
-      Redraw();
+      redraw();
     }
 
     /**
@@ -120,7 +120,7 @@ namespace evab
       TWindowAlgorithm::resizeWindow(aSize.Y / mItemHeight);
       unsigned char visibleElementsCount = 0;
       signed char selected = TWindowAlgorithm::Selected();
-      hider();
+      muter();
       for (int i = 0; i < TWindowAlgorithm::Count(); i++)
       {
         int offset = TWindowAlgorithm::indexInWindow(i) * mItemHeight;
@@ -136,10 +136,10 @@ namespace evab
     /**
      * @brief Hides all items
      */
-    void hider() override
+    void muter() override
     {
       for (int i = 0; i < TWindowAlgorithm::Count(); i++)
-        mItems[i]->Hide();
+        mItems[i]->Mute();
     }
   };
 

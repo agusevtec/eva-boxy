@@ -87,7 +87,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 |  void | [**Draw**](classevab_1_1_element_base.md#function-draw) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
-|  void | [**Hide**](classevab_1_1_element_base.md#function-hide) () <br>_Hides the element from view._  |
+|  void | [**Hide**](classevab_1_1_element_base.md#function-mute) () <br>_Hides the element from view._  |
 |  bool | [**IsHidden**](classevab_1_1_element_base.md#function-ishidden) () <br>_Checks if the element is hidden._  |
 | virtual bool | [**Key**](classevab_1_1_element_base.md#function-key) (Keys aKey) <br>_Handles key events for the element._  |
 |  void | [**Redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
@@ -142,7 +142,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) override<br>_Draws the label with alignment._  |
-| virtual void | [**hider**](#function-hider) () override<br>_Virtual method for hiding the element._  |
+| virtual void | [**hider**](#function-hider) () override<br>_Virtual method for muting the element._  |
 
 
 ## Protected Functions inherited from evab::ElementBase
@@ -152,7 +152,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**drawer**](classevab_1_1_element_base.md#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) = 0<br>_Pure virtual method for drawing the element._  |
-| virtual void | [**hider**](classevab_1_1_element_base.md#function-hider) () <br>_Virtual method for hiding the element._  |
+| virtual void | [**hider**](classevab_1_1_element_base.md#function-hider) () <br>_Virtual method for muting the element._  |
 
 
 
@@ -297,14 +297,14 @@ Implements [*evab::ElementBase::drawer*](classevab_1_1_element_base.md#function-
 
 ### function hider 
 
-_Virtual method for hiding the element._ 
+_Virtual method for muting the element._ 
 ```C++
 inline virtual void evab::TextLabel::hider () override
 ```
 
 
 
-Override to implement custom hiding behavior. 
+Override to implement custom muting behavior. 
 
 
         

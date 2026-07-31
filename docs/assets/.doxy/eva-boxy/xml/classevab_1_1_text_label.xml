@@ -182,10 +182,10 @@
         <qualifiedname>evab::TextLabel::hider</qualifiedname>
         <reimplements refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703">hider</reimplements>
         <briefdescription>
-<para>Virtual method for hiding the element. </para>
+<para>Virtual method for muting the element. </para>
         </briefdescription>
         <detaileddescription>
-<para>Override to implement custom hiding behavior. </para>
+<para>Override to implement custom muting behavior. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

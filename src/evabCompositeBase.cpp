@@ -9,7 +9,7 @@ namespace evab
       return;
 
     mFocusedChild = aChild;
-    Redraw();
+    redraw();
   }
 
   bool CompositeBase::OnKey(Keys aKey)

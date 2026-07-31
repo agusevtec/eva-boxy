@@ -139,7 +139,7 @@ private:
   {
     Serial.println("Monitor!");
     focusChild(&mUIMonitoring);
-    Redraw();
+    redraw();
   }
   Handler<UIGroundLayer> onGotoSettingsHandler{this, &UIGroundLayer::onGotoSettings};
   void onGotoSettings(void *aSender, CallbackInfo aCallbackInfo)
@@ -152,7 +152,7 @@ private:
   {
     Serial.println("Back home!");
     focusChild(&mUIHome);
-    Redraw();
+    redraw();
   }
 
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
@@ -160,18 +160,18 @@ private:
     if (IsFocused(&mUIHome))
       mUIHome.Draw(aScreen, aPos, aSize, aIsFocused);
     else
-      mUIHome.Hide();
+      mUIHome.Mute();
 
     if (IsFocused(&mUIMonitoring))
       mUIMonitoring.Draw(aScreen, aPos, aSize, aIsFocused);
     else
-      mUIMonitoring.Hide();
+      mUIMonitoring.Mute();
   }
 
-  void hider() override
+  void muter() override
   {
-    mUIHome.Hide();
-    mUIMonitoring.Hide();
+    mUIHome.Mute();
+    mUIMonitoring.Mute();
   }
 };
 

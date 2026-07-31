@@ -13,7 +13,7 @@ namespace evab
   void InputFloat::SetValue(float aValue)
   {
     mValue = aValue;
-    Redraw();
+    redraw();
   }
 
   float InputFloat::GetValue() const

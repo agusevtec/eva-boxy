@@ -322,10 +322,10 @@
         <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
         <reimplementedby refid="classevab_1_1_text_label_1ab2d16be33a8f807cc8c20caa21caf3ed">hider</reimplementedby>
         <briefdescription>
-<para>Virtual method for hiding the element. </para>
+<para>Virtual method for muting the element. </para>
         </briefdescription>
         <detaileddescription>
-<para>Override to implement custom hiding behavior. </para>
+<para>Override to implement custom muting behavior. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

@@ -35,7 +35,7 @@ namespace evab
             aValue = constrain(aValue, 0, TAlbum::Count - 1);
             if (mValue == aValue)
                 return;
-            Redraw();
+            redraw();
         }
 
         /**

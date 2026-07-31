@@ -177,7 +177,7 @@
         <qualifiedname>evab::CompositeBase::hider</qualifiedname>
         <reimplements refid="classevab_1_1_element_base_1af018245afc41464ef69d08c368055703">hider</reimplements>
         <briefdescription>
-<para>Pure virtual method to hide all children. </para>
+<para>Pure virtual method to mute all children. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>

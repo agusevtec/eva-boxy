@@ -226,7 +226,7 @@ namespace evab
             if (mPercent == aPercent)
                 return;
             mPercent = aPercent;
-            Redraw();
+            redraw();
         }
 
         unsigned char GetPercent()
