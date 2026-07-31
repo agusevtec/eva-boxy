@@ -60,7 +60,7 @@ namespace evab
 
         unsigned char Count() const
         {
-            return mCount;
+            return TAlbum::Count;
         }
 
     protected:
