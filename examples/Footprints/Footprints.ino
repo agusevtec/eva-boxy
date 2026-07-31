@@ -1,86 +1,262 @@
-#include <evabFont8Narrow.h>
+#include <evabFont8Bold.h>
 #include <evabScreenSSD1306.h>
-
-// #include <evabListBox.h>
-// #include <evabInputFloat.h>
-// #include <evaTac.h>
-// #include <evabLabeled.h>
-// #include <evabInputButton.h>
-// #include <evabInputStretchbar.h>
-// #include <evabInputTextStretchbar.h>
-// #include <evabInputSelectorPicto.h>
-// #include <evabInputTextStretchBar.h>
-// #include <evabAlbums.h>
-// #include <evabGalleryRemixicon16.h>
+#include <evabAlbums.h>
+#include <evabAlbumsStretchy.h>
+#include <evabInputInt.h>
+#include <evabInputFloat.h>
+#include <evabInputSelectorAlbum.h>
+#include <evabInputButton.h>
+#include <evabInputButtonPicto.h>
+#include <evabInputAnimation.h>
+#include <evabInputStretchBar.h>
+#include <evabInputTextStretchBar.h>
+#include <evabGalleryRemixicon16.h>
+#include <evabGalleryRemixicon24.h>
+#include <evabGalleryRemixicon32.h>
 
 using namespace evab;
+using namespace eva;
 
-// class MyListbox : public ScrollListbox {
-// public:
-//   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-//     ScrollListbox::drawer(aScreen, { aPos.X, aPos.Y + 1 }, { aSize.X - 1, aSize.Y - 1 }, aIsFocused);
-//     VerticalProgressBar pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
-//     pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y + 1 }, { 1, aSize.Y - 1 }, 0);
-//   }
-// };
-
-// class MyContainer : public LayoutPane {
-//   InputPictoSelector<AlbumBattery> mBattery;
-//   InputPictoSelector<AlbumSignal> mSignal;
-//   KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
-//   InputAnimation<AlbumRainbowmeter, 10> mFan = {1};
-
-// public:
-//   MyContainer() {
-//     LayoutPane::focusChild(&test);
-//   }
-
-//   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-//     mBattery.Draw(aScreen, aPos, aSize, 0);
-//     mSignal.Draw(aScreen, { aPos.X + aSize.X - 2, aPos.Y }, { 2, 1 }, 0);
-//     test.Draw(aScreen, { aPos.X, 2 }, { aSize.X, 1 }, 0);
-//     // test.Draw(aScreen, {4, aPos.Y}, {1, aSize.Y}, 0);
-//     aScreen->Picto({aPos.X, 4}, picto_remixicon16_f110, 0);
-//     mFan.Draw(aScreen, { aPos.X + 10, 4}, {3, 3}, 0);
-//   }
-//   void freezer() override {
-//     mBattery.Freeze();
-//     mSignal.Freeze();
-//     test.Freeze();
-//   }
-// };
-
-// class App : public eva::IHandler {
-//   KeyModifier<Labeled<InputFloat>, KEY_LEFT, KEY_RIGHT> item0 = { "Speed", 13 };
-//   Labeled<InputFloat> item1 = { "Course", 37 };
-//   Labeled<InputFloat> item2 = { "Fuel", 95 };
-//   ElementBase *items[3] = {
-//     &item0,
-//     &item1,
-//     &item2
-//   };
-//   KeyModifier<MyListbox, KEY_UP, KEY_DOWN> mListbox;
-//   MyContainer myContainer;
-//   eva::RepeatTimer timer;
-
-// public:
-//   App() {
-//     mListbox.SetItems(items, 3);
-//     mListbox.SetItemHeight(2);
-//     ScreenSSD1306<Font8Narrow> screen;
-
-//     timer.start(500, this);
-//   }
-
-//   void invoke(void *, eva::CallbackInfo) {
-//     Boxy::OnKey(KEY_UP);
-//   }
-// };
-
-Font8Narrow font;
-ScreenSSD1306 screen(&font);
+/**
+ * @brief Clears the screen and displays a label.
+ *
+ * @param aScreen Pointer to the screen object.
+ * @param aLabel  Label text to display at the top.
+ */
+void showScreen(Screen *aScreen, const char *aLabel) {
+    delay(2000);
+    aScreen->Clear({0, 0}, aScreen->Size(), 0);
+    aScreen->TextLeft({0, 0}, {16, 1}, aLabel, 0);
+}
 
 void setup() {
+    Serial.begin(9600);
+    Serial.println("=== EVA Boxy Imperative Demo ===");
+
+    static Font8Bold font;
+    static ScreenSSD1306 screen(&font);
+    
+    // ============================================
+    // SCREEN METHODS
+    // ============================================
+    
+    showScreen(&screen, "TextLeft:");
+    screen.TextLeft({0, 2}, {16, 1}, "Hello Left", 0);
+
+    showScreen(&screen, "TextCenter:");
+    screen.TextCenter({0, 2}, {16, 1}, "Hello Center", 0);
+
+    showScreen(&screen, "TextRight:");
+    screen.TextRight({0, 2}, {16, 1}, "Hello Right", 0);
+
+    // ============================================
+    // TEXTCENTER IN DIFFERENT SCALES
+    // ============================================
+
+    showScreen(&screen, "TextCenter 1x1:");
+    screen.TextCenter({0, 2}, {16, 1}, "Size 1", 0);
+
+    showScreen(&screen, "TextCenter 2x1:");
+    screen.TextCenter({0, 2}, {16, 2}, "Size 2", 0);
+
+    showScreen(&screen, "TextCenter 3x1:");
+    screen.TextCenter({0, 2}, {16, 3}, "Size3", 0);
+
+    showScreen(&screen, "F-string");
+    screen.TextCenter({0, 2}, {16, 1}, F("F-string"), 0);
+
+    // ============================================
+    // DRAW SYMBOL
+    // ============================================
+
+    showScreen(&screen, "DrawSymbol:");
+    for (int i = 0; i < 8; i++) {
+        screen.DrawSymbol({i, 3}, {1, 1}, 'A' + i, 0);
+    }
+
+    // ============================================
+    // REMIXICON ICONS (16x16, 24x24, 32x32)
+    // ============================================
+
+    showScreen(&screen, "Remixicon 16x16:");
+    screen.Picto({0, 3}, GalleryRemixicon16::PICTO_F243, 0);
+    screen.Picto({3, 3}, GalleryRemixicon16::PICTO_F0E4, 0);
+    screen.Picto({6, 3}, GalleryRemixicon16::PICTO_F1F2, 0);
+
+    showScreen(&screen, "Remixicon 24x24:");
+    screen.Picto({0, 3}, GalleryRemixicon24::PICTO_F243, 0);
+    screen.Picto({4, 3}, GalleryRemixicon24::PICTO_F0E4, 0);
+    screen.Picto({8, 3}, GalleryRemixicon24::PICTO_F1F2, 0);
+
+    showScreen(&screen, "Remixicon 32x32:");
+    screen.Picto({0, 3}, GalleryRemixicon32::PICTO_F243, 0);
+    screen.Picto({5, 3}, GalleryRemixicon32::PICTO_F0E4, 0);
+    screen.Picto({10, 3}, GalleryRemixicon32::PICTO_F1F2, 0);
+
+    // ============================================
+    // ALL Input#### ELEMENTS
+    // ============================================
+    
+    showScreen(&screen, "InputButton:");
+    InputButton button(F("OK"));
+    button.Draw(&screen, {0, 4}, {16, 1}, 1);
+
+    showScreen(&screen, "InputButtonPicto:");
+    InputButtonPicto buttonPicto(GalleryRemixicon24::PICTO_F243);
+    buttonPicto.Draw(&screen, {6, 4}, {3, 3}, 1);
+
+    // InputInt: 42 → 99
+    showScreen(&screen, "InputInt");
+    InputInt intVal(42);
+    intVal.Draw(&screen, {0, 4}, {16, 1}, 0);
+    delay(1000);
+    intVal.SetValue(99);
+    intVal.Draw(&screen, {0, 4}, {16, 1}, 0);
+
+    // InputFloat: 3.14 → 1.23
+    showScreen(&screen, "InputFloat");
+    InputFloat floatVal(3.14);
+    floatVal.Draw(&screen, {0, 4}, {16, 1}, 0);
+    delay(1000);
+    floatVal.SetValue(1.23);
+    floatVal.Draw(&screen, {0, 4}, {16, 1}, 0);
+
+    // InputSelectorAlbum: 3/7 → 6/7
+     showScreen(&screen, "AlbumOnOff:");
+    InputSelectorAlbum<AlbumOnOff> selOnOff(0);
+    selOnOff.Draw(&screen, {7, 4}, {1, 2}, 0);
+    delay(1000);
+    selOnOff.Select(1);
+    selOnOff.Draw(&screen, {7, 4}, {1, 2}, 0);
+
+    showScreen(&screen, "InputSelectorAlbum");
+    InputSelectorAlbum<AlbumBattery> selector(1);
+    selector.Draw(&screen, {7, 4}, {1, 2}, 0);
+    delay(1000);
+    selector.Select(4);
+    selector.Draw(&screen, {7, 4}, {1, 2}, 0);
+
+    showScreen(&screen, "AlbumRainbowmeter:");
+    InputSelectorAlbum<AlbumRainbowmeter> selRainbow(2);
+    selRainbow.Draw(&screen, {6, 4}, {2, 3}, 0);
+    delay(1000);
+    selRainbow.Select(5);
+    selRainbow.Draw(&screen, {6, 4}, {2, 3}, 0);
+
+
+    showScreen(&screen, "AlbumLamp:");
+    InputSelectorAlbum<AlbumLamp> selLamp(2);
+    selLamp.Draw(&screen, {7, 4}, {2, 2}, 0);
+    delay(1000);
+    selLamp.Select(4);
+    selLamp.Draw(&screen, {7, 4}, {2, 2}, 0);
+
+    showScreen(&screen, "AlbumProgress:");
+    InputSelectorAlbum<AlbumProgress> selProgress(2);
+    selProgress.Draw(&screen, {7, 4}, {2, 2}, 0);
+    delay(1000);
+    selProgress.Select(6);
+    selProgress.Draw(&screen, {7, 4}, {2, 2}, 0);
+
+    showScreen(&screen, "AlbumSpeaker:");
+    InputSelectorAlbum<AlbumSpeaker> selSpeaker(1);
+    selSpeaker.Draw(&screen, {7, 4}, {2, 2}, 0);
+    delay(1000);
+    selSpeaker.Select(3);
+    selSpeaker.Draw(&screen, {7, 4}, {2, 2}, 0);
+
+    showScreen(&screen, "AlbumSignal:");
+    InputSelectorAlbum<AlbumSignal> selSignal(2);
+    selSignal.Draw(&screen, {7, 4}, {1, 1}, 0);
+    delay(1000);
+    selSignal.Select(3);
+    selSignal.Draw(&screen, {7, 4}, {1, 1}, 0);
+
+    showScreen(&screen, "AlbumRoundmeter:");
+    InputSelectorAlbum<AlbumRoundmeter> selRound(3);
+    selRound.Draw(&screen, {7, 4}, {2, 2}, 0);
+    delay(1000);
+    selRound.Select(9);
+    selRound.Draw(&screen, {7, 4}, {2, 2}, 0);
+    // ============================================
+    // ALL 4 STRETCHBAR TYPES
+    // ============================================
+
+    showScreen(&screen, "VerticalProgressBar:");
+    VerticalProgressBar vProgress(50);
+    vProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
+    delay(1000);
+    vProgress.SetPercent(75);
+    vProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
+
+    // HorizontalScrollBar: 50% → 75%
+    showScreen(&screen, "HorizontalProgressBar");
+    HorizontalProgressBar hProgress(50);
+    hProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
+    delay(1000);
+    hProgress.SetPercent(75);
+    hProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
+
+    showScreen(&screen, "VerticalScrollBar:");
+    VerticalScrollBar vScroll(50);
+    vScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
+    delay(1000);
+    vScroll.SetPercent(75);
+    vScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
+
+    // HorizontalScrollBar: 50% → 75%
+    showScreen(&screen, "HorizontalScrollBar");
+    HorizontalScrollBar scrollBar(50);
+    scrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
+    delay(1000);
+    scrollBar.SetPercent(75);
+    scrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
+
+    // ============================================
+    // ALL 4 TEXTSTRETCHBAR TYPES
+    // ============================================
+
+    // HorizontalScrollBar: 50% → 75%
+    showScreen(&screen, "VerticalProgressBar:");
+    TextVerticalProgressBar vtProgress(50);
+    vtProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
+    delay(1000);
+    vtProgress.SetPercent(75);
+    vtProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
+
+    // HorizontalScrollBar: 50% → 75%
+    showScreen(&screen, "HorizontalProgressBar");
+    TextHorizontalProgressBar htProgress(50);
+    htProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
+    delay(1000);
+    htProgress.SetPercent(75);
+    htProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
+
+    showScreen(&screen, "VerticalScrollBar:");
+    TextVerticalScrollBar vtScroll(50);
+    vtScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
+    delay(1000);
+    vtScroll.SetPercent(75);
+    vtScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
+
+    // HorizontalScrollBar: 50% → 75%
+    showScreen(&screen, "HorizontalScrollBar");
+    TextHorizontalScrollBar tscrollBar(50);
+    tscrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
+    delay(1000);
+    tscrollBar.SetPercent(75);
+    tscrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
+
+   // ============================================
+    // FINAL SCREEN
+    // ============================================
+    
+    showScreen(&screen, "Demo Complete!");
+    screen.TextCenter({0, 2}, {16, 1}, "All elements", 0);
+    screen.TextCenter({0, 3}, {16, 1}, "demonstrated", 0);
+    delay(2000);
+
+    Serial.println("=== Demo Complete ===");
 }
 
 void loop() {

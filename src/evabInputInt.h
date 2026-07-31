@@ -56,18 +56,48 @@ namespace evab
     int mValue; ///< Current integer value
   };
 
+  /**
+   * @brief Discrete integer input element
+   *
+   * Adds index-based control to InputInt.
+   */
   class InputIntDiscrete : public InputInt
   {
+
+  public:
+    /**
+     * @brief Constructs a discrete integer input.
+     *
+     * @param aValue  Initial value (snapped to nearest step).
+     * @param aCount  Number of steps (must be >= 2).
+     * @param aMin    Minimum value (inclusive).
+     * @param aMax    Maximum value (inclusive).
+     */
+    InputIntDiscrete(int aValue, unsigned char aCount, int aMin, int aMax);
+    /**
+     * @brief Selects a step by index (0 to Count()-1).
+     */
+    void Select(unsigned char aIndex);
+
+    /**
+     * @brief Returns the currently selected index.
+     */
+    signed short Selected() const;
+    /**
+     * @brief Returns the total number of steps.
+     */
+    unsigned char Count() const { return mCount; }
+    /**
+     * @brief Increments the pictogram index
+     *
+     * @param aSteps Amount to increment (positive or negative)
+     */
+    void Increment(int aSteps);
+
+  private:
     unsigned char mCount;
     int mMin;
     int mMax;
-
-  public:
-    InputIntDiscrete(int aValue, unsigned char aCount, int aMin, int aMax);
-    void Select(unsigned char aIndex);
-    signed short Selected() const;
-    unsigned char Count() const { return mCount; }
-    void Increment(int aSteps);
   };
 
 }

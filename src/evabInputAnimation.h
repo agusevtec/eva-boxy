@@ -82,11 +82,11 @@ namespace evab
         /**
          * @brief Increments the speed value by a delta
          *
-         * @param delta Amount to add (positive or negative)
+         * @param aSteps Amount to add (positive or negative)
          */
-        void Increment(signed char delta)
+        void Increment(signed char aSteps)
         {
-            Select(mValue + delta);
+            Select(mValue + aSteps);
         }
 
         unsigned char Count() const

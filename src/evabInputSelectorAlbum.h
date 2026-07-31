@@ -52,11 +52,11 @@ namespace evab
         /**
          * @brief Increments the pictogram index
          *
-         * @param delta Amount to increment (positive or negative)
+         * @param aSteps Amount to increment (positive or negative)
          */
-        void Increment(signed char delta)
+        void Increment(signed char aSteps)
         {
-            Select(mValue + delta);
+            Select(mValue + aSteps);
         }
 
         unsigned char Count() const

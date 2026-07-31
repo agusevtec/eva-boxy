@@ -28,7 +28,7 @@ namespace evab
          * @brief Constructs a Grid for a specific area
          *
          * @param aScreen Screen to draw on
-         *         * @param aPos Position on screen
+         * @param aPos Position on screen
          * @param aSize Size of the grid area
          */
         Grid(Screen *aScreen, Coor aPos, Coor aSize);
@@ -130,8 +130,6 @@ namespace evab
                 mScreen->Clear(mTopLeft, GetSize(), 0);
         }
 
-        // ========== Getters ==========
-
         /**
          * @brief Gets the current position
          *
@@ -146,17 +144,11 @@ namespace evab
          */
         Coor GetSize() const;
 
-        /**
-         * @brief Gets the screen
-         *
-         * @return Screen* Current screen
-         */
-        Screen *GetScreen() const { return mScreen; }
 
     private:
-        Coor mTopLeft;     ///< Top-left corner of current cell
-        Coor mBottomRight; ///< Bottom-right corner of current cell
-        const Screen *mScreen;   ///< Screen to draw on
+        Coor mTopLeft;         ///< Top-left corner of current cell
+        Coor mBottomRight;     ///< Bottom-right corner of current cell
+        const Screen *mScreen; ///< Screen to draw on
     };
 
 }
