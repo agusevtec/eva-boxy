@@ -124,24 +124,24 @@ void setup() {
     // InputSelectorAlbum: 3/7 → 6/7
      showScreen(&screen, "AlbumOnOff:");
     InputSelectorAlbum<AlbumOnOff> selOnOff(0);
-    selOnOff.Draw(&screen, {7, 4}, {1, 2}, 0);
+    selOnOff.Draw(&screen, {7, 4}, {2, 1}, 0);
     delay(1000);
     selOnOff.Select(1);
-    selOnOff.Draw(&screen, {7, 4}, {1, 2}, 0);
+    selOnOff.Draw(&screen, {7, 4}, {2, 1}, 0);
 
     showScreen(&screen, "InputSelectorAlbum");
     InputSelectorAlbum<AlbumBattery> selector(1);
-    selector.Draw(&screen, {7, 4}, {1, 2}, 0);
+    selector.Draw(&screen, {7, 4}, {2, 1}, 0);
     delay(1000);
     selector.Select(4);
-    selector.Draw(&screen, {7, 4}, {1, 2}, 0);
+    selector.Draw(&screen, {7, 4}, {2, 1}, 0);
 
     showScreen(&screen, "AlbumRainbowmeter:");
     InputSelectorAlbum<AlbumRainbowmeter> selRainbow(2);
-    selRainbow.Draw(&screen, {6, 4}, {2, 3}, 0);
+    selRainbow.Draw(&screen, {6, 4}, {4, 2}, 0);
     delay(1000);
     selRainbow.Select(5);
-    selRainbow.Draw(&screen, {6, 4}, {2, 3}, 0);
+    selRainbow.Draw(&screen, {6, 4}, {4, 2}, 0);
 
 
     showScreen(&screen, "AlbumLamp:");
@@ -167,17 +167,17 @@ void setup() {
 
     showScreen(&screen, "AlbumSignal:");
     InputSelectorAlbum<AlbumSignal> selSignal(2);
-    selSignal.Draw(&screen, {7, 4}, {1, 1}, 0);
+    selSignal.Draw(&screen, {7, 4}, {2, 1}, 0);
     delay(1000);
     selSignal.Select(3);
-    selSignal.Draw(&screen, {7, 4}, {1, 1}, 0);
+    selSignal.Draw(&screen, {7, 4}, {2, 1}, 0);
 
     showScreen(&screen, "AlbumRoundmeter:");
     InputSelectorAlbum<AlbumRoundmeter> selRound(3);
-    selRound.Draw(&screen, {7, 4}, {2, 2}, 0);
+    selRound.Draw(&screen, {7, 4}, {3, 3}, 0);
     delay(1000);
     selRound.Select(9);
-    selRound.Draw(&screen, {7, 4}, {2, 2}, 0);
+    selRound.Draw(&screen, {7, 4}, {3, 3}, 0);
     // ============================================
     // ALL 4 STRETCHBAR TYPES
     // ============================================
