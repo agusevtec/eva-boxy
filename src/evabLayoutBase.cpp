@@ -5,7 +5,7 @@
 
 using namespace evab;
 
-void LayoutBase::focusChild(IFocusChain *aChild)
+void LayoutBase::focusChild(FocusChainBase *aChild)
 {
   if (mFocusedChild == aChild)
     return;
@@ -18,10 +18,10 @@ ElementBase *LayoutBase::GetFocused() const
 {
   if (!mFocusedChild)
     return nullptr;
-  return mFocusedChild->AsElementBase();
+  return mFocusedChild->element;
 }
 
-bool LayoutBase::IsFocused(IFocusChain *aChild)
+bool LayoutBase::IsFocused(FocusChainBase *aChild)
 {
   return aChild == mFocusedChild;
 }
@@ -31,7 +31,7 @@ void LayoutBase::focusNext()
   if (!mFocusedChild)
     return;
 
-  focusChild(mFocusedChild->Next());
+  focusChild(mFocusedChild->next);
 }
 
 void LayoutBase::focusPrev()
@@ -39,9 +39,9 @@ void LayoutBase::focusPrev()
   if (!mFocusedChild)
     return;
 
-  IFocusChain *prev = mFocusedChild;
-  while (prev->Next() != mFocusedChild)
-    prev = prev->Next();
+  FocusChainBase *prev = mFocusedChild;
+  while (prev->next != mFocusedChild)
+    prev = prev->next;
 
   focusChild(prev);
 }
@@ -60,7 +60,7 @@ void LayoutBase::Increment(signed char delta)
 
 bool LayoutBase::OnKey(Keys aKey)
 {
-  if (mFocusedChild && mFocusedChild->AsElementBase()->OnKey(aKey))
+  if (mFocusedChild && mFocusedChild->element->OnKey(aKey))
     return true;
 
   return onResidualKey(aKey);
@@ -76,10 +76,10 @@ void LayoutBase::freezer()
   if (!mFocusedChild)
     return;
 
-  IFocusChain *current = mFocusedChild;
+  FocusChainBase *current = mFocusedChild;
   do
   {
-    current->AsElementBase()->Freeze();
-    current = current->Next();
+    current->element->Freeze();
+    current = current->next;
   } while (current != mFocusedChild);
 }

@@ -6,27 +6,6 @@
 namespace evab
 {
 
-  class IFocusChain
-  {
-  public:
-    /**
-     * @brief Gets the next element in the chain
-     *
-     * @return Pointer to next element, or nullptr if none
-     */
-    virtual IFocusChain *Next() = 0;
-
-    /**
-     * @brief Sets the next element in the chain
-     *
-     * @param aNext Pointer to next element
-     */
-    virtual ElementBase *AsElementBase() = 0;
-
-    virtual void SetNext(IFocusChain *aNext) = 0;
-
-  };
-
   /**
    * @brief Abstract base class for composite elements with circular focus chain
    *
@@ -36,55 +15,47 @@ namespace evab
    */
   class LayoutBase : public ElementBase
   {
+
+    class FocusChainBase
+    {
+    public:
+      ElementBase *element;
+      FocusChainBase *next;
+      FocusChainBase(ElementBase *aElement) : element(aElement), next(nullptr) {}
+    };
+
     /**
      * @brief Wrapper that chains elements in a circular doubly-linked list
      *
      * @tparam T Element type to wrap (must inherit ElementBase)
      */
     template <class T>
-    class FocusChain : public T, public IFocusChain
+    class FocusChain : public T, public FocusChainBase
     {
     public:
       template <typename... Args>
       FocusChain(LayoutBase *aParent, Args &&...args)
-          : T(args...), mNext(nullptr)
+          : T(args...), FocusChainBase(this)
       {
         if (!aParent)
           return;
-        IFocusChain *first = aParent->mFocusedChild;
+
+        FocusChainBase *first = aParent->mFocusedChild;
         if (first)
         {
-          IFocusChain *last = first;
-          while (last->Next() && last->Next() != first)
-            last = last->Next();
+          FocusChainBase *last = first;
+          while (last->next && last->next != first)
+            last = last->next;
 
-          last->SetNext(this);
-          this->SetNext(first);
+          last->next = this;
+          this->next = first;
         }
         else
         {
-          this->SetNext(this);
+          this->next = this;
           aParent->mFocusedChild = this;
         }
       }
-
-      IFocusChain *Next() override
-      {
-        return mNext;
-      }
-
-      virtual void SetNext(IFocusChain *aNext) override
-      {
-        mNext = aNext;
-      }
-
-      virtual ElementBase *AsElementBase() override
-      {
-        return this;
-      }
-
-    private:
-      IFocusChain *mNext;
     };
 
   public:
@@ -94,7 +65,7 @@ namespace evab
      * @param aChild Child element to check
      * @return true if the child is focused
      */
-    bool IsFocused(IFocusChain *aChild);
+    bool IsFocused(FocusChainBase *aChild);
 
     /**
      * @brief Gets the current (focused) child
@@ -126,7 +97,7 @@ namespace evab
      *
      * @param aChild Child element to set as focused
      */
-    void focusChild(IFocusChain *aChild);
+    void focusChild(FocusChainBase *aChild);
 
   private:
     /**
@@ -155,7 +126,7 @@ namespace evab
     virtual void freezer();
 
   private:
-    IFocusChain *mFocusedChild = nullptr; ///< Currently focused child element (only reference needed)
+    FocusChainBase *mFocusedChild = nullptr; ///< Currently focused child element (only reference needed)
   };
 
 }
