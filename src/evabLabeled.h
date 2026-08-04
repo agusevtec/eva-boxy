@@ -66,9 +66,6 @@ namespace evab
      */
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
-      if (!aScreen || aSize.X == 0 || aSize.Y == 0)
-        return;
-
       if (aSize.Y == 1)
       {
         unsigned char labelWidth = 2 * aSize.X / 3;
@@ -82,8 +79,6 @@ namespace evab
         T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
       }
     }
-
-    void freezer() override {}
 
   private:
     TText mName;  ///< Label text

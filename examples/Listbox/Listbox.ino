@@ -4,100 +4,143 @@
 #include <evabBoxy.h>
 #include <evabLabeled.h>
 #include <evabInputButton.h>
-#include <evabBehavior.h>
+#include <evabReactions.h>
 #include <evabCompositeBase.h>
 #include <evabFont8Narrow.h>
 #include <evabScreenSSD1306.h>
 #include <evaRepeatTimer.h>
 #include <evabInputStretchbar.h>
 #include <evabInputTextStretchbar.h>
-#include <evabInputPictogram.h>
+#include <evabInputSelectorAlbum.h>
 #include <evabInputTextStretchBar.h>
 #include <evabAlbums.h>
 #include <evabGalleryRemixicon16.h>
 #include <evabInputAnimation.h>
+#include <evabPercent.h>
+#include <evabPadding.h>
 
-
-// struct ElementsArray {
-//     ElementBase** data;
-//     int size;
-// };
-
-// // Макрос для создания ArrayView
-// #define ARRAY(...) \
-//     []() { \
-//         static T[] data = {__VA_ARGS__}; \
-//         return ElementsArray{data, sizeof(data)/sizeof(data[0])}; \
-//     }()
-
+using namespace eva;
 using namespace evab;
 
-class MyListbox : public ScrollListbox {
+
+template <class T, typename TAlign, typename TText>
+class CustomLabeled : public T
+{
+private:
+  TText mName;
+
 public:
-  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    ScrollListbox::drawer(aScreen, { aPos.X, aPos.Y + 1 }, { aSize.X - 1, aSize.Y - 1 }, aIsFocused);
-    VerticalProgressBar pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
-    pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y + 1 }, { 1, aSize.Y - 1 }, 0);
+  template <typename... Args>
+  CustomLabeled(TText aName, Args &&...args)
+      : T(args...), mName(aName)
+  {
+  }
+
+protected:
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+  {
+    unsigned char labelWidth = 2 * aSize.X / 3;
+    unsigned char inputWidth = aSize.X - labelWidth;
+    aScreen->Text<TAlign>(aPos, {labelWidth, 1}, mName, aIsFocused);
+    aScreen->Clear({aPos.X, aPos.Y + 1}, {labelWidth, aSize.Y - 1}, aIsFocused);
+    T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, aSize.Y}, aIsFocused);
   }
 };
 
-class MyContainer : public LayoutPane {
-  InputPictoSelector<AlbumBattery> mBattery;
-  InputPictoSelector<AlbumSignal> mSignal;
-  KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
-  InputAnimation<AlbumRainbowmeter, 10> mFan = {1};
+template <class TT>
+using CustomLabeledLeftF = CustomLabeled<TT, LeftAlign, const __FlashStringHelper *>;
 
+class CustomListbox : public Percent<ScrollListbox>
+{
 public:
-  MyContainer() {
-    LayoutPane::focusChild(&test);
-  }
+  using Percent<ScrollListbox>::Percent;
 
-  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    mBattery.Draw(aScreen, aPos, aSize, 0);
-    mSignal.Draw(aScreen, { aPos.X + aSize.X - 2, aPos.Y }, { 2, 1 }, 0);
-    test.Draw(aScreen, { aPos.X, 2 }, { aSize.X, 1 }, 0);
-    // test.Draw(aScreen, {4, aPos.Y}, {1, aSize.Y}, 0);
-    aScreen->Picto({aPos.X, 4}, GalleryRemixicon16::PICTO_f110, 0);
-    mFan.Draw(aScreen, { aPos.X + 10, 4}, {3, 3}, 0);
-  }
-  void freezer() override {
-    mBattery.Freeze();
-    mSignal.Freeze();
-    test.Freeze();
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+  {
+    ScrollListbox::drawer(aScreen, {aPos.X + 1, aPos.Y}, {aSize.X - 3, aSize.Y}, aIsFocused);
+    VerticalScrollBar pb(100 - GetPercent());
+    pb.Draw(aScreen, {aPos.X + aSize.X - 1, aPos.Y}, {1, aSize.Y}, 0);
   }
 };
 
-class App : public eva::IHandler {
-  KeyModifier<Labeled<InputFloat>, KEY_LEFT, KEY_RIGHT> item0 = { "Speed", 13 };
-  Labeled<InputFloat> item1 = { "Course", 37 };
-  Labeled<InputFloat> item2 = { "Fuel", 95 };
-  ElementBase *items[3] = {
-    &item0,
-    &item1,
-    &item2
+class GroundLayer : public CompositeBase
+{
+  KeyModifier<CustomLabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item0;
+  KeyModifier<CustomLabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item1;
+  KeyModifier<CustomLabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item2;
+  KeyModifier<CustomLabeledLeftF<HorizontalProgressBar>, KEY_LEFT, KEY_RIGHT> item3;
+  KeyModifier<CustomLabeledLeftF<PaddingH<InputSelectorAlbum<AlbumProgress>>>, KEY_LEFT, KEY_RIGHT> item4;
+  KeyModifier<CustomLabeledLeftF<PaddingH<InputSelectorAlbum<AlbumSpeaker>>>, KEY_LEFT, KEY_RIGHT> item5;
+
+  ElementBase *items[6] = {&item0, &item1, &item2, &item3, &item4, &item5};
+  KeyModifier<ScrollListbox, KEY_UP, KEY_DOWN> mSimpleListbox{2, items};
+  KeyModifier<CustomListbox, KEY_UP, KEY_DOWN> mCustomListbox{2, items};
+
+public:
+  GroundLayer()
+      : item0{F("Speed"), 13},
+        item1{F("Course"), 37},
+        item2{F("Fuel"), 95},
+        item3{F("Delay"), 30},
+        item4{F("Light"), 3},
+        item5{F("Sound"), 1}
+
+  {
+    focusChild(&mSimpleListbox);
+//    focusChild(&mCustomListbox);
+  }
+
+private:
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+  {
+    if (IsFocused(&mSimpleListbox))
+    {
+      aScreen->TextCenter(aPos, {aSize.X, 1}, F("STANDART"), 0);
+      mSimpleListbox.Draw(aScreen, {aPos.X, aPos.Y + 2}, {aSize.X, aSize.Y - 2}, aIsFocused);
+    }
+    if (IsFocused(&mCustomListbox))
+    {
+      aScreen->TextCenter(aPos, {aSize.X, 1}, F("CUSTOM"), 0);
+      mCustomListbox.Draw(aScreen, {aPos.X, aPos.Y + 2}, {aSize.X, aSize.Y - 2}, aIsFocused);
+    }
+  }
+
+  void freezer()
+  {
+    mSimpleListbox.Freeze();
+    mCustomListbox.Freeze();
   };
-  KeyModifier<MyListbox, KEY_UP, KEY_DOWN> mListbox;
-  MyContainer myContainer;
-  eva::RepeatTimer timer;
+};
+
+class App : public eva::IHandler
+{
+  RepeatTimer mTimer;
+  GroundLayer mGroundLayer;
+
+const unsigned char gSimulateUser[5] = { KEY_RIGHT, KEY_RIGHT, KEY_LEFT, KEY_LEFT, KEY_DOWN};
+unsigned char gSimulateUserIndex = 0;
 
 public:
-  App() {
-    mListbox.SetItems(items, 3);
-    mListbox.SetItemHeight(2);
-    Boxy::Begin<ScreenSSD1306, Font8Narrow>(&myContainer);
-    timer.start(500, this);
+  App()
+  {
+    Boxy::Begin<ScreenSSD1306, Font8Narrow>(&mGroundLayer);
+    mTimer.start(500, this);
   }
 
-  void invoke(void *, eva::CallbackInfo) {
-    Boxy::OnKey(KEY_UP);
+  void invoke(void *, CallbackInfo)
+  {
+    Boxy::Key(gSimulateUser[gSimulateUserIndex]);
+    ++gSimulateUserIndex %= 5;
   }
 };
 
-void setup() {
+void setup()
+{
   Serial.begin(9600);
   static App app;
 }
 
-void loop() {
+void loop()
+{
   eva::tac();
 }

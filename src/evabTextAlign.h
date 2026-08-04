@@ -7,40 +7,46 @@
 namespace evab
 {
 
+    /**
+     * @brief Left alignment strategy
+     */
     struct LeftAlign
     {
-        static unsigned char Offset(Coor aSize, unsigned char textLen)
-        {
-            (void)aSize;
-            (void)textLen;
-            return 0;
-        }
+        /**
+         * @brief Calculates offset for left alignment
+         * @param aSize Available area size
+         * @param textLen Text length in characters
+         * @return Always 0 (left alignment)
+         */
+        static unsigned char Offset(Coor aSize, unsigned char textLen);
     };
 
+    /**
+     * @brief Center alignment strategy
+     */
     struct CenterAlign
     {
-        static unsigned char Offset(Coor aSize, unsigned char textLen)
-        {
-            unsigned char scale = aSize.Y;
-            unsigned char textWidth = textLen * scale;
-            unsigned char areaWidth = aSize.X;
-
-            unsigned char offset = (areaWidth - textWidth) / 2 / scale;
-            return (offset > 0) ? offset : 0;
-        }
+        /**
+         * @brief Calculates offset for center alignment
+         * @param aSize Available area size
+         * @param textLen Text length in characters
+         * @return Offset to center the text
+         */
+        static unsigned char Offset(Coor aSize, unsigned char textLen);
     };
 
+    /**
+     * @brief Right alignment strategy
+     */
     struct RightAlign
     {
-        static unsigned char Offset(Coor aSize, unsigned char textLen)
-        {
-            unsigned char scale = aSize.Y;
-            unsigned char areaWidth = aSize.X;
-            unsigned char maxSymbols = areaWidth / scale;
-
-            unsigned char offset = maxSymbols - textLen;
-            return (offset > 0) ? offset : 0;
-        }
+        /**
+         * @brief Calculates offset for right alignment
+         * @param aSize Available area size
+         * @param textLen Text length in characters
+         * @return Offset to right-align the text
+         */
+        static unsigned char Offset(Coor aSize, unsigned char textLen);
     };
 
-}
+} // namespace evab

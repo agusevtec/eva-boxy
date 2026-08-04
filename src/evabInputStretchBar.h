@@ -45,6 +45,16 @@ namespace evab
         {
             return {aPos.X, aPos.Y + aSize.Y - index - 1};
         }
+        
+        static Coor GetRestPosition(Coor aPos, Coor aSize)
+        {
+            return {aPos.X + 1, aPos.Y};
+        }
+
+        static Coor GetRestSize(Coor aPos, Coor aSize)
+        {
+            return {aSize.X - 1, aSize.Y};
+        }
     };
 
     /**
@@ -86,6 +96,14 @@ namespace evab
         static Coor GetTilePosition(Coor aPos, Coor aSize, unsigned char index, unsigned char total)
         {
             return {aPos.X + index, aPos.Y};
+        }
+        static Coor GetRestPosition(Coor aPos, Coor aSize)
+        {
+            return {aPos.X, aPos.Y + 1};
+        }
+        static Coor GetRestSize(Coor aPos, Coor aSize)
+        {
+            return {aSize.X, aSize.Y - 1};
         }
     };
 
@@ -182,6 +200,9 @@ namespace evab
                 OrientationAlbumPolicy::GetTilePosition(aPos, aSize, totalBlocks - 1, totalBlocks),
                 TAlbumStretchy::GetTile(END_BLOCK, blockFill(totalBlocks - 1, normalizedValue)),
                 aIsFocused);
+            Coor clearAreaSize = OrientationAlbumPolicy::GetRestSize(aPos, aSize);
+            if (clearAreaSize.X > 0 && clearAreaSize.Y > 0)
+                aScreen->Clear(OrientationAlbumPolicy::GetRestPosition(aPos, aSize), clearAreaSize, aIsFocused);
         }
 
     private:

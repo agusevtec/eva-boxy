@@ -33,7 +33,8 @@ namespace evab
             if (!aText || aSize.Y == 0 || aPosition.X >= displaySize.X || aPosition.Y >= displaySize.Y)
                 return;
 
-            unsigned char textLen = TextTraits<TText>::Length(aText);;
+            unsigned char textLen = TextTraits<TText>::Length(aText);
+            ;
             unsigned char offset = TAlign::Offset(aSize, textLen);
             unsigned char scale = aSize.Y;
             unsigned char maxSymbols = min((int)aSize.X, (int)(displaySize.X - aPosition.X)) / scale;
@@ -49,8 +50,15 @@ namespace evab
                 }
                 else
                 {
-                    Clear(symbolPos, Coor(scale, scale),  aColor);
+                    Clear(symbolPos, Coor(scale, scale), aColor);
                 }
+            }
+            unsigned char drawnWidth = maxSymbols * scale;
+            if (drawnWidth < aSize.X)
+            {
+                Coor tailPos(aPosition.X + drawnWidth, aPosition.Y);
+                Coor tailSize(aSize.X - drawnWidth, aSize.Y);
+                Clear(tailPos, tailSize, aColor);
             }
         }
 
@@ -81,7 +89,6 @@ namespace evab
         virtual void Deserialize(unsigned short aSerialized, Coor &aPosition, Coor &aSize, bool &isFocused) = 0;
 
     private:
-
         virtual void clearTile(Coor position, unsigned char aColor);
     };
 }

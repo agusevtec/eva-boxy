@@ -11,7 +11,7 @@
 //     // Делаем protected методы публичными для тестирования
 //     using WindowAlgorithmBase::indexInWindow;
 //     using WindowAlgorithmBase::setCount;
-//     using WindowAlgorithmBase::resizeWindow;
+//     using WindowAlgorithmBase::setWindowSize;
     
 //     // Реализуем pure virtual Select
 //     void Select(unsigned char aIndex) override
@@ -34,7 +34,7 @@
 // {
 //     TestableWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
 //     algo.Select(5);
     
 //     int index = algo.indexInWindow(5);
@@ -48,7 +48,7 @@
 // {
 //     TestableWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
 //     algo.Select(7);
     
 //     // После Select(7), windowStart = 4
@@ -66,7 +66,7 @@
 // {
 //     TestableWindowAlgorithm algo;
 //     algo.setCount(0);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     algo.Select(5);
 //     assertEqual(-1, algo.getSelected());
@@ -80,14 +80,14 @@
 //     using FlipWindowAlgorithm::getWindowStart;
 //     using FlipWindowAlgorithm::getSelected;
 //     using FlipWindowAlgorithm::setCount;
-//     using FlipWindowAlgorithm::resizeWindow;
+//     using FlipWindowAlgorithm::setWindowSize;
 // };
 
 // test(WindowAlgorithmTests, Flip_SelectValidIndex_CalculatesCorrectWindow)
 // {
 //     TestableFlipWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     algo.Select(7);
     
@@ -99,7 +99,7 @@
 // {
 //     TestableFlipWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     algo.Select(12); // Out of range
     
@@ -110,7 +110,7 @@
 // {
 //     TestableFlipWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     algo.Select(-3);
     
@@ -121,7 +121,7 @@
 // {
 //     TestableFlipWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     // Page 0: items 0-3
 //     algo.Select(2);
@@ -144,14 +144,14 @@
 //     using ScrollWindowAlgorithm::getWindowStart;
 //     using ScrollWindowAlgorithm::getSelected;
 //     using ScrollWindowAlgorithm::setCount;
-//     using ScrollWindowAlgorithm::resizeWindow;
+//     using ScrollWindowAlgorithm::setWindowSize;
 // };
 
 // test(WindowAlgorithmTests, Scroll_SelectValidIndex_MaintainsVisibility)
 // {
 //     TestableScrollWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     algo.Select(7);
     
@@ -165,7 +165,7 @@
 // {
 //     TestableScrollWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     algo.Select(0);
     
@@ -177,7 +177,7 @@
 // {
 //     TestableScrollWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     algo.Select(9);
     
@@ -190,7 +190,7 @@
 // {
 //     TestableScrollWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     algo.Select(1);
     
@@ -202,7 +202,7 @@
 // {
 //     TestableScrollWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     // When selecting item 8, window should show 6-9
 //     algo.Select(8);
@@ -219,7 +219,7 @@
 // {
 //     TestableScrollWindowAlgorithm algo;
 //     algo.setCount(3);
-//     algo.resizeWindow(4); // Window bigger than count
+//     algo.setWindowSize(4); // Window bigger than count
     
 //     algo.Select(2);
     
@@ -231,7 +231,7 @@
 // {
 //     TestableScrollWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(1);
+//     algo.setWindowSize(1);
     
 //     algo.Select(5);
 //     assertEqual(5, algo.getSelected());
@@ -244,7 +244,7 @@
 // {
 //     TestableScrollWindowAlgorithm algo;
 //     algo.setCount(10);
-//     algo.resizeWindow(4);
+//     algo.setWindowSize(4);
     
 //     // Scroll down one by one
 //     algo.Select(0);

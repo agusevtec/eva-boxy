@@ -4,8 +4,8 @@
 namespace evab
 {
 
-  WindowAlgorithmBase::WindowAlgorithmBase()
-      : mSelected(0), mWindowStart(0), mWindowSize(0), mCount(0)
+  WindowAlgorithmBase::WindowAlgorithmBase(unsigned char aCount)
+      : mSelected(0), mWindowStart(0), mWindowSize(0), mCount(aCount)
   {
   }
 
@@ -24,13 +24,11 @@ namespace evab
     return mSelected;
   }
 
-  void WindowAlgorithmBase::setCount(unsigned char Count)
+  void WindowAlgorithmBase::setCount(unsigned char aCount)
   {
-      mCount = Count;
-    if (mCount)
-      mSelected = 0;
+    mCount = aCount;
   }
-  void WindowAlgorithmBase::resizeWindow(unsigned char aWindowSize)
+  void WindowAlgorithmBase::setWindowSize(unsigned char aWindowSize)
   {
     mWindowSize = aWindowSize;
   }

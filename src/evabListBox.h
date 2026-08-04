@@ -16,25 +16,33 @@ namespace evab
   class ListBox : public ElementBase, public TWindowAlgorithm
   {
   private:
-    ElementBase **mItems = nullptr; ///< Array of item pointers
-    unsigned char mItemHeight = 1;  ///< Height of each item
+    unsigned char mItemHeight;  ///< Height of each item
+    ElementBase **mItems; ///< Array of item pointers
 
   public:
+    ListBox(unsigned char aItemHeight)
+        : mItemHeight(max(1, aItemHeight)), mItems(nullptr), TWindowAlgorithm(0)
+    {
+    }
+
+    template <int N>
+    ListBox(unsigned char aItemHeight, ElementBase *(&aItems)[N])
+        : mItemHeight(max(1, aItemHeight)), mItems(aItems), TWindowAlgorithm(N)
+    {
+    }
+
     /**
      * @brief Sets the list of items to display
      *
      * @param aItems Array of element pointers
-     * @param aCount Number of items
      * @return Reference to this list box
      */
-    ListBox<TWindowAlgorithm> &SetItems(ElementBase *aItems[], int aCount)
+    template <int N>
+    void SetItems(ElementBase *(&aItems)[N])
     {
       mItems = aItems;
-      TWindowAlgorithm::setCount(aCount);
-      if (aCount)
-        Select(0);
+      TWindowAlgorithm::setCount(N);
       redraw();
-      return *this;
     }
 
     /**
@@ -43,11 +51,10 @@ namespace evab
      * @param aItemHeight Height in tiles
      * @return Reference to this list box
      */
-    ListBox<TWindowAlgorithm> &SetItemHeight(unsigned char aItemHeight)
+    void SetItemHeight(unsigned char aItemHeight)
     {
       mItemHeight = aItemHeight;
       redraw();
-      return *this;
     }
 
     /**
@@ -117,7 +124,7 @@ namespace evab
      */
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
-      TWindowAlgorithm::resizeWindow(aSize.Y / mItemHeight);
+      TWindowAlgorithm::setWindowSize(aSize.Y / mItemHeight);
       unsigned char visibleElementsCount = 0;
       signed char selected = TWindowAlgorithm::Selected();
       freezer();
