@@ -100,13 +100,15 @@
   </compound>
   <compound refid="classevab_1_1_flip_window_algorithm" kind="class"><name>evab::FlipWindowAlgorithm</name>
     <member refid="classevab_1_1_flip_window_algorithm_1aac2d515d87926e57f4255638a7bcf1da" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_flip_window_algorithm_1a5f3b40d7497cec78962b9595d71ec6d7" kind="function"><name>WindowAlgorithmBase</name></member>
   </compound>
   <compound refid="classevab_1_1_layout_base_1_1_focus_chain" kind="class"><name>evab::LayoutBase::FocusChain</name>
-    <member refid="classevab_1_1_layout_base_1_1_focus_chain_1af26f1bee593b2bdc448437919ce1d2a3" kind="variable"><name>mNext</name></member>
     <member refid="classevab_1_1_layout_base_1_1_focus_chain_1a58103379a376ae3d28534ef29b8ecf4c" kind="function"><name>FocusChain</name></member>
-    <member refid="classevab_1_1_layout_base_1_1_focus_chain_1a5481401fffc68e93ceb4681a0bd25575" kind="function"><name>Next</name></member>
-    <member refid="classevab_1_1_layout_base_1_1_focus_chain_1ae92bc312ac48cb5960a7b693541e9e68" kind="function"><name>SetNext</name></member>
-    <member refid="classevab_1_1_layout_base_1_1_focus_chain_1ac7b8c59b7c9e57a03432801e4a8684e0" kind="function"><name>AsElementBase</name></member>
+  </compound>
+  <compound refid="classevab_1_1_layout_base_1_1_focus_chain_base" kind="class"><name>evab::LayoutBase::FocusChainBase</name>
+    <member refid="classevab_1_1_layout_base_1_1_focus_chain_base_1a855f24e196196825e8c2122b1db06a55" kind="variable"><name>element</name></member>
+    <member refid="classevab_1_1_layout_base_1_1_focus_chain_base_1a084bef0e0e2d7121b0621dd8bd9f0197" kind="variable"><name>next</name></member>
+    <member refid="classevab_1_1_layout_base_1_1_focus_chain_base_1abd0f79a7fe28b9a1527408e6c4ee15e3" kind="function"><name>FocusChainBase</name></member>
   </compound>
   <compound refid="classevab_1_1_font8_bold" kind="class"><name>evab::Font8Bold</name>
     <member refid="classevab_1_1_font8_bold_1a0074ecde2f9c001eaa061cb1bbba8dd8" kind="variable"><name>PROGMEM</name></member>
@@ -137,22 +139,18 @@
     <member refid="classevab_1_1_grid_1a18c93524c7f9f9d8ee24d5142c69a619" kind="function"><name>Clear</name></member>
     <member refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" kind="function"><name>GetPos</name></member>
     <member refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" kind="function"><name>GetSize</name></member>
-    <member refid="classevab_1_1_grid_1a141d7374a8a4653657add5da1af2c72d" kind="function"><name>GetScreen</name></member>
   </compound>
   <compound refid="structevab_1_1_horizontal_album_policy" kind="struct"><name>evab::HorizontalAlbumPolicy</name>
     <member refid="structevab_1_1_horizontal_album_policy_1abb27014660d5ff3c28a31f4fd27e1f10" kind="function"><name>CalculateTotalBlocks</name></member>
     <member refid="structevab_1_1_horizontal_album_policy_1ac87bd9ca25de70b82e3fc3f8202433f3" kind="function"><name>CalculateResolution</name></member>
     <member refid="structevab_1_1_horizontal_album_policy_1a05307cabfecd9cdb0bad1edd02a70623" kind="function"><name>GetTilePosition</name></member>
+    <member refid="structevab_1_1_horizontal_album_policy_1a1aaa75678794c93b5a7062761d792820" kind="function"><name>GetRestPosition</name></member>
+    <member refid="structevab_1_1_horizontal_album_policy_1ad1924b888d9cb4071805cee8c7b1f0cb" kind="function"><name>GetRestSize</name></member>
   </compound>
   <compound refid="structevab_1_1_horizontal_text_policy" kind="struct"><name>evab::HorizontalTextPolicy</name>
     <member refid="structevab_1_1_horizontal_text_policy_1a5d14494b4021c124585642624f418ce0" kind="function"><name>CalculateTotalBlocks</name></member>
     <member refid="structevab_1_1_horizontal_text_policy_1a7c078363c87ffd1a844880cf1af95767" kind="function"><name>CalculateResolution</name></member>
     <member refid="structevab_1_1_horizontal_text_policy_1ac77042a165347e08a27164028f9fa7de" kind="function"><name>GetTilePosition</name></member>
-  </compound>
-  <compound refid="classevab_1_1_i_focus_chain" kind="class"><name>evab::IFocusChain</name>
-    <member refid="classevab_1_1_i_focus_chain_1ae5380eadb182f28024cbcb3453745651" kind="function"><name>Next</name></member>
-    <member refid="classevab_1_1_i_focus_chain_1a2c48ce4aa75295a578b5c613e671fb77" kind="function"><name>AsElementBase</name></member>
-    <member refid="classevab_1_1_i_focus_chain_1a864dbc63ec3c2cc2df5497d55cc8df7c" kind="function"><name>SetNext</name></member>
   </compound>
   <compound refid="classevab_1_1_i_font" kind="class"><name>evab::IFont</name>
     <member refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad" kind="function"><name>GetVerticalSlice</name></member>
@@ -165,7 +163,7 @@
     <member refid="classevab_1_1_input_animation_1a92cfcd52e1e47c7395262f46a65a5f38" kind="function"><name>~InputAnimation</name></member>
     <member refid="classevab_1_1_input_animation_1a3edaa1f764be50e1a69321cd1b3b3ce5" kind="function"><name>Select</name></member>
     <member refid="classevab_1_1_input_animation_1a97154ea202d7f49409d509ca6a4b4f03" kind="function"><name>Selected</name></member>
-    <member refid="classevab_1_1_input_animation_1a332f279279ccca033f82e9d6b72bd27d" kind="function"><name>Increment</name></member>
+    <member refid="classevab_1_1_input_animation_1a471631071007ecb3fc57734ee83803de" kind="function"><name>Increment</name></member>
     <member refid="classevab_1_1_input_animation_1ac0a404c643c0ec3e045ffe17d3ccc4a6" kind="function"><name>Count</name></member>
     <member refid="classevab_1_1_input_animation_1a345f41086e051dc3a55b2bb85a393251" kind="function"><name>drawer</name></member>
     <member refid="classevab_1_1_input_animation_1a572f935838f4044db6add055ff8b7dea" kind="function"><name>freezer</name></member>
@@ -223,7 +221,7 @@
     <member refid="classevab_1_1_input_selector_album_1a8a32c42052ccbee75b96177077e5e84d" kind="function"><name>InputSelectorAlbum</name></member>
     <member refid="classevab_1_1_input_selector_album_1a6d17d02843944c4252485f657829090d" kind="function"><name>Select</name></member>
     <member refid="classevab_1_1_input_selector_album_1af24f1cdb88175bb7419744899803e687" kind="function"><name>Selected</name></member>
-    <member refid="classevab_1_1_input_selector_album_1a34042de0169de257d304bafbf0e8365d" kind="function"><name>Increment</name></member>
+    <member refid="classevab_1_1_input_selector_album_1a92cc335ae70f79e61135e29f2ad7e0d3" kind="function"><name>Increment</name></member>
     <member refid="classevab_1_1_input_selector_album_1a7d30fc321d621f4bebce4a9a52385ef8" kind="function"><name>Count</name></member>
     <member refid="classevab_1_1_input_selector_album_1a14690e2ee4213c0ece17b5ddadd2681e" kind="function"><name>drawer</name></member>
   </compound>
@@ -270,19 +268,18 @@
   </compound>
   <compound refid="classevab_1_1_labeled" kind="class"><name>evab::Labeled</name>
     <member refid="classevab_1_1_labeled_1a6689d3f69cafef608f4540a962d0ba56" kind="variable"><name>mName</name></member>
-    <member refid="classevab_1_1_labeled_1a5fb6daf0071c512ea5bc206c1e27134e" kind="function"><name>Labeled</name></member>
+    <member refid="classevab_1_1_labeled_1af7be1d6eddadd16b42e178fbfd62aa40" kind="function"><name>Labeled</name></member>
     <member refid="classevab_1_1_labeled_1a16441832385aaa9bac602fbe0785bcb7" kind="function"><name>SetLabel</name></member>
     <member refid="classevab_1_1_labeled_1a910de10f3f5e7f116e24035f69251756" kind="function"><name>GetLabel</name></member>
     <member refid="classevab_1_1_labeled_1afa6f2c9e3657e37e5b50096d78eddb29" kind="function"><name>drawer</name></member>
-    <member refid="classevab_1_1_labeled_1a56f9cc57754ca42aacc672362599e6fa" kind="function"><name>freezer</name></member>
   </compound>
   <compound refid="classevab_1_1_layout_base" kind="class"><name>evab::LayoutBase</name>
-    <member refid="classevab_1_1_layout_base_1aabfadd6f4046033c784fff720eaf15ae" kind="variable"><name>mFocusedChild</name></member>
-    <member refid="classevab_1_1_layout_base_1a53a88e28da114cb86c9d6044ca1fefe9" kind="function"><name>IsFocused</name></member>
+    <member refid="classevab_1_1_layout_base_1ab5162437cdea3504973a306eb9fd1f5f" kind="variable"><name>mFocusedChild</name></member>
+    <member refid="classevab_1_1_layout_base_1a031ea7859e02906c7ced080b1dd08488" kind="function"><name>IsFocused</name></member>
     <member refid="classevab_1_1_layout_base_1a328d6a9a3bf60afdf20269675de83e13" kind="function"><name>GetFocused</name></member>
     <member refid="classevab_1_1_layout_base_1a27d54aedee90e1d09cc55ea4745b9f4d" kind="function"><name>Increment</name></member>
     <member refid="classevab_1_1_layout_base_1a000e80032f71921ba1b04296c4d0eae1" kind="function"><name>OnKey</name></member>
-    <member refid="classevab_1_1_layout_base_1a87641a868f78782aaf21d50c314465f8" kind="function"><name>focusChild</name></member>
+    <member refid="classevab_1_1_layout_base_1a0112254f948e252aeab694a166ea1364" kind="function"><name>focusChild</name></member>
     <member refid="classevab_1_1_layout_base_1add166aea3c25c38285b1c8292bef5c97" kind="function"><name>focusNext</name></member>
     <member refid="classevab_1_1_layout_base_1a11b109ea5bdc8f73cf92f5de13ac0e89" kind="function"><name>focusPrev</name></member>
     <member refid="classevab_1_1_layout_base_1a19f2077c47eb065de6d8f73fa0086ac6" kind="function"><name>onResidualKey</name></member>
@@ -292,16 +289,26 @@
     <member refid="structevab_1_1_left_align_1a4d78eb355a68d67bab21b4ecdb3df892" kind="function"><name>Offset</name></member>
   </compound>
   <compound refid="classevab_1_1_list_box" kind="class"><name>evab::ListBox</name>
-    <member refid="classevab_1_1_list_box_1a6dfb005b07d66413a46374f2d9e3af49" kind="variable"><name>mItems</name></member>
     <member refid="classevab_1_1_list_box_1a5b808c111b6340facf18cc7d4db995ab" kind="variable"><name>mItemHeight</name></member>
-    <member refid="classevab_1_1_list_box_1a917ef4c39172d9049d7e05d9f0892e51" kind="function"><name>SetItems</name></member>
-    <member refid="classevab_1_1_list_box_1a66346e4bce8db02561578824dc11136f" kind="function"><name>SetItemHeight</name></member>
+    <member refid="classevab_1_1_list_box_1a6dfb005b07d66413a46374f2d9e3af49" kind="variable"><name>mItems</name></member>
+    <member refid="classevab_1_1_list_box_1afa956f4cbbe1c5c2346415e42bf1c8b3" kind="function"><name>ListBox</name></member>
+    <member refid="classevab_1_1_list_box_1af0b30968888f81dd4d440e13a6d48f08" kind="function"><name>ListBox</name></member>
+    <member refid="classevab_1_1_list_box_1a9c23198dd3c4325baa98c585d085d27b" kind="function"><name>SetItems</name></member>
+    <member refid="classevab_1_1_list_box_1adc0301c110fa708383dc790b770d22e5" kind="function"><name>SetItemHeight</name></member>
     <member refid="classevab_1_1_list_box_1aca63169d0cf1992e2db5c1de2e86e650" kind="function"><name>Select</name></member>
     <member refid="classevab_1_1_list_box_1abc1820aba632f45d2a25bce7da84decb" kind="function"><name>GetItem</name></member>
     <member refid="classevab_1_1_list_box_1a940b2683cc7c2ff8fb5b73811b6f6803" kind="function"><name>Increment</name></member>
     <member refid="classevab_1_1_list_box_1a6118e90323c529f34bfb5fa3dbafdc35" kind="function"><name>OnKey</name></member>
     <member refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5" kind="function"><name>drawer</name></member>
     <member refid="classevab_1_1_list_box_1a54b5f34924f25c1066393ca958c046b3" kind="function"><name>freezer</name></member>
+  </compound>
+  <compound refid="classevab_1_1_padding_h" kind="class"><name>evab::PaddingH</name>
+    <member refid="classevab_1_1_padding_h_1acc87360742879593079f8b83ab635496" kind="function"><name>PaddingH</name></member>
+    <member refid="classevab_1_1_padding_h_1a3ea417ef9fe290ace460baf7ca477f16" kind="function"><name>drawer</name></member>
+  </compound>
+  <compound refid="classevab_1_1_padding_v" kind="class"><name>evab::PaddingV</name>
+    <member refid="classevab_1_1_padding_v_1a25067eb3bd93f4d5f8f6c39b2f0309d5" kind="function"><name>PaddingV</name></member>
+    <member refid="classevab_1_1_padding_v_1a691955dac47ae3710a8c304f4236c236" kind="function"><name>drawer</name></member>
   </compound>
   <compound refid="classevab_1_1_percent" kind="class"><name>evab::Percent</name>
     <member refid="classevab_1_1_percent_1a40eaaf971934719bb1d4ea9fe6b4a3b9" kind="variable"><name>mStep</name></member>
@@ -454,6 +461,7 @@
   </compound>
   <compound refid="classevab_1_1_scroll_window_algorithm" kind="class"><name>evab::ScrollWindowAlgorithm</name>
     <member refid="classevab_1_1_scroll_window_algorithm_1ac4b713b71b2eb92edc7fed245c3af426" kind="function"><name>Select</name></member>
+    <member refid="classevab_1_1_scroll_window_algorithm_1a5f3b40d7497cec78962b9595d71ec6d7" kind="function"><name>WindowAlgorithmBase</name></member>
   </compound>
   <compound refid="classevab_1_1_text_label" kind="class"><name>evab::TextLabel</name>
     <member refid="classevab_1_1_text_label_1a3b2ab8014c14256601615b30f824ad4c" kind="variable"><name>mText</name></member>
@@ -464,27 +472,28 @@
     <member refid="classevab_1_1_text_label_1a59bde6aea39896ecd58c8cc4fafe083b" kind="function"><name>freezer</name></member>
   </compound>
   <compound refid="structevab_1_1_text_traits" kind="struct"><name>evab::TextTraits</name>
+    <member refid="structevab_1_1_text_traits_1ad7992955e98a49ce5217954402eb5898" kind="function"><name>Length</name></member>
+    <member refid="structevab_1_1_text_traits_1afed4d00938dd1d465bd43d4ddd6e703e" kind="function"><name>Read</name></member>
+    <member refid="structevab_1_1_text_traits_1a0864d587d4a430309b9cdf96fdbb8283" kind="function"><name>Length</name></member>
+    <member refid="structevab_1_1_text_traits_1a49483b3ad50bd07c9f3247bd950124a8" kind="function"><name>Read</name></member>
+    <member refid="structevab_1_1_text_traits_1aec7ad9242500ee84705ee05431b3d195" kind="function"><name>Length</name></member>
+    <member refid="structevab_1_1_text_traits_1a31b15c0c57f81b9d36718a71abc49c37" kind="function"><name>Read</name></member>
+    <member refid="structevab_1_1_text_traits_1a12c1a4d75e82d473614e888b2648410b" kind="function"><name>Length</name></member>
+    <member refid="structevab_1_1_text_traits_1aeefff45500474d9aa2561e682a854e1e" kind="function"><name>Read</name></member>
   </compound>
-  <compound refid="structevab_1_1_text_traits_3_01_____flash_string_helper_01_5_01_4" kind="struct"><name>evab::TextTraits&lt; __FlashStringHelper * &gt;</name>
-    <member refid="structevab_1_1_text_traits_3_01_____flash_string_helper_01_5_01_4_1a1240361407f87df83999406ce9986632" kind="function"><name>Length</name></member>
-    <member refid="structevab_1_1_text_traits_3_01_____flash_string_helper_01_5_01_4_1ae69fca9f9f9af89d0055059e22b45e29" kind="function"><name>Read</name></member>
-  </compound>
-  <compound refid="structevab_1_1_text_traits_3_01char_01_5_01_4" kind="struct"><name>evab::TextTraits&lt; char * &gt;</name>
-    <member refid="structevab_1_1_text_traits_3_01char_01_5_01_4_1a01684b669e008c82ac417b885fc1e77d" kind="function"><name>Length</name></member>
-    <member refid="structevab_1_1_text_traits_3_01char_01_5_01_4_1af89c64faa641d42d4959708d3bc4df3b" kind="function"><name>Read</name></member>
-  </compound>
-  <compound refid="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4" kind="struct"><name>evab::TextTraits&lt; const __FlashStringHelper * &gt;</name>
-    <member refid="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4_1a5965724ba7beb162a8a37a42d3a8d29b" kind="function"><name>Length</name></member>
-    <member refid="structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4_1a44f4a8e28a1c610a67692c4a98dbbbd1" kind="function"><name>Read</name></member>
-  </compound>
-  <compound refid="structevab_1_1_text_traits_3_01const_01char_01_5_01_4" kind="struct"><name>evab::TextTraits&lt; const char * &gt;</name>
-    <member refid="structevab_1_1_text_traits_3_01const_01char_01_5_01_4_1a5303199e42e091b06b3524066b4237e5" kind="function"><name>Length</name></member>
-    <member refid="structevab_1_1_text_traits_3_01const_01char_01_5_01_4_1a9101cd7492e1dc789a6c25a3146af2c5" kind="function"><name>Read</name></member>
+  <compound refid="classevab_1_1_titled" kind="class"><name>evab::Titled</name>
+    <member refid="classevab_1_1_titled_1a6957ff636cc52c620fbe50c45c9492b5" kind="variable"><name>mName</name></member>
+    <member refid="classevab_1_1_titled_1a551f4f13496917291d325f370adce822" kind="function"><name>Titled</name></member>
+    <member refid="classevab_1_1_titled_1a59aa766872a7353407147310050496d5" kind="function"><name>SetLabel</name></member>
+    <member refid="classevab_1_1_titled_1abc0b70a6abe4a3452ee3db4a9a55cbba" kind="function"><name>GetLabel</name></member>
+    <member refid="classevab_1_1_titled_1a61cb444a976b5485db602cbb837894c8" kind="function"><name>drawer</name></member>
   </compound>
   <compound refid="structevab_1_1_vertical_album_policy" kind="struct"><name>evab::VerticalAlbumPolicy</name>
     <member refid="structevab_1_1_vertical_album_policy_1aee1fa087d7fccbded4678c14fe4108b1" kind="function"><name>CalculateTotalBlocks</name></member>
     <member refid="structevab_1_1_vertical_album_policy_1a6f89212d16f2293b592568e83ba4abb4" kind="function"><name>CalculateResolution</name></member>
     <member refid="structevab_1_1_vertical_album_policy_1add3e31fd106684ec41c82ed771a2dea0" kind="function"><name>GetTilePosition</name></member>
+    <member refid="structevab_1_1_vertical_album_policy_1ae1dce8366eadd760737f97710b3e3736" kind="function"><name>GetRestPosition</name></member>
+    <member refid="structevab_1_1_vertical_album_policy_1a1748af3e80edc7484c18de5fc892eea7" kind="function"><name>GetRestSize</name></member>
   </compound>
   <compound refid="structevab_1_1_vertical_text_policy" kind="struct"><name>evab::VerticalTextPolicy</name>
     <member refid="structevab_1_1_vertical_text_policy_1af2de32784aaa20492f791705de6cfd38" kind="function"><name>CalculateTotalBlocks</name></member>
@@ -496,14 +505,14 @@
     <member refid="classevab_1_1_window_algorithm_base_1a4497e65bb6a552bbfb5cee546ec01754" kind="variable"><name>mCount</name></member>
     <member refid="classevab_1_1_window_algorithm_base_1a7d09fb0297ad04dc361d2295c71d3ddd" kind="variable"><name>mWindowStart</name></member>
     <member refid="classevab_1_1_window_algorithm_base_1aa52d795bb2867c194b512badeeeb4c4e" kind="variable"><name>mWindowSize</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a49ff76a91bd5eb6f61195da64824d310" kind="function"><name>WindowAlgorithmBase</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a5f3b40d7497cec78962b9595d71ec6d7" kind="function"><name>WindowAlgorithmBase</name></member>
     <member refid="classevab_1_1_window_algorithm_base_1a64f7b5f3026d02f69dbfdce8d52c4a89" kind="function"><name>Select</name></member>
     <member refid="classevab_1_1_window_algorithm_base_1a58020e092373f757dcf6105f5ee80da4" kind="function"><name>Selected</name></member>
     <member refid="classevab_1_1_window_algorithm_base_1a7f3ed7df6d39609211d04da29495751b" kind="function"><name>Count</name></member>
     <member refid="classevab_1_1_window_algorithm_base_1a722790197126e550bc96800acd38faa6" kind="function"><name>WindowSize</name></member>
     <member refid="classevab_1_1_window_algorithm_base_1a4f13e98ae4ace7ec0993a5ea9788a483" kind="function"><name>indexInWindow</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a2df38e0073bb276e00271f2dd947a534" kind="function"><name>setCount</name></member>
-    <member refid="classevab_1_1_window_algorithm_base_1a768533f33c2366e719dcb6fa59f04c65" kind="function"><name>resizeWindow</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1a55fea5369afd26fb4db00cb51b6ad447" kind="function"><name>setCount</name></member>
+    <member refid="classevab_1_1_window_algorithm_base_1ac27d614897a34588c75d22047245cd64" kind="function"><name>setWindowSize</name></member>
   </compound>
   <compound refid="namespaceeva" kind="namespace"><name>eva</name>
   </compound>
@@ -516,12 +525,12 @@
     <member refid="evab_input_text_stretch_bar_8h_1a3084ed355ae65ee08396b93acc689db8" kind="typedef"><name>TextHorizontalProgressBar</name></member>
     <member refid="evab_input_text_stretch_bar_8h_1a96206b0bc1ad82a113b01953e5529e2f" kind="typedef"><name>TextVerticalScrollBar</name></member>
     <member refid="evab_input_text_stretch_bar_8h_1ad9e6b3b839d3249d214c9051c3d363cb" kind="typedef"><name>TextHorizontalScrollBar</name></member>
-    <member refid="evab_labeled_8h_1aefeb2bf275dc393403a1507ab027e177" kind="typedef"><name>LabeledLeft</name></member>
-    <member refid="evab_labeled_8h_1a2fca5da100695b2bf54e568f36cf4000" kind="typedef"><name>LabeledCenter</name></member>
-    <member refid="evab_labeled_8h_1aec055ade89933595a0464f3b4b5d5c69" kind="typedef"><name>LabeledRight</name></member>
-    <member refid="evab_labeled_8h_1a9fbffa947b2c7bf5d5ac229ff7795ac8" kind="typedef"><name>LabeledLeftF</name></member>
-    <member refid="evab_labeled_8h_1a44805379ba244c604686ed79930a6568" kind="typedef"><name>LabeledCenterF</name></member>
-    <member refid="evab_labeled_8h_1a7f20f146fdff0eb6195980a2d355db59" kind="typedef"><name>LabeledRightF</name></member>
+    <member refid="evab_labeled_8h_1a3898388d2448a803e976719a019c7767" kind="typedef"><name>LabeledLeft</name></member>
+    <member refid="evab_labeled_8h_1ad16036d4863ab82e8a82142ff6a2c45b" kind="typedef"><name>LabeledCenter</name></member>
+    <member refid="evab_labeled_8h_1ae91b6d4618df30dd6bb2280eea16cf30" kind="typedef"><name>LabeledRight</name></member>
+    <member refid="evab_labeled_8h_1a660be5b20a98624580e112ceabe3de75" kind="typedef"><name>LabeledLeftF</name></member>
+    <member refid="evab_labeled_8h_1afaa7e052cee2d3d63bb30c78621731da" kind="typedef"><name>LabeledCenterF</name></member>
+    <member refid="evab_labeled_8h_1a35f185c762e5822de944539a5ac7352a" kind="typedef"><name>LabeledRightF</name></member>
     <member refid="evab_list_box_8h_1ab0e402829f916a7ac10c7166d1cd151e" kind="typedef"><name>ScrollListbox</name></member>
     <member refid="evab_list_box_8h_1a0cc3d8204a1b4527982f648e2f153804" kind="typedef"><name>FlipListbox</name></member>
     <member refid="evab_text_label_8h_1afef33725ec2dc9d95117e42d6265799b" kind="typedef"><name>TextLabelLeft</name></member>
@@ -533,6 +542,12 @@
     <member refid="evab_text_label_8h_1a999046e2d257e38374d0971b52bb324c" kind="typedef"><name>TextLabelLeftF</name></member>
     <member refid="evab_text_label_8h_1a8f7233582a94bf12559b27a5fb8bf061" kind="typedef"><name>TextLabelCenterF</name></member>
     <member refid="evab_text_label_8h_1ad5ad7805c11033055fdba99a38bc9059" kind="typedef"><name>TextLabelRightF</name></member>
+    <member refid="evab_titled_8h_1a6b5c3cf902f8d7a907ba6b4a3cf23902" kind="typedef"><name>TitledLeft</name></member>
+    <member refid="evab_titled_8h_1a6cd80f314c804361624ab39348d5c3c0" kind="typedef"><name>TitledCenter</name></member>
+    <member refid="evab_titled_8h_1a7c5585a2d61b6ad550b3dca25868f613" kind="typedef"><name>TitledRight</name></member>
+    <member refid="evab_titled_8h_1a75324c2f224dd43f442295dc74d89a38" kind="typedef"><name>TitledLeftF</name></member>
+    <member refid="evab_titled_8h_1a11d9e0e7b502a58a150fabdab51b377a" kind="typedef"><name>TitledCenterF</name></member>
+    <member refid="evab_titled_8h_1a5e013dbb0bd150feb8f50322356081fb" kind="typedef"><name>TitledRightF</name></member>
     <member refid="evab_serializers_8h_1aa5c8a3753a7787e08f51e73bebbd1e09" kind="function"><name>serialize_16x8</name></member>
     <member refid="evab_serializers_8h_1a03b280ac012295c05807836a32f299c4" kind="function"><name>deserialize_16x8</name></member>
     <member refid="evab_serializers_8h_1a95bd885987c140b2a0e8ce5d9914ce39" kind="function"><name>serialize_32x4</name></member>
@@ -591,6 +606,12 @@
   </compound>
   <compound refid="evab_input_text_stretch_bar_8h" kind="file"><name>evabInputTextStretchBar.h</name>
   </compound>
+  <compound refid="evab_key_catcher_8h" kind="file"><name>evabKeyCatcher.h</name>
+  </compound>
+  <compound refid="evab_key_modifier_8h" kind="file"><name>evabKeyModifier.h</name>
+  </compound>
+  <compound refid="evab_key_reactor_8h" kind="file"><name>evabKeyReactor.h</name>
+  </compound>
   <compound refid="evab_keys_8h" kind="file"><name>evabKeys.h</name>
     <member refid="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bc" kind="enum"><name>Keys</name></member>
     <member refid="evab_keys_8h_1a0ada92b8263d776ca3c779d2a0e031bca0483607aa811d9b40ce925494621a188" kind="enumvalue"><name>KEY_MENU</name></member>
@@ -624,9 +645,9 @@
   </compound>
   <compound refid="evab_list_box_8h" kind="file"><name>evabListBox.h</name>
   </compound>
-  <compound refid="evab_percent_8h" kind="file"><name>evabPercent.h</name>
+  <compound refid="evab_padding_8h" kind="file"><name>evabPadding.h</name>
   </compound>
-  <compound refid="evab_reactions_8h" kind="file"><name>evabReactions.h</name>
+  <compound refid="evab_percent_8h" kind="file"><name>evabPercent.h</name>
   </compound>
   <compound refid="evab_screen_8h" kind="file"><name>evabScreen.h</name>
   </compound>
@@ -653,6 +674,8 @@
   <compound refid="evab_text_label_8h" kind="file"><name>evabTextLabel.h</name>
   </compound>
   <compound refid="evab_text_traits_8h" kind="file"><name>evabTextTraits.h</name>
+  </compound>
+  <compound refid="evab_titled_8h" kind="file"><name>evabTitled.h</name>
   </compound>
   <compound refid="evab_window_algorithms_8h" kind="file"><name>evabWindowAlgorithms.h</name>
   </compound>

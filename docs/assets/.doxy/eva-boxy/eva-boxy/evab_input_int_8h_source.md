@@ -35,16 +35,19 @@ namespace evab
 
   class InputIntDiscrete : public InputInt
   {
-    unsigned char mCount;
-    int mMin;
-    int mMax;
 
   public:
     InputIntDiscrete(int aValue, unsigned char aCount, int aMin, int aMax);
     void Select(unsigned char aIndex);
+
     signed short Selected() const;
     unsigned char Count() const { return mCount; }
     void Increment(int aSteps);
+
+  private:
+    unsigned char mCount;
+    int mMin;
+    int mMax;
   };
 
 }

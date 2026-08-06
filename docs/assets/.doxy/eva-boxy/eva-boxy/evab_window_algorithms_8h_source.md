@@ -16,39 +16,41 @@ namespace evab
   class WindowAlgorithmBase
   {
   public:
-    WindowAlgorithmBase();
-    
+    WindowAlgorithmBase(unsigned char aCount = 0);
+
     virtual void Select(unsigned char aIndex) = 0;
-    
+
     signed short Selected();
-    
+
     unsigned char Count();
-    
+
     unsigned char WindowSize();
 
   protected:
     signed char indexInWindow(unsigned char aPosition);
-    
-    void setCount(unsigned char Count);
-    
-    void resizeWindow(unsigned char aWindowSize);
+
+    void setCount(unsigned char aCount);
+
+    void setWindowSize(unsigned char aWindowSize);
 
   protected:
-    unsigned char mSelected;     
-    unsigned char mCount;        
-    unsigned char mWindowStart;  
-    unsigned char mWindowSize;   
+    unsigned char mSelected;    
+    unsigned char mCount;       
+    unsigned char mWindowStart; 
+    unsigned char mWindowSize;  
   };
 
   class FlipWindowAlgorithm : public WindowAlgorithmBase
   {
   public:
+    using WindowAlgorithmBase::WindowAlgorithmBase;
     void Select(unsigned char aIndex) override;
   };
 
   class ScrollWindowAlgorithm : public WindowAlgorithmBase
   {
   public:
+    using WindowAlgorithmBase::WindowAlgorithmBase;
     void Select(unsigned char aIndex) override;
   };
 

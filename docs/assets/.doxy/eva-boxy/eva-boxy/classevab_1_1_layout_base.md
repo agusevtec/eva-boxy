@@ -75,7 +75,7 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 | ---: | :--- |
 |  [**ElementBase**](classevab_1_1_element_base.md) \* | [**GetFocused**](#function-getfocused) () const<br>_Gets the current (focused) child._  |
 |  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the selection by a delta._  |
-|  bool | [**IsFocused**](#function-isfocused) ([**IFocusChain**](classevab_1_1_i_focus_chain.md) \* aChild) <br>_Checks if a child is currently focused._  |
+|  bool | [**IsFocused**](#function-isfocused) (FocusChainBase \* aChild) <br>_Checks if a child is currently focused._  |
 | virtual bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events by forwarding to focused child._  |
 
 
@@ -138,7 +138,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**focusChild**](#function-focuschild) ([**IFocusChain**](classevab_1_1_i_focus_chain.md) \* aChild) <br>_Sets the current (focused) child._  |
+|  void | [**focusChild**](#function-focuschild) (FocusChainBase \* aChild) <br>_Sets the current (focused) child._  |
 
 
 ## Protected Functions inherited from evab::ElementBase
@@ -229,7 +229,7 @@ Positive delta moves forward (next), negative moves backward (prev)
 _Checks if a child is currently focused._ 
 ```C++
 bool evab::LayoutBase::IsFocused (
-    IFocusChain * aChild
+    FocusChainBase * aChild
 ) 
 ```
 
@@ -301,7 +301,7 @@ Implements [*evab::ElementBase::OnKey*](classevab_1_1_element_base.md#function-o
 _Sets the current (focused) child._ 
 ```C++
 void evab::LayoutBase::focusChild (
-    IFocusChain * aChild
+    FocusChainBase * aChild
 ) 
 ```
 

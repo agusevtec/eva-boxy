@@ -51,9 +51,9 @@ namespace evab
             return mValue;
         }
 
-        void Increment(signed char delta)
+        void Increment(signed char aSteps)
         {
-            Select(mValue + delta);
+            Select(mValue + aSteps);
         }
 
         unsigned char Count() const

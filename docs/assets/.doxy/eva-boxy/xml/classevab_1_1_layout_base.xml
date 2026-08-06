@@ -4,11 +4,12 @@
     <compoundname>evab::LayoutBase</compoundname>
     <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
     <includes refid="evab_layout_base_8h" local="no">evabLayoutBase.h</includes>
+    <innerclass refid="classevab_1_1_layout_base_1_1_focus_chain_base" prot="private">evab::LayoutBase::FocusChainBase</innerclass>
     <innerclass refid="classevab_1_1_layout_base_1_1_focus_chain" prot="private">evab::LayoutBase::FocusChain</innerclass>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classevab_1_1_layout_base_1aabfadd6f4046033c784fff720eaf15ae" prot="private" static="no" mutable="no">
-        <type><ref refid="classevab_1_1_i_focus_chain" kindref="compound">IFocusChain</ref> *</type>
-        <definition>IFocusChain* evab::LayoutBase::mFocusedChild</definition>
+      <memberdef kind="variable" id="classevab_1_1_layout_base_1ab5162437cdea3504973a306eb9fd1f5f" prot="private" static="no" mutable="no">
+        <type>FocusChainBase *</type>
+        <definition>FocusChainBase* evab::LayoutBase::mFocusedChild</definition>
         <argsstring></argsstring>
         <name>mFocusedChild</name>
         <qualifiedname>evab::LayoutBase::mFocusedChild</qualifiedname>
@@ -20,18 +21,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="158" column="17" bodyfile="src/evabLayoutBase.h" bodystart="158" bodyend="-1"/>
+        <location file="src/evabLayoutBase.h" line="129" column="20" bodyfile="src/evabLayoutBase.h" bodystart="129" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_layout_base_1a53a88e28da114cb86c9d6044ca1fefe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a031ea7859e02906c7ced080b1dd08488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool evab::LayoutBase::IsFocused</definition>
-        <argsstring>(IFocusChain *aChild)</argsstring>
+        <argsstring>(FocusChainBase *aChild)</argsstring>
         <name>IsFocused</name>
         <qualifiedname>evab::LayoutBase::IsFocused</qualifiedname>
         <param>
-          <type><ref refid="classevab_1_1_i_focus_chain" kindref="compound">IFocusChain</ref> *</type>
+          <type>FocusChainBase *</type>
           <declname>aChild</declname>
         </param>
         <briefdescription>
@@ -53,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="97" column="10"/>
+        <location file="src/evabLayoutBase.h" line="68" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_layout_base_1a328d6a9a3bf60afdf20269675de83e13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
@@ -71,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="104" column="17"/>
+        <location file="src/evabLayoutBase.h" line="75" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_layout_base_1a27d54aedee90e1d09cc55ea4745b9f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -101,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="113" column="10"/>
+        <location file="src/evabLayoutBase.h" line="84" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_layout_base_1a000e80032f71921ba1b04296c4d0eae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -133,18 +134,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="121" column="10"/>
+        <location file="src/evabLayoutBase.h" line="92" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classevab_1_1_layout_base_1a87641a868f78782aaf21d50c314465f8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a0112254f948e252aeab694a166ea1364" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::LayoutBase::focusChild</definition>
-        <argsstring>(IFocusChain *aChild)</argsstring>
+        <argsstring>(FocusChainBase *aChild)</argsstring>
         <name>focusChild</name>
         <qualifiedname>evab::LayoutBase::focusChild</qualifiedname>
         <param>
-          <type><ref refid="classevab_1_1_i_focus_chain" kindref="compound">IFocusChain</ref> *</type>
+          <type>FocusChainBase *</type>
           <declname>aChild</declname>
         </param>
         <briefdescription>
@@ -164,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="129" column="10"/>
+        <location file="src/evabLayoutBase.h" line="100" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -181,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="135" column="10"/>
+        <location file="src/evabLayoutBase.h" line="106" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_layout_base_1a11b109ea5bdc8f73cf92f5de13ac0e89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -196,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="140" column="10"/>
+        <location file="src/evabLayoutBase.h" line="111" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_layout_base_1a19f2077c47eb065de6d8f73fa0086ac6" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -228,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="150" column="18"/>
+        <location file="src/evabLayoutBase.h" line="121" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_layout_base_1a6c6e9092d6242cfe65a31c365229e597" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -244,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="155" column="18"/>
+        <location file="src/evabLayoutBase.h" line="126" column="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -277,20 +278,20 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabLayoutBase.h" line="37" column="3" bodyfile="src/evabLayoutBase.h" bodystart="38" bodyend="159"/>
+    <location file="src/evabLayoutBase.h" line="16" column="3" bodyfile="src/evabLayoutBase.h" bodystart="17" bodyend="130"/>
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Draw</name></member>
       <member refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" virt="pure-virtual"><scope>evab::LayoutBase</scope><name>drawer</name></member>
-      <member refid="classevab_1_1_layout_base_1a87641a868f78782aaf21d50c314465f8" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusChild</name></member>
+      <member refid="classevab_1_1_layout_base_1a0112254f948e252aeab694a166ea1364" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusChild</name></member>
       <member refid="classevab_1_1_layout_base_1add166aea3c25c38285b1c8292bef5c97" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusNext</name></member>
       <member refid="classevab_1_1_layout_base_1a11b109ea5bdc8f73cf92f5de13ac0e89" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusPrev</name></member>
       <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Freeze</name></member>
       <member refid="classevab_1_1_layout_base_1a6c6e9092d6242cfe65a31c365229e597" prot="private" virt="virtual"><scope>evab::LayoutBase</scope><name>freezer</name></member>
       <member refid="classevab_1_1_layout_base_1a328d6a9a3bf60afdf20269675de83e13" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>GetFocused</name></member>
       <member refid="classevab_1_1_layout_base_1a27d54aedee90e1d09cc55ea4745b9f4d" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Increment</name></member>
-      <member refid="classevab_1_1_layout_base_1a53a88e28da114cb86c9d6044ca1fefe9" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>IsFocused</name></member>
+      <member refid="classevab_1_1_layout_base_1a031ea7859e02906c7ced080b1dd08488" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>IsFocused</name></member>
       <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>isFrozen</name></member>
-      <member refid="classevab_1_1_layout_base_1aabfadd6f4046033c784fff720eaf15ae" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>mFocusedChild</name></member>
+      <member refid="classevab_1_1_layout_base_1ab5162437cdea3504973a306eb9fd1f5f" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>mFocusedChild</name></member>
       <member refid="classevab_1_1_layout_base_1a000e80032f71921ba1b04296c4d0eae1" prot="public" virt="virtual"><scope>evab::LayoutBase</scope><name>OnKey</name></member>
       <member refid="classevab_1_1_layout_base_1a19f2077c47eb065de6d8f73fa0086ac6" prot="private" virt="virtual"><scope>evab::LayoutBase</scope><name>onResidualKey</name></member>
       <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>redraw</name></member>

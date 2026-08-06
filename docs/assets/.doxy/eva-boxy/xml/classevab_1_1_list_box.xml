@@ -11,29 +11,12 @@
       </param>
     </templateparamlist>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classevab_1_1_list_box_1a6dfb005b07d66413a46374f2d9e3af49" prot="private" static="no" mutable="no">
-        <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> **</type>
-        <definition>ElementBase** evab::ListBox&lt; TWindowAlgorithm &gt;::mItems</definition>
-        <argsstring></argsstring>
-        <name>mItems</name>
-        <qualifiedname>evab::ListBox::mItems</qualifiedname>
-        <initializer>= nullptr</initializer>
-        <briefdescription>
-<para>Array of item pointers. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabListBox.h" line="19" column="17" bodyfile="src/evabListBox.h" bodystart="19" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="classevab_1_1_list_box_1a5b808c111b6340facf18cc7d4db995ab" prot="private" static="no" mutable="no">
         <type>unsigned char</type>
         <definition>unsigned char evab::ListBox&lt; TWindowAlgorithm &gt;::mItemHeight</definition>
         <argsstring></argsstring>
         <name>mItemHeight</name>
         <qualifiedname>evab::ListBox::mItemHeight</qualifiedname>
-        <initializer>= 1</initializer>
         <briefdescription>
 <para>Height of each item. </para>
         </briefdescription>
@@ -41,24 +24,90 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="20" column="19" bodyfile="src/evabListBox.h" bodystart="20" bodyend="-1"/>
+        <location file="src/evabListBox.h" line="19" column="19" bodyfile="src/evabListBox.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_list_box_1a6dfb005b07d66413a46374f2d9e3af49" prot="private" static="no" mutable="no">
+        <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> **</type>
+        <definition>ElementBase** evab::ListBox&lt; TWindowAlgorithm &gt;::mItems</definition>
+        <argsstring></argsstring>
+        <name>mItems</name>
+        <qualifiedname>evab::ListBox::mItems</qualifiedname>
+        <briefdescription>
+<para>Array of item pointers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabListBox.h" line="20" column="17" bodyfile="src/evabListBox.h" bodystart="20" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_list_box_1a917ef4c39172d9049d7e05d9f0892e51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classevab_1_1_list_box" kindref="compound">ListBox</ref>&lt; TWindowAlgorithm &gt; &amp;</type>
-        <definition>ListBox&lt; TWindowAlgorithm &gt; &amp; evab::ListBox&lt; TWindowAlgorithm &gt;::SetItems</definition>
-        <argsstring>(ElementBase *aItems[], int aCount)</argsstring>
+      <memberdef kind="function" id="classevab_1_1_list_box_1afa956f4cbbe1c5c2346415e42bf1c8b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>evab::ListBox&lt; TWindowAlgorithm &gt;::ListBox</definition>
+        <argsstring>(unsigned char aItemHeight)</argsstring>
+        <name>ListBox</name>
+        <qualifiedname>evab::ListBox::ListBox</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aItemHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabListBox.h" line="23" column="5" bodyfile="src/evabListBox.h" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_list_box_1af0b30968888f81dd4d440e13a6d48f08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>evab::ListBox&lt; TWindowAlgorithm &gt;::ListBox</definition>
+        <argsstring>(unsigned char aItemHeight, ElementBase *(&amp;aItems)[N])</argsstring>
+        <name>ListBox</name>
+        <qualifiedname>evab::ListBox::ListBox</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aItemHeight</declname>
+        </param>
+        <param>
+          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *(&amp;)</type>
+          <declname>aItems</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabListBox.h" line="29" column="5" bodyfile="src/evabListBox.h" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_list_box_1a9c23198dd3c4325baa98c585d085d27b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void evab::ListBox&lt; TWindowAlgorithm &gt;::SetItems</definition>
+        <argsstring>(ElementBase *(&amp;aItems)[N])</argsstring>
         <name>SetItems</name>
         <qualifiedname>evab::ListBox::SetItems</qualifiedname>
         <param>
-          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *(&amp;)</type>
           <declname>aItems</declname>
-          <array>[]</array>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>aCount</declname>
+          <array>[N]</array>
         </param>
         <briefdescription>
 <para>Sets the list of items to display. </para>
@@ -72,14 +121,6 @@
 <para>Array of element pointers </para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>aCount</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Number of items </para>
-</parameterdescription>
-</parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>Reference to this list box </para>
 </simplesect>
@@ -87,11 +128,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="30" column="13" bodyfile="src/evabListBox.h" bodystart="30" bodyend="38"/>
+        <location file="src/evabListBox.h" line="41" column="10" bodyfile="src/evabListBox.h" bodystart="41" bodyend="46"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_list_box_1a66346e4bce8db02561578824dc11136f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classevab_1_1_list_box" kindref="compound">ListBox</ref>&lt; TWindowAlgorithm &gt; &amp;</type>
-        <definition>ListBox&lt; TWindowAlgorithm &gt; &amp; evab::ListBox&lt; TWindowAlgorithm &gt;::SetItemHeight</definition>
+      <memberdef kind="function" id="classevab_1_1_list_box_1adc0301c110fa708383dc790b770d22e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::ListBox&lt; TWindowAlgorithm &gt;::SetItemHeight</definition>
         <argsstring>(unsigned char aItemHeight)</argsstring>
         <name>SetItemHeight</name>
         <qualifiedname>evab::ListBox::SetItemHeight</qualifiedname>
@@ -118,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="46" column="13" bodyfile="src/evabListBox.h" bodystart="46" bodyend="51"/>
+        <location file="src/evabListBox.h" line="54" column="10" bodyfile="src/evabListBox.h" bodystart="54" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_list_box_1aca63169d0cf1992e2db5c1de2e86e650" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -147,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="58" column="10" bodyfile="src/evabListBox.h" bodystart="58" bodyend="62"/>
+        <location file="src/evabListBox.h" line="65" column="10" bodyfile="src/evabListBox.h" bodystart="65" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_list_box_1abc1820aba632f45d2a25bce7da84decb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
@@ -178,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="70" column="17" bodyfile="src/evabListBox.h" bodystart="70" bodyend="75"/>
+        <location file="src/evabListBox.h" line="77" column="17" bodyfile="src/evabListBox.h" bodystart="77" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_list_box_1a940b2683cc7c2ff8fb5b73811b6f6803" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -207,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="82" column="10" bodyfile="src/evabListBox.h" bodystart="82" bodyend="85"/>
+        <location file="src/evabListBox.h" line="89" column="10" bodyfile="src/evabListBox.h" bodystart="89" bodyend="92"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_list_box_1a6118e90323c529f34bfb5fa3dbafdc35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -239,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="93" column="10" bodyfile="src/evabListBox.h" bodystart="93" bodyend="107"/>
+        <location file="src/evabListBox.h" line="100" column="10" bodyfile="src/evabListBox.h" bodystart="100" bodyend="114"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -307,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="118" column="10" bodyfile="src/evabListBox.h" bodystart="118" bodyend="134"/>
+        <location file="src/evabListBox.h" line="125" column="10" bodyfile="src/evabListBox.h" bodystart="125" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_list_box_1a54b5f34924f25c1066393ca958c046b3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -323,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabListBox.h" line="139" column="10" bodyfile="src/evabListBox.h" bodystart="139" bodyend="143"/>
+        <location file="src/evabListBox.h" line="146" column="10" bodyfile="src/evabListBox.h" bodystart="146" bodyend="150"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -376,7 +417,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabListBox.h" line="16" column="3" bodyfile="src/evabListBox.h" bodystart="17" bodyend="144"/>
+    <location file="src/evabListBox.h" line="16" column="3" bodyfile="src/evabListBox.h" bodystart="17" bodyend="151"/>
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>Draw</name></member>
       <member refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5" prot="protected" virt="virtual"><scope>evab::ListBox</scope><name>drawer</name></member>
@@ -385,13 +426,15 @@
       <member refid="classevab_1_1_list_box_1abc1820aba632f45d2a25bce7da84decb" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>GetItem</name></member>
       <member refid="classevab_1_1_list_box_1a940b2683cc7c2ff8fb5b73811b6f6803" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>Increment</name></member>
       <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::ListBox</scope><name>isFrozen</name></member>
+      <member refid="classevab_1_1_list_box_1afa956f4cbbe1c5c2346415e42bf1c8b3" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>ListBox</name></member>
+      <member refid="classevab_1_1_list_box_1af0b30968888f81dd4d440e13a6d48f08" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>ListBox</name></member>
       <member refid="classevab_1_1_list_box_1a5b808c111b6340facf18cc7d4db995ab" prot="private" virt="non-virtual"><scope>evab::ListBox</scope><name>mItemHeight</name></member>
       <member refid="classevab_1_1_list_box_1a6dfb005b07d66413a46374f2d9e3af49" prot="private" virt="non-virtual"><scope>evab::ListBox</scope><name>mItems</name></member>
       <member refid="classevab_1_1_list_box_1a6118e90323c529f34bfb5fa3dbafdc35" prot="public" virt="virtual"><scope>evab::ListBox</scope><name>OnKey</name></member>
       <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::ListBox</scope><name>redraw</name></member>
       <member refid="classevab_1_1_list_box_1aca63169d0cf1992e2db5c1de2e86e650" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>Select</name></member>
-      <member refid="classevab_1_1_list_box_1a66346e4bce8db02561578824dc11136f" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>SetItemHeight</name></member>
-      <member refid="classevab_1_1_list_box_1a917ef4c39172d9049d7e05d9f0892e51" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>SetItems</name></member>
+      <member refid="classevab_1_1_list_box_1adc0301c110fa708383dc790b770d22e5" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>SetItemHeight</name></member>
+      <member refid="classevab_1_1_list_box_1a9c23198dd3c4325baa98c585d085d27b" prot="public" virt="non-virtual"><scope>evab::ListBox</scope><name>SetItems</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

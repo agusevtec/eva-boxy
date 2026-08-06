@@ -12,7 +12,7 @@
 
 _Decorator that modifies values using increment/decrement keys._ [More...](#detailed-description)
 
-* `#include <evabReactions.h>`
+* `#include <evabKeyModifier.h>`
 
 
 
@@ -170,5 +170,5 @@ true if the key was handled, false otherwise
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabReactions.h`
+The documentation for this class was generated from the following file `src/evabKeyModifier.h`
 

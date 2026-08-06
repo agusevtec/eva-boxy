@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="67" column="19" bodyfile="src/evabInputFloat.h" bodystart="67" bodyend="-1"/>
+        <location file="src/evabInputFloat.h" line="98" column="19" bodyfile="src/evabInputFloat.h" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_float_discrete_1a6a57bfdd14ca9d1d2e40c2666fc81513" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="68" column="11" bodyfile="src/evabInputFloat.h" bodystart="68" bodyend="-1"/>
+        <location file="src/evabInputFloat.h" line="99" column="11" bodyfile="src/evabInputFloat.h" bodystart="99" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_float_discrete_1a0876bf4ad87bcf026d823201a6e7e9d0" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="69" column="11" bodyfile="src/evabInputFloat.h" bodystart="69" bodyend="-1"/>
+        <location file="src/evabInputFloat.h" line="100" column="11" bodyfile="src/evabInputFloat.h" bodystart="100" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -72,12 +72,47 @@
           <declname>aMax</declname>
         </param>
         <briefdescription>
+<para>Constructs a discrete float input. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial value (snapped to nearest step). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of steps (must be &gt;= 2). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aMin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum value (inclusive). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aMax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum value (inclusive). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="72" column="5"/>
+        <location file="src/evabInputFloat.h" line="77" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_discrete_1abd22f24281fa1b1d765c0aad20c0a0a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -90,12 +125,13 @@
           <declname>aIndex</declname>
         </param>
         <briefdescription>
+<para>Selects a step by index (0 to <ref refid="classevab_1_1_input_float_discrete_1ab3e61270f77bce7b7f5128f9da81ed97" kindref="member">Count()</ref>-1). </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="73" column="10"/>
+        <location file="src/evabInputFloat.h" line="81" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_discrete_1a5bd855e678e8eb956217f0c30cf60df9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>signed short</type>
@@ -104,12 +140,13 @@
         <name>Selected</name>
         <qualifiedname>evab::InputFloatDiscrete::Selected</qualifiedname>
         <briefdescription>
+<para>Returns the currently selected index. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="74" column="18"/>
+        <location file="src/evabInputFloat.h" line="85" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_discrete_1ab3e61270f77bce7b7f5128f9da81ed97" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
@@ -118,12 +155,13 @@
         <name>Count</name>
         <qualifiedname>evab::InputFloatDiscrete::Count</qualifiedname>
         <briefdescription>
+<para>Returns the total number of steps. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="75" column="19" bodyfile="src/evabInputFloat.h" bodystart="75" bodyend="75"/>
+        <location file="src/evabInputFloat.h" line="89" column="19" bodyfile="src/evabInputFloat.h" bodystart="89" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_float_discrete_1a9c9f37219e7c5bc29465a30b48cbcac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -136,12 +174,23 @@
           <declname>aSteps</declname>
         </param>
         <briefdescription>
+<para>Increments the pictogram index. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSteps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount to increment (positive or negative) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputFloat.h" line="76" column="10"/>
+        <location file="src/evabInputFloat.h" line="95" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -186,7 +235,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputFloat.h" line="65" column="3" bodyfile="src/evabInputFloat.h" bodystart="66" bodyend="77"/>
+    <location file="src/evabInputFloat.h" line="65" column="3" bodyfile="src/evabInputFloat.h" bodystart="66" bodyend="101"/>
     <listofallmembers>
       <member refid="classevab_1_1_input_float_discrete_1ab3e61270f77bce7b7f5128f9da81ed97" prot="public" virt="non-virtual"><scope>evab::InputFloatDiscrete</scope><name>Count</name></member>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputFloatDiscrete</scope><name>Draw</name></member>

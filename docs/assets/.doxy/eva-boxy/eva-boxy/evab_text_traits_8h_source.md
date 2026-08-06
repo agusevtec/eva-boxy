@@ -16,12 +16,9 @@
 namespace evab
 {
 
-    template<typename T>
-    struct TextTraits;
-
-    template<>
-    struct TextTraits<const char*>
+    struct TextTraits
     {
+
         static unsigned char Length(const char* aText)
         {
             return strlen(aText);
@@ -31,11 +28,7 @@ namespace evab
         {
             return aText[aIndex];
         }
-    };
 
-    template<>
-    struct TextTraits<char*>
-    {
         static unsigned char Length(char* aText)
         {
             return strlen(aText);
@@ -45,11 +38,7 @@ namespace evab
         {
             return aText[aIndex];
         }
-    };
 
-    template<>
-    struct TextTraits<const __FlashStringHelper*>
-    {
         static unsigned char Length(const __FlashStringHelper* aText)
         {
             return strlen_P((const char*)aText);
@@ -59,11 +48,7 @@ namespace evab
         {
             return pgm_read_byte((const char*)aText + aIndex);
         }
-    };
 
-    template<>
-    struct TextTraits<__FlashStringHelper*>
-    {
         static unsigned char Length(__FlashStringHelper* aText)
         {
             return strlen_P((const char*)aText);
@@ -74,7 +59,6 @@ namespace evab
             return pgm_read_byte((const char*)aText + aIndex);
         }
     };
-
 }
 ```
 

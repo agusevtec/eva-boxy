@@ -56,6 +56,8 @@ _Policy for vertical orientation of stretch bars._
 | ---: | :--- |
 |  unsigned short | [**CalculateResolution**](#function-calculateresolution) ([**Coor**](structevab_1_1_coor.md) aSize) <br>_Calculates resolution (number of possible positions)._  |
 |  unsigned short | [**CalculateTotalBlocks**](#function-calculatetotalblocks) ([**Coor**](structevab_1_1_coor.md) aSize) <br>_Calculates total number of blocks._  |
+|  [**Coor**](structevab_1_1_coor.md) | [**GetRestPosition**](#function-getrestposition) ([**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize) <br> |
+|  [**Coor**](structevab_1_1_coor.md) | [**GetRestSize**](#function-getrestsize) ([**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize) <br> |
 |  [**Coor**](structevab_1_1_coor.md) | [**GetTilePosition**](#function-gettileposition) ([**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char index, unsigned char total) <br>_Gets position of a block._  |
 
 
@@ -151,6 +153,38 @@ Total number of blocks
 
 
         
+
+<hr>
+
+
+
+### function GetRestPosition 
+
+```C++
+static inline Coor evab::VerticalAlbumPolicy::GetRestPosition (
+    Coor aPos,
+    Coor aSize
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function GetRestSize 
+
+```C++
+static inline Coor evab::VerticalAlbumPolicy::GetRestSize (
+    Coor aPos,
+    Coor aSize
+) 
+```
+
+
+
 
 <hr>
 

@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_titled" kind="class" language="C++" prot="public">
+    <compoundname>evab::Titled</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <includes refid="evab_titled_8h" local="no">evabTitled.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+      <param>
+        <type>typename TAlign</type>
+      </param>
+      <param>
+        <type>typename TText</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_titled_1a6957ff636cc52c620fbe50c45c9492b5" prot="private" static="no" mutable="no">
+        <type>TText</type>
+        <definition>TText evab::Titled&lt; T, TAlign, TText &gt;::mName</definition>
+        <argsstring></argsstring>
+        <name>mName</name>
+        <qualifiedname>evab::Titled::mName</qualifiedname>
+        <briefdescription>
+<para>Label text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTitled.h" line="84" column="11" bodyfile="src/evabTitled.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_titled_1a551f4f13496917291d325f370adce822" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>evab::Titled&lt; T, TAlign, TText &gt;::Titled</definition>
+        <argsstring>(TText aName, Args &amp;&amp;... args)</argsstring>
+        <name>Titled</name>
+        <qualifiedname>evab::Titled::Titled</qualifiedname>
+        <param>
+          <type>TText</type>
+          <declname>aName</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_titled" kindref="compound">Titled</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label text </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments forwarded to the base element constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTitled.h" line="32" column="5" bodyfile="src/evabTitled.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_titled_1a59aa766872a7353407147310050496d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::Titled&lt; T, TAlign, TText &gt;::SetLabel</definition>
+        <argsstring>(TText aName)</argsstring>
+        <name>SetLabel</name>
+        <qualifiedname>evab::Titled::SetLabel</qualifiedname>
+        <param>
+          <type>TText</type>
+          <declname>aName</declname>
+        </param>
+        <briefdescription>
+<para>Sets new label text and redraws. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New label text </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTitled.h" line="42" column="10" bodyfile="src/evabTitled.h" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_titled_1abc0b70a6abe4a3452ee3db4a9a55cbba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>TText</type>
+        <definition>TText evab::Titled&lt; T, TAlign, TText &gt;::GetLabel</definition>
+        <argsstring>() const</argsstring>
+        <name>GetLabel</name>
+        <qualifiedname>evab::Titled::GetLabel</qualifiedname>
+        <briefdescription>
+<para>Gets current label text. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current label text </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTitled.h" line="53" column="11" bodyfile="src/evabTitled.h" bodystart="53" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_titled_1a61cb444a976b5485db602cbb837894c8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::Titled&lt; T, TAlign, TText &gt;::drawer</definition>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::Titled::drawer</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+<para>Draws the <ref refid="classevab_1_1_titled" kindref="compound">Titled</ref> element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabTitled.h" line="67" column="10" bodyfile="src/evabTitled.h" bodystart="67" bodyend="81"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Decorator that adds a label to any element with alignment. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Wraps an element and adds a text label either to the left (single line) or above (multi-line).</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Element type to label </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TAlign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alignment strategy for label (<ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref>, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref>, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text type (const char*, __FlashStringHelper*) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::Titled&lt; T, TAlign, TText &gt;</label>
+        <link refid="classevab_1_1_titled"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::Titled&lt; T, TAlign, TText &gt;</label>
+        <link refid="classevab_1_1_titled"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabTitled.h" line="22" column="3" bodyfile="src/evabTitled.h" bodystart="23" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_titled_1a61cb444a976b5485db602cbb837894c8" prot="protected" virt="non-virtual"><scope>evab::Titled</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_titled_1abc0b70a6abe4a3452ee3db4a9a55cbba" prot="public" virt="non-virtual"><scope>evab::Titled</scope><name>GetLabel</name></member>
+      <member refid="classevab_1_1_titled_1a6957ff636cc52c620fbe50c45c9492b5" prot="private" virt="non-virtual"><scope>evab::Titled</scope><name>mName</name></member>
+      <member refid="classevab_1_1_titled_1a59aa766872a7353407147310050496d5" prot="public" virt="non-virtual"><scope>evab::Titled</scope><name>SetLabel</name></member>
+      <member refid="classevab_1_1_titled_1a551f4f13496917291d325f370adce822" prot="public" virt="non-virtual"><scope>evab::Titled</scope><name>Titled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

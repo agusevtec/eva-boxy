@@ -12,7 +12,7 @@
 
 _Decorator that triggers events when values change via increment/decrement._ [More...](#detailed-description)
 
-* `#include <evabReactions.h>`
+* `#include <evabKeyReactor.h>`
 
 
 
@@ -195,5 +195,5 @@ true if the key was handled, false otherwise
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabReactions.h`
+The documentation for this class was generated from the following file `src/evabKeyReactor.h`
 

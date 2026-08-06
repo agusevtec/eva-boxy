@@ -44,7 +44,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::InputFloat**](classevab_1_1_input_float.md) _Float input element._     
         * **class** [**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md) _Discrete float input element._ 
     * **class** [**evab::InputInt**](classevab_1_1_input_int.md) _Integer input element._     
-        * **class** [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md) 
+        * **class** [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md) _Discrete integer input element._ 
     * **class** [**evab::InputSelectorAlbum**](classevab_1_1_input_selector_album.md) _Pictogram-based input element._ 
     * **class** [**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md) _Stretch bar input element with Albumgram support._ 
     * **class** [**evab::InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) _Text-based stretch bar element._ 
@@ -61,7 +61,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::Font8Compact**](classevab_1_1_font8_compact.md) _8x8 compact font implementation_ 
     * **class** [**evab::Font8Narrow**](classevab_1_1_font8_narrow.md) _8x8 thin font implementation_ 
 * **class** [**evab::Grid**](classevab_1_1_grid.md) _Layout manager for grid-based UI arrangement._ 
-* **class** [**evab::IFocusChain**](classevab_1_1_i_focus_chain.md) 
 * **class** [**evab::Screen**](classevab_1_1_screen.md) _Base class for screen implementations._     
     * **class** [**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) _I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._ 
     * **class** [**evab::ScreenPage8Base**](classevab_1_1_screen_page8_base.md) _Base class for page-based 8-bit screens._     
@@ -71,7 +70,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
         * **class** [**evab::ScreenSSH1106**](classevab_1_1_screen_s_s_h1106.md) _SSH1106 screen driver for OLED displays._ 
         * **class** [**evab::ScreenSerialPixel**](classevab_1_1_screen_serial_pixel.md) _Debug screen that renders pixels to serial output._ 
     * **class** [**evab::ScreenSerialText**](classevab_1_1_screen_serial_text.md) _Debug screen that renders text to serial output._ 
-* **struct** [**evab::CenterAlign**](structevab_1_1_center_align.md) 
+* **class** [**evab::LayoutBase::FocusChainBase**](classevab_1_1_layout_base_1_1_focus_chain_base.md) 
+* **struct** [**evab::CenterAlign**](structevab_1_1_center_align.md) _Center alignment strategy._ 
 * **struct** [**evab::CharsetHorizontalProgressBar**](structevab_1_1_charset_horizontal_progress_bar.md) _Character set for horizontal progress bar._ 
 * **struct** [**evab::CharsetHorizontalScrollBar**](structevab_1_1_charset_horizontal_scroll_bar.md) _Character set for horizontal scroll bar._ 
 * **struct** [**evab::CharsetVerticalProgressBar**](structevab_1_1_charset_vertical_progress_bar.md) _Character set for vertical progress bar._ 
@@ -79,13 +79,9 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **struct** [**evab::Coor**](structevab_1_1_coor.md) _Coordinate structure for positions and sizes on screen._ 
 * **struct** [**evab::HorizontalAlbumPolicy**](structevab_1_1_horizontal_album_policy.md) _Policy for horizontal orientation of stretch bars._ 
 * **struct** [**evab::HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md) _Policy for horizontal text-based stretch bars._ 
-* **struct** [**evab::LeftAlign**](structevab_1_1_left_align.md) 
-* **struct** [**evab::RightAlign**](structevab_1_1_right_align.md) 
+* **struct** [**evab::LeftAlign**](structevab_1_1_left_align.md) _Left alignment strategy._ 
+* **struct** [**evab::RightAlign**](structevab_1_1_right_align.md) _Right alignment strategy._ 
 * **struct** [**evab::TextTraits**](structevab_1_1_text_traits.md) _Traits for C-string (char\*)._ 
-* **struct** [**evab::TextTraits&lt; \_\_FlashStringHelper \* &gt;**](structevab_1_1_text_traits_3_01_____flash_string_helper_01_5_01_4.md) 
-* **struct** [**evab::TextTraits&lt; char \* &gt;**](structevab_1_1_text_traits_3_01char_01_5_01_4.md) 
-* **struct** [**evab::TextTraits&lt; const \_\_FlashStringHelper \* &gt;**](structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4.md) _Traits for Flash string (\_\_FlashStringHelper\*)._ 
-* **struct** [**evab::TextTraits&lt; const char \* &gt;**](structevab_1_1_text_traits_3_01const_01char_01_5_01_4.md) 
 * **struct** [**evab::VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) _Policy for vertical orientation of stretch bars._ 
 * **struct** [**evab::VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) _Policy for vertical text-based stretch bars._ 
 * **class** **eva::IHandler**    
@@ -97,9 +93,14 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::KeyModifier**](classevab_1_1_key_modifier.md) _Decorator that modifies values using increment/decrement keys._ 
     * **class** [**evab::KeyReactor**](classevab_1_1_key_reactor.md) _Decorator that triggers events when values change via increment/decrement._ 
     * **class** [**evab::Labeled**](classevab_1_1_labeled.md) _Decorator that adds a label to any element with alignment._ 
+    * **class** [**evab::PaddingH**](classevab_1_1_padding_h.md) _Decorator that adds horizontal padding (left and right) to any element._ 
+    * **class** [**evab::PaddingV**](classevab_1_1_padding_v.md) _Decorator that adds vertical padding (top and bottom) to any element._ 
+    * **class** [**evab::Titled**](classevab_1_1_titled.md) _Decorator that adds a label to any element with alignment._ 
     * **class** [**evab::LayoutBase::FocusChain**](classevab_1_1_layout_base_1_1_focus_chain.md) _Wrapper that chains elements in a circular doubly-linked list._ 
 * **class** **TWindowAlgorithm**    
     * **class** [**evab::ListBox**](classevab_1_1_list_box.md) _List box element with configurable windowing algorithm._ 
 * **class** **TElement**    
     * **class** [**evab::Percent**](classevab_1_1_percent.md) [_**Percent**_](classevab_1_1_percent.md) _modifier for discrete inputs._
+* **class** **evab::LayoutBase::FocusChainBase**    
+    * **class** [**evab::LayoutBase::FocusChain**](classevab_1_1_layout_base_1_1_focus_chain.md) _Wrapper that chains elements in a circular doubly-linked list._ 
 

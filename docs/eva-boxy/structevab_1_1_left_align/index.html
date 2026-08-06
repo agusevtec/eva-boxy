@@ -685,6 +685,10 @@
 
 <h1 id="struct-evableftalign">Struct evab::LeftAlign<a class="headerlink" href="#struct-evableftalign" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>LeftAlign</strong></a></p>
+<p><em>Left alignment strategy.</em> </p>
+<ul>
+<li><code>#include &lt;evabTextAlign.h&gt;</code></li>
+</ul>
 <h2 id="public-static-functions">Public Static Functions<a class="headerlink" href="#public-static-functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -696,18 +700,26 @@
 <tbody>
 <tr>
 <td style="text-align: right;">unsigned char</td>
-<td style="text-align: left;"><a href="#function-offset"><strong>Offset</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char textLen) <br></td>
+<td style="text-align: left;"><a href="#function-offset"><strong>Offset</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char textLen) <br><em>Calculates offset for left alignment.</em></td>
 </tr>
 </tbody>
 </table>
 <h2 id="public-static-functions-documentation">Public Static Functions Documentation<a class="headerlink" href="#public-static-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-offset">function Offset<a class="headerlink" href="#function-offset" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LeftAlign</span><span class="o">::</span><span class="n">Offset</span><span class="w"> </span><span class="p">(</span>
+<p><em>Calculates offset for left alignment.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LeftAlign</span><span class="o">::</span><span class="n">Offset</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">textLen</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aSize</code> Available area size </li>
+<li><code>textLen</code> Text length in characters </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>Always 0 (left alignment) </p>
 <hr>
 
 <hr />

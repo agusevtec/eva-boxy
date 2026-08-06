@@ -16,6 +16,7 @@
 ## e
 
 * **END\_BLOCK** ([**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md))
+* **element** ([**evab::LayoutBase::FocusChainBase**](classevab_1_1_layout_base_1_1_focus_chain_base.md))
 
 
 ## m
@@ -30,7 +31,7 @@
 * **mCurrentFrame** ([**evab::InputAnimation**](classevab_1_1_input_animation.md))
 * **mLastFrameTime** ([**evab::InputAnimation**](classevab_1_1_input_animation.md))
 * **mValue** ([**evab::InputAnimation**](classevab_1_1_input_animation.md), [**evab::InputFloat**](classevab_1_1_input_float.md), [**evab::InputInt**](classevab_1_1_input_int.md), [**evab::InputSelectorAlbum**](classevab_1_1_input_selector_album.md))
-* **mName** ([**evab::InputButton**](classevab_1_1_input_button.md), [**evab::Labeled**](classevab_1_1_labeled.md))
+* **mName** ([**evab::InputButton**](classevab_1_1_input_button.md), [**evab::Labeled**](classevab_1_1_labeled.md), [**evab::Titled**](classevab_1_1_titled.md))
 * **maPictogram** ([**evab::InputButtonPicto**](classevab_1_1_input_button_picto.md))
 * **mCount** ([**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md), [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md), [**evab::WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md))
 * **mMax** ([**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md), [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md))
@@ -66,7 +67,11 @@
 * **mSelected** ([**evab::WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md))
 * **mWindowSize** ([**evab::WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md))
 * **mWindowStart** ([**evab::WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md))
-* **mNext** ([**evab::LayoutBase::FocusChain**](classevab_1_1_layout_base_1_1_focus_chain.md))
+
+
+## n
+
+* **next** ([**evab::LayoutBase::FocusChainBase**](classevab_1_1_layout_base_1_1_focus_chain_base.md))
 
 
 ## p

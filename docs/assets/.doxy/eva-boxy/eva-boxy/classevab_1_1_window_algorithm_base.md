@@ -56,7 +56,7 @@ Inherited by the following classes: [evab::FlipWindowAlgorithm](classevab_1_1_fl
 |  unsigned char | [**Count**](#function-count) () <br>_Gets the total number of items._  |
 | virtual void | [**Select**](#function-select) (unsigned char aIndex) = 0<br>_Pure virtual method to select an item._  |
 |  signed short | [**Selected**](#function-selected) () <br>_Gets the currently selected item index._  |
-|   | [**WindowAlgorithmBase**](#function-windowalgorithmbase) () <br>_Constructor for window algorithm base._  |
+|   | [**WindowAlgorithmBase**](#function-windowalgorithmbase) (unsigned char aCount=0) <br>_Constructor for window algorithm base._  |
 |  unsigned char | [**WindowSize**](#function-windowsize) () <br>_Gets the window size._  |
 
 
@@ -95,8 +95,8 @@ Inherited by the following classes: [evab::FlipWindowAlgorithm](classevab_1_1_fl
 | Type | Name |
 | ---: | :--- |
 |  signed char | [**indexInWindow**](#function-indexinwindow) (unsigned char aPosition) <br>_Calculates the visual index of an item in the current window._  |
-|  void | [**resizeWindow**](#function-resizewindow) (unsigned char aWindowSize) <br>_Resizes the window._  |
-|  void | [**setCount**](#function-setcount) (unsigned char Count) <br>_Sets the total number of items._  |
+|  void | [**setCount**](#function-setcount) (unsigned char aCount) <br>_Sets the total number of items._  |
+|  void | [**setWindowSize**](#function-setwindowsize) (unsigned char aWindowSize) <br>_Resizes the window._  |
 
 
 
@@ -194,11 +194,24 @@ Selected index, or -1 if empty
 
 _Constructor for window algorithm base._ 
 ```C++
-evab::WindowAlgorithmBase::WindowAlgorithmBase () 
+evab::WindowAlgorithmBase::WindowAlgorithmBase (
+    unsigned char aCount=0
+) 
 ```
 
 
 
+
+
+**Parameters:**
+
+
+* `aCount` Total number of items 
+
+
+
+
+        
 
 <hr>
 
@@ -323,11 +336,38 @@ Visual index, or -1 if not visible
 
 
 
-### function resizeWindow 
+### function setCount 
+
+_Sets the total number of items._ 
+```C++
+void evab::WindowAlgorithmBase::setCount (
+    unsigned char aCount
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aCount` Total number of items 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function setWindowSize 
 
 _Resizes the window._ 
 ```C++
-void evab::WindowAlgorithmBase::resizeWindow (
+void evab::WindowAlgorithmBase::setWindowSize (
     unsigned char aWindowSize
 ) 
 ```
@@ -340,33 +380,6 @@ void evab::WindowAlgorithmBase::resizeWindow (
 
 
 * `aWindowSize` New window size 
-
-
-
-
-        
-
-<hr>
-
-
-
-### function setCount 
-
-_Sets the total number of items._ 
-```C++
-void evab::WindowAlgorithmBase::setCount (
-    unsigned char Count
-) 
-```
-
-
-
-
-
-**Parameters:**
-
-
-* `Count` Total number of items 
 
 
 

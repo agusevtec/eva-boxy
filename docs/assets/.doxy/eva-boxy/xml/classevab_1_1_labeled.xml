@@ -29,11 +29,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="89" column="11" bodyfile="src/evabLabeled.h" bodystart="89" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="87" column="11" bodyfile="src/evabLabeled.h" bodystart="87" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_labeled_1a5fb6daf0071c512ea5bc206c1e27134e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_labeled_1af7be1d6eddadd16b42e178fbfd62aa40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -43,7 +43,7 @@
         </templateparamlist>
         <type></type>
         <definition>evab::Labeled&lt; T, TAlign, TText &gt;::Labeled</definition>
-        <argsstring>(TText aName, Args &amp;&amp;... args)</argsstring>
+        <argsstring>(TText aName, Args &amp;&amp;...args)</argsstring>
         <name>Labeled</name>
         <qualifiedname>evab::Labeled::Labeled</qualifiedname>
         <param>
@@ -195,20 +195,6 @@
         </inbodydescription>
         <location file="src/evabLabeled.h" line="67" column="10" bodyfile="src/evabLabeled.h" bodystart="67" bodyend="84"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_labeled_1a56f9cc57754ca42aacc672362599e6fa" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void evab::Labeled&lt; T, TAlign, TText &gt;::freezer</definition>
-        <argsstring>() override</argsstring>
-        <name>freezer</name>
-        <qualifiedname>evab::Labeled::freezer</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabLabeled.h" line="86" column="10" bodyfile="src/evabLabeled.h" bodystart="86" bodyend="86"/>
-      </memberdef>
     </sectiondef>
     <briefdescription>
 <para>Decorator that adds a label to any element with alignment. </para>
@@ -264,12 +250,11 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabLabeled.h" line="22" column="3" bodyfile="src/evabLabeled.h" bodystart="23" bodyend="90"/>
+    <location file="src/evabLabeled.h" line="22" column="3" bodyfile="src/evabLabeled.h" bodystart="23" bodyend="88"/>
     <listofallmembers>
       <member refid="classevab_1_1_labeled_1afa6f2c9e3657e37e5b50096d78eddb29" prot="protected" virt="non-virtual"><scope>evab::Labeled</scope><name>drawer</name></member>
-      <member refid="classevab_1_1_labeled_1a56f9cc57754ca42aacc672362599e6fa" prot="protected" virt="non-virtual"><scope>evab::Labeled</scope><name>freezer</name></member>
       <member refid="classevab_1_1_labeled_1a910de10f3f5e7f116e24035f69251756" prot="public" virt="non-virtual"><scope>evab::Labeled</scope><name>GetLabel</name></member>
-      <member refid="classevab_1_1_labeled_1a5fb6daf0071c512ea5bc206c1e27134e" prot="public" virt="non-virtual"><scope>evab::Labeled</scope><name>Labeled</name></member>
+      <member refid="classevab_1_1_labeled_1af7be1d6eddadd16b42e178fbfd62aa40" prot="public" virt="non-virtual"><scope>evab::Labeled</scope><name>Labeled</name></member>
       <member refid="classevab_1_1_labeled_1a6689d3f69cafef608f4540a962d0ba56" prot="private" virt="non-virtual"><scope>evab::Labeled</scope><name>mName</name></member>
       <member refid="classevab_1_1_labeled_1a16441832385aaa9bac602fbe0785bcb7" prot="public" virt="non-virtual"><scope>evab::Labeled</scope><name>SetLabel</name></member>
     </listofallmembers>

@@ -33,8 +33,7 @@ namespace evab
             if (!aText || aSize.Y == 0 || aPosition.X >= displaySize.X || aPosition.Y >= displaySize.Y)
                 return;
 
-            unsigned char textLen = TextTraits<TText>::Length(aText);
-            ;
+            unsigned char textLen = TextTraits::Length(aText);
             unsigned char offset = TAlign::Offset(aSize, textLen);
             unsigned char scale = aSize.Y;
             unsigned char maxSymbols = min((int)aSize.X, (int)(displaySize.X - aPosition.X)) / scale;
@@ -45,7 +44,7 @@ namespace evab
                 uint8_t textIndex = i - offset;
                 if (textIndex < textLen)
                 {
-                    char symbol = TextTraits<TText>::Read(aText, textIndex);
+                    char symbol = TextTraits::Read(aText, textIndex);
                     DrawSymbol(symbolPos, Coor(scale, scale), symbol, aColor);
                 }
                 else

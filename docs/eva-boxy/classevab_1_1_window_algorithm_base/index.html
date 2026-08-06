@@ -825,10 +825,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-resizewindow" class="md-nav__link">
+  <a href="#function-setcount" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function resizeWindow
+        function setCount
       
     </span>
   </a>
@@ -836,10 +836,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setcount" class="md-nav__link">
+  <a href="#function-setwindowsize" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function setCount
+        function setWindowSize
       
     </span>
   </a>
@@ -901,7 +901,7 @@
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-windowalgorithmbase"><strong>WindowAlgorithmBase</strong></a> () <br><em>Constructor for window algorithm base.</em></td>
+<td style="text-align: left;"><a href="#function-windowalgorithmbase"><strong>WindowAlgorithmBase</strong></a> (unsigned char aCount=0) <br><em>Constructor for window algorithm base.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">unsigned char</td>
@@ -951,11 +951,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-resizewindow"><strong>resizeWindow</strong></a> (unsigned char aWindowSize) <br><em>Resizes the window.</em></td>
+<td style="text-align: left;"><a href="#function-setcount"><strong>setCount</strong></a> (unsigned char aCount) <br><em>Sets the total number of items.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setcount"><strong>setCount</strong></a> (unsigned char Count) <br><em>Sets the total number of items.</em></td>
+<td style="text-align: left;"><a href="#function-setwindowsize"><strong>setWindowSize</strong></a> (unsigned char aWindowSize) <br><em>Resizes the window.</em></td>
 </tr>
 </tbody>
 </table>
@@ -995,9 +995,15 @@
 
 <h3 id="function-windowalgorithmbase">function WindowAlgorithmBase<a class="headerlink" href="#function-windowalgorithmbase" title="Permanent link">&para;</a></h3>
 <p><em>Constructor for window algorithm base.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+<div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aCount</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aCount</code> Total number of items </li>
+</ul>
 <hr>
 
 <h3 id="function-windowsize">function WindowSize<a class="headerlink" href="#function-windowsize" title="Permanent link">&para;</a></h3>
@@ -1052,9 +1058,22 @@
 <p>Visual index, or -1 if not visible </p>
 <hr>
 
-<h3 id="function-resizewindow">function resizeWindow<a class="headerlink" href="#function-resizewindow" title="Permanent link">&para;</a></h3>
+<h3 id="function-setcount">function setCount<a class="headerlink" href="#function-setcount" title="Permanent link">&para;</a></h3>
+<p><em>Sets the total number of items.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">setCount</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aCount</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aCount</code> Total number of items </li>
+</ul>
+<hr>
+
+<h3 id="function-setwindowsize">function setWindowSize<a class="headerlink" href="#function-setwindowsize" title="Permanent link">&para;</a></h3>
 <p><em>Resizes the window.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">resizeWindow</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">setWindowSize</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aWindowSize</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
@@ -1062,19 +1081,6 @@
 <p><strong>Parameters:</strong></p>
 <ul>
 <li><code>aWindowSize</code> New window size </li>
-</ul>
-<hr>
-
-<h3 id="function-setcount">function setCount<a class="headerlink" href="#function-setcount" title="Permanent link">&para;</a></h3>
-<p><em>Sets the total number of items.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">WindowAlgorithmBase</span><span class="o">::</span><span class="n">setCount</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">Count</span>
-<span class="p">)</span><span class="w"> </span>
-</code></pre></div>
-
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>Count</code> Total number of items </li>
 </ul>
 <hr>
 

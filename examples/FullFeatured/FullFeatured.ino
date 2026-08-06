@@ -9,8 +9,9 @@
 #include <evabGalleryRemixicon24.h>
 #include <evabGalleryRemixicon32.h>
 
-#include <evabReactions.h>
-#include <evabLabeled.h>
+#include <evabKeyCatcher.h>
+#include <evabKeyModifier.h>
+#include <evabTitled.h>
 
 #include <evabAlbums.h>
 #include <evabInputInt.h>
@@ -65,8 +66,8 @@ public:
 
 private:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    LabeledLeftF<InputFloat> tempField(F("TEMERATURE"), 23);
-    LabeledLeftF<InputInt> humField(F("HUMIDITY"), 41);
+    TitledLeftF<InputFloat> tempField(F("TEMERATURE"), 23);
+    TitledLeftF<InputInt> humField(F("HUMIDITY"), 41);
 
     Grid grid(aScreen, aPos, aSize);
 
@@ -97,9 +98,9 @@ static const char ITEM2_TEXT[] PROGMEM = "Item 2";
 static const char ITEM3_TEXT[] PROGMEM = "Item 3";
 
 class UISettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
-  FocusChain<KeyModifier<LabeledLeftF<HorizontalScrollBar>, KEY_LEFT, KEY_RIGHT>> mItem1{ this, (const __FlashStringHelper *)ITEM1_TEXT };
-  FocusChain<KeyModifier<LabeledLeftF<InputSelectorAlbum<AlbumOnOff>>, KEY_LEFT, KEY_RIGHT>> mItem2{ this, (const __FlashStringHelper *)ITEM2_TEXT };
-  FocusChain<KeyModifier<LabeledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mItem3{ this, (const __FlashStringHelper *)ITEM3_TEXT, 100, 11, 100, 200 };
+  FocusChain<KeyModifier<TitledLeftF<HorizontalScrollBar>, KEY_LEFT, KEY_RIGHT>> mItem1{ this, (const __FlashStringHelper *)ITEM1_TEXT };
+  FocusChain<KeyModifier<TitledLeftF<InputSelectorAlbum<AlbumOnOff>>, KEY_LEFT, KEY_RIGHT>> mItem2{ this, (const __FlashStringHelper *)ITEM2_TEXT };
+  FocusChain<KeyModifier<TitledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mItem3{ this, (const __FlashStringHelper *)ITEM3_TEXT, 100, 11, 100, 200 };
   FocusChain<KeyCatcher<InputButton, KEY_RIGHT>> mSaveButton;
 
 public:
@@ -175,7 +176,6 @@ private:
   }
 };
 
-// const unsigned char gSimulateUser[4] = { KEY_RIGHT, KEY_RIGHT, KEY_RIGHT, KEY_RIGHT };
 const unsigned char gSimulateUser[14] = { KEY_RIGHT, KEY_LEFT, KEY_ENTER, KEY_ENTER, KEY_RIGHT, KEY_ENTER, KEY_RIGHT, KEY_DOWN, KEY_RIGHT, KEY_DOWN, KEY_RIGHT, KEY_DOWN, KEY_ENTER, KEY_LEFT };
 unsigned char gSimulateUserIndex = 0;
 

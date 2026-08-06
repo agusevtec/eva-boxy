@@ -70,18 +70,15 @@ namespace evab
                 mScreen->Clear(mTopLeft, GetSize(), 0);
         }
 
-        // ========== Getters ==========
-
         Coor GetPos() const { return mTopLeft; }
 
         Coor GetSize() const;
 
-        Screen *GetScreen() const { return mScreen; }
 
     private:
-        Coor mTopLeft;     
-        Coor mBottomRight; 
-        const Screen *mScreen;   
+        Coor mTopLeft;         
+        Coor mBottomRight;     
+        const Screen *mScreen; 
     };
 
 }

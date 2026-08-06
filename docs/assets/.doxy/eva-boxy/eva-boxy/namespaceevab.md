@@ -50,7 +50,7 @@
 | class | [**AlbumStretchyVerticalProgressBar**](classevab_1_1_album_stretchy_vertical_progress_bar.md) <br>_Vertical progress bar pictogram set._  |
 | class | [**AlbumStretchyVerticalScrollBar**](classevab_1_1_album_stretchy_vertical_scroll_bar.md) <br>_Vertical scroll bar pictogram set._  |
 | class | [**Boxy**](classevab_1_1_boxy.md) <br>_Main application controller managing screen, input, and modal overlays._  |
-| struct | [**CenterAlign**](structevab_1_1_center_align.md) <br> |
+| struct | [**CenterAlign**](structevab_1_1_center_align.md) <br>_Center alignment strategy._  |
 | struct | [**CharsetHorizontalProgressBar**](structevab_1_1_charset_horizontal_progress_bar.md) <br>_Character set for horizontal progress bar._  |
 | struct | [**CharsetHorizontalScrollBar**](structevab_1_1_charset_horizontal_scroll_bar.md) <br>_Character set for horizontal scroll bar._  |
 | struct | [**CharsetVerticalProgressBar**](structevab_1_1_charset_vertical_progress_bar.md) <br>_Character set for vertical progress bar._  |
@@ -65,7 +65,6 @@
 | class | [**Grid**](classevab_1_1_grid.md) <br>_Layout manager for grid-based UI arrangement._  |
 | struct | [**HorizontalAlbumPolicy**](structevab_1_1_horizontal_album_policy.md) <br>_Policy for horizontal orientation of stretch bars._  |
 | struct | [**HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md) <br>_Policy for horizontal text-based stretch bars._  |
-| class | [**IFocusChain**](classevab_1_1_i_focus_chain.md) <br> |
 | class | [**IFont**](classevab_1_1_i_font.md) <br>_Abstract interface for font providers._  |
 | class | [**InputAnimation**](classevab_1_1_input_animation.md) &lt;class TAlbum, tMaxSpeed&gt;<br>_Animation input element with configurable speed._  |
 | class | [**InputButton**](classevab_1_1_input_button.md) <br>_Button input element._  |
@@ -73,7 +72,7 @@
 | class | [**InputFloat**](classevab_1_1_input_float.md) <br>_Float input element._  |
 | class | [**InputFloatDiscrete**](classevab_1_1_input_float_discrete.md) <br>_Discrete float input element._  |
 | class | [**InputInt**](classevab_1_1_input_int.md) <br>_Integer input element._  |
-| class | [**InputIntDiscrete**](classevab_1_1_input_int_discrete.md) <br> |
+| class | [**InputIntDiscrete**](classevab_1_1_input_int_discrete.md) <br>_Discrete integer input element._  |
 | class | [**InputSelectorAlbum**](classevab_1_1_input_selector_album.md) &lt;class TAlbum&gt;<br>_Pictogram-based input element._  |
 | class | [**InputStretchBar**](classevab_1_1_input_stretch_bar.md) &lt;typename TAlbumStretchy, typename OrientationAlbumPolicy&gt;<br>_Stretch bar input element with Albumgram support._  |
 | class | [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md) &lt;typename TAlbum, typename OrientationTextPolicy&gt;<br>_Text-based stretch bar element._  |
@@ -82,10 +81,12 @@
 | class | [**KeyReactor**](classevab_1_1_key_reactor.md) &lt;class T, kDec, kInc&gt;<br>_Decorator that triggers events when values change via increment/decrement._  |
 | class | [**Labeled**](classevab_1_1_labeled.md) &lt;class T, typename TAlign, typename TText&gt;<br>_Decorator that adds a label to any element with alignment._  |
 | class | [**LayoutBase**](classevab_1_1_layout_base.md) <br>_Abstract base class for composite elements with circular focus chain._  |
-| struct | [**LeftAlign**](structevab_1_1_left_align.md) <br> |
+| struct | [**LeftAlign**](structevab_1_1_left_align.md) <br>_Left alignment strategy._  |
 | class | [**ListBox**](classevab_1_1_list_box.md) &lt;class TWindowAlgorithm&gt;<br>_List box element with configurable windowing algorithm._  |
+| class | [**PaddingH**](classevab_1_1_padding_h.md) &lt;class T&gt;<br>_Decorator that adds horizontal padding (left and right) to any element._  |
+| class | [**PaddingV**](classevab_1_1_padding_v.md) &lt;class T&gt;<br>_Decorator that adds vertical padding (top and bottom) to any element._  |
 | class | [**Percent**](classevab_1_1_percent.md) &lt;typename TElement, kStep&gt;<br>[_**Percent**_](classevab_1_1_percent.md) _modifier for discrete inputs._ |
-| struct | [**RightAlign**](structevab_1_1_right_align.md) <br> |
+| struct | [**RightAlign**](structevab_1_1_right_align.md) <br>_Right alignment strategy._  |
 | class | [**Screen**](classevab_1_1_screen.md) <br>_Base class for screen implementations._  |
 | class | [**ScreenKS0108**](classevab_1_1_screen_k_s0108.md) <br>_KS0108-based GLCD screen driver._  |
 | class | [**ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) <br>_I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._  |
@@ -97,11 +98,8 @@
 | class | [**ScreenSerialText**](classevab_1_1_screen_serial_text.md) <br>_Debug screen that renders text to serial output._  |
 | class | [**ScrollWindowAlgorithm**](classevab_1_1_scroll_window_algorithm.md) <br>_Scroll navigation algorithm._  |
 | class | [**TextLabel**](classevab_1_1_text_label.md) &lt;typename T, typename TAlign&gt;<br>_Text label widget with alignment._  |
-| struct | [**TextTraits**](structevab_1_1_text_traits.md) &lt;typename T&gt;<br>_Traits for C-string (char\*)._  |
-| struct | [**TextTraits&lt; \_\_FlashStringHelper \* &gt;**](structevab_1_1_text_traits_3_01_____flash_string_helper_01_5_01_4.md) &lt;&gt;<br> |
-| struct | [**TextTraits&lt; char \* &gt;**](structevab_1_1_text_traits_3_01char_01_5_01_4.md) &lt;&gt;<br> |
-| struct | [**TextTraits&lt; const \_\_FlashStringHelper \* &gt;**](structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4.md) &lt;&gt;<br>_Traits for Flash string (\_\_FlashStringHelper\*)._  |
-| struct | [**TextTraits&lt; const char \* &gt;**](structevab_1_1_text_traits_3_01const_01char_01_5_01_4.md) &lt;&gt;<br> |
+| struct | [**TextTraits**](structevab_1_1_text_traits.md) <br>_Traits for C-string (char\*)._  |
+| class | [**Titled**](classevab_1_1_titled.md) &lt;class T, typename TAlign, typename TText&gt;<br>_Decorator that adds a label to any element with alignment._  |
 | struct | [**VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) <br>_Policy for vertical orientation of stretch bars._  |
 | struct | [**VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) <br>_Policy for vertical text-based stretch bars._  |
 | class | [**WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md) <br>_Abstract base class for window navigation algorithms._  |
@@ -134,6 +132,12 @@
 | typedef [**TextLabel**](classevab_1_1_text_label.md)&lt; const \_\_FlashStringHelper \*, [**RightAlign**](structevab_1_1_right_align.md) &gt; | [**TextLabelRightF**](#typedef-textlabelrightf)  <br> |
 | typedef [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md)&lt; [**CharsetVerticalProgressBar**](structevab_1_1_charset_vertical_progress_bar.md), [**VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) &gt; | [**TextVerticalProgressBar**](#typedef-textverticalprogressbar)  <br> |
 | typedef [**InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md)&lt; [**CharsetVerticalScrollBar**](structevab_1_1_charset_vertical_scroll_bar.md), [**VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md) &gt; | [**TextVerticalScrollBar**](#typedef-textverticalscrollbar)  <br> |
+| typedef [**Titled**](classevab_1_1_titled.md)&lt; T, [**CenterAlign**](structevab_1_1_center_align.md), const char \* &gt; | [**TitledCenter**](#typedef-titledcenter)  <br> |
+| typedef [**Titled**](classevab_1_1_titled.md)&lt; T, [**CenterAlign**](structevab_1_1_center_align.md), const \_\_FlashStringHelper \* &gt; | [**TitledCenterF**](#typedef-titledcenterf)  <br> |
+| typedef [**Titled**](classevab_1_1_titled.md)&lt; T, [**LeftAlign**](structevab_1_1_left_align.md), const char \* &gt; | [**TitledLeft**](#typedef-titledleft)  <br> |
+| typedef [**Titled**](classevab_1_1_titled.md)&lt; T, [**LeftAlign**](structevab_1_1_left_align.md), const \_\_FlashStringHelper \* &gt; | [**TitledLeftF**](#typedef-titledleftf)  <br> |
+| typedef [**Titled**](classevab_1_1_titled.md)&lt; T, [**RightAlign**](structevab_1_1_right_align.md), const char \* &gt; | [**TitledRight**](#typedef-titledright)  <br> |
+| typedef [**Titled**](classevab_1_1_titled.md)&lt; T, [**RightAlign**](structevab_1_1_right_align.md), const \_\_FlashStringHelper \* &gt; | [**TitledRightF**](#typedef-titledrightf)  <br> |
 | typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumStretchyVerticalProgressBar**](classevab_1_1_album_stretchy_vertical_progress_bar.md), [**VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) &gt; | [**VerticalProgressBar**](#typedef-verticalprogressbar)  <br> |
 | typedef [**InputStretchBar**](classevab_1_1_input_stretch_bar.md)&lt; [**AlbumStretchyVerticalScrollBar**](classevab_1_1_album_stretchy_vertical_scroll_bar.md), [**VerticalAlbumPolicy**](structevab_1_1_vertical_album_policy.md) &gt; | [**VerticalScrollBar**](#typedef-verticalscrollbar)  <br> |
 
@@ -240,7 +244,7 @@ using evab::HorizontalScrollBar = InputStretchBar<AlbumStretchyHorizontalScrollB
 ### typedef LabeledCenter 
 
 ```C++
-using evab::LabeledCenter = Labeled<T, CenterAlign, const char*>;
+using evab::LabeledCenter = Labeled<T, CenterAlign, const char *>;
 ```
 
 
@@ -253,7 +257,7 @@ using evab::LabeledCenter = Labeled<T, CenterAlign, const char*>;
 ### typedef LabeledCenterF 
 
 ```C++
-using evab::LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper*>;
+using evab::LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper *>;
 ```
 
 
@@ -266,7 +270,7 @@ using evab::LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper*>
 ### typedef LabeledLeft 
 
 ```C++
-using evab::LabeledLeft = Labeled<T, LeftAlign, const char*>;
+using evab::LabeledLeft = Labeled<T, LeftAlign, const char *>;
 ```
 
 
@@ -279,7 +283,7 @@ using evab::LabeledLeft = Labeled<T, LeftAlign, const char*>;
 ### typedef LabeledLeftF 
 
 ```C++
-using evab::LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper*>;
+using evab::LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper *>;
 ```
 
 
@@ -292,7 +296,7 @@ using evab::LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper*>;
 ### typedef LabeledRight 
 
 ```C++
-using evab::LabeledRight = Labeled<T, RightAlign, const char*>;
+using evab::LabeledRight = Labeled<T, RightAlign, const char *>;
 ```
 
 
@@ -305,7 +309,7 @@ using evab::LabeledRight = Labeled<T, RightAlign, const char*>;
 ### typedef LabeledRightF 
 
 ```C++
-using evab::LabeledRightF = Labeled<T, RightAlign, const __FlashStringHelper*>;
+using evab::LabeledRightF = Labeled<T, RightAlign, const __FlashStringHelper *>;
 ```
 
 
@@ -489,6 +493,84 @@ using evab::TextVerticalProgressBar = InputTextStretchBar<CharsetVerticalProgres
 
 ```C++
 using evab::TextVerticalScrollBar = InputTextStretchBar<CharsetVerticalScrollBar, VerticalTextPolicy>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef TitledCenter 
+
+```C++
+using evab::TitledCenter = Titled<T, CenterAlign, const char*>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef TitledCenterF 
+
+```C++
+using evab::TitledCenterF = Titled<T, CenterAlign, const __FlashStringHelper*>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef TitledLeft 
+
+```C++
+using evab::TitledLeft = Titled<T, LeftAlign, const char*>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef TitledLeftF 
+
+```C++
+using evab::TitledLeftF = Titled<T, LeftAlign, const __FlashStringHelper*>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef TitledRight 
+
+```C++
+using evab::TitledRight = Titled<T, RightAlign, const char*>;
+```
+
+
+
+
+<hr>
+
+
+
+### typedef TitledRightF 
+
+```C++
+using evab::TitledRightF = Titled<T, RightAlign, const __FlashStringHelper*>;
 ```
 
 

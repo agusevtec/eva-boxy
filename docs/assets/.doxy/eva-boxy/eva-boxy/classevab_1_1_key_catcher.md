@@ -12,7 +12,7 @@
 
 _Decorator that catches specified key events and forwards them to a listener._ [More...](#detailed-description)
 
-* `#include <evabReactions.h>`
+* `#include <evabKeyCatcher.h>`
 
 
 
@@ -194,5 +194,5 @@ true if the key was handled, false otherwise
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabReactions.h`
+The documentation for this class was generated from the following file `src/evabKeyCatcher.h`
 

@@ -4,7 +4,7 @@
 #include <evabBoxy.h>
 #include <evabLabeled.h>
 #include <evabInputButton.h>
-#include <evabReactions.h>
+#include <evabKeyModifier.h>
 #include <evabCompositeBase.h>
 #include <evabFont8Narrow.h>
 #include <evabScreenSSD1306.h>
@@ -22,34 +22,6 @@
 using namespace eva;
 using namespace evab;
 
-
-template <class T, typename TAlign, typename TText>
-class CustomLabeled : public T
-{
-private:
-  TText mName;
-
-public:
-  template <typename... Args>
-  CustomLabeled(TText aName, Args &&...args)
-      : T(args...), mName(aName)
-  {
-  }
-
-protected:
-  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
-  {
-    unsigned char labelWidth = 2 * aSize.X / 3;
-    unsigned char inputWidth = aSize.X - labelWidth;
-    aScreen->Text<TAlign>(aPos, {labelWidth, 1}, mName, aIsFocused);
-    aScreen->Clear({aPos.X, aPos.Y + 1}, {labelWidth, aSize.Y - 1}, aIsFocused);
-    T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, aSize.Y}, aIsFocused);
-  }
-};
-
-template <class TT>
-using CustomLabeledLeftF = CustomLabeled<TT, LeftAlign, const __FlashStringHelper *>;
-
 class CustomListbox : public Percent<ScrollListbox>
 {
 public:
@@ -65,12 +37,12 @@ public:
 
 class GroundLayer : public CompositeBase
 {
-  KeyModifier<CustomLabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item0;
-  KeyModifier<CustomLabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item1;
-  KeyModifier<CustomLabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item2;
-  KeyModifier<CustomLabeledLeftF<HorizontalProgressBar>, KEY_LEFT, KEY_RIGHT> item3;
-  KeyModifier<CustomLabeledLeftF<PaddingH<InputSelectorAlbum<AlbumProgress>>>, KEY_LEFT, KEY_RIGHT> item4;
-  KeyModifier<CustomLabeledLeftF<PaddingH<InputSelectorAlbum<AlbumSpeaker>>>, KEY_LEFT, KEY_RIGHT> item5;
+  KeyModifier<LabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item0;
+  KeyModifier<LabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item1;
+  KeyModifier<LabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item2;
+  KeyModifier<LabeledLeftF<HorizontalProgressBar>, KEY_LEFT, KEY_RIGHT> item3;
+  KeyModifier<LabeledLeftF<PaddingH<InputSelectorAlbum<AlbumProgress>>>, KEY_LEFT, KEY_RIGHT> item4;
+  KeyModifier<LabeledLeftF<PaddingH<InputSelectorAlbum<AlbumSpeaker>>>, KEY_LEFT, KEY_RIGHT> item5;
 
   ElementBase *items[6] = {&item0, &item1, &item2, &item3, &item4, &item5};
   KeyModifier<ScrollListbox, KEY_UP, KEY_DOWN> mSimpleListbox{2, items};
@@ -87,7 +59,7 @@ public:
 
   {
     focusChild(&mSimpleListbox);
-//    focusChild(&mCustomListbox);
+    //    focusChild(&mCustomListbox);
   }
 
 private:
@@ -117,8 +89,8 @@ class App : public eva::IHandler
   RepeatTimer mTimer;
   GroundLayer mGroundLayer;
 
-const unsigned char gSimulateUser[5] = { KEY_RIGHT, KEY_RIGHT, KEY_LEFT, KEY_LEFT, KEY_DOWN};
-unsigned char gSimulateUserIndex = 0;
+  const unsigned char gSimulateUser[5] = {KEY_RIGHT, KEY_RIGHT, KEY_LEFT, KEY_LEFT, KEY_DOWN};
+  unsigned char gSimulateUserIndex = 0;
 
 public:
   App()

@@ -8,8 +8,9 @@
 
 
 
+_Left alignment strategy._ 
 
-
+* `#include <evabTextAlign.h>`
 
 
 
@@ -53,7 +54,7 @@
 
 | Type | Name |
 | ---: | :--- |
-|  unsigned char | [**Offset**](#function-offset) ([**Coor**](structevab_1_1_coor.md) aSize, unsigned char textLen) <br> |
+|  unsigned char | [**Offset**](#function-offset) ([**Coor**](structevab_1_1_coor.md) aSize, unsigned char textLen) <br>_Calculates offset for left alignment._  |
 
 
 
@@ -87,8 +88,9 @@
 
 ### function Offset 
 
+_Calculates offset for left alignment._ 
 ```C++
-static inline unsigned char evab::LeftAlign::Offset (
+static unsigned char evab::LeftAlign::Offset (
     Coor aSize,
     unsigned char textLen
 ) 
@@ -96,6 +98,25 @@ static inline unsigned char evab::LeftAlign::Offset (
 
 
 
+
+
+**Parameters:**
+
+
+* `aSize` Available area size 
+* `textLen` Text length in characters 
+
+
+
+**Returns:**
+
+Always 0 (left alignment) 
+
+
+
+
+
+        
 
 <hr>
 

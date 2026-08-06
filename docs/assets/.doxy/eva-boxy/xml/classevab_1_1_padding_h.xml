@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_padding_h" kind="class" language="C++" prot="public">
+    <compoundname>evab::PaddingH</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <includes refid="evab_padding_8h" local="no">evabPadding.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_padding_h_1acc87360742879593079f8b83ab635496" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>evab::PaddingH&lt; T &gt;::PaddingH</definition>
+        <argsstring>(Args &amp;&amp;...args)</argsstring>
+        <name>PaddingH</name>
+        <qualifiedname>evab::PaddingH::PaddingH</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Constructor forwarding all arguments to the base element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Types of the constructor arguments </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments forwarded to the base element constructor </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPadding.h" line="116" column="9" bodyfile="src/evabPadding.h" bodystart="116" bodyend="119"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_padding_h_1a3ea417ef9fe290ace460baf7ca477f16" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::PaddingH&lt; T &gt;::drawer</definition>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::PaddingH::drawer</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+<para>Draws the element with horizontal padding. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears one tile at the left and right, then draws the base element in the remaining horizontal space.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabPadding.h" line="133" column="14" bodyfile="src/evabPadding.h" bodystart="133" bodyend="143"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Decorator that adds horizontal padding (left and right) to any element. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class wraps an element and adds empty space at the left and right, effectively centering the content horizontally within the available area.</para>
+<para>The padding is applied as follows:<itemizedlist>
+<listitem><para>Left: 1 tile cleared</para>
+</listitem><listitem><para>Content: drawn in the middle columns</para>
+</listitem><listitem><para>Right: 1 tile cleared</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base element type to decorate</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The element must be at least 3 tiles wide to have visible content. If the width is less than 3, the content may be clipped.</para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classevab_1_1_padding_v" kindref="compound">PaddingV</ref> For vertical padding (top and bottom)</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>Add<sp/>horizontal<sp/>padding<sp/>to<sp/>an<sp/>InputInt</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classevab_1_1_padding_h_1acc87360742879593079f8b83ab635496" kindref="member">PaddingH&lt;InputInt&gt;</ref><sp/>paddedInput(42);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Use<sp/>with<sp/>Labeled<sp/>decorator</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classevab_1_1_padding_h_1acc87360742879593079f8b83ab635496" kindref="member">PaddingH&lt;LabeledLeft&lt;InputInt&gt;</ref>&gt;<sp/>paddedLabel(</highlight><highlight class="stringliteral">&quot;Value&quot;</highlight><highlight class="normal">,<sp/>42);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Combine<sp/>vertical<sp/>and<sp/>horizontal<sp/>padding<sp/>(center<sp/>element)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">PaddingV&lt;PaddingH&lt;InputInt&gt;&gt;<sp/>centeredInput(42);</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::PaddingH&lt; T &gt;</label>
+        <link refid="classevab_1_1_padding_h"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::PaddingH&lt; T &gt;</label>
+        <link refid="classevab_1_1_padding_h"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabPadding.h" line="106" column="5" bodyfile="src/evabPadding.h" bodystart="107" bodyend="144"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_padding_h_1a3ea417ef9fe290ace460baf7ca477f16" prot="protected" virt="non-virtual"><scope>evab::PaddingH</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_padding_h_1acc87360742879593079f8b83ab635496" prot="public" virt="non-virtual"><scope>evab::PaddingH</scope><name>PaddingH</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

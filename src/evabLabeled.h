@@ -10,10 +10,10 @@ namespace evab
 
   /**
    * @brief Decorator that adds a label to any element with alignment
-   * 
+   *
    * Wraps an element and adds a text label either to the left
    * (single line) or above (multi-line).
-   * 
+   *
    * @tparam T Element type to label
    * @tparam TAlign Alignment strategy for label (LeftAlign, CenterAlign, RightAlign)
    * @tparam TText Text type (const char*, __FlashStringHelper*)
@@ -24,19 +24,19 @@ namespace evab
   public:
     /**
      * @brief Constructor for Labeled
-     * 
+     *
      * @param aName Label text
      * @param args Arguments forwarded to the base element constructor
      */
-    template<typename... Args>
-    Labeled(TText aName, Args&&... args) 
-      : T(args...), mName(aName)
+    template <typename... Args>
+    Labeled(TText aName, Args &&...args)
+        : T(args...), mName(aName)
     {
     }
 
     /**
      * @brief Sets new label text and redraws
-     * 
+     *
      * @param aName New label text
      */
     void SetLabel(TText aName)
@@ -47,7 +47,7 @@ namespace evab
 
     /**
      * @brief Gets current label text
-     * 
+     *
      * @return Current label text
      */
     TText GetLabel() const
@@ -58,7 +58,7 @@ namespace evab
   protected:
     /**
      * @brief Draws the labeled element
-     * 
+     *
      * @param aScreen Screen to draw on
      * @param aPos Position on screen
      * @param aSize Size of the element
@@ -75,13 +75,16 @@ namespace evab
       }
       else
       {
-        aScreen->Text<TAlign>(aPos, {aSize.X, 1}, mName, aIsFocused);
-        T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
+        unsigned char labelWidth = 2 * aSize.X / 3;
+        unsigned char inputWidth = aSize.X - labelWidth;
+        aScreen->Text<TAlign>(aPos, {labelWidth, 1}, mName, aIsFocused);
+        aScreen->Clear({aPos.X, aPos.Y + 1}, {labelWidth, aSize.Y - 1}, aIsFocused);
+        T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, aSize.Y}, aIsFocused);
       }
     }
 
   private:
-    TText mName;  ///< Label text
+    TText mName; ///< Label text
   };
 
   // ============================================================
@@ -89,27 +92,25 @@ namespace evab
   // ============================================================
 
   template <class T>
-  using LabeledLeft = Labeled<T, LeftAlign, const char*>;
+  using LabeledLeft = Labeled<T, LeftAlign, const char *>;
 
   template <class T>
-  using LabeledCenter = Labeled<T, CenterAlign, const char*>;
+  using LabeledCenter = Labeled<T, CenterAlign, const char *>;
 
   template <class T>
-  using LabeledRight = Labeled<T, RightAlign, const char*>;
+  using LabeledRight = Labeled<T, RightAlign, const char *>;
 
   // ============================================================
   // Convenience aliases for Flash string labels
   // ============================================================
 
   template <class T>
-  using LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper*>;
+  using LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper *>;
 
   template <class T>
-  using LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper*>;
+  using LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper *>;
 
   template <class T>
-  using LabeledRightF = Labeled<T, RightAlign, const __FlashStringHelper*>;
-
-
+  using LabeledRightF = Labeled<T, RightAlign, const __FlashStringHelper *>;
 
 }

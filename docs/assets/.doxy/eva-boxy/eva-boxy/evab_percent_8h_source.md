@@ -29,16 +29,12 @@ namespace evab
         Percent(Args &&...args)
             : TElement(args...)
         {
-            if (kStep == 0)
-            {
-                mStep = 100 / TElement::Count();
-                if (mStep == 0)
-                    mStep = 1;
-            }
-            else
-            {
+            if (kStep > 0)
                 mStep = kStep;
-            }
+            else if (TElement::Count() > 1)
+                mStep = max(1, 100 / (TElement::Count() - 1));
+            else
+                mStep = 1;
         }
 
         void SetPercent(unsigned char aPercent)

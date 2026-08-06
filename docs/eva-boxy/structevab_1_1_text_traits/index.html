@@ -618,6 +618,130 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Static Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Public Static Functions Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Static Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-length-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Length [1/4]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-length-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Length [2/4]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-length-34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Length [3/4]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-length-44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Length [4/4]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-read-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Read [1/4]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-read-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Read [2/4]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-read-34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Read [3/4]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-read-44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function Read [4/4]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -637,9 +761,123 @@
 
 
 <h1 id="struct-evabtexttraits">Struct evab::TextTraits<a class="headerlink" href="#struct-evabtexttraits" title="Permanent link">&para;</a></h1>
-<p><strong>template &lt;typename T&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>TextTraits</strong></a></p>
 <p><em>Traits for C-string (char*).</em> </p>
+<ul>
+<li><code>#include &lt;evabTextTraits.h&gt;</code></li>
+</ul>
+<h2 id="public-static-functions">Public Static Functions<a class="headerlink" href="#public-static-functions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">unsigned char</td>
+<td style="text-align: left;"><a href="#function-length-14"><strong>Length</strong></a> (const char * aText) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned char</td>
+<td style="text-align: left;"><a href="#function-length-24"><strong>Length</strong></a> (char * aText) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned char</td>
+<td style="text-align: left;"><a href="#function-length-34"><strong>Length</strong></a> (const __FlashStringHelper * aText) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">unsigned char</td>
+<td style="text-align: left;"><a href="#function-length-44"><strong>Length</strong></a> (__FlashStringHelper * aText) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">char</td>
+<td style="text-align: left;"><a href="#function-read-14"><strong>Read</strong></a> (const char * aText, unsigned char aIndex) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">char</td>
+<td style="text-align: left;"><a href="#function-read-24"><strong>Read</strong></a> (char * aText, unsigned char aIndex) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">char</td>
+<td style="text-align: left;"><a href="#function-read-34"><strong>Read</strong></a> (const __FlashStringHelper * aText, unsigned char aIndex) <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">char</td>
+<td style="text-align: left;"><a href="#function-read-44"><strong>Read</strong></a> (__FlashStringHelper * aText, unsigned char aIndex) <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-static-functions-documentation">Public Static Functions Documentation<a class="headerlink" href="#public-static-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-length-14">function Length [1/4]<a class="headerlink" href="#function-length-14" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextTraits</span><span class="o">::</span><span class="n">Length</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-length-24">function Length [2/4]<a class="headerlink" href="#function-length-24" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextTraits</span><span class="o">::</span><span class="n">Length</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-length-34">function Length [3/4]<a class="headerlink" href="#function-length-34" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextTraits</span><span class="o">::</span><span class="n">Length</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-length-44">function Length [4/4]<a class="headerlink" href="#function-length-44" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextTraits</span><span class="o">::</span><span class="n">Length</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-read-14">function Read [1/4]<a class="headerlink" href="#function-read-14" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextTraits</span><span class="o">::</span><span class="n">Read</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-read-24">function Read [2/4]<a class="headerlink" href="#function-read-24" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextTraits</span><span class="o">::</span><span class="n">Read</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-read-34">function Read [3/4]<a class="headerlink" href="#function-read-34" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextTraits</span><span class="o">::</span><span class="n">Read</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
+<h3 id="function-read-44">function Read [4/4]<a class="headerlink" href="#function-read-44" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">TextTraits</span><span class="o">::</span><span class="n">Read</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<hr>
+
 <hr />
 <p>The documentation for this class was generated from the following file <code>src/evabTextTraits.h</code></p>
 

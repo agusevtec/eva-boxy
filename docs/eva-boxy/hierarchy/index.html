@@ -697,7 +697,7 @@
 </ul>
 </li>
 <li><strong>class</strong> <a href="../classevab_1_1_input_int/"><strong>evab::InputInt</strong></a> <em>Integer input element.</em>     <ul>
-<li><strong>class</strong> <a href="../classevab_1_1_input_int_discrete/"><strong>evab::InputIntDiscrete</strong></a> </li>
+<li><strong>class</strong> <a href="../classevab_1_1_input_int_discrete/"><strong>evab::InputIntDiscrete</strong></a> <em>Discrete integer input element.</em> </li>
 </ul>
 </li>
 <li><strong>class</strong> <a href="../classevab_1_1_input_selector_album/"><strong>evab::InputSelectorAlbum</strong></a> <em>Pictogram-based input element.</em> </li>
@@ -726,7 +726,6 @@
 </ul>
 </li>
 <li><strong>class</strong> <a href="../classevab_1_1_grid/"><strong>evab::Grid</strong></a> <em>Layout manager for grid-based UI arrangement.</em> </li>
-<li><strong>class</strong> <a href="../classevab_1_1_i_focus_chain/"><strong>evab::IFocusChain</strong></a> </li>
 <li><strong>class</strong> <a href="../classevab_1_1_screen/"><strong>evab::Screen</strong></a> <em>Base class for screen implementations.</em>     <ul>
 <li><strong>class</strong> <a href="../classevab_1_1_screen_l_c_d___i2_c/"><strong>evab::ScreenLCD_I2C</strong></a> <em>I2C LCD screen driver (HD44780 with PCF8574 I2C expander).</em> </li>
 <li><strong>class</strong> <a href="../classevab_1_1_screen_page8_base/"><strong>evab::ScreenPage8Base</strong></a> <em>Base class for page-based 8-bit screens.</em>     <ul>
@@ -740,7 +739,8 @@
 <li><strong>class</strong> <a href="../classevab_1_1_screen_serial_text/"><strong>evab::ScreenSerialText</strong></a> <em>Debug screen that renders text to serial output.</em> </li>
 </ul>
 </li>
-<li><strong>struct</strong> <a href="../structevab_1_1_center_align/"><strong>evab::CenterAlign</strong></a> </li>
+<li><strong>class</strong> <a href="../classevab_1_1_layout_base_1_1_focus_chain_base/"><strong>evab::LayoutBase::FocusChainBase</strong></a> </li>
+<li><strong>struct</strong> <a href="../structevab_1_1_center_align/"><strong>evab::CenterAlign</strong></a> <em>Center alignment strategy.</em> </li>
 <li><strong>struct</strong> <a href="../structevab_1_1_charset_horizontal_progress_bar/"><strong>evab::CharsetHorizontalProgressBar</strong></a> <em>Character set for horizontal progress bar.</em> </li>
 <li><strong>struct</strong> <a href="../structevab_1_1_charset_horizontal_scroll_bar/"><strong>evab::CharsetHorizontalScrollBar</strong></a> <em>Character set for horizontal scroll bar.</em> </li>
 <li><strong>struct</strong> <a href="../structevab_1_1_charset_vertical_progress_bar/"><strong>evab::CharsetVerticalProgressBar</strong></a> <em>Character set for vertical progress bar.</em> </li>
@@ -748,13 +748,9 @@
 <li><strong>struct</strong> <a href="../structevab_1_1_coor/"><strong>evab::Coor</strong></a> <em>Coordinate structure for positions and sizes on screen.</em> </li>
 <li><strong>struct</strong> <a href="../structevab_1_1_horizontal_album_policy/"><strong>evab::HorizontalAlbumPolicy</strong></a> <em>Policy for horizontal orientation of stretch bars.</em> </li>
 <li><strong>struct</strong> <a href="../structevab_1_1_horizontal_text_policy/"><strong>evab::HorizontalTextPolicy</strong></a> <em>Policy for horizontal text-based stretch bars.</em> </li>
-<li><strong>struct</strong> <a href="../structevab_1_1_left_align/"><strong>evab::LeftAlign</strong></a> </li>
-<li><strong>struct</strong> <a href="../structevab_1_1_right_align/"><strong>evab::RightAlign</strong></a> </li>
+<li><strong>struct</strong> <a href="../structevab_1_1_left_align/"><strong>evab::LeftAlign</strong></a> <em>Left alignment strategy.</em> </li>
+<li><strong>struct</strong> <a href="../structevab_1_1_right_align/"><strong>evab::RightAlign</strong></a> <em>Right alignment strategy.</em> </li>
 <li><strong>struct</strong> <a href="../structevab_1_1_text_traits/"><strong>evab::TextTraits</strong></a> <em>Traits for C-string (char*).</em> </li>
-<li><strong>struct</strong> <a href="../structevab_1_1_text_traits_3_01_____flash_string_helper_01_5_01_4/"><strong>evab::TextTraits&lt; __FlashStringHelper * &gt;</strong></a> </li>
-<li><strong>struct</strong> <a href="../structevab_1_1_text_traits_3_01char_01_5_01_4/"><strong>evab::TextTraits&lt; char * &gt;</strong></a> </li>
-<li><strong>struct</strong> <a href="../structevab_1_1_text_traits_3_01const_01_____flash_string_helper_01_5_01_4/"><strong>evab::TextTraits&lt; const __FlashStringHelper * &gt;</strong></a> <em>Traits for Flash string (__FlashStringHelper*).</em> </li>
-<li><strong>struct</strong> <a href="../structevab_1_1_text_traits_3_01const_01char_01_5_01_4/"><strong>evab::TextTraits&lt; const char * &gt;</strong></a> </li>
 <li><strong>struct</strong> <a href="../structevab_1_1_vertical_album_policy/"><strong>evab::VerticalAlbumPolicy</strong></a> <em>Policy for vertical orientation of stretch bars.</em> </li>
 <li><strong>struct</strong> <a href="../structevab_1_1_vertical_text_policy/"><strong>evab::VerticalTextPolicy</strong></a> <em>Policy for vertical text-based stretch bars.</em> </li>
 <li><strong>class</strong> <strong>eva::IHandler</strong>    <ul>
@@ -770,6 +766,9 @@
 <li><strong>class</strong> <a href="../classevab_1_1_key_modifier/"><strong>evab::KeyModifier</strong></a> <em>Decorator that modifies values using increment/decrement keys.</em> </li>
 <li><strong>class</strong> <a href="../classevab_1_1_key_reactor/"><strong>evab::KeyReactor</strong></a> <em>Decorator that triggers events when values change via increment/decrement.</em> </li>
 <li><strong>class</strong> <a href="../classevab_1_1_labeled/"><strong>evab::Labeled</strong></a> <em>Decorator that adds a label to any element with alignment.</em> </li>
+<li><strong>class</strong> <a href="../classevab_1_1_padding_h/"><strong>evab::PaddingH</strong></a> <em>Decorator that adds horizontal padding (left and right) to any element.</em> </li>
+<li><strong>class</strong> <a href="../classevab_1_1_padding_v/"><strong>evab::PaddingV</strong></a> <em>Decorator that adds vertical padding (top and bottom) to any element.</em> </li>
+<li><strong>class</strong> <a href="../classevab_1_1_titled/"><strong>evab::Titled</strong></a> <em>Decorator that adds a label to any element with alignment.</em> </li>
 <li><strong>class</strong> <a href="../classevab_1_1_layout_base_1_1_focus_chain/"><strong>evab::LayoutBase::FocusChain</strong></a> <em>Wrapper that chains elements in a circular doubly-linked list.</em> </li>
 </ul>
 </li>
@@ -779,6 +778,10 @@
 </li>
 <li><strong>class</strong> <strong>TElement</strong>    <ul>
 <li><strong>class</strong> <a href="../classevab_1_1_percent/"><strong>evab::Percent</strong></a> <a href="../classevab_1_1_percent/"><em><strong>Percent</strong></em></a> <em>modifier for discrete inputs.</em></li>
+</ul>
+</li>
+<li><strong>class</strong> <strong>evab::LayoutBase::FocusChainBase</strong>    <ul>
+<li><strong>class</strong> <a href="../classevab_1_1_layout_base_1_1_focus_chain/"><strong>evab::LayoutBase::FocusChain</strong></a> <em>Wrapper that chains elements in a circular doubly-linked list.</em> </li>
 </ul>
 </li>
 </ul>

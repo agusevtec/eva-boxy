@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_layout_base_1_1_focus_chain_base" kind="class" language="C++" prot="private">
+    <compoundname>evab::LayoutBase::FocusChainBase</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classevab_1_1_layout_base_1_1_focus_chain_base_1a855f24e196196825e8c2122b1db06a55" prot="public" static="no" mutable="no">
+        <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+        <definition>ElementBase* evab::LayoutBase::FocusChainBase::element</definition>
+        <argsstring></argsstring>
+        <name>element</name>
+        <qualifiedname>evab::LayoutBase::FocusChainBase::element</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="22" column="19" bodyfile="src/evabLayoutBase.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_layout_base_1_1_focus_chain_base_1a084bef0e0e2d7121b0621dd8bd9f0197" prot="public" static="no" mutable="no">
+        <type>FocusChainBase *</type>
+        <definition>FocusChainBase* evab::LayoutBase::FocusChainBase::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>evab::LayoutBase::FocusChainBase::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="23" column="22" bodyfile="src/evabLayoutBase.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1_1_focus_chain_base_1abd0f79a7fe28b9a1527408e6c4ee15e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>evab::LayoutBase::FocusChainBase::FocusChainBase</definition>
+        <argsstring>(ElementBase *aElement)</argsstring>
+        <name>FocusChainBase</name>
+        <qualifiedname>evab::LayoutBase::FocusChainBase::FocusChainBase</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+          <declname>aElement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="24" column="7" bodyfile="src/evabLayoutBase.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::LayoutBase::FocusChainBase</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>element</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabLayoutBase.h" line="19" column="5" bodyfile="src/evabLayoutBase.h" bodystart="20" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_layout_base_1_1_focus_chain_base_1a855f24e196196825e8c2122b1db06a55" prot="public" virt="non-virtual"><scope>evab::LayoutBase::FocusChainBase</scope><name>element</name></member>
+      <member refid="classevab_1_1_layout_base_1_1_focus_chain_base_1abd0f79a7fe28b9a1527408e6c4ee15e3" prot="public" virt="non-virtual"><scope>evab::LayoutBase::FocusChainBase</scope><name>FocusChainBase</name></member>
+      <member refid="classevab_1_1_layout_base_1_1_focus_chain_base_1a084bef0e0e2d7121b0621dd8bd9f0197" prot="public" virt="non-virtual"><scope>evab::LayoutBase::FocusChainBase</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

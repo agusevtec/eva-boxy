@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="29" column="14" bodyfile="src/evabScreen.h" bodystart="29" bodyend="55"/>
+        <location file="src/evabScreen.h" line="29" column="14" bodyfile="src/evabScreen.h" bodystart="29" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1a5b07acac62ca5bb43a529e9512b4b0f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="58" column="14" bodyfile="src/evabScreen.h" bodystart="58" bodyend="61"/>
+        <location file="src/evabScreen.h" line="65" column="14" bodyfile="src/evabScreen.h" bodystart="65" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1acab6e3c9cf01250a6ce61ab7e2732898" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="64" column="14" bodyfile="src/evabScreen.h" bodystart="64" bodyend="67"/>
+        <location file="src/evabScreen.h" line="71" column="14" bodyfile="src/evabScreen.h" bodystart="71" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1a9dcf79b61f33f64bbb98f3a53448769a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -204,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="70" column="14" bodyfile="src/evabScreen.h" bodystart="70" bodyend="73"/>
+        <location file="src/evabScreen.h" line="77" column="14" bodyfile="src/evabScreen.h" bodystart="77" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1aa8dc78436b340b1c4eef2567348d4399" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="75" column="22"/>
+        <location file="src/evabScreen.h" line="82" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1aa82d545935808d37fadb662bd041a86e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -266,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="76" column="22"/>
+        <location file="src/evabScreen.h" line="83" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1a6700eb9fa6e99cc9c6590d8f67d4f057" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="77" column="22"/>
+        <location file="src/evabScreen.h" line="84" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1a769dc42b12f8eaa3bb605bf17cdb040f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -314,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="78" column="22"/>
+        <location file="src/evabScreen.h" line="85" column="22"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1a34321b9419ca20ab846670f0e3dad7ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>unsigned short</type>
@@ -347,7 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="80" column="32"/>
+        <location file="src/evabScreen.h" line="87" column="32"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_screen_1a79b60a47dd4115bd1470d42798811726" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -384,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="81" column="22"/>
+        <location file="src/evabScreen.h" line="88" column="22"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -412,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabScreen.h" line="85" column="22"/>
+        <location file="src/evabScreen.h" line="91" column="22"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -475,7 +475,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="src/evabScreen.h" line="15" column="5" bodyfile="src/evabScreen.h" bodystart="16" bodyend="86"/>
+    <location file="src/evabScreen.h" line="15" column="5" bodyfile="src/evabScreen.h" bodystart="16" bodyend="92"/>
     <listofallmembers>
       <member refid="classevab_1_1_screen_1a6700eb9fa6e99cc9c6590d8f67d4f057" prot="public" virt="virtual"><scope>evab::Screen</scope><name>Clear</name></member>
       <member refid="classevab_1_1_screen_1a5d8592a14ffba36493effb2045d47bc5" prot="private" virt="virtual"><scope>evab::Screen</scope><name>clearTile</name></member>

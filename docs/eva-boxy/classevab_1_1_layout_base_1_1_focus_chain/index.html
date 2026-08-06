@@ -636,17 +636,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#public-functions-inherited-from-evabifocuschain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Public Functions inherited from evab::IFocusChain
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#detailed-description" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -670,43 +659,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-aselementbase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function AsElementBase
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#function-focuschain" class="md-nav__link">
     <span class="md-ellipsis">
       
         function FocusChain
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function Next
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-setnext" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function SetNext
       
     </span>
   </a>
@@ -742,7 +698,7 @@
 <p><strong>template &lt;class T&gt;</strong></p>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="./"><strong>FocusChain</strong></a></p>
 <p><em>Wrapper that chains elements in a circular doubly-linked list.</em> <a href="#detailed-description">More...</a></p>
-<p>Inherits the following classes: T,  <a href="../classevab_1_1_i_focus_chain/">evab::IFocusChain</a></p>
+<p>Inherits the following classes: T,  evab::LayoutBase::FocusChainBase</p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -753,44 +709,8 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">virtual <a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-aselementbase"><strong>AsElementBase</strong></a> () override<br></td>
-</tr>
-<tr>
 <td style="text-align: right;"></td>
 <td style="text-align: left;"><a href="#function-focuschain"><strong>FocusChain</strong></a> (<a href="../classevab_1_1_layout_base/"><strong>LayoutBase</strong></a> * aParent, Args &amp;&amp;... args) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;"><a href="../classevab_1_1_i_focus_chain/"><strong>IFocusChain</strong></a> *</td>
-<td style="text-align: left;"><a href="#function-next"><strong>Next</strong></a> () override<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-setnext"><strong>SetNext</strong></a> (<a href="../classevab_1_1_i_focus_chain/"><strong>IFocusChain</strong></a> * aNext) override<br></td>
-</tr>
-</tbody>
-</table>
-<h2 id="public-functions-inherited-from-evabifocuschain">Public Functions inherited from evab::IFocusChain<a class="headerlink" href="#public-functions-inherited-from-evabifocuschain" title="Permanent link">&para;</a></h2>
-<p>See <a href="../classevab_1_1_i_focus_chain/">evab::IFocusChain</a></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">virtual <a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> *</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_focus_chain/#function-aselementbase"><strong>AsElementBase</strong></a> () = 0<br><em>Sets the next element in the chain.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual <a href="../classevab_1_1_i_focus_chain/"><strong>IFocusChain</strong></a> *</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_focus_chain/#function-next"><strong>Next</strong></a> () = 0<br><em>Gets the next element in the chain.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_i_focus_chain/#function-setnext"><strong>SetNext</strong></a> (<a href="../classevab_1_1_i_focus_chain/"><strong>IFocusChain</strong></a> * aNext) = 0<br></td>
 </tr>
 </tbody>
 </table>
@@ -800,32 +720,12 @@
 <li><code>T</code> Element type to wrap (must inherit <a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a>) </li>
 </ul>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
-<h3 id="function-aselementbase">function AsElementBase<a class="headerlink" href="#function-aselementbase" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FocusChain</span><span class="o">::</span><span class="n">AsElementBase</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
-</code></pre></div>
-
-<hr>
-
 <h3 id="function-focuschain">function FocusChain<a class="headerlink" href="#function-focuschain" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
 <span class="kr">inline</span><span class="w"> </span><span class="n">FocusChain</span><span class="o">::</span><span class="n">FocusChain</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">LayoutBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aParent</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span>
 <span class="p">)</span><span class="w"> </span>
-</code></pre></div>
-
-<hr>
-
-<h3 id="function-next">function Next<a class="headerlink" href="#function-next" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">IFocusChain</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FocusChain</span><span class="o">::</span><span class="n">Next</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
-</code></pre></div>
-
-<hr>
-
-<h3 id="function-setnext">function SetNext<a class="headerlink" href="#function-setnext" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">FocusChain</span><span class="o">::</span><span class="n">SetNext</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">IFocusChain</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aNext</span>
-<span class="p">)</span><span class="w"> </span><span class="k">override</span>
 </code></pre></div>
 
 <hr>

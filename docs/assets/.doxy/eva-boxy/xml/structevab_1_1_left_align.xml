@@ -2,8 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="structevab_1_1_left_align" kind="struct" language="C++" prot="public">
     <compoundname>evab::LeftAlign</compoundname>
+    <includes refid="evab_text_align_8h" local="no">evabTextAlign.h</includes>
     <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="structevab_1_1_left_align_1a4d78eb355a68d67bab21b4ecdb3df892" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structevab_1_1_left_align_1a4d78eb355a68d67bab21b4ecdb3df892" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
         <definition>static unsigned char evab::LeftAlign::Offset</definition>
         <argsstring>(Coor aSize, unsigned char textLen)</argsstring>
@@ -18,19 +19,41 @@
           <declname>textLen</declname>
         </param>
         <briefdescription>
+<para>Calculates offset for left alignment. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Available area size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text length in characters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always 0 (left alignment) </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextAlign.h" line="12" column="30" bodyfile="src/evabTextAlign.h" bodystart="12" bodyend="17"/>
+        <location file="src/evabTextAlign.h" line="21" column="30"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Left alignment strategy. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabTextAlign.h" line="10" column="5" bodyfile="src/evabTextAlign.h" bodystart="11" bodyend="18"/>
+    <location file="src/evabTextAlign.h" line="13" column="5" bodyfile="src/evabTextAlign.h" bodystart="14" bodyend="22"/>
     <listofallmembers>
       <member refid="structevab_1_1_left_align_1a4d78eb355a68d67bab21b4ecdb3df892" prot="public" virt="non-virtual"><scope>evab::LeftAlign</scope><name>Offset</name></member>
     </listofallmembers>

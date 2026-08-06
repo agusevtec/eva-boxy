@@ -44,6 +44,12 @@
 * **TextLabelRightF** ([**evab**](namespaceevab.md))
 * **TextVerticalProgressBar** ([**evab**](namespaceevab.md))
 * **TextVerticalScrollBar** ([**evab**](namespaceevab.md))
+* **TitledCenter** ([**evab**](namespaceevab.md))
+* **TitledCenterF** ([**evab**](namespaceevab.md))
+* **TitledLeft** ([**evab**](namespaceevab.md))
+* **TitledLeftF** ([**evab**](namespaceevab.md))
+* **TitledRight** ([**evab**](namespaceevab.md))
+* **TitledRightF** ([**evab**](namespaceevab.md))
 
 
 ## v

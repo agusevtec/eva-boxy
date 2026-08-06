@@ -8,8 +8,9 @@
 
 
 
+_Discrete integer input element._ [More...](#detailed-description)
 
-
+* `#include <evabInputInt.h>`
 
 
 
@@ -92,11 +93,11 @@ Inherits the following classes: [evab::InputInt](classevab_1_1_input_int.md)
 
 | Type | Name |
 | ---: | :--- |
-|  unsigned char | [**Count**](#function-count) () const<br> |
-|  void | [**Increment**](#function-increment) (int aSteps) <br> |
-|   | [**InputIntDiscrete**](#function-inputintdiscrete) (int aValue, unsigned char aCount, int aMin, int aMax) <br> |
-|  void | [**Select**](#function-select) (unsigned char aIndex) <br> |
-|  signed short | [**Selected**](#function-selected) () const<br> |
+|  unsigned char | [**Count**](#function-count) () const<br>_Returns the total number of steps._  |
+|  void | [**Increment**](#function-increment) (int aSteps) <br>_Increments the pictogram index._  |
+|   | [**InputIntDiscrete**](#function-inputintdiscrete) (int aValue, unsigned char aCount, int aMin, int aMax) <br>_Constructs a discrete integer input._  |
+|  void | [**Select**](#function-select) (unsigned char aIndex) <br>_Selects a step by index (0 to_ [_**Count()**_](classevab_1_1_input_int_discrete.md#function-count) _-1)._ |
+|  signed short | [**Selected**](#function-selected) () const<br>_Returns the currently selected index._  |
 
 
 ## Public Functions inherited from evab::InputInt
@@ -217,6 +218,13 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 
 
 
+## Detailed Description
+
+
+Adds index-based control to [**InputInt**](classevab_1_1_input_int.md). 
+
+
+    
 ## Public Functions Documentation
 
 
@@ -224,6 +232,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 
 ### function Count 
 
+_Returns the total number of steps._ 
 ```C++
 inline unsigned char evab::InputIntDiscrete::Count () const
 ```
@@ -237,6 +246,7 @@ inline unsigned char evab::InputIntDiscrete::Count () const
 
 ### function Increment 
 
+_Increments the pictogram index._ 
 ```C++
 void evab::InputIntDiscrete::Increment (
     int aSteps
@@ -246,12 +256,24 @@ void evab::InputIntDiscrete::Increment (
 
 
 
+
+**Parameters:**
+
+
+* `aSteps` Amount to increment (positive or negative) 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function InputIntDiscrete 
 
+_Constructs a discrete integer input._ 
 ```C++
 evab::InputIntDiscrete::InputIntDiscrete (
     int aValue,
@@ -264,12 +286,27 @@ evab::InputIntDiscrete::InputIntDiscrete (
 
 
 
+
+**Parameters:**
+
+
+* `aValue` Initial value (snapped to nearest step). 
+* `aCount` Number of steps (must be &gt;= 2). 
+* `aMin` Minimum value (inclusive). 
+* `aMax` Maximum value (inclusive). 
+
+
+
+
+        
+
 <hr>
 
 
 
 ### function Select 
 
+_Selects a step by index (0 to_ [_**Count()**_](classevab_1_1_input_int_discrete.md#function-count) _-1)._
 ```C++
 void evab::InputIntDiscrete::Select (
     unsigned char aIndex
@@ -285,6 +322,7 @@ void evab::InputIntDiscrete::Select (
 
 ### function Selected 
 
+_Returns the currently selected index._ 
 ```C++
 signed short evab::InputIntDiscrete::Selected () const
 ```

@@ -36,9 +36,9 @@
 
 | Type | Name |
 | ---: | :--- |
-| struct | [**CenterAlign**](structevab_1_1_center_align.md) <br> |
-| struct | [**LeftAlign**](structevab_1_1_left_align.md) <br> |
-| struct | [**RightAlign**](structevab_1_1_right_align.md) <br> |
+| struct | [**CenterAlign**](structevab_1_1_center_align.md) <br>_Center alignment strategy._  |
+| struct | [**LeftAlign**](structevab_1_1_left_align.md) <br>_Left alignment strategy._  |
+| struct | [**RightAlign**](structevab_1_1_right_align.md) <br>_Right alignment strategy._  |
 
 
 

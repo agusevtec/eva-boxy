@@ -133,16 +133,62 @@
         </inbodydescription>
         <location file="src/evabInputStretchBar.h" line="44" column="21" bodyfile="src/evabInputStretchBar.h" bodystart="44" bodyend="47"/>
       </memberdef>
+      <memberdef kind="function" id="structevab_1_1_vertical_album_policy_1ae1dce8366eadd760737f97710b3e3736" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>static Coor evab::VerticalAlbumPolicy::GetRestPosition</definition>
+        <argsstring>(Coor aPos, Coor aSize)</argsstring>
+        <name>GetRestPosition</name>
+        <qualifiedname>evab::VerticalAlbumPolicy::GetRestPosition</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputStretchBar.h" line="49" column="21" bodyfile="src/evabInputStretchBar.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structevab_1_1_vertical_album_policy_1a1748af3e80edc7484c18de5fc892eea7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>static Coor evab::VerticalAlbumPolicy::GetRestSize</definition>
+        <argsstring>(Coor aPos, Coor aSize)</argsstring>
+        <name>GetRestSize</name>
+        <qualifiedname>evab::VerticalAlbumPolicy::GetRestSize</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputStretchBar.h" line="54" column="21" bodyfile="src/evabInputStretchBar.h" bodystart="54" bodyend="57"/>
+      </memberdef>
     </sectiondef>
     <briefdescription>
 <para>Policy for vertical orientation of stretch bars. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabInputStretchBar.h" line="11" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="12" bodyend="48"/>
+    <location file="src/evabInputStretchBar.h" line="11" column="5" bodyfile="src/evabInputStretchBar.h" bodystart="12" bodyend="58"/>
     <listofallmembers>
       <member refid="structevab_1_1_vertical_album_policy_1a6f89212d16f2293b592568e83ba4abb4" prot="public" virt="non-virtual"><scope>evab::VerticalAlbumPolicy</scope><name>CalculateResolution</name></member>
       <member refid="structevab_1_1_vertical_album_policy_1aee1fa087d7fccbded4678c14fe4108b1" prot="public" virt="non-virtual"><scope>evab::VerticalAlbumPolicy</scope><name>CalculateTotalBlocks</name></member>
+      <member refid="structevab_1_1_vertical_album_policy_1ae1dce8366eadd760737f97710b3e3736" prot="public" virt="non-virtual"><scope>evab::VerticalAlbumPolicy</scope><name>GetRestPosition</name></member>
+      <member refid="structevab_1_1_vertical_album_policy_1a1748af3e80edc7484c18de5fc892eea7" prot="public" virt="non-virtual"><scope>evab::VerticalAlbumPolicy</scope><name>GetRestSize</name></member>
       <member refid="structevab_1_1_vertical_album_policy_1add3e31fd106684ec41c82ed771a2dea0" prot="public" virt="non-virtual"><scope>evab::VerticalAlbumPolicy</scope><name>GetTilePosition</name></member>
     </listofallmembers>
   </compounddef>

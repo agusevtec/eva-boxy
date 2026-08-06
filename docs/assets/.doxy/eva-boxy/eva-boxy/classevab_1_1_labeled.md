@@ -87,7 +87,6 @@ Inherits the following classes: T
 | Type | Name |
 | ---: | :--- |
 |  void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) override<br>_Draws the labeled element._  |
-|  void | [**freezer**](#function-freezer) () override<br> |
 
 
 
@@ -228,19 +227,6 @@ inline void evab::Labeled::drawer (
 
 
         
-
-<hr>
-
-
-
-### function freezer 
-
-```C++
-inline void evab::Labeled::freezer () override
-```
-
-
-
 
 <hr>
 

@@ -156,15 +156,15 @@
         </inbodydescription>
         <location file="src/evabInputAnimation.h" line="77" column="23" bodyfile="src/evabInputAnimation.h" bodystart="77" bodyend="80"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_input_animation_1a332f279279ccca033f82e9d6b72bd27d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_animation_1a471631071007ecb3fc57734ee83803de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;::Increment</definition>
-        <argsstring>(signed char delta)</argsstring>
+        <argsstring>(signed char aSteps)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputAnimation::Increment</qualifiedname>
         <param>
           <type>signed char</type>
-          <declname>delta</declname>
+          <declname>aSteps</declname>
         </param>
         <briefdescription>
 <para>Increments the speed value by a delta. </para>
@@ -172,7 +172,7 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>delta</parametername>
+<parametername>aSteps</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Amount to add (positive or negative) </para>
@@ -394,7 +394,7 @@
       <member refid="classevab_1_1_input_animation_1a345f41086e051dc3a55b2bb85a393251" prot="protected" virt="virtual"><scope>evab::InputAnimation</scope><name>drawer</name></member>
       <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>Freeze</name></member>
       <member refid="classevab_1_1_input_animation_1a572f935838f4044db6add055ff8b7dea" prot="protected" virt="virtual"><scope>evab::InputAnimation</scope><name>freezer</name></member>
-      <member refid="classevab_1_1_input_animation_1a332f279279ccca033f82e9d6b72bd27d" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_input_animation_1a471631071007ecb3fc57734ee83803de" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>Increment</name></member>
       <member refid="classevab_1_1_input_animation_1a676c683ffbea0c2ffa0973d4d13cb9d8" prot="public" virt="non-virtual"><scope>evab::InputAnimation</scope><name>InputAnimation</name></member>
       <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::InputAnimation</scope><name>isFrozen</name></member>
       <member refid="classevab_1_1_input_animation_1a18411e4e8b1489fedee55fe2674632cd" prot="private" virt="non-virtual"><scope>evab::InputAnimation</scope><name>mCurrentFrame</name></member>

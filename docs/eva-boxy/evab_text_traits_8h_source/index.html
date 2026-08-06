@@ -647,12 +647,9 @@
 <span class="k">namespace</span><span class="w"> </span><span class="nn">evab</span>
 <span class="p">{</span>
 
-<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">TextTraits</span><span class="p">;</span>
-
-<span class="w">    </span><span class="k">template</span><span class="o">&lt;&gt;</span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">TextTraits</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">TextTraits</span>
 <span class="w">    </span><span class="p">{</span>
+
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">Length</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">aText</span><span class="p">);</span>
@@ -662,11 +659,7 @@
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">aText</span><span class="p">[</span><span class="n">aIndex</span><span class="p">];</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">};</span>
 
-<span class="w">    </span><span class="k">template</span><span class="o">&lt;&gt;</span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">TextTraits</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">*&gt;</span>
-<span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">Length</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">aText</span><span class="p">);</span>
@@ -676,11 +669,7 @@
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">aText</span><span class="p">[</span><span class="n">aIndex</span><span class="p">];</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">};</span>
 
-<span class="w">    </span><span class="k">template</span><span class="o">&lt;&gt;</span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">TextTraits</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="o">*&gt;</span>
-<span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">Length</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">strlen_P</span><span class="p">((</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">aText</span><span class="p">);</span>
@@ -690,11 +679,7 @@
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">pgm_read_byte</span><span class="p">((</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">aText</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aIndex</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">};</span>
 
-<span class="w">    </span><span class="k">template</span><span class="o">&lt;&gt;</span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">TextTraits</span><span class="o">&lt;</span><span class="n">__FlashStringHelper</span><span class="o">*&gt;</span>
-<span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">Length</span><span class="p">(</span><span class="n">__FlashStringHelper</span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">strlen_P</span><span class="p">((</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">aText</span><span class="p">);</span>
@@ -705,7 +690,6 @@
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">pgm_read_byte</span><span class="p">((</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">aText</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">aIndex</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">};</span>
-
 <span class="p">}</span>
 </code></pre></div>
 

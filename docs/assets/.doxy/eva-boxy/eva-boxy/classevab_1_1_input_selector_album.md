@@ -76,7 +76,7 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 | Type | Name |
 | ---: | :--- |
 |  unsigned char | [**Count**](#function-count) () const<br> |
-|  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the pictogram index._  |
+|  void | [**Increment**](#function-increment) (signed char aSteps) <br>_Increments the pictogram index._  |
 |   | [**InputSelectorAlbum**](#function-inputselectoralbum) (int aValue=0) <br>_Constructor for InputPictogram._  |
 |  void | [**Select**](#function-select) (int aValue) <br>_Sets the pictogram index and redraws._  |
 |  signed char | [**Selected**](#function-selected) () const<br>_Gets the current pictogram index._  |
@@ -200,7 +200,7 @@ inline unsigned char evab::InputSelectorAlbum::Count () const
 _Increments the pictogram index._ 
 ```C++
 inline void evab::InputSelectorAlbum::Increment (
-    signed char delta
+    signed char aSteps
 ) 
 ```
 
@@ -211,7 +211,7 @@ inline void evab::InputSelectorAlbum::Increment (
 **Parameters:**
 
 
-* `delta` Amount to increment (positive or negative) 
+* `aSteps` Amount to increment (positive or negative) 
 
 
 

@@ -36,9 +36,6 @@ namespace evab
 
   class InputFloatDiscrete : public InputFloat
   {
-    unsigned char mCount;
-    float mMin;
-    float mMax;
 
   public:
     InputFloatDiscrete(float aValue, unsigned char aCount, float aMin, float aMax);
@@ -46,6 +43,11 @@ namespace evab
     signed short Selected() const;
     unsigned char Count() const { return mCount; }
     void Increment(int aSteps);
+
+  private:
+    unsigned char mCount;
+    float mMin;
+    float mMax;
   };
 
 }

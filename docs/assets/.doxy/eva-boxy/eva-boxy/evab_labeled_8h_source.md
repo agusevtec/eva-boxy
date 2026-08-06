@@ -22,9 +22,9 @@ namespace evab
   class Labeled : public T
   {
   public:
-    template<typename... Args>
-    Labeled(TText aName, Args&&... args) 
-      : T(args...), mName(aName)
+    template <typename... Args>
+    Labeled(TText aName, Args &&...args)
+        : T(args...), mName(aName)
     {
     }
 
@@ -42,9 +42,6 @@ namespace evab
   protected:
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
     {
-      if (!aScreen || aSize.X == 0 || aSize.Y == 0)
-        return;
-
       if (aSize.Y == 1)
       {
         unsigned char labelWidth = 2 * aSize.X / 3;
@@ -54,15 +51,16 @@ namespace evab
       }
       else
       {
-        aScreen->Text<TAlign>(aPos, {aSize.X, 1}, mName, aIsFocused);
-        T::drawer(aScreen, {aPos.X, aPos.Y + 1}, {aSize.X, aSize.Y - 1}, aIsFocused);
+        unsigned char labelWidth = 2 * aSize.X / 3;
+        unsigned char inputWidth = aSize.X - labelWidth;
+        aScreen->Text<TAlign>(aPos, {labelWidth, 1}, mName, aIsFocused);
+        aScreen->Clear({aPos.X, aPos.Y + 1}, {labelWidth, aSize.Y - 1}, aIsFocused);
+        T::drawer(aScreen, {aPos.X + labelWidth, aPos.Y}, {inputWidth, aSize.Y}, aIsFocused);
       }
     }
 
-    void freezer() override {}
-
   private:
-    TText mName;  
+    TText mName; 
   };
 
   // ============================================================
@@ -70,28 +68,26 @@ namespace evab
   // ============================================================
 
   template <class T>
-  using LabeledLeft = Labeled<T, LeftAlign, const char*>;
+  using LabeledLeft = Labeled<T, LeftAlign, const char *>;
 
   template <class T>
-  using LabeledCenter = Labeled<T, CenterAlign, const char*>;
+  using LabeledCenter = Labeled<T, CenterAlign, const char *>;
 
   template <class T>
-  using LabeledRight = Labeled<T, RightAlign, const char*>;
+  using LabeledRight = Labeled<T, RightAlign, const char *>;
 
   // ============================================================
   // Convenience aliases for Flash string labels
   // ============================================================
 
   template <class T>
-  using LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper*>;
+  using LabeledLeftF = Labeled<T, LeftAlign, const __FlashStringHelper *>;
 
   template <class T>
-  using LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper*>;
+  using LabeledCenterF = Labeled<T, CenterAlign, const __FlashStringHelper *>;
 
   template <class T>
-  using LabeledRightF = Labeled<T, RightAlign, const __FlashStringHelper*>;
-
-
+  using LabeledRightF = Labeled<T, RightAlign, const __FlashStringHelper *>;
 
 }
 ```

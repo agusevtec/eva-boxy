@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="157" column="14" bodyfile="src/evabGrid.h" bodystart="157" bodyend="-1"/>
+        <location file="src/evabGrid.h" line="149" column="14" bodyfile="src/evabGrid.h" bodystart="149" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_grid_1aa8b617dc4491e033211ed0cd85b05b76" prot="private" static="no" mutable="no">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="158" column="14" bodyfile="src/evabGrid.h" bodystart="158" bodyend="-1"/>
+        <location file="src/evabGrid.h" line="150" column="14" bodyfile="src/evabGrid.h" bodystart="150" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_grid_1afe665007c97eafedf5d15840e9ec7a79" prot="private" static="no" mutable="no">
         <type>const <ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="159" column="22" bodyfile="src/evabGrid.h" bodystart="159" bodyend="-1"/>
+        <location file="src/evabGrid.h" line="151" column="22" bodyfile="src/evabGrid.h" bodystart="151" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -78,9 +78,7 @@
 <parametername>aScreen</parametername>
 </parameternamelist>
 <parameterdescription>
-<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on<itemizedlist>
-<listitem></listitem></itemizedlist>
-</para>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -457,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="140" column="14" bodyfile="src/evabGrid.h" bodystart="140" bodyend="140"/>
+        <location file="src/evabGrid.h" line="138" column="14" bodyfile="src/evabGrid.h" bodystart="138" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -475,25 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="147" column="14"/>
-      </memberdef>
-      <memberdef kind="function" id="classevab_1_1_grid_1a141d7374a8a4653657add5da1af2c72d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
-        <definition>Screen * evab::Grid::GetScreen</definition>
-        <argsstring>() const</argsstring>
-        <name>GetScreen</name>
-        <qualifiedname>evab::Grid::GetScreen</qualifiedname>
-        <briefdescription>
-<para>Gets the screen. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>Screen* Current screen </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabGrid.h" line="154" column="16" bodyfile="src/evabGrid.h" bodystart="154" bodyend="154"/>
+        <location file="src/evabGrid.h" line="145" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -508,12 +488,11 @@
 <codeline><highlight class="normal">grid.Rest().Clear();</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="src/evabGrid.h" line="24" column="5" bodyfile="src/evabGrid.h" bodystart="25" bodyend="160"/>
+    <location file="src/evabGrid.h" line="24" column="5" bodyfile="src/evabGrid.h" bodystart="25" bodyend="152"/>
     <listofallmembers>
       <member refid="classevab_1_1_grid_1a18c93524c7f9f9d8ee24d5142c69a619" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Clear</name></member>
       <member refid="classevab_1_1_grid_1afa6c51abd57f4042955d4a88321d5a49" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Draw</name></member>
       <member refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>GetPos</name></member>
-      <member refid="classevab_1_1_grid_1a141d7374a8a4653657add5da1af2c72d" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>GetScreen</name></member>
       <member refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>GetSize</name></member>
       <member refid="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Grid</name></member>
       <member refid="classevab_1_1_grid_1aa8b617dc4491e033211ed0cd85b05b76" prot="private" virt="non-virtual"><scope>evab::Grid</scope><name>mBottomRight</name></member>

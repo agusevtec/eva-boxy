@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPercent.h" line="27" column="9" bodyfile="src/evabPercent.h" bodystart="27" bodyend="40"/>
+        <location file="src/evabPercent.h" line="27" column="9" bodyfile="src/evabPercent.h" bodystart="27" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_percent_1ae6cec21962fb4985171ae69dfb7e74ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPercent.h" line="45" column="14" bodyfile="src/evabPercent.h" bodystart="45" bodyend="52"/>
+        <location file="src/evabPercent.h" line="41" column="14" bodyfile="src/evabPercent.h" bodystart="41" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_percent_1acbcb66cbb725a747a55cc0c52f0b3612" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPercent.h" line="57" column="23" bodyfile="src/evabPercent.h" bodystart="57" bodyend="63"/>
+        <location file="src/evabPercent.h" line="53" column="23" bodyfile="src/evabPercent.h" bodystart="53" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_percent_1a14928548e8f00e7c1faabf2fa9d68db4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPercent.h" line="68" column="23" bodyfile="src/evabPercent.h" bodystart="68" bodyend="68"/>
+        <location file="src/evabPercent.h" line="64" column="23" bodyfile="src/evabPercent.h" bodystart="64" bodyend="64"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -153,7 +153,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabPercent.h" line="19" column="5" bodyfile="src/evabPercent.h" bodystart="20" bodyend="69"/>
+    <location file="src/evabPercent.h" line="19" column="5" bodyfile="src/evabPercent.h" bodystart="20" bodyend="65"/>
     <listofallmembers>
       <member refid="classevab_1_1_percent_1acbcb66cbb725a747a55cc0c52f0b3612" prot="public" virt="non-virtual"><scope>evab::Percent</scope><name>GetPercent</name></member>
       <member refid="classevab_1_1_percent_1a14928548e8f00e7c1faabf2fa9d68db4" prot="public" virt="non-virtual"><scope>evab::Percent</scope><name>GetStep</name></member>

@@ -130,21 +130,18 @@
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mScreen-&gt;Clear(mTopLeft,<sp/><ref refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" kindref="member">GetSize</ref>(),<sp/>0);</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>==========<sp/>Getters<sp/>==========</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="140" refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/><ref refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" kindref="member">GetPos</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mTopLeft;<sp/>}</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147" refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/><ref refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" kindref="member">GetSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154" refid="classevab_1_1_grid_1a141d7374a8a4653657add5da1af2c72d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref><sp/>*<ref refid="classevab_1_1_grid_1a141d7374a8a4653657add5da1af2c72d" kindref="member">GetScreen</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mScreen;<sp/>}</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>mTopLeft;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>mBottomRight;<sp/></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref><sp/>*mScreen;<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138" refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/><ref refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" kindref="member">GetPos</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mTopLeft;<sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/><ref refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" kindref="member">GetSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>mTopLeft;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>mBottomRight;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref><sp/>*mScreen;<sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/evabGrid.h"/>
   </compounddef>

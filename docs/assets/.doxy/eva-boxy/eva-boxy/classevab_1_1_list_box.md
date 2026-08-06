@@ -77,10 +77,12 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 | ---: | :--- |
 |  [**ElementBase**](classevab_1_1_element_base.md) \* | [**GetItem**](#function-getitem) (unsigned char aIndex) <br>_Gets an item by index._  |
 |  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the selection by a delta._  |
+|   | [**ListBox**](#function-listbox-12) (unsigned char aItemHeight) <br> |
+|   | [**ListBox**](#function-listbox-22) (unsigned char aItemHeight, [**ElementBase**](classevab_1_1_element_base.md) \*(&) aItems) <br> |
 | virtual bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events, forwarding to selected item._  |
 |  void | [**Select**](#function-select) (unsigned char aIndex) override<br>_Selects an item by index._  |
-|  [**ListBox**](classevab_1_1_list_box.md)&lt; TWindowAlgorithm &gt; & | [**SetItemHeight**](#function-setitemheight) (unsigned char aItemHeight) <br>_Sets the height of each item._  |
-|  [**ListBox**](classevab_1_1_list_box.md)&lt; TWindowAlgorithm &gt; & | [**SetItems**](#function-setitems) ([**ElementBase**](classevab_1_1_element_base.md) \* aItems, int aCount) <br>_Sets the list of items to display._  |
+|  void | [**SetItemHeight**](#function-setitemheight) (unsigned char aItemHeight) <br>_Sets the height of each item._  |
+|  void | [**SetItems**](#function-setitems) ([**ElementBase**](classevab_1_1_element_base.md) \*(&) aItems) <br>_Sets the list of items to display._  |
 
 
 ## Public Functions inherited from evab::ElementBase
@@ -245,6 +247,38 @@ inline void evab::ListBox::Increment (
 
 
 
+### function ListBox [1/2]
+
+```C++
+inline evab::ListBox::ListBox (
+    unsigned char aItemHeight
+) 
+```
+
+
+
+
+<hr>
+
+
+
+### function ListBox [2/2]
+
+```C++
+template<int N>
+inline evab::ListBox::ListBox (
+    unsigned char aItemHeight,
+    ElementBase *(&) aItems
+) 
+```
+
+
+
+
+<hr>
+
+
+
 ### function OnKey 
 
 _Handles key events, forwarding to selected item._ 
@@ -312,7 +346,7 @@ inline void evab::ListBox::Select (
 
 _Sets the height of each item._ 
 ```C++
-inline ListBox < TWindowAlgorithm > & evab::ListBox::SetItemHeight (
+inline void evab::ListBox::SetItemHeight (
     unsigned char aItemHeight
 ) 
 ```
@@ -346,9 +380,9 @@ Reference to this list box
 
 _Sets the list of items to display._ 
 ```C++
-inline ListBox < TWindowAlgorithm > & evab::ListBox::SetItems (
-    ElementBase * aItems,
-    int aCount
+template<int N>
+inline void evab::ListBox::SetItems (
+    ElementBase *(&) aItems
 ) 
 ```
 
@@ -360,7 +394,6 @@ inline ListBox < TWindowAlgorithm > & evab::ListBox::SetItems (
 
 
 * `aItems` Array of element pointers 
-* `aCount` Number of items 
 
 
 

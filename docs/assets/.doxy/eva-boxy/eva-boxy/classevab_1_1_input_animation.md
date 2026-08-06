@@ -76,7 +76,7 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 | Type | Name |
 | ---: | :--- |
 |  unsigned char | [**Count**](#function-count) () const<br> |
-|  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the speed value by a delta._  |
+|  void | [**Increment**](#function-increment) (signed char aSteps) <br>_Increments the speed value by a delta._  |
 |   | [**InputAnimation**](#function-inputanimation) (unsigned char aValue=0) <br>_Constructor for_ [_**InputAnimation**_](classevab_1_1_input_animation.md) _._ |
 |  void | [**Select**](#function-select) (unsigned char aValue) <br>_Sets the animation speed._  |
 |  unsigned char | [**Selected**](#function-selected) () const<br>_Gets the current speed value._  |
@@ -215,7 +215,7 @@ inline unsigned char evab::InputAnimation::Count () const
 _Increments the speed value by a delta._ 
 ```C++
 inline void evab::InputAnimation::Increment (
-    signed char delta
+    signed char aSteps
 ) 
 ```
 
@@ -226,7 +226,7 @@ inline void evab::InputAnimation::Increment (
 **Parameters:**
 
 
-* `delta` Amount to add (positive or negative) 
+* `aSteps` Amount to add (positive or negative) 
 
 
 

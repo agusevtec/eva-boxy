@@ -24,12 +24,15 @@
     <innerfile refid="evab_input_selector_album_8h">evabInputSelectorAlbum.h</innerfile>
     <innerfile refid="evab_input_stretch_bar_8h">evabInputStretchBar.h</innerfile>
     <innerfile refid="evab_input_text_stretch_bar_8h">evabInputTextStretchBar.h</innerfile>
+    <innerfile refid="evab_key_catcher_8h">evabKeyCatcher.h</innerfile>
+    <innerfile refid="evab_key_modifier_8h">evabKeyModifier.h</innerfile>
+    <innerfile refid="evab_key_reactor_8h">evabKeyReactor.h</innerfile>
     <innerfile refid="evab_keys_8h">evabKeys.h</innerfile>
     <innerfile refid="evab_labeled_8h">evabLabeled.h</innerfile>
     <innerfile refid="evab_layout_base_8h">evabLayoutBase.h</innerfile>
     <innerfile refid="evab_list_box_8h">evabListBox.h</innerfile>
+    <innerfile refid="evab_padding_8h">evabPadding.h</innerfile>
     <innerfile refid="evab_percent_8h">evabPercent.h</innerfile>
-    <innerfile refid="evab_reactions_8h">evabReactions.h</innerfile>
     <innerfile refid="evab_screen_8h">evabScreen.h</innerfile>
     <innerfile refid="evab_screen_k_s0108_8h">evabScreenKS0108.h</innerfile>
     <innerfile refid="evab_screen_l_c_d___i2_c_8h">evabScreenLCD_I2C.h</innerfile>
@@ -43,6 +46,7 @@
     <innerfile refid="evab_text_align_8h">evabTextAlign.h</innerfile>
     <innerfile refid="evab_text_label_8h">evabTextLabel.h</innerfile>
     <innerfile refid="evab_text_traits_8h">evabTextTraits.h</innerfile>
+    <innerfile refid="evab_titled_8h">evabTitled.h</innerfile>
     <innerfile refid="evab_window_algorithms_8h">evabWindowAlgorithms.h</innerfile>
     <briefdescription>
     </briefdescription>

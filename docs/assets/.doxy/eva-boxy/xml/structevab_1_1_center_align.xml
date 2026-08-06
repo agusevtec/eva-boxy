@@ -2,8 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="structevab_1_1_center_align" kind="struct" language="C++" prot="public">
     <compoundname>evab::CenterAlign</compoundname>
+    <includes refid="evab_text_align_8h" local="no">evabTextAlign.h</includes>
     <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="structevab_1_1_center_align_1aca4a0165ce0c492767709f08de50fb52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="structevab_1_1_center_align_1aca4a0165ce0c492767709f08de50fb52" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
         <definition>static unsigned char evab::CenterAlign::Offset</definition>
         <argsstring>(Coor aSize, unsigned char textLen)</argsstring>
@@ -18,19 +19,41 @@
           <declname>textLen</declname>
         </param>
         <briefdescription>
+<para>Calculates offset for center alignment. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Available area size </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text length in characters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Offset to center the text </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextAlign.h" line="22" column="30" bodyfile="src/evabTextAlign.h" bodystart="22" bodyend="30"/>
+        <location file="src/evabTextAlign.h" line="35" column="30"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Center alignment strategy. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabTextAlign.h" line="20" column="5" bodyfile="src/evabTextAlign.h" bodystart="21" bodyend="31"/>
+    <location file="src/evabTextAlign.h" line="27" column="5" bodyfile="src/evabTextAlign.h" bodystart="28" bodyend="36"/>
     <listofallmembers>
       <member refid="structevab_1_1_center_align_1aca4a0165ce0c492767709f08de50fb52" prot="public" virt="non-virtual"><scope>evab::CenterAlign</scope><name>Offset</name></member>
     </listofallmembers>

@@ -16,67 +16,48 @@
 namespace evab
 {
 
-  class IFocusChain
-  {
-  public:
-    virtual IFocusChain *Next() = 0;
-
-    virtual ElementBase *AsElementBase() = 0;
-
-    virtual void SetNext(IFocusChain *aNext) = 0;
-
-  };
-
   class LayoutBase : public ElementBase
   {
+
+    class FocusChainBase
+    {
+    public:
+      ElementBase *element;
+      FocusChainBase *next;
+      FocusChainBase(ElementBase *aElement) : element(aElement), next(nullptr) {}
+    };
+
     template <class T>
-    class FocusChain : public T, public IFocusChain
+    class FocusChain : public T, public FocusChainBase
     {
     public:
       template <typename... Args>
       FocusChain(LayoutBase *aParent, Args &&...args)
-          : T(args...), mNext(nullptr)
+          : T(args...), FocusChainBase(this)
       {
         if (!aParent)
           return;
-        IFocusChain *first = aParent->mFocusedChild;
+
+        FocusChainBase *first = aParent->mFocusedChild;
         if (first)
         {
-          IFocusChain *last = first;
-          while (last->Next() && last->Next() != first)
-            last = last->Next();
+          FocusChainBase *last = first;
+          while (last->next && last->next != first)
+            last = last->next;
 
-          last->SetNext(this);
-          this->SetNext(first);
+          last->next = this;
+          this->next = first;
         }
         else
         {
-          this->SetNext(this);
+          this->next = this;
           aParent->mFocusedChild = this;
         }
       }
-
-      IFocusChain *Next() override
-      {
-        return mNext;
-      }
-
-      virtual void SetNext(IFocusChain *aNext) override
-      {
-        mNext = aNext;
-      }
-
-      virtual ElementBase *AsElementBase() override
-      {
-        return this;
-      }
-
-    private:
-      IFocusChain *mNext;
     };
 
   public:
-    bool IsFocused(IFocusChain *aChild);
+    bool IsFocused(FocusChainBase *aChild);
 
     ElementBase *GetFocused() const;
 
@@ -85,7 +66,7 @@ namespace evab
     bool OnKey(Keys aKey) override;
 
   protected:
-    void focusChild(IFocusChain *aChild);
+    void focusChild(FocusChainBase *aChild);
 
   private:
     void focusNext();
@@ -97,7 +78,7 @@ namespace evab
     virtual void freezer();
 
   private:
-    IFocusChain *mFocusedChild = nullptr; 
+    FocusChainBase *mFocusedChild = nullptr; 
   };
 
 }

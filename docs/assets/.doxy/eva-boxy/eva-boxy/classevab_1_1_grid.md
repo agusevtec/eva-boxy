@@ -55,7 +55,6 @@ _Layout manager for grid-based UI arrangement._ [More...](#detailed-description)
 |  void | [**Clear**](#function-clear) () <br>_Clears the current cell area._  |
 |  void | [**Draw**](#function-draw) ([**ElementBase**](classevab_1_1_element_base.md) \* aElement, unsigned char aIsFocused=0) <br>_Draws an element in the current cell._  |
 |  [**Coor**](structevab_1_1_coor.md) | [**GetPos**](#function-getpos) () const<br>_Gets the current position._  |
-|  [**Screen**](classevab_1_1_screen.md) \* | [**GetScreen**](#function-getscreen) () const<br>_Gets the screen._  |
 |  [**Coor**](structevab_1_1_coor.md) | [**GetSize**](#function-getsize) () const<br>_Gets the current size._  |
 |   | [**Grid**](#function-grid) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize) <br>_Constructs a_ [_**Grid**_](classevab_1_1_grid.md) _for a specific area._ |
 |  void | [**Picto**](#function-picto) (const unsigned char \* aPictogram, unsigned char aColor=0) <br>_Draws a pictogram in the current cell._  |
@@ -185,31 +184,6 @@ inline Coor evab::Grid::GetPos () const
 
 
 
-### function GetScreen 
-
-_Gets the screen._ 
-```C++
-inline Screen * evab::Grid::GetScreen () const
-```
-
-
-
-
-
-**Returns:**
-
-Screen\* Current screen 
-
-
-
-
-
-        
-
-<hr>
-
-
-
 ### function GetSize 
 
 _Gets the current size._ 
@@ -253,10 +227,7 @@ evab::Grid::Grid (
 **Parameters:**
 
 
-* `aScreen` [**Screen**](classevab_1_1_screen.md) to draw on
-  * 
-
-
+* `aScreen` [**Screen**](classevab_1_1_screen.md) to draw on 
 * `aPos` Position on screen 
 * `aSize` Size of the grid area 
 
