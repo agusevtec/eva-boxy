@@ -45,6 +45,13 @@ namespace evab
       redraw();
     }
 
+    void SetItems(ElementBase *aItems[], unsigned char aSize)
+    {
+      mItems = aItems;
+      TWindowAlgorithm::setCount(aSize);
+      redraw();
+    }
+
     /**
      * @brief Sets the height of each item
      *
