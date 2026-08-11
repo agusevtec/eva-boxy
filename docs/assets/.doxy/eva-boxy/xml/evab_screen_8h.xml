@@ -96,16 +96,16 @@
         <link refid="evab_grid_8h_source"/>
       </node>
       <node id="6">
-        <label>src/evabInputAnimation.h</label>
-        <link refid="evab_input_animation_8h_source"/>
+        <label>src/evabInputAnimationPx.h</label>
+        <link refid="evab_input_animation_px_8h_source"/>
       </node>
       <node id="7">
         <label>src/evabInputButton.h</label>
         <link refid="evab_input_button_8h_source"/>
       </node>
       <node id="8">
-        <label>src/evabInputButtonPicto.h</label>
-        <link refid="evab_input_button_picto_8h_source"/>
+        <label>src/evabInputButtonPx.h</label>
+        <link refid="evab_input_button_px_8h_source"/>
       </node>
       <node id="9">
         <label>src/evabInputFloat.h</label>
@@ -120,26 +120,18 @@
         </childnode>
       </node>
       <node id="12">
-        <label>src/evabInputSelectorAlbum.h</label>
-        <link refid="evab_input_selector_album_8h_source"/>
-      </node>
-      <node id="13">
-        <label>src/evabInputStretchBar.h</label>
-        <link refid="evab_input_stretch_bar_8h_source"/>
-      </node>
-      <node id="14">
-        <label>src/evabInputTextStretchBar.h</label>
-        <link refid="evab_input_text_stretch_bar_8h_source"/>
+        <label>src/evabInputSelectorPx.h</label>
+        <link refid="evab_input_selector_px_8h_source"/>
       </node>
       <node id="18">
         <label>src/evabLabeled.h</label>
         <link refid="evab_labeled_8h_source"/>
       </node>
-      <node id="15">
+      <node id="13">
         <label>src/evabLayoutBase.h</label>
         <link refid="evab_layout_base_8h_source"/>
       </node>
-      <node id="16">
+      <node id="14">
         <label>src/evabListBox.h</label>
         <link refid="evab_list_box_8h_source"/>
       </node>
@@ -214,6 +206,14 @@
       <node id="27">
         <label>src/evabScreenSerialText.h</label>
         <link refid="evab_screen_serial_text_8h_source"/>
+      </node>
+      <node id="15">
+        <label>src/evabStretchBar.h</label>
+        <link refid="evab_stretch_bar_8h_source"/>
+      </node>
+      <node id="16">
+        <label>src/evabStretchBarPx.h</label>
+        <link refid="evab_stretch_bar_px_8h_source"/>
       </node>
       <node id="17">
         <label>src/evabTextLabel.h</label>

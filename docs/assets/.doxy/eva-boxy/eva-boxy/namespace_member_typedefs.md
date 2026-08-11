@@ -11,7 +11,9 @@
 ## h
 
 * **HorizontalProgressBar** ([**evab**](namespaceevab.md))
+* **HorizontalProgressBarPx** ([**evab**](namespaceevab.md))
 * **HorizontalScrollBar** ([**evab**](namespaceevab.md))
+* **HorizontalScrollBarPx** ([**evab**](namespaceevab.md))
 
 
 ## l
@@ -31,8 +33,6 @@
 
 ## t
 
-* **TextHorizontalProgressBar** ([**evab**](namespaceevab.md))
-* **TextHorizontalScrollBar** ([**evab**](namespaceevab.md))
 * **TextLabelCenter** ([**evab**](namespaceevab.md))
 * **TextLabelCenterConst** ([**evab**](namespaceevab.md))
 * **TextLabelCenterF** ([**evab**](namespaceevab.md))
@@ -42,8 +42,6 @@
 * **TextLabelRight** ([**evab**](namespaceevab.md))
 * **TextLabelRightConst** ([**evab**](namespaceevab.md))
 * **TextLabelRightF** ([**evab**](namespaceevab.md))
-* **TextVerticalProgressBar** ([**evab**](namespaceevab.md))
-* **TextVerticalScrollBar** ([**evab**](namespaceevab.md))
 * **TitledCenter** ([**evab**](namespaceevab.md))
 * **TitledCenterF** ([**evab**](namespaceevab.md))
 * **TitledLeft** ([**evab**](namespaceevab.md))
@@ -55,7 +53,9 @@
 ## v
 
 * **VerticalProgressBar** ([**evab**](namespaceevab.md))
+* **VerticalProgressBarPx** ([**evab**](namespaceevab.md))
 * **VerticalScrollBar** ([**evab**](namespaceevab.md))
+* **VerticalScrollBarPx** ([**evab**](namespaceevab.md))
 
 
 

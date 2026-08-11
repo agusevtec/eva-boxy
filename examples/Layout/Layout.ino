@@ -4,13 +4,13 @@
 #include <evaRepeatTimer.h>
 
 #include <evabGalleryRemixicon24.h>
-#include <evabInputButtonPicto.h>
+#include <evabInputButtonPx.h>
 #include <evabBehavior.h>
 #include <evaTac.h>
 #include <evabInputButton.h>
 #include <evabLayoutBase.h>
 #include <evabLabeled.h>
-#include <evabInputAnimation.h>
+#include <evabInputAnimationPx.h>
 #include <evabAlbums.h>
 
 using namespace eva;
@@ -19,12 +19,12 @@ using namespace evab;
 static const char OK_TEXT[] PROGMEM = "OK";
 
 class MyLayout : public LayoutBase {
-  FocusChain<InputButtonPicto> btn1{ this, GalleryRemixicon24::PICTO_EC10 };
-  //InputButtonPicto btn2{ GalleryRemixicon24::PICTO_F371 };
-  //FocusChain<InputButtonPicto> btn3{ this, AlbumRainbowmeter::GetTile(2) };
-  InputAnimation<AlbumProgress> btn2{  2};
-  InputAnimation<AlbumRoundmeter> btn3{  2};
-  FocusChain<InputButton> btn4{ this, (const __FlashStringHelper *)OK_TEXT };
+  Focusable<InputButtonPx> btn1{ this, GalleryRemixicon24::PICTO_EC10 };
+  //InputButtonPx btn2{ GalleryRemixicon24::PICTO_F371 };
+  //Focusable<InputButtonPx> btn3{ this, AlbumRainbowmeter::GetTile(2) };
+  InputAnimationPx<AlbumProgress> btn2{  2};
+  InputAnimationPx<AlbumRoundmeter> btn3{  2};
+  Focusable<InputButton> btn4{ this, (const __FlashStringHelper *)OK_TEXT };
 
 protected:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {

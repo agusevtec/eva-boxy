@@ -22,7 +22,6 @@
 | Type | Name |
 | ---: | :--- |
 | file | [**evabAlbums.h**](evab_albums_8h.md) <br> |
-| file | [**evabAlbumsStretchy.h**](evab_albums_stretchy_8h.md) <br> |
 | file | [**evabBoxy.h**](evab_boxy_8h.md) <br> |
 | file | [**evabCompositeBase.h**](evab_composite_base_8h.md) <br> |
 | file | [**evabCoor.h**](evab_coor_8h.md) <br> |
@@ -35,14 +34,12 @@
 | file | [**evabGalleryRemixicon32.h**](evab_gallery_remixicon32_8h.md) <br> |
 | file | [**evabGrid.h**](evab_grid_8h.md) <br> |
 | file | [**evabIFont.h**](evab_i_font_8h.md) <br> |
-| file | [**evabInputAnimation.h**](evab_input_animation_8h.md) <br> |
+| file | [**evabInputAnimationPx.h**](evab_input_animation_px_8h.md) <br> |
 | file | [**evabInputButton.h**](evab_input_button_8h.md) <br> |
-| file | [**evabInputButtonPicto.h**](evab_input_button_picto_8h.md) <br> |
+| file | [**evabInputButtonPx.h**](evab_input_button_px_8h.md) <br> |
 | file | [**evabInputFloat.h**](evab_input_float_8h.md) <br> |
 | file | [**evabInputInt.h**](evab_input_int_8h.md) <br> |
-| file | [**evabInputSelectorAlbum.h**](evab_input_selector_album_8h.md) <br> |
-| file | [**evabInputStretchBar.h**](evab_input_stretch_bar_8h.md) <br> |
-| file | [**evabInputTextStretchBar.h**](evab_input_text_stretch_bar_8h.md) <br> |
+| file | [**evabInputSelectorPx.h**](evab_input_selector_px_8h.md) <br> |
 | file | [**evabKeyCatcher.h**](evab_key_catcher_8h.md) <br> |
 | file | [**evabKeyModifier.h**](evab_key_modifier_8h.md) <br> |
 | file | [**evabKeyReactor.h**](evab_key_reactor_8h.md) <br> |
@@ -62,6 +59,9 @@
 | file | [**evabScreenSerialPixel.h**](evab_screen_serial_pixel_8h.md) <br> |
 | file | [**evabScreenSerialText.h**](evab_screen_serial_text_8h.md) <br> |
 | file | [**evabSerializers.h**](evab_serializers_8h.md) <br> |
+| file | [**evabStretchBar.h**](evab_stretch_bar_8h.md) <br> |
+| file | [**evabStretchBarPx.h**](evab_stretch_bar_px_8h.md) <br> |
+| file | [**evabStretchBarPxResources.h**](evab_stretch_bar_px_resources_8h.md) <br> |
 | file | [**evabTextAlign.h**](evab_text_align_8h.md) <br> |
 | file | [**evabTextLabel.h**](evab_text_label_8h.md) <br> |
 | file | [**evabTextTraits.h**](evab_text_traits_8h.md) <br> |

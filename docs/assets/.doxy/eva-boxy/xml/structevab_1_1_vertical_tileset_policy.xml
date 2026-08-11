@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structevab_1_1_vertical_tileset_policy" kind="struct" language="C++" prot="public">
+    <compoundname>evab::VerticalTilesetPolicy</compoundname>
+    <includes refid="evab_stretch_bar_px_8h" local="no">evabStretchBarPx.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structevab_1_1_vertical_tileset_policy_1ab57f30aebfacfc642377ebb1b8a07f7e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>static unsigned short evab::VerticalTilesetPolicy::CalculateTotalBlocks</definition>
+        <argsstring>(Coor aSize)</argsstring>
+        <name>CalculateTotalBlocks</name>
+        <qualifiedname>evab::VerticalTilesetPolicy::CalculateTotalBlocks</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <briefdescription>
+<para>Calculates total number of blocks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Total number of blocks </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabStretchBarPx.h" line="19" column="31" bodyfile="src/evabStretchBarPx.h" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="structevab_1_1_vertical_tileset_policy_1a0c4be10bce86f4927102ba1af3c422d8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned short</type>
+        <definition>static unsigned short evab::VerticalTilesetPolicy::CalculateResolution</definition>
+        <argsstring>(Coor aSize)</argsstring>
+        <name>CalculateResolution</name>
+        <qualifiedname>evab::VerticalTilesetPolicy::CalculateResolution</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <briefdescription>
+<para>Calculates resolution (number of possible positions). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resolution value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabStretchBarPx.h" line="30" column="31" bodyfile="src/evabStretchBarPx.h" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="structevab_1_1_vertical_tileset_policy_1ab5aa677f799c02d6a4b889211629564a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>static Coor evab::VerticalTilesetPolicy::GetTilePosition</definition>
+        <argsstring>(Coor aPos, Coor aSize, unsigned char index, unsigned char total)</argsstring>
+        <name>GetTilePosition</name>
+        <qualifiedname>evab::VerticalTilesetPolicy::GetTilePosition</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>total</declname>
+        </param>
+        <briefdescription>
+<para>Gets position of a block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Base position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Block index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>total</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of blocks </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position of the block </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabStretchBarPx.h" line="44" column="21" bodyfile="src/evabStretchBarPx.h" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="structevab_1_1_vertical_tileset_policy_1a0cee74ed2fd690272af05c1fca9d48d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>static Coor evab::VerticalTilesetPolicy::GetRestPosition</definition>
+        <argsstring>(Coor aPos, Coor aSize)</argsstring>
+        <name>GetRestPosition</name>
+        <qualifiedname>evab::VerticalTilesetPolicy::GetRestPosition</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabStretchBarPx.h" line="49" column="21" bodyfile="src/evabStretchBarPx.h" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structevab_1_1_vertical_tileset_policy_1a7ba18f16543e528ed43e13736e1697be" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>static Coor evab::VerticalTilesetPolicy::GetRestSize</definition>
+        <argsstring>(Coor aPos, Coor aSize)</argsstring>
+        <name>GetRestSize</name>
+        <qualifiedname>evab::VerticalTilesetPolicy::GetRestSize</qualifiedname>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabStretchBarPx.h" line="54" column="21" bodyfile="src/evabStretchBarPx.h" bodystart="54" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Policy for vertical orientation of stretch bars. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabStretchBarPx.h" line="11" column="5" bodyfile="src/evabStretchBarPx.h" bodystart="12" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structevab_1_1_vertical_tileset_policy_1a0c4be10bce86f4927102ba1af3c422d8" prot="public" virt="non-virtual"><scope>evab::VerticalTilesetPolicy</scope><name>CalculateResolution</name></member>
+      <member refid="structevab_1_1_vertical_tileset_policy_1ab57f30aebfacfc642377ebb1b8a07f7e" prot="public" virt="non-virtual"><scope>evab::VerticalTilesetPolicy</scope><name>CalculateTotalBlocks</name></member>
+      <member refid="structevab_1_1_vertical_tileset_policy_1a0cee74ed2fd690272af05c1fca9d48d1" prot="public" virt="non-virtual"><scope>evab::VerticalTilesetPolicy</scope><name>GetRestPosition</name></member>
+      <member refid="structevab_1_1_vertical_tileset_policy_1a7ba18f16543e528ed43e13736e1697be" prot="public" virt="non-virtual"><scope>evab::VerticalTilesetPolicy</scope><name>GetRestSize</name></member>
+      <member refid="structevab_1_1_vertical_tileset_policy_1ab5aa677f799c02d6a4b889211629564a" prot="public" virt="non-virtual"><scope>evab::VerticalTilesetPolicy</scope><name>GetTilePosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

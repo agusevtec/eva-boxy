@@ -1434,13 +1434,13 @@
 <p>Every element in Boxy can be drawn imperatively using its <code>Draw()</code> method.</p>
 <h3 id="button-controls">Button Controls<a class="headerlink" href="#button-controls" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputButton.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputButtonPicto.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputButtonPx.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabGalleryRemixicon24.h&gt;</span>
 
 <span class="n">InputButton</span><span class="w"> </span><span class="n">button</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">));</span>
 <span class="n">button</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 
-<span class="n">InputButtonPicto</span><span class="w"> </span><span class="nf">buttonPicto</span><span class="p">(</span><span class="n">GalleryRemixicon24</span><span class="o">::</span><span class="n">PICTO_F243</span><span class="p">);</span>
+<span class="n">InputButtonPx</span><span class="w"> </span><span class="nf">buttonPicto</span><span class="p">(</span><span class="n">GalleryRemixicon24</span><span class="o">::</span><span class="n">PICTO_F243</span><span class="p">);</span>
 <span class="n">buttonPicto</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
 
@@ -1459,7 +1459,7 @@
 <td>Action triggers: OK, Cancel, Save</td>
 </tr>
 <tr>
-<td><code>InputButtonPicto</code></td>
+<td><code>InputButtonPx</code></td>
 <td>Icon-only button</td>
 <td>Toolbars, icon-based navigation</td>
 </tr>
@@ -1503,35 +1503,35 @@
 </table>
 <hr />
 <h3 id="pictogram-selection-controls">Pictogram Selection Controls<a class="headerlink" href="#pictogram-selection-controls" title="Permanent link">&para;</a></h3>
-<p><code>InputSelectorAlbum</code> allows selecting from a set of pictograms. The album template parameter determines both the available states and their visual representation.</p>
+<p><code>InputSelectorPx</code> allows selecting from a set of pictograms. The album template parameter determines both the available states and their visual representation.</p>
 <blockquote>
 <p><strong>Important:</strong> Because of limited graphics support, Boxy does not control the size of the drawing area for pictogram-related methods. The user must handle the size of the area manually.</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputSelectorAlbum.h&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputSelectorPx.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabAlbums.h&gt;</span>
 
-<span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumOnOff</span><span class="o">&gt;</span><span class="w"> </span><span class="n">selOnOff</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumOnOff</span><span class="o">&gt;</span><span class="w"> </span><span class="n">selOnOff</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="n">selOnOff</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;</span><span class="w"> </span><span class="n">battery</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;</span><span class="w"> </span><span class="n">battery</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 <span class="n">battery</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumRainbowmeter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rainbow</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumRainbowmeter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">rainbow</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 <span class="n">rainbow</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumLamp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lamp</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumLamp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lamp</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="n">lamp</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumProgress</span><span class="o">&gt;</span><span class="w"> </span><span class="n">progress</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumProgress</span><span class="o">&gt;</span><span class="w"> </span><span class="n">progress</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
 <span class="n">progress</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumSpeaker</span><span class="o">&gt;</span><span class="w"> </span><span class="n">speaker</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumSpeaker</span><span class="o">&gt;</span><span class="w"> </span><span class="n">speaker</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 <span class="n">speaker</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumSignal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">signal</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumSignal</span><span class="o">&gt;</span><span class="w"> </span><span class="n">signal</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
 <span class="n">signal</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumRoundmeter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">roundmeter</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumRoundmeter</span><span class="o">&gt;</span><span class="w"> </span><span class="n">roundmeter</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
 <span class="n">roundmeter</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div>
 
@@ -1598,18 +1598,18 @@
 <hr />
 <h3 id="stretch-bar-controls">Stretch Bar Controls<a class="headerlink" href="#stretch-bar-controls" title="Permanent link">&para;</a></h3>
 <p>Graphical stretch bars use pictograms for rendering:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputStretchBar.h&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabStretchBarPx.h&gt;</span>
 
-<span class="n">VerticalProgressBar</span><span class="w"> </span><span class="nf">vProgress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">VerticalProgressBarPx</span><span class="w"> </span><span class="nf">vProgress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="n">vProgress</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">HorizontalProgressBar</span><span class="w"> </span><span class="nf">hProgress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">HorizontalProgressBarPx</span><span class="w"> </span><span class="nf">hProgress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="n">hProgress</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">VerticalScrollBar</span><span class="w"> </span><span class="nf">vScroll</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">VerticalScrollBarPx</span><span class="w"> </span><span class="nf">vScroll</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="n">vScroll</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">HorizontalScrollBar</span><span class="w"> </span><span class="nf">scrollBar</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">HorizontalScrollBarPx</span><span class="w"> </span><span class="nf">scrollBar</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="n">scrollBar</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div>
 
@@ -1623,22 +1623,22 @@
 </thead>
 <tbody>
 <tr>
-<td><code>VerticalProgressBar</code></td>
+<td><code>VerticalProgressBarPx</code></td>
 <td>Fills from bottom to top</td>
 <td>Level indicators, tank levels</td>
 </tr>
 <tr>
-<td><code>HorizontalProgressBar</code></td>
+<td><code>HorizontalProgressBarPx</code></td>
 <td>Fills from left to right</td>
 <td>Progress bars, loading</td>
 </tr>
 <tr>
-<td><code>VerticalScrollBar</code></td>
+<td><code>VerticalScrollBarPx</code></td>
 <td>Thumb position on vertical track</td>
 <td>Scroll position in lists</td>
 </tr>
 <tr>
-<td><code>HorizontalScrollBar</code></td>
+<td><code>HorizontalScrollBarPx</code></td>
 <td>Thumb position on horizontal track</td>
 <td>Scroll position in wide content</td>
 </tr>
@@ -1650,18 +1650,18 @@
 <hr />
 <h3 id="text-based-stretch-bars">Text-Based Stretch Bars<a class="headerlink" href="#text-based-stretch-bars" title="Permanent link">&para;</a></h3>
 <p>Text-based variants use ASCII characters instead of pictograms. These are more memory-efficient and work on character LCD displays:</p>
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputTextStretchBar.h&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabStretchBar.h&gt;</span>
 
-<span class="n">TextVerticalProgressBar</span><span class="w"> </span><span class="nf">vtProgress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">VerticalProgressBar</span><span class="w"> </span><span class="nf">vtProgress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="n">vtProgress</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">TextHorizontalProgressBar</span><span class="w"> </span><span class="nf">htProgress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">HorizontalProgressBar</span><span class="w"> </span><span class="nf">htProgress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="n">htProgress</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">TextVerticalScrollBar</span><span class="w"> </span><span class="nf">vtScroll</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">VerticalScrollBar</span><span class="w"> </span><span class="nf">vtScroll</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="n">vtScroll</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="n">TextHorizontalScrollBar</span><span class="w"> </span><span class="nf">tscrollBar</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">HorizontalScrollBar</span><span class="w"> </span><span class="nf">tscrollBar</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 <span class="n">tscrollBar</span><span class="p">.</span><span class="n">Draw</span><span class="p">(</span><span class="o">&amp;</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div>
 
@@ -1675,22 +1675,22 @@
 </thead>
 <tbody>
 <tr>
-<td><code>TextVerticalProgressBar</code></td>
+<td><code>VerticalProgressBar</code></td>
 <td><code>#</code> and <code>|</code></td>
 <td>Memory-constrained devices</td>
 </tr>
 <tr>
-<td><code>TextHorizontalProgressBar</code></td>
+<td><code>HorizontalProgressBar</code></td>
 <td><code>-</code> and <code>|</code></td>
 <td>Character LCD displays</td>
 </tr>
 <tr>
-<td><code>TextVerticalScrollBar</code></td>
+<td><code>VerticalScrollBar</code></td>
 <td><code>|</code>, <code>#</code>, <code>|</code></td>
 <td>Scroll indication on text displays</td>
 </tr>
 <tr>
-<td><code>TextHorizontalScrollBar</code></td>
+<td><code>HorizontalScrollBar</code></td>
 <td><code>-</code>, <code>|</code>, <code>-</code></td>
 <td>Scroll indication on text displays</td>
 </tr>

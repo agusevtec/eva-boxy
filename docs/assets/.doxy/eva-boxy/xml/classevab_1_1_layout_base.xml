@@ -4,12 +4,12 @@
     <compoundname>evab::LayoutBase</compoundname>
     <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
     <includes refid="evab_layout_base_8h" local="no">evabLayoutBase.h</includes>
-    <innerclass refid="classevab_1_1_layout_base_1_1_focus_chain_base" prot="private">evab::LayoutBase::FocusChainBase</innerclass>
-    <innerclass refid="classevab_1_1_layout_base_1_1_focus_chain" prot="private">evab::LayoutBase::FocusChain</innerclass>
+    <innerclass refid="classevab_1_1_layout_base_1_1_focusable_base" prot="private">evab::LayoutBase::FocusableBase</innerclass>
+    <innerclass refid="classevab_1_1_layout_base_1_1_focusable" prot="private">evab::LayoutBase::Focusable</innerclass>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classevab_1_1_layout_base_1ab5162437cdea3504973a306eb9fd1f5f" prot="private" static="no" mutable="no">
-        <type>FocusChainBase *</type>
-        <definition>FocusChainBase* evab::LayoutBase::mFocusedChild</definition>
+      <memberdef kind="variable" id="classevab_1_1_layout_base_1a9f08e44254cff00c61aa5499ad5e7f0c" prot="private" static="no" mutable="no">
+        <type>FocusableBase *</type>
+        <definition>FocusableBase* evab::LayoutBase::mFocusedChild</definition>
         <argsstring></argsstring>
         <name>mFocusedChild</name>
         <qualifiedname>evab::LayoutBase::mFocusedChild</qualifiedname>
@@ -21,18 +21,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="129" column="20" bodyfile="src/evabLayoutBase.h" bodystart="129" bodyend="-1"/>
+        <location file="src/evabLayoutBase.h" line="129" column="19" bodyfile="src/evabLayoutBase.h" bodystart="129" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_layout_base_1a031ea7859e02906c7ced080b1dd08488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a587777d309597a4b47261fe80ed4d899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool evab::LayoutBase::IsFocused</definition>
-        <argsstring>(FocusChainBase *aChild)</argsstring>
+        <argsstring>(FocusableBase *aChild)</argsstring>
         <name>IsFocused</name>
         <qualifiedname>evab::LayoutBase::IsFocused</qualifiedname>
         <param>
-          <type>FocusChainBase *</type>
+          <type>FocusableBase *</type>
           <declname>aChild</declname>
         </param>
         <briefdescription>
@@ -138,14 +138,14 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
-      <memberdef kind="function" id="classevab_1_1_layout_base_1a0112254f948e252aeab694a166ea1364" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1a4d270d52cd0f63a18b2f759fb8e78a01" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::LayoutBase::focusChild</definition>
-        <argsstring>(FocusChainBase *aChild)</argsstring>
+        <argsstring>(FocusableBase *aChild)</argsstring>
         <name>focusChild</name>
         <qualifiedname>evab::LayoutBase::focusChild</qualifiedname>
         <param>
-          <type>FocusChainBase *</type>
+          <type>FocusableBase *</type>
           <declname>aChild</declname>
         </param>
         <briefdescription>
@@ -252,7 +252,7 @@
 <para>Abstract base class for composite elements with circular focus chain. </para>
     </briefdescription>
     <detaileddescription>
-<para>Manages a circular linked list of child elements for focus navigation. Only stores one pointer - to the currently focused child. Children must be of type FocusChain&lt;T&gt; to form the chain. </para>
+<para>Manages a circular linked list of child elements for focus navigation. Only stores one pointer - to the currently focused child. Children must be of type Focusable&lt;T&gt; to form the chain. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -282,16 +282,16 @@
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Draw</name></member>
       <member refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" virt="pure-virtual"><scope>evab::LayoutBase</scope><name>drawer</name></member>
-      <member refid="classevab_1_1_layout_base_1a0112254f948e252aeab694a166ea1364" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusChild</name></member>
+      <member refid="classevab_1_1_layout_base_1a4d270d52cd0f63a18b2f759fb8e78a01" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusChild</name></member>
       <member refid="classevab_1_1_layout_base_1add166aea3c25c38285b1c8292bef5c97" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusNext</name></member>
       <member refid="classevab_1_1_layout_base_1a11b109ea5bdc8f73cf92f5de13ac0e89" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>focusPrev</name></member>
       <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Freeze</name></member>
       <member refid="classevab_1_1_layout_base_1a6c6e9092d6242cfe65a31c365229e597" prot="private" virt="virtual"><scope>evab::LayoutBase</scope><name>freezer</name></member>
       <member refid="classevab_1_1_layout_base_1a328d6a9a3bf60afdf20269675de83e13" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>GetFocused</name></member>
       <member refid="classevab_1_1_layout_base_1a27d54aedee90e1d09cc55ea4745b9f4d" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>Increment</name></member>
-      <member refid="classevab_1_1_layout_base_1a031ea7859e02906c7ced080b1dd08488" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>IsFocused</name></member>
+      <member refid="classevab_1_1_layout_base_1a587777d309597a4b47261fe80ed4d899" prot="public" virt="non-virtual"><scope>evab::LayoutBase</scope><name>IsFocused</name></member>
       <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>isFrozen</name></member>
-      <member refid="classevab_1_1_layout_base_1ab5162437cdea3504973a306eb9fd1f5f" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>mFocusedChild</name></member>
+      <member refid="classevab_1_1_layout_base_1a9f08e44254cff00c61aa5499ad5e7f0c" prot="private" virt="non-virtual"><scope>evab::LayoutBase</scope><name>mFocusedChild</name></member>
       <member refid="classevab_1_1_layout_base_1a000e80032f71921ba1b04296c4d0eae1" prot="public" virt="virtual"><scope>evab::LayoutBase</scope><name>OnKey</name></member>
       <member refid="classevab_1_1_layout_base_1a19f2077c47eb065de6d8f73fa0086ac6" prot="private" virt="virtual"><scope>evab::LayoutBase</scope><name>onResidualKey</name></member>
       <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::LayoutBase</scope><name>redraw</name></member>

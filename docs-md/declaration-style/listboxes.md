@@ -51,7 +51,7 @@ class StandardMenu : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
     ElementBase* mItems[3] = {&mSpeed, &mCourse, &mFuel};
 
     // ScrollListbox with row height 2, capturing UP/DOWN for navigation
-    FocusChain<KeyModifier<ScrollListbox, KEY_UP, KEY_DOWN>> mListbox{this, 2, mItems};
+    Focusable<KeyModifier<ScrollListbox, KEY_UP, KEY_DOWN>> mListbox{this, 2, mItems};
 
 public:
     void drawer(Screen* aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
@@ -69,7 +69,7 @@ To add custom visual elements (such as a vertical scrollbar), create a wrapper c
 ```cpp
 #include <evabScrollListbox.h>
 #include <evabPercent.h>
-#include <evabVerticalScrollBar.h>
+#include <evabVerticalScrollBarPx.h>
 
 // Custom Listbox with a vertical scrollbar on the right
 class CustomListbox : public Percent<ScrollListbox> {
@@ -81,7 +81,7 @@ public:
         ScrollListbox::drawer(aScreen, {aPos.X + 1, aPos.Y}, {aSize.X - 3, aSize.Y}, aIsFocused);
 
         // 2. Render a vertical scrollbar in the reserved right margin
-        VerticalScrollBar scrollbar(100 - GetPercent());
+        VerticalScrollBarPx scrollbar(100 - GetPercent());
         scrollbar.Draw(aScreen, {aPos.X + aSize.X - 1, aPos.Y}, {1, aSize.Y}, 0);
     }
 };
@@ -94,17 +94,17 @@ public:
 #include <evabKeyModifier.h>
 #include <evabLabeled.h>
 #include <evabInputInt.h>
-#include <evabHorizontalProgressBar.h>
+#include <evabHorizontalProgressBarPx.h>
 
 class DecoratedMenuApp : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
     KeyModifier<LabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> mItem0{F("Speed"), 13};
     KeyModifier<LabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> mItem1{F("Course"), 37};
-    KeyModifier<LabeledLeftF<HorizontalProgressBar>, KEY_LEFT, KEY_RIGHT> mItem2{F("Delay"), 30};
+    KeyModifier<LabeledLeftF<HorizontalProgressBarPx>, KEY_LEFT, KEY_RIGHT> mItem2{F("Delay"), 30};
 
     ElementBase* mItems[3] = {&mItem0, &mItem1, &mItem2};
 
     // Listbox with custom drawing and a scrollbar
-    FocusChain<KeyModifier<CustomListbox, KEY_UP, KEY_DOWN>> mCustomListbox{this, 2, mItems};
+    Focusable<KeyModifier<CustomListbox, KEY_UP, KEY_DOWN>> mCustomListbox{this, 2, mItems};
 
 public:
     void drawer(Screen* aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {

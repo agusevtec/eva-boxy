@@ -5,7 +5,7 @@
 
 using namespace evab;
 
-void LayoutBase::focusChild(FocusChainBase *aChild)
+void LayoutBase::focusChild(FocusableBase *aChild)
 {
   if (mFocusedChild == aChild)
     return;
@@ -21,7 +21,7 @@ ElementBase *LayoutBase::GetFocused() const
   return mFocusedChild->element;
 }
 
-bool LayoutBase::IsFocused(FocusChainBase *aChild)
+bool LayoutBase::IsFocused(FocusableBase *aChild)
 {
   return aChild == mFocusedChild;
 }
@@ -39,7 +39,7 @@ void LayoutBase::focusPrev()
   if (!mFocusedChild)
     return;
 
-  FocusChainBase *prev = mFocusedChild;
+  FocusableBase *prev = mFocusedChild;
   while (prev->next != mFocusedChild)
     prev = prev->next;
 
@@ -76,7 +76,7 @@ void LayoutBase::freezer()
   if (!mFocusedChild)
     return;
 
-  FocusChainBase *current = mFocusedChild;
+  FocusableBase *current = mFocusedChild;
   do
   {
     current->element->Freeze();

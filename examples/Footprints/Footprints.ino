@@ -1,15 +1,14 @@
 #include <evabFont8Bold.h>
 #include <evabScreenSSD1306.h>
 #include <evabAlbums.h>
-#include <evabAlbumsStretchy.h>
 #include <evabInputInt.h>
 #include <evabInputFloat.h>
-#include <evabInputSelectorAlbum.h>
+#include <evabInputSelectorPx.h>
 #include <evabInputButton.h>
-#include <evabInputButtonPicto.h>
-#include <evabInputAnimation.h>
-#include <evabInputStretchBar.h>
-#include <evabInputTextStretchBar.h>
+#include <evabInputButtonPx.h>
+#include <evabInputAnimationPx.h>
+#include <evabStretchBarPx.h>
+#include <evabStretchBar.h>
 #include <evabGalleryRemixicon16.h>
 #include <evabGalleryRemixicon24.h>
 #include <evabGalleryRemixicon32.h>
@@ -101,8 +100,8 @@ void setup() {
     InputButton button(F("OK"));
     button.Draw(&screen, {0, 4}, {16, 1}, 1);
 
-    showScreen(&screen, "InputButtonPicto:");
-    InputButtonPicto buttonPicto(GalleryRemixicon24::PICTO_F243);
+    showScreen(&screen, "InputButtonPx:");
+    InputButtonPx buttonPicto(GalleryRemixicon24::PICTO_F243);
     buttonPicto.Draw(&screen, {6, 4}, {3, 3}, 1);
 
     // InputInt: 42 → 99
@@ -121,23 +120,23 @@ void setup() {
     floatVal.SetValue(1.23);
     floatVal.Draw(&screen, {0, 4}, {16, 1}, 0);
 
-    // InputSelectorAlbum: 3/7 → 6/7
+    // InputSelectorPx: 3/7 → 6/7
      showScreen(&screen, "AlbumOnOff:");
-    InputSelectorAlbum<AlbumOnOff> selOnOff(0);
+    InputSelectorPx<AlbumOnOff> selOnOff(0);
     selOnOff.Draw(&screen, {7, 4}, {2, 1}, 0);
     delay(1000);
     selOnOff.Select(1);
     selOnOff.Draw(&screen, {7, 4}, {2, 1}, 0);
 
-    showScreen(&screen, "InputSelectorAlbum");
-    InputSelectorAlbum<AlbumBattery> selector(1);
+    showScreen(&screen, "InputSelectorPx");
+    InputSelectorPx<AlbumBattery> selector(1);
     selector.Draw(&screen, {7, 4}, {2, 1}, 0);
     delay(1000);
     selector.Select(4);
     selector.Draw(&screen, {7, 4}, {2, 1}, 0);
 
     showScreen(&screen, "AlbumRainbowmeter:");
-    InputSelectorAlbum<AlbumRainbowmeter> selRainbow(2);
+    InputSelectorPx<AlbumRainbowmeter> selRainbow(2);
     selRainbow.Draw(&screen, {6, 4}, {4, 2}, 0);
     delay(1000);
     selRainbow.Select(5);
@@ -145,35 +144,35 @@ void setup() {
 
 
     showScreen(&screen, "AlbumLamp:");
-    InputSelectorAlbum<AlbumLamp> selLamp(2);
+    InputSelectorPx<AlbumLamp> selLamp(2);
     selLamp.Draw(&screen, {7, 4}, {2, 2}, 0);
     delay(1000);
     selLamp.Select(4);
     selLamp.Draw(&screen, {7, 4}, {2, 2}, 0);
 
     showScreen(&screen, "AlbumProgress:");
-    InputSelectorAlbum<AlbumProgress> selProgress(2);
+    InputSelectorPx<AlbumProgress> selProgress(2);
     selProgress.Draw(&screen, {7, 4}, {2, 2}, 0);
     delay(1000);
     selProgress.Select(6);
     selProgress.Draw(&screen, {7, 4}, {2, 2}, 0);
 
     showScreen(&screen, "AlbumSpeaker:");
-    InputSelectorAlbum<AlbumSpeaker> selSpeaker(1);
+    InputSelectorPx<AlbumSpeaker> selSpeaker(1);
     selSpeaker.Draw(&screen, {7, 4}, {2, 2}, 0);
     delay(1000);
     selSpeaker.Select(3);
     selSpeaker.Draw(&screen, {7, 4}, {2, 2}, 0);
 
     showScreen(&screen, "AlbumSignal:");
-    InputSelectorAlbum<AlbumSignal> selSignal(2);
+    InputSelectorPx<AlbumSignal> selSignal(2);
     selSignal.Draw(&screen, {7, 4}, {2, 1}, 0);
     delay(1000);
     selSignal.Select(3);
     selSignal.Draw(&screen, {7, 4}, {2, 1}, 0);
 
     showScreen(&screen, "AlbumRoundmeter:");
-    InputSelectorAlbum<AlbumRoundmeter> selRound(3);
+    InputSelectorPx<AlbumRoundmeter> selRound(3);
     selRound.Draw(&screen, {7, 4}, {3, 3}, 0);
     delay(1000);
     selRound.Select(9);
@@ -182,31 +181,31 @@ void setup() {
     // ALL 4 STRETCHBAR TYPES
     // ============================================
 
-    showScreen(&screen, "VerticalProgressBar:");
-    VerticalProgressBar vProgress(50);
+    showScreen(&screen, "VerticalProgressBarPx:");
+    VerticalProgressBarPx vProgress(50);
     vProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
     delay(1000);
     vProgress.SetPercent(75);
     vProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
 
-    // HorizontalScrollBar: 50% → 75%
-    showScreen(&screen, "HorizontalProgressBar");
-    HorizontalProgressBar hProgress(50);
+    // HorizontalScrollBarPx: 50% → 75%
+    showScreen(&screen, "HorizontalProgressBarPx");
+    HorizontalProgressBarPx hProgress(50);
     hProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
     delay(1000);
     hProgress.SetPercent(75);
     hProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
 
-    showScreen(&screen, "VerticalScrollBar:");
-    VerticalScrollBar vScroll(50);
+    showScreen(&screen, "VerticalScrollBarPx:");
+    VerticalScrollBarPx vScroll(50);
     vScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
     delay(1000);
     vScroll.SetPercent(75);
     vScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
 
-    // HorizontalScrollBar: 50% → 75%
-    showScreen(&screen, "HorizontalScrollBar");
-    HorizontalScrollBar scrollBar(50);
+    // HorizontalScrollBarPx: 50% → 75%
+    showScreen(&screen, "HorizontalScrollBarPx");
+    HorizontalScrollBarPx scrollBar(50);
     scrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
     delay(1000);
     scrollBar.SetPercent(75);
@@ -216,32 +215,30 @@ void setup() {
     // ALL 4 TEXTSTRETCHBAR TYPES
     // ============================================
 
-    // HorizontalScrollBar: 50% → 75%
     showScreen(&screen, "VerticalProgressBar:");
-    TextVerticalProgressBar vtProgress(50);
+    VerticalProgressBar vtProgress(50);
     vtProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
     delay(1000);
     vtProgress.SetPercent(75);
     vtProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
 
-    // HorizontalScrollBar: 50% → 75%
     showScreen(&screen, "HorizontalProgressBar");
-    TextHorizontalProgressBar htProgress(50);
+    HorizontalProgressBar htProgress(50);
     htProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
     delay(1000);
     htProgress.SetPercent(75);
     htProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
 
     showScreen(&screen, "VerticalScrollBar:");
-    TextVerticalScrollBar vtScroll(50);
+    VerticalScrollBar vtScroll(50);
     vtScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
     delay(1000);
     vtScroll.SetPercent(75);
     vtScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
 
-    // HorizontalScrollBar: 50% → 75%
+    // HorizontalScrollBarPx: 50% → 75%
     showScreen(&screen, "HorizontalScrollBar");
-    TextHorizontalScrollBar tscrollBar(50);
+    HorizontalScrollBar tscrollBar(50);
     tscrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
     delay(1000);
     tscrollBar.SetPercent(75);

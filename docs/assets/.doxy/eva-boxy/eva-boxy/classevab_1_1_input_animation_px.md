@@ -1,0 +1,389 @@
+
+
+# Class evab::InputAnimationPx
+
+**template &lt;class TAlbum, unsigned char tMaxSpeed&gt;**
+
+
+
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**InputAnimationPx**](classevab_1_1_input_animation_px.md)
+
+
+
+_Animation input element with configurable speed._ [More...](#detailed-description)
+
+* `#include <evabInputAnimationPx.h>`
+
+
+
+Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.md),  eva::Tickable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Public Functions
+
+| Type | Name |
+| ---: | :--- |
+|  unsigned char | [**Count**](#function-count) () const<br> |
+|  void | [**Increment**](#function-increment) (signed char aSteps) <br>_Increments the speed value by a delta._  |
+|   | [**InputAnimationPx**](#function-inputanimationpx) (unsigned char aValue=0) <br>_Constructor for_ [_**InputAnimationPx**_](classevab_1_1_input_animation_px.md) _._ |
+|  void | [**Select**](#function-select) (unsigned char aValue) <br>_Sets the animation speed._  |
+|  unsigned char | [**Selected**](#function-selected) () const<br>_Gets the current speed value._  |
+| virtual  | [**~InputAnimationPx**](#function-inputanimationpx) () <br>_Destructor - removes from Tickable list._  |
+
+
+## Public Functions inherited from evab::ElementBase
+
+See [evab::ElementBase](classevab_1_1_element_base.md)
+
+| Type | Name |
+| ---: | :--- |
+|  void | [**Draw**](classevab_1_1_element_base.md#function-draw) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Draws the element on the specified screen._  |
+|  void | [**Freeze**](classevab_1_1_element_base.md#function-freeze) () <br>_Make element insensitive to redraw method._  |
+| virtual bool | [**OnKey**](classevab_1_1_element_base.md#function-onkey) (Keys aKey) <br>_Handles key events for the element._  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Protected Functions
+
+| Type | Name |
+| ---: | :--- |
+| virtual void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) override<br>_Draws the animation on screen._  |
+| virtual void | [**freezer**](#function-freezer) () override<br>_Hides the element and pauses animation._  |
+
+
+## Protected Functions inherited from evab::ElementBase
+
+See [evab::ElementBase](classevab_1_1_element_base.md)
+
+| Type | Name |
+| ---: | :--- |
+| virtual void | [**drawer**](classevab_1_1_element_base.md#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) = 0<br>_Pure virtual method for drawing the element._  |
+| virtual void | [**freezer**](classevab_1_1_element_base.md#function-freezer) () <br>_Virtual method for freezing the element._  |
+|  bool | [**isFrozen**](classevab_1_1_element_base.md#function-isfrozen) () <br>_Checks if the element is currently freezed._  |
+|  void | [**redraw**](classevab_1_1_element_base.md#function-redraw) () <br>_Redraws the element on the current screen._  |
+
+
+
+
+
+
+## Detailed Description
+
+
+This element displays an animated pictogram where the animation speed can be adjusted by the user. The animation cycles through available pictograms at a speed determined by the current value.
+
+
+The element uses the eva::Tickable system for periodic updates. The speed value ranges from 0 (stopped) to tMaxSpeed (maximum animation speed). Animation is automatically paused when the element is hidden and resumed when it becomes visible again.
+
+
+Redraws occur only on timer ticks to maintain consistent animation timing.
+
+
+
+
+**Template parameters:**
+
+
+* `TAlbum` Album class providing pictogram data and count 
+* `tMaxSpeed` Maximum speed value (must be &gt; 0)
+
+
+
+**See also:** InputPictogram For static pictogram selection 
+
+
+**See also:** eva::Tickable Base class for periodic updates 
+
+
+
+    
+## Public Functions Documentation
+
+
+
+
+### function Count 
+
+```C++
+inline unsigned char evab::InputAnimationPx::Count () const
+```
+
+
+
+
+<hr>
+
+
+
+### function Increment 
+
+_Increments the speed value by a delta._ 
+```C++
+inline void evab::InputAnimationPx::Increment (
+    signed char aSteps
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aSteps` Amount to add (positive or negative) 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function InputAnimationPx 
+
+_Constructor for_ [_**InputAnimationPx**_](classevab_1_1_input_animation_px.md) _._
+```C++
+inline evab::InputAnimationPx::InputAnimationPx (
+    unsigned char aValue=0
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aValue` Initial speed value (0 to tMaxSpeed) 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function Select 
+
+_Sets the animation speed._ 
+```C++
+inline void evab::InputAnimationPx::Select (
+    unsigned char aValue
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aValue` Speed value (0 = stopped, 1..tMaxSpeed = animation speed) 
+
+
+
+
+        
+
+<hr>
+
+
+
+### function Selected 
+
+_Gets the current speed value._ 
+```C++
+inline unsigned char evab::InputAnimationPx::Selected () const
+```
+
+
+
+
+
+**Returns:**
+
+Current speed value (0 to tMaxSpeed) 
+
+
+
+
+
+        
+
+<hr>
+
+
+
+### function ~InputAnimationPx 
+
+_Destructor - removes from Tickable list._ 
+```C++
+inline virtual evab::InputAnimationPx::~InputAnimationPx () 
+```
+
+
+
+
+<hr>
+## Protected Functions Documentation
+
+
+
+
+### function drawer 
+
+_Draws the animation on screen._ 
+```C++
+inline virtual void evab::InputAnimationPx::drawer (
+    Screen * aScreen,
+    Coor aPos,
+    Coor aSize,
+    unsigned char aIsFocused
+) override
+```
+
+
+
+Resumes animation if element is visible and speed &gt; 0.
+
+
+
+
+**Parameters:**
+
+
+* `aScreen` [**Screen**](classevab_1_1_screen.md) to draw on 
+* `aPos` Position on screen 
+* `aSize` Size of the element 
+* `aIsFocused` Focus state (1 = focused, 0 = not focused) 
+
+
+
+
+        
+Implements [*evab::ElementBase::drawer*](classevab_1_1_element_base.md#function-drawer)
+
+
+<hr>
+
+
+
+### function freezer 
+
+_Hides the element and pauses animation._ 
+```C++
+inline virtual void evab::InputAnimationPx::freezer () override
+```
+
+
+
+Implements [*evab::ElementBase::freezer*](classevab_1_1_element_base.md#function-freezer)
+
+
+<hr>
+
+------------------------------
+The documentation for this class was generated from the following file `src/evabInputAnimationPx.h`
+

@@ -12,8 +12,8 @@ Passing `aIsFocused` directly into the `Grid` constructor allows `Grid` to handl
 
 ```cpp
 class UserForm1 : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
-    FocusChain<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mInputField {this, &onValueChanged, 42};
-    FocusChain<KeyCatcher<InputButton, KEY_LEFT, KEY_RIGHT>> mSaveButton {this, &onSavePressed, F("Save")};
+    Focusable<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mInputField {this, &onValueChanged, 42};
+    Focusable<KeyCatcher<InputButton, KEY_LEFT, KEY_RIGHT>> mSaveButton {this, &onSavePressed, F("Save")};
 
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, bool aIsFocused) override {
         Grid grid(aScreen, aPos, aSize, aIsFocused);

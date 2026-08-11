@@ -22,8 +22,8 @@ The primary way to use EVA Boxy. Build complex, highly maintainable interactive 
 
 ```cpp
 class UserForm1 : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
-    FocusChain<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mInputField {this, &onValueChanged, 42};
-    FocusChain<KeyCatcher<InputButton, KEY_LEFT, KEY_RIGHT >> mSaveButton {this, &onSavePressed, "Save"};
+    Focusable<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mInputField {this, &onValueChanged, 42};
+    Focusable<KeyCatcher<InputButton, KEY_LEFT, KEY_RIGHT >> mSaveButton {this, &onSavePressed, "Save"};
 
     Handler<UserForm1> onValueChanged {this, &UserForm1::onValueChanged};
     void onValueChanged(void *aSender, CallbackInfo aInfo) {

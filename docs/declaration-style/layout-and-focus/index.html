@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#element-composition-focuschain-layoutbase" class="md-skip">
+        <a href="#element-composition-focusable-layoutbase" class="md-skip">
           Skip to content
         </a>
       
@@ -636,10 +636,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#focuschain" class="md-nav__link">
+  <a href="#focusable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FocusChain
+        Focusable
       
     </span>
   </a>
@@ -1191,10 +1191,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#focuschain" class="md-nav__link">
+  <a href="#focusable" class="md-nav__link">
     <span class="md-ellipsis">
       
-        FocusChain
+        Focusable
       
     </span>
   </a>
@@ -1293,8 +1293,8 @@
   
 
 
-<h1 id="element-composition-focuschain-layoutbase">Element Composition: FocusChain &amp; LayoutBase<a class="headerlink" href="#element-composition-focuschain-layoutbase" title="Permanent link">&para;</a></h1>
-<p>Interactive interfaces in EVA Boxy are structured around two core abstractions: <strong>FocusChain</strong> (manages focus order and navigation state) and <strong>LayoutBase</strong> (provides layout coordination, event routing, and rendering contract).</p>
+<h1 id="element-composition-focusable-layoutbase">Element Composition: Focusable &amp; LayoutBase<a class="headerlink" href="#element-composition-focusable-layoutbase" title="Permanent link">&para;</a></h1>
+<p>Interactive interfaces in EVA Boxy are structured around two core abstractions: <strong>Focusable</strong> (manages focus order and navigation state) and <strong>LayoutBase</strong> (provides layout coordination, event routing, and rendering contract).</p>
 <p>Components are declared directly as class members. The declaration order defines the sequential focus navigation ring.</p>
 <h2 id="parent-child-composition">Parent-Child Composition<a class="headerlink" href="#parent-child-composition" title="Permanent link">&para;</a></h2>
 <p>In the framework, every element is a rectangle (a "box") that knows how to draw itself. Complex visual representation is formed by layers — elements nested inside other elements:</p>
@@ -1317,21 +1317,21 @@
 <li><strong>Complete Area Coverage:</strong> The implementation <strong>must repaint or clear the entire screen area</strong> defined by the <code>aPos</code> and <code>aSize</code> parameters passed to <code>drawer()</code>. Leaving unrendered regions causes visual artifacts during redrawing.</li>
 </ul>
 <p>To simplify layout management and meet this requirement, the <code>Grid</code> helper class can be used to slice <code>aSize</code> into region-aligned bounding boxes and automatically clear unallocated space via <code>Clear()</code>.</p>
-<h3 id="focuschain">FocusChain<a class="headerlink" href="#focuschain" title="Permanent link">&para;</a></h3>
-<p><code>FocusChain&lt;T&gt;</code> is a template wrapper that integrates a UI control or modifier into the focus ring of a container.</p>
+<h3 id="focusable">Focusable<a class="headerlink" href="#focusable" title="Permanent link">&para;</a></h3>
+<p><code>Focusable&lt;T&gt;</code> is a template wrapper that integrates a UI control or modifier into the focus ring of a container.</p>
 <ul>
 <li><strong>Registration:</strong> Registers the encapsulated instance <code>T</code> with the parent <code>LayoutBase</code> upon construction.</li>
 <li><strong>Navigation Linkage:</strong> Maintained via an internal doubly linked list (<code>Next()</code>, <code>Prev()</code>) initialized without dynamic memory allocations.</li>
 <li><strong>Passthrough Delegation:</strong> Routes rendering calls, state operations, and freeze notifications directly to the inner type <code>T</code>.</li>
 </ul>
 <h3 id="layoutbase-implicit-interface">LayoutBase &amp; Implicit Interface<a class="headerlink" href="#layoutbase-implicit-interface" title="Permanent link">&para;</a></h3>
-<p><code>LayoutBase</code> tracks the active <code>FocusChain</code> node and manages event propagation. Interaction between LayoutBase and target controls relies on C++ duck typing. Controls implement member functions expected by their active modifiers or handlers, such as:
+<p><code>LayoutBase</code> tracks the active <code>Focusable</code> node and manages event propagation. Interaction between LayoutBase and target controls relies on C++ duck typing. Controls implement member functions expected by their active modifiers or handlers, such as:
 * <strong><code>Increment()</code></strong> — Value modification (numeric adjustments, option cycling).</p>
 <hr />
 <h2 id="pattern-1-single-form-element-focus">Pattern 1: Single Form Element Focus<a class="headerlink" href="#pattern-1-single-form-element-focus" title="Permanent link">&para;</a></h2>
 <p>In a standard single-screen layout, focus transitions sequentially between individual fields via keyboard events.</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLayoutBase.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFocusChain.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFocusable.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeyModifier.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeyReactor.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeyCatcher.h&gt;</span>
@@ -1342,9 +1342,9 @@
 <span class="c1">// Derive from KeyModifier (which inherits from LayoutBase)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">FormExample</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">LayoutBase</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Focus sequence: [1] mField1 -&gt; [2] mField2 -&gt; [3] mSaveBtn</span>
-<span class="w">    </span><span class="n">FocusChain</span><span class="o">&lt;</span><span class="n">KeyReactor</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mField1</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
-<span class="w">    </span><span class="n">FocusChain</span><span class="o">&lt;</span><span class="n">KeyReactor</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mField2</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">};</span>
-<span class="w">    </span><span class="n">FocusChain</span><span class="o">&lt;</span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;&gt;</span><span class="w">       </span><span class="n">mSaveBtn</span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">onSave</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Save&quot;</span><span class="p">)};</span>
+<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyReactor</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mField1</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
+<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyReactor</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mField2</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">};</span>
+<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;&gt;</span><span class="w">       </span><span class="n">mSaveBtn</span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">onSave</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Save&quot;</span><span class="p">)};</span>
 
 <span class="w">    </span><span class="n">Handler</span><span class="o">&lt;</span><span class="n">FormExample</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onSave</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">FormExample</span><span class="o">::</span><span class="n">onSave</span><span class="p">};</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSave</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* Execution logic */</span><span class="w"> </span><span class="p">}</span>
@@ -1366,15 +1366,15 @@
 
 <h3 id="event-handling-behavior">Event Handling Behavior<a class="headerlink" href="#event-handling-behavior" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong><code>KEY_UP</code> / <code>KEY_DOWN</code>:</strong> Captured by <code>KeyModifier&lt;LayoutBase&gt;</code> to shift focus between <code>FocusChain</code> nodes.</li>
+<li><strong><code>KEY_UP</code> / <code>KEY_DOWN</code>:</strong> Captured by <code>KeyModifier&lt;LayoutBase&gt;</code> to shift focus between <code>Focusable</code> nodes.</li>
 <li><strong><code>KEY_LEFT</code> / <code>KEY_RIGHT</code>:</strong> Passed to the currently focused node, triggering its internal <code>KeyReactor</code> to invoke <code>Increment()</code> or <code>Decrement()</code>.</li>
 </ol>
 <hr />
 <h2 id="pattern-2-sub-screen-layoutbase-paging">Pattern 2: Sub-screen (LayoutBase) Paging<a class="headerlink" href="#pattern-2-sub-screen-layoutbase-paging" title="Permanent link">&para;</a></h2>
-<p>When managing multi-screen flows or tabbed views, <code>FocusChain</code> wraps entire <code>LayoutBase</code> instances. Focus transitions switch the active sub-screen. </p>
+<p>When managing multi-screen flows or tabbed views, <code>Focusable</code> wraps entire <code>LayoutBase</code> instances. Focus transitions switch the active sub-screen. </p>
 <p><em>(Note: Internal frame lifecycle and state freezing are automatically managed by <code>ElementBase</code> upon draw call dispatching)</em>.</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLayoutBase.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFocusChain.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFocusable.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeyModifier.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabGrid.h&gt;</span>
 
@@ -1384,9 +1384,9 @@
 
 <span class="k">class</span><span class="w"> </span><span class="nc">PagedApp</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">LayoutBase</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_PAGEDOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_PAGEUP</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Focus sequence across full LayoutBase instances</span>
-<span class="w">    </span><span class="n">FocusChain</span><span class="o">&lt;</span><span class="n">ScreenStatus</span><span class="o">&gt;</span><span class="w">   </span><span class="n">mStatusScreen</span><span class="w">   </span><span class="p">{</span><span class="k">this</span><span class="p">};</span>
-<span class="w">    </span><span class="n">FocusChain</span><span class="o">&lt;</span><span class="n">ScreenSettings</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSettingsScreen</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">};</span>
-<span class="w">    </span><span class="n">FocusChain</span><span class="o">&lt;</span><span class="n">ScreenInfo</span><span class="o">&gt;</span><span class="w">     </span><span class="n">mInfoScreen</span><span class="w">     </span><span class="p">{</span><span class="k">this</span><span class="p">};</span>
+<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">ScreenStatus</span><span class="o">&gt;</span><span class="w">   </span><span class="n">mStatusScreen</span><span class="w">   </span><span class="p">{</span><span class="k">this</span><span class="p">};</span>
+<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">ScreenSettings</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mSettingsScreen</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">};</span>
+<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">ScreenInfo</span><span class="o">&gt;</span><span class="w">     </span><span class="n">mInfoScreen</span><span class="w">     </span><span class="p">{</span><span class="k">this</span><span class="p">};</span>
 
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIsFocused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
@@ -1406,7 +1406,7 @@
 
 <h3 id="execution-characteristics">Execution Characteristics<a class="headerlink" href="#execution-characteristics" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Each sub-screen retains its own internal <code>FocusChain</code> ring and key bindings.</li>
+<li>Each sub-screen retains its own internal <code>Focusable</code> ring and key bindings.</li>
 <li>Outer key events (<code>KEY_PAGEDOWN</code> / <code>KEY_PAGEUP</code>) shift focus at the container level without interfering with inner sub-screen key mapping.</li>
 </ul>
 

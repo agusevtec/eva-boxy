@@ -38,10 +38,10 @@ form.Increment(+1);    // → moves focus to next child
 | `InputFloat` | 🟢 Yes | 🟢 Yes | 🔴 No | 🔴 No |
 | `InputIntDiscrete` | 🟢 Yes | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
 | `InputFloatDiscrete` | 🟢 Yes | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
-| `InputSelectorAlbum<T>` | 🔴 No | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
-| `InputAnimation` | 🔴 No | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
+| `InputSelectorPx<T>` | 🔴 No | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
+| `InputAnimationPx` | 🔴 No | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
 | `InputButton` | 🔴 No | 🟡 Dummy | 🔴 No | 🔴 No |
-| `InputButtonPicto` | 🔴 No | 🟡 Dummy | 🔴 No | 🔴 No |
+| `InputButtonPx` | 🔴 No | 🟡 Dummy | 🔴 No | 🔴 No |
 | `LayoutBase` | 🔴 No | 🟢 Yes | 🔴 No | 🔴 No |
 | `ListBox<T>` | 🔴 No | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
 | **StretchBar & TextStretchBar** | 🔴 No | 🟢 Yes | 🔴 No | 🟢 Yes |
@@ -55,10 +55,10 @@ form.Increment(+1);    // → moves focus to next child
 - 🔴 **No** — Not supported
 
 **Note on StretchBar & TextStretchBar:** This group includes all progress and scroll bar variants:
+- `VerticalProgressBarPx`, `HorizontalProgressBarPx`
+- `VerticalScrollBarPx`, `HorizontalScrollBarPx`
 - `VerticalProgressBar`, `HorizontalProgressBar`
 - `VerticalScrollBar`, `HorizontalScrollBar`
-- `TextVerticalProgressBar`, `TextHorizontalProgressBar`
-- `TextVerticalScrollBar`, `TextHorizontalScrollBar`
 
 The step of `Increment()` for these elements is **variable** — it depends on the visual representation. Each `Increment(+1)` moves the bar by exactly one visual block (one pictogram or one character position). The actual percent change depends on how many blocks fit in the current drawing area.
 
@@ -76,10 +76,10 @@ This is why StretchBar elements support **Increment** (visual step) and **Percen
 #include <evabPercent.h>
 
 // Album selector (Index) → Percent control
-Percent<InputSelectorAlbum<AlbumBattery>> batteryPercent(3);
+Percent<InputSelectorPx<AlbumBattery>> batteryPercent(3);
 
 // Animation speed (Index) → Percent control
-Percent<InputAnimation<AlbumFan>> fanSpeedPercent(5);  // 5 → 50% of max speed
+Percent<InputAnimationPx<AlbumFan>> fanSpeedPercent(5);  // 5 → 50% of max speed
 
 // ListBox (Index) → Percent control
 Percent<ScrollListbox> listPercent(33);
@@ -109,19 +109,19 @@ Adds keyboard control to any element that has a meaningful `Increment()` method.
 KeyModifier<InputInt, KEY_DOWN, KEY_UP> intControl(42);
 
 // Album selector with LEFT/RIGHT control — meaningful
-KeyModifier<InputSelectorAlbum<AlbumBattery>, KEY_LEFT, KEY_RIGHT> batteryControl(3);
+KeyModifier<InputSelectorPx<AlbumBattery>, KEY_LEFT, KEY_RIGHT> batteryControl(3);
 
 // Animation speed with UP/DOWN — meaningful
-KeyModifier<InputAnimation<AlbumFan>, KEY_DOWN, KEY_UP> fanControl(5);
+KeyModifier<InputAnimationPx<AlbumFan>, KEY_DOWN, KEY_UP> fanControl(5);
 
 // Layout navigation with UP/DOWN — meaningful
 KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> formNavigation();
 
 // Stretch bar with LEFT/RIGHT — steps by one visual block
-KeyModifier<HorizontalProgressBar, KEY_LEFT, KEY_RIGHT> progressControl(50);
+KeyModifier<HorizontalProgressBarPx, KEY_LEFT, KEY_RIGHT> progressControl(50);
 
 // Percent-modified selector with UP/DOWN — meaningful
-KeyModifier<Percent<InputSelectorAlbum<AlbumBattery>>, KEY_DOWN, KEY_UP> percentControl(3);
+KeyModifier<Percent<InputSelectorPx<AlbumBattery>>, KEY_DOWN, KEY_UP> percentControl(3);
 ```
 
 | Parameter | Description |
@@ -130,7 +130,7 @@ KeyModifier<Percent<InputSelectorAlbum<AlbumBattery>>, KEY_DOWN, KEY_UP> percent
 | `kDec` | Key code for decrement |
 | `kInc` | Key code for increment |
 
-> **Note on Buttons:** `InputButton` and `InputButtonPicto` implement `Increment()` as a dummy (no-operation) method. This is done for interface completeness, but makes `KeyModifier` effectively useless on them — pressing keys does nothing. For buttons, use `KeyCatcher` instead.
+> **Note on Buttons:** `InputButton` and `InputButtonPx` implement `Increment()` as a dummy (no-operation) method. This is done for interface completeness, but makes `KeyModifier` effectively useless on them — pressing keys does nothing. For buttons, use `KeyCatcher` instead.
 
 ```cpp
 // Button with keys — compiles but does nothing (dummy Increment)
@@ -173,15 +173,15 @@ Intercepts specific keys and generates an event. This is the recommended way to 
 
 class MyForm : public LayoutBase, private eva::IHandler {
     // KeyCatcher is the right tool for buttons
-    FocusChain<KeyCatcher<InputButton, KEY_ENTER>> mSaveButton {this, F("Save")};
-    FocusChain<KeyCatcher<InputButtonPicto, KEY_ENTER>> mIconButton {this, GalleryRemixicon24::PICTO_F243};
+    Focusable<KeyCatcher<InputButton, KEY_ENTER>> mSaveButton {this, F("Save")};
+    Focusable<KeyCatcher<InputButtonPx, KEY_ENTER>> mIconButton {this, GalleryRemixicon24::PICTO_F243};
     
 public:
     void invoke(void* sender, CallbackInfo info) override {
         if (info.event == KeyCatcher<InputButton, KEY_ENTER>::EVENT_CATCH_KEY) {
             Serial.println("Save pressed!");
         }
-        if (info.event == KeyCatcher<InputButtonPicto, KEY_ENTER>::EVENT_CATCH_KEY) {
+        if (info.event == KeyCatcher<InputButtonPx, KEY_ENTER>::EVENT_CATCH_KEY) {
             Serial.println("Icon button pressed!");
         }
     }

@@ -100,20 +100,20 @@ Every element in Boxy can be drawn imperatively using its `Draw()` method.
 
 ```cpp
 #include <evabInputButton.h>
-#include <evabInputButtonPicto.h>
+#include <evabInputButtonPx.h>
 #include <evabGalleryRemixicon24.h>
 
 InputButton button(F("OK"));
 button.Draw(&screen, {0, 4}, {16, 1}, 1);
 
-InputButtonPicto buttonPicto(GalleryRemixicon24::PICTO_F243);
+InputButtonPx buttonPicto(GalleryRemixicon24::PICTO_F243);
 buttonPicto.Draw(&screen, {6, 4}, {3, 3}, 1);
 ```
 
 | Control | Description | Use Case |
 |---------|-------------|----------|
 | `InputButton` | Text button with label in parentheses | Action triggers: OK, Cancel, Save |
-| `InputButtonPicto` | Icon-only button | Toolbars, icon-based navigation |
+| `InputButtonPx` | Icon-only button | Toolbars, icon-based navigation |
 
 > **Note:** Parameters of `Draw()` method: `Draw(screen, position, size, focused)` — `focused=1` draws with highlight.
 
@@ -141,36 +141,36 @@ floatVal.Draw(&screen, {0, 4}, {16, 1}, 0);
 
 ### Pictogram Selection Controls
 
-`InputSelectorAlbum` allows selecting from a set of pictograms. The album template parameter determines both the available states and their visual representation.
+`InputSelectorPx` allows selecting from a set of pictograms. The album template parameter determines both the available states and their visual representation.
 
 > **Important:** Because of limited graphics support, Boxy does not control the size of the drawing area for pictogram-related methods. The user must handle the size of the area manually.
 
 ```cpp
-#include <evabInputSelectorAlbum.h>
+#include <evabInputSelectorPx.h>
 #include <evabAlbums.h>
 
-InputSelectorAlbum<AlbumOnOff> selOnOff(0);
+InputSelectorPx<AlbumOnOff> selOnOff(0);
 selOnOff.Draw(&screen, {7, 4}, {2, 1}, 0);
 
-InputSelectorAlbum<AlbumBattery> battery(3);
+InputSelectorPx<AlbumBattery> battery(3);
 battery.Draw(&screen, {7, 4}, {2, 1}, 0);
 
-InputSelectorAlbum<AlbumRainbowmeter> rainbow(3);
+InputSelectorPx<AlbumRainbowmeter> rainbow(3);
 rainbow.Draw(&screen, {6, 4}, {4, 2}, 0);
 
-InputSelectorAlbum<AlbumLamp> lamp(2);
+InputSelectorPx<AlbumLamp> lamp(2);
 lamp.Draw(&screen, {7, 4}, {2, 2}, 0);
 
-InputSelectorAlbum<AlbumProgress> progress(4);
+InputSelectorPx<AlbumProgress> progress(4);
 progress.Draw(&screen, {7, 4}, {2, 2}, 0);
 
-InputSelectorAlbum<AlbumSpeaker> speaker(1);
+InputSelectorPx<AlbumSpeaker> speaker(1);
 speaker.Draw(&screen, {7, 4}, {2, 2}, 0);
 
-InputSelectorAlbum<AlbumSignal> signal(2);
+InputSelectorPx<AlbumSignal> signal(2);
 signal.Draw(&screen, {7, 4}, {2, 1}, 0);
 
-InputSelectorAlbum<AlbumRoundmeter> roundmeter(6);
+InputSelectorPx<AlbumRoundmeter> roundmeter(6);
 roundmeter.Draw(&screen, {7, 4}, {3, 3}, 0);
 ```
 
@@ -192,27 +192,27 @@ roundmeter.Draw(&screen, {7, 4}, {3, 3}, 0);
 Graphical stretch bars use pictograms for rendering:
 
 ```cpp
-#include <evabInputStretchBar.h>
+#include <evabStretchBarPx.h>
 
-VerticalProgressBar vProgress(50);
+VerticalProgressBarPx vProgress(50);
 vProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
 
-HorizontalProgressBar hProgress(50);
+HorizontalProgressBarPx hProgress(50);
 hProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
 
-VerticalScrollBar vScroll(50);
+VerticalScrollBarPx vScroll(50);
 vScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
 
-HorizontalScrollBar scrollBar(50);
+HorizontalScrollBarPx scrollBar(50);
 scrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
 ```
 
 | Control | Description | Use Case |
 |---------|-------------|----------|
-| `VerticalProgressBar` | Fills from bottom to top | Level indicators, tank levels |
-| `HorizontalProgressBar` | Fills from left to right | Progress bars, loading |
-| `VerticalScrollBar` | Thumb position on vertical track | Scroll position in lists |
-| `HorizontalScrollBar` | Thumb position on horizontal track | Scroll position in wide content |
+| `VerticalProgressBarPx` | Fills from bottom to top | Level indicators, tank levels |
+| `HorizontalProgressBarPx` | Fills from left to right | Progress bars, loading |
+| `VerticalScrollBarPx` | Thumb position on vertical track | Scroll position in lists |
+| `HorizontalScrollBarPx` | Thumb position on horizontal track | Scroll position in wide content |
 
 > **Parameters:** Constructor: initial percent (0-100); `Draw(screen, position, size, focused)`
 
@@ -223,24 +223,24 @@ scrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
 Text-based variants use ASCII characters instead of pictograms. These are more memory-efficient and work on character LCD displays:
 
 ```cpp
-#include <evabInputTextStretchBar.h>
+#include <evabStretchBar.h>
 
-TextVerticalProgressBar vtProgress(50);
+VerticalProgressBar vtProgress(50);
 vtProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
 
-TextHorizontalProgressBar htProgress(50);
+HorizontalProgressBar htProgress(50);
 htProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
 
-TextVerticalScrollBar vtScroll(50);
+VerticalScrollBar vtScroll(50);
 vtScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
 
-TextHorizontalScrollBar tscrollBar(50);
+HorizontalScrollBar tscrollBar(50);
 tscrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
 ```
 
 | Control | Character Set | Use Case |
 |---------|---------------|----------|
-| `TextVerticalProgressBar` | `#` and `|` | Memory-constrained devices |
-| `TextHorizontalProgressBar` | `-` and `|` | Character LCD displays |
-| `TextVerticalScrollBar` | `|`, `#`, `|` | Scroll indication on text displays |
-| `TextHorizontalScrollBar` | `-`, `|`, `-` | Scroll indication on text displays |
+| `VerticalProgressBar` | `#` and `|` | Memory-constrained devices |
+| `HorizontalProgressBar` | `-` and `|` | Character LCD displays |
+| `VerticalScrollBar` | `|`, `#`, `|` | Scroll indication on text displays |
+| `HorizontalScrollBar` | `-`, `|`, `-` | Scroll indication on text displays |

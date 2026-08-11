@@ -11,17 +11,17 @@ namespace evab
    *
    * Manages a circular linked list of child elements for focus navigation.
    * Only stores one pointer - to the currently focused child.
-   * Children must be of type FocusChain<T> to form the chain.
+   * Children must be of type Focusable<T> to form the chain.
    */
   class LayoutBase : public ElementBase
   {
 
-    class FocusChainBase
+    class FocusableBase
     {
     public:
       ElementBase *element;
-      FocusChainBase *next;
-      FocusChainBase(ElementBase *aElement) : element(aElement), next(nullptr) {}
+      FocusableBase *next;
+      FocusableBase(ElementBase *aElement) : element(aElement), next(nullptr) {}
     };
 
     /**
@@ -30,20 +30,20 @@ namespace evab
      * @tparam T Element type to wrap (must inherit ElementBase)
      */
     template <class T>
-    class FocusChain : public T, public FocusChainBase
+    class Focusable : public T, public FocusableBase
     {
     public:
       template <typename... Args>
-      FocusChain(LayoutBase *aParent, Args &&...args)
-          : T(args...), FocusChainBase(this)
+      Focusable(LayoutBase *aParent, Args &&...args)
+          : T(args...), FocusableBase(this)
       {
         if (!aParent)
           return;
 
-        FocusChainBase *first = aParent->mFocusedChild;
+        FocusableBase *first = aParent->mFocusedChild;
         if (first)
         {
-          FocusChainBase *last = first;
+          FocusableBase *last = first;
           while (last->next && last->next != first)
             last = last->next;
 
@@ -65,7 +65,7 @@ namespace evab
      * @param aChild Child element to check
      * @return true if the child is focused
      */
-    bool IsFocused(FocusChainBase *aChild);
+    bool IsFocused(FocusableBase *aChild);
 
     /**
      * @brief Gets the current (focused) child
@@ -97,7 +97,7 @@ namespace evab
      *
      * @param aChild Child element to set as focused
      */
-    void focusChild(FocusChainBase *aChild);
+    void focusChild(FocusableBase *aChild);
 
   private:
     /**
@@ -126,7 +126,7 @@ namespace evab
     virtual void freezer();
 
   private:
-    FocusChainBase *mFocusedChild = nullptr; ///< Currently focused child element (only reference needed)
+    FocusableBase *mFocusedChild = nullptr; ///< Currently focused child element (only reference needed)
   };
 
 }

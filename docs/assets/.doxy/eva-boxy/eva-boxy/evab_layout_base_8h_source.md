@@ -19,29 +19,29 @@ namespace evab
   class LayoutBase : public ElementBase
   {
 
-    class FocusChainBase
+    class FocusableBase
     {
     public:
       ElementBase *element;
-      FocusChainBase *next;
-      FocusChainBase(ElementBase *aElement) : element(aElement), next(nullptr) {}
+      FocusableBase *next;
+      FocusableBase(ElementBase *aElement) : element(aElement), next(nullptr) {}
     };
 
     template <class T>
-    class FocusChain : public T, public FocusChainBase
+    class Focusable : public T, public FocusableBase
     {
     public:
       template <typename... Args>
-      FocusChain(LayoutBase *aParent, Args &&...args)
-          : T(args...), FocusChainBase(this)
+      Focusable(LayoutBase *aParent, Args &&...args)
+          : T(args...), FocusableBase(this)
       {
         if (!aParent)
           return;
 
-        FocusChainBase *first = aParent->mFocusedChild;
+        FocusableBase *first = aParent->mFocusedChild;
         if (first)
         {
-          FocusChainBase *last = first;
+          FocusableBase *last = first;
           while (last->next && last->next != first)
             last = last->next;
 
@@ -57,7 +57,7 @@ namespace evab
     };
 
   public:
-    bool IsFocused(FocusChainBase *aChild);
+    bool IsFocused(FocusableBase *aChild);
 
     ElementBase *GetFocused() const;
 
@@ -66,7 +66,7 @@ namespace evab
     bool OnKey(Keys aKey) override;
 
   protected:
-    void focusChild(FocusChainBase *aChild);
+    void focusChild(FocusableBase *aChild);
 
   private:
     void focusNext();
@@ -78,7 +78,7 @@ namespace evab
     virtual void freezer();
 
   private:
-    FocusChainBase *mFocusedChild = nullptr; 
+    FocusableBase *mFocusedChild = nullptr; 
   };
 
 }

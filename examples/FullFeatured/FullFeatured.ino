@@ -16,10 +16,10 @@
 #include <evabAlbums.h>
 #include <evabInputInt.h>
 #include <evabInputFloat.h>
-#include <evabInputButtonPicto.h>
+#include <evabInputButtonPx.h>
 #include <evabInputButton.h>
-#include <evabInputSelectorAlbum.h>
-#include <evabInputStretchBar.h>
+#include <evabInputSelectorPx.h>
+#include <evabStretchBarPx.h>
 
 #include <evabLayoutBase.h>
 #include <evabCompositeBase.h>
@@ -30,8 +30,8 @@ using namespace evab;
 
 class UIHomeForm : public KeyModifier<LayoutBase, KEY_LEFT, KEY_RIGHT>
 {
-  FocusChain<KeyCatcher<InputButtonPicto, KEY_ENTER>> mMonitorButton;
-  FocusChain<KeyCatcher<InputButtonPicto, KEY_ENTER>> mSettingsButton;
+  Focusable<KeyCatcher<InputButtonPx, KEY_ENTER>> mMonitorButton;
+  Focusable<KeyCatcher<InputButtonPx, KEY_ENTER>> mSettingsButton;
 
 public:
   UIHomeForm(IHandler *aOnMonitorHandler, IHandler *aOnSettingsHandler)
@@ -106,10 +106,10 @@ static const char ITEM3_TEXT[] PROGMEM = "Item 3";
 
 class UISettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN>
 {
-  FocusChain<KeyModifier<TitledLeftF<HorizontalScrollBar>, KEY_LEFT, KEY_RIGHT>> mItem1{this, (const __FlashStringHelper *)ITEM1_TEXT};
-  FocusChain<KeyModifier<TitledLeftF<InputSelectorAlbum<AlbumOnOff>>, KEY_LEFT, KEY_RIGHT>> mItem2{this, (const __FlashStringHelper *)ITEM2_TEXT};
-  FocusChain<KeyModifier<TitledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mItem3{this, (const __FlashStringHelper *)ITEM3_TEXT, 100, 11, 100, 200};
-  FocusChain<KeyCatcher<InputButton, KEY_RIGHT>> mSaveButton;
+  Focusable<KeyModifier<TitledLeftF<HorizontalScrollBarPx>, KEY_LEFT, KEY_RIGHT>> mItem1{this, (const __FlashStringHelper *)ITEM1_TEXT};
+  Focusable<KeyModifier<TitledLeftF<InputSelectorPx<AlbumOnOff>>, KEY_LEFT, KEY_RIGHT>> mItem2{this, (const __FlashStringHelper *)ITEM2_TEXT};
+  Focusable<KeyModifier<TitledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mItem3{this, (const __FlashStringHelper *)ITEM3_TEXT, 100, 11, 100, 200};
+  Focusable<KeyCatcher<InputButton, KEY_RIGHT>> mSaveButton;
 
 public:
   UISettingsForm(IHandler *aOnSettingsSaved)

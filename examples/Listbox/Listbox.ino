@@ -9,13 +9,13 @@
 #include <evabFont8Narrow.h>
 #include <evabScreenSSD1306.h>
 #include <evaRepeatTimer.h>
-#include <evabInputStretchbar.h>
-#include <evabInputTextStretchbar.h>
-#include <evabInputSelectorAlbum.h>
-#include <evabInputTextStretchBar.h>
+#include <evabStretchBarPx.h>
+#include <evabStretchBar.h>
+#include <evabInputSelectorPx.h>
+#include <evabStretchBar.h>
 #include <evabAlbums.h>
 #include <evabGalleryRemixicon16.h>
-#include <evabInputAnimation.h>
+#include <evabInputAnimationPx.h>
 #include <evabPercent.h>
 #include <evabPadding.h>
 
@@ -30,7 +30,7 @@ public:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
   {
     ScrollListbox::drawer(aScreen, {aPos.X + 1, aPos.Y}, {aSize.X - 3, aSize.Y}, aIsFocused);
-    VerticalScrollBar pb(100 - GetPercent());
+    VerticalScrollBarPx pb(100 - GetPercent());
     pb.Draw(aScreen, {aPos.X + aSize.X - 1, aPos.Y}, {1, aSize.Y}, 0);
   }
 };
@@ -40,9 +40,9 @@ class GroundLayer : public CompositeBase
   KeyModifier<LabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item0;
   KeyModifier<LabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item1;
   KeyModifier<LabeledLeftF<InputInt>, KEY_LEFT, KEY_RIGHT> item2;
-  KeyModifier<LabeledLeftF<HorizontalProgressBar>, KEY_LEFT, KEY_RIGHT> item3;
-  KeyModifier<LabeledLeftF<PaddingH<InputSelectorAlbum<AlbumProgress>>>, KEY_LEFT, KEY_RIGHT> item4;
-  KeyModifier<LabeledLeftF<PaddingH<InputSelectorAlbum<AlbumSpeaker>>>, KEY_LEFT, KEY_RIGHT> item5;
+  KeyModifier<LabeledLeftF<HorizontalProgressBarPx>, KEY_LEFT, KEY_RIGHT> item3;
+  KeyModifier<LabeledLeftF<PaddingH<InputSelectorPx<AlbumProgress>>>, KEY_LEFT, KEY_RIGHT> item4;
+  KeyModifier<LabeledLeftF<PaddingH<InputSelectorPx<AlbumSpeaker>>>, KEY_LEFT, KEY_RIGHT> item5;
 
   ElementBase *items[6] = {&item0, &item1, &item2, &item3, &item4, &item5};
   KeyModifier<ScrollListbox, KEY_UP, KEY_DOWN> mSimpleListbox{2, items};

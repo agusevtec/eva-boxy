@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_layout_base_1_1_focusable" kind="class" language="C++" prot="private">
+    <compoundname>evab::LayoutBase::Focusable</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">T</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">evab::LayoutBase::FocusableBase</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_layout_base_1_1_focusable_1a00e30dcf7ecbf9555a68fa6a265bc17a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>evab::LayoutBase::Focusable&lt; T &gt;::Focusable</definition>
+        <argsstring>(LayoutBase *aParent, Args &amp;&amp;...args)</argsstring>
+        <name>Focusable</name>
+        <qualifiedname>evab::LayoutBase::Focusable::Focusable</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_layout_base" kindref="compound">LayoutBase</ref> *</type>
+          <declname>aParent</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabLayoutBase.h" line="37" column="7" bodyfile="src/evabLayoutBase.h" bodystart="37" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Wrapper that chains elements in a circular doubly-linked list. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Element type to wrap (must inherit <ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref>) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>evab::LayoutBase::Focusable&lt; T &gt;</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evab::LayoutBase::FocusableBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::LayoutBase::Focusable&lt; T &gt;</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evab::LayoutBase::FocusableBase</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>element</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabLayoutBase.h" line="33" column="5" bodyfile="src/evabLayoutBase.h" bodystart="34" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_layout_base_1_1_focusable_base_1a42568b513b97e4735ef0664b9bd70dd4" prot="public" virt="non-virtual"><scope>evab::LayoutBase::Focusable</scope><name>element</name></member>
+      <member refid="classevab_1_1_layout_base_1_1_focusable_1a00e30dcf7ecbf9555a68fa6a265bc17a" prot="public" virt="non-virtual"><scope>evab::LayoutBase::Focusable</scope><name>Focusable</name></member>
+      <member refid="classevab_1_1_layout_base_1_1_focusable_base_1a44f708ca4f9ff47a8c5b58b07d04d688" prot="public" virt="non-virtual"><scope>evab::LayoutBase::Focusable</scope><name>FocusableBase</name></member>
+      <member refid="classevab_1_1_layout_base_1_1_focusable_base_1a844172ce02c4aae17be4c42c07d0e2d3" prot="public" virt="non-virtual"><scope>evab::LayoutBase::Focusable</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

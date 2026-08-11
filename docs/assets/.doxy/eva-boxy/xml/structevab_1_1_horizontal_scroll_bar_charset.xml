@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="structevab_1_1_horizontal_scroll_bar_charset" kind="struct" language="C++" prot="public">
+    <compoundname>evab::HorizontalScrollBarCharset</compoundname>
+    <includes refid="evab_stretch_bar_8h" local="no">evabStretchBar.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structevab_1_1_horizontal_scroll_bar_charset_1afd0ed8b3dc5f0c166a3e4b0e405d910e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char</type>
+        <definition>static char evab::HorizontalScrollBarCharset::GetChar</definition>
+        <argsstring>(unsigned char fillLevel)</argsstring>
+        <name>GetChar</name>
+        <qualifiedname>evab::HorizontalScrollBarCharset::GetChar</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>fillLevel</declname>
+        </param>
+        <briefdescription>
+<para>Gets character for fill level. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fillLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill level (0-2) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Character to display </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabStretchBar.h" line="180" column="21" bodyfile="src/evabStretchBar.h" bodystart="180" bodyend="192"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Character set for horizontal scroll bar. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabStretchBar.h" line="172" column="5" bodyfile="src/evabStretchBar.h" bodystart="173" bodyend="193"/>
+    <listofallmembers>
+      <member refid="structevab_1_1_horizontal_scroll_bar_charset_1afd0ed8b3dc5f0c166a3e4b0e405d910e" prot="public" virt="non-virtual"><scope>evab::HorizontalScrollBarCharset</scope><name>GetChar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

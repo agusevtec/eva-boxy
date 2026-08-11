@@ -1010,29 +1010,29 @@
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">LayoutBase</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ElementBase</span>
 <span class="w">  </span><span class="p">{</span>
 
-<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">FocusChainBase</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">FocusableBase</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">    </span><span class="k">public</span><span class="o">:</span>
 <span class="w">      </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">element</span><span class="p">;</span>
-<span class="w">      </span><span class="n">FocusChainBase</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
-<span class="w">      </span><span class="n">FocusChainBase</span><span class="p">(</span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">aElement</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">element</span><span class="p">(</span><span class="n">aElement</span><span class="p">),</span><span class="w"> </span><span class="n">next</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">      </span><span class="n">FocusableBase</span><span class="w"> </span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="w">      </span><span class="n">FocusableBase</span><span class="p">(</span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="n">aElement</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">element</span><span class="p">(</span><span class="n">aElement</span><span class="p">),</span><span class="w"> </span><span class="n">next</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 <span class="w">    </span><span class="p">};</span>
 
 <span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">FocusChain</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">FocusChainBase</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Focusable</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">FocusableBase</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">    </span><span class="k">public</span><span class="o">:</span>
 <span class="w">      </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
-<span class="w">      </span><span class="n">FocusChain</span><span class="p">(</span><span class="n">LayoutBase</span><span class="w"> </span><span class="o">*</span><span class="n">aParent</span><span class="p">,</span><span class="w"> </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="n">args</span><span class="p">)</span>
-<span class="w">          </span><span class="o">:</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="n">args</span><span class="p">...),</span><span class="w"> </span><span class="n">FocusChainBase</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+<span class="w">      </span><span class="n">Focusable</span><span class="p">(</span><span class="n">LayoutBase</span><span class="w"> </span><span class="o">*</span><span class="n">aParent</span><span class="p">,</span><span class="w"> </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="n">args</span><span class="p">)</span>
+<span class="w">          </span><span class="o">:</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="n">args</span><span class="p">...),</span><span class="w"> </span><span class="n">FocusableBase</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
 <span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">aParent</span><span class="p">)</span>
 <span class="w">          </span><span class="k">return</span><span class="p">;</span>
 
-<span class="w">        </span><span class="n">FocusChainBase</span><span class="w"> </span><span class="o">*</span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aParent</span><span class="o">-&gt;</span><span class="n">mFocusedChild</span><span class="p">;</span>
+<span class="w">        </span><span class="n">FocusableBase</span><span class="w"> </span><span class="o">*</span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aParent</span><span class="o">-&gt;</span><span class="n">mFocusedChild</span><span class="p">;</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="n">FocusChainBase</span><span class="w"> </span><span class="o">*</span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">first</span><span class="p">;</span>
+<span class="w">          </span><span class="n">FocusableBase</span><span class="w"> </span><span class="o">*</span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">first</span><span class="p">;</span>
 <span class="w">          </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">first</span><span class="p">)</span>
 <span class="w">            </span><span class="n">last</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">last</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
 
@@ -1048,7 +1048,7 @@
 <span class="w">    </span><span class="p">};</span>
 
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="n">FocusChainBase</span><span class="w"> </span><span class="o">*</span><span class="n">aChild</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="n">FocusableBase</span><span class="w"> </span><span class="o">*</span><span class="n">aChild</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="nf">GetFocused</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
@@ -1057,7 +1057,7 @@
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">OnKey</span><span class="p">(</span><span class="n">Keys</span><span class="w"> </span><span class="n">aKey</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">protected</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">focusChild</span><span class="p">(</span><span class="n">FocusChainBase</span><span class="w"> </span><span class="o">*</span><span class="n">aChild</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">focusChild</span><span class="p">(</span><span class="n">FocusableBase</span><span class="w"> </span><span class="o">*</span><span class="n">aChild</span><span class="p">);</span>
 
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">focusNext</span><span class="p">();</span>
@@ -1069,7 +1069,7 @@
 <span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">freezer</span><span class="p">();</span>
 
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="n">FocusChainBase</span><span class="w"> </span><span class="o">*</span><span class="n">mFocusedChild</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">FocusableBase</span><span class="w"> </span><span class="o">*</span><span class="n">mFocusedChild</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span><span class="w"> </span>
 <span class="w">  </span><span class="p">};</span>
 
 <span class="p">}</span>

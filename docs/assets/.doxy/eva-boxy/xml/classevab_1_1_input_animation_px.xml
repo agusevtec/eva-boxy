@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_input_animation_px" kind="class" language="C++" prot="public">
+    <compoundname>evab::InputAnimationPx</compoundname>
+    <basecompoundref refid="classevab_1_1_element_base" prot="public" virt="non-virtual">evab::ElementBase</basecompoundref>
+    <basecompoundref prot="private" virt="non-virtual">eva::Tickable</basecompoundref>
+    <includes refid="evab_input_animation_px_8h" local="no">evabInputAnimationPx.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class TAlbum</type>
+      </param>
+      <param>
+        <type>unsigned char</type>
+        <declname>tMaxSpeed</declname>
+        <defname>tMaxSpeed</defname>
+        <defval>10</defval>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_input_animation_px_1a59decbdfd10860cccbba31e4920dee39" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::mValue</definition>
+        <argsstring></argsstring>
+        <name>mValue</name>
+        <qualifiedname>evab::InputAnimationPx::mValue</qualifiedname>
+        <briefdescription>
+<para>Current speed value (0 to tMaxSpeed). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="174" column="23" bodyfile="src/evabInputAnimationPx.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_input_animation_px_1a78a57c1beea8a003d8bb90adfd05ec48" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::mCurrentFrame</definition>
+        <argsstring></argsstring>
+        <name>mCurrentFrame</name>
+        <qualifiedname>evab::InputAnimationPx::mCurrentFrame</qualifiedname>
+        <briefdescription>
+<para>Current animation frame index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="175" column="23" bodyfile="src/evabInputAnimationPx.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_input_animation_px_1a60d52ffcbad32b84612a8e0ad64d743d" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::mLastFrameTime</definition>
+        <argsstring></argsstring>
+        <name>mLastFrameTime</name>
+        <qualifiedname>evab::InputAnimationPx::mLastFrameTime</qualifiedname>
+        <briefdescription>
+<para>Timestamp of last frame change (0 = stopped). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="176" column="23" bodyfile="src/evabInputAnimationPx.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1aca7fd20ac15fb2db474575ef62998b1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::InputAnimationPx</definition>
+        <argsstring>(unsigned char aValue=0)</argsstring>
+        <name>InputAnimationPx</name>
+        <qualifiedname>evab::InputAnimationPx::InputAnimationPx</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aValue</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for <ref refid="classevab_1_1_input_animation_px" kindref="compound">InputAnimationPx</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial speed value (0 to tMaxSpeed) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="41" column="9" bodyfile="src/evabInputAnimationPx.h" bodystart="41" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1a6280cbf48b305dda9f86ffb26483d135" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::~InputAnimationPx</definition>
+        <argsstring>()</argsstring>
+        <name>~InputAnimationPx</name>
+        <qualifiedname>evab::InputAnimationPx::~InputAnimationPx</qualifiedname>
+        <briefdescription>
+<para>Destructor - removes from Tickable list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="52" column="17" bodyfile="src/evabInputAnimationPx.h" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1ac6f449e2b3f33a39754202d72e2bfe74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::Select</definition>
+        <argsstring>(unsigned char aValue)</argsstring>
+        <name>Select</name>
+        <qualifiedname>evab::InputAnimationPx::Select</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+<para>Sets the animation speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed value (0 = stopped, 1..tMaxSpeed = animation speed) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="62" column="14" bodyfile="src/evabInputAnimationPx.h" bodystart="62" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1a969dca29167ce804fb33febdac6e3e01" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::Selected</definition>
+        <argsstring>() const</argsstring>
+        <name>Selected</name>
+        <qualifiedname>evab::InputAnimationPx::Selected</qualifiedname>
+        <briefdescription>
+<para>Gets the current speed value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current speed value (0 to tMaxSpeed) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="77" column="23" bodyfile="src/evabInputAnimationPx.h" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1a8e555a60415713f4bd0ebeab4b4ea214" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::Increment</definition>
+        <argsstring>(signed char aSteps)</argsstring>
+        <name>Increment</name>
+        <qualifiedname>evab::InputAnimationPx::Increment</qualifiedname>
+        <param>
+          <type>signed char</type>
+          <declname>aSteps</declname>
+        </param>
+        <briefdescription>
+<para>Increments the speed value by a delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aSteps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount to add (positive or negative) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="87" column="14" bodyfile="src/evabInputAnimationPx.h" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1a880faa4ef4b8457582114180f387788f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::Count</definition>
+        <argsstring>() const</argsstring>
+        <name>Count</name>
+        <qualifiedname>evab::InputAnimationPx::Count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="92" column="23" bodyfile="src/evabInputAnimationPx.h" bodystart="92" bodyend="95"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1ad23df8b40ab83e261042c3ef29d560d0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::drawer</definition>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override</argsstring>
+        <name>drawer</name>
+        <qualifiedname>evab::InputAnimationPx::drawer</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144">drawer</reimplements>
+        <param>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+<para>Draws the animation on screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Resumes animation if element is visible and speed &gt; 0.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the element </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="108" column="14" bodyfile="src/evabInputAnimationPx.h" bodystart="108" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1a8f270dc9f3aa47c8dc9d6fbf064ec86f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::freezer</definition>
+        <argsstring>() override</argsstring>
+        <name>freezer</name>
+        <qualifiedname>evab::InputAnimationPx::freezer</qualifiedname>
+        <reimplements refid="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124">freezer</reimplements>
+        <briefdescription>
+<para>Hides the element and pauses animation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="122" column="14" bodyfile="src/evabInputAnimationPx.h" bodystart="122" bodyend="125"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1a227a5cf8df97e68c6c822fc8a3682689" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::tick</definition>
+        <argsstring>() override</argsstring>
+        <name>tick</name>
+        <qualifiedname>evab::InputAnimationPx::tick</qualifiedname>
+        <briefdescription>
+<para>Tick method called by Tickable system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the animation frame based on current speed. Called automatically by eva::tac() at regular intervals. Only updates if animation is active (mLastFrameTime != 0) and speed &gt; 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="135" column="14" bodyfile="src/evabInputAnimationPx.h" bodystart="135" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_animation_px_1a18b20e497b730cee8a4a6464be6e5162" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;::calculateFrameDelay</definition>
+        <argsstring>() const</argsstring>
+        <name>calculateFrameDelay</name>
+        <qualifiedname>evab::InputAnimationPx::calculateFrameDelay</qualifiedname>
+        <briefdescription>
+<para>Calculates frame delay from current speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Maps speed to frame delay: higher speed = shorter delay. Range: from 1000ms (slowest) to 50ms (fastest).</para>
+<para><simplesect kind="return"><para>Frame delay in milliseconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputAnimationPx.h" line="159" column="23" bodyfile="src/evabInputAnimationPx.h" bodystart="159" bodyend="171"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Animation input element with configurable speed. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This element displays an animated pictogram where the animation speed can be adjusted by the user. The animation cycles through available pictograms at a speed determined by the current value.</para>
+<para>The element uses the eva::Tickable system for periodic updates. The speed value ranges from 0 (stopped) to tMaxSpeed (maximum animation speed). Animation is automatically paused when the element is hidden and resumed when it becomes visible again.</para>
+<para>Redraws occur only on timer ticks to maintain consistent animation timing.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TAlbum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Album class providing pictogram data and count </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tMaxSpeed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum speed value (must be &gt; 0)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>InputPictogram For static pictogram selection </para>
+</simplesect>
+<simplesect kind="see"><para>eva::Tickable Base class for periodic updates </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>eva::Tickable</label>
+      </node>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;</label>
+        <link refid="classevab_1_1_input_animation_px"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>eva::Tickable</label>
+      </node>
+      <node id="2">
+        <label>evab::ElementBase</label>
+        <link refid="classevab_1_1_element_base"/>
+      </node>
+      <node id="1">
+        <label>evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;</label>
+        <link refid="classevab_1_1_input_animation_px"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/evabInputAnimationPx.h" line="31" column="5" bodyfile="src/evabInputAnimationPx.h" bodystart="32" bodyend="177"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_input_animation_px_1a18b20e497b730cee8a4a6464be6e5162" prot="private" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>calculateFrameDelay</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a880faa4ef4b8457582114180f387788f" prot="public" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>Count</name></member>
+      <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_input_animation_px_1ad23df8b40ab83e261042c3ef29d560d0" prot="protected" virt="virtual"><scope>evab::InputAnimationPx</scope><name>drawer</name></member>
+      <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>Freeze</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a8f270dc9f3aa47c8dc9d6fbf064ec86f" prot="protected" virt="virtual"><scope>evab::InputAnimationPx</scope><name>freezer</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a8e555a60415713f4bd0ebeab4b4ea214" prot="public" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_input_animation_px_1aca7fd20ac15fb2db474575ef62998b1f" prot="public" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>InputAnimationPx</name></member>
+      <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>isFrozen</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a78a57c1beea8a003d8bb90adfd05ec48" prot="private" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>mCurrentFrame</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a60d52ffcbad32b84612a8e0ad64d743d" prot="private" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>mLastFrameTime</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a59decbdfd10860cccbba31e4920dee39" prot="private" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>mValue</name></member>
+      <member refid="classevab_1_1_element_base_1ad088e430fee933d67248ea9242e8ddf7" prot="public" virt="virtual"><scope>evab::InputAnimationPx</scope><name>OnKey</name></member>
+      <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>redraw</name></member>
+      <member refid="classevab_1_1_input_animation_px_1ac6f449e2b3f33a39754202d72e2bfe74" prot="public" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>Select</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a969dca29167ce804fb33febdac6e3e01" prot="public" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>Selected</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a227a5cf8df97e68c6c822fc8a3682689" prot="private" virt="non-virtual"><scope>evab::InputAnimationPx</scope><name>tick</name></member>
+      <member refid="classevab_1_1_input_animation_px_1a6280cbf48b305dda9f86ffb26483d135" prot="public" virt="virtual"><scope>evab::InputAnimationPx</scope><name>~InputAnimationPx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

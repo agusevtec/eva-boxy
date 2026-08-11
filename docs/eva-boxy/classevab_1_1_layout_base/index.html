@@ -1174,7 +1174,7 @@
 </tr>
 <tr>
 <td style="text-align: right;">bool</td>
-<td style="text-align: left;"><a href="#function-isfocused"><strong>IsFocused</strong></a> (FocusChainBase * aChild) <br><em>Checks if a child is currently focused.</em></td>
+<td style="text-align: left;"><a href="#function-isfocused"><strong>IsFocused</strong></a> (FocusableBase * aChild) <br><em>Checks if a child is currently focused.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">virtual bool</td>
@@ -1217,7 +1217,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-focuschild"><strong>focusChild</strong></a> (FocusChainBase * aChild) <br><em>Sets the current (focused) child.</em></td>
+<td style="text-align: left;"><a href="#function-focuschild"><strong>focusChild</strong></a> (FocusableBase * aChild) <br><em>Sets the current (focused) child.</em></td>
 </tr>
 </tbody>
 </table>
@@ -1250,7 +1250,7 @@
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
-<p>Manages a circular linked list of child elements for focus navigation. Only stores one pointer - to the currently focused child. Children must be of type FocusChain&lt;T&gt; to form the chain. </p>
+<p>Manages a circular linked list of child elements for focus navigation. Only stores one pointer - to the currently focused child. Children must be of type Focusable&lt;T&gt; to form the chain. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-getfocused">function GetFocused<a class="headerlink" href="#function-getfocused" title="Permanent link">&para;</a></h3>
 <p><em>Gets the current (focused) child.</em> </p>
@@ -1278,7 +1278,7 @@
 <h3 id="function-isfocused">function IsFocused<a class="headerlink" href="#function-isfocused" title="Permanent link">&para;</a></h3>
 <p><em>Checks if a child is currently focused.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LayoutBase</span><span class="o">::</span><span class="n">IsFocused</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">FocusChainBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aChild</span>
+<span class="w">    </span><span class="n">FocusableBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aChild</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
@@ -1309,7 +1309,7 @@
 <h3 id="function-focuschild">function focusChild<a class="headerlink" href="#function-focuschild" title="Permanent link">&para;</a></h3>
 <p><em>Sets the current (focused) child.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">LayoutBase</span><span class="o">::</span><span class="n">focusChild</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="n">FocusChainBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aChild</span>
+<span class="w">    </span><span class="n">FocusableBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aChild</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 

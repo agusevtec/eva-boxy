@@ -15,8 +15,8 @@
 
 ## e
 
-* **END\_BLOCK** ([**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md))
-* **element** ([**evab::LayoutBase::FocusChainBase**](classevab_1_1_layout_base_1_1_focus_chain_base.md))
+* **END\_BLOCK** ([**evab::StretchBarPx**](classevab_1_1_stretch_bar_px.md))
+* **element** ([**evab::LayoutBase::FocusableBase**](classevab_1_1_layout_base_1_1_focusable_base.md))
 
 
 ## m
@@ -29,20 +29,18 @@
 * **mBottomRight** ([**evab::Grid**](classevab_1_1_grid.md))
 * **mIsFocused** ([**evab::Grid**](classevab_1_1_grid.md))
 * **mTopLeft** ([**evab::Grid**](classevab_1_1_grid.md))
-* **mCurrentFrame** ([**evab::InputAnimation**](classevab_1_1_input_animation.md))
-* **mLastFrameTime** ([**evab::InputAnimation**](classevab_1_1_input_animation.md))
-* **mValue** ([**evab::InputAnimation**](classevab_1_1_input_animation.md), [**evab::InputFloat**](classevab_1_1_input_float.md), [**evab::InputInt**](classevab_1_1_input_int.md), [**evab::InputSelectorAlbum**](classevab_1_1_input_selector_album.md))
+* **mCurrentFrame** ([**evab::InputAnimationPx**](classevab_1_1_input_animation_px.md))
+* **mLastFrameTime** ([**evab::InputAnimationPx**](classevab_1_1_input_animation_px.md))
+* **mValue** ([**evab::InputAnimationPx**](classevab_1_1_input_animation_px.md), [**evab::InputFloat**](classevab_1_1_input_float.md), [**evab::InputInt**](classevab_1_1_input_int.md), [**evab::InputSelectorPx**](classevab_1_1_input_selector_px.md))
 * **mName** ([**evab::InputButton**](classevab_1_1_input_button.md), [**evab::Labeled**](classevab_1_1_labeled.md), [**evab::Titled**](classevab_1_1_titled.md))
-* **maPictogram** ([**evab::InputButtonPicto**](classevab_1_1_input_button_picto.md))
+* **mPictogram** ([**evab::InputButtonPx**](classevab_1_1_input_button_px.md))
 * **mCount** ([**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md), [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md), [**evab::WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md))
 * **mMax** ([**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md), [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md))
 * **mMin** ([**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md), [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md))
-* **MIDDLE\_BLOCK** ([**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md))
-* **mPercent** ([**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md), [**evab::InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md))
-* **mStep** ([**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md), [**evab::InputTextStretchBar**](classevab_1_1_input_text_stretch_bar.md), [**evab::Percent**](classevab_1_1_percent.md))
 * **mListener** ([**evab::KeyCatcher**](classevab_1_1_key_catcher.md), [**evab::KeyReactor**](classevab_1_1_key_reactor.md))
 * **mItemHeight** ([**evab::ListBox**](classevab_1_1_list_box.md))
 * **mItems** ([**evab::ListBox**](classevab_1_1_list_box.md))
+* **mStep** ([**evab::Percent**](classevab_1_1_percent.md), [**evab::StretchBar**](classevab_1_1_stretch_bar.md), [**evab::StretchBarPx**](classevab_1_1_stretch_bar_px.md))
 * **mCS1Pin** ([**evab::ScreenKS0108**](classevab_1_1_screen_k_s0108.md))
 * **mCS2Pin** ([**evab::ScreenKS0108**](classevab_1_1_screen_k_s0108.md))
 * **mCurrentChip** ([**evab::ScreenKS0108**](classevab_1_1_screen_k_s0108.md))
@@ -64,6 +62,8 @@
 * **mPages** ([**evab::ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md))
 * **mWidth** ([**evab::ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md))
 * **mBuffer** ([**evab::ScreenSerialPixel**](classevab_1_1_screen_serial_pixel.md), [**evab::ScreenSerialText**](classevab_1_1_screen_serial_text.md))
+* **mPercent** ([**evab::StretchBar**](classevab_1_1_stretch_bar.md), [**evab::StretchBarPx**](classevab_1_1_stretch_bar_px.md))
+* **MIDDLE\_BLOCK** ([**evab::StretchBarPx**](classevab_1_1_stretch_bar_px.md))
 * **mText** ([**evab::TextLabel**](classevab_1_1_text_label.md))
 * **mSelected** ([**evab::WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md))
 * **mWindowSize** ([**evab::WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md))
@@ -72,7 +72,7 @@
 
 ## n
 
-* **next** ([**evab::LayoutBase::FocusChainBase**](classevab_1_1_layout_base_1_1_focus_chain_base.md))
+* **next** ([**evab::LayoutBase::FocusableBase**](classevab_1_1_layout_base_1_1_focusable_base.md))
 
 
 ## p
@@ -82,7 +82,7 @@
 
 ## s
 
-* **START\_BLOCK** ([**evab::InputStretchBar**](classevab_1_1_input_stretch_bar.md))
+* **START\_BLOCK** ([**evab::StretchBarPx**](classevab_1_1_stretch_bar_px.md))
 
 
 ## x

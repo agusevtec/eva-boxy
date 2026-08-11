@@ -2,16 +2,16 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="classevab_1_1_element_base" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>evab::ElementBase</compoundname>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; AlbumStretchyVerticalProgressBar, VerticalAlbumPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; AlbumStretchyHorizontalProgressBar, HorizontalAlbumPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; AlbumStretchyVerticalScrollBar, VerticalAlbumPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; AlbumStretchyHorizontalScrollBar, HorizontalAlbumPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; CharsetVerticalProgressBar, VerticalTextPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; CharsetHorizontalProgressBar, HorizontalTextPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; CharsetVerticalScrollBar, VerticalTextPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; CharsetHorizontalScrollBar, HorizontalTextPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; ScrollWindowAlgorithm &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; FlipWindowAlgorithm &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar" prot="public" virt="non-virtual">evab::StretchBar&lt; VerticalProgressBarCharset, VerticalTextPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar" prot="public" virt="non-virtual">evab::StretchBar&lt; HorizontalProgressBarCharset, HorizontalTextPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar" prot="public" virt="non-virtual">evab::StretchBar&lt; VerticalScrollBarCharset, VerticalTextPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar" prot="public" virt="non-virtual">evab::StretchBar&lt; HorizontalScrollBarCharset, HorizontalTextPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar_px" prot="public" virt="non-virtual">evab::StretchBarPx&lt; VerticalProgressBarTileset, VerticalTilesetPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar_px" prot="public" virt="non-virtual">evab::StretchBarPx&lt; HorizontalProgressBarTileset, HorizontalTilesetPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar_px" prot="public" virt="non-virtual">evab::StretchBarPx&lt; VerticalScrollBarTileset, VerticalTilesetPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar_px" prot="public" virt="non-virtual">evab::StretchBarPx&lt; HorizontalScrollBarTileset, HorizontalTilesetPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; char *, LeftAlign &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; char *, CenterAlign &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; char *, RightAlign &gt;</derivedcompoundref>
@@ -22,16 +22,16 @@
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const __FlashStringHelper *, CenterAlign &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; const __FlashStringHelper *, RightAlign &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_composite_base" prot="public" virt="non-virtual">evab::CompositeBase</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_animation" prot="public" virt="non-virtual">evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_animation_px" prot="public" virt="non-virtual">evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_button" prot="public" virt="non-virtual">evab::InputButton</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_button_picto" prot="public" virt="non-virtual">evab::InputButtonPicto</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_button_px" prot="public" virt="non-virtual">evab::InputButtonPx</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_float" prot="public" virt="non-virtual">evab::InputFloat</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_input_int" prot="public" virt="non-virtual">evab::InputInt</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_selector_album" prot="public" virt="non-virtual">evab::InputSelectorAlbum&lt; TAlbum &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_stretch_bar" prot="public" virt="non-virtual">evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_input_text_stretch_bar" prot="public" virt="non-virtual">evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_input_selector_px" prot="public" virt="non-virtual">evab::InputSelectorPx&lt; TAlbum &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_layout_base" prot="public" virt="non-virtual">evab::LayoutBase</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_list_box" prot="public" virt="non-virtual">evab::ListBox&lt; TWindowAlgorithm &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar" prot="public" virt="non-virtual">evab::StretchBar&lt; TCharset, TOrientationTextPolicy &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_stretch_bar_px" prot="public" virt="non-virtual">evab::StretchBarPx&lt; TTileset, TOrientationTilesetPolicy &gt;</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_text_label" prot="public" virt="non-virtual">evab::TextLabel&lt; T, TAlign &gt;</derivedcompoundref>
     <includes refid="evab_element_base_8h" local="no">evabElementBase.h</includes>
     <sectiondef kind="private-attrib">
@@ -196,25 +196,25 @@
         <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)=0</argsstring>
         <name>drawer</name>
         <qualifiedname>evab::ElementBase::drawer</qualifiedname>
-        <reimplementedby refid="classevab_1_1_input_animation_1a345f41086e051dc3a55b2bb85a393251">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_animation_px_1ad23df8b40ab83e261042c3ef29d560d0">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_input_button_1a72049ea923d87d45709d24d4c256e9ce">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_button_picto_1adb782695b2bbca9ec6380110c9f2884b">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_button_px_1ab488dfe379ffdcb607f5a578a4afa580">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_input_float_1a17fa953f42dfaee582fdfb471d8823d5">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_input_int_1aaee5d4fe0d95f0a10259add2165710f6">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_selector_album_1a14690e2ee4213c0ece17b5ddadd2681e">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a30ea75aabbe86745bfebde137f344c94">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a30ea75aabbe86745bfebde137f344c94">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a30ea75aabbe86745bfebde137f344c94">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a30ea75aabbe86745bfebde137f344c94">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_stretch_bar_1a30ea75aabbe86745bfebde137f344c94">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a66e258a4501b4c70f0f4de974acb7de1">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a66e258a4501b4c70f0f4de974acb7de1">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a66e258a4501b4c70f0f4de974acb7de1">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a66e258a4501b4c70f0f4de974acb7de1">drawer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_text_stretch_bar_1a66e258a4501b4c70f0f4de974acb7de1">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_selector_px_1a80653ad8770618ed55f12ae92c3f0827">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a6ca3006c252e598320f88d3853617fb5">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_1a5e8e4f3838f715a3be046ba296ef9754">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_1a5e8e4f3838f715a3be046ba296ef9754">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_1a5e8e4f3838f715a3be046ba296ef9754">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_1a5e8e4f3838f715a3be046ba296ef9754">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_1a5e8e4f3838f715a3be046ba296ef9754">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_px_1a9e43837a179b163d565df5e4a2cd77e4">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_px_1a9e43837a179b163d565df5e4a2cd77e4">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_px_1a9e43837a179b163d565df5e4a2cd77e4">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_px_1a9e43837a179b163d565df5e4a2cd77e4">drawer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_stretch_bar_px_1a9e43837a179b163d565df5e4a2cd77e4">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
         <reimplementedby refid="classevab_1_1_text_label_1af68822461aabed8f33f218d0573e271f">drawer</reimplementedby>
@@ -291,7 +291,7 @@
         <name>freezer</name>
         <qualifiedname>evab::ElementBase::freezer</qualifiedname>
         <reimplementedby refid="classevab_1_1_composite_base_1a549745886246a86545a2cb3ab224941e">freezer</reimplementedby>
-        <reimplementedby refid="classevab_1_1_input_animation_1a572f935838f4044db6add055ff8b7dea">freezer</reimplementedby>
+        <reimplementedby refid="classevab_1_1_input_animation_px_1a8f270dc9f3aa47c8dc9d6fbf064ec86f">freezer</reimplementedby>
         <reimplementedby refid="classevab_1_1_layout_base_1a6c6e9092d6242cfe65a31c365229e597">freezer</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a54b5f34924f25c1066393ca958c046b3">freezer</reimplementedby>
         <reimplementedby refid="classevab_1_1_list_box_1a54b5f34924f25c1066393ca958c046b3">freezer</reimplementedby>
@@ -350,8 +350,8 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
       <node id="22">
-        <label>evab::InputAnimation&lt; TAlbum, tMaxSpeed &gt;</label>
-        <link refid="classevab_1_1_input_animation"/>
+        <label>evab::InputAnimationPx&lt; TAlbum, tMaxSpeed &gt;</label>
+        <link refid="classevab_1_1_input_animation_px"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
@@ -362,8 +362,8 @@
         </childnode>
       </node>
       <node id="24">
-        <label>evab::InputButtonPicto</label>
-        <link refid="classevab_1_1_input_button_picto"/>
+        <label>evab::InputButtonPx</label>
+        <link refid="classevab_1_1_input_button_px"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
@@ -392,92 +392,92 @@
         </childnode>
       </node>
       <node id="29">
-        <label>evab::InputSelectorAlbum&lt; TAlbum &gt;</label>
-        <link refid="classevab_1_1_input_selector_album"/>
+        <label>evab::InputSelectorPx&lt; TAlbum &gt;</label>
+        <link refid="classevab_1_1_input_selector_px"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="30">
-        <label>evab::InputStretchBar&lt; TAlbumStretchy, OrientationAlbumPolicy &gt;</label>
-        <link refid="classevab_1_1_input_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>evab::InputStretchBar&lt; AlbumStretchyHorizontalProgressBar, HorizontalAlbumPolicy &gt;</label>
-        <link refid="classevab_1_1_input_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>evab::InputStretchBar&lt; AlbumStretchyHorizontalScrollBar, HorizontalAlbumPolicy &gt;</label>
-        <link refid="classevab_1_1_input_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>evab::InputStretchBar&lt; AlbumStretchyVerticalProgressBar, VerticalAlbumPolicy &gt;</label>
-        <link refid="classevab_1_1_input_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>evab::InputStretchBar&lt; AlbumStretchyVerticalScrollBar, VerticalAlbumPolicy &gt;</label>
-        <link refid="classevab_1_1_input_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="31">
-        <label>evab::InputTextStretchBar&lt; TAlbum, OrientationTextPolicy &gt;</label>
-        <link refid="classevab_1_1_input_text_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>evab::InputTextStretchBar&lt; CharsetHorizontalProgressBar, HorizontalTextPolicy &gt;</label>
-        <link refid="classevab_1_1_input_text_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>evab::InputTextStretchBar&lt; CharsetHorizontalScrollBar, HorizontalTextPolicy &gt;</label>
-        <link refid="classevab_1_1_input_text_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>evab::InputTextStretchBar&lt; CharsetVerticalProgressBar, VerticalTextPolicy &gt;</label>
-        <link refid="classevab_1_1_input_text_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>evab::InputTextStretchBar&lt; CharsetVerticalScrollBar, VerticalTextPolicy &gt;</label>
-        <link refid="classevab_1_1_input_text_stretch_bar"/>
-        <childnode refid="1" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="32">
         <label>evab::LayoutBase</label>
         <link refid="classevab_1_1_layout_base"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="33">
+      <node id="31">
         <label>evab::ListBox&lt; TWindowAlgorithm &gt;</label>
         <link refid="classevab_1_1_list_box"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="3">
         <label>evab::ListBox&lt; FlipWindowAlgorithm &gt;</label>
         <link refid="classevab_1_1_list_box"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10">
+      <node id="2">
         <label>evab::ListBox&lt; ScrollWindowAlgorithm &gt;</label>
         <link refid="classevab_1_1_list_box"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>evab::StretchBar&lt; TCharset, TOrientationTextPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>evab::StretchBar&lt; HorizontalProgressBarCharset, HorizontalTextPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>evab::StretchBar&lt; HorizontalScrollBarCharset, HorizontalTextPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>evab::StretchBar&lt; VerticalProgressBarCharset, VerticalTextPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>evab::StretchBar&lt; VerticalScrollBarCharset, VerticalTextPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>evab::StretchBarPx&lt; TTileset, TOrientationTilesetPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar_px"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>evab::StretchBarPx&lt; HorizontalProgressBarTileset, HorizontalTilesetPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar_px"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>evab::StretchBarPx&lt; HorizontalScrollBarTileset, HorizontalTilesetPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar_px"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>evab::StretchBarPx&lt; VerticalProgressBarTileset, VerticalTilesetPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar_px"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>evab::StretchBarPx&lt; VerticalScrollBarTileset, VerticalTilesetPolicy &gt;</label>
+        <link refid="classevab_1_1_stretch_bar_px"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

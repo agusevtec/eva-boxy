@@ -1,6 +1,6 @@
-# Element Composition: FocusChain & LayoutBase
+# Element Composition: Focusable & LayoutBase
 
-Interactive interfaces in EVA Boxy are structured around two core abstractions: **FocusChain** (manages focus order and navigation state) and **LayoutBase** (provides layout coordination, event routing, and rendering contract).
+Interactive interfaces in EVA Boxy are structured around two core abstractions: **Focusable** (manages focus order and navigation state) and **LayoutBase** (provides layout coordination, event routing, and rendering contract).
 
 Components are declared directly as class members. The declaration order defines the sequential focus navigation ring.
 
@@ -31,15 +31,15 @@ The implementation of `drawer()` must adhere to one strict rule:
 
 To simplify layout management and meet this requirement, the `Grid` helper class can be used to slice `aSize` into region-aligned bounding boxes and automatically clear unallocated space via `Clear()`.
 
-### FocusChain
-`FocusChain<T>` is a template wrapper that integrates a UI control or modifier into the focus ring of a container.
+### Focusable
+`Focusable<T>` is a template wrapper that integrates a UI control or modifier into the focus ring of a container.
 
 * **Registration:** Registers the encapsulated instance `T` with the parent `LayoutBase` upon construction.
 * **Navigation Linkage:** Maintained via an internal doubly linked list (`Next()`, `Prev()`) initialized without dynamic memory allocations.
 * **Passthrough Delegation:** Routes rendering calls, state operations, and freeze notifications directly to the inner type `T`.
 
 ### LayoutBase & Implicit Interface
-`LayoutBase` tracks the active `FocusChain` node and manages event propagation. Interaction between LayoutBase and target controls relies on C++ duck typing. Controls implement member functions expected by their active modifiers or handlers, such as:
+`LayoutBase` tracks the active `Focusable` node and manages event propagation. Interaction between LayoutBase and target controls relies on C++ duck typing. Controls implement member functions expected by their active modifiers or handlers, such as:
 * **`Increment()`** — Value modification (numeric adjustments, option cycling).
 
 ---
@@ -50,7 +50,7 @@ In a standard single-screen layout, focus transitions sequentially between indiv
 
 ```cpp
 #include <evabLayoutBase.h>
-#include <evabFocusChain.h>
+#include <evabFocusable.h>
 #include <evabKeyModifier.h>
 #include <evabKeyReactor.h>
 #include <evabKeyCatcher.h>
@@ -61,9 +61,9 @@ In a standard single-screen layout, focus transitions sequentially between indiv
 // Derive from KeyModifier (which inherits from LayoutBase)
 class FormExample : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
     // Focus sequence: [1] mField1 -> [2] mField2 -> [3] mSaveBtn
-    FocusChain<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mField1 {this, 10};
-    FocusChain<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mField2 {this, 20};
-    FocusChain<KeyCatcher<InputButton, KEY_ENTER>>       mSaveBtn{this, &onSave, F("Save")};
+    Focusable<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mField1 {this, 10};
+    Focusable<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mField2 {this, 20};
+    Focusable<KeyCatcher<InputButton, KEY_ENTER>>       mSaveBtn{this, &onSave, F("Save")};
 
     Handler<FormExample> onSave {this, &FormExample::onSave};
     void onSave(void*, CallbackInfo) { /* Execution logic */ }
@@ -84,20 +84,20 @@ public:
 ```
 
 ### Event Handling Behavior
-1. **`KEY_UP` / `KEY_DOWN`:** Captured by `KeyModifier<LayoutBase>` to shift focus between `FocusChain` nodes.
+1. **`KEY_UP` / `KEY_DOWN`:** Captured by `KeyModifier<LayoutBase>` to shift focus between `Focusable` nodes.
 2. **`KEY_LEFT` / `KEY_RIGHT`:** Passed to the currently focused node, triggering its internal `KeyReactor` to invoke `Increment()` or `Decrement()`.
 
 ---
 
 ## Pattern 2: Sub-screen (LayoutBase) Paging
 
-When managing multi-screen flows or tabbed views, `FocusChain` wraps entire `LayoutBase` instances. Focus transitions switch the active sub-screen. 
+When managing multi-screen flows or tabbed views, `Focusable` wraps entire `LayoutBase` instances. Focus transitions switch the active sub-screen. 
 
 *(Note: Internal frame lifecycle and state freezing are automatically managed by `ElementBase` upon draw call dispatching)*.
 
 ```cpp
 #include <evabLayoutBase.h>
-#include <evabFocusChain.h>
+#include <evabFocusable.h>
 #include <evabKeyModifier.h>
 #include <evabGrid.h>
 
@@ -107,9 +107,9 @@ When managing multi-screen flows or tabbed views, `FocusChain` wraps entire `Lay
 
 class PagedApp : public KeyModifier<LayoutBase, KEY_PAGEDOWN, KEY_PAGEUP> {
     // Focus sequence across full LayoutBase instances
-    FocusChain<ScreenStatus>   mStatusScreen   {this};
-    FocusChain<ScreenSettings> mSettingsScreen {this};
-    FocusChain<ScreenInfo>     mInfoScreen     {this};
+    Focusable<ScreenStatus>   mStatusScreen   {this};
+    Focusable<ScreenSettings> mSettingsScreen {this};
+    Focusable<ScreenInfo>     mInfoScreen     {this};
 
 public:
     void drawer(Screen* aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
@@ -128,5 +128,5 @@ public:
 ```
 
 ### Execution Characteristics
-* Each sub-screen retains its own internal `FocusChain` ring and key bindings.
+* Each sub-screen retains its own internal `Focusable` ring and key bindings.
 * Outer key events (`KEY_PAGEDOWN` / `KEY_PAGEUP`) shift focus at the container level without interfering with inner sub-screen key mapping.

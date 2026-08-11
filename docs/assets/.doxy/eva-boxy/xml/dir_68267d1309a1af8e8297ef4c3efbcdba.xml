@@ -3,7 +3,6 @@
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
     <innerfile refid="evab_albums_8h">evabAlbums.h</innerfile>
-    <innerfile refid="evab_albums_stretchy_8h">evabAlbumsStretchy.h</innerfile>
     <innerfile refid="evab_boxy_8h">evabBoxy.h</innerfile>
     <innerfile refid="evab_composite_base_8h">evabCompositeBase.h</innerfile>
     <innerfile refid="evab_coor_8h">evabCoor.h</innerfile>
@@ -16,14 +15,12 @@
     <innerfile refid="evab_gallery_remixicon32_8h">evabGalleryRemixicon32.h</innerfile>
     <innerfile refid="evab_grid_8h">evabGrid.h</innerfile>
     <innerfile refid="evab_i_font_8h">evabIFont.h</innerfile>
-    <innerfile refid="evab_input_animation_8h">evabInputAnimation.h</innerfile>
+    <innerfile refid="evab_input_animation_px_8h">evabInputAnimationPx.h</innerfile>
     <innerfile refid="evab_input_button_8h">evabInputButton.h</innerfile>
-    <innerfile refid="evab_input_button_picto_8h">evabInputButtonPicto.h</innerfile>
+    <innerfile refid="evab_input_button_px_8h">evabInputButtonPx.h</innerfile>
     <innerfile refid="evab_input_float_8h">evabInputFloat.h</innerfile>
     <innerfile refid="evab_input_int_8h">evabInputInt.h</innerfile>
-    <innerfile refid="evab_input_selector_album_8h">evabInputSelectorAlbum.h</innerfile>
-    <innerfile refid="evab_input_stretch_bar_8h">evabInputStretchBar.h</innerfile>
-    <innerfile refid="evab_input_text_stretch_bar_8h">evabInputTextStretchBar.h</innerfile>
+    <innerfile refid="evab_input_selector_px_8h">evabInputSelectorPx.h</innerfile>
     <innerfile refid="evab_key_catcher_8h">evabKeyCatcher.h</innerfile>
     <innerfile refid="evab_key_modifier_8h">evabKeyModifier.h</innerfile>
     <innerfile refid="evab_key_reactor_8h">evabKeyReactor.h</innerfile>
@@ -43,6 +40,9 @@
     <innerfile refid="evab_screen_s_s_d1306_8h">evabScreenSSD1306.h</innerfile>
     <innerfile refid="evab_screen_s_s_h1106_8h">evabScreenSSH1106.h</innerfile>
     <innerfile refid="evab_serializers_8h">evabSerializers.h</innerfile>
+    <innerfile refid="evab_stretch_bar_8h">evabStretchBar.h</innerfile>
+    <innerfile refid="evab_stretch_bar_px_8h">evabStretchBarPx.h</innerfile>
+    <innerfile refid="evab_stretch_bar_px_resources_8h">evabStretchBarPxResources.h</innerfile>
     <innerfile refid="evab_text_align_8h">evabTextAlign.h</innerfile>
     <innerfile refid="evab_text_label_8h">evabTextLabel.h</innerfile>
     <innerfile refid="evab_text_traits_8h">evabTextTraits.h</innerfile>

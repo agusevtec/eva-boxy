@@ -38,7 +38,7 @@ Height = 2 tiles:
 
 LabeledLeft<InputInt> labeledInt("Temperature", 42);
 LabeledLeft<InputButton> labeledButton("Action", F("OK"));
-LabeledLeft<InputSelectorAlbum<AlbumBattery>> labeledBattery("Battery", 3);
+LabeledLeft<InputSelectorPx<AlbumBattery>> labeledBattery("Battery", 3);
 LabeledLeftF<InputInt> labeledFlash(F("Brightness"), 75);  // Flash string
 ```
 
@@ -85,7 +85,7 @@ Height = 3 tiles:
 TitledLeft<InputInt> titledInt("Temperature", 42);
 TitledCenter<InputFloat> titledFloat("Voltage", 3.3f);
 TitledLeft<InputButton> titledButton("Action", F("Save"));
-TitledLeftF<InputSelectorAlbum<AlbumLamp>> titledLamp(F("Mode"), 2);
+TitledLeftF<InputSelectorPx<AlbumLamp>> titledLamp(F("Mode"), 2);
 ```
 
 | Decorator | Alignment | Use Case |
@@ -141,7 +141,7 @@ PaddingV + PaddingH (centered):
 
 PaddingV<InputInt> paddedInt(42);
 PaddingH<InputButton> paddedButton(F("OK"));
-PaddingV<InputSelectorAlbum<AlbumSpeaker>> paddedSpeaker(2);
+PaddingV<InputSelectorPx<AlbumSpeaker>> paddedSpeaker(2);
 PaddingV<PaddingH<InputInt>> centeredInt(42);
 ```
 

@@ -10,7 +10,7 @@
 
 _Policy for horizontal text-based stretch bars._ 
 
-* `#include <evabInputTextStretchBar.h>`
+* `#include <evabStretchBar.h>`
 
 
 
@@ -195,5 +195,5 @@ Position of the block
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabInputTextStretchBar.h`
+The documentation for this class was generated from the following file `src/evabStretchBar.h`
 

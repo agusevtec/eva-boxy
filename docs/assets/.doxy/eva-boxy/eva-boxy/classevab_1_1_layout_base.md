@@ -75,7 +75,7 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 | ---: | :--- |
 |  [**ElementBase**](classevab_1_1_element_base.md) \* | [**GetFocused**](#function-getfocused) () const<br>_Gets the current (focused) child._  |
 |  void | [**Increment**](#function-increment) (signed char delta) <br>_Increments the selection by a delta._  |
-|  bool | [**IsFocused**](#function-isfocused) (FocusChainBase \* aChild) <br>_Checks if a child is currently focused._  |
+|  bool | [**IsFocused**](#function-isfocused) (FocusableBase \* aChild) <br>_Checks if a child is currently focused._  |
 | virtual bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events by forwarding to focused child._  |
 
 
@@ -138,7 +138,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**focusChild**](#function-focuschild) (FocusChainBase \* aChild) <br>_Sets the current (focused) child._  |
+|  void | [**focusChild**](#function-focuschild) (FocusableBase \* aChild) <br>_Sets the current (focused) child._  |
 
 
 ## Protected Functions inherited from evab::ElementBase
@@ -160,7 +160,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 ## Detailed Description
 
 
-Manages a circular linked list of child elements for focus navigation. Only stores one pointer - to the currently focused child. Children must be of type FocusChain&lt;T&gt; to form the chain. 
+Manages a circular linked list of child elements for focus navigation. Only stores one pointer - to the currently focused child. Children must be of type Focusable&lt;T&gt; to form the chain. 
 
 
     
@@ -229,7 +229,7 @@ Positive delta moves forward (next), negative moves backward (prev)
 _Checks if a child is currently focused._ 
 ```C++
 bool evab::LayoutBase::IsFocused (
-    FocusChainBase * aChild
+    FocusableBase * aChild
 ) 
 ```
 
@@ -301,7 +301,7 @@ Implements [*evab::ElementBase::OnKey*](classevab_1_1_element_base.md#function-o
 _Sets the current (focused) child._ 
 ```C++
 void evab::LayoutBase::focusChild (
-    FocusChainBase * aChild
+    FocusableBase * aChild
 ) 
 ```
 

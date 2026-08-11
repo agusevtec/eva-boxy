@@ -1313,14 +1313,14 @@
 <td>🟡 Yes (via <code>Percent&lt;T&gt;</code>)</td>
 </tr>
 <tr>
-<td><code>InputSelectorAlbum&lt;T&gt;</code></td>
+<td><code>InputSelectorPx&lt;T&gt;</code></td>
 <td>🔴 No</td>
 <td>🟢 Yes</td>
 <td>🟢 Yes</td>
 <td>🟡 Yes (via <code>Percent&lt;T&gt;</code>)</td>
 </tr>
 <tr>
-<td><code>InputAnimation</code></td>
+<td><code>InputAnimationPx</code></td>
 <td>🔴 No</td>
 <td>🟢 Yes</td>
 <td>🟢 Yes</td>
@@ -1334,7 +1334,7 @@
 <td>🔴 No</td>
 </tr>
 <tr>
-<td><code>InputButtonPicto</code></td>
+<td><code>InputButtonPx</code></td>
 <td>🔴 No</td>
 <td>🟡 Dummy</td>
 <td>🔴 No</td>
@@ -1383,10 +1383,10 @@
 - 🟡 <strong>Yes (via mod.)</strong> — Supported via <code>Percent&lt;T&gt;</code> modifier
 - 🔴 <strong>No</strong> — Not supported</p>
 <p><strong>Note on StretchBar &amp; TextStretchBar:</strong> This group includes all progress and scroll bar variants:
+- <code>VerticalProgressBarPx</code>, <code>HorizontalProgressBarPx</code>
+- <code>VerticalScrollBarPx</code>, <code>HorizontalScrollBarPx</code>
 - <code>VerticalProgressBar</code>, <code>HorizontalProgressBar</code>
-- <code>VerticalScrollBar</code>, <code>HorizontalScrollBar</code>
-- <code>TextVerticalProgressBar</code>, <code>TextHorizontalProgressBar</code>
-- <code>TextVerticalScrollBar</code>, <code>TextHorizontalScrollBar</code></p>
+- <code>VerticalScrollBar</code>, <code>HorizontalScrollBar</code></p>
 <p>The step of <code>Increment()</code> for these elements is <strong>variable</strong> — it depends on the visual representation. Each <code>Increment(+1)</code> moves the bar by exactly one visual block (one pictogram or one character position). The actual percent change depends on how many blocks fit in the current drawing area.</p>
 <p>This is why StretchBar elements support <strong>Increment</strong> (visual step) and <strong>Percent</strong> (0-100% value), but not <strong>Index</strong> (no fixed discrete positions) — the number of positions is determined by the available space at draw time.</p>
 <hr />
@@ -1396,10 +1396,10 @@
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabPercent.h&gt;</span>
 
 <span class="c1">// Album selector (Index) → Percent control</span>
-<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">batteryPercent</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">batteryPercent</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 
 <span class="c1">// Animation speed (Index) → Percent control</span>
-<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputAnimation</span><span class="o">&lt;</span><span class="n">AlbumFan</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">fanSpeedPercent</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w">  </span><span class="c1">// 5 → 50% of max speed</span>
+<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputAnimationPx</span><span class="o">&lt;</span><span class="n">AlbumFan</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">fanSpeedPercent</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w">  </span><span class="c1">// 5 → 50% of max speed</span>
 
 <span class="c1">// ListBox (Index) → Percent control</span>
 <span class="n">Percent</span><span class="o">&lt;</span><span class="n">ScrollListbox</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listPercent</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span>
@@ -1440,19 +1440,19 @@
 <span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">intControl</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
 
 <span class="c1">// Album selector with LEFT/RIGHT control — meaningful</span>
-<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">batteryControl</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">batteryControl</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 
 <span class="c1">// Animation speed with UP/DOWN — meaningful</span>
-<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">InputAnimation</span><span class="o">&lt;</span><span class="n">AlbumFan</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fanControl</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">InputAnimationPx</span><span class="o">&lt;</span><span class="n">AlbumFan</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fanControl</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 
 <span class="c1">// Layout navigation with UP/DOWN — meaningful</span>
 <span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">LayoutBase</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">formNavigation</span><span class="p">();</span>
 
 <span class="c1">// Stretch bar with LEFT/RIGHT — steps by one visual block</span>
-<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">HorizontalProgressBar</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">progressControl</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">HorizontalProgressBarPx</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">progressControl</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 
 <span class="c1">// Percent-modified selector with UP/DOWN — meaningful</span>
-<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputSelectorAlbum</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">percentControl</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">percentControl</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 </code></pre></div>
 
 <table>
@@ -1478,7 +1478,7 @@
 </tbody>
 </table>
 <blockquote>
-<p><strong>Note on Buttons:</strong> <code>InputButton</code> and <code>InputButtonPicto</code> implement <code>Increment()</code> as a dummy (no-operation) method. This is done for interface completeness, but makes <code>KeyModifier</code> effectively useless on them — pressing keys does nothing. For buttons, use <code>KeyCatcher</code> instead.</p>
+<p><strong>Note on Buttons:</strong> <code>InputButton</code> and <code>InputButtonPx</code> implement <code>Increment()</code> as a dummy (no-operation) method. This is done for interface completeness, but makes <code>KeyModifier</code> effectively useless on them — pressing keys does nothing. For buttons, use <code>KeyCatcher</code> instead.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="c1">// Button with keys — compiles but does nothing (dummy Increment)</span>
 <span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uselessButtonControl</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// ⚠️ No effect!</span>
@@ -1522,15 +1522,15 @@
 
 <span class="k">class</span><span class="w"> </span><span class="nc">MyForm</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">LayoutBase</span><span class="p">,</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">eva</span><span class="o">::</span><span class="n">IHandler</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// KeyCatcher is the right tool for buttons</span>
-<span class="w">    </span><span class="n">FocusChain</span><span class="o">&lt;</span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mSaveButton</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Save&quot;</span><span class="p">)};</span>
-<span class="w">    </span><span class="n">FocusChain</span><span class="o">&lt;</span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButtonPicto</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mIconButton</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">GalleryRemixicon24</span><span class="o">::</span><span class="n">PICTO_F243</span><span class="p">};</span>
+<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mSaveButton</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Save&quot;</span><span class="p">)};</span>
+<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButtonPx</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mIconButton</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">GalleryRemixicon24</span><span class="o">::</span><span class="n">PICTO_F243</span><span class="p">};</span>
 
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">invoke</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">event</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;::</span><span class="n">EVENT_CATCH_KEY</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Save pressed!&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">event</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButtonPicto</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;::</span><span class="n">EVENT_CATCH_KEY</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">event</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButtonPx</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;::</span><span class="n">EVENT_CATCH_KEY</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Icon button pressed!&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>

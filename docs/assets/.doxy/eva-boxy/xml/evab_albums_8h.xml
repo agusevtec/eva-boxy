@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="evab_albums_8h" kind="file" language="C++">
     <compoundname>evabAlbums.h</compoundname>
-    <includedby refid="evab_input_animation_8h" local="no">src/evabInputAnimation.h</includedby>
+    <includedby refid="evab_input_animation_px_8h" local="no">src/evabInputAnimationPx.h</includedby>
     <invincdepgraph>
       <node id="1">
         <label>src/evabAlbums.h</label>
@@ -11,8 +11,8 @@
         </childnode>
       </node>
       <node id="2">
-        <label>src/evabInputAnimation.h</label>
-        <link refid="evab_input_animation_8h_source"/>
+        <label>src/evabInputAnimationPx.h</label>
+        <link refid="evab_input_animation_px_8h_source"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classevab_1_1_album_on_off" prot="public">evab::AlbumOnOff</innerclass>

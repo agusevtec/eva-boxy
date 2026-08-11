@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_horizontal_progress_bar_tileset" kind="class" language="C++" prot="public">
+    <compoundname>evab::HorizontalProgressBarTileset</compoundname>
+    <includes refid="evab_stretch_bar_px_resources_8h" local="no">evabStretchBarPxResources.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevab_1_1_horizontal_progress_bar_tileset_1a5e967dc064b2897f0e1378c879f1b8c9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char * evab::HorizontalProgressBarTileset::GetTile</definition>
+        <argsstring>(unsigned char blockType, unsigned char fillNumber)</argsstring>
+        <name>GetTile</name>
+        <qualifiedname>evab::HorizontalProgressBarTileset::GetTile</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>blockType</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>fillNumber</declname>
+        </param>
+        <briefdescription>
+<para>Gets pictogram for horizontal progress bar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blockType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Block type (1=start, 2=middle, 3=end) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fillNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fill level (0-4) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to pictogram data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabStretchBarPxResources.h" line="34" column="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Horizontal progress bar pictogram set. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/evabStretchBarPxResources.h" line="24" column="5" bodyfile="src/evabStretchBarPxResources.h" bodystart="25" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_horizontal_progress_bar_tileset_1a5e967dc064b2897f0e1378c879f1b8c9" prot="public" virt="non-virtual"><scope>evab::HorizontalProgressBarTileset</scope><name>GetTile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

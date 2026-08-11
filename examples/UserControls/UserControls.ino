@@ -9,13 +9,13 @@
 #include <evabFont8Narrow.h>
 #include <evabScreenSSD1306.h>
 #include <evaRepeatTimer.h>
-#include <evabInputStretchbar.h>
-#include <evabInputTextStretchbar.h>
+#include <evabStretchBarPx.h>
+#include <evabStretchBar.h>
 #include <evabInputPictogram.h>
-#include <evabInputTextStretchBar.h>
+#include <evabStretchBar.h>
 #include <evabAlbums.h>
 #include <evabPictoRemixicon16.h>
-#include <evabInputAnimation.h>
+#include <evabInputAnimationPx.h>
 
 
 struct ElementsArray {
@@ -36,7 +36,7 @@ class MyListbox : public ScrollListbox {
 public:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
     ScrollListbox::drawer(aScreen, { aPos.X, aPos.Y + 1 }, { aSize.X - 1, aSize.Y - 1 }, aIsFocused);
-    VerticalProgressBar pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
+    VerticalProgressBarPx pb(100 * (ScrollListbox::Selected()) / (ScrollListbox::Count() - 1));
     pb.Draw(aScreen, { aPos.X + aSize.X - 1, aPos.Y + 1 }, { 1, aSize.Y - 1 }, 0);
   }
 };
@@ -44,8 +44,8 @@ public:
 class MyContainer : public LayoutPane {
   InputPictoSelector<AlbumBattery> mBattery;
   InputPictoSelector<AlbumSignal> mSignal;
-  KeyModifier<HorizontalScrollBar, KEY_DOWN, KEY_UP> test;
-  InputAnimation<AlbumRainbowmeter, 10> mFan = {1};
+  KeyModifier<HorizontalScrollBarPx, KEY_DOWN, KEY_UP> test;
+  InputAnimationPx<AlbumRainbowmeter, 10> mFan = {1};
 
 public:
   MyContainer() {
