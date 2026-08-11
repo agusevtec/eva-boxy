@@ -1,7 +1,10 @@
 site_name: EVA Boxy
 site_description: EVA Boxy
 repo_url: https://github.com/agusevtec/eva-boxy
-theme: material
+theme: 
+   name: material
+   font:
+       code: Consolas
 docs_dir: 'docs-md'
 site_dir: 'docs'
 nav:
