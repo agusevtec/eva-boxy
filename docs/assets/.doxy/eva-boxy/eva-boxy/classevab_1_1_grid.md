@@ -52,19 +52,19 @@ _Layout manager for grid-based UI arrangement._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-|  void | [**Clear**](#function-clear) () <br>_Clears the current cell area._  |
-|  void | [**Draw**](#function-draw) ([**ElementBase**](classevab_1_1_element_base.md) \* aElement, unsigned char aIsFocused=0) <br>_Draws an element in the current cell._  |
+|  void | [**Clear**](#function-clear) (unsigned char aIsFocused=0) <br>_Clears the current cell area._  |
+|  void | [**Draw**](#function-draw) ([**ElementBase**](classevab_1_1_element_base.md) & aElement, unsigned char aIsFocused=0) <br>_Draws an element in the current cell._  |
 |  [**Coor**](structevab_1_1_coor.md) | [**GetPos**](#function-getpos) () const<br>_Gets the current position._  |
 |  [**Coor**](structevab_1_1_coor.md) | [**GetSize**](#function-getsize) () const<br>_Gets the current size._  |
-|   | [**Grid**](#function-grid) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize) <br>_Constructs a_ [_**Grid**_](classevab_1_1_grid.md) _for a specific area._ |
-|  void | [**Picto**](#function-picto) (const unsigned char \* aPictogram, unsigned char aColor=0) <br>_Draws a pictogram in the current cell._  |
+|   | [**Grid**](#function-grid) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Constructs a_ [_**Grid**_](classevab_1_1_grid.md) _for a specific area._ |
+|  void | [**Picto**](#function-picto) (const unsigned char \* aPictogram, unsigned char aIsFocused=0) <br>_Draws a pictogram in the current cell._  |
 |  [**Grid**](classevab_1_1_grid.md#function-grid) & | [**Rest**](#function-rest) () <br>_Returns the remaining space from current position._  |
 |  [**Grid**](classevab_1_1_grid.md#function-grid) | [**SliceCol**](#function-slicecol) (unsigned char aWidth=0) <br>_Creates a new_ [_**Grid**_](classevab_1_1_grid.md) _for the next column._ |
 |  [**Grid**](classevab_1_1_grid.md#function-grid) | [**SliceRow**](#function-slicerow) (unsigned char aHeight=0) <br>_Creates a new_ [_**Grid**_](classevab_1_1_grid.md) _for the next row._ |
-|  void | [**Text**](#function-text) (TText aText, unsigned char aColor=0) <br>_Draws text with specified alignment._  |
-|  void | [**TextCenter**](#function-textcenter) (T aText, unsigned char aColor=0) <br>_Draws center-aligned text._  |
-|  void | [**TextLeft**](#function-textleft) (T aText, unsigned char aColor=0) <br>_Draws left-aligned text._  |
-|  void | [**TextRight**](#function-textright) (T aText, unsigned char aColor=0) <br>_Draws right-aligned text._  |
+|  void | [**Text**](#function-text) (TText aText, unsigned char aIsFocused=0) <br>_Draws text with specified alignment._  |
+|  void | [**TextCenter**](#function-textcenter) (T aText, unsigned char aIsFocused=0) <br>_Draws center-aligned text._  |
+|  void | [**TextLeft**](#function-textleft) (T aText, unsigned char aIsFocused=0) <br>_Draws left-aligned text._  |
+|  void | [**TextRight**](#function-textright) (T aText, unsigned char aIsFocused=0) <br>_Draws right-aligned text._  |
 
 
 
@@ -120,7 +120,9 @@ grid.Rest().Clear();
 
 _Clears the current cell area._ 
 ```C++
-inline void evab::Grid::Clear () 
+void evab::Grid::Clear (
+    unsigned char aIsFocused=0
+) 
 ```
 
 
@@ -135,7 +137,7 @@ inline void evab::Grid::Clear ()
 _Draws an element in the current cell._ 
 ```C++
 void evab::Grid::Draw (
-    ElementBase * aElement,
+    ElementBase & aElement,
     unsigned char aIsFocused=0
 ) 
 ```
@@ -216,7 +218,8 @@ _Constructs a_ [_**Grid**_](classevab_1_1_grid.md) _for a specific area._
 evab::Grid::Grid (
     Screen * aScreen,
     Coor aPos,
-    Coor aSize
+    Coor aSize,
+    unsigned char aIsFocused
 ) 
 ```
 
@@ -244,9 +247,9 @@ evab::Grid::Grid (
 
 _Draws a pictogram in the current cell._ 
 ```C++
-inline void evab::Grid::Picto (
+void evab::Grid::Picto (
     const unsigned char * aPictogram,
-    unsigned char aColor=0
+    unsigned char aIsFocused=0
 ) 
 ```
 
@@ -258,7 +261,7 @@ inline void evab::Grid::Picto (
 
 
 * `aPictogram` Pictogram data 
-* `aColor` Color/inversion flag 
+* `aIsFocused` Color/inversion flag 
 
 
 
@@ -369,7 +372,7 @@ _Draws text with specified alignment._
 template<typename TAlign, typename TText>
 inline void evab::Grid::Text (
     TText aText,
-    unsigned char aColor=0
+    unsigned char aIsFocused=0
 ) 
 ```
 
@@ -389,7 +392,7 @@ inline void evab::Grid::Text (
 
 
 * `aText` Text to draw 
-* `aColor` Color/inversion flag 
+* `aIsFocused` Color/inversion flag 
 
 
 
@@ -407,7 +410,7 @@ _Draws center-aligned text._
 template<typename T>
 inline void evab::Grid::TextCenter (
     T aText,
-    unsigned char aColor=0
+    unsigned char aIsFocused=0
 ) 
 ```
 
@@ -425,7 +428,7 @@ _Draws left-aligned text._
 template<typename T>
 inline void evab::Grid::TextLeft (
     T aText,
-    unsigned char aColor=0
+    unsigned char aIsFocused=0
 ) 
 ```
 
@@ -443,7 +446,7 @@ _Draws right-aligned text._
 template<typename T>
 inline void evab::Grid::TextRight (
     T aText,
-    unsigned char aColor=0
+    unsigned char aIsFocused=0
 ) 
 ```
 

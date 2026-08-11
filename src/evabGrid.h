@@ -31,7 +31,7 @@ namespace evab
          * @param aPos Position on screen
          * @param aSize Size of the grid area
          */
-        Grid(Screen *aScreen, Coor aPos, Coor aSize);
+        Grid(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
         /**
          * @brief Creates a new Grid for the next row
@@ -62,7 +62,7 @@ namespace evab
          * @param aElement Element to draw
          * @param aIsFocused Focus state (1 = focused, 0 = not focused)
          */
-        void Draw(ElementBase *aElement, unsigned char aIsFocused = 0);
+        void Draw(ElementBase &aElement, unsigned char aIsFocused = 0);
 
         /**
          * @brief Draws text with specified alignment
@@ -70,65 +70,58 @@ namespace evab
          * @tparam TAlign Alignment strategy (LeftAlign, CenterAlign, RightAlign)
          * @tparam TText Text type
          * @param aText Text to draw
-         * @param aColor Color/inversion flag
+         * @param aIsFocused Color/inversion flag
          */
         template <typename TAlign, typename TText>
-        void Text(TText aText, unsigned char aColor = 0)
+        void Text(TText aText, unsigned char aIsFocused = 0)
         {
             if (mScreen)
-                mScreen->Text<TAlign>(mTopLeft, GetSize(), aText, aColor);
+                mScreen->Text<TAlign>(mTopLeft, GetSize(), aText, aIsFocused);
         }
 
         /**
          * @brief Draws left-aligned text
          */
         template <typename T>
-        void TextLeft(T aText, unsigned char aColor = 0)
+        void TextLeft(T aText, unsigned char aIsFocused = 0)
         {
             if (mScreen)
-                mScreen->TextLeft(mTopLeft, GetSize(), aText, aColor);
+                mScreen->TextLeft(mTopLeft, GetSize(), aText, mIsFocused && aIsFocused);
         }
 
         /**
          * @brief Draws center-aligned text
          */
         template <typename T>
-        void TextCenter(T aText, unsigned char aColor = 0)
+        void TextCenter(T aText, unsigned char aIsFocused = 0)
         {
             if (mScreen)
-                mScreen->TextCenter(mTopLeft, GetSize(), aText, aColor);
+                mScreen->TextCenter(mTopLeft, GetSize(), aText, mIsFocused && aIsFocused);
         }
 
         /**
          * @brief Draws right-aligned text
          */
         template <typename T>
-        void TextRight(T aText, unsigned char aColor = 0)
+        void TextRight(T aText, unsigned char aIsFocused = 0)
         {
             if (mScreen)
-                mScreen->TextRight(mTopLeft, GetSize(), aText, aColor);
+                mScreen->TextRight(mTopLeft, GetSize(), aText, mIsFocused && aIsFocused);
         }
 
         /**
          * @brief Draws a pictogram in the current cell
          *
          * @param aPictogram Pictogram data
-         * @param aColor Color/inversion flag
+         * @param aIsFocused Color/inversion flag
          */
-        void Picto(const unsigned char *aPictogram, unsigned char aColor = 0)
-        {
-            if (mScreen)
-                mScreen->Picto(mTopLeft, aPictogram, aColor);
-        }
+        void Picto(const unsigned char *aPictogram, unsigned char aIsFocused = 0);
+
 
         /**
          * @brief Clears the current cell area
          */
-        void Clear()
-        {
-            if (mScreen)
-                mScreen->Clear(mTopLeft, GetSize(), 0);
-        }
+        void Clear(unsigned char aIsFocused = 0);
 
         /**
          * @brief Gets the current position
@@ -148,6 +141,7 @@ namespace evab
     private:
         Coor mTopLeft;         ///< Top-left corner of current cell
         Coor mBottomRight;     ///< Bottom-right corner of current cell
+        unsigned char mIsFocused;
         const Screen *mScreen; ///< Screen to draw on
     };
 

@@ -125,18 +125,19 @@
   <compound refid="classevab_1_1_grid" kind="class"><name>evab::Grid</name>
     <member refid="classevab_1_1_grid_1a5320341c603411b1193587686bca00fa" kind="variable"><name>mTopLeft</name></member>
     <member refid="classevab_1_1_grid_1aa8b617dc4491e033211ed0cd85b05b76" kind="variable"><name>mBottomRight</name></member>
+    <member refid="classevab_1_1_grid_1a29ee14aa829ecc24b2a76501649eaa94" kind="variable"><name>mIsFocused</name></member>
     <member refid="classevab_1_1_grid_1afe665007c97eafedf5d15840e9ec7a79" kind="variable"><name>mScreen</name></member>
-    <member refid="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" kind="function"><name>Grid</name></member>
+    <member refid="classevab_1_1_grid_1a6724c87c996e234a06039f8a65949ef8" kind="function"><name>Grid</name></member>
     <member refid="classevab_1_1_grid_1a9cdd9b56bf792047f6e3139753a4e041" kind="function"><name>SliceRow</name></member>
     <member refid="classevab_1_1_grid_1a4c44117cf974c9786044bd91519e940b" kind="function"><name>SliceCol</name></member>
     <member refid="classevab_1_1_grid_1aadde199b2b5d0a435ab425d8c8a12a15" kind="function"><name>Rest</name></member>
-    <member refid="classevab_1_1_grid_1afa6c51abd57f4042955d4a88321d5a49" kind="function"><name>Draw</name></member>
-    <member refid="classevab_1_1_grid_1a3d61965bcc004248b6594a8156503822" kind="function"><name>Text</name></member>
-    <member refid="classevab_1_1_grid_1a4811bf26337113b8a408875abe71e079" kind="function"><name>TextLeft</name></member>
-    <member refid="classevab_1_1_grid_1af913e3e9c82bd407f77e72dc6aee5884" kind="function"><name>TextCenter</name></member>
-    <member refid="classevab_1_1_grid_1ae9e362a4b3272230c3a70fad964f6097" kind="function"><name>TextRight</name></member>
-    <member refid="classevab_1_1_grid_1a5a7ba3fc18befe626da750004c8c886b" kind="function"><name>Picto</name></member>
-    <member refid="classevab_1_1_grid_1a18c93524c7f9f9d8ee24d5142c69a619" kind="function"><name>Clear</name></member>
+    <member refid="classevab_1_1_grid_1a1037c735a5c2b40437423d541fbe4e31" kind="function"><name>Draw</name></member>
+    <member refid="classevab_1_1_grid_1a08a788d8582d5145cdc57020d9509f99" kind="function"><name>Text</name></member>
+    <member refid="classevab_1_1_grid_1af48a038c59176b66be18ef252a526667" kind="function"><name>TextLeft</name></member>
+    <member refid="classevab_1_1_grid_1a8cf0de3cea91b79235f8ab8d0b62d8d0" kind="function"><name>TextCenter</name></member>
+    <member refid="classevab_1_1_grid_1a529f18d3039c424b96fecfae858a5fb8" kind="function"><name>TextRight</name></member>
+    <member refid="classevab_1_1_grid_1ab848549b294f84e3f241300555249d50" kind="function"><name>Picto</name></member>
+    <member refid="classevab_1_1_grid_1a848c5e918a83fc49eab72cfb63c8447f" kind="function"><name>Clear</name></member>
     <member refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" kind="function"><name>GetPos</name></member>
     <member refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" kind="function"><name>GetSize</name></member>
   </compound>
@@ -294,6 +295,7 @@
     <member refid="classevab_1_1_list_box_1afa956f4cbbe1c5c2346415e42bf1c8b3" kind="function"><name>ListBox</name></member>
     <member refid="classevab_1_1_list_box_1af0b30968888f81dd4d440e13a6d48f08" kind="function"><name>ListBox</name></member>
     <member refid="classevab_1_1_list_box_1a9c23198dd3c4325baa98c585d085d27b" kind="function"><name>SetItems</name></member>
+    <member refid="classevab_1_1_list_box_1a9f61d5d2f534f734c9a06d8c158affb5" kind="function"><name>SetItems</name></member>
     <member refid="classevab_1_1_list_box_1adc0301c110fa708383dc790b770d22e5" kind="function"><name>SetItemHeight</name></member>
     <member refid="classevab_1_1_list_box_1aca63169d0cf1992e2db5c1de2e86e650" kind="function"><name>Select</name></member>
     <member refid="classevab_1_1_list_box_1abc1820aba632f45d2a25bce7da84decb" kind="function"><name>GetItem</name></member>

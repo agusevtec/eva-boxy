@@ -7,12 +7,21 @@ site_dir: 'docs'
 nav:
   - What is it?: index.md
   - Tutorial:
-      - Display Driver: tutorial/display-drivers.md
-      - UC Paint: tutorial/uc-paint.md
-      - UC Elements Stamps: tutorial/uc-elements-stamps.md
-      - UC Structured UI: tutorial/uc-structured-ui.md
-      - Keyboard behavior: tutorial/keyboard-behavior.md
-      - Custom display: tutorial/custom-display-driver.md
+      - Imperative style:
+           - Imperative drawing: imperative-style/imperative-drawing.md
+           - Visual modifiers: imperative-style/visual-modifiers.md
+           - Grid: imperative-style/grid.md
+      - Declaration style:
+           - Core concepts: declaration-style/core-concepts.md
+           - Behavioral modifiers: declaration-style/behavioral-modifiers.md
+           - Layout and focus: declaration-style/layout-and-focus.md
+           - Listboxes: declaration-style/listboxes.md
+      - Intermediate style:
+           - Custom usercontrols: intermediate-style/custom-user-controls.md
+           - Composite base: intermediate-style/composite-base.md
+           - Progressive optimization: intermediate-style/progressive_optimization.md
+      - Other:
+           - Fonts and pictograms: other/fonts-and-pictograms.md
 
   - API Reference:
       - Classes: eva-boxy/annotated.md

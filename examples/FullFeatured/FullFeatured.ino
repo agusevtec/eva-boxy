@@ -28,27 +28,30 @@
 using namespace eva;
 using namespace evab;
 
-class UIHomeForm : public KeyModifier<LayoutBase, KEY_LEFT, KEY_RIGHT> {
+class UIHomeForm : public KeyModifier<LayoutBase, KEY_LEFT, KEY_RIGHT>
+{
   FocusChain<KeyCatcher<InputButtonPicto, KEY_ENTER>> mMonitorButton;
   FocusChain<KeyCatcher<InputButtonPicto, KEY_ENTER>> mSettingsButton;
 
 public:
   UIHomeForm(IHandler *aOnMonitorHandler, IHandler *aOnSettingsHandler)
-    : mMonitorButton(this, aOnMonitorHandler, GalleryRemixicon32::PICTO_F243),
-      mSettingsButton(this, aOnSettingsHandler, GalleryRemixicon32::PICTO_F0E4) {
+      : mMonitorButton(this, aOnMonitorHandler, GalleryRemixicon32::PICTO_F243),
+        mSettingsButton(this, aOnSettingsHandler, GalleryRemixicon32::PICTO_F0E4)
+  {
   }
 
 private:
-  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    Grid grid(aScreen, aPos, aSize);
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+  {
+    Grid grid(aScreen, aPos, aSize, aIsFocused);
     grid.SliceRow(1).TextCenter(F("BOXY - DEMO"));
     grid.SliceRow(1).Clear();
 
     Grid row = grid.SliceRow(4);
     row.SliceCol(2).Clear();
-    row.SliceCol(4).Draw(&mMonitorButton, aIsFocused && IsFocused(&mMonitorButton));
+    row.SliceCol(4).Draw(mMonitorButton,  IsFocused(&mMonitorButton));
     row.SliceCol(4).Clear();
-    row.SliceCol(4).Draw(&mSettingsButton, aIsFocused && IsFocused(&mSettingsButton));
+    row.SliceCol(4).Draw(mSettingsButton, IsFocused(&mSettingsButton));
     row.Rest().Clear();
 
     grid.SliceRow(1).Clear();
@@ -56,39 +59,43 @@ private:
   }
 };
 
-class UIMonitoringForm : public ElementBase {
+class UIMonitoringForm : public ElementBase
+{
   IHandler *mLeaveHandler;
 
 public:
   UIMonitoringForm(IHandler *aLeaveHandler)
-    : mLeaveHandler(aLeaveHandler) {
+      : mLeaveHandler(aLeaveHandler)
+  {
   }
 
 private:
-  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+  {
     TitledLeftF<InputFloat> tempField(F("TEMERATURE"), 23);
     TitledLeftF<InputInt> humField(F("HUMIDITY"), 41);
 
-    Grid grid(aScreen, aPos, aSize);
+    Grid grid(aScreen, aPos, aSize, 0);
 
     Grid row = grid.SliceRow(3);
     row.SliceCol(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);
     row.SliceCol(1).Clear();
-    row.Rest().Draw(&tempField);
+    row.Rest().Draw(tempField);
 
     grid.SliceRow(2).Clear();
 
     row = grid.SliceRow(3);
     row.SliceCol(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);
     row.SliceCol(1).Clear();
-    row.Rest().Draw(&humField);
+    row.Rest().Draw(humField);
 
     grid.Rest().Clear();
   }
 
-  bool OnKey(Keys aKey) override {
+  bool OnKey(Keys aKey) override
+  {
     if (mLeaveHandler)
-      mLeaveHandler->invoke(this, { 0, 0 });
+      mLeaveHandler->invoke(this, {0, 0});
     return true;
   }
 };
@@ -97,111 +104,122 @@ static const char ITEM1_TEXT[] PROGMEM = "Item 1";
 static const char ITEM2_TEXT[] PROGMEM = "Item 2";
 static const char ITEM3_TEXT[] PROGMEM = "Item 3";
 
-class UISettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
-  FocusChain<KeyModifier<TitledLeftF<HorizontalScrollBar>, KEY_LEFT, KEY_RIGHT>> mItem1{ this, (const __FlashStringHelper *)ITEM1_TEXT };
-  FocusChain<KeyModifier<TitledLeftF<InputSelectorAlbum<AlbumOnOff>>, KEY_LEFT, KEY_RIGHT>> mItem2{ this, (const __FlashStringHelper *)ITEM2_TEXT };
-  FocusChain<KeyModifier<TitledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mItem3{ this, (const __FlashStringHelper *)ITEM3_TEXT, 100, 11, 100, 200 };
+class UISettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN>
+{
+  FocusChain<KeyModifier<TitledLeftF<HorizontalScrollBar>, KEY_LEFT, KEY_RIGHT>> mItem1{this, (const __FlashStringHelper *)ITEM1_TEXT};
+  FocusChain<KeyModifier<TitledLeftF<InputSelectorAlbum<AlbumOnOff>>, KEY_LEFT, KEY_RIGHT>> mItem2{this, (const __FlashStringHelper *)ITEM2_TEXT};
+  FocusChain<KeyModifier<TitledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mItem3{this, (const __FlashStringHelper *)ITEM3_TEXT, 100, 11, 100, 200};
   FocusChain<KeyCatcher<InputButton, KEY_RIGHT>> mSaveButton;
 
 public:
   UISettingsForm(IHandler *aOnSettingsSaved)
-    : mSaveButton(this, aOnSettingsSaved, F("SAVE")) {
+      : mSaveButton(this, aOnSettingsSaved, F("SAVE"))
+  {
   }
 
-  void Reset() {
+  void Reset()
+  {
     focusChild(&mItem1);
   }
 
 private:
-  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    Grid grid(aScreen, aPos, aSize);
-    grid.SliceRow(1).Draw(&mItem1, aIsFocused && IsFocused(&mItem1));
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+  {
+    Grid grid(aScreen, aPos, aSize, aIsFocused);
+    grid.SliceRow(1).Draw(mItem1,  IsFocused(&mItem1));
     grid.SliceRow(1).Clear();
-    grid.SliceRow(1).Draw(&mItem2, aIsFocused && IsFocused(&mItem2));
+    grid.SliceRow(1).Draw(mItem2,  IsFocused(&mItem2));
     grid.SliceRow(1).Clear();
-    grid.SliceRow(1).Draw(&mItem3, aIsFocused && IsFocused(&mItem3));
+    grid.SliceRow(1).Draw(mItem3,  IsFocused(&mItem3));
     grid.SliceRow(1).Clear();
-    grid.SliceRow(1).Draw(&mSaveButton, aIsFocused && IsFocused(&mSaveButton));
+    grid.SliceRow(1).Draw(mSaveButton,  IsFocused(&mSaveButton));
     grid.Rest().Clear();
   }
 };
 
-class UIGroundLayer : public CompositeBase {
-  UIHomeForm mUIHome{ &onGotoMonitoringHandler, &onGotoSettingsHandler };
-  UIMonitoringForm mUIMonitoring{ &onHomeHandler };
-  UISettingsForm mUISettingsForm{ &onHomeHandler };
+class UIGroundLayer : public CompositeBase
+{
+  UIHomeForm mUIHome{&onGotoMonitoringHandler, &onGotoSettingsHandler};
+  UIMonitoringForm mUIMonitoring{&onHomeHandler};
+  UISettingsForm mUISettingsForm{&onHomeHandler};
 
 public:
-  UIGroundLayer() {
+  UIGroundLayer()
+  {
     focusChild(&mUIHome);
   }
 
 private:
-  Handler<UIGroundLayer> onGotoMonitoringHandler{ this, &UIGroundLayer::onGotoMonitoring };
-  void onGotoMonitoring(void *aSender, CallbackInfo aCallbackInfo) {
+  Handler<UIGroundLayer> onGotoMonitoringHandler{this, &UIGroundLayer::onGotoMonitoring};
+  void onGotoMonitoring(void *aSender, CallbackInfo aCallbackInfo)
+  {
     focusChild(&mUIMonitoring);
   }
 
-  Handler<UIGroundLayer> onGotoSettingsHandler{ this, &UIGroundLayer::onGotoSettings };
-  void onGotoSettings(void *aSender, CallbackInfo aCallbackInfo) {
+  Handler<UIGroundLayer> onGotoSettingsHandler{this, &UIGroundLayer::onGotoSettings};
+  void onGotoSettings(void *aSender, CallbackInfo aCallbackInfo)
+  {
     mUISettingsForm.Reset();
     focusChild(&mUISettingsForm);
   }
 
-  Handler<UIGroundLayer> onHomeHandler{ this, &onBackHome };
-  void onBackHome(void *aSender, CallbackInfo aCallbackInfo) {
+  Handler<UIGroundLayer> onHomeHandler{this, &onBackHome};
+  void onBackHome(void *aSender, CallbackInfo aCallbackInfo)
+  {
     focusChild(&mUIHome);
   }
 
-  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
+  {
     if (IsFocused(&mUIHome))
       mUIHome.Draw(aScreen, aPos, aSize, aIsFocused);
-    else
-      mUIHome.Freeze();
 
     if (IsFocused(&mUIMonitoring))
       mUIMonitoring.Draw(aScreen, aPos, aSize, aIsFocused);
-    else
-      mUIMonitoring.Freeze();
+
     if (IsFocused(&mUISettingsForm))
       mUISettingsForm.Draw(aScreen, aPos, aSize, aIsFocused);
-    else
-      mUISettingsForm.Freeze();
   }
 
-  void freezer() override {
+  void freezer() override
+  {
     mUIHome.Freeze();
     mUIMonitoring.Freeze();
     mUISettingsForm.Freeze();
   }
 };
 
-const unsigned char gSimulateUser[14] = { KEY_RIGHT, KEY_LEFT, KEY_ENTER, KEY_ENTER, KEY_RIGHT, KEY_ENTER, KEY_RIGHT, KEY_DOWN, KEY_RIGHT, KEY_DOWN, KEY_RIGHT, KEY_DOWN, KEY_ENTER, KEY_LEFT };
+const unsigned char gSimulateUser[14] = {KEY_RIGHT, KEY_LEFT, KEY_ENTER, KEY_ENTER, KEY_RIGHT, KEY_ENTER, KEY_RIGHT, KEY_DOWN, KEY_RIGHT, KEY_DOWN, KEY_RIGHT, KEY_DOWN, KEY_ENTER, KEY_LEFT};
 unsigned char gSimulateUserIndex = 0;
 
-class App {
-  RepeatTimer repeatTimer{ new Handler<App>(this, &onRepeatTimer) };
+class App
+{
+  RepeatTimer repeatTimer{new Handler<App>(this, &onRepeatTimer)};
   UIGroundLayer mUIGroundLayer;
   // UISettingsForm mUIGroundLayer{ nullptr };
 
 public:
-  App() {
+  App()
+  {
     Boxy::Begin<ScreenSSD1306, Font8Narrow>(&mUIGroundLayer);
     repeatTimer.start(2000);
     // Boxy::Message(F("Information"), "started !");
   }
 
-  void onRepeatTimer(void *, CallbackInfo) {
+  void onRepeatTimer(void *, CallbackInfo)
+  {
     Boxy::Key(gSimulateUser[gSimulateUserIndex]);
     ++gSimulateUserIndex %= 14;
   }
 };
 
-void setup() {
+void setup()
+{
   Serial.begin(9600);
   static App app;
 }
 
-void loop() {
+void loop()
+{
   eva::tac();
 }

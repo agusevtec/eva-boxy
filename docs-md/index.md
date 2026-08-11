@@ -1,163 +1,97 @@
-# EVA Boxy Documentation
+## Introduction
 
-## Library Structure
+**EVA Boxy** is a lightweight C++ UI framework designed for resource-constrained embedded displays (OLED, monochrome LCDs) driven by physical keypads.
 
-EVA Boxy is a compact tile-based graphic framework designed for embedded systems with limited resources. The library follows the EVA (Extremely Versatile Architecture) ecosystem concept, providing a modular and efficient way to build user interfaces on microcontrollers.
+### Why EVA Boxy?
 
-### Core Concepts
+Historically, embedded developers were trapped in standard imperative display libraries. While simple, managing raw coordinates manually leads to fragile layout spaghetti code. Modern declarative frameworks solve this on the desktop, but literally copying their approach is completely unviable for resource-constrained microcontrollers — they rely on heavy class hierarchies, dynamic allocations, and virtual tables.
 
-#### Tile-Based Positioning
-- **Minimum positioning unit is a tile**
-- Each tile represents a single character cell or 8x8 pixel block
-- Coordinates are expressed in tile units (X, Y)
-- Screen sizes are measured in tiles (e.g., 16x8 for 128x64 pixel display)
+EVA Boxy breaks this limitation by leveraging the EVA approach.
 
-#### Architecture Layers
+Its defining architectural genotype is **compile-time decorator composition**, allowing you to include only the exact resources you need. Paired with deliberate functional boundaries — zero z-order, zero clipping buffers, and zero dynamic allocations — Boxy delivers pure, deterministic pixel execution.
 
-1. **Display Drivers Layer** - Hardware abstraction for various display types
-2. **Pencil Mode (Screen)** - Direct drawing operations on the screen
-3. **Stamp Mode (ElementBase)** - Reusable graphical elements with state management
-4. **Structured UI** - Composite elements and layout management
-5. **Keyboard Behavior** - Input handling and focus management
+EVA Boxy is optimized for text and symbol rendering on low-resolution displays, with optional pictogram support for icon-based interfaces.
 
-### Key Components
+### Architectural Styles
 
-#### Core Classes
+EVA Boxy scales cleanly depending on your task, performance budget, and architectural preferences:
 
-| Class | Purpose |
-|-------|---------|
-| `Screen` | Interface for screen operations (text, pictograms, clearing) |
-| `ScreenBase` | Base implementation of Screen with text rendering |
-| `ScreenPage8Base` | Base for page-oriented displays (8-pixel vertical strips) |
-| `ElementBase` | Base class for all UI elements with drawing and freezing |
-| `CompositeBase` | Container for multiple elements with focus management |
-| `Boxy` | Global library manager and entry point |
+#### 1. Primary Style: Declarative UI (Flagship)
 
-#### Coordinate System
+The primary way to use EVA Boxy. Build complex, highly maintainable interactive screens using a clean, expressive syntax. You assemble core data inputs (`InputInt`), behavioral modifiers (`KeyReactor`, `KeyCatcher`), and visual wrappers (`Labeled`) directly via C++ compile-time templates — getting modern UI code ergonomics without paying a runtime memory penalty:
 
 ```cpp
-struct Coor {
-    unsigned char X, Y;
-    Coor(int x = 0, int y = 0);
+class UserForm1 : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
+    FocusChain<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mInputField {this, &onValueChanged, 42};
+    FocusChain<KeyCatcher<InputButton, KEY_LEFT, KEY_RIGHT >> mSaveButton {this, &onSavePressed, "Save"};
+
+    Handler<UserForm1> onValueChanged {this, &UserForm1::onValueChanged};
+    void onValueChanged(void *aSender, CallbackInfo aInfo) {
+        Serial.println("Value Changed");
+    }
+
+    Handler<UserForm1> onSavePressed {this, &UserForm1::onSavePressed};
+    void onSavePressed(void *aSender, CallbackInfo aInfo) {
+        Serial.println("Parameter Saved");
+    }
+
+    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
+        Grid grid(aScreen, aPos, aSize, aIsFocused);
+        grid.SliceRow(1).Draw(mInputField, IsFocused(&mInputField));
+        grid.SliceRow(1).Clear();
+        grid.SliceRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
+        grid.Rest().Clear();
+    }
 };
 ```
 
-- Coordinates are 0-based
-- X ranges from 0 to screen width in tiles - 1
-- Y ranges from 0 to screen height in tiles - 1
+**Visual Representation:**
 
-### Basic Usage Pattern
+```
+┌───────────────────────────────────────────┐
+│                   42                    │  ← InputInt
+└───────────────────────────────────────────┘
+│                                           │  ← Empty row 
+┌───────────────────────────────────────────┐
+│                 (Save)                  │  ← InputButton
+└───────────────────────────────────────────┘
+│                                         │  ← Empty rest
+└───────────────────────────────────────────┘
+```
+
+**Navigation:**
+
+- `KEY_UP` / `KEY_DOWN` — navigate between fields (handled by `KeyModifier<LayoutBase>`)
+
+- `KEY_LEFT` / `KEY_RIGHT` — on InputInt → change value and triggers `onValueChanged`
+
+- `KEY_LEFT` / `KEY_RIGHT` — on button → triggers `onSavePressed`
+
+#### 2. Imperative Style (Fallback & Maximum Optimization)
+
+For developers who prefer direct, traditional control or need absolute minimal resources usage. Even in direct-to-screen mode, Boxy upgrades standard imperative code with a **Guaranteed Bounding Box Principle**: every visual element strictly owns, clears, and renders within its assigned rectangular area. No visual artifacts, no manual clear-screen hacks, plus integrated vector icons powered by Remixicon.
+
+Draw call explicitly defines its spatial boundaries using grid or pixel coordinates: `{X, Y}, {Width, Height}`
 
 ```cpp
-#include <evabBoxy.h>
-#include <evabScreenSSD1306.h>
-#include <evabFont8Compact.h>
-
-// Define your root element
-class MyRootElement : public ElementBase {
-protected:
-    void drawer(Screen* screen, Coor pos, Coor size, unsigned char focused) override {
-        screen->TextCenter(pos, size, "Hello World", focused);
-    }
-    void hider() override {}
-};
-
-void setup() {
-    MyRootElement root;
-    evab::Boxy::Begin<evab::ScreenSSD1306, evab::Font8Compact>(
-        &root,
-        800000L,  // I2C clock
-        64        // Display height in pixels
-    );
-}
-
-void loop() {
-    // Process keyboard events
-    if (buttonPressed) {
-        evab::Boxy::Key(KEY_ENTER);
-    }
-}
+screen.TextCenter({0, 1}, {16, 1}, "Size 1", 0); 
+screen.TextCenter({0, 3}, {16, 2}, "Size 2", 0); 
+screen.Picto({0, 5}, GalleryRemixicon16::PICTO_F243, 0);
 ```
 
-### File Structure
+#### 3. Intermediate Style (Contract-Based / Custom Components)
 
-```
-evabBoxy/
-├── Core/
-│   ├── evabBoxy.h/cpp          - Library entry point
-│   ├── evabCoor.h/cpp          - Coordinate system
-│   ├── evabKeys.h              - Key definitions
-│   └── evabScreen.h           - Screen interface
-├── Screens/
-│   ├── evabScreenBase.h/cpp    - Base screen implementation
-│   ├── evabScreenPage8Base.h/cpp - Page-based screen base
-│   ├── evabScreenSSD1306.h/cpp - OLED display driver
-│   ├── evabScreenPCD8544.h/cpp - Nokia 5110 driver
-│   ├── evabScreenLCD_I2C.h/cpp - I2C LCD driver
-│   ├── evabScreenKS0108.h/cpp  - KS0108 graphics driver
-│   ├── evabScreenSSH1106.h/cpp - SSH1106 OLED driver
-│   ├── evabScreenSerialPixel.h/cpp - Debug pixel display
-│   └── evabScreenSerialText.h/cpp - Debug text display
-├── Elements/
-│   ├── evabElementBase.h/cpp   - Base UI element
-│   ├── evabCompositeBase.h/cpp - Container element
-│   ├── evabInputInt.h/cpp      - Integer input
-│   ├── evabInputFloat.h/cpp    - Float input
-│   ├── evabInputButton.h/cpp   - Button element
-│   ├── evabInputPictogram.h    - Pictogram selector
-│   ├── evabInputStretchBar.h   - Progress/scroll bars
-│   ├── evabInputTextStretchBar.h - Text-based bars
-│   ├── evabListBox.h           - List container
-│   ├── evabLayoutPane.h/cpp    - Layout container (prototyping)
-│   └── evabLabeled.h           - Label modifier
-├── Fonts/
-│   ├── evabIFont.h             - Font interface
-│   ├── evabFont8Bold.h/cpp     - 8-pixel bold font
-│   ├── evabFont8Compact.h/cpp  - 8-pixel compact font
-│   └── evabFont8Thin.h/cpp     - 8-pixel thin font
-├── Albums/
-│   ├── evabAlbums.h/cpp      - Predefined pictogram sets
-│   └── evabAlbumsStretchy.h/cpp - Resizable bar Albums
-├── Behavior/
-│   ├── evabBehavior.h          - Key modifiers and reactors
-│   ├── evabWindowAlgorithms.h/cpp - Window scrolling algorithms
-│   └── evabSerializers.h/cpp   - State serialization
-└── Utilities/
-    ├── font2textdir.py         - Convert TTF to pseudographics
-    └── txtdir2charmap.py       - Convert text chars to C array
-```
+An advanced tier for building custom UI elements. It acts as the explicit optimization bridge: when compile-time declarative composition approaches resource limits, you can selectively refactor critical parts toward imperative execution.
 
-### Memory Considerations
+Thanks to EVA Boxy's clear internal contracts (drawing routines, and event handling), you can smoothly shift components down toward low-level imperative code — extracting maximum performance while preserving full integration with the higher-level focus and event propagation engine.
 
-- All coordinates use `unsigned char` (0-255) for compact storage
-- Element state is serialized into 16-bit integers
-- Font data stored in PROGMEM (flash memory)
-- Minimal RAM usage through static allocation
-- No dynamic memory allocation in core library
+Because of this complexity, the Intermediate Style is covered in detail in the final sections of this documentation.
 
-### Serialization
+### What EVA Boxy Provides
 
-The library uses compact serialization to store element state:
-
-```cpp
-// 16x8 screens (16 tiles wide, 8 tiles high)
-unsigned short Serialize(const Coor& pos, const Coor& size, bool isFocused);
-void Deserialize(unsigned short serialized, Coor& pos, Coor& size, bool& isFocused);
-```
-
-Bit packing:
-- Bit 0: Visibility
-- Bit 1: Focus state
-- Bits 2-5: X position (0-15)
-- Bits 6-8: Y position (0-7)
-- Bits 9-12: Width (1-16)
-- Bits 13-15: Height (1-8)
-
-## Next Steps
-
-- [Display Drivers](display-drivers.md) - Understanding screen initialization
-- [Pencil Mode](uc-paint.md) - Direct drawing with Screen interface
-- [Stamp Mode](uc-elements-stamps.md) - Reusable graphical elements
-- [Structured UI](uc-structured-ui.md) - Building composite interfaces
-- [Keyboard Behavior](keyboard-behavior.md) - Input handling and focus
-- [Custom Display Driver](custom-display-driver.md) - Creating custom screen drivers
+| Feature | Description |
+|---------|-------------|
+| Component Primitives | Extensible base elements designed for compile-time composition via EVA Core decorators. |
+| Out-of-the-Box Controls | A rich set of pre-built, production-ready interactive widgets (inputs, buttons, indicators). |
+| Form Management | Structured layout tools and contract-based base classes to construct complex custom screens cleanly. |
+| Hardware Agnostic | Seamless support for diverse displays driven by a ultra-minimal rendering contract (drawSymbol / drawSlice). |

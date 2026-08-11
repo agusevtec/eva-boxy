@@ -14,6 +14,7 @@ void ElementBase::redraw()
   Coor currentPos, currentSize;
   bool isFocused;
   screen->Deserialize(mSerialized, currentPos, currentSize, isFocused);
+  freezer();
   drawer(screen, currentPos, currentSize, isFocused);
 }
 
@@ -38,6 +39,7 @@ void ElementBase::Draw(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIs
     freezer();
     return;
   }
+  freezer();
   drawer(aScreen, aPos, aSize, aIsFocused);
   mSerialized = aScreen->Serialize(aPos, aSize, aIsFocused);
 }

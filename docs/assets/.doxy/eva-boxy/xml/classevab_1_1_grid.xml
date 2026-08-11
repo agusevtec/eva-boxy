@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="149" column="14" bodyfile="src/evabGrid.h" bodystart="149" bodyend="-1"/>
+        <location file="src/evabGrid.h" line="142" column="14" bodyfile="src/evabGrid.h" bodystart="142" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_grid_1aa8b617dc4491e033211ed0cd85b05b76" prot="private" static="no" mutable="no">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -32,7 +32,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="150" column="14" bodyfile="src/evabGrid.h" bodystart="150" bodyend="-1"/>
+        <location file="src/evabGrid.h" line="143" column="14" bodyfile="src/evabGrid.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_grid_1a29ee14aa829ecc24b2a76501649eaa94" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::Grid::mIsFocused</definition>
+        <argsstring></argsstring>
+        <name>mIsFocused</name>
+        <qualifiedname>evab::Grid::mIsFocused</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="144" column="23" bodyfile="src/evabGrid.h" bodystart="144" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_grid_1afe665007c97eafedf5d15840e9ec7a79" prot="private" static="no" mutable="no">
         <type>const <ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
@@ -47,14 +61,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="151" column="22" bodyfile="src/evabGrid.h" bodystart="151" bodyend="-1"/>
+        <location file="src/evabGrid.h" line="145" column="22" bodyfile="src/evabGrid.h" bodystart="145" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_grid_1a6724c87c996e234a06039f8a65949ef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>evab::Grid::Grid</definition>
-        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize)</argsstring>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)</argsstring>
         <name>Grid</name>
         <qualifiedname>evab::Grid::Grid</qualifiedname>
         <param>
@@ -68,6 +82,10 @@
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
         </param>
         <briefdescription>
 <para>Constructs a <ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> for a specific area. </para>
@@ -105,7 +123,7 @@
         <location file="src/evabGrid.h" line="34" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_grid_1a9cdd9b56bf792047f6e3139753a4e041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" kindref="member">Grid</ref></type>
+        <type><ref refid="classevab_1_1_grid_1a6724c87c996e234a06039f8a65949ef8" kindref="member">Grid</ref></type>
         <definition>Grid evab::Grid::SliceRow</definition>
         <argsstring>(unsigned char aHeight=0)</argsstring>
         <name>SliceRow</name>
@@ -137,7 +155,7 @@
         <location file="src/evabGrid.h" line="42" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_grid_1a4c44117cf974c9786044bd91519e940b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" kindref="member">Grid</ref></type>
+        <type><ref refid="classevab_1_1_grid_1a6724c87c996e234a06039f8a65949ef8" kindref="member">Grid</ref></type>
         <definition>Grid evab::Grid::SliceCol</definition>
         <argsstring>(unsigned char aWidth=0)</argsstring>
         <name>SliceCol</name>
@@ -169,7 +187,7 @@
         <location file="src/evabGrid.h" line="50" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_grid_1aadde199b2b5d0a435ab425d8c8a12a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" kindref="member">Grid</ref> &amp;</type>
+        <type><ref refid="classevab_1_1_grid_1a6724c87c996e234a06039f8a65949ef8" kindref="member">Grid</ref> &amp;</type>
         <definition>Grid &amp; evab::Grid::Rest</definition>
         <argsstring>()</argsstring>
         <name>Rest</name>
@@ -186,14 +204,14 @@
         </inbodydescription>
         <location file="src/evabGrid.h" line="57" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_grid_1afa6c51abd57f4042955d4a88321d5a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_grid_1a1037c735a5c2b40437423d541fbe4e31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::Grid::Draw</definition>
-        <argsstring>(ElementBase *aElement, unsigned char aIsFocused=0)</argsstring>
+        <argsstring>(ElementBase &amp;aElement, unsigned char aIsFocused=0)</argsstring>
         <name>Draw</name>
         <qualifiedname>evab::Grid::Draw</qualifiedname>
         <param>
-          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
+          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> &amp;</type>
           <declname>aElement</declname>
         </param>
         <param>
@@ -228,7 +246,7 @@
         </inbodydescription>
         <location file="src/evabGrid.h" line="65" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_grid_1a3d61965bcc004248b6594a8156503822" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_grid_1a08a788d8582d5145cdc57020d9509f99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename TAlign</type>
@@ -239,7 +257,7 @@
         </templateparamlist>
         <type>void</type>
         <definition>void evab::Grid::Text</definition>
-        <argsstring>(TText aText, unsigned char aColor=0)</argsstring>
+        <argsstring>(TText aText, unsigned char aIsFocused=0)</argsstring>
         <name>Text</name>
         <qualifiedname>evab::Grid::Text</qualifiedname>
         <param>
@@ -248,7 +266,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aColor</declname>
+          <declname>aIsFocused</declname>
           <defval>0</defval>
         </param>
         <briefdescription>
@@ -282,7 +300,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aColor</parametername>
+<parametername>aIsFocused</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Color/inversion flag </para>
@@ -295,7 +313,7 @@
         </inbodydescription>
         <location file="src/evabGrid.h" line="76" column="14" bodyfile="src/evabGrid.h" bodystart="76" bodyend="80"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_grid_1a4811bf26337113b8a408875abe71e079" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_grid_1af48a038c59176b66be18ef252a526667" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -303,7 +321,7 @@
         </templateparamlist>
         <type>void</type>
         <definition>void evab::Grid::TextLeft</definition>
-        <argsstring>(T aText, unsigned char aColor=0)</argsstring>
+        <argsstring>(T aText, unsigned char aIsFocused=0)</argsstring>
         <name>TextLeft</name>
         <qualifiedname>evab::Grid::TextLeft</qualifiedname>
         <param>
@@ -312,7 +330,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aColor</declname>
+          <declname>aIsFocused</declname>
           <defval>0</defval>
         </param>
         <briefdescription>
@@ -324,7 +342,7 @@
         </inbodydescription>
         <location file="src/evabGrid.h" line="86" column="14" bodyfile="src/evabGrid.h" bodystart="86" bodyend="90"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_grid_1af913e3e9c82bd407f77e72dc6aee5884" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_grid_1a8cf0de3cea91b79235f8ab8d0b62d8d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -332,7 +350,7 @@
         </templateparamlist>
         <type>void</type>
         <definition>void evab::Grid::TextCenter</definition>
-        <argsstring>(T aText, unsigned char aColor=0)</argsstring>
+        <argsstring>(T aText, unsigned char aIsFocused=0)</argsstring>
         <name>TextCenter</name>
         <qualifiedname>evab::Grid::TextCenter</qualifiedname>
         <param>
@@ -341,7 +359,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aColor</declname>
+          <declname>aIsFocused</declname>
           <defval>0</defval>
         </param>
         <briefdescription>
@@ -353,7 +371,7 @@
         </inbodydescription>
         <location file="src/evabGrid.h" line="96" column="14" bodyfile="src/evabGrid.h" bodystart="96" bodyend="100"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_grid_1ae9e362a4b3272230c3a70fad964f6097" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_grid_1a529f18d3039c424b96fecfae858a5fb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
@@ -361,7 +379,7 @@
         </templateparamlist>
         <type>void</type>
         <definition>void evab::Grid::TextRight</definition>
-        <argsstring>(T aText, unsigned char aColor=0)</argsstring>
+        <argsstring>(T aText, unsigned char aIsFocused=0)</argsstring>
         <name>TextRight</name>
         <qualifiedname>evab::Grid::TextRight</qualifiedname>
         <param>
@@ -370,7 +388,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aColor</declname>
+          <declname>aIsFocused</declname>
           <defval>0</defval>
         </param>
         <briefdescription>
@@ -382,10 +400,10 @@
         </inbodydescription>
         <location file="src/evabGrid.h" line="106" column="14" bodyfile="src/evabGrid.h" bodystart="106" bodyend="110"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_grid_1a5a7ba3fc18befe626da750004c8c886b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_grid_1ab848549b294f84e3f241300555249d50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::Grid::Picto</definition>
-        <argsstring>(const unsigned char *aPictogram, unsigned char aColor=0)</argsstring>
+        <argsstring>(const unsigned char *aPictogram, unsigned char aIsFocused=0)</argsstring>
         <name>Picto</name>
         <qualifiedname>evab::Grid::Picto</qualifiedname>
         <param>
@@ -394,7 +412,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aColor</declname>
+          <declname>aIsFocused</declname>
           <defval>0</defval>
         </param>
         <briefdescription>
@@ -411,7 +429,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aColor</parametername>
+<parametername>aIsFocused</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Color/inversion flag </para>
@@ -422,14 +440,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="118" column="14" bodyfile="src/evabGrid.h" bodystart="118" bodyend="122"/>
+        <location file="src/evabGrid.h" line="118" column="14"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_grid_1a18c93524c7f9f9d8ee24d5142c69a619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_grid_1a848c5e918a83fc49eab72cfb63c8447f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::Grid::Clear</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(unsigned char aIsFocused=0)</argsstring>
         <name>Clear</name>
         <qualifiedname>evab::Grid::Clear</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
         <briefdescription>
 <para>Clears the current cell area. </para>
         </briefdescription>
@@ -437,7 +460,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="127" column="14" bodyfile="src/evabGrid.h" bodystart="127" bodyend="131"/>
+        <location file="src/evabGrid.h" line="124" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -455,7 +478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="138" column="14" bodyfile="src/evabGrid.h" bodystart="138" bodyend="138"/>
+        <location file="src/evabGrid.h" line="131" column="14" bodyfile="src/evabGrid.h" bodystart="131" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -473,7 +496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="145" column="14"/>
+        <location file="src/evabGrid.h" line="138" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -481,31 +504,32 @@
     </briefdescription>
     <detaileddescription>
 <para><ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> provides a fluent interface for organizing UI elements in a grid. Each <ref refid="classevab_1_1_grid_1a9cdd9b56bf792047f6e3139753a4e041" kindref="member">SliceRow()</ref>/SliceCol() returns a new <ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> representing the cell.</para>
-<para><programlisting><codeline><highlight class="normal"><ref refid="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" kindref="member">Grid</ref><sp/>grid({0,0},<sp/>{16,8});</highlight></codeline>
+<para><programlisting><codeline><highlight class="normal"><ref refid="classevab_1_1_grid_1a6724c87c996e234a06039f8a65949ef8" kindref="member">Grid</ref><sp/>grid({0,0},<sp/>{16,8});</highlight></codeline>
 <codeline><highlight class="normal">grid.SliceRow(2).Draw(element1);</highlight></codeline>
 <codeline><highlight class="normal">grid.SliceRow(2).SliceCol(2).Draw(element2);</highlight></codeline>
 <codeline><highlight class="normal">grid.SliceRow(2).SliceCol(2).Clear();</highlight></codeline>
 <codeline><highlight class="normal">grid.Rest().Clear();</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="src/evabGrid.h" line="24" column="5" bodyfile="src/evabGrid.h" bodystart="25" bodyend="152"/>
+    <location file="src/evabGrid.h" line="24" column="5" bodyfile="src/evabGrid.h" bodystart="25" bodyend="146"/>
     <listofallmembers>
-      <member refid="classevab_1_1_grid_1a18c93524c7f9f9d8ee24d5142c69a619" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Clear</name></member>
-      <member refid="classevab_1_1_grid_1afa6c51abd57f4042955d4a88321d5a49" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_grid_1a848c5e918a83fc49eab72cfb63c8447f" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_grid_1a1037c735a5c2b40437423d541fbe4e31" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Draw</name></member>
       <member refid="classevab_1_1_grid_1a2d87d86fcd4c3f0ab51362ae1bd3f8f7" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>GetPos</name></member>
       <member refid="classevab_1_1_grid_1a3b9cb78f99b1b60246df9da05b82daec" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>GetSize</name></member>
-      <member refid="classevab_1_1_grid_1a5df39df561793768b79eb254b5644c9e" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Grid</name></member>
+      <member refid="classevab_1_1_grid_1a6724c87c996e234a06039f8a65949ef8" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Grid</name></member>
       <member refid="classevab_1_1_grid_1aa8b617dc4491e033211ed0cd85b05b76" prot="private" virt="non-virtual"><scope>evab::Grid</scope><name>mBottomRight</name></member>
+      <member refid="classevab_1_1_grid_1a29ee14aa829ecc24b2a76501649eaa94" prot="private" virt="non-virtual"><scope>evab::Grid</scope><name>mIsFocused</name></member>
       <member refid="classevab_1_1_grid_1afe665007c97eafedf5d15840e9ec7a79" prot="private" virt="non-virtual"><scope>evab::Grid</scope><name>mScreen</name></member>
       <member refid="classevab_1_1_grid_1a5320341c603411b1193587686bca00fa" prot="private" virt="non-virtual"><scope>evab::Grid</scope><name>mTopLeft</name></member>
-      <member refid="classevab_1_1_grid_1a5a7ba3fc18befe626da750004c8c886b" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_grid_1ab848549b294f84e3f241300555249d50" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Picto</name></member>
       <member refid="classevab_1_1_grid_1aadde199b2b5d0a435ab425d8c8a12a15" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Rest</name></member>
       <member refid="classevab_1_1_grid_1a4c44117cf974c9786044bd91519e940b" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>SliceCol</name></member>
       <member refid="classevab_1_1_grid_1a9cdd9b56bf792047f6e3139753a4e041" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>SliceRow</name></member>
-      <member refid="classevab_1_1_grid_1a3d61965bcc004248b6594a8156503822" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Text</name></member>
-      <member refid="classevab_1_1_grid_1af913e3e9c82bd407f77e72dc6aee5884" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>TextCenter</name></member>
-      <member refid="classevab_1_1_grid_1a4811bf26337113b8a408875abe71e079" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>TextLeft</name></member>
-      <member refid="classevab_1_1_grid_1ae9e362a4b3272230c3a70fad964f6097" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>TextRight</name></member>
+      <member refid="classevab_1_1_grid_1a08a788d8582d5145cdc57020d9509f99" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>Text</name></member>
+      <member refid="classevab_1_1_grid_1a8cf0de3cea91b79235f8ab8d0b62d8d0" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_grid_1af48a038c59176b66be18ef252a526667" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_grid_1a529f18d3039c424b96fecfae858a5fb8" prot="public" virt="non-virtual"><scope>evab::Grid</scope><name>TextRight</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

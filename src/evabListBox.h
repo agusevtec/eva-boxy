@@ -134,7 +134,6 @@ namespace evab
       TWindowAlgorithm::setWindowSize(aSize.Y / mItemHeight);
       unsigned char visibleElementsCount = 0;
       signed char selected = TWindowAlgorithm::Selected();
-      freezer();
       for (int i = 0; i < TWindowAlgorithm::Count(); i++)
       {
         int offset = TWindowAlgorithm::indexInWindow(i) * mItemHeight;

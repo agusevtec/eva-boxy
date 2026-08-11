@@ -20,7 +20,7 @@ namespace evab
     class Grid
     {
     public:
-        Grid(Screen *aScreen, Coor aPos, Coor aSize);
+        Grid(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
         Grid SliceRow(unsigned char aHeight = 0);
 
@@ -28,47 +28,40 @@ namespace evab
 
         Grid &Rest();
 
-        void Draw(ElementBase *aElement, unsigned char aIsFocused = 0);
+        void Draw(ElementBase &aElement, unsigned char aIsFocused = 0);
 
         template <typename TAlign, typename TText>
-        void Text(TText aText, unsigned char aColor = 0)
+        void Text(TText aText, unsigned char aIsFocused = 0)
         {
             if (mScreen)
-                mScreen->Text<TAlign>(mTopLeft, GetSize(), aText, aColor);
+                mScreen->Text<TAlign>(mTopLeft, GetSize(), aText, aIsFocused);
         }
 
         template <typename T>
-        void TextLeft(T aText, unsigned char aColor = 0)
+        void TextLeft(T aText, unsigned char aIsFocused = 0)
         {
             if (mScreen)
-                mScreen->TextLeft(mTopLeft, GetSize(), aText, aColor);
+                mScreen->TextLeft(mTopLeft, GetSize(), aText, mIsFocused && aIsFocused);
         }
 
         template <typename T>
-        void TextCenter(T aText, unsigned char aColor = 0)
+        void TextCenter(T aText, unsigned char aIsFocused = 0)
         {
             if (mScreen)
-                mScreen->TextCenter(mTopLeft, GetSize(), aText, aColor);
+                mScreen->TextCenter(mTopLeft, GetSize(), aText, mIsFocused && aIsFocused);
         }
 
         template <typename T>
-        void TextRight(T aText, unsigned char aColor = 0)
+        void TextRight(T aText, unsigned char aIsFocused = 0)
         {
             if (mScreen)
-                mScreen->TextRight(mTopLeft, GetSize(), aText, aColor);
+                mScreen->TextRight(mTopLeft, GetSize(), aText, mIsFocused && aIsFocused);
         }
 
-        void Picto(const unsigned char *aPictogram, unsigned char aColor = 0)
-        {
-            if (mScreen)
-                mScreen->Picto(mTopLeft, aPictogram, aColor);
-        }
+        void Picto(const unsigned char *aPictogram, unsigned char aIsFocused = 0);
 
-        void Clear()
-        {
-            if (mScreen)
-                mScreen->Clear(mTopLeft, GetSize(), 0);
-        }
+
+        void Clear(unsigned char aIsFocused = 0);
 
         Coor GetPos() const { return mTopLeft; }
 
@@ -78,6 +71,7 @@ namespace evab
     private:
         Coor mTopLeft;         
         Coor mBottomRight;     
+        unsigned char mIsFocused;
         const Screen *mScreen; 
     };
 

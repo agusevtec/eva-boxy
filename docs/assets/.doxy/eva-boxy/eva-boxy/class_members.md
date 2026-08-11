@@ -120,6 +120,7 @@
 * **mFocusedChild** ([**evab::CompositeBase**](classevab_1_1_composite_base.md), [**evab::LayoutBase**](classevab_1_1_layout_base.md))
 * **mSerialized** ([**evab::ElementBase**](classevab_1_1_element_base.md))
 * **mBottomRight** ([**evab::Grid**](classevab_1_1_grid.md))
+* **mIsFocused** ([**evab::Grid**](classevab_1_1_grid.md))
 * **mTopLeft** ([**evab::Grid**](classevab_1_1_grid.md))
 * **mCurrentFrame** ([**evab::InputAnimation**](classevab_1_1_input_animation.md))
 * **mLastFrameTime** ([**evab::InputAnimation**](classevab_1_1_input_animation.md))

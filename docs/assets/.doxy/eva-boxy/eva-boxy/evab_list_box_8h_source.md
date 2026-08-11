@@ -42,6 +42,13 @@ namespace evab
       redraw();
     }
 
+    void SetItems(ElementBase *aItems[], unsigned char aSize)
+    {
+      mItems = aItems;
+      TWindowAlgorithm::setCount(aSize);
+      redraw();
+    }
+
     void SetItemHeight(unsigned char aItemHeight)
     {
       mItemHeight = aItemHeight;
@@ -88,7 +95,6 @@ namespace evab
       TWindowAlgorithm::setWindowSize(aSize.Y / mItemHeight);
       unsigned char visibleElementsCount = 0;
       signed char selected = TWindowAlgorithm::Selected();
-      freezer();
       for (int i = 0; i < TWindowAlgorithm::Count(); i++)
       {
         int offset = TWindowAlgorithm::indexInWindow(i) * mItemHeight;
