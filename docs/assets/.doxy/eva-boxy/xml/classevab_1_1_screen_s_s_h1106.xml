@@ -210,7 +210,7 @@
       <memberdef kind="function" id="classevab_1_1_screen_s_s_h1106_1ae8bb14f808b9653162a341813e491c21" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void evab::ScreenSSH1106::drawVerticalSlice</definition>
-        <argsstring>(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) override</argsstring>
+        <argsstring>(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice) override</argsstring>
         <name>drawVerticalSlice</name>
         <qualifiedname>evab::ScreenSSH1106::drawVerticalSlice</qualifiedname>
         <reimplements refid="classevab_1_1_screen_page8_base_1adf878cfb7d28984df823179ee872477d">drawVerticalSlice</reimplements>
@@ -220,7 +220,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aCutColumn</declname>
+          <declname>aCutColsumn</declname>
         </param>
         <param>
           <type>unsigned char</type>
@@ -240,7 +240,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aCutColumn</parametername>
+<parametername>aCutColsumn</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Column within the tile (0-7) </para>

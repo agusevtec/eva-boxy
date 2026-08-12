@@ -44,18 +44,18 @@ private:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
   {
     BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
-    rest.CutRow(1).TextCenter(F("BOXY - DEMO"));
-    rest.CutRow(1).Clear();
+    rest.CutRows(1).TextCenter(F("BOXY - DEMO"));
+    rest.CutRows(1).Clear();
 
-    BoxyRest row = rest.CutRow(4);
-    row.CutCol(2).Clear();
-    row.CutCol(4).Draw(mMonitorButton,  IsFocused(&mMonitorButton));
-    row.CutCol(4).Clear();
-    row.CutCol(4).Draw(mSettingsButton, IsFocused(&mSettingsButton));
+    BoxyRest row = rest.CutRows(4);
+    row.CutCols(2).Clear();
+    row.CutCols(4).Draw(mMonitorButton,  IsFocused(&mMonitorButton));
+    row.CutCols(4).Clear();
+    row.CutCols(4).Draw(mSettingsButton, IsFocused(&mSettingsButton));
     row.Clear();
 
-    rest.CutRow(1).Clear();
-    rest.CutRow(1).TextCenter(IsFocused(&mMonitorButton) ? F("CLIMAT") : F("SETTINGS"));
+    rest.CutRows(1).Clear();
+    rest.CutRows(1).TextCenter(IsFocused(&mMonitorButton) ? F("CLIMAT") : F("SETTINGS"));
   }
 };
 
@@ -77,16 +77,16 @@ private:
 
     BoxyRest rest(aScreen, aPos, aSize, 0);
 
-    BoxyRest row = rest.CutRow(3);
-    row.CutCol(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);
-    row.CutCol(1).Clear();
+    BoxyRest row = rest.CutRows(3);
+    row.CutCols(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);
+    row.CutCols(1).Clear();
     row.Rest().Draw(tempField);
 
-    rest.CutRow(2).Clear();
+    rest.CutRows(2).Clear();
 
-    row = rest.CutRow(3);
-    row.CutCol(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);
-    row.CutCol(1).Clear();
+    row = rest.CutRows(3);
+    row.CutCols(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);
+    row.CutCols(1).Clear();
     row.Rest().Draw(humField);
 
     rest.Clear();
@@ -126,13 +126,13 @@ private:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
   {
     BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
-    rest.CutRow(1).Draw(mItem1,  IsFocused(&mItem1));
-    rest.CutRow(1).Clear();
-    rest.CutRow(1).Draw(mItem2,  IsFocused(&mItem2));
-    rest.CutRow(1).Clear();
-    rest.CutRow(1).Draw(mItem3,  IsFocused(&mItem3));
-    rest.CutRow(1).Clear();
-    rest.CutRow(1).Draw(mSaveButton,  IsFocused(&mSaveButton));
+    rest.CutRows(1).Draw(mItem1,  IsFocused(&mItem1));
+    rest.CutRows(1).Clear();
+    rest.CutRows(1).Draw(mItem2,  IsFocused(&mItem2));
+    rest.CutRows(1).Clear();
+    rest.CutRows(1).Draw(mItem3,  IsFocused(&mItem3));
+    rest.CutRows(1).Clear();
+    rest.CutRows(1).Draw(mSaveButton,  IsFocused(&mSaveButton));
     rest.Clear();
   }
 };

@@ -73,9 +73,9 @@ public:
         // BoxyRest covers and manages the total allocated area
         BoxyRest rest(aScreen, aPos, aSize);
 
-        rest.CutRow(1).Draw(&mField1,  aIsFocused && IsFocused(&mField1));
-        rest.CutRow(1).Draw(&mField2,  aIsFocused && IsFocused(&mField2));
-        rest.CutRow(1).Draw(&mSaveBtn, aIsFocused && IsFocused(&mSaveBtn));
+        rest.CutRows(1).Draw(&mField1,  aIsFocused && IsFocused(&mField1));
+        rest.CutRows(1).Draw(&mField2,  aIsFocused && IsFocused(&mField2));
+        rest.CutRows(1).Draw(&mSaveBtn, aIsFocused && IsFocused(&mSaveBtn));
         
         // Clear remaining unallocated pixels in the area
         rest.Clear();

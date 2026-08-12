@@ -13,8 +13,8 @@
 ## c
 
 * **Clear** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md), [**evab::Screen**](classevab_1_1_screen.md), [**evab::ScreenSerialText**](classevab_1_1_screen_serial_text.md))
-* **CutCol** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
-* **CutRow** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
+* **CutCols** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
+* **CutRows** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
 * **Coor** ([**evab::Coor**](structevab_1_1_coor.md))
 * **CalculateResolution** ([**evab::HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md), [**evab::HorizontalTilesetPolicy**](structevab_1_1_horizontal_tileset_policy.md), [**evab::VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md), [**evab::VerticalTilesetPolicy**](structevab_1_1_vertical_tileset_policy.md))
 * **CalculateTotalBlocks** ([**evab::HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md), [**evab::HorizontalTilesetPolicy**](structevab_1_1_horizontal_tileset_policy.md), [**evab::VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md), [**evab::VerticalTilesetPolicy**](structevab_1_1_vertical_tileset_policy.md))

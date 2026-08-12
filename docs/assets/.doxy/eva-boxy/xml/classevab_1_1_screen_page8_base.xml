@@ -181,7 +181,7 @@
       <memberdef kind="function" id="classevab_1_1_screen_page8_base_1adf878cfb7d28984df823179ee872477d" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void evab::ScreenPage8Base::drawVerticalSlice</definition>
-        <argsstring>(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)=0</argsstring>
+        <argsstring>(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice)=0</argsstring>
         <name>drawVerticalSlice</name>
         <qualifiedname>evab::ScreenPage8Base::drawVerticalSlice</qualifiedname>
         <reimplementedby refid="classevab_1_1_screen_k_s0108_1a56eff5d3a8a0453ce94d5932b25c9530">drawVerticalSlice</reimplementedby>
@@ -195,7 +195,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aCutColumn</declname>
+          <declname>aCutColsumn</declname>
         </param>
         <param>
           <type>unsigned char</type>
@@ -215,7 +215,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aCutColumn</parametername>
+<parametername>aCutColsumn</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Column within the tile (0-7) </para>

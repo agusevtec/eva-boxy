@@ -1044,7 +1044,7 @@
   <a href="#function-cutcol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function CutCol
+        function CutCols
       
     </span>
   </a>
@@ -1055,7 +1055,7 @@
   <a href="#function-cutrow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function CutRow
+        function CutRows
       
     </span>
   </a>
@@ -1211,11 +1211,11 @@
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./#function-boxyrest"><strong>BoxyRest</strong></a></td>
-<td style="text-align: left;"><a href="#function-cutcol"><strong>CutCol</strong></a> (unsigned char aWidth=0) <br><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next column.</em></td>
+<td style="text-align: left;"><a href="#function-cutcol"><strong>CutCols</strong></a> (unsigned char aWidth=0) <br><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next column.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./#function-boxyrest"><strong>BoxyRest</strong></a></td>
-<td style="text-align: left;"><a href="#function-cutrow"><strong>CutRow</strong></a> (unsigned char aHeight=0) <br><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next row.</em></td>
+<td style="text-align: left;"><a href="#function-cutrow"><strong>CutRows</strong></a> (unsigned char aHeight=0) <br><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next row.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -1256,11 +1256,11 @@
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
-<p><a href="./"><strong>BoxyRest</strong></a> provides a fluent interface for organizing UI elements in a rest. Each <a href="./#function-cutrow"><strong>CutRow()</strong></a>/CutCol() returns a new <a href="./"><strong>BoxyRest</strong></a> representing the cell.</p>
+<p><a href="./"><strong>BoxyRest</strong></a> provides a fluent interface for organizing UI elements in a rest. Each <a href="./#function-cutrow"><strong>CutRows()</strong></a>/CutCols() returns a new <a href="./"><strong>BoxyRest</strong></a> representing the cell.</p>
 <div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="nf">rest</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">});</span>
-<span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">element1</span><span class="p">);</span>
-<span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">CutCol</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">element2</span><span class="p">);</span>
-<span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">CutCol</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Clear</span><span class="p">();</span>
+<span class="n">rest</span><span class="p">.</span><span class="n">CutRows</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">element1</span><span class="p">);</span>
+<span class="n">rest</span><span class="p">.</span><span class="n">CutRows</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">CutCols</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">element2</span><span class="p">);</span>
+<span class="n">rest</span><span class="p">.</span><span class="n">CutRows</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">CutCols</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Clear</span><span class="p">();</span>
 <span class="n">rest</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
 </code></pre></div>
 
@@ -1292,9 +1292,9 @@
 
 <hr>
 
-<h3 id="function-cutcol">function CutCol<a class="headerlink" href="#function-cutcol" title="Permanent link">&para;</a></h3>
+<h3 id="function-cutcol">function CutCols<a class="headerlink" href="#function-cutcol" title="Permanent link">&para;</a></h3>
 <p><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next column.</em></p>
-<div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">BoxyRest</span><span class="o">::</span><span class="n">CutCol</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">BoxyRest</span><span class="o">::</span><span class="n">CutCols</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aWidth</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
@@ -1307,9 +1307,9 @@
 <p><a href="./"><strong>BoxyRest</strong></a> New rest representing the column </p>
 <hr>
 
-<h3 id="function-cutrow">function CutRow<a class="headerlink" href="#function-cutrow" title="Permanent link">&para;</a></h3>
+<h3 id="function-cutrow">function CutRows<a class="headerlink" href="#function-cutrow" title="Permanent link">&para;</a></h3>
 <p><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next row.</em></p>
-<div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">BoxyRest</span><span class="o">::</span><span class="n">CutRow</span><span class="w"> </span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">BoxyRest</span><span class="o">::</span><span class="n">CutRows</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aHeight</span><span class="o">=</span><span class="mi">0</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>

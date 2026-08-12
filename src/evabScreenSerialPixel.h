@@ -62,10 +62,10 @@ namespace evab
          * @brief Draws a vertical slice in the pixel buffer
          * 
          * @param aPosition Position on screen
-         * @param aCutColumn Column within the tile (0-7)
+         * @param aCutColsumn Column within the tile (0-7)
          * @param aSlice Bitmap data for the slice
          */
-        void drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) override;
+        void drawVerticalSlice(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice) override;
 
     private:
         uint8_t mBuffer[1024]; // 8 pages * 128 bytes = 1024 bytes

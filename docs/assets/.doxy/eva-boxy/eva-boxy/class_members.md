@@ -14,8 +14,8 @@
 
 * **Count** ([**evab::AlbumBattery**](classevab_1_1_album_battery.md), [**evab::AlbumFan**](classevab_1_1_album_fan.md), [**evab::AlbumLamp**](classevab_1_1_album_lamp.md), [**evab::AlbumOnOff**](classevab_1_1_album_on_off.md), [**evab::AlbumProgress**](classevab_1_1_album_progress.md), [**evab::AlbumRainbowmeter**](classevab_1_1_album_rainbowmeter.md), [**evab::AlbumRoundmeter**](classevab_1_1_album_roundmeter.md), [**evab::AlbumSignal**](classevab_1_1_album_signal.md), [**evab::AlbumSpeaker**](classevab_1_1_album_speaker.md), [**evab::InputAnimationPx**](classevab_1_1_input_animation_px.md), [**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md), [**evab::InputIntDiscrete**](classevab_1_1_input_int_discrete.md), [**evab::InputSelectorPx**](classevab_1_1_input_selector_px.md), [**evab::WindowAlgorithmBase**](classevab_1_1_window_algorithm_base.md))
 * **Clear** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md), [**evab::Screen**](classevab_1_1_screen.md), [**evab::ScreenSerialText**](classevab_1_1_screen_serial_text.md))
-* **CutCol** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
-* **CutRow** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
+* **CutCols** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
+* **CutRows** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
 * **Coor** ([**evab::Coor**](structevab_1_1_coor.md))
 * **CalculateResolution** ([**evab::HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md), [**evab::HorizontalTilesetPolicy**](structevab_1_1_horizontal_tileset_policy.md), [**evab::VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md), [**evab::VerticalTilesetPolicy**](structevab_1_1_vertical_tileset_policy.md))
 * **CalculateTotalBlocks** ([**evab::HorizontalTextPolicy**](structevab_1_1_horizontal_text_policy.md), [**evab::HorizontalTilesetPolicy**](structevab_1_1_horizontal_tileset_policy.md), [**evab::VerticalTextPolicy**](structevab_1_1_vertical_text_policy.md), [**evab::VerticalTilesetPolicy**](structevab_1_1_vertical_tileset_policy.md))

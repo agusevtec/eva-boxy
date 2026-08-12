@@ -100,14 +100,14 @@ const unsigned char Font8Narrow::kCharmap[][7] PROGMEM = {
     {0x10, 0x08, 0x08, 0x10, 0x20, 0x20, 0x10}  // '~'
 };
 
-unsigned char Font8Narrow::GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const
+unsigned char Font8Narrow::GetVerticalSlice(char aCharcode, unsigned char aCutColsumn) const
 {
     {
         if (aCharcode < 32 || aCharcode > 126)
             aCharcode = 32;
 
-        if (aCutColumn > 6)
+        if (aCutColsumn > 6)
             return 0x00;
-        return pgm_read_byte(&kCharmap[aCharcode - 32][aCutColumn]);
+        return pgm_read_byte(&kCharmap[aCharcode - 32][aCutColsumn]);
     }
 }

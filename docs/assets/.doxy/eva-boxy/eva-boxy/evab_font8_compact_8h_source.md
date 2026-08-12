@@ -18,7 +18,7 @@ namespace evab
     class Font8Compact: public IFont
     {
     public:
-        unsigned char GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const override;
+        unsigned char GetVerticalSlice(char aCharcode, unsigned char aCutColsumn) const override;
 
     private:
         static const unsigned char kCharmap[][5] PROGMEM;  

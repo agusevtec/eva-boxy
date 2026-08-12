@@ -18,10 +18,10 @@ namespace evab
          * @brief Gets a vertical slice of a character
          * 
          * @param aCharcode ASCII character code (32-126)
-         * @param aCutColumn Column index (0-7)
+         * @param aCutColsumn Column index (0-7)
          * @return unsigned char Bitmap data for the specified column
          */
-        unsigned char GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const override;
+        unsigned char GetVerticalSlice(char aCharcode, unsigned char aCutColsumn) const override;
 
     private:
         static const unsigned char kCharmap[][5] PROGMEM;  ///< Character bitmap data

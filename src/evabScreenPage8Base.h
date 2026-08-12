@@ -46,11 +46,11 @@ namespace evab
      * @brief Pure virtual method to draw a vertical slice
      *
      * @param aPosition Position on screen
-     * @param aCutColumn Column within the tile (0-7)
+     * @param aCutColsumn Column within the tile (0-7)
      * @param aSlice Bitmap data for the slice
      */
 
-    virtual void drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) = 0;
+    virtual void drawVerticalSlice(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice) = 0;
 
     /**
      * @brief Upscales a byte vertically by repeating bits

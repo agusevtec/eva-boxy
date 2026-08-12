@@ -39,9 +39,9 @@ With BoxyRest, the same logic becomes clean and self-documenting:
 // With BoxyRest — clear and maintainable
 void drawer(Screen* screen, Coor pos, Coor size, bool focused) {
     BoxyRest rest(screen, pos, size, focused);
-    rest.CutRow(2).Draw(child1);
-    rest.CutRow(2).Draw(child2);
-    rest.CutRow(2).Draw(child3);
+    rest.CutRows(2).Draw(child1);
+    rest.CutRows(2).Draw(child2);
+    rest.CutRows(2).Draw(child3);
     rest.Clear();  // Automatically clears any remaining space
 }
 ```
@@ -62,45 +62,45 @@ The rest represents the entire rectangular area that you are responsible for dra
 
 ## Slicing Rows
 
-`CutRow()` cuts off a horizontal slice from the top of the remaining area and returns a new BoxyRest representing that slice.
+`CutRows()` cuts off a horizontal slice from the top of the remaining area and returns a new BoxyRest representing that slice.
 
 ```cpp
 // First row: 2 tiles tall
-BoxyRest row1 = rest.CutRow(2);
+BoxyRest row1 = rest.CutRows(2);
 row1.Draw(child1);
 
 // Second row: 3 tiles tall
-BoxyRest row2 = rest.CutRow(3);
+BoxyRest row2 = rest.CutRows(3);
 row2.Draw(child2);
 
 // Remaining space: automatic height
-BoxyRest row3 = rest.CutRow(0);  // or rest.CutRow()
+BoxyRest row3 = rest.CutRows(0);  // or rest.CutRows()
 row3.Draw(child3);
 ```
 
-**Parameters:** `CutRow(height)` — height in tiles. If `0` or omitted, uses all remaining height.
+**Parameters:** `CutRows(height)` — height in tiles. If `0` or omitted, uses all remaining height.
 
 ---
 
 ## Slicing Columns
 
-`CutCol()` cuts off a vertical slice from the left of the remaining area.
+`CutCols()` cuts off a vertical slice from the left of the remaining area.
 
 ```cpp
 // First column: 4 tiles wide
-BoxyRest col1 = rest.CutCol(4);
+BoxyRest col1 = rest.CutCols(4);
 col1.Draw(child1);
 
 // Second column: 6 tiles wide
-BoxyRest col2 = rest.CutCol(6);
+BoxyRest col2 = rest.CutCols(6);
 col2.Draw(child2;
 
 // Remaining space: automatic width
-BoxyRest col3 = rest.CutCol(0);  // or rest.CutCol()
+BoxyRest col3 = rest.CutCols(0);  // or rest.CutCols()
 col3.Draw(child3);
 ```
 
-**Parameters:** `CutCol(width)` — width in tiles. If `0` or omitted, uses all remaining width.
+**Parameters:** `CutCols(width)` — width in tiles. If `0` or omitted, uses all remaining width.
 
 ---
 
@@ -128,18 +128,18 @@ Slicing can be performed in any order. You can slice rows first, then columns wi
 BoxyRest rest(screen, pos, size);
 
 // Row 1: 3 tiles tall, split into icon + control
-BoxyRest row = rest.CutRow(3);
-row.CutCol(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);  // Icon
-row.CutCol(1).Clear();                                    // Spacer
+BoxyRest row = rest.CutRows(3);
+row.CutCols(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);  // Icon
+row.CutCols(1).Clear();                                    // Spacer
 row.Rest().Draw(tempField);                               // Control
 
 // Row 2: clear separator
-rest.CutRow(2).Clear();
+rest.CutRows(2).Clear();
 
 // Row 3: another row with icon + control
-row = rest.CutRow(3);
-row.CutCol(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);  // Icon
-row.CutCol(1).Clear();                                    // Spacer
+row = rest.CutRows(3);
+row.CutCols(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);  // Icon
+row.CutCols(1).Clear();                                    // Spacer
 row.Rest().Draw(humField);                                // Control
 
 // Clear remaining space
@@ -182,16 +182,16 @@ rest.Clear();
 BoxyRest rest(screen, pos, size, focused);
 
 // Split into two columns first
-BoxyRest col1 = rest.CutCol(4);
-BoxyRest col2 = rest.CutCol(0);  // Remaining width
+BoxyRest col1 = rest.CutCols(4);
+BoxyRest col2 = rest.CutCols(0);  // Remaining width
 
 // Within left column: two rows
-col1.CutRow(4).Picto(GalleryRemixicon24::PICTO_F243, 0);
+col1.CutRows(4).Picto(GalleryRemixicon24::PICTO_F243, 0);
 col1.Clear();
 ну 
 // Within right column: controls stacked vertically
-col2.CutRow(2).Draw(brightness);
-col2.CutRow(2).Draw(contrast);
+col2.CutRows(2).Draw(brightness);
+col2.CutRows(2).Draw(contrast);
 col2.Clear();
 
 // Clear remaining space in the left column
@@ -205,7 +205,7 @@ rest.Clear();
 `Draw()` places an element into the current rest cell:
 
 ```cpp
-rest.CutRow(2).Draw(myElement);
+rest.CutRows(2).Draw(myElement);
 ```
 
 The element receives the cell's position and size. It is responsible for drawing itself completely within that rectangle.
@@ -217,8 +217,8 @@ The element receives the cell's position and size. It is responsible for drawing
 `Clear()` clears the current cell area. This is useful for creating visual separation between elements:
 
 ```cpp
-row.CutCol(1).Clear();  // Clears a 1-tile wide spacer column
-rest.CutRow(2).Clear(); // Clears a 2-tile tall separator row
+row.CutCols(1).Clear();  // Clears a 1-tile wide spacer column
+rest.CutRows(2).Clear(); // Clears a 2-tile tall separator row
 ```
 
 ---
@@ -228,8 +228,8 @@ rest.CutRow(2).Clear(); // Clears a 2-tile tall separator row
 `Rest()` returns the original rest with remaining space. `Clear()` clears all remaining area.
 
 ```cpp
-rest.CutRow(2).Draw(child1);
-rest.CutRow(2).Draw(child2);
+rest.CutRows(2).Draw(child1);
+rest.CutRows(2).Draw(child2);
 rest.Clear();  // Clears everything not used by rows above
 ```
 
