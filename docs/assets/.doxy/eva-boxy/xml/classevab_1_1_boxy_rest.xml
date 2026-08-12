@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
   <compounddef id="classevab_1_1_boxy_rest" kind="class" language="C++" prot="public">
     <compoundname>evab::BoxyRest</compoundname>
-    <includes refid="evab_grid_8h" local="no">evabGrid.h</includes>
+    <includes refid="evab_boxy_rest_8h" local="no">evabBoxyRest.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_boxy_rest_1a58826452dafb96a6490563e6608dabe8" prot="private" static="no" mutable="no">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="142" column="14" bodyfile="src/evabGrid.h" bodystart="142" bodyend="-1"/>
+        <location file="src/evabBoxyRest.h" line="135" column="14" bodyfile="src/evabBoxyRest.h" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_boxy_rest_1a7453b7710b0806d443ffd0495a78f6ca" prot="private" static="no" mutable="no">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="143" column="14" bodyfile="src/evabGrid.h" bodystart="143" bodyend="-1"/>
+        <location file="src/evabBoxyRest.h" line="136" column="14" bodyfile="src/evabBoxyRest.h" bodystart="136" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_boxy_rest_1a3470feb6e925abc3d2270766371857b9" prot="private" static="no" mutable="no">
         <type>unsigned char</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="144" column="23" bodyfile="src/evabGrid.h" bodystart="144" bodyend="-1"/>
+        <location file="src/evabBoxyRest.h" line="137" column="23" bodyfile="src/evabBoxyRest.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_boxy_rest_1afaecc970615e73585284fad1e837a623" prot="private" static="no" mutable="no">
         <type>const <ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="145" column="22" bodyfile="src/evabGrid.h" bodystart="145" bodyend="-1"/>
+        <location file="src/evabBoxyRest.h" line="138" column="22" bodyfile="src/evabBoxyRest.h" bodystart="138" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -120,9 +120,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="34" column="9"/>
+        <location file="src/evabBoxyRest.h" line="34" column="9"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_boxy_rest_1ae2d2fd2c3c0383bfd6d8620bc2712b6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a66936220899ffb02b193174c81982b4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kindref="member">BoxyRest</ref></type>
         <definition>BoxyRest evab::BoxyRest::CutRows</definition>
         <argsstring>(unsigned char aHeight=0)</argsstring>
@@ -152,9 +152,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="42" column="18"/>
+        <location file="src/evabBoxyRest.h" line="42" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_boxy_rest_1ad19a2f7d77db899812dc8151b1402497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a6a622b0a012366f62131e3da30359c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kindref="member">BoxyRest</ref></type>
         <definition>BoxyRest evab::BoxyRest::CutCols</definition>
         <argsstring>(unsigned char aWidth=0)</argsstring>
@@ -184,25 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="50" column="18"/>
-      </memberdef>
-      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a721ea697d4afb79ed03ce141a0b04146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kindref="member">BoxyRest</ref> &amp;</type>
-        <definition>BoxyRest &amp; evab::BoxyRest::Rest</definition>
-        <argsstring>()</argsstring>
-        <name>Rest</name>
-        <qualifiedname>evab::BoxyRest::Rest</qualifiedname>
-        <briefdescription>
-<para>Returns the remaining space from current position. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para><ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref>&amp; Reference to this rest </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabGrid.h" line="57" column="18"/>
+        <location file="src/evabBoxyRest.h" line="50" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1a54425f8ddd1f2c3788adcba9aa3fed79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -244,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="65" column="14"/>
+        <location file="src/evabBoxyRest.h" line="58" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1aa1ced89c1e70302c4a6abc15d4d4b7d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -311,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="76" column="14" bodyfile="src/evabGrid.h" bodystart="76" bodyend="80"/>
+        <location file="src/evabBoxyRest.h" line="69" column="14" bodyfile="src/evabBoxyRest.h" bodystart="69" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1a044ca42dabdb73cbc41a3ee5cb76a874" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -340,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="86" column="14" bodyfile="src/evabGrid.h" bodystart="86" bodyend="90"/>
+        <location file="src/evabBoxyRest.h" line="79" column="14" bodyfile="src/evabBoxyRest.h" bodystart="79" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1a66cf2cfddc30b3047e940df4362c6a41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -369,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="96" column="14" bodyfile="src/evabGrid.h" bodystart="96" bodyend="100"/>
+        <location file="src/evabBoxyRest.h" line="89" column="14" bodyfile="src/evabBoxyRest.h" bodystart="89" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1ab46fefeb91b8794678227f062e251aac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -398,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="106" column="14" bodyfile="src/evabGrid.h" bodystart="106" bodyend="110"/>
+        <location file="src/evabBoxyRest.h" line="99" column="14" bodyfile="src/evabBoxyRest.h" bodystart="99" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1afd3136f99ad1259fc8dc380b90c3ded5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -440,7 +422,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="118" column="14"/>
+        <location file="src/evabBoxyRest.h" line="111" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1a8331b1e891f10d1cb8475194dbf32b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -460,7 +442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="124" column="14"/>
+        <location file="src/evabBoxyRest.h" line="117" column="14"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1a29b7c33be369cd036cfdbf9da83832e6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -478,7 +460,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="131" column="14" bodyfile="src/evabGrid.h" bodystart="131" bodyend="131"/>
+        <location file="src/evabBoxyRest.h" line="124" column="14" bodyfile="src/evabBoxyRest.h" bodystart="124" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_boxy_rest_1a0be6fe214af707c3950eb5e551bc5b08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
@@ -496,14 +478,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabGrid.h" line="138" column="14"/>
+        <location file="src/evabBoxyRest.h" line="131" column="14"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
 <para>Layout manager for rest-based UI arrangement. </para>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> provides a fluent interface for organizing UI elements in a rest. Each <ref refid="classevab_1_1_boxy_rest_1ae2d2fd2c3c0383bfd6d8620bc2712b6b" kindref="member">CutRows()</ref>/CutCols() returns a new <ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> representing the cell.</para>
+<para><ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> provides a fluent interface for organizing UI elements in a rest. Each <ref refid="classevab_1_1_boxy_rest_1a66936220899ffb02b193174c81982b4f" kindref="member">CutRows()</ref>/CutCols() returns a new <ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> representing the cell.</para>
 <para><programlisting><codeline><highlight class="normal"><ref refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kindref="member">BoxyRest</ref><sp/>rest({0,0},<sp/>{16,8});</highlight></codeline>
 <codeline><highlight class="normal">rest.CutRows(2).Draw(element1);</highlight></codeline>
 <codeline><highlight class="normal">rest.CutRows(2).CutCols(2).Draw(element2);</highlight></codeline>
@@ -511,12 +493,12 @@
 <codeline><highlight class="normal">rest.Clear();</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="src/evabGrid.h" line="24" column="5" bodyfile="src/evabGrid.h" bodystart="25" bodyend="146"/>
+    <location file="src/evabBoxyRest.h" line="24" column="5" bodyfile="src/evabBoxyRest.h" bodystart="25" bodyend="139"/>
     <listofallmembers>
       <member refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>BoxyRest</name></member>
       <member refid="classevab_1_1_boxy_rest_1a8331b1e891f10d1cb8475194dbf32b3e" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Clear</name></member>
-      <member refid="classevab_1_1_boxy_rest_1ad19a2f7d77db899812dc8151b1402497" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>CutCols</name></member>
-      <member refid="classevab_1_1_boxy_rest_1ae2d2fd2c3c0383bfd6d8620bc2712b6b" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>CutRows</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a6a622b0a012366f62131e3da30359c29" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>CutCols</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a66936220899ffb02b193174c81982b4f" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>CutRows</name></member>
       <member refid="classevab_1_1_boxy_rest_1a54425f8ddd1f2c3788adcba9aa3fed79" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Draw</name></member>
       <member refid="classevab_1_1_boxy_rest_1a29b7c33be369cd036cfdbf9da83832e6" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>GetPos</name></member>
       <member refid="classevab_1_1_boxy_rest_1a0be6fe214af707c3950eb5e551bc5b08" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>GetSize</name></member>
@@ -525,7 +507,6 @@
       <member refid="classevab_1_1_boxy_rest_1afaecc970615e73585284fad1e837a623" prot="private" virt="non-virtual"><scope>evab::BoxyRest</scope><name>mScreen</name></member>
       <member refid="classevab_1_1_boxy_rest_1a58826452dafb96a6490563e6608dabe8" prot="private" virt="non-virtual"><scope>evab::BoxyRest</scope><name>mTopLeft</name></member>
       <member refid="classevab_1_1_boxy_rest_1afd3136f99ad1259fc8dc380b90c3ded5" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Picto</name></member>
-      <member refid="classevab_1_1_boxy_rest_1a721ea697d4afb79ed03ce141a0b04146" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Rest</name></member>
       <member refid="classevab_1_1_boxy_rest_1aa1ced89c1e70302c4a6abc15d4d4b7d7" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Text</name></member>
       <member refid="classevab_1_1_boxy_rest_1a66cf2cfddc30b3047e940df4362c6a41" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>TextCenter</name></member>
       <member refid="classevab_1_1_boxy_rest_1a044ca42dabdb73cbc41a3ee5cb76a874" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>TextLeft</name></member>

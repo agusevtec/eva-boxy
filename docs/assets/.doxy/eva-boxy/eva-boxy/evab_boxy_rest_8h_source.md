@@ -1,10 +1,10 @@
 
 
-# File evabGrid.h
+# File evabBoxyRest.h
 
-[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabGrid.h**](evab_grid_8h.md)
+[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabBoxyRest.h**](evab_boxy_rest_8h.md)
 
-[Go to the documentation of this file](evab_grid_8h.md)
+[Go to the documentation of this file](evab_boxy_rest_8h.md)
 
 
 ```C++
@@ -25,8 +25,6 @@ namespace evab
         BoxyRest CutRows(unsigned char aHeight = 0);
 
         BoxyRest CutCols(unsigned char aWidth = 0);
-
-        BoxyRest &Rest();
 
         void Draw(ElementBase &aElement, unsigned char aIsFocused = 0);
 

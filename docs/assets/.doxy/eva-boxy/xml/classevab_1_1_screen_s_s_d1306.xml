@@ -308,13 +308,13 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
-      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1a36c2af724890247f42804e6641a17e75" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_s_s_d1306_1ae6fa835b5046bf14a37ee31b7702856c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void evab::ScreenSSD1306::drawVerticalSlice</definition>
         <argsstring>(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice) override</argsstring>
         <name>drawVerticalSlice</name>
         <qualifiedname>evab::ScreenSSD1306::drawVerticalSlice</qualifiedname>
-        <reimplements refid="classevab_1_1_screen_page8_base_1adf878cfb7d28984df823179ee872477d">drawVerticalSlice</reimplements>
+        <reimplements refid="classevab_1_1_screen_page8_base_1aef549f4870c1db1d57996d05d6c08011">drawVerticalSlice</reimplements>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
@@ -542,7 +542,7 @@
       <member refid="classevab_1_1_screen_s_s_d1306_1a76a05fccb294081989556c4b7cbfc5c1" prot="private" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>clearTile</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1afb00106a9a0edad05762591fadea1bdf" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>DrawSymbol</name></member>
-      <member refid="classevab_1_1_screen_s_s_d1306_1a36c2af724890247f42804e6641a17e75" prot="private" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>drawVerticalSlice</name></member>
+      <member refid="classevab_1_1_screen_s_s_d1306_1ae6fa835b5046bf14a37ee31b7702856c" prot="private" virt="virtual"><scope>evab::ScreenSSD1306</scope><name>drawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1a6d903761ebb4e180bd357b186238c1d4" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>initDisplay</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1a29d8d7a7cf670e3dbf16b1b247d88cfc" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>mAddress</name></member>
       <member refid="classevab_1_1_screen_s_s_d1306_1a1b75cc2243ff7fb71ce806ae0a361f5c" prot="private" virt="non-virtual"><scope>evab::ScreenSSD1306</scope><name>mHeight</name></member>

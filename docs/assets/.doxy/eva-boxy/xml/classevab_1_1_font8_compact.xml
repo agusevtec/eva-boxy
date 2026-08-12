@@ -22,7 +22,7 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_font8_compact_1a404bc44a17316019b509882081152599" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_font8_compact_1a4fff54941027b3b1c9ab2b3400dbdc62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned char</type>
         <definition>unsigned char evab::Font8Compact::GetVerticalSlice</definition>
         <argsstring>(char aCharcode, unsigned char aCutColsumn) const override</argsstring>
@@ -99,7 +99,7 @@
     </collaborationgraph>
     <location file="src/evabFont8Compact.h" line="14" column="5" bodyfile="src/evabFont8Compact.h" bodystart="15" bodyend="28"/>
     <listofallmembers>
-      <member refid="classevab_1_1_font8_compact_1a404bc44a17316019b509882081152599" prot="public" virt="virtual"><scope>evab::Font8Compact</scope><name>GetVerticalSlice</name></member>
+      <member refid="classevab_1_1_font8_compact_1a4fff54941027b3b1c9ab2b3400dbdc62" prot="public" virt="virtual"><scope>evab::Font8Compact</scope><name>GetVerticalSlice</name></member>
       <member refid="classevab_1_1_font8_compact_1ac4e893b9a2cb30dc4204a8a1b1246ff0" prot="private" virt="non-virtual"><scope>evab::Font8Compact</scope><name>PROGMEM</name></member>
     </listofallmembers>
   </compounddef>

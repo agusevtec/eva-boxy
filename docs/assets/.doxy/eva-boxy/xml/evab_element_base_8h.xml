@@ -6,8 +6,8 @@
     <includes refid="evab_screen_8h" local="no">evabScreen.h</includes>
     <includes refid="evab_keys_8h" local="no">evabKeys.h</includes>
     <includedby refid="evab_boxy_8h" local="no">src/evabBoxy.h</includedby>
+    <includedby refid="evab_boxy_rest_8h" local="no">src/evabBoxyRest.h</includedby>
     <includedby refid="evab_composite_base_8h" local="no">src/evabCompositeBase.h</includedby>
-    <includedby refid="evab_grid_8h" local="no">src/evabGrid.h</includedby>
     <includedby refid="evab_input_animation_px_8h" local="no">src/evabInputAnimationPx.h</includedby>
     <includedby refid="evab_input_button_8h" local="no">src/evabInputButton.h</includedby>
     <includedby refid="evab_input_button_px_8h" local="no">src/evabInputButtonPx.h</includedby>
@@ -74,6 +74,10 @@
         <link refid="evab_boxy_8h_source"/>
       </node>
       <node id="3">
+        <label>src/evabBoxyRest.h</label>
+        <link refid="evab_boxy_rest_8h_source"/>
+      </node>
+      <node id="4">
         <label>src/evabCompositeBase.h</label>
         <link refid="evab_composite_base_8h_source"/>
       </node>
@@ -108,10 +112,6 @@
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>src/evabGrid.h</label>
-        <link refid="evab_grid_8h_source"/>
       </node>
       <node id="5">
         <label>src/evabInputAnimationPx.h</label>

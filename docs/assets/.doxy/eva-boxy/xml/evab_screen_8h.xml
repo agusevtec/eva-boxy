@@ -7,8 +7,8 @@
     <includes refid="evab_text_traits_8h" local="no">evabTextTraits.h</includes>
     <includes refid="evab_text_align_8h" local="no">evabTextAlign.h</includes>
     <includedby refid="evab_boxy_8h" local="no">src/evabBoxy.h</includedby>
+    <includedby refid="evab_boxy_rest_8h" local="no">src/evabBoxyRest.h</includedby>
     <includedby refid="evab_element_base_8h" local="no">src/evabElementBase.h</includedby>
-    <includedby refid="evab_grid_8h" local="no">src/evabGrid.h</includedby>
     <includedby refid="evab_labeled_8h" local="no">src/evabLabeled.h</includedby>
     <includedby refid="evab_padding_8h" local="no">src/evabPadding.h</includedby>
     <includedby refid="evab_screen_l_c_d___i2_c_8h" local="no">src/evabScreenLCD_I2C.h</includedby>
@@ -55,16 +55,20 @@
         <label>src/evabBoxy.h</label>
         <link refid="evab_boxy_8h_source"/>
       </node>
-      <node id="4">
+      <node id="3">
+        <label>src/evabBoxyRest.h</label>
+        <link refid="evab_boxy_rest_8h_source"/>
+      </node>
+      <node id="5">
         <label>src/evabCompositeBase.h</label>
         <link refid="evab_composite_base_8h_source"/>
       </node>
-      <node id="3">
+      <node id="4">
         <label>src/evabElementBase.h</label>
         <link refid="evab_element_base_8h_source"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
@@ -90,10 +94,6 @@
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>src/evabGrid.h</label>
-        <link refid="evab_grid_8h_source"/>
       </node>
       <node id="6">
         <label>src/evabInputAnimationPx.h</label>
@@ -150,7 +150,7 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>

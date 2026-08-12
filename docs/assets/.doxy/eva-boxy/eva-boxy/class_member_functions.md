@@ -123,7 +123,6 @@
 
 ## r
 
-* **Rest** ([**evab::BoxyRest**](classevab_1_1_boxy_rest.md))
 * **redraw** ([**evab::ElementBase**](classevab_1_1_element_base.md))
 * **Read** ([**evab::TextTraits**](structevab_1_1_text_traits.md))
 

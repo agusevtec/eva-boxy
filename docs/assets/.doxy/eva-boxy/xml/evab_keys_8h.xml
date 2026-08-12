@@ -10,6 +10,10 @@
         <link refid="evab_boxy_8h_source"/>
       </node>
       <node id="4">
+        <label>src/evabBoxyRest.h</label>
+        <link refid="evab_boxy_rest_8h_source"/>
+      </node>
+      <node id="5">
         <label>src/evabCompositeBase.h</label>
         <link refid="evab_composite_base_8h_source"/>
       </node>
@@ -44,10 +48,6 @@
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-      </node>
-      <node id="5">
-        <label>src/evabGrid.h</label>
-        <link refid="evab_grid_8h_source"/>
       </node>
       <node id="6">
         <label>src/evabInputAnimationPx.h</label>

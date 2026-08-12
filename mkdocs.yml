@@ -10,19 +10,20 @@ site_dir: 'docs'
 nav:
   - What is it?: index.md
   - Tutorial:
-      - Imperative style:
-           - Imperative drawing: imperative-style/imperative-drawing.md
-           - Visual modifiers: imperative-style/visual-modifiers.md
-           - BoxyRest: imperative-style/boxyrest.md
-      - Declaration style:
-           - Core concepts: declaration-style/core-concepts.md
-           - Behavioral modifiers: declaration-style/behavioral-modifiers.md
-           - Layout and focus: declaration-style/layout-and-focus.md
+      - Imperative Style:
+           - Display Initialization: imperative-style/display-drivers.md
+           - Imperative Drawing: imperative-style/imperative-drawing.md
+           - Visual Modifiers: imperative-style/visual-modifiers.md
+           - Boxy-Rest: imperative-style/boxyrest.md
+      - Declaration Style:
+           - Core Concepts: declaration-style/core-concepts.md
+           - Behavioral Modifiers: declaration-style/behavioral-modifiers.md
+           - Layout and Focus: declaration-style/layout-and-focus.md
            - Listboxes: declaration-style/listboxes.md
-      - Intermediate style:
-           - Custom usercontrols: intermediate-style/custom-user-controls.md
-           - Composite base: intermediate-style/composite-base.md
-           - Progressive optimization: intermediate-style/progressive_optimization.md
+      - Intermediate Style:
+           - Custom User Controls: intermediate-style/custom-user-controls.md
+           - Composite-base: intermediate-style/composite-base.md
+           - Progressive Optimization: intermediate-style/progressive_optimization.md
       - Other:
            - Fonts and pictograms: other/fonts-and-pictograms.md
 

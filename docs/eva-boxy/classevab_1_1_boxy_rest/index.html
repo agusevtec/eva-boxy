@@ -310,7 +310,7 @@
   <span class="md-ellipsis">
     
   
-    Imperative style
+    Imperative Style
   
 
     
@@ -326,11 +326,39 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Imperative style
+    Imperative Style
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../imperative-style/display-drivers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Display Initialization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -346,7 +374,7 @@
   <span class="md-ellipsis">
     
   
-    Imperative drawing
+    Imperative Drawing
   
 
     
@@ -374,7 +402,7 @@
   <span class="md-ellipsis">
     
   
-    Visual modifiers
+    Visual Modifiers
   
 
     
@@ -402,7 +430,7 @@
   <span class="md-ellipsis">
     
   
-    BoxyRest
+    Boxy-Rest
   
 
     
@@ -449,7 +477,7 @@
   <span class="md-ellipsis">
     
   
-    Declaration style
+    Declaration Style
   
 
     
@@ -465,7 +493,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Declaration style
+    Declaration Style
   
 
           </label>
@@ -485,7 +513,7 @@
   <span class="md-ellipsis">
     
   
-    Core concepts
+    Core Concepts
   
 
     
@@ -513,7 +541,7 @@
   <span class="md-ellipsis">
     
   
-    Behavioral modifiers
+    Behavioral Modifiers
   
 
     
@@ -541,7 +569,7 @@
   <span class="md-ellipsis">
     
   
-    Layout and focus
+    Layout and Focus
   
 
     
@@ -616,7 +644,7 @@
   <span class="md-ellipsis">
     
   
-    Intermediate style
+    Intermediate Style
   
 
     
@@ -632,7 +660,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Intermediate style
+    Intermediate Style
   
 
           </label>
@@ -652,7 +680,7 @@
   <span class="md-ellipsis">
     
   
-    Custom usercontrols
+    Custom User Controls
   
 
     
@@ -680,7 +708,7 @@
   <span class="md-ellipsis">
     
   
-    Composite base
+    Composite-base
   
 
     
@@ -708,7 +736,7 @@
   <span class="md-ellipsis">
     
   
-    Progressive optimization
+    Progressive Optimization
   
 
     
@@ -1041,7 +1069,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-cutcol" class="md-nav__link">
+  <a href="#function-cutcols" class="md-nav__link">
     <span class="md-ellipsis">
       
         function CutCols
@@ -1052,7 +1080,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-cutrow" class="md-nav__link">
+  <a href="#function-cutrows" class="md-nav__link">
     <span class="md-ellipsis">
       
         function CutRows
@@ -1100,17 +1128,6 @@
     <span class="md-ellipsis">
       
         function Picto
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-rest" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function Rest
       
     </span>
   </a>
@@ -1190,7 +1207,7 @@
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>BoxyRest</strong></a></p>
 <p><em>Layout manager for rest-based UI arrangement.</em> <a href="#detailed-description">More...</a></p>
 <ul>
-<li><code>#include &lt;evabGrid.h&gt;</code></li>
+<li><code>#include &lt;evabBoxyRest.h&gt;</code></li>
 </ul>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <table>
@@ -1211,11 +1228,11 @@
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./#function-boxyrest"><strong>BoxyRest</strong></a></td>
-<td style="text-align: left;"><a href="#function-cutcol"><strong>CutCols</strong></a> (unsigned char aWidth=0) <br><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next column.</em></td>
+<td style="text-align: left;"><a href="#function-cutcols"><strong>CutCols</strong></a> (unsigned char aWidth=0) <br><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next column.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"><a href="./#function-boxyrest"><strong>BoxyRest</strong></a></td>
-<td style="text-align: left;"><a href="#function-cutrow"><strong>CutRows</strong></a> (unsigned char aHeight=0) <br><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next row.</em></td>
+<td style="text-align: left;"><a href="#function-cutrows"><strong>CutRows</strong></a> (unsigned char aHeight=0) <br><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next row.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -1232,10 +1249,6 @@
 <tr>
 <td style="text-align: right;">void</td>
 <td style="text-align: left;"><a href="#function-picto"><strong>Picto</strong></a> (const unsigned char * aPictogram, unsigned char aIsFocused=0) <br><em>Draws a pictogram in the current cell.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;"><a href="./#function-boxyrest"><strong>BoxyRest</strong></a> &amp;</td>
-<td style="text-align: left;"><a href="#function-rest"><strong>Rest</strong></a> () <br><em>Returns the remaining space from current position.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
@@ -1256,7 +1269,7 @@
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
-<p><a href="./"><strong>BoxyRest</strong></a> provides a fluent interface for organizing UI elements in a rest. Each <a href="./#function-cutrow"><strong>CutRows()</strong></a>/CutCols() returns a new <a href="./"><strong>BoxyRest</strong></a> representing the cell.</p>
+<p><a href="./"><strong>BoxyRest</strong></a> provides a fluent interface for organizing UI elements in a rest. Each <a href="./#function-cutrows"><strong>CutRows()</strong></a>/CutCols() returns a new <a href="./"><strong>BoxyRest</strong></a> representing the cell.</p>
 <div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="nf">rest</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="mi">8</span><span class="p">});</span>
 <span class="n">rest</span><span class="p">.</span><span class="n">CutRows</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">element1</span><span class="p">);</span>
 <span class="n">rest</span><span class="p">.</span><span class="n">CutRows</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">CutCols</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">element2</span><span class="p">);</span>
@@ -1292,7 +1305,7 @@
 
 <hr>
 
-<h3 id="function-cutcol">function CutCols<a class="headerlink" href="#function-cutcol" title="Permanent link">&para;</a></h3>
+<h3 id="function-cutcols">function CutCols<a class="headerlink" href="#function-cutcols" title="Permanent link">&para;</a></h3>
 <p><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next column.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">BoxyRest</span><span class="o">::</span><span class="n">CutCols</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aWidth</span><span class="o">=</span><span class="mi">0</span>
@@ -1307,7 +1320,7 @@
 <p><a href="./"><strong>BoxyRest</strong></a> New rest representing the column </p>
 <hr>
 
-<h3 id="function-cutrow">function CutRows<a class="headerlink" href="#function-cutrow" title="Permanent link">&para;</a></h3>
+<h3 id="function-cutrows">function CutRows<a class="headerlink" href="#function-cutrows" title="Permanent link">&para;</a></h3>
 <p><em>Creates a new</em> <a href="./"><em><strong>BoxyRest</strong></em></a> <em>for the next row.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">BoxyRest</span><span class="o">::</span><span class="n">CutRows</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aHeight</span><span class="o">=</span><span class="mi">0</span>
@@ -1370,15 +1383,6 @@
 </ul>
 <hr>
 
-<h3 id="function-rest">function Rest<a class="headerlink" href="#function-rest" title="Permanent link">&para;</a></h3>
-<p><em>Returns the remaining space from current position.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="n">BoxyRest</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">BoxyRest</span><span class="o">::</span><span class="n">Rest</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
-</code></pre></div>
-
-<p><strong>Returns:</strong></p>
-<p><a href="./"><strong>BoxyRest</strong></a>&amp; Reference to this rest </p>
-<hr>
-
 <h3 id="function-text">function Text<a class="headerlink" href="#function-text" title="Permanent link">&para;</a></h3>
 <p><em>Draws text with specified alignment.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">TAlign</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">TText</span><span class="o">&gt;</span>
@@ -1434,7 +1438,7 @@
 <hr>
 
 <hr />
-<p>The documentation for this class was generated from the following file <code>src/evabGrid.h</code></p>
+<p>The documentation for this class was generated from the following file <code>src/evabBoxyRest.h</code></p>
 
 
 

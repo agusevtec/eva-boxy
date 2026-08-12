@@ -4,6 +4,7 @@
     <compoundname>src</compoundname>
     <innerfile refid="evab_albums_8h">evabAlbums.h</innerfile>
     <innerfile refid="evab_boxy_8h">evabBoxy.h</innerfile>
+    <innerfile refid="evab_boxy_rest_8h">evabBoxyRest.h</innerfile>
     <innerfile refid="evab_composite_base_8h">evabCompositeBase.h</innerfile>
     <innerfile refid="evab_coor_8h">evabCoor.h</innerfile>
     <innerfile refid="evab_element_base_8h">evabElementBase.h</innerfile>
@@ -13,7 +14,6 @@
     <innerfile refid="evab_gallery_remixicon16_8h">evabGalleryRemixicon16.h</innerfile>
     <innerfile refid="evab_gallery_remixicon24_8h">evabGalleryRemixicon24.h</innerfile>
     <innerfile refid="evab_gallery_remixicon32_8h">evabGalleryRemixicon32.h</innerfile>
-    <innerfile refid="evab_grid_8h">evabGrid.h</innerfile>
     <innerfile refid="evab_i_font_8h">evabIFont.h</innerfile>
     <innerfile refid="evab_input_animation_px_8h">evabInputAnimationPx.h</innerfile>
     <innerfile refid="evab_input_button_8h">evabInputButton.h</innerfile>

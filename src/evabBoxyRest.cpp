@@ -53,7 +53,7 @@ void BoxyRest::Draw(ElementBase &aElement, unsigned char aIsFocused)
         aElement.Draw(mScreen, mTopLeft, GetSize(), mIsFocused && aIsFocused);
 }
 
-void BoxyRest::Picto(const unsigned char *aPictogram, unsigned char aIsFocused = 0)
+void BoxyRest::Picto(const unsigned char *aPictogram, unsigned char aIsFocused)
 {
     if (mScreen)
         mScreen->Picto(mTopLeft, aPictogram, mIsFocused && aIsFocused);
