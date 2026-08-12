@@ -436,7 +436,7 @@
   <span class="md-ellipsis">
     
   
-    Boxy-Rest
+    BoxyRest
   
 
     
@@ -716,7 +716,7 @@
   <span class="md-ellipsis">
     
   
-    Composite-base
+    CompositeBase
   
 
     
@@ -1080,7 +1080,35 @@
   <span class="md-ellipsis">
     
   
-    Fonts and pictograms
+    Fonts and Pictograms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/adding_new_display/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding New Display
   
 
     
@@ -1511,9 +1539,9 @@
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">aScreen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">aIsFocused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">BoxyRest</span><span class="w"> </span><span class="n">rest</span><span class="p">(</span><span class="n">aScreen</span><span class="p">,</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="n">aIsFocused</span><span class="p">);</span>
-<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRows</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">mInputField</span><span class="p">,</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mInputField</span><span class="p">));</span>
-<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRows</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Clear</span><span class="p">();</span>
-<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRows</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">mSaveButton</span><span class="p">,</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mSaveButton</span><span class="p">));</span>
+<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">mInputField</span><span class="p">,</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mInputField</span><span class="p">));</span>
+<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Clear</span><span class="p">();</span>
+<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">mSaveButton</span><span class="p">,</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mSaveButton</span><span class="p">));</span>
 <span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>

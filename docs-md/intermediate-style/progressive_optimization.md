@@ -17,9 +17,9 @@ class UserForm1 : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
 
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, bool aIsFocused) override {
         BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
-        rest.CutRows(1).Draw(mInputField, IsFocused(&mInputField));
-        rest.CutRows(1).Clear();
-        rest.CutRows(1).Draw(mSaveButton, IsFocused(&mSaveButton));
+        rest.CutRow(1).Draw(mInputField, IsFocused(&mInputField));
+        rest.CutRow(1).Clear();
+        rest.CutRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
         rest.Clear();
     }
 };

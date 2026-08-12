@@ -140,9 +140,9 @@ Coor ScreenKS0108::Size()
     return {16, 8}; 
 }
 
-void ScreenKS0108::drawVerticalSlice(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice)
+void ScreenKS0108::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
 {
-    uint8_t x = aPosition.X * 8 + aCutColsumn;
+    uint8_t x = aPosition.X * 8 + aCutColumn;
     uint8_t page = aPosition.Y;
     uint8_t chip = (x < 64) ? 0 : 1;
     uint8_t col = (x < 64) ? x : x - 64;

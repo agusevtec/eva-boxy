@@ -14,7 +14,7 @@ nav:
            - Display Initialization: imperative-style/display-drivers.md
            - Imperative Drawing: imperative-style/imperative-drawing.md
            - Visual Modifiers: imperative-style/visual-modifiers.md
-           - Boxy-Rest: imperative-style/boxyrest.md
+           - BoxyRest: imperative-style/boxyrest.md
       - Declaration Style:
            - Core Concepts: declaration-style/core-concepts.md
            - Behavioral Modifiers: declaration-style/behavioral-modifiers.md
@@ -22,10 +22,11 @@ nav:
            - Listboxes: declaration-style/listboxes.md
       - Intermediate Style:
            - Custom User Controls: intermediate-style/custom-user-controls.md
-           - Composite-base: intermediate-style/composite-base.md
+           - CompositeBase: intermediate-style/composite-base.md
            - Progressive Optimization: intermediate-style/progressive_optimization.md
       - Other:
-           - Fonts and pictograms: other/fonts-and-pictograms.md
+           - Fonts and Pictograms: other/fonts-and-pictograms.md
+           - Adding New Display: other/adding_new_display.md
 
   - API Reference:
       - Classes: eva-boxy/annotated.md

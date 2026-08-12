@@ -27,7 +27,7 @@ namespace evab
 
   private:
 
-    virtual void drawVerticalSlice(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice) = 0;
+    virtual void drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) = 0;
 
     uint32_t upscaleY(uint8_t aSlice, uint8_t aScale);
 

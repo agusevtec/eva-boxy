@@ -54,8 +54,8 @@ _Layout manager for rest-based UI arrangement._ [More...](#detailed-description)
 | ---: | :--- |
 |   | [**BoxyRest**](#function-boxyrest) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) <br>_Constructs a_ [_**BoxyRest**_](classevab_1_1_boxy_rest.md) _for a specific area._ |
 |  void | [**Clear**](#function-clear) (unsigned char aIsFocused=0) <br>_Clears the current cell area._  |
-|  [**BoxyRest**](classevab_1_1_boxy_rest.md#function-boxyrest) | [**CutCols**](#function-cutcols) (unsigned char aWidth=0) <br>_Creates a new_ [_**BoxyRest**_](classevab_1_1_boxy_rest.md) _for the next column._ |
-|  [**BoxyRest**](classevab_1_1_boxy_rest.md#function-boxyrest) | [**CutRows**](#function-cutrows) (unsigned char aHeight=0) <br>_Creates a new_ [_**BoxyRest**_](classevab_1_1_boxy_rest.md) _for the next row._ |
+|  [**BoxyRest**](classevab_1_1_boxy_rest.md#function-boxyrest) | [**CutCol**](#function-cutcol) (unsigned char aWidth=0) <br>_Creates a new_ [_**BoxyRest**_](classevab_1_1_boxy_rest.md) _for the next column._ |
+|  [**BoxyRest**](classevab_1_1_boxy_rest.md#function-boxyrest) | [**CutRow**](#function-cutrow) (unsigned char aHeight=0) <br>_Creates a new_ [_**BoxyRest**_](classevab_1_1_boxy_rest.md) _for the next row._ |
 |  void | [**Draw**](#function-draw) ([**ElementBase**](classevab_1_1_element_base.md) & aElement, unsigned char aIsFocused=0) <br>_Draws an element in the current cell._  |
 |  [**Coor**](structevab_1_1_coor.md) | [**GetPos**](#function-getpos) () const<br>_Gets the current position._  |
 |  [**Coor**](structevab_1_1_coor.md) | [**GetSize**](#function-getsize) () const<br>_Gets the current size._  |
@@ -95,15 +95,15 @@ _Layout manager for rest-based UI arrangement._ [More...](#detailed-description)
 ## Detailed Description
 
 
-[**BoxyRest**](classevab_1_1_boxy_rest.md) provides a fluent interface for organizing UI elements in a rest. Each [**CutRows()**](classevab_1_1_boxy_rest.md#function-cutrows)/CutCols() returns a new [**BoxyRest**](classevab_1_1_boxy_rest.md) representing the cell.
+[**BoxyRest**](classevab_1_1_boxy_rest.md) provides a fluent interface for organizing UI elements in a rest. Each [**CutRow()**](classevab_1_1_boxy_rest.md#function-cutrow)/CutCol() returns a new [**BoxyRest**](classevab_1_1_boxy_rest.md) representing the cell.
 
 
 
 ```C++
 BoxyRest rest({0,0}, {16,8});
-rest.CutRows(2).Draw(element1);
-rest.CutRows(2).CutCols(2).Draw(element2);
-rest.CutRows(2).CutCols(2).Clear();
+rest.CutRow(2).Draw(element1);
+rest.CutRow(2).CutCol(2).Draw(element2);
+rest.CutRow(2).CutCol(2).Clear();
 rest.Clear();
 ```
  
@@ -163,11 +163,11 @@ void evab::BoxyRest::Clear (
 
 
 
-### function CutCols 
+### function CutCol 
 
 _Creates a new_ [_**BoxyRest**_](classevab_1_1_boxy_rest.md) _for the next column._
 ```C++
-BoxyRest evab::BoxyRest::CutCols (
+BoxyRest evab::BoxyRest::CutCol (
     unsigned char aWidth=0
 ) 
 ```
@@ -197,11 +197,11 @@ BoxyRest evab::BoxyRest::CutCols (
 
 
 
-### function CutRows 
+### function CutRow 
 
 _Creates a new_ [_**BoxyRest**_](classevab_1_1_boxy_rest.md) _for the next row._
 ```C++
-BoxyRest evab::BoxyRest::CutRows (
+BoxyRest evab::BoxyRest::CutRow (
     unsigned char aHeight=0
 ) 
 ```

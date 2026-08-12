@@ -32,7 +32,7 @@ namespace evab
     void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
   private:
-    void drawVerticalSlice(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice) override;
+    void drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) override;
     
     void clearTile(Coor aPosition, unsigned char aColor) override;
     

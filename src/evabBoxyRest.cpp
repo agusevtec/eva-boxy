@@ -8,7 +8,7 @@ BoxyRest::BoxyRest(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocu
 {
 }
 
-BoxyRest BoxyRest::CutRows(unsigned char aHeight)
+BoxyRest BoxyRest::CutRow(unsigned char aHeight)
 {
     if (aHeight == 0)
         aHeight = mBottomRight.Y - mTopLeft.Y;
@@ -21,7 +21,7 @@ BoxyRest BoxyRest::CutRows(unsigned char aHeight)
     return BoxyRest(mScreen, rowTopLeft, rowSize, mIsFocused);
 }
 
-BoxyRest BoxyRest::CutCols(unsigned char aWidth)
+BoxyRest BoxyRest::CutCol(unsigned char aWidth)
 {
     if (aWidth == 0)
         aWidth = mBottomRight.X - mTopLeft.X;

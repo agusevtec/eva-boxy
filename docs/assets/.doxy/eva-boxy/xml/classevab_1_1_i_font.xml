@@ -14,8 +14,8 @@
         <name>GetVerticalSlice</name>
         <qualifiedname>evab::IFont::GetVerticalSlice</qualifiedname>
         <reimplementedby refid="classevab_1_1_font8_bold_1a7a0536ad01be1f44b7622d03ead5efaa">GetVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_font8_compact_1a4fff54941027b3b1c9ab2b3400dbdc62">GetVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_font8_narrow_1a010aa637a84bd68ffec6abddb8327039">GetVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_font8_compact_1a404bc44a17316019b509882081152599">GetVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_font8_narrow_1a5e76dd13dfb3ea0c148df7e34607b3d9">GetVerticalSlice</reimplementedby>
         <param>
           <type>char</type>
           <declname>aCharcode</declname>

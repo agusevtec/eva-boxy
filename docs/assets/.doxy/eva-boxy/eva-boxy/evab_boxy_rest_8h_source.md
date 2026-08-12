@@ -22,9 +22,9 @@ namespace evab
     public:
         BoxyRest(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
-        BoxyRest CutRows(unsigned char aHeight = 0);
+        BoxyRest CutRow(unsigned char aHeight = 0);
 
-        BoxyRest CutCols(unsigned char aWidth = 0);
+        BoxyRest CutCol(unsigned char aWidth = 0);
 
         void Draw(ElementBase &aElement, unsigned char aIsFocused = 0);
 

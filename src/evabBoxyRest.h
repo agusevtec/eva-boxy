@@ -11,13 +11,13 @@ namespace evab
      * @brief Layout manager for rest-based UI arrangement
      *
      * BoxyRest provides a fluent interface for organizing UI elements in a rest.
-     * Each CutRows()/CutCols() returns a new BoxyRest representing the cell.
+     * Each CutRow()/CutCol() returns a new BoxyRest representing the cell.
      *
      * @code
      * BoxyRest rest({0,0}, {16,8});
-     * rest.CutRows(2).Draw(element1);
-     * rest.CutRows(2).CutCols(2).Draw(element2);
-     * rest.CutRows(2).CutCols(2).Clear();
+     * rest.CutRow(2).Draw(element1);
+     * rest.CutRow(2).CutCol(2).Draw(element2);
+     * rest.CutRow(2).CutCol(2).Clear();
      * rest.Clear();
      * @endcode
      */
@@ -39,7 +39,7 @@ namespace evab
          * @param aHeight Height of the row (0 = use remaining height)
          * @return BoxyRest New rest representing the row
          */
-        BoxyRest CutRows(unsigned char aHeight = 0);
+        BoxyRest CutRow(unsigned char aHeight = 0);
 
         /**
          * @brief Creates a new BoxyRest for the next column
@@ -47,7 +47,7 @@ namespace evab
          * @param aWidth Width of the column (0 = use remaining width)
          * @return BoxyRest New rest representing the column
          */
-        BoxyRest CutCols(unsigned char aWidth = 0);
+        BoxyRest CutCol(unsigned char aWidth = 0);
 
         /**
          * @brief Draws an element in the current cell

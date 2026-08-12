@@ -73,7 +73,7 @@ Inherits the following classes: [evab::IFont](classevab_1_1_i_font.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual unsigned char | [**GetVerticalSlice**](#function-getverticalslice) (char aCharcode, unsigned char aCutColsumn) override const<br>_Gets a vertical slice of a character._  |
+| virtual unsigned char | [**GetVerticalSlice**](#function-getverticalslice) (char aCharcode, unsigned char aCutColumn) override const<br>_Gets a vertical slice of a character._  |
 
 
 ## Public Functions inherited from evab::IFont
@@ -155,7 +155,7 @@ _Gets a vertical slice of a character._
 ```C++
 virtual unsigned char evab::Font8Narrow::GetVerticalSlice (
     char aCharcode,
-    unsigned char aCutColsumn
+    unsigned char aCutColumn
 ) override const
 ```
 
@@ -167,7 +167,7 @@ virtual unsigned char evab::Font8Narrow::GetVerticalSlice (
 
 
 * `aCharcode` ASCII character code (32-126) 
-* `aCutColsumn` Column index (0-7) 
+* `aCutColumn` Column index (0-7) 
 
 
 

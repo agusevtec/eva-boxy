@@ -69,10 +69,10 @@ void ScreenSSH1106::clearDisplay()
     }
 }
 
-void ScreenSSH1106::drawVerticalSlice(Coor aPosition, unsigned char aCutColsumn, unsigned char aSlice)
+void ScreenSSH1106::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
 {
     setPage(aPosition.Y);
-    setColumn(aPosition.X * 8 + aCutColsumn + 2);
+    setColumn(aPosition.X * 8 + aCutColumn + 2);
 
     Wire.beginTransmission(mAddress);
     Wire.write(0x40); // data mode

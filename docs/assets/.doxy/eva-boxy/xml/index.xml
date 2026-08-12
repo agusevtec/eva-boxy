@@ -53,8 +53,8 @@
     <member refid="classevab_1_1_boxy_rest_1a3470feb6e925abc3d2270766371857b9" kind="variable"><name>mIsFocused</name></member>
     <member refid="classevab_1_1_boxy_rest_1afaecc970615e73585284fad1e837a623" kind="variable"><name>mScreen</name></member>
     <member refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kind="function"><name>BoxyRest</name></member>
-    <member refid="classevab_1_1_boxy_rest_1a66936220899ffb02b193174c81982b4f" kind="function"><name>CutRows</name></member>
-    <member refid="classevab_1_1_boxy_rest_1a6a622b0a012366f62131e3da30359c29" kind="function"><name>CutCols</name></member>
+    <member refid="classevab_1_1_boxy_rest_1ae2d2fd2c3c0383bfd6d8620bc2712b6b" kind="function"><name>CutRow</name></member>
+    <member refid="classevab_1_1_boxy_rest_1ad19a2f7d77db899812dc8151b1402497" kind="function"><name>CutCol</name></member>
     <member refid="classevab_1_1_boxy_rest_1a54425f8ddd1f2c3788adcba9aa3fed79" kind="function"><name>Draw</name></member>
     <member refid="classevab_1_1_boxy_rest_1aa1ced89c1e70302c4a6abc15d4d4b7d7" kind="function"><name>Text</name></member>
     <member refid="classevab_1_1_boxy_rest_1a044ca42dabdb73cbc41a3ee5cb76a874" kind="function"><name>TextLeft</name></member>
@@ -110,11 +110,11 @@
   </compound>
   <compound refid="classevab_1_1_font8_compact" kind="class"><name>evab::Font8Compact</name>
     <member refid="classevab_1_1_font8_compact_1ac4e893b9a2cb30dc4204a8a1b1246ff0" kind="variable"><name>PROGMEM</name></member>
-    <member refid="classevab_1_1_font8_compact_1a4fff54941027b3b1c9ab2b3400dbdc62" kind="function"><name>GetVerticalSlice</name></member>
+    <member refid="classevab_1_1_font8_compact_1a404bc44a17316019b509882081152599" kind="function"><name>GetVerticalSlice</name></member>
   </compound>
   <compound refid="classevab_1_1_font8_narrow" kind="class"><name>evab::Font8Narrow</name>
     <member refid="classevab_1_1_font8_narrow_1ab3f248a18cde663956656231cd6bb8ce" kind="variable"><name>PROGMEM</name></member>
-    <member refid="classevab_1_1_font8_narrow_1a010aa637a84bd68ffec6abddb8327039" kind="function"><name>GetVerticalSlice</name></member>
+    <member refid="classevab_1_1_font8_narrow_1a5e76dd13dfb3ea0c148df7e34607b3d9" kind="function"><name>GetVerticalSlice</name></member>
   </compound>
   <compound refid="structevab_1_1_horizontal_progress_bar_charset" kind="struct"><name>evab::HorizontalProgressBarCharset</name>
     <member refid="structevab_1_1_horizontal_progress_bar_charset_1acb6f9f4d41125f8bbf601838bc81e109" kind="function"><name>GetChar</name></member>
@@ -315,7 +315,7 @@
     <member refid="classevab_1_1_screen_k_s0108_1ae73709eb2823cda32272011a2f08b8ea" kind="function"><name>Size</name></member>
     <member refid="classevab_1_1_screen_k_s0108_1a37b85da65c7574bc077bf368412f4f79" kind="function"><name>Serialize</name></member>
     <member refid="classevab_1_1_screen_k_s0108_1afc3b7c6858d7ca964b60527cd8410126" kind="function"><name>Deserialize</name></member>
-    <member refid="classevab_1_1_screen_k_s0108_1ad84b38e51a16bd3a5463ffd187aafada" kind="function"><name>drawVerticalSlice</name></member>
+    <member refid="classevab_1_1_screen_k_s0108_1a56eff5d3a8a0453ce94d5932b25c9530" kind="function"><name>drawVerticalSlice</name></member>
     <member refid="classevab_1_1_screen_k_s0108_1a5ddae703ff57a9c176c7e9176e896e33" kind="function"><name>clearTile</name></member>
     <member refid="classevab_1_1_screen_k_s0108_1a05e23f666e5894455e14734317332480" kind="function"><name>sendCommand</name></member>
     <member refid="classevab_1_1_screen_k_s0108_1a15b9f6cf7e8f6b8c555fa922a0e32a80" kind="function"><name>sendData</name></member>
@@ -348,7 +348,7 @@
     <member refid="classevab_1_1_screen_page8_base_1a769fc315283a7fd62db3ee4a38e5dfb2" kind="function"><name>ScreenPage8Base</name></member>
     <member refid="classevab_1_1_screen_page8_base_1a836a340d23a631a4661f5a6165103037" kind="function"><name>Picto</name></member>
     <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" kind="function"><name>DrawSymbol</name></member>
-    <member refid="classevab_1_1_screen_page8_base_1aef549f4870c1db1d57996d05d6c08011" kind="function"><name>drawVerticalSlice</name></member>
+    <member refid="classevab_1_1_screen_page8_base_1adf878cfb7d28984df823179ee872477d" kind="function"><name>drawVerticalSlice</name></member>
     <member refid="classevab_1_1_screen_page8_base_1a527af66300b7dbabc558e9a3b76e3ad9" kind="function"><name>upscaleY</name></member>
   </compound>
   <compound refid="classevab_1_1_screen_p_c_d8544" kind="class"><name>evab::ScreenPCD8544</name>
@@ -367,7 +367,7 @@
     <member refid="classevab_1_1_screen_p_c_d8544_1a9477b0447b9418287c36d9e39c539185" kind="function"><name>Size</name></member>
     <member refid="classevab_1_1_screen_p_c_d8544_1a7401fa0b08f2cede79ccd3fff9ae971d" kind="function"><name>Serialize</name></member>
     <member refid="classevab_1_1_screen_p_c_d8544_1aa477aa8668fe7f21a21658943d4fd149" kind="function"><name>Deserialize</name></member>
-    <member refid="classevab_1_1_screen_p_c_d8544_1a101885d4c004a267b04b8bd139cae304" kind="function"><name>drawVerticalSlice</name></member>
+    <member refid="classevab_1_1_screen_p_c_d8544_1ad43b370ec19537bf44781ff767fc6a1b" kind="function"><name>drawVerticalSlice</name></member>
     <member refid="classevab_1_1_screen_p_c_d8544_1a26a9d11be21d29b62354427fea000fe6" kind="function"><name>clearTile</name></member>
     <member refid="classevab_1_1_screen_p_c_d8544_1a47203082236f02d40faa72abf40e04ee" kind="function"><name>clearDisplay</name></member>
     <member refid="classevab_1_1_screen_p_c_d8544_1a6c6c09b9754b80a1c2ce539dd99e1f94" kind="function"><name>sendCommand</name></member>
@@ -382,7 +382,7 @@
     <member refid="classevab_1_1_screen_serial_pixel_1a9b53f05004a3fd1b3b608967588ff168" kind="function"><name>Size</name></member>
     <member refid="classevab_1_1_screen_serial_pixel_1a53ce3ee6231eb5d7371020e5f38fe7bf" kind="function"><name>Serialize</name></member>
     <member refid="classevab_1_1_screen_serial_pixel_1a204afb81d0ade103dd72b316bef83100" kind="function"><name>Deserialize</name></member>
-    <member refid="classevab_1_1_screen_serial_pixel_1aee53089da20b3065710faed981317d01" kind="function"><name>drawVerticalSlice</name></member>
+    <member refid="classevab_1_1_screen_serial_pixel_1aed17499ccb2db3d0b341cca423b6b5de" kind="function"><name>drawVerticalSlice</name></member>
   </compound>
   <compound refid="classevab_1_1_screen_serial_text" kind="class"><name>evab::ScreenSerialText</name>
     <member refid="classevab_1_1_screen_serial_text_1a2a49d20ec1ec627115d2e13288c1a066" kind="variable"><name>mBuffer</name></member>
@@ -405,7 +405,7 @@
     <member refid="classevab_1_1_screen_s_s_d1306_1ae1e23d3abbf9b7a7a1524abf7e5dc379" kind="function"><name>Size</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a0615113f865bc13dcb6908e4cf669a9b" kind="function"><name>Serialize</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1afb00106a9a0edad05762591fadea1bdf" kind="function"><name>Deserialize</name></member>
-    <member refid="classevab_1_1_screen_s_s_d1306_1ae6fa835b5046bf14a37ee31b7702856c" kind="function"><name>drawVerticalSlice</name></member>
+    <member refid="classevab_1_1_screen_s_s_d1306_1a36c2af724890247f42804e6641a17e75" kind="function"><name>drawVerticalSlice</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a76a05fccb294081989556c4b7cbfc5c1" kind="function"><name>clearTile</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a6d903761ebb4e180bd357b186238c1d4" kind="function"><name>initDisplay</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1ae7e88a167983b2f79e3d4193b130aaf9" kind="function"><name>clearDisplay</name></member>
@@ -418,7 +418,7 @@
     <member refid="classevab_1_1_screen_s_s_h1106_1a80e2cdf993dfdb565a21f4f593559732" kind="function"><name>Serialize</name></member>
     <member refid="classevab_1_1_screen_s_s_h1106_1a21264b69f031c5d30985b48230aeb132" kind="function"><name>Deserialize</name></member>
     <member refid="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa" kind="function"><name>Size</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1a52780f398dd1a990f3cf2f27c879eda6" kind="function"><name>drawVerticalSlice</name></member>
+    <member refid="classevab_1_1_screen_s_s_h1106_1ae8bb14f808b9653162a341813e491c21" kind="function"><name>drawVerticalSlice</name></member>
     <member refid="classevab_1_1_screen_s_s_h1106_1a2a398710e701f0520fa0d792bd051719" kind="function"><name>clearTile</name></member>
     <member refid="classevab_1_1_screen_s_s_h1106_1afdb0477aec02aa7aca2ec6e48387d572" kind="function"><name>clearDisplay</name></member>
     <member refid="classevab_1_1_screen_s_s_h1106_1a5169043e0ebaee909683bce07ce2f73b" kind="function"><name>sendCommand</name></member>

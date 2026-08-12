@@ -100,13 +100,13 @@ const unsigned char Font8Compact::kCharmap[][5] PROGMEM = {
     {0x04, 0x02, 0x04, 0x08, 0x04}  // '~'
 };
 
-unsigned char Font8Compact::GetVerticalSlice(char aCharcode, unsigned char aCutColsumn) const
+unsigned char Font8Compact::GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const
 {
     {
         if (aCharcode < 32 || aCharcode > 126)
             aCharcode = 32;
-        if (aCutColsumn < 2 || aCutColsumn > 6)
+        if (aCutColumn < 2 || aCutColumn > 6)
             return 0x00;
-        return pgm_read_byte(&kCharmap[aCharcode - 32][aCutColsumn - 2]);
+        return pgm_read_byte(&kCharmap[aCharcode - 32][aCutColumn - 2]);
     }
 }
