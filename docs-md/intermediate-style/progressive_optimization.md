@@ -8,7 +8,7 @@ Below is the step-by-step transformation of `UserForm1`, highlighting **only the
 
 ## Baseline: Declarative Prototype
 
-Passing `aIsFocused` directly into the `Grid` constructor allows `Grid` to handle top-level container focus internally. You only pass `IsFocused(&child)` to individual row draw calls.
+Passing `aIsFocused` directly into the `BoxyRest` constructor allows `BoxyRest` to handle top-level container focus internally. You only pass `IsFocused(&child)` to individual row draw calls.
 
 ```cpp
 class UserForm1 : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
@@ -16,20 +16,20 @@ class UserForm1 : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
     Focusable<KeyCatcher<InputButton, KEY_LEFT, KEY_RIGHT>> mSaveButton {this, &onSavePressed, F("Save")};
 
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, bool aIsFocused) override {
-        Grid grid(aScreen, aPos, aSize, aIsFocused);
-        grid.SliceRow(1).Draw(mInputField, IsFocused(&mInputField));
-        grid.SliceRow(1).Clear();
-        grid.SliceRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
-        grid.Rest().Clear();
+        BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
+        rest.CutRow(1).Draw(mInputField, IsFocused(&mInputField));
+        rest.CutRow(1).Clear();
+        rest.CutRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
+        rest.Clear();
     }
 };
 ```
 
 ---
 
-## Step 1: Removing `Grid` (Direct Coordinate Math)
+## Step 1: Removing `BoxyRest` (Direct Coordinate Math)
 
-Replace dynamic grid slicing with direct `Coor` calculations in `drawer()`.
+Replace dynamic rest slicing with direct `Coor` calculations in `drawer()`.
 
 ### Code Diff
 ```cpp
@@ -37,8 +37,8 @@ Replace dynamic grid slicing with direct `Coor` calculations in `drawer()`.
 void drawer(Screen *aScreen, Coor aPos, Coor aSize, bool aIsFocused) override {
     const int16_t rowHeight = 10;
     
-    // Grid automatically combined container focus (aIsFocused) with child focus.
-    // Without Grid, you must manually chain them using `&&` on every single draw call:
+    // BoxyRest automatically combined container focus (aIsFocused) with child focus.
+    // Without BoxyRest, you must manually chain them using `&&` on every single draw call:
     mInputField.drawer(aScreen, aPos, {aSize.x, rowHeight}, aIsFocused && IsFocused(&mInputField));
     
     Coor row2Pos = {aPos.x, (int16_t)(aPos.y + rowHeight + 1)};
@@ -54,7 +54,7 @@ void drawer(Screen *aScreen, Coor aPos, Coor aSize, bool aIsFocused) override {
 ```
 
 ### Trade-offs
-* **Manual Focus Propagation:** Losing `Grid` forces you to explicitly repeat the `aIsFocused &&` condition for every single child control during rendering.
+* **Manual Focus Propagation:** Losing `BoxyRest` forces you to explicitly repeat the `aIsFocused &&` condition for every single child control during rendering.
 * **Fragile Layout:** Any change to a row height forces manual re-calculation of all subsequent offsets.
 * **Overlapping Risk:** Higher probability of manual offset calculation errors leading to visual bugs.
 

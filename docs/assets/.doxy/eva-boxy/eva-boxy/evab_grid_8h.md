@@ -36,7 +36,7 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**Grid**](classevab_1_1_grid.md) <br>_Layout manager for grid-based UI arrangement._  |
+| class | [**BoxyRest**](classevab_1_1_boxy_rest.md) <br>_Layout manager for rest-based UI arrangement._  |
 
 
 

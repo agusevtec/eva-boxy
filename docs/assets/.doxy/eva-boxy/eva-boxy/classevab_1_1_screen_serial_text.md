@@ -155,7 +155,7 @@ See [evab::Screen](classevab_1_1_screen.md)
 ## Detailed Description
 
 
-Used for debugging UI layout without physical hardware. Displays characters in a 16x8 grid. 
+Used for debugging UI layout without physical hardware. Displays characters in a 16x8 rest. 
 
 
     

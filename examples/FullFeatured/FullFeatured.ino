@@ -23,7 +23,7 @@
 
 #include <evabLayoutBase.h>
 #include <evabCompositeBase.h>
-#include <evabGrid.h>
+#include <evabBoxyRest.h>
 
 using namespace eva;
 using namespace evab;
@@ -43,19 +43,19 @@ public:
 private:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
   {
-    Grid grid(aScreen, aPos, aSize, aIsFocused);
-    grid.SliceRow(1).TextCenter(F("BOXY - DEMO"));
-    grid.SliceRow(1).Clear();
+    BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
+    rest.CutRow(1).TextCenter(F("BOXY - DEMO"));
+    rest.CutRow(1).Clear();
 
-    Grid row = grid.SliceRow(4);
-    row.SliceCol(2).Clear();
-    row.SliceCol(4).Draw(mMonitorButton,  IsFocused(&mMonitorButton));
-    row.SliceCol(4).Clear();
-    row.SliceCol(4).Draw(mSettingsButton, IsFocused(&mSettingsButton));
-    row.Rest().Clear();
+    BoxyRest row = rest.CutRow(4);
+    row.CutCol(2).Clear();
+    row.CutCol(4).Draw(mMonitorButton,  IsFocused(&mMonitorButton));
+    row.CutCol(4).Clear();
+    row.CutCol(4).Draw(mSettingsButton, IsFocused(&mSettingsButton));
+    row.Clear();
 
-    grid.SliceRow(1).Clear();
-    grid.SliceRow(1).TextCenter(IsFocused(&mMonitorButton) ? F("CLIMAT") : F("SETTINGS"));
+    rest.CutRow(1).Clear();
+    rest.CutRow(1).TextCenter(IsFocused(&mMonitorButton) ? F("CLIMAT") : F("SETTINGS"));
   }
 };
 
@@ -75,21 +75,21 @@ private:
     TitledLeftF<InputFloat> tempField(F("TEMERATURE"), 23);
     TitledLeftF<InputInt> humField(F("HUMIDITY"), 41);
 
-    Grid grid(aScreen, aPos, aSize, 0);
+    BoxyRest rest(aScreen, aPos, aSize, 0);
 
-    Grid row = grid.SliceRow(3);
-    row.SliceCol(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);
-    row.SliceCol(1).Clear();
+    BoxyRest row = rest.CutRow(3);
+    row.CutCol(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);
+    row.CutCol(1).Clear();
     row.Rest().Draw(tempField);
 
-    grid.SliceRow(2).Clear();
+    rest.CutRow(2).Clear();
 
-    row = grid.SliceRow(3);
-    row.SliceCol(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);
-    row.SliceCol(1).Clear();
+    row = rest.CutRow(3);
+    row.CutCol(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);
+    row.CutCol(1).Clear();
     row.Rest().Draw(humField);
 
-    grid.Rest().Clear();
+    rest.Clear();
   }
 
   bool OnKey(Keys aKey) override
@@ -125,15 +125,15 @@ public:
 private:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
   {
-    Grid grid(aScreen, aPos, aSize, aIsFocused);
-    grid.SliceRow(1).Draw(mItem1,  IsFocused(&mItem1));
-    grid.SliceRow(1).Clear();
-    grid.SliceRow(1).Draw(mItem2,  IsFocused(&mItem2));
-    grid.SliceRow(1).Clear();
-    grid.SliceRow(1).Draw(mItem3,  IsFocused(&mItem3));
-    grid.SliceRow(1).Clear();
-    grid.SliceRow(1).Draw(mSaveButton,  IsFocused(&mSaveButton));
-    grid.Rest().Clear();
+    BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
+    rest.CutRow(1).Draw(mItem1,  IsFocused(&mItem1));
+    rest.CutRow(1).Clear();
+    rest.CutRow(1).Draw(mItem2,  IsFocused(&mItem2));
+    rest.CutRow(1).Clear();
+    rest.CutRow(1).Draw(mItem3,  IsFocused(&mItem3));
+    rest.CutRow(1).Clear();
+    rest.CutRow(1).Draw(mSaveButton,  IsFocused(&mSaveButton));
+    rest.Clear();
   }
 };
 

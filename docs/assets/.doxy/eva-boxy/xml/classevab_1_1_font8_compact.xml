@@ -22,10 +22,10 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_font8_compact_1af7ccdf9f104d645a9558a9f7cf2cdb37" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_font8_compact_1a404bc44a17316019b509882081152599" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned char</type>
         <definition>unsigned char evab::Font8Compact::GetVerticalSlice</definition>
-        <argsstring>(char aCharcode, unsigned char aSliceColumn) const override</argsstring>
+        <argsstring>(char aCharcode, unsigned char aCutColumn) const override</argsstring>
         <name>GetVerticalSlice</name>
         <qualifiedname>evab::Font8Compact::GetVerticalSlice</qualifiedname>
         <reimplements refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad">GetVerticalSlice</reimplements>
@@ -35,7 +35,7 @@
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSliceColumn</declname>
+          <declname>aCutColumn</declname>
         </param>
         <briefdescription>
 <para>Gets a vertical slice of a character. </para>
@@ -51,7 +51,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aSliceColumn</parametername>
+<parametername>aCutColumn</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Column index (0-7) </para>
@@ -99,7 +99,7 @@
     </collaborationgraph>
     <location file="src/evabFont8Compact.h" line="14" column="5" bodyfile="src/evabFont8Compact.h" bodystart="15" bodyend="28"/>
     <listofallmembers>
-      <member refid="classevab_1_1_font8_compact_1af7ccdf9f104d645a9558a9f7cf2cdb37" prot="public" virt="virtual"><scope>evab::Font8Compact</scope><name>GetVerticalSlice</name></member>
+      <member refid="classevab_1_1_font8_compact_1a404bc44a17316019b509882081152599" prot="public" virt="virtual"><scope>evab::Font8Compact</scope><name>GetVerticalSlice</name></member>
       <member refid="classevab_1_1_font8_compact_1ac4e893b9a2cb30dc4204a8a1b1246ff0" prot="private" virt="non-virtual"><scope>evab::Font8Compact</scope><name>PROGMEM</name></member>
     </listofallmembers>
   </compounddef>

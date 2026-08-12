@@ -78,7 +78,7 @@ void loop() {
 | `InputFloat` | Float input field |
 | `Labeled<T>` | Wrapper with text label |
 | `ListBox` | Scrollable list |
-| `LayoutPane` | Grid layout (prototyping) |
+| `LayoutPane` | BoxyRest layout (prototyping) |
 | `CompositeBase` | Container for child elements |
 
 ### Fonts

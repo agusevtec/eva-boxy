@@ -13,7 +13,7 @@ nav:
       - Imperative style:
            - Imperative drawing: imperative-style/imperative-drawing.md
            - Visual modifiers: imperative-style/visual-modifiers.md
-           - Grid: imperative-style/grid.md
+           - BoxyRest: imperative-style/boxyrest.md
       - Declaration style:
            - Core concepts: declaration-style/core-concepts.md
            - Behavioral modifiers: declaration-style/behavioral-modifiers.md

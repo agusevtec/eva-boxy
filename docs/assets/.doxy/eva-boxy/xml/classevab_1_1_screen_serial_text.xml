@@ -279,7 +279,7 @@
 <para>Debug screen that renders text to serial output. </para>
     </briefdescription>
     <detaileddescription>
-<para>Used for debugging UI layout without physical hardware. Displays characters in a 16x8 grid. </para>
+<para>Used for debugging UI layout without physical hardware. Displays characters in a 16x8 rest. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">

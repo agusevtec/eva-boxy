@@ -8,7 +8,7 @@
 
 
 ```C++
-// evabGrid.h
+// evabBoxyRest.h
 #pragma once
 
 #include <evabElementBase.h>
@@ -17,16 +17,16 @@
 namespace evab
 {
 
-    class Grid
+    class BoxyRest
     {
     public:
-        Grid(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
+        BoxyRest(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused);
 
-        Grid SliceRow(unsigned char aHeight = 0);
+        BoxyRest CutRow(unsigned char aHeight = 0);
 
-        Grid SliceCol(unsigned char aWidth = 0);
+        BoxyRest CutCol(unsigned char aWidth = 0);
 
-        Grid &Rest();
+        BoxyRest &Rest();
 
         void Draw(ElementBase &aElement, unsigned char aIsFocused = 0);
 

@@ -1,16 +1,16 @@
-// Tests/GridTests.cpp
+// Tests/BoxyRestTests.cpp
 #include <AUnit.h>
-#include <evabGrid.h>
+#include <evabBoxyRest.h>
 #include "MockElementBase.h"
 
 using namespace evab;
 
-test(GridTests, SliceRow_FirstRow_SetsCorrectPosition)
+test(BoxyRestTests, CutRow_FirstRow_SetsCorrectPosition)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     
-    auto row = grid.SliceRow(2);
+    auto row = rest.CutRow(2);
     
     Coor pos = row.GetPos();
     Coor size = row.GetSize();
@@ -21,13 +21,13 @@ test(GridTests, SliceRow_FirstRow_SetsCorrectPosition)
     assertEqual(2, size.Y);
 }
 
-test(GridTests, SliceRow_MultipleRows_AdvancesPositionCorrectly)
+test(BoxyRestTests, CutRow_MultipleRows_AdvancesPositionCorrectly)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     
-    auto row1 = grid.SliceRow(2);
-    auto row2 = grid.SliceRow(3);
+    auto row1 = rest.CutRow(2);
+    auto row2 = rest.CutRow(3);
     
     Coor pos2 = row2.GetPos();
     Coor size2 = row2.GetSize();
@@ -38,13 +38,13 @@ test(GridTests, SliceRow_MultipleRows_AdvancesPositionCorrectly)
     assertEqual(3, size2.Y);
 }
 
-test(GridTests, SliceCol_WithinRow_SetsCorrectPosition)
+test(BoxyRestTests, CutCol_WithinRow_SetsCorrectPosition)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     
-    auto row = grid.SliceRow(2);
-    auto col = row.SliceCol(6);
+    auto row = rest.CutRow(2);
+    auto col = row.CutCol(6);
     
     Coor pos = col.GetPos();
     Coor size = col.GetSize();
@@ -55,14 +55,14 @@ test(GridTests, SliceCol_WithinRow_SetsCorrectPosition)
     assertEqual(2, size.Y);
 }
 
-test(GridTests, SliceCol_MultipleCols_AdvancesPositionCorrectly)
+test(BoxyRestTests, CutCol_MultipleCols_AdvancesPositionCorrectly)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     
-    auto row = grid.SliceRow(2);
-    auto col1 = row.SliceCol(6);
-    auto col2 = row.SliceCol(4);
+    auto row = rest.CutRow(2);
+    auto col1 = row.CutCol(6);
+    auto col2 = row.CutCol(4);
     
     Coor pos2 = col2.GetPos();
     Coor size2 = col2.GetSize();
@@ -73,13 +73,13 @@ test(GridTests, SliceCol_MultipleCols_AdvancesPositionCorrectly)
     assertEqual(2, size2.Y);
 }
 
-test(GridTests, Rest_UsesRemainingSpace)
+test(BoxyRestTests, Rest_UsesRemainingSpace)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     
-    auto row = grid.SliceRow(2);
-    auto col = row.SliceCol(6);
+    auto row = rest.CutRow(2);
+    auto col = row.CutCol(6);
     auto rest = row.Rest();
     
     Coor pos = rest.GetPos();
@@ -91,14 +91,14 @@ test(GridTests, Rest_UsesRemainingSpace)
     assertEqual(2, size.Y);
 }
 
-test(GridTests, Draw_Element_DrawsAtCorrectPosition)
+test(BoxyRestTests, Draw_Element_DrawsAtCorrectPosition)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     MockElement element("A");
     screen.clear();
     
-    auto row = grid.SliceRow(2);
+    auto row = rest.CutRow(2);
     row.Draw(&screen, &element, 1);
     
     assertTrue(element.mDrawCalled);
@@ -109,13 +109,13 @@ test(GridTests, Draw_Element_DrawsAtCorrectPosition)
     assertEqual(1, element.mLastFocused);
 }
 
-// test(GridTests, Blank_ClearsArea)
+// test(BoxyRestTests, Blank_ClearsArea)
 // {
 //     MockScreen screen({16, 8});
-//     Grid grid(Coor(0, 0), Coor(16, 8));
+//     BoxyRest rest(Coor(0, 0), Coor(16, 8));
 //     screen.clear();
     
-//     auto row = grid.SliceRow(2);
+//     auto row = rest.CutRow(2);
 //     row.Blank(&screen);
     
 //     assertEqual(1, screen.mCleared.size());
@@ -126,40 +126,40 @@ test(GridTests, Draw_Element_DrawsAtCorrectPosition)
 //     assertEqual(2, std::get<1>(cleared).Y);
 // }
 
-test(GridTests, SliceRow_RowHeightZero_UsesRemainingHeight)
+test(BoxyRestTests, CutRow_RowHeightZero_UsesRemainingHeight)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     
-    auto row1 = grid.SliceRow(2);
-    auto row2 = grid.SliceRow(0); // Should use remaining
+    auto row1 = rest.CutRow(2);
+    auto row2 = rest.CutRow(0); // Should use remaining
     
     Coor size2 = row2.GetSize();
     assertEqual(6, size2.Y); // 8 - 2 = 6
 }
 
-test(GridTests, SliceCol_ColWidthZero_UsesRemainingWidth)
+test(BoxyRestTests, CutCol_ColWidthZero_UsesRemainingWidth)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     
-    auto row = grid.SliceRow(2);
-    auto col1 = row.SliceCol(6);
-    auto col2 = row.SliceCol(0); // Should use remaining
+    auto row = rest.CutRow(2);
+    auto col1 = row.CutCol(6);
+    auto col2 = row.CutCol(0); // Should use remaining
     
     Coor size2 = col2.GetSize();
     assertEqual(10, size2.X); // 16 - 6 = 10
 }
 
-test(GridTests, NestedGrids_NestedSlicing_WorksCorrectly)
+test(BoxyRestTests, NestedBoxyRests_NestedSlicing_WorksCorrectly)
 {
     MockScreen screen({16, 8});
-    Grid grid(Coor(0, 0), Coor(16, 8));
+    BoxyRest rest(Coor(0, 0), Coor(16, 8));
     
-    auto row = grid.SliceRow(4);
-    auto col = row.SliceCol(8);
-    auto nestedRow = col.SliceRow(2);
-    auto nestedCol = nestedRow.SliceCol(4);
+    auto row = rest.CutRow(4);
+    auto col = row.CutCol(8);
+    auto nestedRow = col.CutRow(2);
+    auto nestedCol = nestedRow.CutCol(4);
     
     Coor pos = nestedCol.GetPos();
     Coor size = nestedCol.GetSize();

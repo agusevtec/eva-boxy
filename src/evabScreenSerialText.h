@@ -9,7 +9,7 @@ namespace evab
      * @brief Debug screen that renders text to serial output
      * 
      * Used for debugging UI layout without physical hardware.
-     * Displays characters in a 16x8 grid.
+     * Displays characters in a 16x8 rest.
      */
     class ScreenSerialText : public Screen
     {

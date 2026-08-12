@@ -4,13 +4,15 @@
 
 ### Why EVA Boxy?
 
-Historically, embedded developers were trapped in standard imperative display libraries. While simple, managing raw coordinates manually leads to fragile layout spaghetti code. Modern declarative frameworks solve this on the desktop, but literally copying their approach is completely unviable for resource-constrained microcontrollers — they rely on heavy class hierarchies, dynamic allocations, and virtual tables.
+The core priority of EVA Boxy is developer comfort when building user interfaces.
 
-EVA Boxy breaks this limitation by leveraging the EVA approach.
+Writing complex UI is enjoyable when the code is declarative, visual, and easily maintainable — just like in large desktop frameworks. However, a straightforward port of desktop patterns to microcontrollers is unviable: they rely on heavy class hierarchies, virtual tables, and dynamic memory allocation, which are fatal for resource-constrained embedded systems.
 
-Its defining architectural genotype is **compile-time decorator composition**, allowing you to include only the exact resources you need. Paired with deliberate functional boundaries — zero z-order, zero clipping buffers, and zero dynamic allocations — Boxy delivers pure, deterministic pixel execution.
+EVA Boxy breaks these limitations by leveraging the EVA approach.
 
-EVA Boxy is optimized for text and symbol rendering on low-resolution displays, with optional pictogram support for icon-based interfaces.
+Its defining architectural genotype is compile-time decorator composition, allowing you to include only the exact resources you need. Paired with deliberate functional boundaries — zero z-order, zero clipping buffers, and zero dynamic allocations — Boxy delivers pure, deterministic pixel execution.
+
+At the same time, EVA Boxy remains comfortable for developers who prefer a traditional imperative style or require direct display control. The framework is optimized for text and symbol rendering on low-resolution displays, with optional pictogram support for icon-based interfaces.
 
 ### Architectural Styles
 
@@ -36,11 +38,11 @@ class UserForm1 : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
     }
 
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-        Grid grid(aScreen, aPos, aSize, aIsFocused);
-        grid.SliceRow(1).Draw(mInputField, IsFocused(&mInputField));
-        grid.SliceRow(1).Clear();
-        grid.SliceRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
-        grid.Rest().Clear();
+        BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
+        rest.CutRow(1).Draw(mInputField, IsFocused(&mInputField));
+        rest.CutRow(1).Clear();
+        rest.CutRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
+        rest.Clear();
     }
 };
 ```
@@ -71,7 +73,7 @@ class UserForm1 : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
 
 For developers who prefer direct, traditional control or need absolute minimal resources usage. Even in direct-to-screen mode, Boxy upgrades standard imperative code with a **Guaranteed Bounding Box Principle**: every visual element strictly owns, clears, and renders within its assigned rectangular area. No visual artifacts, no manual clear-screen hacks, plus integrated vector icons powered by Remixicon.
 
-Draw call explicitly defines its spatial boundaries using grid or pixel coordinates: `{X, Y}, {Width, Height}`
+Draw call explicitly defines its spatial boundaries using rest or pixel coordinates: `{X, Y}, {Width, Height}`
 
 ```cpp
 screen.TextCenter({0, 1}, {16, 1}, "Size 1", 0); 

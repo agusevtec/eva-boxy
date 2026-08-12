@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="classevab_1_1_boxy_rest" kind="class" language="C++" prot="public">
+    <compoundname>evab::BoxyRest</compoundname>
+    <includes refid="evab_grid_8h" local="no">evabGrid.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classevab_1_1_boxy_rest_1a58826452dafb96a6490563e6608dabe8" prot="private" static="no" mutable="no">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::BoxyRest::mTopLeft</definition>
+        <argsstring></argsstring>
+        <name>mTopLeft</name>
+        <qualifiedname>evab::BoxyRest::mTopLeft</qualifiedname>
+        <briefdescription>
+<para>Top-left corner of current cell. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="142" column="14" bodyfile="src/evabGrid.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_boxy_rest_1a7453b7710b0806d443ffd0495a78f6ca" prot="private" static="no" mutable="no">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::BoxyRest::mBottomRight</definition>
+        <argsstring></argsstring>
+        <name>mBottomRight</name>
+        <qualifiedname>evab::BoxyRest::mBottomRight</qualifiedname>
+        <briefdescription>
+<para>Bottom-right corner of current cell. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="143" column="14" bodyfile="src/evabGrid.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_boxy_rest_1a3470feb6e925abc3d2270766371857b9" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char evab::BoxyRest::mIsFocused</definition>
+        <argsstring></argsstring>
+        <name>mIsFocused</name>
+        <qualifiedname>evab::BoxyRest::mIsFocused</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="144" column="23" bodyfile="src/evabGrid.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_boxy_rest_1afaecc970615e73585284fad1e837a623" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+        <definition>const Screen* evab::BoxyRest::mScreen</definition>
+        <argsstring></argsstring>
+        <name>mScreen</name>
+        <qualifiedname>evab::BoxyRest::mScreen</qualifiedname>
+        <briefdescription>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="145" column="22" bodyfile="src/evabGrid.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>evab::BoxyRest::BoxyRest</definition>
+        <argsstring>(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)</argsstring>
+        <name>BoxyRest</name>
+        <qualifiedname>evab::BoxyRest::BoxyRest</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> *</type>
+          <declname>aScreen</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aPos</declname>
+        </param>
+        <param>
+          <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+          <declname>aSize</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> for a specific area. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aScreen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classevab_1_1_screen" kindref="compound">Screen</ref> to draw on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position on screen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the rest area </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="34" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1ae2d2fd2c3c0383bfd6d8620bc2712b6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kindref="member">BoxyRest</ref></type>
+        <definition>BoxyRest evab::BoxyRest::CutRow</definition>
+        <argsstring>(unsigned char aHeight=0)</argsstring>
+        <name>CutRow</name>
+        <qualifiedname>evab::BoxyRest::CutRow</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aHeight</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> for the next row. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the row (0 = use remaining height) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> New rest representing the row </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="42" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1ad19a2f7d77db899812dc8151b1402497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kindref="member">BoxyRest</ref></type>
+        <definition>BoxyRest evab::BoxyRest::CutCol</definition>
+        <argsstring>(unsigned char aWidth=0)</argsstring>
+        <name>CutCol</name>
+        <qualifiedname>evab::BoxyRest::CutCol</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aWidth</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Creates a new <ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> for the next column. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the column (0 = use remaining width) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> New rest representing the column </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="50" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a721ea697d4afb79ed03ce141a0b04146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kindref="member">BoxyRest</ref> &amp;</type>
+        <definition>BoxyRest &amp; evab::BoxyRest::Rest</definition>
+        <argsstring>()</argsstring>
+        <name>Rest</name>
+        <qualifiedname>evab::BoxyRest::Rest</qualifiedname>
+        <briefdescription>
+<para>Returns the remaining space from current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref>&amp; Reference to this rest </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="57" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a54425f8ddd1f2c3788adcba9aa3fed79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::BoxyRest::Draw</definition>
+        <argsstring>(ElementBase &amp;aElement, unsigned char aIsFocused=0)</argsstring>
+        <name>Draw</name>
+        <qualifiedname>evab::BoxyRest::Draw</qualifiedname>
+        <param>
+          <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> &amp;</type>
+          <declname>aElement</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Draws an element in the current cell. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Element to draw </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Focus state (1 = focused, 0 = not focused) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="65" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1aa1ced89c1e70302c4a6abc15d4d4b7d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TAlign</type>
+          </param>
+          <param>
+            <type>typename TText</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void evab::BoxyRest::Text</definition>
+        <argsstring>(TText aText, unsigned char aIsFocused=0)</argsstring>
+        <name>Text</name>
+        <qualifiedname>evab::BoxyRest::Text</qualifiedname>
+        <param>
+          <type>TText</type>
+          <declname>aText</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Draws text with specified alignment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>TAlign</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alignment strategy (<ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref>, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref>, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref>) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>TText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Text to draw </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="76" column="14" bodyfile="src/evabGrid.h" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a044ca42dabdb73cbc41a3ee5cb76a874" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void evab::BoxyRest::TextLeft</definition>
+        <argsstring>(T aText, unsigned char aIsFocused=0)</argsstring>
+        <name>TextLeft</name>
+        <qualifiedname>evab::BoxyRest::TextLeft</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>aText</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Draws left-aligned text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="86" column="14" bodyfile="src/evabGrid.h" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a66cf2cfddc30b3047e940df4362c6a41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void evab::BoxyRest::TextCenter</definition>
+        <argsstring>(T aText, unsigned char aIsFocused=0)</argsstring>
+        <name>TextCenter</name>
+        <qualifiedname>evab::BoxyRest::TextCenter</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>aText</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Draws center-aligned text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="96" column="14" bodyfile="src/evabGrid.h" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1ab46fefeb91b8794678227f062e251aac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void evab::BoxyRest::TextRight</definition>
+        <argsstring>(T aText, unsigned char aIsFocused=0)</argsstring>
+        <name>TextRight</name>
+        <qualifiedname>evab::BoxyRest::TextRight</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>aText</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Draws right-aligned text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="106" column="14" bodyfile="src/evabGrid.h" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1afd3136f99ad1259fc8dc380b90c3ded5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::BoxyRest::Picto</definition>
+        <argsstring>(const unsigned char *aPictogram, unsigned char aIsFocused=0)</argsstring>
+        <name>Picto</name>
+        <qualifiedname>evab::BoxyRest::Picto</qualifiedname>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>aPictogram</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Draws a pictogram in the current cell. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aPictogram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pictogram data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aIsFocused</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Color/inversion flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="118" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a8331b1e891f10d1cb8475194dbf32b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::BoxyRest::Clear</definition>
+        <argsstring>(unsigned char aIsFocused=0)</argsstring>
+        <name>Clear</name>
+        <qualifiedname>evab::BoxyRest::Clear</qualifiedname>
+        <param>
+          <type>unsigned char</type>
+          <declname>aIsFocused</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Clears the current cell area. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="124" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a29b7c33be369cd036cfdbf9da83832e6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::BoxyRest::GetPos</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPos</name>
+        <qualifiedname>evab::BoxyRest::GetPos</qualifiedname>
+        <briefdescription>
+<para>Gets the current position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Current position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="131" column="14" bodyfile="src/evabGrid.h" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classevab_1_1_boxy_rest_1a0be6fe214af707c3950eb5e551bc5b08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
+        <definition>Coor evab::BoxyRest::GetSize</definition>
+        <argsstring>() const</argsstring>
+        <name>GetSize</name>
+        <qualifiedname>evab::BoxyRest::GetSize</qualifiedname>
+        <briefdescription>
+<para>Gets the current size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref> Current size (clamped to non-negative values) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabGrid.h" line="138" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Layout manager for rest-based UI arrangement. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> provides a fluent interface for organizing UI elements in a rest. Each <ref refid="classevab_1_1_boxy_rest_1ae2d2fd2c3c0383bfd6d8620bc2712b6b" kindref="member">CutRow()</ref>/CutCol() returns a new <ref refid="classevab_1_1_boxy_rest" kindref="compound">BoxyRest</ref> representing the cell.</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" kindref="member">BoxyRest</ref><sp/>rest({0,0},<sp/>{16,8});</highlight></codeline>
+<codeline><highlight class="normal">rest.CutRow(2).Draw(element1);</highlight></codeline>
+<codeline><highlight class="normal">rest.CutRow(2).CutCol(2).Draw(element2);</highlight></codeline>
+<codeline><highlight class="normal">rest.CutRow(2).CutCol(2).Clear();</highlight></codeline>
+<codeline><highlight class="normal">rest.Clear();</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="src/evabGrid.h" line="24" column="5" bodyfile="src/evabGrid.h" bodystart="25" bodyend="146"/>
+    <listofallmembers>
+      <member refid="classevab_1_1_boxy_rest_1aa41d9cc0860a116cde2da67ceb2b3bc2" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>BoxyRest</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a8331b1e891f10d1cb8475194dbf32b3e" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Clear</name></member>
+      <member refid="classevab_1_1_boxy_rest_1ad19a2f7d77db899812dc8151b1402497" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>CutCol</name></member>
+      <member refid="classevab_1_1_boxy_rest_1ae2d2fd2c3c0383bfd6d8620bc2712b6b" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>CutRow</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a54425f8ddd1f2c3788adcba9aa3fed79" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Draw</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a29b7c33be369cd036cfdbf9da83832e6" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>GetPos</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a0be6fe214af707c3950eb5e551bc5b08" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>GetSize</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a7453b7710b0806d443ffd0495a78f6ca" prot="private" virt="non-virtual"><scope>evab::BoxyRest</scope><name>mBottomRight</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a3470feb6e925abc3d2270766371857b9" prot="private" virt="non-virtual"><scope>evab::BoxyRest</scope><name>mIsFocused</name></member>
+      <member refid="classevab_1_1_boxy_rest_1afaecc970615e73585284fad1e837a623" prot="private" virt="non-virtual"><scope>evab::BoxyRest</scope><name>mScreen</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a58826452dafb96a6490563e6608dabe8" prot="private" virt="non-virtual"><scope>evab::BoxyRest</scope><name>mTopLeft</name></member>
+      <member refid="classevab_1_1_boxy_rest_1afd3136f99ad1259fc8dc380b90c3ded5" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Picto</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a721ea697d4afb79ed03ce141a0b04146" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Rest</name></member>
+      <member refid="classevab_1_1_boxy_rest_1aa1ced89c1e70302c4a6abc15d4d4b7d7" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>Text</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a66cf2cfddc30b3047e940df4362c6a41" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>TextCenter</name></member>
+      <member refid="classevab_1_1_boxy_rest_1a044ca42dabdb73cbc41a3ee5cb76a874" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>TextLeft</name></member>
+      <member refid="classevab_1_1_boxy_rest_1ab46fefeb91b8794678227f062e251aac" prot="public" virt="non-virtual"><scope>evab::BoxyRest</scope><name>TextRight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

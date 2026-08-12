@@ -452,20 +452,20 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
-      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1a39b74b4c2aa196a0db773e383d294ec0" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_p_c_d8544_1ad43b370ec19537bf44781ff767fc6a1b" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void evab::ScreenPCD8544::drawVerticalSlice</definition>
-        <argsstring>(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override</argsstring>
+        <argsstring>(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) override</argsstring>
         <name>drawVerticalSlice</name>
         <qualifiedname>evab::ScreenPCD8544::drawVerticalSlice</qualifiedname>
-        <reimplements refid="classevab_1_1_screen_page8_base_1a70351a018f4af4d046c312c18accfac7">drawVerticalSlice</reimplements>
+        <reimplements refid="classevab_1_1_screen_page8_base_1adf878cfb7d28984df823179ee872477d">drawVerticalSlice</reimplements>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSliceColumn</declname>
+          <declname>aCutColumn</declname>
         </param>
         <param>
           <type>unsigned char</type>
@@ -485,7 +485,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aSliceColumn</parametername>
+<parametername>aCutColumn</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Column within the tile (0-7) </para>
@@ -691,7 +691,7 @@
       <member refid="classevab_1_1_screen_p_c_d8544_1ad2d1a22a4c78bb862ee9354fa89fe504" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>CMD_SET_Y</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1aa477aa8668fe7f21a21658943d4fd149" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>DrawSymbol</name></member>
-      <member refid="classevab_1_1_screen_p_c_d8544_1a39b74b4c2aa196a0db773e383d294ec0" prot="private" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>drawVerticalSlice</name></member>
+      <member refid="classevab_1_1_screen_p_c_d8544_1ad43b370ec19537bf44781ff767fc6a1b" prot="private" virt="virtual"><scope>evab::ScreenPCD8544</scope><name>drawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a098109f64ab1e74a0fb479b24e7cf41f" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>initDisplay</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1abe59098a8a395f92479046c7ff992d0f" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>mCEPin</name></member>
       <member refid="classevab_1_1_screen_p_c_d8544_1a747c2c0b2bd7392ecbdd8b5cfb098312" prot="private" virt="non-virtual"><scope>evab::ScreenPCD8544</scope><name>mDCPin</name></member>

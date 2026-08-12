@@ -13,7 +13,7 @@ This two-stage approach simplifies manual tweaking, visual debugging (preview), 
 1. **Step 1: Rasterization (Font/PNG -> `.txt`)**
    * Source vector fonts (`.ttf`/`.otf`) or raster images (`.png`) are converted into a folder containing individual `.txt` files[cite: 1, 2, 3].
    * In these `.txt` files, each character is represented as a matrix of `#` (active pixel) and `.` (empty pixel) characters[cite: 1, 3].
-   * Working grid sizes (e.g., 16x16, 24x24), baseline or bounding box alignment, automatic point size selection, and descaling are configured at this stage[cite: 1, 2].
+   * Working rest sizes (e.g., 16x16, 24x24), baseline or bounding box alignment, automatic point size selection, and descaling are configured at this stage[cite: 1, 2].
 
 2. **Step 2: Code Generation (`.txt` -> C++ PROGMEM)**
    * Scripts read the folder with `.txt` files, perform bit-packing (vertical columns of 8 bits where `bit 0` is the top pixel), and generate ready-to-use C++ code[cite: 4, 5].
@@ -25,7 +25,7 @@ This two-stage approach simplifies manual tweaking, visual debugging (preview), 
 Although microdisplays most frequently deal with **8x8** fonts, rasterizing directly at low resolutions during Step 1 often results in jagged edges or lost character details.
 
 In such cases, an experimental downscaling workflow works best:
-* **High-Res Rendering:** The font is rasterized into a larger **16x16** (or 24x24) grid, after which a downscaling factor `--descale` (`-d 2`) reduces the matrix back to the final 8x8 target size[cite: 1, 2].
+* **High-Res Rendering:** The font is rasterized into a larger **16x16** (or 24x24) rest, after which a downscaling factor `--descale` (`-d 2`) reduces the matrix back to the final 8x8 target size[cite: 1, 2].
 * **Experimental Process:** Finding the optimal parameters (`-w`, `-h`, `-s`, `-d`) is an unformalized, trial-and-error process[cite: 1, 2]. Different typefaces react to descaling uniquely, so maximum legibility is achieved by inspecting the preview `.txt` files and tweaking parameters iteratively.
 
 ---
@@ -52,7 +52,7 @@ In such cases, an experimental downscaling workflow works best:
 Converting a standard typeface into a Charmap array for a microdisplay[cite: 4]:
 
 ```bash
-# Step 1: Rasterize ASCII range (32-127) into a 16x16 grid
+# Step 1: Rasterize ASCII range (32-127) into a 16x16 rest
 python fontliterals2textdir.py arial.ttf -r 32-127 -w 16 -h 16 -s 16 -d 2
 
 # Inspect/tweak glyphs manually inside ./arial/*.txt if needed

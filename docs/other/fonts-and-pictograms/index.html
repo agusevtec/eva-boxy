@@ -401,14 +401,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../imperative-style/grid/" class="md-nav__link">
+      <a href="../../imperative-style/boxyrest/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Grid
+    BoxyRest
   
 
     
@@ -1204,7 +1204,7 @@
 <li>Source vector fonts (<code>.ttf</code>/<code>.otf</code>) or raster images (<code>.png</code>) are converted into a folder containing individual <code>.txt</code> files[cite: 1, 2, 3].</li>
 <li>In these <code>.txt</code> files, each character is represented as a matrix of <code>#</code> (active pixel) and <code>.</code> (empty pixel) characters[cite: 1, 3].</li>
 <li>
-<p>Working grid sizes (e.g., 16x16, 24x24), baseline or bounding box alignment, automatic point size selection, and descaling are configured at this stage[cite: 1, 2].</p>
+<p>Working rest sizes (e.g., 16x16, 24x24), baseline or bounding box alignment, automatic point size selection, and descaling are configured at this stage[cite: 1, 2].</p>
 </li>
 <li>
 <p><strong>Step 2: Code Generation (<code>.txt</code> -&gt; C++ PROGMEM)</strong></p>
@@ -1215,7 +1215,7 @@
 <h3 id="resolution-nuances-8x8-vs-16x16-with-descale">Resolution Nuances: 8x8 vs 16x16 with Descale<a class="headerlink" href="#resolution-nuances-8x8-vs-16x16-with-descale" title="Permanent link">&para;</a></h3>
 <p>Although microdisplays most frequently deal with <strong>8x8</strong> fonts, rasterizing directly at low resolutions during Step 1 often results in jagged edges or lost character details.</p>
 <p>In such cases, an experimental downscaling workflow works best:
-* <strong>High-Res Rendering:</strong> The font is rasterized into a larger <strong>16x16</strong> (or 24x24) grid, after which a downscaling factor <code>--descale</code> (<code>-d 2</code>) reduces the matrix back to the final 8x8 target size[cite: 1, 2].
+* <strong>High-Res Rendering:</strong> The font is rasterized into a larger <strong>16x16</strong> (or 24x24) rest, after which a downscaling factor <code>--descale</code> (<code>-d 2</code>) reduces the matrix back to the final 8x8 target size[cite: 1, 2].
 * <strong>Experimental Process:</strong> Finding the optimal parameters (<code>-w</code>, <code>-h</code>, <code>-s</code>, <code>-d</code>) is an unformalized, trial-and-error process[cite: 1, 2]. Different typefaces react to descaling uniquely, so maximum legibility is achieved by inspecting the preview <code>.txt</code> files and tweaking parameters iteratively.</p>
 <hr />
 <h3 id="step-1-tools-converters-to-txt">Step 1 Tools (Converters to <code>.txt</code>)<a class="headerlink" href="#step-1-tools-converters-to-txt" title="Permanent link">&para;</a></h3>
@@ -1234,7 +1234,7 @@
 <h3 id="practical-examples">Practical Examples<a class="headerlink" href="#practical-examples" title="Permanent link">&para;</a></h3>
 <p><strong>1. Generating a Text Font (Arial)</strong></p>
 <p>Converting a standard typeface into a Charmap array for a microdisplay[cite: 4]:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Step 1: Rasterize ASCII range (32-127) into a 16x16 grid</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Step 1: Rasterize ASCII range (32-127) into a 16x16 rest</span>
 python<span class="w"> </span>fontliterals2textdir.py<span class="w"> </span>arial.ttf<span class="w"> </span>-r<span class="w"> </span><span class="m">32</span>-127<span class="w"> </span>-w<span class="w"> </span><span class="m">16</span><span class="w"> </span>-h<span class="w"> </span><span class="m">16</span><span class="w"> </span>-s<span class="w"> </span><span class="m">16</span><span class="w"> </span>-d<span class="w"> </span><span class="m">2</span>
 
 <span class="c1"># Inspect/tweak glyphs manually inside ./arial/*.txt if needed</span>

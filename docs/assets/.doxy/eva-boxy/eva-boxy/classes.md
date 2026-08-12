@@ -28,6 +28,8 @@
 
 * [**Boxy**](classevab_1_1_boxy.md)
 ([**evab**](namespaceevab.md))
+* [**BoxyRest**](classevab_1_1_boxy_rest.md)
+([**evab**](namespaceevab.md))
 
 
 ## c
@@ -57,12 +59,6 @@
 * [**Font8Compact**](classevab_1_1_font8_compact.md)
 ([**evab**](namespaceevab.md))
 * [**Font8Narrow**](classevab_1_1_font8_narrow.md)
-([**evab**](namespaceevab.md))
-
-
-## g
-
-* [**Grid**](classevab_1_1_grid.md)
 ([**evab**](namespaceevab.md))
 
 

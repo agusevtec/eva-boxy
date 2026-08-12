@@ -37,9 +37,9 @@ using namespace evab;
         return {16, 8}; 
     }
 
-    void ScreenSerialPixel::drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)
+    void ScreenSerialPixel::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
     {
-        unsigned char x = aPosition.X * 8 + aSliceColumn;
+        unsigned char x = aPosition.X * 8 + aCutColumn;
         unsigned char page = aPosition.Y;
 
         if (x < 128 && page < 8)

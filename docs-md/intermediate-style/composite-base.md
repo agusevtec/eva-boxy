@@ -1,6 +1,6 @@
 # CompositeBase
 
-`CompositeBase` is a lightweight alternative to `LayoutBase`. While `LayoutBase` provides automatic focus routing and grid-based child propagation, `CompositeBase` serves as a minimal, bare-bones foundation for custom composite elements without layout calculation overhead.
+`CompositeBase` is a lightweight alternative to `LayoutBase`. While `LayoutBase` provides automatic focus routing and rest-based child propagation, `CompositeBase` serves as a minimal, bare-bones foundation for custom composite elements without layout calculation overhead.
 
 Because it eliminates structural constraints, you gain full control over child execution, but you are directly responsible for **manual focus management**, **explicit freezer propagation**, and **manual positioning**.
 
@@ -10,10 +10,10 @@ Because it eliminates structural constraints, you gain full control over child e
 
 | Feature | `CompositeBase` | `LayoutBase` |
 | :--- | :--- | :--- |
-| **Overhead** | Minimal / Lightweight | Higher (includes layout grid logic) |
+| **Overhead** | Minimal / Lightweight | Higher (includes layout rest logic) |
 | **Freezer Propagation** | **Manual** (override `freezer()`) | Automatic across layout slots |
 | **Focus & Key Routing** | **Manual** (via `onResidualKey()`) | Automatic focus movement |
-| **Child Positioning** | Direct coordinate math | Managed via `Grid` |
+| **Child Positioning** | Direct coordinate math | Managed via `BoxyRest` |
 | **Best For** | Compact custom widgets, dialogs | Complex screens, multi-slot views |
 
 ---
@@ -62,8 +62,8 @@ protected:
 };
 ```
 
-### 3. Lightweight Drawing Without Grid
-To keep memory and FLASH usage as low as possible, avoid using `Grid` or heavy layout engines inside `drawer()`. Calculate positions directly using simple `Coor` offsets.
+### 3. Lightweight Drawing Without BoxyRest
+To keep memory and FLASH usage as low as possible, avoid using `BoxyRest` or heavy layout engines inside `drawer()`. Calculate positions directly using simple `Coor` offsets.
 
 When passing the `focused` state to children, combine the parent's global focus with the child's local focus (`focused && child.IsFocused()`). This ensures child elements are not highlighted as active when the entire container itself loses focus:
 
@@ -71,7 +71,7 @@ When passing the `focused` state to children, combine the parent's global focus 
 void drawer(Screen* screen, Coor pos, Coor size, bool focused) override {
     screen->Clear(pos, size, 0); // Mandatory rect clearance
 
-    // Manual positioning without Grid overhead
+    // Manual positioning without BoxyRest overhead
     Coor halfWidth = { (int16_t)(size.x / 2), size.y };
     Coor rightOffset = { (int16_t)(pos.x + halfWidth.x), pos.y };
 

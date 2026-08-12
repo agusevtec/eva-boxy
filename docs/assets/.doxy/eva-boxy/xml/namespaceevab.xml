@@ -12,6 +12,7 @@
     <innerclass refid="classevab_1_1_album_signal" prot="public">evab::AlbumSignal</innerclass>
     <innerclass refid="classevab_1_1_album_speaker" prot="public">evab::AlbumSpeaker</innerclass>
     <innerclass refid="classevab_1_1_boxy" prot="public">evab::Boxy</innerclass>
+    <innerclass refid="classevab_1_1_boxy_rest" prot="public">evab::BoxyRest</innerclass>
     <innerclass refid="structevab_1_1_center_align" prot="public">evab::CenterAlign</innerclass>
     <innerclass refid="classevab_1_1_composite_base" prot="public">evab::CompositeBase</innerclass>
     <innerclass refid="structevab_1_1_coor" prot="public">evab::Coor</innerclass>
@@ -20,7 +21,6 @@
     <innerclass refid="classevab_1_1_font8_bold" prot="public">evab::Font8Bold</innerclass>
     <innerclass refid="classevab_1_1_font8_compact" prot="public">evab::Font8Compact</innerclass>
     <innerclass refid="classevab_1_1_font8_narrow" prot="public">evab::Font8Narrow</innerclass>
-    <innerclass refid="classevab_1_1_grid" prot="public">evab::Grid</innerclass>
     <innerclass refid="structevab_1_1_horizontal_progress_bar_charset" prot="public">evab::HorizontalProgressBarCharset</innerclass>
     <innerclass refid="classevab_1_1_horizontal_progress_bar_tileset" prot="public">evab::HorizontalProgressBarTileset</innerclass>
     <innerclass refid="structevab_1_1_horizontal_scroll_bar_charset" prot="public">evab::HorizontalScrollBarCharset</innerclass>

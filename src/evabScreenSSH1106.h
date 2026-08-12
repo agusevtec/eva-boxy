@@ -55,10 +55,10 @@ namespace evab
          * @brief Draws a vertical slice at the specified position
          * 
          * @param aPosition Position on screen
-         * @param aSliceColumn Column within the tile (0-7)
+         * @param aCutColumn Column within the tile (0-7)
          * @param aSlice Bitmap data for the slice
          */
-        void drawVerticalSlice(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice) override;
+        void drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) override;
         
         /**
          * @brief Clears a tile at the specified position

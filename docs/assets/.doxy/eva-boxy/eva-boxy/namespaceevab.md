@@ -46,6 +46,7 @@
 | class | [**AlbumSignal**](classevab_1_1_album_signal.md) <br>_Signal pictogram set (4 states)._  |
 | class | [**AlbumSpeaker**](classevab_1_1_album_speaker.md) <br>_Speaker pictogram set (4 states)._  |
 | class | [**Boxy**](classevab_1_1_boxy.md) <br>_Main application controller managing screen, input, and modal overlays._  |
+| class | [**BoxyRest**](classevab_1_1_boxy_rest.md) <br>_Layout manager for rest-based UI arrangement._  |
 | struct | [**CenterAlign**](structevab_1_1_center_align.md) <br>_Center alignment strategy._  |
 | class | [**CompositeBase**](classevab_1_1_composite_base.md) <br>_Abstract base class for composite elements that can manage child focus._  |
 | struct | [**Coor**](structevab_1_1_coor.md) <br>_Coordinate structure for positions and sizes on screen._  |
@@ -54,7 +55,6 @@
 | class | [**Font8Bold**](classevab_1_1_font8_bold.md) <br>_8x8 bold font implementation_  |
 | class | [**Font8Compact**](classevab_1_1_font8_compact.md) <br>_8x8 compact font implementation_  |
 | class | [**Font8Narrow**](classevab_1_1_font8_narrow.md) <br>_8x8 thin font implementation_  |
-| class | [**Grid**](classevab_1_1_grid.md) <br>_Layout manager for grid-based UI arrangement._  |
 | struct | [**HorizontalProgressBarCharset**](structevab_1_1_horizontal_progress_bar_charset.md) <br>_Character set for horizontal progress bar._  |
 | class | [**HorizontalProgressBarTileset**](classevab_1_1_horizontal_progress_bar_tileset.md) <br>_Horizontal progress bar pictogram set._  |
 | struct | [**HorizontalScrollBarCharset**](structevab_1_1_horizontal_scroll_bar_charset.md) <br>_Character set for horizontal scroll bar._  |

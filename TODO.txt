@@ -3,7 +3,7 @@
 + roundmeter
 + rainbowmeter
 - 32x4 serializer
-- grid layout
+- rest layout
 - lamp indicator
 + propeller indicator
 - heating indicator

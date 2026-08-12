@@ -178,24 +178,24 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
-      <memberdef kind="function" id="classevab_1_1_screen_page8_base_1a70351a018f4af4d046c312c18accfac7" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="classevab_1_1_screen_page8_base_1adf878cfb7d28984df823179ee872477d" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void evab::ScreenPage8Base::drawVerticalSlice</definition>
-        <argsstring>(Coor aPosition, unsigned char aSliceColumn, unsigned char aSlice)=0</argsstring>
+        <argsstring>(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)=0</argsstring>
         <name>drawVerticalSlice</name>
         <qualifiedname>evab::ScreenPage8Base::drawVerticalSlice</qualifiedname>
-        <reimplementedby refid="classevab_1_1_screen_k_s0108_1a55f6c68e3dbadd1ffde32ef0ef859d3c">drawVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_screen_p_c_d8544_1a39b74b4c2aa196a0db773e383d294ec0">drawVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_screen_serial_pixel_1ab32accab55c5583349d419057bc52c49">drawVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_screen_s_s_d1306_1a4f17d8f5f3caa9af605e6c47a73ff53a">drawVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_screen_s_s_h1106_1aca17153a104628276c6dae0c995cede4">drawVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_k_s0108_1a56eff5d3a8a0453ce94d5932b25c9530">drawVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_p_c_d8544_1ad43b370ec19537bf44781ff767fc6a1b">drawVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_serial_pixel_1aed17499ccb2db3d0b341cca423b6b5de">drawVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_s_s_d1306_1a36c2af724890247f42804e6641a17e75">drawVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_s_s_h1106_1ae8bb14f808b9653162a341813e491c21">drawVerticalSlice</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
         </param>
         <param>
           <type>unsigned char</type>
-          <declname>aSliceColumn</declname>
+          <declname>aCutColumn</declname>
         </param>
         <param>
           <type>unsigned char</type>
@@ -215,7 +215,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>aSliceColumn</parametername>
+<parametername>aCutColumn</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Column within the tile (0-7) </para>
@@ -345,7 +345,7 @@
       <member refid="classevab_1_1_screen_1a6700eb9fa6e99cc9c6590d8f67d4f057" prot="public" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>Clear</name></member>
       <member refid="classevab_1_1_screen_1a79b60a47dd4115bd1470d42798811726" prot="public" virt="pure-virtual"><scope>evab::ScreenPage8Base</scope><name>Deserialize</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af66d4b6ec67ff6c12afd4850f3f31597" prot="public" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>DrawSymbol</name></member>
-      <member refid="classevab_1_1_screen_page8_base_1a70351a018f4af4d046c312c18accfac7" prot="private" virt="pure-virtual"><scope>evab::ScreenPage8Base</scope><name>drawVerticalSlice</name></member>
+      <member refid="classevab_1_1_screen_page8_base_1adf878cfb7d28984df823179ee872477d" prot="private" virt="pure-virtual"><scope>evab::ScreenPage8Base</scope><name>drawVerticalSlice</name></member>
       <member refid="classevab_1_1_screen_page8_base_1af462a0c020b9e9ef045d9c1ebda366f0" prot="private" virt="non-virtual"><scope>evab::ScreenPage8Base</scope><name>mFont</name></member>
       <member refid="classevab_1_1_screen_page8_base_1a836a340d23a631a4661f5a6165103037" prot="public" virt="virtual"><scope>evab::ScreenPage8Base</scope><name>Picto</name></member>
       <member refid="classevab_1_1_screen_page8_base_1a769fc315283a7fd62db3ee4a38e5dfb2" prot="public" virt="non-virtual"><scope>evab::ScreenPage8Base</scope><name>ScreenPage8Base</name></member>

@@ -29,7 +29,7 @@ The implementation of `drawer()` must adhere to one strict rule:
 
 * **Complete Area Coverage:** The implementation **must repaint or clear the entire screen area** defined by the `aPos` and `aSize` parameters passed to `drawer()`. Leaving unrendered regions causes visual artifacts during redrawing.
 
-To simplify layout management and meet this requirement, the `Grid` helper class can be used to slice `aSize` into region-aligned bounding boxes and automatically clear unallocated space via `Clear()`.
+To simplify layout management and meet this requirement, the `BoxyRest` helper class can be used to slice `aSize` into region-aligned bounding boxes and automatically clear unallocated space via `Clear()`.
 
 ### Focusable
 `Focusable<T>` is a template wrapper that integrates a UI control or modifier into the focus ring of a container.
@@ -56,7 +56,7 @@ In a standard single-screen layout, focus transitions sequentially between indiv
 #include <evabKeyCatcher.h>
 #include <evabInputInt.h>
 #include <evabInputButton.h>
-#include <evabGrid.h>
+#include <evabBoxyRest.h>
 
 // Derive from KeyModifier (which inherits from LayoutBase)
 class FormExample : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
@@ -70,15 +70,15 @@ class FormExample : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
 
 public:
     void drawer(Screen* aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-        // Grid covers and manages the total allocated area
-        Grid grid(aScreen, aPos, aSize);
+        // BoxyRest covers and manages the total allocated area
+        BoxyRest rest(aScreen, aPos, aSize);
 
-        grid.SliceRow(1).Draw(&mField1,  aIsFocused && IsFocused(&mField1));
-        grid.SliceRow(1).Draw(&mField2,  aIsFocused && IsFocused(&mField2));
-        grid.SliceRow(1).Draw(&mSaveBtn, aIsFocused && IsFocused(&mSaveBtn));
+        rest.CutRow(1).Draw(&mField1,  aIsFocused && IsFocused(&mField1));
+        rest.CutRow(1).Draw(&mField2,  aIsFocused && IsFocused(&mField2));
+        rest.CutRow(1).Draw(&mSaveBtn, aIsFocused && IsFocused(&mSaveBtn));
         
         // Clear remaining unallocated pixels in the area
-        grid.Rest().Clear();
+        rest.Clear();
     }
 };
 ```
@@ -99,7 +99,7 @@ When managing multi-screen flows or tabbed views, `Focusable` wraps entire `Layo
 #include <evabLayoutBase.h>
 #include <evabFocusable.h>
 #include <evabKeyModifier.h>
-#include <evabGrid.h>
+#include <evabBoxyRest.h>
 
 #include "ScreenStatus.h"
 #include "ScreenSettings.h"

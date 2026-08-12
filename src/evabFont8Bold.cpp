@@ -100,11 +100,11 @@ const unsigned char evab::Font8Bold::kCharmap[][8] PROGMEM = {
     {0x00, 0x20, 0x30, 0x30, 0x20, 0x30, 0x10, 0x00}  // '~'
 };
 
-unsigned char evab::Font8Bold::GetVerticalSlice(char aCharcode, unsigned char aSliceColumn) const
+unsigned char evab::Font8Bold::GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const
 {
     {
         if (aCharcode < 32 || aCharcode > 126)
             aCharcode = 32;
-        return pgm_read_byte(&kCharmap[aCharcode - 32][aSliceColumn]);
+        return pgm_read_byte(&kCharmap[aCharcode - 32][aCutColumn]);
     }
 }
