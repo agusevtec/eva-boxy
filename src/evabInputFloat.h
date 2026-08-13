@@ -57,47 +57,56 @@ namespace evab
     float mValue; ///< Current float value
   };
 
-  /**
+/**
    * @brief Discrete float input element
    *
-   * Adds index-based control to InputFloat.
+   * Adds step-grid bound control to InputFloat.
    */
   class InputFloatDiscrete : public InputFloat
   {
-
   public:
     /**
      * @brief Constructs a discrete float input.
      *
-     * @param aValue  Initial value (snapped to nearest step).
-     * @param aCount  Number of steps (must be >= 2).
-     * @param aMin    Minimum value (inclusive).
-     * @param aMax    Maximum value (inclusive).
+     * @param aValue Initial value.
+     * @param aMin   Minimum value / start of the step grid.
+     * @param aMax   Maximum boundary limit.
+     * @param aStep  Grid step size (must be > 0.0f).
      */
-    InputFloatDiscrete(float aValue, unsigned char aCount, float aMin, float aMax);
+    InputFloatDiscrete(float aValue, float aMin, float aMax, float aStep = 0.1f);
+
     /**
      * @brief Selects a step by index (0 to Count()-1).
      */
-    void Select(unsigned char aIndex);
+    void Select(unsigned short aIndex);
+
+    /**
+     * @brief Sets the float value snapped to grid and redraws
+     *
+     * @param aValue New float value
+     */
+    void SetValue(float aValue);
+
     /**
      * @brief Returns the currently selected index.
      */
     signed short Selected() const;
+
     /**
      * @brief Returns the total number of steps.
      */
-    unsigned char Count() const { return mCount; }
+    unsigned short Count() const;
+
     /**
-     * @brief Increments the pictogram index
+     * @brief Increments value by discrete grid steps
      *
-     * @param aSteps Amount to increment (positive or negative)
+     * @param aSteps Amount of steps to increment (positive or negative)
      */
     void Increment(signed char aSteps);
 
   private:
-    unsigned char mCount;
     float mMin;
     float mMax;
+    float mStep;
   };
-
 }

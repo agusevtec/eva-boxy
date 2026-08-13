@@ -16,14 +16,13 @@ The library is designed as an extensible system for working with various types o
 
 | Method | Inheriting from Screen | Inheriting from ScreenPage8Base |
 |--------|----------------------|-------------------------------|
-| `Size()` | Required | Required |
-| `DrawSymbol(...)` | Required | Implemented in base class |
-| `Picto(...)` | Required* | Implemented in base class |
-| `Serialize(...)` | Required | Required |
-| `Deserialize(...)` | Required | Required |
-| `drawVerticalSlice(...)` | Not available | Required |
+| `DrawSymbol(...)` | Required | - |
+| `Picto(...)` | Required* | - |
+| `drawVerticalSlice(...)` | - | Required |
 | `Clear(...)` | Recommended** | Recommended** |
 | `clearTile(...)` | Recommended*** | Recommended*** |
+| `Size()` | Required | Required |
+| `Serialize / Deserialize(...)` | Required | Required |
 
 **Notes:**
 

@@ -1,9 +1,5 @@
 # EVA Boxy
 
-**Declarative C++ GUI framework for resource-constrained embedded displays on Arduino**
-
-## Overview
-
 **EVA Boxy** is a lightweight, compile-time configurable C++ UI library tailored for Arduino driving low-resolution monochrome/OLED/LCD displays via physical keypads or buttons.
 
 ---
