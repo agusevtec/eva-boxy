@@ -123,30 +123,30 @@ The repository contains full MkDocs documentation with tutorials, architectural 
 
 ### Navigating the Docs
 
-#### 🚀 Getting Started
+#### Getting Started
 * [What is EVA Boxy?](docs/index.md) — Architecture, design principles, and feature comparison.
 * [Core Concepts](docs/declaration-style/core-concepts.md) — Ground singleton, Parent-Child composition, and the Two Chains of Responsibility.
 
-#### 🛠️ Declarative UI Development
+#### Declarative UI Development
 * [Layout and Focus Management](docs/declaration-style/layout-and-focus.md) — `LayoutBase`, `Focusable<T>` focus rings, and sub-screen paging.
 * [Behavioral Modifiers](docs/declaration-style/behavioral-modifiers.md) — Input reactors (`KeyReactor`, `KeyCatcher`) and key event delegation.
 * [Listboxes](docs/declaration-style/listboxes.md) — `ScrollListbox` vs. `FlipListbox`, custom windowing algorithms, and vertical scrollbars.
 
-#### 📐 Layout Helper & Drawing Contract
+#### Layout Helper & Drawing Contract
 * [BoxyRest Helper](docs/imperative-style/boxyrest.md) — Fluent layout slicing (`CutRow`, `CutCol`), area clearance, and the Drawing Contract.
 * [Imperative Drawing & Modifiers](docs/imperative-style/imperative-drawing.md) — Direct rendering, text alignment, and visual decorators.
 
-#### ⚡ Intermediate Optimization & Custom Controls
+#### Intermediate Optimization & Custom Controls
 * [CompositeBase Engine](docs/intermediate-style/composite-base.md) — Bare-bones composite elements, manual focus routing, and custom freezer contracts.
 * [Custom User Controls](docs/intermediate-style/custom-user-controls.md) — Building reusable widgets from scratch.
 * [Progressive Optimization Path](docs/intermediate-style/progressive_optimization.md) — Step-by-step guide on converting declarative views to zero-abstraction imperative code.
 
-#### 📟 Hardware, Drivers & Tools
+#### Hardware, Drivers & Tools
 * [Display Drivers](docs/imperative-style/display-drivers.md) — Driver list and initialization for SSD1306, SH1106, PCD8544, KS0108, LCD_I2C, and Serial debug screens.
 * [Adding Support for New Displays](docs/other/adding_new_display.md) — Extending `Screen` or `ScreenPage8Base` for custom display hardware.
 * [Fonts and Pictograms](docs/other/fonts-and-pictograms.md) — Vector/PNG rasterization pipeline (`fontsworkspace`), glyph alignment, descaling, and `PROGMEM` code generation.
 
-#### 📚 API Reference
+#### API Reference
 * [Class List](docs/eva-boxy/annotated.md) | [Class Hierarchy](docs/eva-boxy/hierarchy.md) | [File Index](docs/eva-boxy/files.md)
 
 ---
@@ -181,25 +181,6 @@ lib_deps =
 1. Download the latest release `.zip` from GitHub.
 2. Navigate to **Sketch** -> **Include Library** -> **Add .ZIP Library...**
 3. Include `<evabBoxy.h>` in your sketch.
-
-### CMake (ESP-IDF / STM32 / Native)
-Add EVA Boxy as a subdirectory or static library:
-
-```cmake
-add_subdirectory(eva-boxy)
-target_link_libraries(your_app PRIVATE eva-boxy)
-```
-
----
-
-## Building Documentation Locally
-
-To preview and serve the full MkDocs documentation site locally:
-
-```bash
-pip install mkdocs mkdocs-material
-mkdocs serve
-```
 
 ---
 
