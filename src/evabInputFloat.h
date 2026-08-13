@@ -92,7 +92,7 @@ namespace evab
      *
      * @param aSteps Amount to increment (positive or negative)
      */
-    void Increment(int aSteps);
+    void Increment(signed char aSteps);
 
   private:
     unsigned char mCount;

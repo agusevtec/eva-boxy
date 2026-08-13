@@ -80,14 +80,14 @@ private:
     BoxyRest row = rest.CutRow(3);
     row.CutCol(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);
     row.CutCol(1).Clear();
-    row.Rest().Draw(tempField);
+    row.Draw(tempField);
 
     rest.CutRow(2).Clear();
 
     row = rest.CutRow(3);
     row.CutCol(3).Picto(GalleryRemixicon24::PICTO_EBD8, 0);
     row.CutCol(1).Clear();
-    row.Rest().Draw(humField);
+    row.Draw(humField);
 
     rest.Clear();
   }
@@ -108,8 +108,8 @@ class UISettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN>
 {
   Focusable<KeyModifier<TitledLeftF<HorizontalScrollBarPx>, KEY_LEFT, KEY_RIGHT>> mItem1{this, (const __FlashStringHelper *)ITEM1_TEXT};
   Focusable<KeyModifier<TitledLeftF<InputSelectorPx<AlbumOnOff>>, KEY_LEFT, KEY_RIGHT>> mItem2{this, (const __FlashStringHelper *)ITEM2_TEXT};
-  Focusable<KeyModifier<TitledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mItem3{this, (const __FlashStringHelper *)ITEM3_TEXT, 100, 11, 100, 200};
-  Focusable<KeyCatcher<InputButton, KEY_RIGHT>> mSaveButton;
+  Focusable<KeyModifier<TitledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mItem3{this, (const __FlashStringHelper *)ITEM3_TEXT, 100, 100, 200, 10};
+  Focusable<KeyCatcher<InputButtonF, KEY_RIGHT>> mSaveButton;
 
 public:
   UISettingsForm(IHandler *aOnSettingsSaved)

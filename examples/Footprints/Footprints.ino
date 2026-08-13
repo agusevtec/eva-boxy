@@ -97,7 +97,7 @@ void setup() {
     // ============================================
     
     showScreen(&screen, "InputButton:");
-    InputButton button(F("OK"));
+    InputButtonF button(F("OK"));
     button.Draw(&screen, {0, 4}, {16, 1}, 1);
 
     showScreen(&screen, "InputButtonPx:");

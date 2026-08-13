@@ -58,7 +58,7 @@ namespace evab
     return constrain(index, 0, mCount - 1);
   }
 
-  void InputFloatDiscrete::Increment(int aSteps)
+  void InputFloatDiscrete::Increment(signed char aSteps)
   {
     Select(Selected() + aSteps);
   }

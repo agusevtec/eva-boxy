@@ -68,16 +68,23 @@ namespace evab
     /**
      * @brief Constructs a discrete integer input.
      *
-     * @param aValue  Initial value (snapped to nearest step).
-     * @param aCount  Number of steps (must be >= 2).
-     * @param aMin    Minimum value (inclusive).
-     * @param aMax    Maximum value (inclusive).
+     * @param aValue Initial value.
+     * @param aMin   Minimum value / start of the step grid.
+     * @param aMax   Maximum boundary limit.
+     * @param aStep  Grid step size (must be > 0).
      */
-    InputIntDiscrete(int aValue, unsigned char aCount, int aMin, int aMax);
+    InputIntDiscrete(int aValue, int aMin, int aMax, unsigned short aStep = 1);
     /**
      * @brief Selects a step by index (0 to Count()-1).
      */
     void Select(unsigned char aIndex);
+
+    /**
+     * @brief Sets the integer value and redraws
+     *
+     * @param aValue New integer value
+     */
+    void SetValue(int aValue);
 
     /**
      * @brief Returns the currently selected index.
@@ -86,18 +93,18 @@ namespace evab
     /**
      * @brief Returns the total number of steps.
      */
-    unsigned char Count() const { return mCount; }
+    unsigned char Count() const;
     /**
      * @brief Increments the pictogram index
      *
      * @param aSteps Amount to increment (positive or negative)
      */
-    void Increment(int aSteps);
+    void Increment(signed char aSteps);
 
   private:
-    unsigned char mCount;
     int mMin;
     int mMax;
+    unsigned short mStep;
   };
 
 }

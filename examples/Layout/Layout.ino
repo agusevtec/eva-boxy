@@ -1,61 +1,70 @@
 #include <evabBoxy.h>
-#include <evabFont8Narrow.h>
 #include <evabScreenSSD1306.h>
-#include <evaRepeatTimer.h>
-
-#include <evabGalleryRemixicon24.h>
-#include <evabInputButtonPx.h>
-#include <evabBehavior.h>
-#include <evaTac.h>
-#include <evabInputButton.h>
+#include <evabFont8Narrow.h>
 #include <evabLayoutBase.h>
+#include <evabKeyModifier.h>
+#include <evabKeyCatcher.h>
 #include <evabLabeled.h>
-#include <evabInputAnimationPx.h>
-#include <evabAlbums.h>
+#include <evabInputInt.h>
+#include <evabInputButton.h>
+#include <evabBoxyRest.h>
+
+// EVA Core | EVA Survival kit assumed to be a source of physical keys pressures
+#include <evaTac.h>
 
 using namespace eva;
 using namespace evab;
 
-static const char OK_TEXT[] PROGMEM = "OK";
+// Declare form with vertical navigation (KEY_DOWN / KEY_UP)
+class SystemSettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
+  // [1] InputIntDiscrete bounded to KEY_LEFT / KEY_RIGHT
+  Focusable<KeyModifier<LabeledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mBrightness;
+  // [2] Action Button bounded to KEY_LEFT / KEY_RIGHT
+  Focusable<KeyCatcher<InputButtonF, KEY_LEFT, KEY_RIGHT>> mSaveButton;
 
-class MyLayout : public LayoutBase {
-  Focusable<InputButtonPx> btn1{ this, GalleryRemixicon24::PICTO_EC10 };
-  //InputButtonPx btn2{ GalleryRemixicon24::PICTO_F371 };
-  //Focusable<InputButtonPx> btn3{ this, AlbumRainbowmeter::GetTile(2) };
-  InputAnimationPx<AlbumProgress> btn2{  2};
-  InputAnimationPx<AlbumRoundmeter> btn3{  2};
-  Focusable<InputButton> btn4{ this, (const __FlashStringHelper *)OK_TEXT };
-
-protected:
-  void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-    btn1.Draw(aScreen, aPos, { 4, 4 }, IsFocused(&btn1));
-    btn2.Draw(aScreen, { aPos.X + 4, aPos.Y + 4 }, { 4, 4 }, 0);
-    btn3.Draw(aScreen, { aPos.X + 8, aPos.Y + 0 }, { 4, 4 }, 0);
-    btn4.Draw(aScreen, { aPos.X + 12, aPos.Y + 4 }, { 4, 4 }, IsFocused(&btn4));
+  Handler<SystemSettingsForm> onSavePressedHandler{ this, &SystemSettingsForm::onSavePressed };
+  void onSavePressed(void* sender, CallbackInfo info) {
+    // Form submitted
   }
-};
-
-class App {
-
-  RepeatTimer repeatTimer { new Handler<App>(this, &onRepeatTimer) };
-  KeyModifier<MyLayout, KEY_LEFT, KEY_RIGHT> myLayout;
 
 public:
-  App() {
-    Boxy::Begin<ScreenSSD1306, Font8Narrow>(&myLayout);
-    repeatTimer.start(1000);
-  }
+  SystemSettingsForm()
+    : mBrightness(this, F("Brightness"), 75, 0, 100, 5),
+      mSaveButton(this, &onSavePressedHandler, F("Save")) {}
 
-  void onRepeatTimer(void *, eva::CallbackInfo) {
-    Boxy::OnKey(KEY_RIGHT);
+  void drawer(Screen* screen, Coor pos, Coor size, unsigned char isFocused) override {
+    // BoxyRest handles coordinate slicing and clears unallocated pixels automatically
+    BoxyRest rest(screen, pos, size, isFocused);
+
+    rest.CutRow(1).TextCenter(F("System Settings"));
+    rest.CutRow(1).Clear();  // Visual separator
+    rest.CutRow(1).Draw(mBrightness, IsFocused(&mBrightness));
+    rest.CutRow(1).Clear();  // Visual separator
+    rest.CutRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
+    rest.Clear();  // Clear remaining area
   }
 };
 
+
+// EVA Core | EVA Survical kit key source assumed
+void onKeyPressed() {
+  //    if ( ... ) {
+  //        Boxy::Key(KEY_UP);
+  //    }
+  //    if ( ... ) {
+  //        Boxy::Key(KEY_LEFT);
+  //    }
+  // ...
+}
+
 void setup() {
-  Serial.begin(9600);
-  static App app;
+  // Root Ground Layout
+  static SystemSettingsForm gMainForm;
+  // Initialize display driver, font, and mount root layout layer
+  Boxy::Begin<ScreenSSD1306, Font8Narrow>(&gMainForm);
 }
 
 void loop() {
+  // Execute frame ticking & render pipeline
   eva::tac();
 }

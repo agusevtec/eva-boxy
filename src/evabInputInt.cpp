@@ -30,29 +30,43 @@ namespace evab
     aScreen->TextCenter(aPos, aSize, buffer, aIsFocused);
   }
 
-  InputIntDiscrete::InputIntDiscrete(int aValue, unsigned char aCount, int aMin, int aMax)
-      : InputInt(aValue), mCount(aCount), mMin(aMin), mMax(aMax)
+  InputIntDiscrete::InputIntDiscrete(int aValue, int aMin, int aMax, unsigned short aStep)
+      : mMin(aMin), mMax(max(aMin, aMax)), mStep(aStep)
   {
+    InputIntDiscrete::SetValue(aValue);
+  }
+
+  void InputIntDiscrete::SetValue(int aValue)
+  {
+    int k = (aValue - mMin + mStep / 2) / mStep;
+    int snappedValue = mMin + k * mStep;
+    int maxGridVal = mMin + ((mMax - mMin) / mStep) * mStep;
+    InputInt::SetValue(constrain(snappedValue, mMin, maxGridVal));
+  }
+
+  unsigned char InputIntDiscrete::Count() const
+  {
+    if (mStep == 0)
+      return 0;
+    return (((mMax - mMin) / mStep) + 1);
   }
 
   void InputIntDiscrete::Select(unsigned char aIndex)
   {
-    aIndex = constrain(aIndex, 0, mCount - 1);
-    int step = (mMax - mMin) / (mCount - 1);
-    InputInt::SetValue(mMin + aIndex * step);
+    aIndex = constrain(aIndex, 0, Count() - 1);
+    SetValue(mMin + (aIndex)*mStep);
   }
 
   signed short InputIntDiscrete::Selected() const
   {
-    int value = InputInt::GetValue();
-    int step = (mMax - mMin) / (mCount - 1);
-    int index = round((value - mMin) / step);
-    return constrain(index, 0, mCount - 1);
+    int currentVal = InputInt::GetValue();
+    if (currentVal <= mMin)
+      return 0;
+    return ((currentVal - mMin + mStep / 2) / mStep);
   }
 
-  void InputIntDiscrete::Increment(int aSteps)
+  void InputIntDiscrete::Increment(signed char aSteps)
   {
-    Select(Selected() + aSteps);
+    SetValue(InputInt::GetValue() + (aSteps * mStep));
   }
-
 }
