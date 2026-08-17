@@ -37,17 +37,16 @@ Height = 2 tiles:
 #include <evabLabeled.h>
 
 LabeledLeft<InputInt> labeledInt("Temperature", 42);
-LabeledLeft<InputButton> labeledButton("Action", F("OK"));
+LabeledLeft<InputButtonF> labeledButton("Action", F("OK"));
 LabeledLeft<InputSelectorPx<AlbumBattery>> labeledBattery("Battery", 3);
 LabeledLeftF<InputInt> labeledFlash(F("Brightness"), 75);  // Flash string
 ```
 
-| Decorator | Alignment | Use Case |
-|-----------|-----------|----------|
-| `LabeledLeft<T>` | Label left-aligned | Default, most common |
-| `LabeledCenter<T>` | Label centered | Symmetrical layouts |
-| `LabeledRight<T>` | Label right-aligned | Right-to-left languages |
-| `LabeledLeftF<T>` | Flash string label | Memory-constrained projects |
+| Decorator | Flash string version | Alignment | Use Case |
+|-----------|-----------|-----------|----------|
+| `LabeledLeft<T>` | `LabeledLeftF<T>` |Label left-aligned | Default, most common |
+| `LabeledCenter<T>` | `LabeledCenterF<T>` |Label centered | Symmetrical layouts |
+| `LabeledRight<T>` | `LabeledRightF<T>` |Label right-aligned | Right-to-left languages |
 
 ---
 
@@ -88,12 +87,11 @@ TitledLeft<InputButton> titledButton("Action", F("Save"));
 TitledLeftF<InputSelectorPx<AlbumLamp>> titledLamp(F("Mode"), 2);
 ```
 
-| Decorator | Alignment | Use Case |
-|-----------|-----------|----------|
-| `TitledLeft<T>` | Title left-aligned | Forms with labels above fields |
-| `TitledCenter<T>` | Title centered | Dialog headers |
-| `TitledRight<T>` | Title right-aligned | Asymmetric layouts |
-| `TitledLeftF<T>` | Flash string title | Memory-constrained projects |
+| Decorator | Flash string version | Alignment | Use Case |
+|-----------|-----------|-----------|----------|
+| `TitledLeft<T>` | `TitledLeftF<T>` | Title left-aligned | Forms with labels above fields |
+| `TitledCenter<T>` | `TitledCenterF<T>` | Title centered | Dialog headers |
+| `TitledRight<T>` | `TitledRightF<T>` | Title right-aligned | Asymmetric layouts |
 
 ---
 
@@ -123,7 +121,6 @@ PaddingV (height = 3 tiles):
 PaddingH (width = 6 tiles):
 ┌─────────────────────────────────────────────┐
 │  CLEARED   │ OriginalControl │  CLEARED    │
-│  (1 tile)  │                 │  (1 tile)   │
 └─────────────────────────────────────────────┘
 
 PaddingV + PaddingH (centered):

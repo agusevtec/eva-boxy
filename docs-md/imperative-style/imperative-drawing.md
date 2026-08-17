@@ -100,20 +100,24 @@ Every element in Boxy can be drawn imperatively using its `Draw()` method.
 
 ```cpp
 #include <evabInputButton.h>
+
+InputButton button("OK");
+button.Draw(&screen, {0, 4}, {16, 1}, 1);
+
+InputButtonF button(F("OK"));
+button.Draw(&screen, {0, 4}, {16, 1}, 1);
+
 #include <evabInputButtonPx.h>
 #include <evabGalleryRemixicon24.h>
-
-InputButton button(F("OK"));
-button.Draw(&screen, {0, 4}, {16, 1}, 1);
 
 InputButtonPx buttonPicto(GalleryRemixicon24::PICTO_F243);
 buttonPicto.Draw(&screen, {6, 4}, {3, 3}, 1);
 ```
 
-| Control | Description | Use Case |
-|---------|-------------|----------|
-| `InputButton` | Text button with label in parentheses | Action triggers: OK, Cancel, Save |
-| `InputButtonPx` | Icon-only button | Toolbars, icon-based navigation |
+| Control | Description |
+|---------|-------------|
+| `InputButton` | Text button with label in parentheses  |
+| `InputButtonPx` | Icon-only button  |
 
 > **Note:** Parameters of `Draw()` method: `Draw(screen, position, size, focused)` — `focused=1` draws with highlight.
 
@@ -187,7 +191,34 @@ roundmeter.Draw(&screen, {7, 4}, {3, 3}, 0);
 
 ---
 
-### Stretch Bar Controls
+### Text-based Stretch Bar Controls
+
+Text-based variants use ASCII characters instead of pictograms. These are more memory-efficient and work on character LCD displays:
+
+```cpp
+#include <evabStretchBar.h>
+
+VerticalProgressBar vtProgress(50);
+vtProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
+
+HorizontalProgressBar htProgress(50);
+htProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
+
+VerticalScrollBar vtScroll(50);
+vtScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
+
+HorizontalScrollBar tscrollBar(50);
+tscrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
+```
+
+| Control | Character Set | Use Case |
+|---------|---------------|----------|
+| `VerticalProgressBar` | `#` and `|` | Memory-constrained devices |
+| `HorizontalProgressBar` | `-` and `|` | Character LCD displays |
+| `VerticalScrollBar` | `|`, `#`, `|` | Scroll indication on text displays |
+| `HorizontalScrollBar` | `-`, `|`, `-` | Scroll indication on text displays |
+
+### Graphical Stretch Bar Controls
 
 Graphical stretch bars use pictograms for rendering:
 
@@ -217,30 +248,3 @@ scrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
 > **Parameters:** Constructor: initial percent (0-100); `Draw(screen, position, size, focused)`
 
 ---
-
-### Text-Based Stretch Bars
-
-Text-based variants use ASCII characters instead of pictograms. These are more memory-efficient and work on character LCD displays:
-
-```cpp
-#include <evabStretchBar.h>
-
-VerticalProgressBar vtProgress(50);
-vtProgress.Draw(&screen, {8, 2}, {2, 5}, 0);
-
-HorizontalProgressBar htProgress(50);
-htProgress.Draw(&screen, {1, 3}, {14, 1}, 0);
-
-VerticalScrollBar vtScroll(50);
-vtScroll.Draw(&screen, {8, 2}, {2, 5}, 0);
-
-HorizontalScrollBar tscrollBar(50);
-tscrollBar.Draw(&screen, {1, 3}, {14, 1}, 0);
-```
-
-| Control | Character Set | Use Case |
-|---------|---------------|----------|
-| `VerticalProgressBar` | `#` and `|` | Memory-constrained devices |
-| `HorizontalProgressBar` | `-` and `|` | Character LCD displays |
-| `VerticalScrollBar` | `|`, `#`, `|` | Scroll indication on text displays |
-| `HorizontalScrollBar` | `-`, `|`, `-` | Scroll indication on text displays |

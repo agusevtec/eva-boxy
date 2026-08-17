@@ -20,54 +20,97 @@ EVA Boxy scales cleanly depending on your task, performance budget, and architec
 
 #### 1. Primary Style: Declarative UI (Flagship)
 
-The primary way to use EVA Boxy. Build complex, highly maintainable interactive screens using a clean, expressive syntax. You assemble core data inputs (`InputInt`), behavioral modifiers (`KeyReactor`, `KeyCatcher`), and visual wrappers (`Labeled`) directly via C++ compile-time templates — getting modern UI code ergonomics without paying a runtime memory penalty:
-
-```cpp
-class UserForm1 : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
-    Focusable<KeyReactor<InputInt, KEY_LEFT, KEY_RIGHT>> mInputField {this, &onValueChanged, 42};
-    Focusable<KeyCatcher<InputButton, KEY_LEFT, KEY_RIGHT >> mSaveButton {this, &onSavePressed, "Save"};
-
-    Handler<UserForm1> onValueChanged {this, &UserForm1::onValueChanged};
-    void onValueChanged(void *aSender, CallbackInfo aInfo) {
-        Serial.println("Value Changed");
-    }
-
-    Handler<UserForm1> onSavePressed {this, &UserForm1::onSavePressed};
-    void onSavePressed(void *aSender, CallbackInfo aInfo) {
-        Serial.println("Parameter Saved");
-    }
-
-    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-        BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
-        rest.CutRow(1).Draw(mInputField, IsFocused(&mInputField));
-        rest.CutRow(1).Clear();
-        rest.CutRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
-        rest.Clear();
-    }
-};
-```
+The primary way to use EVA Boxy. Build complex, highly maintainable interactive screens using a clean, expressive syntax. You assemble core data inputs (`InputDiscreteInt`), behavioral modifiers (`KeyModifier`, `KeyCatcher`), and visual wrappers (`Labeled`) directly via C++ compile-time templates — getting modern UI code ergonomics without paying a runtime memory penalty:
 
 **Visual Representation:**
-
+```text
+┌──────────────────────────┐
+│     System Settings      │
+│                          │
+│ Brightness    75         │
+│                          │
+│ (        Save          ) │
+└──────────────────────────┘
 ```
-┌───────────────────────────────────────────┐
-│                    42                     │  ← InputInt
-└───────────────────────────────────────────┘
-│                                           │  ← Empty row 
-┌───────────────────────────────────────────┐
-│                  (Save)                   │  ← InputButton
-└───────────────────────────────────────────┘
-│                                           │  ← Empty rest
-└───────────────────────────────────────────┘
-```
-
 **Navigation:**
 
 - `KEY_UP` / `KEY_DOWN` — navigate between fields (handled by `KeyModifier<LayoutBase>`)
 
-- `KEY_LEFT` / `KEY_RIGHT` — on InputInt → change value and triggers `onValueChanged`
+- `KEY_LEFT` / `KEY_RIGHT` — on InputDiscreteInt → change value
 
 - `KEY_LEFT` / `KEY_RIGHT` — on button → triggers `onSavePressed`
+```cpp
+#include <evabBoxy.h>
+#include <evabScreenSSD1306.h>
+#include <evabFont8Narrow.h>
+#include <evabLayoutBase.h>
+#include <evabKeyModifier.h>
+#include <evabKeyCatcher.h>
+#include <evabLabeled.h>
+#include <evabInputInt.h>
+#include <evabInputButton.h>
+#include <evabBoxyRest.h>
+
+// EVA Core | EVA Survival Kit assumed to be a source of physical key presses
+#include <evaTac.h>
+
+using namespace eva;
+using namespace evab;
+
+// Declare form with vertical navigation (KEY_DOWN / KEY_UP)
+class SystemSettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
+  // [1] InputIntDiscrete bounded to KEY_LEFT / KEY_RIGHT
+  Focusable<KeyModifier<LabeledLeftF<InputIntDiscrete>, KEY_LEFT, KEY_RIGHT>> mBrightness;
+  // [2] Action Button bounded to KEY_LEFT / KEY_RIGHT
+  Focusable<KeyCatcher<InputButtonF, KEY_LEFT, KEY_RIGHT>> mSaveButton;
+
+  Handler<SystemSettingsForm> onSavePressedHandler{ this, &SystemSettingsForm::onSavePressed };
+  void onSavePressed(void* sender, CallbackInfo info) {
+    // do useful things here
+  }
+
+public:
+  SystemSettingsForm()
+    : mBrightness(this, F("Brightness"), 75, 0, 100, 5),
+      mSaveButton(this, &onSavePressedHandler, F("Save")) {}
+
+  void drawer(Screen* screen, Coor pos, Coor size, unsigned char isFocused) override {
+    // BoxyRest handles coordinate slicing and clears unallocated pixels automatically
+    BoxyRest rest(screen, pos, size, isFocused);
+
+    rest.CutRow(1).TextCenter(F("System Settings"));
+    rest.CutRow(1).Clear();  // Visual separator
+    rest.CutRow(1).Draw(mBrightness, IsFocused(&mBrightness));
+    rest.CutRow(1).Clear();  // Visual separator
+    rest.CutRow(1).Draw(mSaveButton, IsFocused(&mSaveButton));
+    rest.Clear();  // Clear remaining area
+  }
+};
+
+// EVA Core | EVA Survival Kit is assumed as the key source
+// This code snippet is incomplete
+// see https://agusevtec.github.io/eva-core-sk/quickstart/performance/
+void onPhysicalButtonPressed(void* sender, CallbackInfo cbInfo) {
+  char button = cbInfo.eventArg; 
+  switch(button) {
+    case 'u': Boxy::Key(KEY_UP); break;
+    case 'd': Boxy::Key(KEY_DOWN); break;
+    case 'l': Boxy::Key(KEY_LEFT); break;
+    case 'r': Boxy::Key(KEY_RIGHT); break;
+  }
+}
+
+void setup() {
+  static SystemSettingsForm gMainForm;
+  // Initialize display driver, font, and mount root layout layer
+  Boxy::Begin<ScreenSSD1306, Font8Narrow>(&gMainForm);
+}
+
+void loop() {
+  // Execute frame ticking & render pipeline
+  eva::tac();
+}
+```
 
 #### 2. Imperative Style (Fallback & Maximum Optimization)
 

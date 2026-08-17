@@ -9,10 +9,10 @@ Pixel-based displays that can render fonts and pictograms:
 
 | Driver | Class | Resolution | Interface |
 |--------|-------|------------|-----------|
-| SSD1306 | `ScreenSSD1306` | 128x64px | I2C |
-| SSH1106 | `ScreenSSH1106` | 128x64px | I2C |
-| PCD8544 | `ScreenPCD8544` | 84x48px | SPI |
-| KS0108 | `ScreenKS0108` | 128x64px | Parallel |
+| SSD1306 | `ScreenSSD1306` | 16x8 tiles | I2C |
+| SSH1106 | `ScreenSSH1106` | 16x8 tiles | I2C |
+| PCD8544 | `ScreenPCD8544` | 12x6 tiles | SPI |
+| KS0108 | `ScreenKS0108` | 16x8 tiles | Parallel |
 
 ### Text Displays
 Character-based displays with limited graphics:

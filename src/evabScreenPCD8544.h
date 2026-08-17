@@ -49,7 +49,7 @@ namespace evab
      * 
      * @return Coor Screen dimensions (11x6 tiles)
      */
-    Coor Size() override { return {11, 6}; }
+    Coor Size() override { return {12, 6}; }
     
     /**
      * @brief Serializes element state for 16x8 screen

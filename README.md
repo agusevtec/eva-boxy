@@ -10,7 +10,7 @@
 * **Compile-Time Composition**: Feature wrappers (labels, decorators, key reactors, listboxes) are composed via C++ templates, eliminating runtime dispatch overhead.
 * **Guaranteed Bounding Box Principle**: Every visual component strictly owns, paints, and clears its allocated rectangular area (`Coor pos`, `Coor size`), completely preventing ghosting, visual artifacts, and trailing pixels without global screen flushes.
 * **Hardware & Display Agnostic**: Simple driver abstraction interface (`Screen` / `ScreenPage8Base`) supporting OLED, LCD, parallel, and serial-debug output.
-* **Gradual Optimization Path**: Seamlessly scale from a rapid, high-level declarative prototype down to imperative direct-to-screen pixel drawing as hardware constraints require.
+* **Gradual Optimization Path**: Seamlessly scale from a rapid, high-level declarative prototype down to imperative direct-to-screen drawing as hardware constraints require.
 
 ---
 
@@ -38,7 +38,7 @@ Below is a complete, minimal example showing how to construct a focusable form w
 #include <evabInputButton.h>
 #include <evabBoxyRest.h>
 
-// EVA Core | EVA Survival kit assumed to be a source of physical keys pressures
+// EVA Core | EVA Survival Kit assumed to be a source of physical key presses
 #include <evaTac.h>
 
 using namespace eva;
@@ -53,7 +53,7 @@ class SystemSettingsForm : public KeyModifier<LayoutBase, KEY_UP, KEY_DOWN> {
 
   Handler<SystemSettingsForm> onSavePressedHandler{ this, &SystemSettingsForm::onSavePressed };
   void onSavePressed(void* sender, CallbackInfo info) {
-    // Form submitted
+    // do useful things here
   }
 
 public:
@@ -74,20 +74,19 @@ public:
   }
 };
 
-
-// EVA Core | EVA Survical kit key source assumed
-void onKeyPressed() {
-  //    if ( ... ) {
-  //        Boxy::Key(KEY_UP);
-  //    }
-  //    if ( ... ) {
-  //        Boxy::Key(KEY_LEFT);
-  //    }
-  // ...
+// Here EVA Core | EVA Survival Kit key source is assumed
+// https://agusevtec.github.io/eva-core-sk/quickstart/performance/
+void onPhysicalButtonPressed(void* sender, CallbackInfo cbInfo) {
+  char button = cbInfo.eventArg; 
+  switch(button) {
+    case 'u': Boxy::Key(KEY_UP); break;
+    case 'd': Boxy::Key(KEY_DOWN); break;
+    case 'l': Boxy::Key(KEY_LEFT); break;
+    case 'r': Boxy::Key(KEY_RIGHT); break;
+  }
 }
 
 void setup() {
-  // Root Ground Layout
   static SystemSettingsForm gMainForm;
   // Initialize display driver, font, and mount root layout layer
   Boxy::Begin<ScreenSSD1306, Font8Narrow>(&gMainForm);
@@ -153,17 +152,23 @@ EVA Boxy includes built-in drivers for both graphical and text-based displays, a
 
 | Display Driver | Class Name | Resolution | Protocol / Interface |
 | :--- | :--- | :--- | :--- |
-| **SSD1306** OLED | `ScreenSSD1306` | 128x64 px | I2C |
-| **SH1106** OLED | `ScreenSSH1106` | 128x64 px | I2C |
-| **PCD8544** (Nokia 5110) | `ScreenPCD8544` | 84x48 px | SPI |
-| **KS0108** Graphical LCD | `ScreenKS0108` | 128x64 px | Parallel 8-bit |
-| **HD44780** Character LCD | `ScreenLCD_I2C` | 16x2, 20x4, etc. | I2C (PCF8574) |
+| **SSD1306** OLED | `ScreenSSD1306` | 16x8 tiles | I2C |
+| **SH1106** OLED | `ScreenSSH1106` | 16x8 tiles | I2C |
+| **PCD8544** (Nokia 5110) | `ScreenPCD8544` | 12x6 tiles | SPI |
+| **KS0108** Graphical LCD | `ScreenKS0108` | 16x8 tiles | Parallel 8-bit |
+| **HD44780** Character LCD | `ScreenLCD_I2C` | 20x4 and others | I2C (PCF8574) |
 | **Serial Text Debug** | `ScreenSerialText` | 16x8 tiles | Serial Monitor |
 | **Serial Pixel Debug** | `ScreenSerialPixel` | 16x8 tiles | Serial Monitor |
 
 ---
 
 ## Installation & Integration
+
+### Arduino IDE
+1. Open Arduino IDE
+2. Go to **Sketch -> Include Library -> Manage Libraries**
+3. Search for **"eva-boxy"**
+4. Click **Install**
 
 ### PlatformIO
 Add the repository or library directory to your `platformio.ini`:
@@ -173,10 +178,6 @@ lib_deps =
     [https://github.com/your-org/eva-boxy.git](https://github.com/your-org/eva-boxy.git)
 ```
 
-### Arduino IDE
-1. Download the latest release `.zip` from GitHub.
-2. Navigate to **Sketch** -> **Include Library** -> **Add .ZIP Library...**
-3. Include `<evabBoxy.h>` in your sketch.
 
 ---
 
