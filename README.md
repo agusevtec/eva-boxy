@@ -103,11 +103,11 @@ void loop() {
 
 EVA Boxy supports three distinct development paradigms depending on application complexity and memory budgets:
 
-| Style | Best For | Focus Handling | Memory Footprint | Key Mechanics |
-| :--- | :--- | :--- | :--- | :--- |
-| **Primary (Declarative)** | Complex screens, rapid UI prototyping, multi-control forms. | Automatic focus ring (`Focusable<T>`). | Standard | Compile-time template composition & `Grid` slicing. |
-| **Intermediate (Contract-based)** | Custom composite widgets, dialog popups, optimized controls. | Manual (`focusChild()`). | Low | Subclassing `CompositeBase`, manual `freezer()` & `onResidualKey()`. |
-| **Imperative (Direct Execution)** | Maximum FLASH/RAM savings, extreme resource limits. | Explicit manual state tracking. | Absolute Minimal | Direct coordinate math, stack-stamping, raw driver calls (`Screen`). |
+| Style | Best For |  Memory Footprint | Key Mechanics |
+| :--- | :--- | :--- | :--- |
+| **Primary (Declarative)** | Complex screens, rapid UI prototyping, multi-control forms. | Standard | Compile-time template composition & `Grid` slicing. |
+| **Intermediate (Contract-based)** | Custom composite widgets, dialog popups, optimized controls. . | Low | Subclassing `CompositeBase`, manual `freezer()` & `onResidualKey()`. |
+| **Imperative (Direct Execution)** | Maximum FLASH/RAM savings, extreme resource limits. |  Absolute Minimal | Direct coordinate math, stack-stamping, raw driver calls (`Screen`). |
 
 ---
 
