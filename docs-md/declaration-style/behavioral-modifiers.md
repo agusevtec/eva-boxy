@@ -44,20 +44,28 @@ form.Increment(+1);    // → moves focus to next child
 | `InputButtonPx` | 🔴 No | 🟡 Dummy | 🔴 No | 🔴 No |
 | `LayoutBase` | 🔴 No | 🟢 Yes | 🔴 No | 🔴 No |
 | `ListBox<T>` | 🔴 No | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
-| **StretchBar & TextStretchBar** | 🔴 No | 🟢 Yes | 🔴 No | 🟢 Yes |
+| **StretchBars** | 🔴 No | 🟢 Yes | 🔴 No | 🟢 Yes |
 | `ScrollListbox` | 🔴 No | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
 | `FlipListbox` | 🔴 No | 🟢 Yes | 🟢 Yes | 🟡 Yes (via `Percent<T>`) |
 
 **Legend:**
+
 - 🟢 **Yes** — Supported natively (built into the class)
+
 - 🟡 **Dummy** — Implemented as no-operation (for interface completeness)
+
 - 🟡 **Yes (via mod.)** — Supported via `Percent<T>` modifier
+
 - 🔴 **No** — Not supported
 
-**Note on StretchBar & TextStretchBar:** This group includes all progress and scroll bar variants:
+**Note on StretchBars** This group includes all progress and scroll bar variants:
+
 - `VerticalProgressBarPx`, `HorizontalProgressBarPx`
+
 - `VerticalScrollBarPx`, `HorizontalScrollBarPx`
+
 - `VerticalProgressBar`, `HorizontalProgressBar`
+
 - `VerticalScrollBar`, `HorizontalScrollBar`
 
 The step of `Increment()` for these elements is **variable** — it depends on the visual representation. Each `Increment(+1)` moves the bar by exactly one visual block (one pictogram or one character position). The actual percent change depends on how many blocks fit in the current drawing area.

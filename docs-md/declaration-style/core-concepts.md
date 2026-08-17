@@ -2,11 +2,11 @@
 
 Declarative composition in Boxy relies on three foundational elements:
 
-1. **The `Boxy` Singleton Ground:** The central runtime anchor handling display driver initialization, frame ticks (`eva::tac()`), and hardware key dispatch (`Boxy::key()`).
+1. **The `Boxy` Singleton Ground:** The central runtime anchor handling display driver initialization and hardware key dispatch (`Boxy::key()`).
 
 2. **Parent-Child Composition:** Structuring UI elements via object composition (nesting), not class inheritance.
 
-3. **The Two Fundamental Chains:** Managing rendering/visibility state (**Freeze–Draw Chain**) and bottom-up event processing (**Key Chain**).
+3. **The Two Fundamental Chains:** Managing rendering state (**Draw - Freeze Chain**) and bottom-up event processing (**Key Chain**).
 
 ---
 
