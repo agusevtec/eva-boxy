@@ -14,7 +14,7 @@ nav:
            - Display Initialization: imperative-style/display-drivers.md
            - Imperative Drawing: imperative-style/imperative-drawing.md
            - Visual Modifiers: imperative-style/visual-modifiers.md
-           - BoxyRest: imperative-style/boxyrest.md
+           - Grid: imperative-style/grid.md
       - Declaration Style:
            - Core Concepts: declaration-style/core-concepts.md
            - Behavioral Modifiers: declaration-style/behavioral-modifiers.md

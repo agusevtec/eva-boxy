@@ -82,8 +82,8 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 | virtual bool | [**OnKey**](#function-onkey) (Keys aKey) override<br>_Handles key events, forwarding to selected item._  |
 |  void | [**Select**](#function-select) (unsigned char aIndex) override<br>_Selects an item by index._  |
 |  void | [**SetItemHeight**](#function-setitemheight) (unsigned char aItemHeight) <br>_Sets the height of each item._  |
-|  void | [**SetItems**](#function-setitems-12) ([**ElementBase**](classevab_1_1_element_base.md) \*(&) aItems) <br>_Sets the list of items to display._  |
-|  void | [**SetItems**](#function-setitems-22) ([**ElementBase**](classevab_1_1_element_base.md) \* aItems, unsigned char aSize) <br> |
+|  void | [**SetItems**](#function-setitems) ([**ElementBase**](classevab_1_1_element_base.md) \*(&) aItems) <br>_Sets the list of items to display._  |
+|  void | [**SetItemsPtr**](#function-setitemsptr) ([**ElementBase**](classevab_1_1_element_base.md) \* aItems, unsigned char aSize) <br> |
 
 
 ## Public Functions inherited from evab::ElementBase
@@ -377,7 +377,7 @@ Reference to this list box
 
 
 
-### function SetItems [1/2]
+### function SetItems 
 
 _Sets the list of items to display._ 
 ```C++
@@ -412,10 +412,10 @@ Reference to this list box
 
 
 
-### function SetItems [2/2]
+### function SetItemsPtr 
 
 ```C++
-inline void evab::ListBox::SetItems (
+inline void evab::ListBox::SetItemsPtr (
     ElementBase * aItems,
     unsigned char aSize
 ) 

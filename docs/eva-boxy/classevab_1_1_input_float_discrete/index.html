@@ -423,14 +423,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../imperative-style/boxyrest/" class="md-nav__link">
+      <a href="../../imperative-style/grid/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BoxyRest
+    Grid
   
 
     
@@ -1173,6 +1173,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#function-setvalue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function SetValue
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1215,24 +1226,28 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">unsigned char</td>
+<td style="text-align: right;">unsigned short</td>
 <td style="text-align: left;"><a href="#function-count"><strong>Count</strong></a> () const<br><em>Returns the total number of steps.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-increment"><strong>Increment</strong></a> (int aSteps) <br><em>Increments the pictogram index.</em></td>
+<td style="text-align: left;"><a href="#function-increment"><strong>Increment</strong></a> (signed char aSteps) <br><em>Increments value by discrete grid steps.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-inputfloatdiscrete"><strong>InputFloatDiscrete</strong></a> (float aValue, unsigned char aCount, float aMin, float aMax) <br><em>Constructs a discrete float input.</em></td>
+<td style="text-align: left;"><a href="#function-inputfloatdiscrete"><strong>InputFloatDiscrete</strong></a> (float aValue, float aMin, float aMax, float aStep=0.1f) <br><em>Constructs a discrete float input.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (unsigned char aIndex) <br><em>Selects a step by index (0 to</em> <a href="./#function-count"><em><strong>Count()</strong></em></a> <em>-1).</em></td>
+<td style="text-align: left;"><a href="#function-select"><strong>Select</strong></a> (unsigned short aIndex) <br><em>Selects a step by index (0 to</em> <a href="./#function-count"><em><strong>Count()</strong></em></a> <em>-1).</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">signed short</td>
 <td style="text-align: left;"><a href="#function-selected"><strong>Selected</strong></a> () const<br><em>Returns the currently selected index.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-setvalue"><strong>SetValue</strong></a> (float aValue) <br><em>Sets the float value snapped to grid and redraws.</em></td>
 </tr>
 </tbody>
 </table>
@@ -1333,25 +1348,25 @@
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
-<p>Adds index-based control to <a href="../classevab_1_1_input_float/"><strong>InputFloat</strong></a>. </p>
+<p>Adds step-grid bound control to <a href="../classevab_1_1_input_float/"><strong>InputFloat</strong></a>. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-count">function Count<a class="headerlink" href="#function-count" title="Permanent link">&para;</a></h3>
 <p><em>Returns the total number of steps.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloatDiscrete</span><span class="o">::</span><span class="n">Count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+<div class="codehilite"><pre><span></span><code><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloatDiscrete</span><span class="o">::</span><span class="n">Count</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
 </code></pre></div>
 
 <hr>
 
 <h3 id="function-increment">function Increment<a class="headerlink" href="#function-increment" title="Permanent link">&para;</a></h3>
-<p><em>Increments the pictogram index.</em> </p>
+<p><em>Increments value by discrete grid steps.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloatDiscrete</span><span class="o">::</span><span class="n">Increment</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">aSteps</span>
+<span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aSteps</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aSteps</code> Amount to increment (positive or negative) </li>
+<li><code>aSteps</code> Amount of steps to increment (positive or negative) </li>
 </ul>
 <hr>
 
@@ -1359,25 +1374,25 @@
 <p><em>Constructs a discrete float input.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">InputFloatDiscrete</span><span class="o">::</span><span class="n">InputFloatDiscrete</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">aValue</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aCount</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">aMin</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">aMax</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">aMax</span><span class="p">,</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">aStep</span><span class="o">=</span><span class="mf">0.1f</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aValue</code> Initial value (snapped to nearest step). </li>
-<li><code>aCount</code> Number of steps (must be &gt;= 2). </li>
-<li><code>aMin</code> Minimum value (inclusive). </li>
-<li><code>aMax</code> Maximum value (inclusive). </li>
+<li><code>aValue</code> Initial value. </li>
+<li><code>aMin</code> Minimum value / start of the step grid. </li>
+<li><code>aMax</code> Maximum boundary limit. </li>
+<li><code>aStep</code> <a href="../classevab_1_1_grid/"><strong>Grid</strong></a> step size (must be &gt; 0.0f). </li>
 </ul>
 <hr>
 
 <h3 id="function-select">function Select<a class="headerlink" href="#function-select" title="Permanent link">&para;</a></h3>
 <p><em>Selects a step by index (0 to</em> <a href="./#function-count"><em><strong>Count()</strong></em></a> <em>-1).</em></p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloatDiscrete</span><span class="o">::</span><span class="n">Select</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">aIndex</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
@@ -1388,6 +1403,19 @@
 <div class="codehilite"><pre><span></span><code><span class="kt">signed</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloatDiscrete</span><span class="o">::</span><span class="n">Selected</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
 </code></pre></div>
 
+<hr>
+
+<h3 id="function-setvalue">function SetValue<a class="headerlink" href="#function-setvalue" title="Permanent link">&para;</a></h3>
+<p><em>Sets the float value snapped to grid and redraws.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputFloatDiscrete</span><span class="o">::</span><span class="n">SetValue</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">aValue</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>aValue</code> New float value </li>
+</ul>
 <hr>
 
 <hr />

@@ -33,8 +33,8 @@ public:
       mSaveButton(this, &onSavePressedHandler, F("Save")) {}
 
   void drawer(Screen* screen, Coor pos, Coor size, unsigned char isFocused) override {
-    // BoxyRest handles coordinate slicing and clears unallocated pixels automatically
-    BoxyRest rest(screen, pos, size, isFocused);
+    // Grid handles coordinate slicing and clears unallocated pixels automatically
+    Grid rest(screen, pos, size, isFocused);
 
     rest.CutRow(1).TextCenter(F("System Settings"));
     rest.CutRow(1).Clear();  // Visual separator

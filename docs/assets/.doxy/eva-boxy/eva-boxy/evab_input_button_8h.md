@@ -10,7 +10,7 @@
 
 
 
-* `#include <evabElementBase.h>`
+* `#include "evabElementBase.h"`
 
 
 
@@ -35,7 +35,8 @@
 
 | Type | Name |
 | ---: | :--- |
-| class | [**InputButton**](classevab_1_1_input_button.md) <br>_Button input element._  |
+| class | [**InputButton**](classevab_1_1_input_button.md) <br>_Button input element (label in RAM)._  |
+| class | [**InputButtonF**](classevab_1_1_input_button_f.md) <br>_Button input element (label in PROGMEM)._  |
 
 
 

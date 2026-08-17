@@ -1,6 +1,6 @@
 // Tests/BoxyRestTests.cpp
 #include <AUnit.h>
-#include <evabBoxyRest.h>
+#include <evabGrid.h>
 #include "MockElementBase.h"
 
 using namespace evab;
@@ -8,7 +8,7 @@ using namespace evab;
 test(BoxyRestTests, CutRow_FirstRow_SetsCorrectPosition)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     
     auto row = rest.CutRow(2);
     
@@ -24,7 +24,7 @@ test(BoxyRestTests, CutRow_FirstRow_SetsCorrectPosition)
 test(BoxyRestTests, CutRow_MultipleRows_AdvancesPositionCorrectly)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     
     auto row1 = rest.CutRow(2);
     auto row2 = rest.CutRow(3);
@@ -41,7 +41,7 @@ test(BoxyRestTests, CutRow_MultipleRows_AdvancesPositionCorrectly)
 test(BoxyRestTests, CutCol_WithinRow_SetsCorrectPosition)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     
     auto row = rest.CutRow(2);
     auto col = row.CutCol(6);
@@ -58,7 +58,7 @@ test(BoxyRestTests, CutCol_WithinRow_SetsCorrectPosition)
 test(BoxyRestTests, CutCol_MultipleCols_AdvancesPositionCorrectly)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     
     auto row = rest.CutRow(2);
     auto col1 = row.CutCol(6);
@@ -76,7 +76,7 @@ test(BoxyRestTests, CutCol_MultipleCols_AdvancesPositionCorrectly)
 test(BoxyRestTests, Rest_UsesRemainingSpace)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     
     auto row = rest.CutRow(2);
     auto col = row.CutCol(6);
@@ -94,7 +94,7 @@ test(BoxyRestTests, Rest_UsesRemainingSpace)
 test(BoxyRestTests, Draw_Element_DrawsAtCorrectPosition)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     MockElement element("A");
     screen.clear();
     
@@ -112,7 +112,7 @@ test(BoxyRestTests, Draw_Element_DrawsAtCorrectPosition)
 // test(BoxyRestTests, Blank_ClearsArea)
 // {
 //     MockScreen screen({16, 8});
-//     BoxyRest rest(Coor(0, 0), Coor(16, 8));
+//     Grid rest(Coor(0, 0), Coor(16, 8));
 //     screen.clear();
     
 //     auto row = rest.CutRow(2);
@@ -129,7 +129,7 @@ test(BoxyRestTests, Draw_Element_DrawsAtCorrectPosition)
 test(BoxyRestTests, CutRow_RowHeightZero_UsesRemainingHeight)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     
     auto row1 = rest.CutRow(2);
     auto row2 = rest.CutRow(0); // Should use remaining
@@ -141,7 +141,7 @@ test(BoxyRestTests, CutRow_RowHeightZero_UsesRemainingHeight)
 test(BoxyRestTests, CutCol_ColWidthZero_UsesRemainingWidth)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     
     auto row = rest.CutRow(2);
     auto col1 = row.CutCol(6);
@@ -154,7 +154,7 @@ test(BoxyRestTests, CutCol_ColWidthZero_UsesRemainingWidth)
 test(BoxyRestTests, NestedBoxyRests_NestedSlicing_WorksCorrectly)
 {
     MockScreen screen({16, 8});
-    BoxyRest rest(Coor(0, 0), Coor(16, 8));
+    Grid rest(Coor(0, 0), Coor(16, 8));
     
     auto row = rest.CutRow(4);
     auto col = row.CutCol(8);

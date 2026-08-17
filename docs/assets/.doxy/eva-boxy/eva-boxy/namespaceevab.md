@@ -46,7 +46,6 @@
 | class | [**AlbumSignal**](classevab_1_1_album_signal.md) <br>_Signal pictogram set (4 states)._  |
 | class | [**AlbumSpeaker**](classevab_1_1_album_speaker.md) <br>_Speaker pictogram set (4 states)._  |
 | class | [**Boxy**](classevab_1_1_boxy.md) <br>_Main application controller managing screen, input, and modal overlays._  |
-| class | [**BoxyRest**](classevab_1_1_boxy_rest.md) <br>_Layout manager for rest-based UI arrangement._  |
 | struct | [**CenterAlign**](structevab_1_1_center_align.md) <br>_Center alignment strategy._  |
 | class | [**CompositeBase**](classevab_1_1_composite_base.md) <br>_Abstract base class for composite elements that can manage child focus._  |
 | struct | [**Coor**](structevab_1_1_coor.md) <br>_Coordinate structure for positions and sizes on screen._  |
@@ -55,6 +54,7 @@
 | class | [**Font8Bold**](classevab_1_1_font8_bold.md) <br>_8x8 bold font implementation_  |
 | class | [**Font8Compact**](classevab_1_1_font8_compact.md) <br>_8x8 compact font implementation_  |
 | class | [**Font8Narrow**](classevab_1_1_font8_narrow.md) <br>_8x8 thin font implementation_  |
+| class | [**Grid**](classevab_1_1_grid.md) <br>_Layout manager for rest-based UI arrangement._  |
 | struct | [**HorizontalProgressBarCharset**](structevab_1_1_horizontal_progress_bar_charset.md) <br>_Character set for horizontal progress bar._  |
 | class | [**HorizontalProgressBarTileset**](classevab_1_1_horizontal_progress_bar_tileset.md) <br>_Horizontal progress bar pictogram set._  |
 | struct | [**HorizontalScrollBarCharset**](structevab_1_1_horizontal_scroll_bar_charset.md) <br>_Character set for horizontal scroll bar._  |
@@ -63,7 +63,8 @@
 | struct | [**HorizontalTilesetPolicy**](structevab_1_1_horizontal_tileset_policy.md) <br>_Policy for horizontal orientation of stretch bars._  |
 | class | [**IFont**](classevab_1_1_i_font.md) <br>_Abstract interface for font providers._  |
 | class | [**InputAnimationPx**](classevab_1_1_input_animation_px.md) &lt;class TAlbum, tMaxSpeed&gt;<br>_Animation input element with configurable speed._  |
-| class | [**InputButton**](classevab_1_1_input_button.md) <br>_Button input element._  |
+| class | [**InputButton**](classevab_1_1_input_button.md) <br>_Button input element (label in RAM)._  |
+| class | [**InputButtonF**](classevab_1_1_input_button_f.md) <br>_Button input element (label in PROGMEM)._  |
 | class | [**InputButtonPx**](classevab_1_1_input_button_px.md) <br>_Pictogram button element._  |
 | class | [**InputFloat**](classevab_1_1_input_float.md) <br>_Float input element._  |
 | class | [**InputFloatDiscrete**](classevab_1_1_input_float_discrete.md) <br>_Discrete float input element._  |

@@ -95,7 +95,7 @@ void drawer(Screen* screen, Coor pos, Coor size, bool focused) override {
 }
 ```
 
-> **Helper:** The `BoxyRest` class greatly helps in implementing this contract by slicing rectangles for children and automatically handling the clearing of unused areas.
+> **Helper:** The `Grid` class greatly helps in implementing this contract by slicing rectangles for children and automatically handling the clearing of unused areas.
 
 ### The Freeze Contract
 The rule is simple: **every parent has to freeze its children when the parent itself is frozen.** This ensures the entire invisible subtree stops redrawing.

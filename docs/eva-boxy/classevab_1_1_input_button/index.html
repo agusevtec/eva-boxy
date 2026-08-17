@@ -423,14 +423,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../imperative-style/boxyrest/" class="md-nav__link">
+      <a href="../../imperative-style/grid/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BoxyRest
+    Grid
   
 
     
@@ -1108,10 +1108,32 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#function-getname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function GetName
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-inputbutton" class="md-nav__link">
     <span class="md-ellipsis">
       
         function InputButton
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        function SetName
       
     </span>
   </a>
@@ -1173,7 +1195,7 @@
 
 <h1 id="class-evabinputbutton">Class evab::InputButton<a class="headerlink" href="#class-evabinputbutton" title="Permanent link">&para;</a></h1>
 <p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>InputButton</strong></a></p>
-<p><em>Button input element.</em> <a href="#detailed-description">More...</a></p>
+<p><em>Button input element (label in RAM).</em> <a href="#detailed-description">More...</a></p>
 <ul>
 <li><code>#include &lt;evabInputButton.h&gt;</code></li>
 </ul>
@@ -1188,8 +1210,16 @@
 </thead>
 <tbody>
 <tr>
+<td style="text-align: right;">const char *</td>
+<td style="text-align: left;"><a href="#function-getname"><strong>GetName</strong></a> () const<br><em>Gets the current label text.</em></td>
+</tr>
+<tr>
 <td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-inputbutton"><strong>InputButton</strong></a> (const __FlashStringHelper * aName) <br><em>Constructor for</em> <a href="./"><em><strong>InputButton</strong></em></a> <em>.</em></td>
+<td style="text-align: left;"><a href="#function-inputbutton"><strong>InputButton</strong></a> (const char * aText="") <br><em>Constructs a</em> <a href="./"><em><strong>InputButton</strong></em></a> <em>with a RAM string.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-setname"><strong>SetName</strong></a> (const char * aText) <br><em>Sets new label text and redraws.</em></td>
 </tr>
 </tbody>
 </table>
@@ -1228,7 +1258,7 @@
 <tbody>
 <tr>
 <td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Draws the button element.</em></td>
+<td style="text-align: left;"><a href="#function-drawer"><strong>drawer</strong></a> (<a href="../classevab_1_1_screen/"><strong>Screen</strong></a> * aScreen, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aIsFocused) override<br><em>Pure virtual method for drawing the element.</em></td>
 </tr>
 </tbody>
 </table>
@@ -1263,21 +1293,37 @@
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
 <p>Displays a button with a label enclosed in parentheses. The Increment method is a placeholder that does nothing. </p>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
+<h3 id="function-getname">function GetName<a class="headerlink" href="#function-getname" title="Permanent link">&para;</a></h3>
+<p><em>Gets the current label text.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputButton</span><span class="o">::</span><span class="n">GetName</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">const</span>
+</code></pre></div>
+
+<hr>
+
 <h3 id="function-inputbutton">function InputButton<a class="headerlink" href="#function-inputbutton" title="Permanent link">&para;</a></h3>
-<p><em>Constructor for</em> <a href="./"><em><strong>InputButton</strong></em></a> <em>.</em></p>
+<p><em>Constructs a</em> <a href="./"><em><strong>InputButton</strong></em></a> <em>with a RAM string.</em></p>
 <div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">InputButton</span><span class="o">::</span><span class="n">InputButton</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aName</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span><span class="o">=</span><span class="s">&quot;&quot;</span>
 <span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>aName</code> Flash string for button label </li>
+<li><code>aText</code> Label text (const char*) </li>
 </ul>
+<hr>
+
+<h3 id="function-setname">function SetName<a class="headerlink" href="#function-setname" title="Permanent link">&para;</a></h3>
+<p><em>Sets new label text and redraws.</em> </p>
+<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputButton</span><span class="o">::</span><span class="n">SetName</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aText</span>
+<span class="p">)</span><span class="w"> </span>
+</code></pre></div>
+
 <hr>
 <h2 id="protected-functions-documentation">Protected Functions Documentation<a class="headerlink" href="#protected-functions-documentation" title="Permanent link">&para;</a></h2>
 <h3 id="function-drawer">function drawer<a class="headerlink" href="#function-drawer" title="Permanent link">&para;</a></h3>
-<p><em>Draws the button element.</em> </p>
+<p><em>Pure virtual method for drawing the element.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">InputButton</span><span class="o">::</span><span class="n">drawer</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aScreen</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>

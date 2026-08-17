@@ -423,14 +423,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../imperative-style/boxyrest/" class="md-nav__link">
+      <a href="../../imperative-style/grid/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BoxyRest
+    Grid
   
 
     
@@ -1083,20 +1083,24 @@
 
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">InputFloatDiscrete</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">InputFloat</span>
 <span class="w">  </span><span class="p">{</span>
-
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">InputFloatDiscrete</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">aValue</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aCount</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">aMin</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">aMax</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Select</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIndex</span><span class="p">);</span>
+<span class="w">    </span><span class="n">InputFloatDiscrete</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">aValue</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">aMin</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">aMax</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">aStep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1f</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Select</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">aIndex</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">SetValue</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">aValue</span><span class="p">);</span>
+
 <span class="w">    </span><span class="kt">signed</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="nf">Selected</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="nf">Count</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mCount</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Increment</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">aSteps</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="nf">Count</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">Increment</span><span class="p">(</span><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aSteps</span><span class="p">);</span>
 
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">mCount</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mMin</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mMax</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">mStep</span><span class="p">;</span>
 <span class="w">  </span><span class="p">};</span>
-
 <span class="p">}</span>
 </code></pre></div>
 

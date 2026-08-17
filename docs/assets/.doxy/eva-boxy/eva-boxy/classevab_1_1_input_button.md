@@ -8,7 +8,7 @@
 
 
 
-_Button input element._ [More...](#detailed-description)
+_Button input element (label in RAM)._ [More...](#detailed-description)
 
 * `#include <evabInputButton.h>`
 
@@ -73,7 +73,9 @@ Inherits the following classes: [evab::ElementBase](classevab_1_1_element_base.m
 
 | Type | Name |
 | ---: | :--- |
-|   | [**InputButton**](#function-inputbutton) (const \_\_FlashStringHelper \* aName) <br>_Constructor for_ [_**InputButton**_](classevab_1_1_input_button.md) _._ |
+|  const char \* | [**GetName**](#function-getname) () const<br>_Gets the current label text._  |
+|   | [**InputButton**](#function-inputbutton) (const char \* aText="") <br>_Constructs a_ [_**InputButton**_](classevab_1_1_input_button.md) _with a RAM string._ |
+|  void | [**SetName**](#function-setname) (const char \* aText) <br>_Sets new label text and redraws._  |
 
 
 ## Public Functions inherited from evab::ElementBase
@@ -135,7 +137,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 
 | Type | Name |
 | ---: | :--- |
-| virtual void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) override<br>_Draws the button element._  |
+| virtual void | [**drawer**](#function-drawer) ([**Screen**](classevab_1_1_screen.md) \* aScreen, [**Coor**](structevab_1_1_coor.md) aPos, [**Coor**](structevab_1_1_coor.md) aSize, unsigned char aIsFocused) override<br>_Pure virtual method for drawing the element._  |
 
 
 ## Protected Functions inherited from evab::ElementBase
@@ -166,12 +168,26 @@ Displays a button with a label enclosed in parentheses. The Increment method is 
 
 
 
+### function GetName 
+
+_Gets the current label text._ 
+```C++
+const char * evab::InputButton::GetName () const
+```
+
+
+
+
+<hr>
+
+
+
 ### function InputButton 
 
-_Constructor for_ [_**InputButton**_](classevab_1_1_input_button.md) _._
+_Constructs a_ [_**InputButton**_](classevab_1_1_input_button.md) _with a RAM string._
 ```C++
 evab::InputButton::InputButton (
-    const __FlashStringHelper * aName
+    const char * aText=""
 ) 
 ```
 
@@ -182,12 +198,28 @@ evab::InputButton::InputButton (
 **Parameters:**
 
 
-* `aName` Flash string for button label 
+* `aText` Label text (const char\*) 
 
 
 
 
         
+
+<hr>
+
+
+
+### function SetName 
+
+_Sets new label text and redraws._ 
+```C++
+void evab::InputButton::SetName (
+    const char * aText
+) 
+```
+
+
+
 
 <hr>
 ## Protected Functions Documentation
@@ -197,7 +229,7 @@ evab::InputButton::InputButton (
 
 ### function drawer 
 
-_Draws the button element._ 
+_Pure virtual method for drawing the element._ 
 ```C++
 virtual void evab::InputButton::drawer (
     Screen * aScreen,

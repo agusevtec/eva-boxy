@@ -62,9 +62,8 @@ public:
       mSaveButton(this, &onSavePressedHandler, F("Save")) {}
 
   void drawer(Screen* screen, Coor pos, Coor size, unsigned char isFocused) override {
-    // BoxyRest handles coordinate slicing and clears unallocated pixels automatically
-    BoxyRest rest(screen, pos, size, isFocused);
-
+    // Grid handles coordinate slicing and clears unallocated pixels automatically
+    Grid rest(screen, pos, size, isFocused);
     rest.CutRow(1).TextCenter(F("System Settings"));
     rest.CutRow(1).Clear();  // Visual separator
     rest.CutRow(1).Draw(mBrightness, IsFocused(&mBrightness));
@@ -106,7 +105,7 @@ EVA Boxy supports three distinct development paradigms depending on application 
 
 | Style | Best For | Focus Handling | Memory Footprint | Key Mechanics |
 | :--- | :--- | :--- | :--- | :--- |
-| **Primary (Declarative)** | Complex screens, rapid UI prototyping, multi-control forms. | Automatic focus ring (`Focusable<T>`). | Standard | Compile-time template composition & `BoxyRest` slicing. |
+| **Primary (Declarative)** | Complex screens, rapid UI prototyping, multi-control forms. | Automatic focus ring (`Focusable<T>`). | Standard | Compile-time template composition & `Grid` slicing. |
 | **Intermediate (Contract-based)** | Custom composite widgets, dialog popups, optimized controls. | Manual (`focusChild()`). | Low | Subclassing `CompositeBase`, manual `freezer()` & `onResidualKey()`. |
 | **Imperative (Direct Execution)** | Maximum FLASH/RAM savings, extreme resource limits. | Explicit manual state tracking. | Absolute Minimal | Direct coordinate math, stack-stamping, raw driver calls (`Screen`). |
 
@@ -128,7 +127,7 @@ The repository contains full MkDocs documentation with tutorials, architectural 
 * [Listboxes](https://agusevtec.github.io/eva-boxy/declaration-style/listboxes) — `ScrollListbox` vs. `FlipListbox`, custom windowing algorithms, and vertical scrollbars.
 
 #### Layout Helper & Drawing Contract
-* [BoxyRest Helper](https://agusevtec.github.io/eva-boxy/imperative-style/boxyrest) — Fluent layout slicing (`CutRow`, `CutCol`), area clearance, and the Drawing Contract.
+* [Grid Helper](https://agusevtec.github.io/eva-boxy/imperative-style/boxyrest) — Fluent layout slicing (`CutRow`, `CutCol`), area clearance, and the Drawing Contract.
 * [Imperative Drawing & Modifiers](https://agusevtec.github.io/eva-boxy/imperative-style/imperative-drawing) — Direct rendering, text alignment, and visual decorators.
 
 #### Intermediate Optimization & Custom Controls

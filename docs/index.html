@@ -557,14 +557,14 @@
   
   
     <li class="md-nav__item">
-      <a href="imperative-style/boxyrest/" class="md-nav__link">
+      <a href="imperative-style/grid/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BoxyRest
+    Grid
   
 
     
@@ -1294,41 +1294,15 @@
 <h3 id="architectural-styles">Architectural Styles<a class="headerlink" href="#architectural-styles" title="Permanent link">&para;</a></h3>
 <p>EVA Boxy scales cleanly depending on your task, performance budget, and architectural preferences:</p>
 <h4 id="1-primary-style-declarative-ui-flagship">1. Primary Style: Declarative UI (Flagship)<a class="headerlink" href="#1-primary-style-declarative-ui-flagship" title="Permanent link">&para;</a></h4>
-<p>The primary way to use EVA Boxy. Build complex, highly maintainable interactive screens using a clean, expressive syntax. You assemble core data inputs (<code>InputInt</code>), behavioral modifiers (<code>KeyReactor</code>, <code>KeyCatcher</code>), and visual wrappers (<code>Labeled</code>) directly via C++ compile-time templates — getting modern UI code ergonomics without paying a runtime memory penalty:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UserForm1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">LayoutBase</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyReactor</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mInputField</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">onValueChanged</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">};</span>
-<span class="w">    </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mSaveButton</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">onSavePressed</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Save&quot;</span><span class="p">};</span>
-
-<span class="w">    </span><span class="n">Handler</span><span class="o">&lt;</span><span class="n">UserForm1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onValueChanged</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">UserForm1</span><span class="o">::</span><span class="n">onValueChanged</span><span class="p">};</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">onValueChanged</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">aSender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">aInfo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Value Changed&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="n">Handler</span><span class="o">&lt;</span><span class="n">UserForm1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onSavePressed</span><span class="w"> </span><span class="p">{</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">UserForm1</span><span class="o">::</span><span class="n">onSavePressed</span><span class="p">};</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSavePressed</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">aSender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">aInfo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Parameter Saved&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="w"> </span><span class="o">*</span><span class="n">aScreen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aIsFocused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">BoxyRest</span><span class="w"> </span><span class="n">rest</span><span class="p">(</span><span class="n">aScreen</span><span class="p">,</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="n">aIsFocused</span><span class="p">);</span>
-<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">mInputField</span><span class="p">,</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mInputField</span><span class="p">));</span>
-<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Clear</span><span class="p">();</span>
-<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">mSaveButton</span><span class="p">,</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mSaveButton</span><span class="p">));</span>
-<span class="w">        </span><span class="n">rest</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">};</span>
-</code></pre></div>
-
+<p>The primary way to use EVA Boxy. Build complex, highly maintainable interactive screens using a clean, expressive syntax. You assemble core data inputs (<code>InputDiscreteInt</code>), behavioral modifiers (<code>KeyModifier</code>, <code>KeyCatcher</code>), and visual wrappers (<code>Labeled</code>) directly via C++ compile-time templates — getting modern UI code ergonomics without paying a runtime memory penalty:</p>
 <p><strong>Visual Representation:</strong></p>
-<div class="codehilite"><pre><span></span><code>┌───────────────────────────────────────────┐
-│                    42                     │  ← InputInt
-└───────────────────────────────────────────┘
-│                                           │  ← Empty row 
-┌───────────────────────────────────────────┐
-│                  (Save)                   │  ← InputButton
-└───────────────────────────────────────────┘
-│                                           │  ← Empty rest
-└───────────────────────────────────────────┘
+<div class="codehilite"><pre><span></span><code>┌──────────────────────────┐
+│     System Settings      │
+│                          │
+│ Brightness    75         │
+│                          │
+│ (        Save          ) │
+└──────────────────────────┘
 </code></pre></div>
 
 <p><strong>Navigation:</strong></p>
@@ -1337,12 +1311,84 @@
 <p><code>KEY_UP</code> / <code>KEY_DOWN</code> — navigate between fields (handled by <code>KeyModifier&lt;LayoutBase&gt;</code>)</p>
 </li>
 <li>
-<p><code>KEY_LEFT</code> / <code>KEY_RIGHT</code> — on InputInt → change value and triggers <code>onValueChanged</code></p>
+<p><code>KEY_LEFT</code> / <code>KEY_RIGHT</code> — on InputDiscreteInt → change value</p>
 </li>
 <li>
 <p><code>KEY_LEFT</code> / <code>KEY_RIGHT</code> — on button → triggers <code>onSavePressed</code></p>
 </li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabBoxy.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabScreenSSD1306.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFont8Narrow.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLayoutBase.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeyModifier.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeyCatcher.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLabeled.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputInt.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputButton.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabBoxyRest.h&gt;</span>
+
+<span class="c1">// EVA Core | EVA Survival Kit assumed to be a source of physical key presses</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evaTac.h&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">eva</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">evab</span><span class="p">;</span>
+
+<span class="c1">// Declare form with vertical navigation (KEY_DOWN / KEY_UP)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SystemSettingsForm</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">LayoutBase</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// [1] InputIntDiscrete bounded to KEY_LEFT / KEY_RIGHT</span>
+<span class="w">  </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyModifier</span><span class="o">&lt;</span><span class="n">LabeledLeftF</span><span class="o">&lt;</span><span class="n">InputIntDiscrete</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mBrightness</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// [2] Action Button bounded to KEY_LEFT / KEY_RIGHT</span>
+<span class="w">  </span><span class="n">Focusable</span><span class="o">&lt;</span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButtonF</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_LEFT</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_RIGHT</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mSaveButton</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">Handler</span><span class="o">&lt;</span><span class="n">SystemSettingsForm</span><span class="o">&gt;</span><span class="w"> </span><span class="n">onSavePressedHandler</span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">SystemSettingsForm</span><span class="o">::</span><span class="n">onSavePressed</span><span class="w"> </span><span class="p">};</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSavePressed</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// do useful things here</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="n">SystemSettingsForm</span><span class="p">()</span>
+<span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="n">mBrightness</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Brightness&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span>
+<span class="w">      </span><span class="n">mSaveButton</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">onSavePressedHandler</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Save&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="o">*</span><span class="w"> </span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">isFocused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Grid handles coordinate slicing and clears unallocated pixels automatically</span>
+<span class="w">    </span><span class="n">Grid</span><span class="w"> </span><span class="nf">rest</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">isFocused</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">TextCenter</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;System Settings&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Clear</span><span class="p">();</span><span class="w">  </span><span class="c1">// Visual separator</span>
+<span class="w">    </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">mBrightness</span><span class="p">,</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mBrightness</span><span class="p">));</span>
+<span class="w">    </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Clear</span><span class="p">();</span><span class="w">  </span><span class="c1">// Visual separator</span>
+<span class="w">    </span><span class="n">rest</span><span class="p">.</span><span class="n">CutRow</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="n">Draw</span><span class="p">(</span><span class="n">mSaveButton</span><span class="p">,</span><span class="w"> </span><span class="n">IsFocused</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mSaveButton</span><span class="p">));</span>
+<span class="w">    </span><span class="n">rest</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span><span class="w">  </span><span class="c1">// Clear remaining area</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// EVA Core | EVA Survival Kit is assumed as the key source</span>
+<span class="c1">// This code snippet is incomplete</span>
+<span class="c1">// see https://agusevtec.github.io/eva-core-sk/quickstart/performance/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">onPhysicalButtonPressed</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">cbInfo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cbInfo</span><span class="p">.</span><span class="n">eventArg</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="k">switch</span><span class="p">(</span><span class="n">button</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;u&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_UP</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_DOWN</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_LEFT</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;r&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Key</span><span class="p">(</span><span class="n">KEY_RIGHT</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">SystemSettingsForm</span><span class="w"> </span><span class="n">gMainForm</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Initialize display driver, font, and mount root layout layer</span>
+<span class="w">  </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Begin</span><span class="o">&lt;</span><span class="n">ScreenSSD1306</span><span class="p">,</span><span class="w"> </span><span class="n">Font8Narrow</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gMainForm</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Execute frame ticking &amp; render pipeline</span>
+<span class="w">  </span><span class="n">eva</span><span class="o">::</span><span class="n">tac</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
 <h4 id="2-imperative-style-fallback-maximum-optimization">2. Imperative Style (Fallback &amp; Maximum Optimization)<a class="headerlink" href="#2-imperative-style-fallback-maximum-optimization" title="Permanent link">&para;</a></h4>
 <p>For developers who prefer direct, traditional control or need absolute minimal resources usage. Even in direct-to-screen mode, Boxy upgrades standard imperative code with a <strong>Guaranteed Bounding Box Principle</strong>: every visual element strictly owns, clears, and renders within its assigned rectangular area. No visual artifacts, no manual clear-screen hacks, plus integrated vector icons powered by Remixicon.</p>
 <p>Draw call explicitly defines its spatial boundaries using rest or pixel coordinates: <code>{X, Y}, {Width, Height}</code></p>

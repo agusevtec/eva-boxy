@@ -93,11 +93,12 @@ Inherits the following classes: [evab::InputFloat](classevab_1_1_input_float.md)
 
 | Type | Name |
 | ---: | :--- |
-|  unsigned char | [**Count**](#function-count) () const<br>_Returns the total number of steps._  |
-|  void | [**Increment**](#function-increment) (int aSteps) <br>_Increments the pictogram index._  |
-|   | [**InputFloatDiscrete**](#function-inputfloatdiscrete) (float aValue, unsigned char aCount, float aMin, float aMax) <br>_Constructs a discrete float input._  |
-|  void | [**Select**](#function-select) (unsigned char aIndex) <br>_Selects a step by index (0 to_ [_**Count()**_](classevab_1_1_input_float_discrete.md#function-count) _-1)._ |
+|  unsigned short | [**Count**](#function-count) () const<br>_Returns the total number of steps._  |
+|  void | [**Increment**](#function-increment) (signed char aSteps) <br>_Increments value by discrete grid steps._  |
+|   | [**InputFloatDiscrete**](#function-inputfloatdiscrete) (float aValue, float aMin, float aMax, float aStep=0.1f) <br>_Constructs a discrete float input._  |
+|  void | [**Select**](#function-select) (unsigned short aIndex) <br>_Selects a step by index (0 to_ [_**Count()**_](classevab_1_1_input_float_discrete.md#function-count) _-1)._ |
 |  signed short | [**Selected**](#function-selected) () const<br>_Returns the currently selected index._  |
+|  void | [**SetValue**](#function-setvalue) (float aValue) <br>_Sets the float value snapped to grid and redraws._  |
 
 
 ## Public Functions inherited from evab::InputFloat
@@ -221,7 +222,7 @@ See [evab::ElementBase](classevab_1_1_element_base.md)
 ## Detailed Description
 
 
-Adds index-based control to [**InputFloat**](classevab_1_1_input_float.md). 
+Adds step-grid bound control to [**InputFloat**](classevab_1_1_input_float.md). 
 
 
     
@@ -234,7 +235,7 @@ Adds index-based control to [**InputFloat**](classevab_1_1_input_float.md).
 
 _Returns the total number of steps._ 
 ```C++
-inline unsigned char evab::InputFloatDiscrete::Count () const
+unsigned short evab::InputFloatDiscrete::Count () const
 ```
 
 
@@ -246,10 +247,10 @@ inline unsigned char evab::InputFloatDiscrete::Count () const
 
 ### function Increment 
 
-_Increments the pictogram index._ 
+_Increments value by discrete grid steps._ 
 ```C++
 void evab::InputFloatDiscrete::Increment (
-    int aSteps
+    signed char aSteps
 ) 
 ```
 
@@ -260,7 +261,7 @@ void evab::InputFloatDiscrete::Increment (
 **Parameters:**
 
 
-* `aSteps` Amount to increment (positive or negative) 
+* `aSteps` Amount of steps to increment (positive or negative) 
 
 
 
@@ -277,9 +278,9 @@ _Constructs a discrete float input._
 ```C++
 evab::InputFloatDiscrete::InputFloatDiscrete (
     float aValue,
-    unsigned char aCount,
     float aMin,
-    float aMax
+    float aMax,
+    float aStep=0.1f
 ) 
 ```
 
@@ -290,10 +291,10 @@ evab::InputFloatDiscrete::InputFloatDiscrete (
 **Parameters:**
 
 
-* `aValue` Initial value (snapped to nearest step). 
-* `aCount` Number of steps (must be &gt;= 2). 
-* `aMin` Minimum value (inclusive). 
-* `aMax` Maximum value (inclusive). 
+* `aValue` Initial value. 
+* `aMin` Minimum value / start of the step grid. 
+* `aMax` Maximum boundary limit. 
+* `aStep` [**Grid**](classevab_1_1_grid.md) step size (must be &gt; 0.0f). 
 
 
 
@@ -309,7 +310,7 @@ evab::InputFloatDiscrete::InputFloatDiscrete (
 _Selects a step by index (0 to_ [_**Count()**_](classevab_1_1_input_float_discrete.md#function-count) _-1)._
 ```C++
 void evab::InputFloatDiscrete::Select (
-    unsigned char aIndex
+    unsigned short aIndex
 ) 
 ```
 
@@ -329,6 +330,33 @@ signed short evab::InputFloatDiscrete::Selected () const
 
 
 
+
+<hr>
+
+
+
+### function SetValue 
+
+_Sets the float value snapped to grid and redraws._ 
+```C++
+void evab::InputFloatDiscrete::SetValue (
+    float aValue
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aValue` New float value 
+
+
+
+
+        
 
 <hr>
 

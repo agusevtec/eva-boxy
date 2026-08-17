@@ -423,14 +423,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../imperative-style/boxyrest/" class="md-nav__link">
+      <a href="../../imperative-style/grid/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BoxyRest
+    Grid
   
 
     
@@ -1185,10 +1185,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setitems-12" class="md-nav__link">
+  <a href="#function-setitems" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function SetItems [1/2]
+        function SetItems
       
     </span>
   </a>
@@ -1196,10 +1196,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#function-setitems-22" class="md-nav__link">
+  <a href="#function-setitemsptr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        function SetItems [2/2]
+        function SetItemsPtr
       
     </span>
   </a>
@@ -1317,11 +1317,11 @@
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setitems-12"><strong>SetItems</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> *(&amp;) aItems) <br><em>Sets the list of items to display.</em></td>
+<td style="text-align: left;"><a href="#function-setitems"><strong>SetItems</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> *(&amp;) aItems) <br><em>Sets the list of items to display.</em></td>
 </tr>
 <tr>
 <td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="#function-setitems-22"><strong>SetItems</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aItems, unsigned char aSize) <br></td>
+<td style="text-align: left;"><a href="#function-setitemsptr"><strong>SetItemsPtr</strong></a> (<a href="../classevab_1_1_element_base/"><strong>ElementBase</strong></a> * aItems, unsigned char aSize) <br></td>
 </tr>
 </tbody>
 </table>
@@ -1493,7 +1493,7 @@
 <p>Reference to this list box </p>
 <hr>
 
-<h3 id="function-setitems-12">function SetItems [1/2]<a class="headerlink" href="#function-setitems-12" title="Permanent link">&para;</a></h3>
+<h3 id="function-setitems">function SetItems<a class="headerlink" href="#function-setitems" title="Permanent link">&para;</a></h3>
 <p><em>Sets the list of items to display.</em> </p>
 <div class="codehilite"><pre><span></span><code><span class="k">template</span><span class="o">&lt;</span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;</span>
 <span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">SetItems</span><span class="w"> </span><span class="p">(</span>
@@ -1509,8 +1509,8 @@
 <p>Reference to this list box </p>
 <hr>
 
-<h3 id="function-setitems-22">function SetItems [2/2]<a class="headerlink" href="#function-setitems-22" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">SetItems</span><span class="w"> </span><span class="p">(</span>
+<h3 id="function-setitemsptr">function SetItemsPtr<a class="headerlink" href="#function-setitemsptr" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ListBox</span><span class="o">::</span><span class="n">SetItemsPtr</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="n">ElementBase</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aItems</span><span class="p">,</span>
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aSize</span>
 <span class="p">)</span><span class="w"> </span>

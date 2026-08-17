@@ -23,7 +23,6 @@
 | ---: | :--- |
 | file | [**evabAlbums.h**](evab_albums_8h.md) <br> |
 | file | [**evabBoxy.h**](evab_boxy_8h.md) <br> |
-| file | [**evabBoxyRest.h**](evab_boxy_rest_8h.md) <br> |
 | file | [**evabCompositeBase.h**](evab_composite_base_8h.md) <br> |
 | file | [**evabCoor.h**](evab_coor_8h.md) <br> |
 | file | [**evabElementBase.h**](evab_element_base_8h.md) <br> |
@@ -33,6 +32,7 @@
 | file | [**evabGalleryRemixicon16.h**](evab_gallery_remixicon16_8h.md) <br> |
 | file | [**evabGalleryRemixicon24.h**](evab_gallery_remixicon24_8h.md) <br> |
 | file | [**evabGalleryRemixicon32.h**](evab_gallery_remixicon32_8h.md) <br> |
+| file | [**evabGrid.h**](evab_grid_8h.md) <br> |
 | file | [**evabIFont.h**](evab_i_font_8h.md) <br> |
 | file | [**evabInputAnimationPx.h**](evab_input_animation_px_8h.md) <br> |
 | file | [**evabInputButton.h**](evab_input_button_8h.md) <br> |

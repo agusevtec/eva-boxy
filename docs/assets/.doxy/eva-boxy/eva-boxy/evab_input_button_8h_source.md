@@ -10,7 +10,7 @@
 ```C++
 #pragma once
 
-#include <evabElementBase.h>
+#include "evabElementBase.h"
 
 namespace evab
 {
@@ -18,13 +18,33 @@ namespace evab
   class InputButton : public ElementBase
   {
   public:
-    InputButton(const __FlashStringHelper *aName);
-    
+    InputButton(const char *aText = "");
+
+    const char *GetName() const;
+
+    void SetName(const char *aText);
+
   protected:
     void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
 
   private:
-    const __FlashStringHelper * mName;  
+    const char *mName;
+  };
+
+  class InputButtonF : public ElementBase
+  {
+  public:
+    InputButtonF(const __FlashStringHelper *aText);
+
+    const __FlashStringHelper *GetName() const;
+
+    void SetName(const __FlashStringHelper *aText);
+
+  protected:
+    void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override;
+
+  private:
+    const __FlashStringHelper *mName;
   };
 
 }

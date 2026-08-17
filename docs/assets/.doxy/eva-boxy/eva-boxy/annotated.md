@@ -16,7 +16,6 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**AlbumSignal**](classevab_1_1_album_signal.md) _Signal pictogram set (4 states)._     
     * **class** [**AlbumSpeaker**](classevab_1_1_album_speaker.md) _Speaker pictogram set (4 states)._     
     * **class** [**Boxy**](classevab_1_1_boxy.md) _Main application controller managing screen, input, and modal overlays._     
-    * **class** [**BoxyRest**](classevab_1_1_boxy_rest.md) _Layout manager for rest-based UI arrangement._     
     * **struct** [**CenterAlign**](structevab_1_1_center_align.md) _Center alignment strategy._     
     * **class** [**CompositeBase**](classevab_1_1_composite_base.md) _Abstract base class for composite elements that can manage child focus._     
     * **struct** [**Coor**](structevab_1_1_coor.md) _Coordinate structure for positions and sizes on screen._     
@@ -28,6 +27,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **namespace** [**GalleryRemixicon16**](namespaceevab_1_1_gallery_remixicon16.md)     
     * **namespace** [**GalleryRemixicon24**](namespaceevab_1_1_gallery_remixicon24.md)     
     * **namespace** [**GalleryRemixicon32**](namespaceevab_1_1_gallery_remixicon32.md)     
+    * **class** [**Grid**](classevab_1_1_grid.md) _Layout manager for rest-based UI arrangement._     
     * **struct** [**HorizontalProgressBarCharset**](structevab_1_1_horizontal_progress_bar_charset.md) _Character set for horizontal progress bar._     
     * **class** [**HorizontalProgressBarTileset**](classevab_1_1_horizontal_progress_bar_tileset.md) _Horizontal progress bar pictogram set._     
     * **struct** [**HorizontalScrollBarCharset**](structevab_1_1_horizontal_scroll_bar_charset.md) _Character set for horizontal scroll bar._     
@@ -36,7 +36,8 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **struct** [**HorizontalTilesetPolicy**](structevab_1_1_horizontal_tileset_policy.md) _Policy for horizontal orientation of stretch bars._     
     * **class** [**IFont**](classevab_1_1_i_font.md) _Abstract interface for font providers._     
     * **class** [**InputAnimationPx**](classevab_1_1_input_animation_px.md) _Animation input element with configurable speed._     
-    * **class** [**InputButton**](classevab_1_1_input_button.md) _Button input element._     
+    * **class** [**InputButton**](classevab_1_1_input_button.md) _Button input element (label in RAM)._     
+    * **class** [**InputButtonF**](classevab_1_1_input_button_f.md) _Button input element (label in PROGMEM)._     
     * **class** [**InputButtonPx**](classevab_1_1_input_button_px.md) _Pictogram button element._     
     * **class** [**InputFloat**](classevab_1_1_input_float.md) _Float input element._     
     * **class** [**InputFloatDiscrete**](classevab_1_1_input_float_discrete.md) _Discrete float input element._     

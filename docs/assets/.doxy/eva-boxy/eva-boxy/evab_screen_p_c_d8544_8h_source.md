@@ -28,7 +28,7 @@ namespace evab
     
     void SetContrast(uint8_t aContrast);
     
-    Coor Size() override { return {11, 6}; }
+    Coor Size() override { return {12, 6}; }
     
     unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
     

@@ -23,7 +23,7 @@
 
 #include <evabLayoutBase.h>
 #include <evabCompositeBase.h>
-#include <evabBoxyRest.h>
+#include <evabGrid.h>
 
 using namespace eva;
 using namespace evab;
@@ -43,11 +43,11 @@ public:
 private:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
   {
-    BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
+    Grid rest(aScreen, aPos, aSize, aIsFocused);
     rest.CutRow(1).TextCenter(F("BOXY - DEMO"));
     rest.CutRow(1).Clear();
 
-    BoxyRest row = rest.CutRow(4);
+    Grid row = rest.CutRow(4);
     row.CutCol(2).Clear();
     row.CutCol(4).Draw(mMonitorButton,  IsFocused(&mMonitorButton));
     row.CutCol(4).Clear();
@@ -75,9 +75,9 @@ private:
     TitledLeftF<InputFloat> tempField(F("TEMERATURE"), 23);
     TitledLeftF<InputInt> humField(F("HUMIDITY"), 41);
 
-    BoxyRest rest(aScreen, aPos, aSize, 0);
+    Grid rest(aScreen, aPos, aSize, 0);
 
-    BoxyRest row = rest.CutRow(3);
+    Grid row = rest.CutRow(3);
     row.CutCol(3).Picto(GalleryRemixicon24::PICTO_F1F2, 0);
     row.CutCol(1).Clear();
     row.Draw(tempField);
@@ -125,7 +125,7 @@ public:
 private:
   void drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override
   {
-    BoxyRest rest(aScreen, aPos, aSize, aIsFocused);
+    Grid rest(aScreen, aPos, aSize, aIsFocused);
     rest.CutRow(1).Draw(mItem1,  IsFocused(&mItem1));
     rest.CutRow(1).Clear();
     rest.CutRow(1).Draw(mItem2,  IsFocused(&mItem2));

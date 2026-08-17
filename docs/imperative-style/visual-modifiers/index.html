@@ -14,7 +14,7 @@
         <link rel="prev" href="../imperative-drawing/">
       
       
-        <link rel="next" href="../boxyrest/">
+        <link rel="next" href="../grid/">
       
       
         
@@ -623,14 +623,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../boxyrest/" class="md-nav__link">
+      <a href="../grid/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BoxyRest
+    Grid
   
 
     
@@ -1450,7 +1450,7 @@ Height = 2 tiles:
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLabeled.h&gt;</span>
 
 <span class="n">LabeledLeft</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="o">&gt;</span><span class="w"> </span><span class="n">labeledInt</span><span class="p">(</span><span class="s">&quot;Temperature&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">);</span>
-<span class="n">LabeledLeft</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="o">&gt;</span><span class="w"> </span><span class="n">labeledButton</span><span class="p">(</span><span class="s">&quot;Action&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">));</span>
+<span class="n">LabeledLeft</span><span class="o">&lt;</span><span class="n">InputButtonF</span><span class="o">&gt;</span><span class="w"> </span><span class="n">labeledButton</span><span class="p">(</span><span class="s">&quot;Action&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">));</span>
 <span class="n">LabeledLeft</span><span class="o">&lt;</span><span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">labeledBattery</span><span class="p">(</span><span class="s">&quot;Battery&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 <span class="n">LabeledLeftF</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="o">&gt;</span><span class="w"> </span><span class="n">labeledFlash</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Brightness&quot;</span><span class="p">),</span><span class="w"> </span><span class="mi">75</span><span class="p">);</span><span class="w">  </span><span class="c1">// Flash string</span>
 </code></pre></div>
@@ -1459,6 +1459,7 @@ Height = 2 tiles:
 <thead>
 <tr>
 <th>Decorator</th>
+<th>Flash string version</th>
 <th>Alignment</th>
 <th>Use Case</th>
 </tr>
@@ -1466,23 +1467,21 @@ Height = 2 tiles:
 <tbody>
 <tr>
 <td><code>LabeledLeft&lt;T&gt;</code></td>
+<td><code>LabeledLeftF&lt;T&gt;</code></td>
 <td>Label left-aligned</td>
 <td>Default, most common</td>
 </tr>
 <tr>
 <td><code>LabeledCenter&lt;T&gt;</code></td>
+<td><code>LabeledCenterF&lt;T&gt;</code></td>
 <td>Label centered</td>
 <td>Symmetrical layouts</td>
 </tr>
 <tr>
 <td><code>LabeledRight&lt;T&gt;</code></td>
+<td><code>LabeledRightF&lt;T&gt;</code></td>
 <td>Label right-aligned</td>
 <td>Right-to-left languages</td>
-</tr>
-<tr>
-<td><code>LabeledLeftF&lt;T&gt;</code></td>
-<td>Flash string label</td>
-<td>Memory-constrained projects</td>
 </tr>
 </tbody>
 </table>
@@ -1538,6 +1537,7 @@ Height = 3 tiles:
 <thead>
 <tr>
 <th>Decorator</th>
+<th>Flash string version</th>
 <th>Alignment</th>
 <th>Use Case</th>
 </tr>
@@ -1545,23 +1545,21 @@ Height = 3 tiles:
 <tbody>
 <tr>
 <td><code>TitledLeft&lt;T&gt;</code></td>
+<td><code>TitledLeftF&lt;T&gt;</code></td>
 <td>Title left-aligned</td>
 <td>Forms with labels above fields</td>
 </tr>
 <tr>
 <td><code>TitledCenter&lt;T&gt;</code></td>
+<td><code>TitledCenterF&lt;T&gt;</code></td>
 <td>Title centered</td>
 <td>Dialog headers</td>
 </tr>
 <tr>
 <td><code>TitledRight&lt;T&gt;</code></td>
+<td><code>TitledRightF&lt;T&gt;</code></td>
 <td>Title right-aligned</td>
 <td>Asymmetric layouts</td>
-</tr>
-<tr>
-<td><code>TitledLeftF&lt;T&gt;</code></td>
-<td>Flash string title</td>
-<td>Memory-constrained projects</td>
 </tr>
 </tbody>
 </table>
@@ -1600,7 +1598,6 @@ Height = 3 tiles:
 PaddingH (width = 6 tiles):
 ┌─────────────────────────────────────────────┐
 │  CLEARED   │ OriginalControl │  CLEARED    │
-│  (1 tile)  │                 │  (1 tile)   │
 └─────────────────────────────────────────────┘
 
 PaddingV + PaddingH (centered):

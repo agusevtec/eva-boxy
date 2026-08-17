@@ -429,14 +429,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../imperative-style/boxyrest/" class="md-nav__link">
+      <a href="../../imperative-style/grid/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    BoxyRest
+    Grid
   
 
     
@@ -814,10 +814,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-lightweight-drawing-without-boxyrest" class="md-nav__link">
+  <a href="#3-lightweight-drawing-without-grid" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Lightweight Drawing Without BoxyRest
+        3. Lightweight Drawing Without Grid
       
     </span>
   </a>
@@ -1213,10 +1213,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-lightweight-drawing-without-boxyrest" class="md-nav__link">
+  <a href="#3-lightweight-drawing-without-grid" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Lightweight Drawing Without BoxyRest
+        3. Lightweight Drawing Without Grid
       
     </span>
   </a>
@@ -1291,7 +1291,7 @@
 <tr>
 <td style="text-align: left;"><strong>Child Positioning</strong></td>
 <td style="text-align: left;">Direct coordinate math</td>
-<td style="text-align: left;">Managed via <code>BoxyRest</code></td>
+<td style="text-align: left;">Managed via <code>Grid</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Best For</strong></td>
@@ -1339,13 +1339,13 @@
 <span class="p">};</span>
 </code></pre></div>
 
-<h3 id="3-lightweight-drawing-without-boxyrest">3. Lightweight Drawing Without BoxyRest<a class="headerlink" href="#3-lightweight-drawing-without-boxyrest" title="Permanent link">&para;</a></h3>
-<p>To keep memory and FLASH usage as low as possible, avoid using <code>BoxyRest</code> or heavy layout engines inside <code>drawer()</code>. Calculate positions directly using simple <code>Coor</code> offsets.</p>
+<h3 id="3-lightweight-drawing-without-grid">3. Lightweight Drawing Without Grid<a class="headerlink" href="#3-lightweight-drawing-without-grid" title="Permanent link">&para;</a></h3>
+<p>To keep memory and FLASH usage as low as possible, avoid using <code>Grid</code> or heavy layout engines inside <code>drawer()</code>. Calculate positions directly using simple <code>Coor</code> offsets.</p>
 <p>When passing the <code>focused</code> state to children, combine the parent's global focus with the child's local focus (<code>focused &amp;&amp; child.IsFocused()</code>). This ensures child elements are not highlighted as active when the entire container itself loses focus:</p>
 <div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="o">*</span><span class="w"> </span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">focused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">Clear</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mandatory rect clearance</span>
 
-<span class="w">    </span><span class="c1">// Manual positioning without BoxyRest overhead</span>
+<span class="w">    </span><span class="c1">// Manual positioning without Grid overhead</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">halfWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)(</span><span class="n">size</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
 <span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">rightOffset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)(</span><span class="n">pos</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">halfWidth</span><span class="p">.</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
 

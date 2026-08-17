@@ -42,7 +42,7 @@ namespace evab
       redraw();
     }
 
-    void SetItems(ElementBase *aItems[], unsigned char aSize)
+    void SetItemsPtr(ElementBase *aItems[], unsigned char aSize)
     {
       mItems = aItems;
       TWindowAlgorithm::setCount(aSize);

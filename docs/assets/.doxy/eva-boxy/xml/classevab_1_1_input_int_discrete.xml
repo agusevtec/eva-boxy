@@ -5,20 +5,6 @@
     <basecompoundref refid="classevab_1_1_input_int" prot="public" virt="non-virtual">evab::InputInt</basecompoundref>
     <includes refid="evab_input_int_8h" local="no">evabInputInt.h</includes>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classevab_1_1_input_int_discrete_1a31fd49d7bcf65792e8fc06fe119d6c16" prot="private" static="no" mutable="no">
-        <type>unsigned char</type>
-        <definition>unsigned char evab::InputIntDiscrete::mCount</definition>
-        <argsstring></argsstring>
-        <name>mCount</name>
-        <qualifiedname>evab::InputIntDiscrete::mCount</qualifiedname>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabInputInt.h" line="98" column="19" bodyfile="src/evabInputInt.h" bodystart="98" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_int_discrete_1a42233db46524fbfbc7b77218bb2f1d58" prot="private" static="no" mutable="no">
         <type>int</type>
         <definition>int evab::InputIntDiscrete::mMin</definition>
@@ -31,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="99" column="9" bodyfile="src/evabInputInt.h" bodystart="99" bodyend="-1"/>
+        <location file="src/evabInputInt.h" line="105" column="9" bodyfile="src/evabInputInt.h" bodystart="105" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_input_int_discrete_1a30d32025505636ced120f0494b1b8252" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -45,23 +31,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="100" column="9" bodyfile="src/evabInputInt.h" bodystart="100" bodyend="-1"/>
+        <location file="src/evabInputInt.h" line="106" column="9" bodyfile="src/evabInputInt.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classevab_1_1_input_int_discrete_1a55b01630152b93d1f431a61015134c06" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short evab::InputIntDiscrete::mStep</definition>
+        <argsstring></argsstring>
+        <name>mStep</name>
+        <qualifiedname>evab::InputIntDiscrete::mStep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputInt.h" line="107" column="20" bodyfile="src/evabInputInt.h" bodystart="107" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_input_int_discrete_1af182963ac7a1cb1dc1636eb6111295a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_int_discrete_1a0193f75a0714e1ded3503c663cf6b3f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>evab::InputIntDiscrete::InputIntDiscrete</definition>
-        <argsstring>(int aValue, unsigned char aCount, int aMin, int aMax)</argsstring>
+        <argsstring>(int aValue, int aMin, int aMax, unsigned short aStep=1)</argsstring>
         <name>InputIntDiscrete</name>
         <qualifiedname>evab::InputIntDiscrete::InputIntDiscrete</qualifiedname>
         <param>
           <type>int</type>
           <declname>aValue</declname>
-        </param>
-        <param>
-          <type>unsigned char</type>
-          <declname>aCount</declname>
         </param>
         <param>
           <type>int</type>
@@ -70,6 +66,11 @@
         <param>
           <type>int</type>
           <declname>aMax</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>aStep</declname>
+          <defval>1</defval>
         </param>
         <briefdescription>
 <para>Constructs a discrete integer input. </para>
@@ -80,15 +81,7 @@
 <parametername>aValue</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Initial value (snapped to nearest step). </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>aCount</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Number of steps (must be &gt;= 2). </para>
+<para>Initial value. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -96,7 +89,7 @@
 <parametername>aMin</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Minimum value (inclusive). </para>
+<para>Minimum value / start of the step grid. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -104,7 +97,15 @@
 <parametername>aMax</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Maximum value (inclusive). </para>
+<para>Maximum boundary limit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aStep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classevab_1_1_grid" kindref="compound">Grid</ref> step size (must be &gt; 0). </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -133,6 +134,35 @@
         </inbodydescription>
         <location file="src/evabInputInt.h" line="80" column="10"/>
       </memberdef>
+      <memberdef kind="function" id="classevab_1_1_input_int_discrete_1a9cab2846a5d2f9842c41575e3a69c959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void evab::InputIntDiscrete::SetValue</definition>
+        <argsstring>(int aValue)</argsstring>
+        <name>SetValue</name>
+        <qualifiedname>evab::InputIntDiscrete::SetValue</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+<para>Sets the integer value and redraws. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New integer value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/evabInputInt.h" line="87" column="10"/>
+      </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_int_discrete_1ac25be0e7fc6372414279e48837fe0d88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>signed short</type>
         <definition>signed short evab::InputIntDiscrete::Selected</definition>
@@ -146,9 +176,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="85" column="18"/>
+        <location file="src/evabInputInt.h" line="92" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_input_int_discrete_1a5256cd090855f5beafcdfb65dc3105e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_int_discrete_1a5256cd090855f5beafcdfb65dc3105e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
         <definition>unsigned char evab::InputIntDiscrete::Count</definition>
         <argsstring>() const</argsstring>
@@ -161,16 +191,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="89" column="19" bodyfile="src/evabInputInt.h" bodystart="89" bodyend="89"/>
+        <location file="src/evabInputInt.h" line="96" column="19"/>
       </memberdef>
-      <memberdef kind="function" id="classevab_1_1_input_int_discrete_1aa41e12c8aa88ae30b28fe1863c621ad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_input_int_discrete_1af70ea8c55afe0b171cbeb2665be3ac05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void evab::InputIntDiscrete::Increment</definition>
-        <argsstring>(int aSteps)</argsstring>
+        <argsstring>(signed char aSteps)</argsstring>
         <name>Increment</name>
         <qualifiedname>evab::InputIntDiscrete::Increment</qualifiedname>
         <param>
-          <type>int</type>
+          <type>signed char</type>
           <declname>aSteps</declname>
         </param>
         <briefdescription>
@@ -190,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputInt.h" line="95" column="10"/>
+        <location file="src/evabInputInt.h" line="102" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -235,7 +265,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputInt.h" line="64" column="3" bodyfile="src/evabInputInt.h" bodystart="65" bodyend="101"/>
+    <location file="src/evabInputInt.h" line="64" column="3" bodyfile="src/evabInputInt.h" bodystart="65" bodyend="108"/>
     <listofallmembers>
       <member refid="classevab_1_1_input_int_discrete_1a5256cd090855f5beafcdfb65dc3105e0" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>Count</name></member>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>Draw</name></member>
@@ -243,19 +273,18 @@
       <member refid="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>Freeze</name></member>
       <member refid="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124" prot="protected" virt="virtual"><scope>evab::InputIntDiscrete</scope><name>freezer</name></member>
       <member refid="classevab_1_1_input_int_1acd95020d7bff5880dc4091fe7e8b1a04" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>GetValue</name></member>
-      <member refid="classevab_1_1_input_int_discrete_1aa41e12c8aa88ae30b28fe1863c621ad9" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>Increment</name></member>
-      <member refid="classevab_1_1_input_int_1ada8b54f6adc5a287ed73dc6ffde18846" prot="public" virt="non-virtual" ambiguityscope="evab::InputInt::"><scope>evab::InputIntDiscrete</scope><name>Increment</name></member>
+      <member refid="classevab_1_1_input_int_discrete_1af70ea8c55afe0b171cbeb2665be3ac05" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>Increment</name></member>
       <member refid="classevab_1_1_input_int_1a71f63e01bba7f2e83326897c5ee16f09" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>InputInt</name></member>
-      <member refid="classevab_1_1_input_int_discrete_1af182963ac7a1cb1dc1636eb6111295a3" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>InputIntDiscrete</name></member>
+      <member refid="classevab_1_1_input_int_discrete_1a0193f75a0714e1ded3503c663cf6b3f1" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>InputIntDiscrete</name></member>
       <member refid="classevab_1_1_element_base_1a0c536319ff77b79c9e359baeae86c065" prot="protected" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>isFrozen</name></member>
-      <member refid="classevab_1_1_input_int_discrete_1a31fd49d7bcf65792e8fc06fe119d6c16" prot="private" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>mCount</name></member>
       <member refid="classevab_1_1_input_int_discrete_1a30d32025505636ced120f0494b1b8252" prot="private" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>mMax</name></member>
       <member refid="classevab_1_1_input_int_discrete_1a42233db46524fbfbc7b77218bb2f1d58" prot="private" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>mMin</name></member>
+      <member refid="classevab_1_1_input_int_discrete_1a55b01630152b93d1f431a61015134c06" prot="private" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>mStep</name></member>
       <member refid="classevab_1_1_element_base_1ad088e430fee933d67248ea9242e8ddf7" prot="public" virt="virtual"><scope>evab::InputIntDiscrete</scope><name>OnKey</name></member>
       <member refid="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>redraw</name></member>
       <member refid="classevab_1_1_input_int_discrete_1aad5ad378cf455b5a77371c27ad9f7c0f" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>Select</name></member>
       <member refid="classevab_1_1_input_int_discrete_1ac25be0e7fc6372414279e48837fe0d88" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>Selected</name></member>
-      <member refid="classevab_1_1_input_int_1ab94428a72666e1384fd6c10a20e7a03c" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>SetValue</name></member>
+      <member refid="classevab_1_1_input_int_discrete_1a9cab2846a5d2f9842c41575e3a69c959" prot="public" virt="non-virtual"><scope>evab::InputIntDiscrete</scope><name>SetValue</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

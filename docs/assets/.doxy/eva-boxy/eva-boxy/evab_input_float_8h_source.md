@@ -36,20 +36,24 @@ namespace evab
 
   class InputFloatDiscrete : public InputFloat
   {
-
   public:
-    InputFloatDiscrete(float aValue, unsigned char aCount, float aMin, float aMax);
-    void Select(unsigned char aIndex);
+    InputFloatDiscrete(float aValue, float aMin, float aMax, float aStep = 0.1f);
+
+    void Select(unsigned short aIndex);
+
+    void SetValue(float aValue);
+
     signed short Selected() const;
-    unsigned char Count() const { return mCount; }
-    void Increment(int aSteps);
+
+    unsigned short Count() const;
+
+    void Increment(signed char aSteps);
 
   private:
-    unsigned char mCount;
     float mMin;
     float mMax;
+    float mStep;
   };
-
 }
 ```
 

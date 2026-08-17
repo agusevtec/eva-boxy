@@ -37,17 +37,19 @@ namespace evab
   {
 
   public:
-    InputIntDiscrete(int aValue, unsigned char aCount, int aMin, int aMax);
+    InputIntDiscrete(int aValue, int aMin, int aMax, unsigned short aStep = 1);
     void Select(unsigned char aIndex);
 
+    void SetValue(int aValue);
+
     signed short Selected() const;
-    unsigned char Count() const { return mCount; }
-    void Increment(int aSteps);
+    unsigned char Count() const;
+    void Increment(signed char aSteps);
 
   private:
-    unsigned char mCount;
     int mMin;
     int mMax;
+    unsigned short mStep;
   };
 
 }

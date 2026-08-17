@@ -13,7 +13,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**evab::AlbumRoundmeter**](classevab_1_1_album_roundmeter.md) 
 * **class** [**evab::AlbumSignal**](classevab_1_1_album_signal.md) _Signal pictogram set (4 states)._ 
 * **class** [**evab::AlbumSpeaker**](classevab_1_1_album_speaker.md) _Speaker pictogram set (4 states)._ 
-* **class** [**evab::BoxyRest**](classevab_1_1_boxy_rest.md) _Layout manager for rest-based UI arrangement._ 
 * **class** [**evab::ElementBase**](classevab_1_1_element_base.md) _Abstract base class for all UI elements._     
     * **class** [**evab::ListBox**](classevab_1_1_list_box.md) _List box element with configurable windowing algorithm._ 
     * **class** [**evab::ListBox**](classevab_1_1_list_box.md) _List box element with configurable windowing algorithm._ 
@@ -36,7 +35,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::TextLabel**](classevab_1_1_text_label.md) _Text label widget with alignment._ 
     * **class** [**evab::CompositeBase**](classevab_1_1_composite_base.md) _Abstract base class for composite elements that can manage child focus._ 
     * **class** [**evab::InputAnimationPx**](classevab_1_1_input_animation_px.md) _Animation input element with configurable speed._ 
-    * **class** [**evab::InputButton**](classevab_1_1_input_button.md) _Button input element._ 
+    * **class** [**evab::InputButton**](classevab_1_1_input_button.md) _Button input element (label in RAM)._ 
+    * **class** [**evab::InputButtonF**](classevab_1_1_input_button_f.md) _Button input element (label in PROGMEM)._ 
     * **class** [**evab::InputButtonPx**](classevab_1_1_input_button_px.md) _Pictogram button element._ 
     * **class** [**evab::InputFloat**](classevab_1_1_input_float.md) _Float input element._     
         * **class** [**evab::InputFloatDiscrete**](classevab_1_1_input_float_discrete.md) _Discrete float input element._ 
@@ -57,6 +57,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::Font8Bold**](classevab_1_1_font8_bold.md) _8x8 bold font implementation_ 
     * **class** [**evab::Font8Compact**](classevab_1_1_font8_compact.md) _8x8 compact font implementation_ 
     * **class** [**evab::Font8Narrow**](classevab_1_1_font8_narrow.md) _8x8 thin font implementation_ 
+* **class** [**evab::Grid**](classevab_1_1_grid.md) _Layout manager for rest-based UI arrangement._ 
 * **class** [**evab::HorizontalProgressBarTileset**](classevab_1_1_horizontal_progress_bar_tileset.md) _Horizontal progress bar pictogram set._ 
 * **class** [**evab::HorizontalScrollBarTileset**](classevab_1_1_horizontal_scroll_bar_tileset.md) _Horizontal scroll bar pictogram set._ 
 * **class** [**evab::Screen**](classevab_1_1_screen.md) _Base class for screen implementations._     

@@ -29,7 +29,7 @@ The implementation of `drawer()` must adhere to one strict rule:
 
 * **Complete Area Coverage:** The implementation **must repaint or clear the entire screen area** defined by the `aPos` and `aSize` parameters passed to `drawer()`. Leaving unrendered regions causes visual artifacts during redrawing.
 
-To simplify layout management and meet this requirement, the `BoxyRest` helper class can be used to slice `aSize` into region-aligned bounding boxes and automatically clear unallocated space via `Clear()`.
+To simplify layout management and meet this requirement, the `Grid` helper class can be used to slice `aSize` into region-aligned bounding boxes and automatically clear unallocated space via `Clear()`.
 
 ### Focusable
 `Focusable<T>` is a template wrapper that integrates a UI control or modifier into the focus ring of a container.
@@ -70,8 +70,8 @@ class FormExample : public KeyModifier<LayoutBase, KEY_DOWN, KEY_UP> {
 
 public:
     void drawer(Screen* aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused) override {
-        // BoxyRest covers and manages the total allocated area
-        BoxyRest rest(aScreen, aPos, aSize);
+        // Grid covers and manages the total allocated area
+        Grid rest(aScreen, aPos, aSize);
 
         rest.CutRow(1).Draw(&mField1,  aIsFocused && IsFocused(&mField1));
         rest.CutRow(1).Draw(&mField2,  aIsFocused && IsFocused(&mField2));

@@ -94,10 +94,11 @@ Inherits the following classes: [evab::InputInt](classevab_1_1_input_int.md)
 | Type | Name |
 | ---: | :--- |
 |  unsigned char | [**Count**](#function-count) () const<br>_Returns the total number of steps._  |
-|  void | [**Increment**](#function-increment) (int aSteps) <br>_Increments the pictogram index._  |
-|   | [**InputIntDiscrete**](#function-inputintdiscrete) (int aValue, unsigned char aCount, int aMin, int aMax) <br>_Constructs a discrete integer input._  |
+|  void | [**Increment**](#function-increment) (signed char aSteps) <br>_Increments the pictogram index._  |
+|   | [**InputIntDiscrete**](#function-inputintdiscrete) (int aValue, int aMin, int aMax, unsigned short aStep=1) <br>_Constructs a discrete integer input._  |
 |  void | [**Select**](#function-select) (unsigned char aIndex) <br>_Selects a step by index (0 to_ [_**Count()**_](classevab_1_1_input_int_discrete.md#function-count) _-1)._ |
 |  signed short | [**Selected**](#function-selected) () const<br>_Returns the currently selected index._  |
+|  void | [**SetValue**](#function-setvalue) (int aValue) <br>_Sets the integer value and redraws._  |
 
 
 ## Public Functions inherited from evab::InputInt
@@ -234,7 +235,7 @@ Adds index-based control to [**InputInt**](classevab_1_1_input_int.md).
 
 _Returns the total number of steps._ 
 ```C++
-inline unsigned char evab::InputIntDiscrete::Count () const
+unsigned char evab::InputIntDiscrete::Count () const
 ```
 
 
@@ -249,7 +250,7 @@ inline unsigned char evab::InputIntDiscrete::Count () const
 _Increments the pictogram index._ 
 ```C++
 void evab::InputIntDiscrete::Increment (
-    int aSteps
+    signed char aSteps
 ) 
 ```
 
@@ -277,9 +278,9 @@ _Constructs a discrete integer input._
 ```C++
 evab::InputIntDiscrete::InputIntDiscrete (
     int aValue,
-    unsigned char aCount,
     int aMin,
-    int aMax
+    int aMax,
+    unsigned short aStep=1
 ) 
 ```
 
@@ -290,10 +291,10 @@ evab::InputIntDiscrete::InputIntDiscrete (
 **Parameters:**
 
 
-* `aValue` Initial value (snapped to nearest step). 
-* `aCount` Number of steps (must be &gt;= 2). 
-* `aMin` Minimum value (inclusive). 
-* `aMax` Maximum value (inclusive). 
+* `aValue` Initial value. 
+* `aMin` Minimum value / start of the step grid. 
+* `aMax` Maximum boundary limit. 
+* `aStep` [**Grid**](classevab_1_1_grid.md) step size (must be &gt; 0). 
 
 
 
@@ -329,6 +330,33 @@ signed short evab::InputIntDiscrete::Selected () const
 
 
 
+
+<hr>
+
+
+
+### function SetValue 
+
+_Sets the integer value and redraws._ 
+```C++
+void evab::InputIntDiscrete::SetValue (
+    int aValue
+) 
+```
+
+
+
+
+
+**Parameters:**
+
+
+* `aValue` New integer value 
+
+
+
+
+        
 
 <hr>
 
