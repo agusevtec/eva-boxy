@@ -1,5 +1,4 @@
-// evabBoxyRest.cpp
-#include "evabGrid.h"
+#include <evabGrid.h>
 
 using namespace evab;
 

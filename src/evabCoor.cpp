@@ -1,10 +1,7 @@
-#include "evabCoor.h"
+#include <evabCoor.h>
 
-namespace evab
+using namespace evab;
+
+Coor::Coor(int x, int y) : X(x), Y(y)
 {
-
-    Coor::Coor(int x, int y) : X(x), Y(y)
-    {
-    }
-    
 }

@@ -7,15 +7,15 @@ namespace evab
      */
     class VerticalProgressBarTileset
     {
-        public:
+    public:
         /**
          * @brief Gets pictogram for vertical progress bar
-         * 
+         *
          * @param blockType Block type (1=start, 2=middle, 3=end)
          * @param fillNumber Fill level (0-4)
          * @return Pointer to pictogram data
          */
-        static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
+        static const unsigned char *GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
     /**
@@ -23,15 +23,15 @@ namespace evab
      */
     class HorizontalProgressBarTileset
     {
-        public:
+    public:
         /**
          * @brief Gets pictogram for horizontal progress bar
-         * 
+         *
          * @param blockType Block type (1=start, 2=middle, 3=end)
          * @param fillNumber Fill level (0-4)
          * @return Pointer to pictogram data
          */
-        static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
+        static const unsigned char *GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
     /**
@@ -39,15 +39,15 @@ namespace evab
      */
     class VerticalScrollBarTileset
     {
-        public:
+    public:
         /**
          * @brief Gets pictogram for vertical scroll bar
-         * 
+         *
          * @param blockType Block type (1=start, 2=middle, 3=end)
          * @param fillNumber Fill level (0-4)
          * @return Pointer to pictogram data
          */
-        static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
+        static const unsigned char *GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
     /**
@@ -55,15 +55,15 @@ namespace evab
      */
     class HorizontalScrollBarTileset
     {
-        public:
+    public:
         /**
          * @brief Gets pictogram for horizontal scroll bar
-         * 
+         *
          * @param blockType Block type (1=start, 2=middle, 3=end)
          * @param fillNumber Fill level (0-4)
          * @return Pointer to pictogram data
          */
-        static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
+        static const unsigned char *GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
 };

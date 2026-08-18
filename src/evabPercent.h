@@ -1,4 +1,3 @@
-// evabModifiers.h
 #pragma once
 
 #include "evabInputInt.h"
@@ -6,7 +5,6 @@
 
 namespace evab
 {
-
     /**
      * @brief Percent modifier for discrete inputs
      *

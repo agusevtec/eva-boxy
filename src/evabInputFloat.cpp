@@ -1,4 +1,3 @@
-// evabInputFloat.cpp
 #include "evabInputFloat.h"
 #include <evabScreen.h>
 #include <stdlib.h>

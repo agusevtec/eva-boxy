@@ -18,7 +18,6 @@ namespace evab
   class KeyCatcher : public T
   {
   public:
-
     /**
      * @brief Constructor for KeyCatcher
      *

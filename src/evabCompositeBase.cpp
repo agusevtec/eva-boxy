@@ -1,37 +1,34 @@
-#include "evabCompositeBase.h"
+#include <evabCompositeBase.h>
 
-namespace evab
+using namespace evab;
+
+void CompositeBase::focusChild(ElementBase *aChild)
 {
+  if (mFocusedChild == aChild)
+    return;
 
-  void CompositeBase::focusChild(ElementBase *aChild)
-  {
-    if (mFocusedChild == aChild)
-      return;
+  mFocusedChild = aChild;
+  redraw();
+}
 
-    mFocusedChild = aChild;
-    redraw();
-  }
+bool CompositeBase::OnKey(Keys aKey)
+{
+  if (mFocusedChild && mFocusedChild->OnKey(aKey))
+    return true;
+  return onResidualKey(aKey);
+}
 
-  bool CompositeBase::OnKey(Keys aKey)
-  {
-    if (mFocusedChild && mFocusedChild->OnKey(aKey))
-      return true;
-    return onResidualKey(aKey);
-  }
+bool CompositeBase::onResidualKey(Keys)
+{
+  return false;
+}
 
+bool CompositeBase::IsFocused(ElementBase *aChild)
+{
+  return aChild == mFocusedChild;
+}
 
-  bool CompositeBase::onResidualKey(Keys)
-  {
-      return false;
-  }
-
-  bool CompositeBase::IsFocused(ElementBase *aChild)
-  {
-      return aChild == mFocusedChild;
-  }
-  
-  ElementBase *CompositeBase::GetFocused() const
-  {
-      return mFocusedChild;
-  }
+ElementBase *CompositeBase::GetFocused() const
+{
+  return mFocusedChild;
 }

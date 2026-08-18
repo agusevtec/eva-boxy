@@ -2,7 +2,6 @@
 
 namespace evab
 {
-
   /**
    * @brief Abstract base class for window navigation algorithms
    *

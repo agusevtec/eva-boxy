@@ -6,7 +6,6 @@ InputButtonPx::InputButtonPx(const unsigned char *aPictogram) : mPictogram(aPict
 {
 }
 
-
 void InputButtonPx::drawer(Screen *aScreen, Coor aPos, Coor aSize, unsigned char aIsFocused)
 {
     aScreen->Picto(aPos, mPictogram, aIsFocused);

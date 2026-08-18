@@ -1,4 +1,3 @@
-// evabTextLabel.h
 #pragma once
 
 #include <evabElementBase.h>
@@ -9,35 +8,35 @@ namespace evab
 {
     /**
      * @brief Text label widget with alignment
-     * 
+     *
      * @tparam T Text type (char*, const char*, __FlashStringHelper*)
      * @tparam TAlign Alignment strategy (LeftAlign, CenterAlign, RightAlign)
      */
-    template<typename T, typename TAlign>
+    template <typename T, typename TAlign>
     class TextLabel : public ElementBase
     {
     public:
         /**
          * @brief Constructor with text
-         * 
+         *
          * @param aText Text to display
          */
         explicit TextLabel(T aText) : mText(aText) {}
 
         /**
          * @brief Sets new text and redraws
-         * 
+         *
          * @param aText New text
          */
-        void SetText(T aText) 
-        { 
-            mText = aText; 
-            redraw(); 
+        void SetText(T aText)
+        {
+            mText = aText;
+            redraw();
         }
 
         /**
          * @brief Gets current text
-         * 
+         *
          * @return Current text
          */
         T GetText() const { return mText; }
@@ -45,7 +44,7 @@ namespace evab
     protected:
         /**
          * @brief Draws the label with alignment
-         * 
+         *
          * @param aScreen Screen to draw on
          * @param aPos Position on screen
          * @param aSize Size of the element
@@ -62,22 +61,22 @@ namespace evab
         void freezer() override {}
 
     private:
-        T mText;  ///< Text to display
+        T mText; ///< Text to display
     };
 
     // --- char* (mutable strings) ---
-    using TextLabelLeft = TextLabel<char*, LeftAlign>;
-    using TextLabelCenter = TextLabel<char*, CenterAlign>;
-    using TextLabelRight = TextLabel<char*, RightAlign>;
+    using TextLabelLeft = TextLabel<char *, LeftAlign>;
+    using TextLabelCenter = TextLabel<char *, CenterAlign>;
+    using TextLabelRight = TextLabel<char *, RightAlign>;
 
     // --- const char* (string literals) ---
-    using TextLabelLeftConst = TextLabel<const char*, LeftAlign>;
-    using TextLabelCenterConst = TextLabel<const char*, CenterAlign>;
-    using TextLabelRightConst = TextLabel<const char*, RightAlign>;
+    using TextLabelLeftConst = TextLabel<const char *, LeftAlign>;
+    using TextLabelCenterConst = TextLabel<const char *, CenterAlign>;
+    using TextLabelRightConst = TextLabel<const char *, RightAlign>;
 
     // --- __FlashStringHelper* (Flash strings) ---
-    using TextLabelLeftF = TextLabel<const __FlashStringHelper*, LeftAlign>;
-    using TextLabelCenterF = TextLabel<const __FlashStringHelper*, CenterAlign>;
-    using TextLabelRightF = TextLabel<const __FlashStringHelper*, RightAlign>;
+    using TextLabelLeftF = TextLabel<const __FlashStringHelper *, LeftAlign>;
+    using TextLabelCenterF = TextLabel<const __FlashStringHelper *, CenterAlign>;
+    using TextLabelRightF = TextLabel<const __FlashStringHelper *, RightAlign>;
 
 }

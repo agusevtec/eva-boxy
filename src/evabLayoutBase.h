@@ -1,11 +1,9 @@
-// evabCompositeBase.h
 #pragma once
 
 #include <evabElementBase.h>
 
 namespace evab
 {
-
   /**
    * @brief Abstract base class for composite elements with circular focus chain
    *

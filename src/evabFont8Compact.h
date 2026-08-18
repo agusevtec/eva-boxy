@@ -7,16 +7,16 @@ namespace evab
 {
     /**
      * @brief 8x8 compact font implementation
-     * 
+     *
      * Provides a compact 8x8 pixel font that saves memory
      * by storing only 5 columns per character.
      */
-    class Font8Compact: public IFont
+    class Font8Compact : public IFont
     {
     public:
         /**
          * @brief Gets a vertical slice of a character
-         * 
+         *
          * @param aCharcode ASCII character code (32-126)
          * @param aCutColumn Column index (0-7)
          * @return unsigned char Bitmap data for the specified column
@@ -24,6 +24,6 @@ namespace evab
         unsigned char GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const override;
 
     private:
-        static const unsigned char kCharmap[][5] PROGMEM;  ///< Character bitmap data
+        static const unsigned char kCharmap[][5] PROGMEM; ///< Character bitmap data
     };
 }

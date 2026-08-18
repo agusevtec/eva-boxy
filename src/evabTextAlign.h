@@ -1,4 +1,3 @@
-// evabTextAlign.h
 #pragma once
 
 #include <evabCoor.h>

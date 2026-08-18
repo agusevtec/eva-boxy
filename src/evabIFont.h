@@ -4,7 +4,7 @@ namespace evab
 {
     /**
      * @brief Abstract interface for font providers
-     * 
+     *
      * Defines the contract for font implementations that can
      * provide vertical slices of character bitmaps.
      */
@@ -13,7 +13,7 @@ namespace evab
     public:
         /**
          * @brief Gets a vertical slice (column) of a character
-         * 
+         *
          * @param aCharcode ASCII character code
          * @param col Column index
          * @return unsigned char Bitmap data for the specified column

@@ -1,7 +1,6 @@
-// evabInputFloat.h
 #pragma once
 
-#include "evabElementBase.h"
+#include <evabElementBase.h>
 
 namespace evab
 {
@@ -57,7 +56,7 @@ namespace evab
     float mValue; ///< Current float value
   };
 
-/**
+  /**
    * @brief Discrete float input element
    *
    * Adds step-grid bound control to InputFloat.

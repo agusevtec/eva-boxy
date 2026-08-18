@@ -1,4 +1,3 @@
-// evabBoxyRest.h
 #pragma once
 
 #include <evabElementBase.h>
@@ -6,7 +5,6 @@
 
 namespace evab
 {
-
     /**
      * @brief Layout manager for rest-based UI arrangement
      *
@@ -110,7 +108,6 @@ namespace evab
          */
         void Picto(const unsigned char *aPictogram, unsigned char aIsFocused = 0);
 
-
         /**
          * @brief Clears the current cell area
          */
@@ -130,12 +127,10 @@ namespace evab
          */
         Coor GetSize() const;
 
-
     private:
-        Coor mTopLeft;         ///< Top-left corner of current cell
-        Coor mBottomRight;     ///< Bottom-right corner of current cell
+        Coor mTopLeft;     ///< Top-left corner of current cell
+        Coor mBottomRight; ///< Bottom-right corner of current cell
         unsigned char mIsFocused;
         const Screen *mScreen; ///< Screen to draw on
     };
-
 }

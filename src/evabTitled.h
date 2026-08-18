@@ -1,4 +1,3 @@
-// evabTitled.h
 #pragma once
 
 #include <evabScreen.h>
@@ -10,10 +9,10 @@ namespace evab
 
   /**
    * @brief Decorator that adds a label to any element with alignment
-   * 
+   *
    * Wraps an element and adds a text label either to the left
    * (single line) or above (multi-line).
-   * 
+   *
    * @tparam T Element type to label
    * @tparam TAlign Alignment strategy for label (LeftAlign, CenterAlign, RightAlign)
    * @tparam TText Text type (const char*, __FlashStringHelper*)
@@ -24,19 +23,19 @@ namespace evab
   public:
     /**
      * @brief Constructor for Titled
-     * 
+     *
      * @param aName Label text
      * @param args Arguments forwarded to the base element constructor
      */
-    template<typename... Args>
-    Titled(TText aName, Args&&... args) 
-      : T(args...), mName(aName)
+    template <typename... Args>
+    Titled(TText aName, Args &&...args)
+        : T(args...), mName(aName)
     {
     }
 
     /**
      * @brief Sets new label text and redraws
-     * 
+     *
      * @param aName New label text
      */
     void SetLabel(TText aName)
@@ -47,7 +46,7 @@ namespace evab
 
     /**
      * @brief Gets current label text
-     * 
+     *
      * @return Current label text
      */
     TText GetLabel() const
@@ -58,7 +57,7 @@ namespace evab
   protected:
     /**
      * @brief Draws the Titled element
-     * 
+     *
      * @param aScreen Screen to draw on
      * @param aPos Position on screen
      * @param aSize Size of the element
@@ -81,7 +80,7 @@ namespace evab
     }
 
   private:
-    TText mName;  ///< Label text
+    TText mName; ///< Label text
   };
 
   // ============================================================
@@ -89,27 +88,25 @@ namespace evab
   // ============================================================
 
   template <class T>
-  using TitledLeft = Titled<T, LeftAlign, const char*>;
+  using TitledLeft = Titled<T, LeftAlign, const char *>;
 
   template <class T>
-  using TitledCenter = Titled<T, CenterAlign, const char*>;
+  using TitledCenter = Titled<T, CenterAlign, const char *>;
 
   template <class T>
-  using TitledRight = Titled<T, RightAlign, const char*>;
+  using TitledRight = Titled<T, RightAlign, const char *>;
 
   // ============================================================
   // Convenience aliases for Flash string labels
   // ============================================================
 
   template <class T>
-  using TitledLeftF = Titled<T, LeftAlign, const __FlashStringHelper*>;
+  using TitledLeftF = Titled<T, LeftAlign, const __FlashStringHelper *>;
 
   template <class T>
-  using TitledCenterF = Titled<T, CenterAlign, const __FlashStringHelper*>;
+  using TitledCenterF = Titled<T, CenterAlign, const __FlashStringHelper *>;
 
   template <class T>
-  using TitledRightF = Titled<T, RightAlign, const __FlashStringHelper*>;
-
-
+  using TitledRightF = Titled<T, RightAlign, const __FlashStringHelper *>;
 
 }

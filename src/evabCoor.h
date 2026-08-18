@@ -1,9 +1,7 @@
-#ifndef EVAB_COOR_H_
-#define EVAB_COOR_H_
+#pragma once
 
 namespace evab
 {
-
   /**
    * @brief Coordinate structure for positions and sizes on screen
    */
@@ -20,4 +18,3 @@ namespace evab
   };
 
 }
-#endif

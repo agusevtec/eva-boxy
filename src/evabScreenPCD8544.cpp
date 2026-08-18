@@ -32,8 +32,6 @@ ScreenPCD8544::ScreenPCD8544(const IFont *aFont,
   clearDisplay();
 }
 
-
-
 void ScreenPCD8544::SetBacklight(uint8_t aState)
 {
   if (mLEDPin != 255)
@@ -103,7 +101,6 @@ void ScreenPCD8544::clearTile(Coor aPosition, unsigned char aColor)
     drawVerticalSlice({aPosition.X, aPosition.Y}, col, aColor ? 0xFF : 0x00);
   }
 }
-
 
 unsigned short ScreenPCD8544::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
 {

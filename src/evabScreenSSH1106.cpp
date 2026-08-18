@@ -1,5 +1,5 @@
-
 #include <evabScreenSSH1106.h>
+
 using namespace evab;
 
 ScreenSSH1106::ScreenSSH1106(const IFont *font, unsigned long aWireClock)
@@ -52,7 +52,7 @@ void ScreenSSH1106::clearDisplay()
     for (unsigned char page = 0; page < 8; page++)
     {
         for (unsigned char seg = 0; seg < 8; seg++)
-        { 
+        {
             setPage(page);
             setColumn(seg * 16 + 2);
 

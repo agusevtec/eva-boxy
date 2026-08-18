@@ -1,11 +1,9 @@
-// evabPadding.h
 #pragma once
 
 #include <evabScreen.h>
 
 namespace evab
 {
-
     /**
      * @brief Decorator that adds vertical padding (top and bottom) to any element.
      *

@@ -4,7 +4,6 @@
 
 namespace evab
 {
-
   /**
    * @brief Abstract base class for composite elements that can manage child focus
    *
@@ -63,5 +62,4 @@ namespace evab
   private:
     ElementBase *mFocusedChild = nullptr; ///< Currently focused child element
   };
-
 }

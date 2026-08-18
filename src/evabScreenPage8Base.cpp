@@ -1,68 +1,65 @@
 #include <evabScreenPage8Base.h>
 #include <Arduino.h>
 
-namespace evab
+using namespace evab;
+
+ScreenPage8Base::ScreenPage8Base(const IFont *aFont)
+    : mFont(aFont)
 {
+}
 
-  ScreenPage8Base::ScreenPage8Base(const IFont *aFont)
-      : mFont(aFont)
+void ScreenPage8Base::DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor)
+{
+  for (uint8_t col = 0; col < 8; col++)
   {
-  }
+    uint8_t slice = mFont->GetVerticalSlice(aCharcode, col);
+    if (aColor == 1)
+      slice = ~slice;
+    uint32_t scaledSlice = (aSize.Y > 1) ? upscaleY(slice, aSize.Y) : slice;
+    uint8_t colno = aSize.X * col;
 
-  void ScreenPage8Base::DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsigned char aColor)
-  {
-    for (uint8_t col = 0; col < 8; col++)
+    for (int j = 0; j < aSize.Y; j++)
     {
-      uint8_t slice = mFont->GetVerticalSlice(aCharcode, col);
-      if (aColor == 1)
-        slice = ~slice;
-      uint32_t scaledSlice = (aSize.Y > 1) ? upscaleY(slice, aSize.Y) : slice;
-      uint8_t colno = aSize.X * col;
-
-      for (int j = 0; j < aSize.Y; j++)
+      for (int k = 0; k < aSize.X; k++)
       {
-        for (int k = 0; k < aSize.X; k++)
-        {
-          drawVerticalSlice({aPosition.X + (colno + k) / 8, aPosition.Y + j}, (colno + k) % 8, scaledSlice & 0xff);
-        }
-        scaledSlice >>= 8;
+        drawVerticalSlice({aPosition.X + (colno + k) / 8, aPosition.Y + j}, (colno + k) % 8, scaledSlice & 0xff);
+      }
+      scaledSlice >>= 8;
+    }
+  }
+}
+
+void ScreenPage8Base::Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor)
+{
+  uint8_t tilesW = pgm_read_byte(aPictogram + 0) / 8;
+  uint8_t tilesH = pgm_read_byte(aPictogram + 1) / 8;
+  int j = 2;
+  for (uint8_t tileY = 0; tileY < tilesH; tileY++)
+  {
+    for (uint8_t tileX = 0; tileX < tilesW; tileX++)
+    {
+      for (uint8_t col = 0; col < 8; col++)
+      {
+        uint8_t slice = pgm_read_byte(&aPictogram[j++]);
+        if (aColor == 1)
+          slice = ~slice;
+        drawVerticalSlice({aPosition.X + tileX, aPosition.Y + tileY}, col, slice);
       }
     }
   }
+}
 
-  void ScreenPage8Base::Picto(Coor aPosition, const unsigned char *aPictogram, unsigned char aColor)
+uint32_t ScreenPage8Base::upscaleY(uint8_t aSlice, uint8_t aScale)
+{
+  uint32_t result = 0;
+  uint32_t weight = 1;
+  uint32_t multiplier = (1 << aScale) - 1;
+
+  for (uint8_t i = 0; i < 8; i++)
   {
-    uint8_t tilesW = pgm_read_byte(aPictogram + 0) / 8; 
-    uint8_t tilesH = pgm_read_byte(aPictogram + 1) / 8; 
-    int j = 2;
-    for (uint8_t tileY = 0; tileY < tilesH; tileY++)
-    {
-      for (uint8_t tileX = 0; tileX < tilesW; tileX++)
-      {
-        for (uint8_t col = 0; col < 8; col++)
-        {
-          uint8_t slice = pgm_read_byte(&aPictogram[j++]);
-          if (aColor == 1)
-            slice = ~slice;
-          drawVerticalSlice({aPosition.X + tileX, aPosition.Y + tileY}, col, slice);
-        }
-      }
-    }
+    if (aSlice & (1 << i))
+      result += multiplier * weight;
+    weight <<= aScale;
   }
-
-  uint32_t ScreenPage8Base::upscaleY(uint8_t aSlice, uint8_t aScale)
-  {
-    uint32_t result = 0;
-    uint32_t weight = 1;
-    uint32_t multiplier = (1 << aScale) - 1;
-
-    for (uint8_t i = 0; i < 8; i++)
-    {
-      if (aSlice & (1 << i))
-        result += multiplier * weight;
-      weight <<= aScale;
-    }
-    return result;
-  }
-
+  return result;
 }

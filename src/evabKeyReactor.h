@@ -18,7 +18,6 @@ namespace evab
   class KeyReactor : public T
   {
   public:
-
     /**
      * @brief Constructor for KeyReactor
      *

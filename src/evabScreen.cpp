@@ -1,6 +1,4 @@
-// evabScreenBase.cpp
 #include <evabScreen.h>
-#include <string.h>
 
 using namespace evab;
 

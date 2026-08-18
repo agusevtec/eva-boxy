@@ -11,7 +11,7 @@ namespace evab
 {
     /**
      * @brief Main application controller managing screen, input, and modal overlays
-     * 
+     *
      * Boxy is a singleton that provides global access to the display system,
      * manages the current screen, and handles modal popups.
      */
@@ -20,7 +20,7 @@ namespace evab
     public:
         /**
          * @brief Initializes the Boxy system with a screen and ground element
-         * 
+         *
          * @tparam TScreen Screen type to use
          * @tparam TFont Font type to use
          * @tparam Args Additional arguments for screen constructor
@@ -41,45 +41,45 @@ namespace evab
 
         /**
          * @brief Forwards key events to the ground element
-         * 
+         *
          * @param aKey Key code to process
          */
         static void Key(Keys aKey);
 
         /**
          * @brief Gets the current screen pointer
-         * 
+         *
          * @return Pointer to current screen, or nullptr if modal is active
          */
         static Screen *GetScreen();
 
         /**
          * @brief Gets the singleton instance
-         * 
+         *
          * @return Pointer to the Boxy singleton
          */
         static Boxy *Instance();
 
         /**
          * @brief Displays a temporary modal with a named integer value
-         * 
+         *
          * @param aName Label text
          * @param aValue Integer value to show
          */
-        static void Message(const __FlashStringHelper*, const char *aText);
+        static void Message(const __FlashStringHelper *, const char *aText);
 
     private:
         /**
          * @brief IHandler callback implementation
-         * 
+         *
          * @param void* Unused
          * @param eva::CallbackInfo Callback information
          */
         void invoke(void *, eva::CallbackInfo) override;
 
     private:
-        Screen *mScreen;                          ///< Current screen instance
-        ElementBase *mGround;                      ///< Ground element being displayed
-        eva::DelayTimer mMessageTimer = {this};  ///< Timer for modal visibility
+        Screen *mScreen;                        ///< Current screen instance
+        ElementBase *mGround;                   ///< Ground element being displayed
+        eva::DelayTimer mMessageTimer = {this}; ///< Timer for modal visibility
     };
 }

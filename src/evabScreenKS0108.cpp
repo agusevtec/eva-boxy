@@ -137,7 +137,7 @@ void ScreenKS0108::clearDisplay()
 
 Coor ScreenKS0108::Size()
 {
-    return {16, 8}; 
+    return {16, 8};
 }
 
 void ScreenKS0108::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
@@ -184,8 +184,6 @@ void ScreenKS0108::clearTile(Coor aPosition, unsigned char aColor)
         }
     }
 }
-
-
 
 unsigned short ScreenKS0108::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
 {

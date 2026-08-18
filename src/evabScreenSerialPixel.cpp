@@ -3,49 +3,48 @@
 
 using namespace evab;
 
-    ScreenSerialPixel::ScreenSerialPixel(IFont *aFont) 
-        : ScreenPage8Base(aFont)
-    {
-        clear();
-    }
+ScreenSerialPixel::ScreenSerialPixel(IFont *aFont)
+    : ScreenPage8Base(aFont)
+{
+    clear();
+}
 
-    void ScreenSerialPixel::clear()
-    {
-        for (unsigned int i = 0; i < 1024; i++)
-            mBuffer[i] = 0x00;
-    }
+void ScreenSerialPixel::clear()
+{
+    for (unsigned int i = 0; i < 1024; i++)
+        mBuffer[i] = 0x00;
+}
 
-    void ScreenSerialPixel::PrintToSerial()
+void ScreenSerialPixel::PrintToSerial()
+{
+    for (unsigned char page = 0; page < 8; page++)
     {
-        for (unsigned char page = 0; page < 8; page++)
+        for (unsigned char y = 0; y < 8; y++)
         {
-            for (unsigned char y = 0; y < 8; y++)
+            for (unsigned char x = 0; x < 128; x++)
             {
-                for (unsigned char x = 0; x < 128; x++)
-                {
-                    unsigned int idx = page * 128 + x;
-                    unsigned char bit = (mBuffer[idx] >> y) & 1;
-                    Serial.print(bit ? '#' : '.');
-                }
-                Serial.println();
+                unsigned int idx = page * 128 + x;
+                unsigned char bit = (mBuffer[idx] >> y) & 1;
+                Serial.print(bit ? '#' : '.');
             }
+            Serial.println();
         }
     }
+}
 
-    Coor ScreenSerialPixel::Size()
-    { 
-        return {16, 8}; 
-    }
+Coor ScreenSerialPixel::Size()
+{
+    return {16, 8};
+}
 
-    void ScreenSerialPixel::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
-    {
-        unsigned char x = aPosition.X * 8 + aCutColumn;
-        unsigned char page = aPosition.Y;
+void ScreenSerialPixel::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
+{
+    unsigned char x = aPosition.X * 8 + aCutColumn;
+    unsigned char page = aPosition.Y;
 
-        if (x < 128 && page < 8)
-            mBuffer[page * 128 + x] = aSlice;
-    }
-
+    if (x < 128 && page < 8)
+        mBuffer[page * 128 + x] = aSlice;
+}
 
 unsigned short ScreenSerialPixel::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
 {

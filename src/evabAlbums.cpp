@@ -659,4 +659,3 @@ const unsigned char *AlbumProgress::GetTile(unsigned char aIndex)
         return nullptr;
     }
 }
-

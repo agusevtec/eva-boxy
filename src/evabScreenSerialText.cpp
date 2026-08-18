@@ -1,7 +1,7 @@
 #include <evabScreenSerialText.h>
+#include <evabSerializers.h>
 
 using namespace evab;
-#include <evabSerializers.h>
 
 ScreenSerialText::ScreenSerialText()
 {
@@ -37,8 +37,6 @@ void ScreenSerialText::DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, un
     if (aPosition.X < 16 && aPosition.Y < 8)
         mBuffer[aPosition.Y * 16 + aPosition.X] = aCharcode;
 }
-
-
 
 unsigned short ScreenSerialText::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
 {

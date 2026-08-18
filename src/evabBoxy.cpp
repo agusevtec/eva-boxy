@@ -1,4 +1,3 @@
-// evabBoxy.cpp
 #include <evabBoxy.h>
 #include <evaDelayTimer.h>
 
@@ -25,7 +24,7 @@ Screen *Boxy::GetScreen()
     return instance->mScreen;
 }
 
-void Boxy::Message(const __FlashStringHelper * aTitle, const char *aText)
+void Boxy::Message(const __FlashStringHelper *aTitle, const char *aText)
 {
     auto instance = Instance();
     if (!instance->mScreen)

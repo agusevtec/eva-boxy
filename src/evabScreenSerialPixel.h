@@ -7,7 +7,7 @@ namespace evab
 {
     /**
      * @brief Debug screen that renders pixels to serial output
-     * 
+     *
      * Used for debugging UI layout without physical hardware.
      */
     class ScreenSerialPixel : public ScreenPage8Base
@@ -15,7 +15,7 @@ namespace evab
     public:
         /**
          * @brief Constructor for serial pixel screen
-         * 
+         *
          * @param aFont Font to use
          */
         ScreenSerialPixel(IFont *aFont);
@@ -24,7 +24,7 @@ namespace evab
          * @brief Clears the pixel buffer
          */
         void clear();
-        
+
         /**
          * @brief Prints the pixel buffer to serial for debugging
          */
@@ -32,24 +32,24 @@ namespace evab
 
         /**
          * @brief Gets the screen size in tiles
-         * 
+         *
          * @return Coor Screen dimensions (16x8 tiles)
          */
         Coor Size() override;
-        
+
         /**
          * @brief Serializes element state for 16x8 screen
-         * 
+         *
          * @param aPos Position of the element
          * @param aSize Size of the element
          * @param isFocused Focus state
          * @return unsigned short Serialized state
          */
         unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
-        
+
         /**
          * @brief Deserializes element state for 16x8 screen
-         * 
+         *
          * @param aSerialized Serialized state
          * @param aPos Position of the element (output)
          * @param aSize Size of the element (output)
@@ -60,7 +60,7 @@ namespace evab
     private:
         /**
          * @brief Draws a vertical slice in the pixel buffer
-         * 
+         *
          * @param aPosition Position on screen
          * @param aCutColumn Column within the tile (0-7)
          * @param aSlice Bitmap data for the slice

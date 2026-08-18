@@ -1,4 +1,3 @@
-// evabLabeled.h
 #pragma once
 
 #include <evabScreen.h>
@@ -7,7 +6,6 @@
 
 namespace evab
 {
-
   /**
    * @brief Decorator that adds a label to any element with alignment
    *

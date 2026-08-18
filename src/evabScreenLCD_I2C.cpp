@@ -97,10 +97,10 @@ void ScreenLCD_I2C::DrawSymbol(Coor aPosition, Coor aSize, char aCharcode, unsig
 
 unsigned short ScreenLCD_I2C::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
 {
-    return serialize_32x4(aPos, aSize, isFocused);
+  return serialize_32x4(aPos, aSize, isFocused);
 }
 
 void ScreenLCD_I2C::Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused)
 {
-    deserialize_32x4(aSerialized, aPos, aSize, isFocused);
+  deserialize_32x4(aSerialized, aPos, aSize, isFocused);
 }
