@@ -19,10 +19,6 @@ namespace evab
   class KeyCatcher : public T
   {
   public:
-    enum EventType
-    {
-      EVENT_CATCH_KEY = 1, 
-    };
 
     template <typename... Args>
     KeyCatcher(eva::IHandler *aListener, Args &&...args)
@@ -39,7 +35,7 @@ namespace evab
       {
         if (mListener)
         {
-          mListener->invoke(this, {EVENT_CATCH_KEY, (int)aKey});
+          mListener->invoke(this, {0, (int)aKey});
           return true;
         }
       }

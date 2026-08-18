@@ -31,11 +31,6 @@ Inherits the following classes: T
 
 
 
-## Public Types
-
-| Type | Name |
-| ---: | :--- |
-| enum  | [**EventType**](#enum-eventtype)  <br>_Event types for_ [_**KeyCatcher**_](classevab_1_1_key_catcher.md) _notifications._ |
 
 
 
@@ -108,24 +103,6 @@ This class wraps any element and intercepts key presses matching the specified k
 
 
     
-## Public Types Documentation
-
-
-
-
-### enum EventType 
-
-_Event types for_ [_**KeyCatcher**_](classevab_1_1_key_catcher.md) _notifications._
-```C++
-enum evab::KeyCatcher::EventType {
-    EVENT_CATCH_KEY = 1
-};
-```
-
-
-
-
-<hr>
 ## Public Functions Documentation
 
 

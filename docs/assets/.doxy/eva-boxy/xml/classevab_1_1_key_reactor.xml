@@ -19,30 +19,6 @@
         <defname>kInc</defname>
       </param>
     </templateparamlist>
-    <sectiondef kind="public-type">
-      <memberdef kind="enum" id="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adb" prot="public" static="no" strong="no">
-        <type></type>
-        <name>EventType</name>
-        <qualifiedname>evab::KeyReactor::EventType</qualifiedname>
-        <enumvalue id="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adba9e339d50c53f9e5e5fad794046472241" prot="public">
-          <name>EVENT_VALUE_CHANGED</name>
-          <initializer>= 2</initializer>
-          <briefdescription>
-<para>Event triggered when value changes. </para>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Event types for <ref refid="classevab_1_1_key_reactor" kindref="compound">KeyReactor</ref> notifications. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="src/evabKeyReactor.h" line="24" column="5" bodyfile="src/evabKeyReactor.h" bodystart="25" bodyend="27"/>
-      </memberdef>
-    </sectiondef>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classevab_1_1_key_reactor_1a9074e6080556052703c2c4a6a1695479" prot="private" static="no" mutable="no">
         <type>eva::IHandler *</type>
@@ -58,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabKeyReactor.h" line="65" column="19" bodyfile="src/evabKeyReactor.h" bodystart="65" bodyend="-1"/>
+        <location file="src/evabKeyReactor.h" line="58" column="19" bodyfile="src/evabKeyReactor.h" bodystart="58" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -108,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabKeyReactor.h" line="36" column="5" bodyfile="src/evabKeyReactor.h" bodystart="36" bodyend="39"/>
+        <location file="src/evabKeyReactor.h" line="29" column="5" bodyfile="src/evabKeyReactor.h" bodystart="29" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_key_reactor_1a4f40a9c50194a96da70b5d6075c6dce3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -139,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabKeyReactor.h" line="47" column="10" bodyfile="src/evabKeyReactor.h" bodystart="47" bodyend="62"/>
+        <location file="src/evabKeyReactor.h" line="40" column="10" bodyfile="src/evabKeyReactor.h" bodystart="40" bodyend="55"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -196,10 +172,8 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabKeyReactor.h" line="18" column="3" bodyfile="src/evabKeyReactor.h" bodystart="19" bodyend="66"/>
+    <location file="src/evabKeyReactor.h" line="18" column="3" bodyfile="src/evabKeyReactor.h" bodystart="19" bodyend="59"/>
     <listofallmembers>
-      <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adba9e339d50c53f9e5e5fad794046472241" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>EVENT_VALUE_CHANGED</name></member>
-      <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adb" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>EventType</name></member>
       <member refid="classevab_1_1_key_reactor_1ab6048049cec3a2eadf0c33bd45744b2a" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>KeyReactor</name></member>
       <member refid="classevab_1_1_key_reactor_1a9074e6080556052703c2c4a6a1695479" prot="private" virt="non-virtual"><scope>evab::KeyReactor</scope><name>mListener</name></member>
       <member refid="classevab_1_1_key_reactor_1a4f40a9c50194a96da70b5d6075c6dce3" prot="public" virt="non-virtual"><scope>evab::KeyReactor</scope><name>OnKey</name></member>

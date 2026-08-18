@@ -18,13 +18,6 @@ namespace evab
   class KeyReactor : public T
   {
   public:
-    /**
-     * @brief Event types for KeyReactor notifications
-     */
-    enum EventType
-    {
-      EVENT_VALUE_CHANGED = 2, ///< Event triggered when value changes
-    };
 
     /**
      * @brief Constructor for KeyReactor
@@ -57,7 +50,7 @@ namespace evab
         return false;
 
       if (mListener)
-        mListener->invoke((void *)this, {EVENT_VALUE_CHANGED, 0});
+        mListener->invoke((void *)this, {0, 0});
       return true;
     }
 

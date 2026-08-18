@@ -40,7 +40,6 @@
 
 ## e
 
-* **EventType** ([**evab::KeyCatcher**](classevab_1_1_key_catcher.md), [**evab::KeyReactor**](classevab_1_1_key_reactor.md))
 * **END\_BLOCK** ([**evab::StretchBarPx**](classevab_1_1_stretch_bar_px.md))
 * **element** ([**evab::LayoutBase::FocusableBase**](classevab_1_1_layout_base_1_1_focusable_base.md))
 

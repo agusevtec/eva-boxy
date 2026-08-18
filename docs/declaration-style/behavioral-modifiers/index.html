@@ -1570,27 +1570,11 @@
 
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">invoke</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">event</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KeyReactor</span><span class="o">&lt;</span><span class="n">InputInt</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_DOWN</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_UP</span><span class="o">&gt;::</span><span class="n">EVENT_VALUE_CHANGED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Value changed!&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Value changed!&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
 
-<table>
-<thead>
-<tr>
-<th>Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>EVENT_VALUE_CHANGED</code></td>
-<td>Triggered when the value changes via keys</td>
-</tr>
-</tbody>
-</table>
 <hr />
 <h3 id="keycatcher">KeyCatcher<a class="headerlink" href="#keycatcher" title="Permanent link">&para;</a></h3>
 <p>Intercepts specific keys and generates an event. This is the recommended way to handle button presses, since <code>KeyModifier</code> has no effect on buttons.</p>
@@ -1603,30 +1587,15 @@
 
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">invoke</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">CallbackInfo</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">event</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButton</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;::</span><span class="n">EVENT_CATCH_KEY</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mSaveButton</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Save pressed!&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="p">.</span><span class="n">event</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KeyCatcher</span><span class="o">&lt;</span><span class="n">InputButtonPx</span><span class="p">,</span><span class="w"> </span><span class="n">KEY_ENTER</span><span class="o">&gt;::</span><span class="n">EVENT_CATCH_KEY</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">sender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mIconButton</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Icon button pressed!&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div>
-
-<table>
-<thead>
-<tr>
-<th>Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>EVENT_CATCH_KEY</code></td>
-<td>Triggered when a caught key is pressed</td>
-</tr>
-</tbody>
-</table>
 
 
 

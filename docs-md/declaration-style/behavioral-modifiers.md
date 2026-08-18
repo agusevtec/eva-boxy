@@ -159,16 +159,10 @@ class MyForm : public LayoutBase, private eva::IHandler {
     
 public:
     void invoke(void* sender, CallbackInfo info) override {
-        if (info.event == KeyReactor<InputInt, KEY_DOWN, KEY_UP>::EVENT_VALUE_CHANGED) {
-            Serial.println("Value changed!");
-        }
+        Serial.println("Value changed!");
     }
 };
 ```
-
-| Event | Description |
-|-------|-------------|
-| `EVENT_VALUE_CHANGED` | Triggered when the value changes via keys |
 
 ---
 
@@ -186,16 +180,12 @@ class MyForm : public LayoutBase, private eva::IHandler {
     
 public:
     void invoke(void* sender, CallbackInfo info) override {
-        if (info.event == KeyCatcher<InputButton, KEY_ENTER>::EVENT_CATCH_KEY) {
+        if (sender == &mSaveButton) {
             Serial.println("Save pressed!");
         }
-        if (info.event == KeyCatcher<InputButtonPx, KEY_ENTER>::EVENT_CATCH_KEY) {
+        if (sender == &mIconButton) {
             Serial.println("Icon button pressed!");
         }
     }
 };
 ```
-
-| Event | Description |
-|-------|-------------|
-| `EVENT_CATCH_KEY` | Triggered when a caught key is pressed |

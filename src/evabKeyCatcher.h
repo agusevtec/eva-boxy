@@ -18,13 +18,6 @@ namespace evab
   class KeyCatcher : public T
   {
   public:
-    /**
-     * @brief Event types for KeyCatcher notifications
-     */
-    enum EventType
-    {
-      EVENT_CATCH_KEY = 1, ///< Event triggered when a caught key is pressed
-    };
 
     /**
      * @brief Constructor for KeyCatcher
@@ -53,7 +46,7 @@ namespace evab
       {
         if (mListener)
         {
-          mListener->invoke(this, {EVENT_CATCH_KEY, (int)aKey});
+          mListener->invoke(this, {0, (int)aKey});
           return true;
         }
       }

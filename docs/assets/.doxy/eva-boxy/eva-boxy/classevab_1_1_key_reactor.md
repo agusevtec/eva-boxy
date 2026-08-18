@@ -31,11 +31,6 @@ Inherits the following classes: T
 
 
 
-## Public Types
-
-| Type | Name |
-| ---: | :--- |
-| enum  | [**EventType**](#enum-eventtype)  <br>_Event types for_ [_**KeyReactor**_](classevab_1_1_key_reactor.md) _notifications._ |
 
 
 
@@ -109,24 +104,6 @@ Similar to [**KeyModifier**](classevab_1_1_key_modifier.md) but additionally sen
 
 
     
-## Public Types Documentation
-
-
-
-
-### enum EventType 
-
-_Event types for_ [_**KeyReactor**_](classevab_1_1_key_reactor.md) _notifications._
-```C++
-enum evab::KeyReactor::EventType {
-    EVENT_VALUE_CHANGED = 2
-};
-```
-
-
-
-
-<hr>
 ## Public Functions Documentation
 
 

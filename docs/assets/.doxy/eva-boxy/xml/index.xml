@@ -225,8 +225,6 @@
     <member refid="classevab_1_1_input_selector_px_1a80653ad8770618ed55f12ae92c3f0827" kind="function"><name>drawer</name></member>
   </compound>
   <compound refid="classevab_1_1_key_catcher" kind="class"><name>evab::KeyCatcher</name>
-    <member refid="classevab_1_1_key_catcher_1a6e5feb01ca6ee3b28f868db64b853981" kind="enum"><name>EventType</name></member>
-    <member refid="classevab_1_1_key_catcher_1a6e5feb01ca6ee3b28f868db64b853981a844b3980654ebb960c5e163931c92e0f" kind="enumvalue"><name>EVENT_CATCH_KEY</name></member>
     <member refid="classevab_1_1_key_catcher_1ab0a787dfab54c1274f6514062d9353c9" kind="variable"><name>mListener</name></member>
     <member refid="classevab_1_1_key_catcher_1aba5d8d213e39d560ed7260db73c291e2" kind="function"><name>KeyCatcher</name></member>
     <member refid="classevab_1_1_key_catcher_1aca34e483a7f7b1a0aaac5426c4b7fbec" kind="function"><name>OnKey</name></member>
@@ -236,8 +234,6 @@
     <member refid="classevab_1_1_key_modifier_1a000b3244852a5b36eab0e54d0b8019be" kind="function"><name>OnKey</name></member>
   </compound>
   <compound refid="classevab_1_1_key_reactor" kind="class"><name>evab::KeyReactor</name>
-    <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adb" kind="enum"><name>EventType</name></member>
-    <member refid="classevab_1_1_key_reactor_1ac0fc522b8559c59e6fcde0cafeec0adba9e339d50c53f9e5e5fad794046472241" kind="enumvalue"><name>EVENT_VALUE_CHANGED</name></member>
     <member refid="classevab_1_1_key_reactor_1a9074e6080556052703c2c4a6a1695479" kind="variable"><name>mListener</name></member>
     <member refid="classevab_1_1_key_reactor_1ab6048049cec3a2eadf0c33bd45744b2a" kind="function"><name>KeyReactor</name></member>
     <member refid="classevab_1_1_key_reactor_1a4f40a9c50194a96da70b5d6075c6dce3" kind="function"><name>OnKey</name></member>
