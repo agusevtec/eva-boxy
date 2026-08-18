@@ -1,18 +1,6 @@
 # Core Concepts
 
-Declarative composition in Boxy relies on three foundational elements:
-
-1. **The `Boxy` Singleton Ground:** The central runtime anchor handling display driver initialization and hardware key dispatch (`Boxy::key()`).
-
-2. **Parent-Child Composition:** Structuring UI elements via object composition (nesting), not class inheritance.
-
-3. **The Two Fundamental Chains:** Managing rendering state (**Draw - Freeze Chain**) and bottom-up event processing (**Key Chain**).
-
----
-
-## Parent-Child Composition
-
-In Boxy, every element is a rectangle (a "box") that knows how to draw itself within an allocated boundary. Visual representation is formed by **layers** — elements nested inside other elements:
+EVA Boxy serves user interfaces based on parent-child composition:
 
 ```text
 ┌─────────────────────────────┐
@@ -25,8 +13,20 @@ In Boxy, every element is a rectangle (a "box") that knows how to draw itself wi
 │  └────────────────────────┘ │
 └─────────────────────────────┘
 ```
+**Note:** Parent-child in Boxy means composition of objects, not class inheritance.
 
-> **Note:** Parent-child in Boxy means **composition of objects**, not class inheritance.
+In EVA Boxy, every element is a rectangle (a "box") that knows how to draw itself within an allocated boundary.
+
+Repeating this scheme recursively — where any child can be a parent for other children — forms layers.
+
+Consistent interaction between these layers is ensured by two chains of responsibility:
+
+
+1. **Draw - Freeze Chain** — top-down, from Parent to Child. Manages rendering state. 
+
+2. **Key Chain** — bottom-up, from Child to Parent. Handles event processing.
+
+Both chains are anchored by the EVA Boxy Singleton — a central runtime component that initializes the display driver and dispatches hardware key events via Boxy::key()
 
 ---
 

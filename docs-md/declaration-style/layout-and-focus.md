@@ -4,22 +4,6 @@ Interactive interfaces in EVA Boxy are structured around two core abstractions: 
 
 Components are declared directly as class members. The declaration order defines the sequential focus navigation ring.
 
-## Parent-Child Composition
-
-In the framework, every element is a rectangle (a "box") that knows how to draw itself. Complex visual representation is formed by layers — elements nested inside other elements:
-
-```text
-┌─────────────────────────────┐
-│          Parent             │
-│  ┌──────────┐ ┌──────────┐  │
-│  │  Child 1 │ │  Child 2 │  │
-│  └──────────┘ └──────────┘  │
-│  ┌────────────────────────┐ │
-│  │       Child 3          │ │
-│  └────────────────────────┘ │
-└─────────────────────────────┘
-```
-
 ## Technical Overview
 
 ### Inheritance and Rendering Contract
