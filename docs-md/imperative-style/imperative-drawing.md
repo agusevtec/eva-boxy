@@ -1,12 +1,12 @@
 # Imperative Drawing
 
-At its core, Boxy provides a straightforward imperative drawing API. This is the foundation upon which all higher-level elements are built. Understanding this layer gives you full control over the display and allows you to create custom elements when needed.
+At its core, EVA Boxy provides a straightforward imperative drawing API. This is the foundation upon which all higher-level elements are built. Understanding this layer gives you full control over the display and allows you to create custom elements when needed.
 
 ---
 
 ## Text Rendering
 
-Boxy provides three alignment options for text rendering:
+EVA Boxy provides three alignment options for text rendering:
 
 ```cpp
 screen.TextLeft({0, 2}, {16, 1}, "Hello Left", 0);
@@ -70,7 +70,7 @@ for (int i = 0; i < 8; i++) {
 
 ## Pictograms
 
-Boxy includes Remixicon pictograms in three sizes:
+EVA Boxy includes Remixicon pictograms in three sizes:
 
 ```cpp
 #include <evabGalleryRemixicon16.h>
@@ -94,7 +94,7 @@ You can visit [remixicon.com](https://remixicon.com) and find the hex code of de
 
 ## Working with Elements Imperatively
 
-Every element in Boxy can be drawn imperatively using its `Draw()` method.
+Every element in EVA Boxy can be drawn imperatively using its `Draw()` method.
 
 ### Button Controls
 
@@ -147,7 +147,7 @@ floatVal.Draw(&screen, {0, 4}, {16, 1}, 0);
 
 `InputSelectorPx` allows selecting from a set of pictograms. The album template parameter determines both the available states and their visual representation.
 
-> **Important:** Because of limited graphics support, Boxy does not control the size of the drawing area for pictogram-related methods. The user must handle the size of the area manually.
+> **Important:** Because of limited graphics support, EVA Boxy does not control the size of the drawing area for pictogram-related methods. The user must handle the size of the area manually.
 
 ```cpp
 #include <evabInputSelectorPx.h>

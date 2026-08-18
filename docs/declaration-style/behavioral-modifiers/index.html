@@ -1283,10 +1283,10 @@
 
 <h1 id="behavioral-modifiers-implicit-interfaces">Behavioral Modifiers &amp; Implicit Interfaces<a class="headerlink" href="#behavioral-modifiers-implicit-interfaces" title="Permanent link">&para;</a></h1>
 <p>Behavioral modifiers are template decorators that change <strong>how</strong> an element behaves — how it responds to keys, what events it generates, or how its value is interpreted. Unlike visual modifiers, they don't change the element's appearance; they change its interaction model.</p>
-<p>These modifiers rely on <strong>implicit interfaces</strong> — a convention in method naming within EVA Boxy. Instead of a formal inheritance hierarchy or abstract base classes, Boxy uses duck typing: if an element has the required methods, the modifier works. This approach keeps the library lightweight and avoids virtual table overhead.</p>
+<p>These modifiers rely on <strong>implicit interfaces</strong> — a convention in method naming within EVA Boxy. Instead of a formal inheritance hierarchy or abstract base classes, EVA Boxy uses duck typing: if an element has the required methods, the modifier works. This approach keeps the library lightweight and avoids virtual table overhead.</p>
 <hr />
 <h2 id="the-four-implicit-interfaces">The Four Implicit Interfaces<a class="headerlink" href="#the-four-implicit-interfaces" title="Permanent link">&para;</a></h2>
-<p>Boxy recognizes four implicit interfaces that elements can implement:</p>
+<p>EVA Boxy recognizes four implicit interfaces that elements can implement:</p>
 <table>
 <thead>
 <tr>
@@ -1411,7 +1411,7 @@
 <td>🟡 Yes (via <code>Percent&lt;T&gt;</code>)</td>
 </tr>
 <tr>
-<td><strong>StretchBar &amp; TextStretchBar</strong></td>
+<td><strong>StretchBars</strong></td>
 <td>🔴 No</td>
 <td>🟢 Yes</td>
 <td>🔴 No</td>
@@ -1433,16 +1433,36 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Legend:</strong>
-- 🟢 <strong>Yes</strong> — Supported natively (built into the class)
-- 🟡 <strong>Dummy</strong> — Implemented as no-operation (for interface completeness)
-- 🟡 <strong>Yes (via mod.)</strong> — Supported via <code>Percent&lt;T&gt;</code> modifier
-- 🔴 <strong>No</strong> — Not supported</p>
-<p><strong>Note on StretchBar &amp; TextStretchBar:</strong> This group includes all progress and scroll bar variants:
-- <code>VerticalProgressBarPx</code>, <code>HorizontalProgressBarPx</code>
-- <code>VerticalScrollBarPx</code>, <code>HorizontalScrollBarPx</code>
-- <code>VerticalProgressBar</code>, <code>HorizontalProgressBar</code>
-- <code>VerticalScrollBar</code>, <code>HorizontalScrollBar</code></p>
+<p><strong>Legend:</strong></p>
+<ul>
+<li>
+<p>🟢 <strong>Yes</strong> — Supported natively (built into the class)</p>
+</li>
+<li>
+<p>🟡 <strong>Dummy</strong> — Implemented as no-operation (for interface completeness)</p>
+</li>
+<li>
+<p>🟡 <strong>Yes (via mod.)</strong> — Supported via <code>Percent&lt;T&gt;</code> modifier</p>
+</li>
+<li>
+<p>🔴 <strong>No</strong> — Not supported</p>
+</li>
+</ul>
+<p><strong>Note on StretchBars</strong> This group includes all progress and scroll bar variants:</p>
+<ul>
+<li>
+<p><code>VerticalProgressBarPx</code>, <code>HorizontalProgressBarPx</code></p>
+</li>
+<li>
+<p><code>VerticalScrollBarPx</code>, <code>HorizontalScrollBarPx</code></p>
+</li>
+<li>
+<p><code>VerticalProgressBar</code>, <code>HorizontalProgressBar</code></p>
+</li>
+<li>
+<p><code>VerticalScrollBar</code>, <code>HorizontalScrollBar</code></p>
+</li>
+</ul>
 <p>The step of <code>Increment()</code> for these elements is <strong>variable</strong> — it depends on the visual representation. Each <code>Increment(+1)</code> moves the bar by exactly one visual block (one pictogram or one character position). The actual percent change depends on how many blocks fit in the current drawing area.</p>
 <p>This is why StretchBar elements support <strong>Increment</strong> (visual step) and <strong>Percent</strong> (0-100% value), but not <strong>Index</strong> (no fixed discrete positions) — the number of positions is determined by the available space at draw time.</p>
 <hr />

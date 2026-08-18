@@ -1370,10 +1370,10 @@
 
 
 <h1 id="imperative-drawing">Imperative Drawing<a class="headerlink" href="#imperative-drawing" title="Permanent link">&para;</a></h1>
-<p>At its core, Boxy provides a straightforward imperative drawing API. This is the foundation upon which all higher-level elements are built. Understanding this layer gives you full control over the display and allows you to create custom elements when needed.</p>
+<p>At its core, EVA Boxy provides a straightforward imperative drawing API. This is the foundation upon which all higher-level elements are built. Understanding this layer gives you full control over the display and allows you to create custom elements when needed.</p>
 <hr />
 <h2 id="text-rendering">Text Rendering<a class="headerlink" href="#text-rendering" title="Permanent link">&para;</a></h2>
-<p>Boxy provides three alignment options for text rendering:</p>
+<p>EVA Boxy provides three alignment options for text rendering:</p>
 <div class="codehilite"><pre><span></span><code><span class="n">screen</span><span class="p">.</span><span class="n">TextLeft</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;Hello Left&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <span class="n">screen</span><span class="p">.</span><span class="n">TextCenter</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;Hello Center&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 <span class="n">screen</span><span class="p">.</span><span class="n">TextRight</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;Hello Right&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
@@ -1452,7 +1452,7 @@
 
 <hr />
 <h2 id="pictograms">Pictograms<a class="headerlink" href="#pictograms" title="Permanent link">&para;</a></h2>
-<p>Boxy includes Remixicon pictograms in three sizes:</p>
+<p>EVA Boxy includes Remixicon pictograms in three sizes:</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabGalleryRemixicon16.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabGalleryRemixicon24.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabGalleryRemixicon32.h&gt;</span>
@@ -1487,7 +1487,7 @@
 <p>You can visit <a href="https://remixicon.com">remixicon.com</a> and find the hex code of desired image. (F243 in the example is a hex code)</p>
 <hr />
 <h2 id="working-with-elements-imperatively">Working with Elements Imperatively<a class="headerlink" href="#working-with-elements-imperatively" title="Permanent link">&para;</a></h2>
-<p>Every element in Boxy can be drawn imperatively using its <code>Draw()</code> method.</p>
+<p>Every element in EVA Boxy can be drawn imperatively using its <code>Draw()</code> method.</p>
 <h3 id="button-controls">Button Controls<a class="headerlink" href="#button-controls" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputButton.h&gt;</span>
 
@@ -1562,7 +1562,7 @@
 <h3 id="pictogram-selection-controls">Pictogram Selection Controls<a class="headerlink" href="#pictogram-selection-controls" title="Permanent link">&para;</a></h3>
 <p><code>InputSelectorPx</code> allows selecting from a set of pictograms. The album template parameter determines both the available states and their visual representation.</p>
 <blockquote>
-<p><strong>Important:</strong> Because of limited graphics support, Boxy does not control the size of the drawing area for pictogram-related methods. The user must handle the size of the area manually.</p>
+<p><strong>Important:</strong> Because of limited graphics support, EVA Boxy does not control the size of the drawing area for pictogram-related methods. The user must handle the size of the area manually.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabInputSelectorPx.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabAlbums.h&gt;</span>

@@ -1372,7 +1372,7 @@
 <h1 id="grid">Grid<a class="headerlink" href="#grid" title="Permanent link">&para;</a></h1>
 <p>Grid is a layout helper that provides a fluent interface for slicing rectangular areas into rows and columns, and automatically handles the clearing of unused space.</p>
 <h2 id="the-eva-boxy-drawing-contract">The EVA Boxy Drawing Contract<a class="headerlink" href="#the-eva-boxy-drawing-contract" title="Permanent link">&para;</a></h2>
-<p>In Boxy, there is a fundamental rule: every element has to completely draw its rectangle, including clearing any unused areas. An element that fails to do so will leave visual garbage from previously drawn content.</p>
+<p>In EVA Boxy, there is a fundamental rule: every element has to completely draw its rectangle, including clearing any unused areas. An element that fails to do so will leave visual garbage from previously drawn content.</p>
 <p>This rule applies to all elements. All ready-made elements of the library implement it. When you create custom elements, they must implement it too.</p>
 <p>The need to fulfill this contract consistently led to the creation of Grid — a helper that makes the contract easy to implement.</p>
 <p>Grid is equally useful whether you are building a complex declarative form or drawing directly on the screen. Even in imperative style, Grid helps organize your layout and automatically handles the cleanup that would otherwise require manual calculations.</p>

@@ -4,7 +4,7 @@ Grid is a layout helper that provides a fluent interface for slicing rectangular
 
 ## The EVA Boxy Drawing Contract
 
-In Boxy, there is a fundamental rule: every element has to completely draw its rectangle, including clearing any unused areas. An element that fails to do so will leave visual garbage from previously drawn content.
+In EVA Boxy, there is a fundamental rule: every element has to completely draw its rectangle, including clearing any unused areas. An element that fails to do so will leave visual garbage from previously drawn content.
 
 This rule applies to all elements. All ready-made elements of the library implement it. When you create custom elements, they must implement it too.
 

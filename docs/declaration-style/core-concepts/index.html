@@ -574,21 +574,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parent-child-composition" class="md-nav__link">
+  <a href="#the-eva-boxy-ground-hardware-dispatch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parent-Child Composition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-boxy-ground-hardware-dispatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Boxy Ground &amp; Hardware Dispatch
+        The EVA Boxy Ground &amp; Hardware Dispatch
       
     </span>
   </a>
@@ -1213,21 +1202,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parent-child-composition" class="md-nav__link">
+  <a href="#the-eva-boxy-ground-hardware-dispatch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Parent-Child Composition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-boxy-ground-hardware-dispatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Boxy Ground &amp; Hardware Dispatch
+        The EVA Boxy Ground &amp; Hardware Dispatch
       
     </span>
   </a>
@@ -1350,21 +1328,7 @@
 
 
 <h1 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h1>
-<p>Declarative composition in Boxy relies on three foundational elements:</p>
-<ol>
-<li>
-<p><strong>The <code>Boxy</code> Singleton Ground:</strong> The central runtime anchor handling display driver initialization, frame ticks (<code>eva::tac()</code>), and hardware key dispatch (<code>Boxy::key()</code>).</p>
-</li>
-<li>
-<p><strong>Parent-Child Composition:</strong> Structuring UI elements via object composition (nesting), not class inheritance.</p>
-</li>
-<li>
-<p><strong>The Two Fundamental Chains:</strong> Managing rendering/visibility state (<strong>Freeze–Draw Chain</strong>) and bottom-up event processing (<strong>Key Chain</strong>).</p>
-</li>
-</ol>
-<hr />
-<h2 id="parent-child-composition">Parent-Child Composition<a class="headerlink" href="#parent-child-composition" title="Permanent link">&para;</a></h2>
-<p>In Boxy, every element is a rectangle (a "box") that knows how to draw itself within an allocated boundary. Visual representation is formed by <strong>layers</strong> — elements nested inside other elements:</p>
+<p>EVA Boxy serves user interfaces based on parent-child composition:</p>
 <div class="codehilite"><pre><span></span><code>┌─────────────────────────────┐
 │           Parent            │
 │  ┌──────────┐ ┌──────────┐  │
@@ -1376,21 +1340,31 @@
 └─────────────────────────────┘
 </code></pre></div>
 
-<blockquote>
-<p><strong>Note:</strong> Parent-child in Boxy means <strong>composition of objects</strong>, not class inheritance.</p>
-</blockquote>
+<p><strong>Note:</strong> Parent-child in EVA Boxy means composition of objects, not class inheritance.</p>
+<p>In EVA Boxy, every element is a rectangle (a "box") that knows how to draw itself within an allocated boundary.</p>
+<p>Repeating this scheme recursively — where any child can be a parent for other children — forms layers.</p>
+<p>Consistent interaction between these layers is ensured by two chains of responsibility:</p>
+<ol>
+<li>
+<p><strong>Draw - Freeze Chain</strong> — top-down, from Parent to Child. Manages rendering state. </p>
+</li>
+<li>
+<p><strong>Key Chain</strong> — bottom-up, from Child to Parent. Handles event processing.</p>
+</li>
+</ol>
+<p>Both chains are anchored by the EVA Boxy Singleton — a central runtime component that initializes the display driver and dispatches hardware key events via Boxy::key()</p>
 <hr />
-<h2 id="the-boxy-ground-hardware-dispatch">The Boxy Ground &amp; Hardware Dispatch<a class="headerlink" href="#the-boxy-ground-hardware-dispatch" title="Permanent link">&para;</a></h2>
-<p>At the base of every application is the central <code>Boxy</code> ground. It bridges reactive hardware events to the active UI hierarchy and manages the display pipeline:</p>
+<h2 id="the-eva-boxy-ground-hardware-dispatch">The EVA Boxy Ground &amp; Hardware Dispatch<a class="headerlink" href="#the-eva-boxy-ground-hardware-dispatch" title="Permanent link">&para;</a></h2>
+<p>At the base of every application is the central <code>EVA Boxy</code> ground. It bridges reactive hardware events to the active UI hierarchy and manages the display pipeline:</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">// 1. Define your top-level layout layer</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MainGroundLayout</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">LayoutBase</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// or any other ElementBase </span>
 <span class="w">    </span><span class="c1">// ... root composition</span>
 <span class="p">};</span>
 
-<span class="c1">// 2. Instantiate and bind to the Boxy ground</span>
+<span class="c1">// 2. Instantiate and bind to the EVA Boxy ground</span>
 <span class="n">MainGroundLayout</span><span class="w"> </span><span class="n">mGroundLayer</span><span class="p">;</span>
 
-<span class="c1">// 3. Dispatch hardware events into Boxy</span>
+<span class="c1">// 3. Dispatch hardware events into EVA Boxy</span>
 <span class="kt">void</span><span class="w"> </span><span class="nf">onKeyPress</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
 <span class="w">    </span><span class="n">Boxy</span><span class="o">::</span><span class="n">key</span><span class="p">(</span><span class="n">KEY_DOWN</span><span class="p">);</span>

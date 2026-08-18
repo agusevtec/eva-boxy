@@ -1,6 +1,6 @@
 # Progressive Optimization Path
 
-Designing UIs in Boxy follows the principle of **Gradual Optimization**. You start with a highly declarative, rapid-prototyping structure and progressively trim abstraction layers as FLASH and RAM constraints dictate.
+Designing UIs in EVA Boxy follows the principle of **Gradual Optimization**. You start with a highly declarative, rapid-prototyping structure and progressively trim abstraction layers as FLASH and RAM constraints dictate.
 
 Below is the step-by-step transformation of `UserForm1`, highlighting **only the code that changes at each step** alongside its inherent trade-offs.
 

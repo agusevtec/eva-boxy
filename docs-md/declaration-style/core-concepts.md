@@ -13,7 +13,7 @@ EVA Boxy serves user interfaces based on parent-child composition:
 │  └────────────────────────┘ │
 └─────────────────────────────┘
 ```
-**Note:** Parent-child in Boxy means composition of objects, not class inheritance.
+**Note:** Parent-child in EVA Boxy means composition of objects, not class inheritance.
 
 In EVA Boxy, every element is a rectangle (a "box") that knows how to draw itself within an allocated boundary.
 
@@ -30,9 +30,9 @@ Both chains are anchored by the EVA Boxy Singleton — a central runtime compone
 
 ---
 
-## The Boxy Ground & Hardware Dispatch
+## The EVA Boxy Ground & Hardware Dispatch
 
-At the base of every application is the central `Boxy` ground. It bridges reactive hardware events to the active UI hierarchy and manages the display pipeline:
+At the base of every application is the central `EVA Boxy` ground. It bridges reactive hardware events to the active UI hierarchy and manages the display pipeline:
 
 ```cpp
 // 1. Define your top-level layout layer
@@ -40,10 +40,10 @@ class MainGroundLayout : public LayoutBase { // or any other ElementBase
     // ... root composition
 };
 
-// 2. Instantiate and bind to the Boxy ground
+// 2. Instantiate and bind to the EVA Boxy ground
 MainGroundLayout mGroundLayer;
 
-// 3. Dispatch hardware events into Boxy
+// 3. Dispatch hardware events into EVA Boxy
 void onKeyPress() {
     // ...
     Boxy::key(KEY_DOWN);

@@ -630,17 +630,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parent-child-composition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parent-Child Composition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#technical-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1213,17 +1202,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parent-child-composition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parent-Child Composition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#technical-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1350,21 +1328,8 @@
 
 
 <h1 id="element-composition-focusable-layoutbase">Element Composition: Focusable &amp; LayoutBase<a class="headerlink" href="#element-composition-focusable-layoutbase" title="Permanent link">&para;</a></h1>
-<p>Interactive interfaces in EVA Boxy are structured around two core abstractions: <strong>Focusable</strong> (manages focus order and navigation state) and <strong>LayoutBase</strong> (provides layout coordination, event routing, and rendering contract).</p>
+<p>Interactive layout in EVA Boxy is structured around two core abstractions: <strong>Focusable</strong> (manages focus order and navigation state) and <strong>LayoutBase</strong> (provides layout coordination, event routing, and rendering contract).</p>
 <p>Components are declared directly as class members. The declaration order defines the sequential focus navigation ring.</p>
-<h2 id="parent-child-composition">Parent-Child Composition<a class="headerlink" href="#parent-child-composition" title="Permanent link">&para;</a></h2>
-<p>In the framework, every element is a rectangle (a "box") that knows how to draw itself. Complex visual representation is formed by layers — elements nested inside other elements:</p>
-<div class="codehilite"><pre><span></span><code>┌─────────────────────────────┐
-│          Parent             │
-│  ┌──────────┐ ┌──────────┐  │
-│  │  Child 1 │ │  Child 2 │  │
-│  └──────────┘ └──────────┘  │
-│  ┌────────────────────────┐ │
-│  │       Child 3          │ │
-│  └────────────────────────┘ │
-└─────────────────────────────┘
-</code></pre></div>
-
 <h2 id="technical-overview">Technical Overview<a class="headerlink" href="#technical-overview" title="Permanent link">&para;</a></h2>
 <h3 id="inheritance-and-rendering-contract">Inheritance and Rendering Contract<a class="headerlink" href="#inheritance-and-rendering-contract" title="Permanent link">&para;</a></h3>
 <p><code>LayoutBase</code> is designed as an <strong>abstract base class intended strictly for subclassing</strong> (directly or in combination with one of its template wrappers like <code>KeyModifier</code>). When implementing a custom view, form, or screen manager, you derive from <code>LayoutBase</code> or a wrapper class and implement the pure virtual <code>drawer()</code> method.</p>
@@ -1423,7 +1388,7 @@
 <h3 id="event-handling-behavior">Event Handling Behavior<a class="headerlink" href="#event-handling-behavior" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong><code>KEY_UP</code> / <code>KEY_DOWN</code>:</strong> Captured by <code>KeyModifier&lt;LayoutBase&gt;</code> to shift focus between <code>Focusable</code> nodes.</li>
-<li><strong><code>KEY_LEFT</code> / <code>KEY_RIGHT</code>:</strong> Passed to the currently focused node, triggering its internal <code>KeyReactor</code> to invoke <code>Increment()</code> or <code>Decrement()</code>.</li>
+<li><strong><code>KEY_LEFT</code> / <code>KEY_RIGHT</code>:</strong> Passed to the currently focused node, triggering its internal <code>KeyReactor</code> to invoke <code>Increment</code>.</li>
 </ol>
 <hr />
 <h2 id="pattern-2-sub-screen-layoutbase-paging">Pattern 2: Sub-screen (LayoutBase) Paging<a class="headerlink" href="#pattern-2-sub-screen-layoutbase-paging" title="Permanent link">&para;</a></h2>

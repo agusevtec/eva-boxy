@@ -1,6 +1,6 @@
 # Element Composition: Focusable & LayoutBase
 
-Interactive interfaces in EVA Boxy are structured around two core abstractions: **Focusable** (manages focus order and navigation state) and **LayoutBase** (provides layout coordination, event routing, and rendering contract).
+Interactive layout in EVA Boxy is structured around two core abstractions: **Focusable** (manages focus order and navigation state) and **LayoutBase** (provides layout coordination, event routing, and rendering contract).
 
 Components are declared directly as class members. The declaration order defines the sequential focus navigation ring.
 
@@ -69,7 +69,7 @@ public:
 
 ### Event Handling Behavior
 1. **`KEY_UP` / `KEY_DOWN`:** Captured by `KeyModifier<LayoutBase>` to shift focus between `Focusable` nodes.
-2. **`KEY_LEFT` / `KEY_RIGHT`:** Passed to the currently focused node, triggering its internal `KeyReactor` to invoke `Increment()` or `Decrement()`.
+2. **`KEY_LEFT` / `KEY_RIGHT`:** Passed to the currently focused node, triggering its internal `KeyReactor` to invoke `Increment`.
 
 ---
 

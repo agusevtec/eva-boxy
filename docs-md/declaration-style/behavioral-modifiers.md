@@ -2,13 +2,13 @@
 
 Behavioral modifiers are template decorators that change **how** an element behaves — how it responds to keys, what events it generates, or how its value is interpreted. Unlike visual modifiers, they don't change the element's appearance; they change its interaction model.
 
-These modifiers rely on **implicit interfaces** — a convention in method naming within EVA Boxy. Instead of a formal inheritance hierarchy or abstract base classes, Boxy uses duck typing: if an element has the required methods, the modifier works. This approach keeps the library lightweight and avoids virtual table overhead.
+These modifiers rely on **implicit interfaces** — a convention in method naming within EVA Boxy. Instead of a formal inheritance hierarchy or abstract base classes, EVA Boxy uses duck typing: if an element has the required methods, the modifier works. This approach keeps the library lightweight and avoids virtual table overhead.
 
 ---
 
 ## The Four Implicit Interfaces
 
-Boxy recognizes four implicit interfaces that elements can implement:
+EVA Boxy recognizes four implicit interfaces that elements can implement:
 
 | Interface | Methods | Purpose |
 |-----------|---------|---------|
