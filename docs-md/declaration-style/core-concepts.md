@@ -52,7 +52,7 @@ void onKeyPress() {
 
 void setup() {
     // Initialize display driver, font, and active root layer
-    Boxy::Begin<ScreenSSD1306, Font8Narrow>(&mGroundLayer);
+    Boxy::Begin<ScreenSSD1306, Font8Sharp>(&mGroundLayer);
 }
 
 void loop() {
@@ -95,7 +95,7 @@ void drawer(Screen* screen, Coor pos, Coor size, bool focused) override {
 }
 ```
 
-> **Helper:** The `Grid` class greatly helps in implementing this contract by slicing rectangles for children and automatically handling the clearing of unused areas.
+> **Helpers:** The `Grid` class greatly helps in implementing this contract by slicing rectangles for children and automatically handling the clearing of unused areas.
 
 ### The Freeze Contract
 The rule is simple: **every parent has to freeze its children when the parent itself is frozen.** This ensures the entire invisible subtree stops redrawing.

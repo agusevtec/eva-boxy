@@ -19,28 +19,28 @@ namespace evab
     class ScreenSSH1106 : public ScreenPage8Base
     {
     public:
-        ScreenSSH1106(const IFont* font, unsigned long aWireClock = 800000L);
-        
+        ScreenSSH1106(const IFont *font, unsigned long aWireClock = 800000L);
+
         unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
-        
+
         void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
         Coor Size() override;
 
-  private:
+    private:
         void drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) override;
-        
+
         void clearTile(Coor aPosition, unsigned char aColor) override;
-        
+
         void clearDisplay();
-        
+
         void sendCommand(unsigned char cmd);
-        
+
         void setPage(unsigned char page);
-        
+
         void setColumn(unsigned char col);
 
-        uint8_t mAddress;  
+        uint8_t mAddress; 
     };
 }
 ```

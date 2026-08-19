@@ -1,16 +1,16 @@
 
 
-# Class evab::Font8Narrow
+# Class evab::Font8Sharp
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**Font8Narrow**](classevab_1_1_font8_narrow.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**Font8Sharp**](classevab_1_1_font8_sharp.md)
 
 
 
 _8x8 thin font implementation_ [More...](#detailed-description)
 
-* `#include <evabFont8Narrow.h>`
+* `#include <evabFont8Sharp.h>`
 
 
 
@@ -153,7 +153,7 @@ Provides a thin 8x8 pixel font for display systems.
 
 _Gets a vertical slice of a character._ 
 ```C++
-virtual unsigned char evab::Font8Narrow::GetVerticalSlice (
+virtual unsigned char evab::Font8Sharp::GetVerticalSlice (
     char aCharcode,
     unsigned char aCutColumn
 ) override const
@@ -186,5 +186,5 @@ Implements [*evab::IFont::GetVerticalSlice*](classevab_1_1_i_font.md#function-ge
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabFont8Narrow.h`
+The documentation for this class was generated from the following file `src/evabFont8Sharp.h`
 

@@ -1,10 +1,10 @@
 
 
-# File evabFont8Narrow.h
+# File evabFont8Sharp.h
 
-[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabFont8Narrow.h**](evab_font8_narrow_8h.md)
+[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabFont8Sharp.h**](evab_font8_sharp_8h.md)
 
-[Go to the documentation of this file](evab_font8_narrow_8h.md)
+[Go to the documentation of this file](evab_font8_sharp_8h.md)
 
 
 ```C++
@@ -15,7 +15,7 @@
 
 namespace evab
 {
-    class Font8Narrow : public IFont
+    class Font8Sharp : public IFont
     {
     public:
         unsigned char GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const override;

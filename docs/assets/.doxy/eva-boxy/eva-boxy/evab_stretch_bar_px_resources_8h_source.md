@@ -14,26 +14,26 @@ namespace evab
 {
     class VerticalProgressBarTileset
     {
-        public:
-        static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
+    public:
+        static const unsigned char *GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
     class HorizontalProgressBarTileset
     {
-        public:
-        static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
+    public:
+        static const unsigned char *GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
     class VerticalScrollBarTileset
     {
-        public:
-        static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
+    public:
+        static const unsigned char *GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
     class HorizontalScrollBarTileset
     {
-        public:
-        static const unsigned char* GetTile(unsigned char blockType, unsigned char fillNumber);
+    public:
+        static const unsigned char *GetTile(unsigned char blockType, unsigned char fillNumber);
     };
 
 };

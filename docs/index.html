@@ -1319,7 +1319,7 @@
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabBoxy.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabScreenSSD1306.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFont8Narrow.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabFont8Sharp.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabLayoutBase.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeyModifier.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabKeyCatcher.h&gt;</span>
@@ -1380,7 +1380,7 @@
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">SystemSettingsForm</span><span class="w"> </span><span class="n">gMainForm</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// Initialize display driver, font, and mount root layout layer</span>
-<span class="w">  </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Begin</span><span class="o">&lt;</span><span class="n">ScreenSSD1306</span><span class="p">,</span><span class="w"> </span><span class="n">Font8Narrow</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gMainForm</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Begin</span><span class="o">&lt;</span><span class="n">ScreenSSD1306</span><span class="p">,</span><span class="w"> </span><span class="n">Font8Sharp</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gMainForm</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>

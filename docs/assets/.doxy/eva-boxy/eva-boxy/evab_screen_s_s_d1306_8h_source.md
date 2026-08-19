@@ -21,33 +21,32 @@ namespace evab
   {
   public:
     ScreenSSD1306(const IFont *aFont, unsigned long aWireClock = 800000L, uint8_t aHeightPx = 64);
-    ~ScreenSSD1306();
 
     void SetContrast(uint8_t aContrast);
-    
+
     Coor Size() override;
-    
+
     unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
-    
+
     void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
   private:
     void drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) override;
-    
+
     void clearTile(Coor aPosition, unsigned char aColor) override;
-    
+
     void initDisplay();
 
     void clearDisplay();
-    
+
     void sendCommand(uint8_t aCmd);
-    
+
     void sendData(uint8_t aData);
 
-    uint8_t mAddress;  
-    uint8_t mWidth;    
-    uint8_t mHeight;   
-    uint8_t mPages;    
+    uint8_t mAddress; 
+    uint8_t mWidth;   
+    uint8_t mHeight;  
+    uint8_t mPages;   
   };
 
 }

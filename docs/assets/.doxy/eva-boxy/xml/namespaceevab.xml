@@ -19,7 +19,7 @@
     <innerclass refid="classevab_1_1_flip_window_algorithm" prot="public">evab::FlipWindowAlgorithm</innerclass>
     <innerclass refid="classevab_1_1_font8_bold" prot="public">evab::Font8Bold</innerclass>
     <innerclass refid="classevab_1_1_font8_compact" prot="public">evab::Font8Compact</innerclass>
-    <innerclass refid="classevab_1_1_font8_narrow" prot="public">evab::Font8Narrow</innerclass>
+    <innerclass refid="classevab_1_1_font8_sharp" prot="public">evab::Font8Sharp</innerclass>
     <innerclass refid="classevab_1_1_grid" prot="public">evab::Grid</innerclass>
     <innerclass refid="structevab_1_1_horizontal_progress_bar_charset" prot="public">evab::HorizontalProgressBarCharset</innerclass>
     <innerclass refid="classevab_1_1_horizontal_progress_bar_tileset" prot="public">evab::HorizontalProgressBarTileset</innerclass>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="95" column="3" bodyfile="src/evabLabeled.h" bodystart="95" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="93" column="3" bodyfile="src/evabLabeled.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_labeled_8h_1ad16036d4863ab82e8a82142ff6a2c45b" prot="public" static="no">
         <templateparamlist>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="98" column="3" bodyfile="src/evabLabeled.h" bodystart="98" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="96" column="3" bodyfile="src/evabLabeled.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_labeled_8h_1ae91b6d4618df30dd6bb2280eea16cf30" prot="public" static="no">
         <templateparamlist>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="101" column="3" bodyfile="src/evabLabeled.h" bodystart="101" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="99" column="3" bodyfile="src/evabLabeled.h" bodystart="99" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_labeled_8h_1a660be5b20a98624580e112ceabe3de75" prot="public" static="no">
         <templateparamlist>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="108" column="3" bodyfile="src/evabLabeled.h" bodystart="108" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="106" column="3" bodyfile="src/evabLabeled.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_labeled_8h_1afaa7e052cee2d3d63bb30c78621731da" prot="public" static="no">
         <templateparamlist>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="111" column="3" bodyfile="src/evabLabeled.h" bodystart="111" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="109" column="3" bodyfile="src/evabLabeled.h" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_labeled_8h_1a35f185c762e5822de944539a5ac7352a" prot="public" static="no">
         <templateparamlist>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLabeled.h" line="114" column="3" bodyfile="src/evabLabeled.h" bodystart="114" bodyend="-1"/>
+        <location file="src/evabLabeled.h" line="112" column="3" bodyfile="src/evabLabeled.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_list_box_8h_1ab0e402829f916a7ac10c7166d1cd151e" prot="public" static="no">
         <type><ref refid="classevab_1_1_list_box" kindref="compound">ListBox</ref>&lt; <ref refid="classevab_1_1_scroll_window_algorithm" kindref="compound">ScrollWindowAlgorithm</ref> &gt;</type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabStretchBar.h" line="302" column="5" bodyfile="src/evabStretchBar.h" bodystart="302" bodyend="-1"/>
+        <location file="src/evabStretchBar.h" line="303" column="5" bodyfile="src/evabStretchBar.h" bodystart="303" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_stretch_bar_8h_1a596da6721024e36bb82663d54a125ee5" prot="public" static="no">
         <type><ref refid="classevab_1_1_stretch_bar" kindref="compound">StretchBar</ref>&lt; <ref refid="structevab_1_1_horizontal_progress_bar_charset" kindref="compound">HorizontalProgressBarCharset</ref>, <ref refid="structevab_1_1_horizontal_text_policy" kindref="compound">HorizontalTextPolicy</ref> &gt;</type>
@@ -244,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabStretchBar.h" line="303" column="5" bodyfile="src/evabStretchBar.h" bodystart="303" bodyend="-1"/>
+        <location file="src/evabStretchBar.h" line="304" column="5" bodyfile="src/evabStretchBar.h" bodystart="304" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_stretch_bar_8h_1a3489056cae8f03a224096c5b7435cb07" prot="public" static="no">
         <type><ref refid="classevab_1_1_stretch_bar" kindref="compound">StretchBar</ref>&lt; <ref refid="structevab_1_1_vertical_scroll_bar_charset" kindref="compound">VerticalScrollBarCharset</ref>, <ref refid="structevab_1_1_vertical_text_policy" kindref="compound">VerticalTextPolicy</ref> &gt;</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabStretchBar.h" line="304" column="5" bodyfile="src/evabStretchBar.h" bodystart="304" bodyend="-1"/>
+        <location file="src/evabStretchBar.h" line="305" column="5" bodyfile="src/evabStretchBar.h" bodystart="305" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_stretch_bar_8h_1aa5771d0a4d390dafe92e609d5d41d3dd" prot="public" static="no">
         <type><ref refid="classevab_1_1_stretch_bar" kindref="compound">StretchBar</ref>&lt; <ref refid="structevab_1_1_horizontal_scroll_bar_charset" kindref="compound">HorizontalScrollBarCharset</ref>, <ref refid="structevab_1_1_horizontal_text_policy" kindref="compound">HorizontalTextPolicy</ref> &gt;</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabStretchBar.h" line="305" column="5" bodyfile="src/evabStretchBar.h" bodystart="305" bodyend="-1"/>
+        <location file="src/evabStretchBar.h" line="306" column="5" bodyfile="src/evabStretchBar.h" bodystart="306" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="evab_stretch_bar_px_8h_1ab3ddacafdbf6d30fbf827da817e6586d" prot="public" static="no">
         <type><ref refid="classevab_1_1_stretch_bar_px" kindref="compound">StretchBarPx</ref>&lt; <ref refid="classevab_1_1_vertical_progress_bar_tileset" kindref="compound">VerticalProgressBarTileset</ref>, <ref refid="structevab_1_1_vertical_tileset_policy" kindref="compound">VerticalTilesetPolicy</ref> &gt;</type>
@@ -330,9 +330,9 @@
         </inbodydescription>
         <location file="src/evabStretchBarPx.h" line="238" column="5" bodyfile="src/evabStretchBarPx.h" bodystart="238" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1afef33725ec2dc9d95117e42d6265799b" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1a33ed40efcef805c6a95eae7091e18277" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; char *, <ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelLeft = TextLabel&lt;char*, LeftAlign&gt;</definition>
+        <definition>using evab::TextLabelLeft = TextLabel&lt;char *, LeftAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelLeft</name>
         <qualifiedname>evab::TextLabelLeft</qualifiedname>
@@ -342,11 +342,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="69" column="5" bodyfile="src/evabTextLabel.h" bodystart="69" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="68" column="5" bodyfile="src/evabTextLabel.h" bodystart="68" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1a67c9d8a7de1295665795916aeaa4a6cf" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1a9e6ed09eba89fd11505f28f3e2862f01" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; char *, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelCenter = TextLabel&lt;char*, CenterAlign&gt;</definition>
+        <definition>using evab::TextLabelCenter = TextLabel&lt;char *, CenterAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelCenter</name>
         <qualifiedname>evab::TextLabelCenter</qualifiedname>
@@ -356,11 +356,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="70" column="5" bodyfile="src/evabTextLabel.h" bodystart="70" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="69" column="5" bodyfile="src/evabTextLabel.h" bodystart="69" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1aa2da51c3a6838512d2e6fddb3263f3fe" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1a0fc68a8d7627f0f53cc42618d37b08b8" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; char *, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelRight = TextLabel&lt;char*, RightAlign&gt;</definition>
+        <definition>using evab::TextLabelRight = TextLabel&lt;char *, RightAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelRight</name>
         <qualifiedname>evab::TextLabelRight</qualifiedname>
@@ -370,11 +370,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="71" column="5" bodyfile="src/evabTextLabel.h" bodystart="71" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="70" column="5" bodyfile="src/evabTextLabel.h" bodystart="70" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1aea69728cb7bf342aeacb3248e9004ea1" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1a49a077d44fe6872f4a03d4137f7c5232" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; const char *, <ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelLeftConst = TextLabel&lt;const char*, LeftAlign&gt;</definition>
+        <definition>using evab::TextLabelLeftConst = TextLabel&lt;const char *, LeftAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelLeftConst</name>
         <qualifiedname>evab::TextLabelLeftConst</qualifiedname>
@@ -384,11 +384,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="74" column="5" bodyfile="src/evabTextLabel.h" bodystart="74" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="73" column="5" bodyfile="src/evabTextLabel.h" bodystart="73" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1aa2669db3d5cf61976dd3dff818d08d47" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1a922739384622360abbc40802a47a64e1" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; const char *, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelCenterConst = TextLabel&lt;const char*, CenterAlign&gt;</definition>
+        <definition>using evab::TextLabelCenterConst = TextLabel&lt;const char *, CenterAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelCenterConst</name>
         <qualifiedname>evab::TextLabelCenterConst</qualifiedname>
@@ -398,11 +398,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="75" column="5" bodyfile="src/evabTextLabel.h" bodystart="75" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="74" column="5" bodyfile="src/evabTextLabel.h" bodystart="74" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1a15c54e91d933b2db3a4d99be17d4803f" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1a6fc77be97ca18dfbd9a7f6521d2cec6c" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; const char *, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelRightConst = TextLabel&lt;const char*, RightAlign&gt;</definition>
+        <definition>using evab::TextLabelRightConst = TextLabel&lt;const char *, RightAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelRightConst</name>
         <qualifiedname>evab::TextLabelRightConst</qualifiedname>
@@ -412,11 +412,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="76" column="5" bodyfile="src/evabTextLabel.h" bodystart="76" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="75" column="5" bodyfile="src/evabTextLabel.h" bodystart="75" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1a999046e2d257e38374d0971b52bb324c" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1a7c72b766f47335b88a9c6dd113615dd0" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; const __FlashStringHelper *, <ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelLeftF = TextLabel&lt;const __FlashStringHelper*, LeftAlign&gt;</definition>
+        <definition>using evab::TextLabelLeftF = TextLabel&lt;const __FlashStringHelper *, LeftAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelLeftF</name>
         <qualifiedname>evab::TextLabelLeftF</qualifiedname>
@@ -426,11 +426,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="79" column="5" bodyfile="src/evabTextLabel.h" bodystart="79" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="78" column="5" bodyfile="src/evabTextLabel.h" bodystart="78" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1a8f7233582a94bf12559b27a5fb8bf061" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1aa85747e7e311abaa0531e94ec06b9f2f" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; const __FlashStringHelper *, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelCenterF = TextLabel&lt;const __FlashStringHelper*, CenterAlign&gt;</definition>
+        <definition>using evab::TextLabelCenterF = TextLabel&lt;const __FlashStringHelper *, CenterAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelCenterF</name>
         <qualifiedname>evab::TextLabelCenterF</qualifiedname>
@@ -440,11 +440,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="80" column="5" bodyfile="src/evabTextLabel.h" bodystart="80" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="79" column="5" bodyfile="src/evabTextLabel.h" bodystart="79" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_text_label_8h_1ad5ad7805c11033055fdba99a38bc9059" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_text_label_8h_1a533c6bd976490f1e6a75b0c92b904aa4" prot="public" static="no">
         <type><ref refid="classevab_1_1_text_label" kindref="compound">TextLabel</ref>&lt; const __FlashStringHelper *, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref> &gt;</type>
-        <definition>using evab::TextLabelRightF = TextLabel&lt;const __FlashStringHelper*, RightAlign&gt;</definition>
+        <definition>using evab::TextLabelRightF = TextLabel&lt;const __FlashStringHelper *, RightAlign&gt;</definition>
         <argsstring></argsstring>
         <name>TextLabelRightF</name>
         <qualifiedname>evab::TextLabelRightF</qualifiedname>
@@ -454,16 +454,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextLabel.h" line="81" column="5" bodyfile="src/evabTextLabel.h" bodystart="81" bodyend="-1"/>
+        <location file="src/evabTextLabel.h" line="80" column="5" bodyfile="src/evabTextLabel.h" bodystart="80" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_titled_8h_1a6b5c3cf902f8d7a907ba6b4a3cf23902" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_titled_8h_1a038718032ffdeb9e61a216a89d4d2449" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>class T</type>
           </param>
         </templateparamlist>
         <type><ref refid="classevab_1_1_titled" kindref="compound">Titled</ref>&lt; T, <ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref>, const char * &gt;</type>
-        <definition>using evab::TitledLeft = Titled&lt;T, LeftAlign, const char*&gt;</definition>
+        <definition>using evab::TitledLeft = Titled&lt;T, LeftAlign, const char *&gt;</definition>
         <argsstring></argsstring>
         <name>TitledLeft</name>
         <qualifiedname>evab::TitledLeft</qualifiedname>
@@ -473,16 +473,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="92" column="3" bodyfile="src/evabTitled.h" bodystart="92" bodyend="-1"/>
+        <location file="src/evabTitled.h" line="91" column="3" bodyfile="src/evabTitled.h" bodystart="91" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_titled_8h_1a6cd80f314c804361624ab39348d5c3c0" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_titled_8h_1a56446113b5e883e02fbb10b29ecb15dc" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>class T</type>
           </param>
         </templateparamlist>
         <type><ref refid="classevab_1_1_titled" kindref="compound">Titled</ref>&lt; T, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref>, const char * &gt;</type>
-        <definition>using evab::TitledCenter = Titled&lt;T, CenterAlign, const char*&gt;</definition>
+        <definition>using evab::TitledCenter = Titled&lt;T, CenterAlign, const char *&gt;</definition>
         <argsstring></argsstring>
         <name>TitledCenter</name>
         <qualifiedname>evab::TitledCenter</qualifiedname>
@@ -492,16 +492,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="95" column="3" bodyfile="src/evabTitled.h" bodystart="95" bodyend="-1"/>
+        <location file="src/evabTitled.h" line="94" column="3" bodyfile="src/evabTitled.h" bodystart="94" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_titled_8h_1a7c5585a2d61b6ad550b3dca25868f613" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_titled_8h_1a9f3f89d7ad5d4879e163f13efd0015f9" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>class T</type>
           </param>
         </templateparamlist>
         <type><ref refid="classevab_1_1_titled" kindref="compound">Titled</ref>&lt; T, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref>, const char * &gt;</type>
-        <definition>using evab::TitledRight = Titled&lt;T, RightAlign, const char*&gt;</definition>
+        <definition>using evab::TitledRight = Titled&lt;T, RightAlign, const char *&gt;</definition>
         <argsstring></argsstring>
         <name>TitledRight</name>
         <qualifiedname>evab::TitledRight</qualifiedname>
@@ -511,16 +511,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="98" column="3" bodyfile="src/evabTitled.h" bodystart="98" bodyend="-1"/>
+        <location file="src/evabTitled.h" line="97" column="3" bodyfile="src/evabTitled.h" bodystart="97" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_titled_8h_1a75324c2f224dd43f442295dc74d89a38" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_titled_8h_1ac42b44fe983d404f3a1c82a08937cc2c" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>class T</type>
           </param>
         </templateparamlist>
         <type><ref refid="classevab_1_1_titled" kindref="compound">Titled</ref>&lt; T, <ref refid="structevab_1_1_left_align" kindref="compound">LeftAlign</ref>, const __FlashStringHelper * &gt;</type>
-        <definition>using evab::TitledLeftF = Titled&lt;T, LeftAlign, const __FlashStringHelper*&gt;</definition>
+        <definition>using evab::TitledLeftF = Titled&lt;T, LeftAlign, const __FlashStringHelper *&gt;</definition>
         <argsstring></argsstring>
         <name>TitledLeftF</name>
         <qualifiedname>evab::TitledLeftF</qualifiedname>
@@ -530,16 +530,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="105" column="3" bodyfile="src/evabTitled.h" bodystart="105" bodyend="-1"/>
+        <location file="src/evabTitled.h" line="104" column="3" bodyfile="src/evabTitled.h" bodystart="104" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_titled_8h_1a11d9e0e7b502a58a150fabdab51b377a" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_titled_8h_1aa08a3e7ab8d028c06e9aa1ced4218b94" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>class T</type>
           </param>
         </templateparamlist>
         <type><ref refid="classevab_1_1_titled" kindref="compound">Titled</ref>&lt; T, <ref refid="structevab_1_1_center_align" kindref="compound">CenterAlign</ref>, const __FlashStringHelper * &gt;</type>
-        <definition>using evab::TitledCenterF = Titled&lt;T, CenterAlign, const __FlashStringHelper*&gt;</definition>
+        <definition>using evab::TitledCenterF = Titled&lt;T, CenterAlign, const __FlashStringHelper *&gt;</definition>
         <argsstring></argsstring>
         <name>TitledCenterF</name>
         <qualifiedname>evab::TitledCenterF</qualifiedname>
@@ -549,16 +549,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="108" column="3" bodyfile="src/evabTitled.h" bodystart="108" bodyend="-1"/>
+        <location file="src/evabTitled.h" line="107" column="3" bodyfile="src/evabTitled.h" bodystart="107" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="evab_titled_8h_1a5e013dbb0bd150feb8f50322356081fb" prot="public" static="no">
+      <memberdef kind="typedef" id="evab_titled_8h_1ab33b5d8a2c966335f3207d1ebdf73a69" prot="public" static="no">
         <templateparamlist>
           <param>
             <type>class T</type>
           </param>
         </templateparamlist>
         <type><ref refid="classevab_1_1_titled" kindref="compound">Titled</ref>&lt; T, <ref refid="structevab_1_1_right_align" kindref="compound">RightAlign</ref>, const __FlashStringHelper * &gt;</type>
-        <definition>using evab::TitledRightF = Titled&lt;T, RightAlign, const __FlashStringHelper*&gt;</definition>
+        <definition>using evab::TitledRightF = Titled&lt;T, RightAlign, const __FlashStringHelper *&gt;</definition>
         <argsstring></argsstring>
         <name>TitledRightF</name>
         <qualifiedname>evab::TitledRightF</qualifiedname>
@@ -568,7 +568,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="111" column="3" bodyfile="src/evabTitled.h" bodystart="111" bodyend="-1"/>
+        <location file="src/evabTitled.h" line="110" column="3" bodyfile="src/evabTitled.h" bodystart="110" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -625,7 +625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabSerializers.h" line="14" column="20" declfile="src/evabSerializers.h" declline="14" declcolumn="20"/>
+        <location file="src/evabSerializers.h" line="15" column="20" declfile="src/evabSerializers.h" declline="15" declcolumn="20"/>
       </memberdef>
       <memberdef kind="function" id="evab_serializers_8h_1a03b280ac012295c05807836a32f299c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -690,7 +690,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabSerializers.h" line="24" column="10" declfile="src/evabSerializers.h" declline="24" declcolumn="10"/>
+        <location file="src/evabSerializers.h" line="25" column="10" declfile="src/evabSerializers.h" declline="25" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="evab_serializers_8h_1a95bd885987c140b2a0e8ce5d9914ce39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned short</type>
@@ -745,7 +745,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabSerializers.h" line="34" column="20" declfile="src/evabSerializers.h" declline="34" declcolumn="20"/>
+        <location file="src/evabSerializers.h" line="35" column="20" declfile="src/evabSerializers.h" declline="35" declcolumn="20"/>
       </memberdef>
       <memberdef kind="function" id="evab_serializers_8h_1a6bac1d32bff87f385ed4c4d041f2be18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -810,13 +810,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabSerializers.h" line="44" column="10" declfile="src/evabSerializers.h" declline="44" declcolumn="10"/>
+        <location file="src/evabSerializers.h" line="45" column="10" declfile="src/evabSerializers.h" declline="45" declcolumn="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabAlbums.h" line="2" column="1"/>
+    <location file="src/evabAlbums.h" line="3" column="1"/>
   </compounddef>
 </doxygen>

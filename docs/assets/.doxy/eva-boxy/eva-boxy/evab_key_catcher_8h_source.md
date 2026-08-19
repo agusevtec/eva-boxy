@@ -19,7 +19,6 @@ namespace evab
   class KeyCatcher : public T
   {
   public:
-
     template <typename... Args>
     KeyCatcher(eva::IHandler *aListener, Args &&...args)
         : T(args...), mListener(aListener)

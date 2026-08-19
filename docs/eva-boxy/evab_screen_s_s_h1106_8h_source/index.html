@@ -1066,7 +1066,7 @@
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">ScreenSSH1106</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ScreenPage8Base</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">    </span><span class="k">public</span><span class="o">:</span>
-<span class="w">        </span><span class="n">ScreenSSH1106</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">IFont</span><span class="o">*</span><span class="w"> </span><span class="n">font</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">aWireClock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">800000L</span><span class="p">);</span>
+<span class="w">        </span><span class="n">ScreenSSH1106</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">IFont</span><span class="w"> </span><span class="o">*</span><span class="n">font</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">aWireClock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">800000L</span><span class="p">);</span>
 
 <span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="nf">Serialize</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aPos</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">aSize</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isFocused</span><span class="p">);</span>
 
@@ -1074,7 +1074,7 @@
 
 <span class="w">        </span><span class="n">Coor</span><span class="w"> </span><span class="nf">Size</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="k">private</span><span class="o">:</span>
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">drawVerticalSlice</span><span class="p">(</span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aCutColumn</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aSlice</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">clearTile</span><span class="p">(</span><span class="n">Coor</span><span class="w"> </span><span class="n">aPosition</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">aColor</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
@@ -1087,7 +1087,7 @@
 
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">setColumn</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">col</span><span class="p">);</span>
 
-<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mAddress</span><span class="p">;</span><span class="w">  </span>
+<span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mAddress</span><span class="p">;</span><span class="w"> </span>
 <span class="w">    </span><span class="p">};</span>
 <span class="p">}</span>
 </code></pre></div>

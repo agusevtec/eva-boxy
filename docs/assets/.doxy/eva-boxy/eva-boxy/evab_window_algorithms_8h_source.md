@@ -12,7 +12,6 @@
 
 namespace evab
 {
-
   class WindowAlgorithmBase
   {
   public:

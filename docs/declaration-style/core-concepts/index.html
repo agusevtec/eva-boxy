@@ -1373,7 +1373,7 @@
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Initialize display driver, font, and active root layer</span>
-<span class="w">    </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Begin</span><span class="o">&lt;</span><span class="n">ScreenSSD1306</span><span class="p">,</span><span class="w"> </span><span class="n">Font8Narrow</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mGroundLayer</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Boxy</span><span class="o">::</span><span class="n">Begin</span><span class="o">&lt;</span><span class="n">ScreenSSD1306</span><span class="p">,</span><span class="w"> </span><span class="n">Font8Sharp</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mGroundLayer</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1406,7 +1406,7 @@
 </code></pre></div>
 
 <blockquote>
-<p><strong>Helper:</strong> The <code>Grid</code> class greatly helps in implementing this contract by slicing rectangles for children and automatically handling the clearing of unused areas.</p>
+<p><strong>Helpers:</strong> The <code>Grid</code> class greatly helps in implementing this contract by slicing rectangles for children and automatically handling the clearing of unused areas.</p>
 </blockquote>
 <h3 id="the-freeze-contract">The Freeze Contract<a class="headerlink" href="#the-freeze-contract" title="Permanent link">&para;</a></h3>
 <p>The rule is simple: <strong>every parent has to freeze its children when the parent itself is frozen.</strong> This ensures the entire invisible subtree stops redrawing.</p>

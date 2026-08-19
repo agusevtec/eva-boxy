@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabStretchBar.h" line="154" column="21" bodyfile="src/evabStretchBar.h" bodystart="154" bodyend="166"/>
+        <location file="src/evabStretchBar.h" line="155" column="21" bodyfile="src/evabStretchBar.h" bodystart="155" bodyend="167"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -41,7 +41,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabStretchBar.h" line="146" column="5" bodyfile="src/evabStretchBar.h" bodystart="147" bodyend="167"/>
+    <location file="src/evabStretchBar.h" line="147" column="5" bodyfile="src/evabStretchBar.h" bodystart="148" bodyend="168"/>
     <listofallmembers>
       <member refid="structevab_1_1_vertical_scroll_bar_charset_1a41d401ec17027117a60f94e5499cdcb3" prot="public" virt="non-virtual"><scope>evab::VerticalScrollBarCharset</scope><name>GetChar</name></member>
     </listofallmembers>

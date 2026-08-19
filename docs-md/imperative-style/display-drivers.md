@@ -196,4 +196,4 @@ screen.printToSerial();
 Available fonts:
 - `Font8Bold` - Bold 8-pixel font
 - `Font8Compact` - Compact 8-pixel font (narrower characters)
-- `Font8Thin` - Thin 8-pixel font
+- `Font8Sharp` - Thin 8-pixel font

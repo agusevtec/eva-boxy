@@ -94,9 +94,9 @@
     <member refid="classevab_1_1_font8_compact_1ac4e893b9a2cb30dc4204a8a1b1246ff0" kind="variable"><name>PROGMEM</name></member>
     <member refid="classevab_1_1_font8_compact_1a404bc44a17316019b509882081152599" kind="function"><name>GetVerticalSlice</name></member>
   </compound>
-  <compound refid="classevab_1_1_font8_narrow" kind="class"><name>evab::Font8Narrow</name>
-    <member refid="classevab_1_1_font8_narrow_1ab3f248a18cde663956656231cd6bb8ce" kind="variable"><name>PROGMEM</name></member>
-    <member refid="classevab_1_1_font8_narrow_1a5e76dd13dfb3ea0c148df7e34607b3d9" kind="function"><name>GetVerticalSlice</name></member>
+  <compound refid="classevab_1_1_font8_sharp" kind="class"><name>evab::Font8Sharp</name>
+    <member refid="classevab_1_1_font8_sharp_1acf076b776f5ebfb9cd4d3caf75e19b22" kind="variable"><name>PROGMEM</name></member>
+    <member refid="classevab_1_1_font8_sharp_1aeb4fde091080753ad3c715a2365f511b" kind="function"><name>GetVerticalSlice</name></member>
   </compound>
   <compound refid="classevab_1_1_grid" kind="class"><name>evab::Grid</name>
     <member refid="classevab_1_1_grid_1a5320341c603411b1193587686bca00fa" kind="variable"><name>mTopLeft</name></member>
@@ -407,7 +407,6 @@
     <member refid="classevab_1_1_screen_s_s_d1306_1a1b75cc2243ff7fb71ce806ae0a361f5c" kind="variable"><name>mHeight</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a519c1e3890fbf5eefd8b1eca3920975d" kind="variable"><name>mPages</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a943b7bc19f9cffa84b2b21d2a7940555" kind="function"><name>ScreenSSD1306</name></member>
-    <member refid="classevab_1_1_screen_s_s_d1306_1af1636deb2c3650f7c389e08580640480" kind="function"><name>~ScreenSSD1306</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a79f177085bfb5d072a4acd1238a40a84" kind="function"><name>SetContrast</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1ae1e23d3abbf9b7a7a1524abf7e5dc379" kind="function"><name>Size</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a0615113f865bc13dcb6908e4cf669a9b" kind="function"><name>Serialize</name></member>
@@ -479,7 +478,7 @@
   </compound>
   <compound refid="classevab_1_1_titled" kind="class"><name>evab::Titled</name>
     <member refid="classevab_1_1_titled_1a6957ff636cc52c620fbe50c45c9492b5" kind="variable"><name>mName</name></member>
-    <member refid="classevab_1_1_titled_1a551f4f13496917291d325f370adce822" kind="function"><name>Titled</name></member>
+    <member refid="classevab_1_1_titled_1a7c87b4f22114e529749939b68842c46e" kind="function"><name>Titled</name></member>
     <member refid="classevab_1_1_titled_1a59aa766872a7353407147310050496d5" kind="function"><name>SetLabel</name></member>
     <member refid="classevab_1_1_titled_1abc0b70a6abe4a3452ee3db4a9a55cbba" kind="function"><name>GetLabel</name></member>
     <member refid="classevab_1_1_titled_1a61cb444a976b5485db602cbb837894c8" kind="function"><name>drawer</name></member>
@@ -541,21 +540,21 @@
     <member refid="evab_stretch_bar_px_8h_1a44c38cae7687a9710743443121ea77f2" kind="typedef"><name>HorizontalProgressBarPx</name></member>
     <member refid="evab_stretch_bar_px_8h_1a70e3aec92bdddcf6e30df76d6081a34d" kind="typedef"><name>VerticalScrollBarPx</name></member>
     <member refid="evab_stretch_bar_px_8h_1a5149ae40177d50677dfe592434e691dc" kind="typedef"><name>HorizontalScrollBarPx</name></member>
-    <member refid="evab_text_label_8h_1afef33725ec2dc9d95117e42d6265799b" kind="typedef"><name>TextLabelLeft</name></member>
-    <member refid="evab_text_label_8h_1a67c9d8a7de1295665795916aeaa4a6cf" kind="typedef"><name>TextLabelCenter</name></member>
-    <member refid="evab_text_label_8h_1aa2da51c3a6838512d2e6fddb3263f3fe" kind="typedef"><name>TextLabelRight</name></member>
-    <member refid="evab_text_label_8h_1aea69728cb7bf342aeacb3248e9004ea1" kind="typedef"><name>TextLabelLeftConst</name></member>
-    <member refid="evab_text_label_8h_1aa2669db3d5cf61976dd3dff818d08d47" kind="typedef"><name>TextLabelCenterConst</name></member>
-    <member refid="evab_text_label_8h_1a15c54e91d933b2db3a4d99be17d4803f" kind="typedef"><name>TextLabelRightConst</name></member>
-    <member refid="evab_text_label_8h_1a999046e2d257e38374d0971b52bb324c" kind="typedef"><name>TextLabelLeftF</name></member>
-    <member refid="evab_text_label_8h_1a8f7233582a94bf12559b27a5fb8bf061" kind="typedef"><name>TextLabelCenterF</name></member>
-    <member refid="evab_text_label_8h_1ad5ad7805c11033055fdba99a38bc9059" kind="typedef"><name>TextLabelRightF</name></member>
-    <member refid="evab_titled_8h_1a6b5c3cf902f8d7a907ba6b4a3cf23902" kind="typedef"><name>TitledLeft</name></member>
-    <member refid="evab_titled_8h_1a6cd80f314c804361624ab39348d5c3c0" kind="typedef"><name>TitledCenter</name></member>
-    <member refid="evab_titled_8h_1a7c5585a2d61b6ad550b3dca25868f613" kind="typedef"><name>TitledRight</name></member>
-    <member refid="evab_titled_8h_1a75324c2f224dd43f442295dc74d89a38" kind="typedef"><name>TitledLeftF</name></member>
-    <member refid="evab_titled_8h_1a11d9e0e7b502a58a150fabdab51b377a" kind="typedef"><name>TitledCenterF</name></member>
-    <member refid="evab_titled_8h_1a5e013dbb0bd150feb8f50322356081fb" kind="typedef"><name>TitledRightF</name></member>
+    <member refid="evab_text_label_8h_1a33ed40efcef805c6a95eae7091e18277" kind="typedef"><name>TextLabelLeft</name></member>
+    <member refid="evab_text_label_8h_1a9e6ed09eba89fd11505f28f3e2862f01" kind="typedef"><name>TextLabelCenter</name></member>
+    <member refid="evab_text_label_8h_1a0fc68a8d7627f0f53cc42618d37b08b8" kind="typedef"><name>TextLabelRight</name></member>
+    <member refid="evab_text_label_8h_1a49a077d44fe6872f4a03d4137f7c5232" kind="typedef"><name>TextLabelLeftConst</name></member>
+    <member refid="evab_text_label_8h_1a922739384622360abbc40802a47a64e1" kind="typedef"><name>TextLabelCenterConst</name></member>
+    <member refid="evab_text_label_8h_1a6fc77be97ca18dfbd9a7f6521d2cec6c" kind="typedef"><name>TextLabelRightConst</name></member>
+    <member refid="evab_text_label_8h_1a7c72b766f47335b88a9c6dd113615dd0" kind="typedef"><name>TextLabelLeftF</name></member>
+    <member refid="evab_text_label_8h_1aa85747e7e311abaa0531e94ec06b9f2f" kind="typedef"><name>TextLabelCenterF</name></member>
+    <member refid="evab_text_label_8h_1a533c6bd976490f1e6a75b0c92b904aa4" kind="typedef"><name>TextLabelRightF</name></member>
+    <member refid="evab_titled_8h_1a038718032ffdeb9e61a216a89d4d2449" kind="typedef"><name>TitledLeft</name></member>
+    <member refid="evab_titled_8h_1a56446113b5e883e02fbb10b29ecb15dc" kind="typedef"><name>TitledCenter</name></member>
+    <member refid="evab_titled_8h_1a9f3f89d7ad5d4879e163f13efd0015f9" kind="typedef"><name>TitledRight</name></member>
+    <member refid="evab_titled_8h_1ac42b44fe983d404f3a1c82a08937cc2c" kind="typedef"><name>TitledLeftF</name></member>
+    <member refid="evab_titled_8h_1aa08a3e7ab8d028c06e9aa1ced4218b94" kind="typedef"><name>TitledCenterF</name></member>
+    <member refid="evab_titled_8h_1ab33b5d8a2c966335f3207d1ebdf73a69" kind="typedef"><name>TitledRightF</name></member>
     <member refid="evab_serializers_8h_1aa5c8a3753a7787e08f51e73bebbd1e09" kind="function"><name>serialize_16x8</name></member>
     <member refid="evab_serializers_8h_1a03b280ac012295c05807836a32f299c4" kind="function"><name>deserialize_16x8</name></member>
     <member refid="evab_serializers_8h_1a95bd885987c140b2a0e8ce5d9914ce39" kind="function"><name>serialize_32x4</name></member>
@@ -584,7 +583,7 @@
   </compound>
   <compound refid="evab_font8_compact_8h" kind="file"><name>evabFont8Compact.h</name>
   </compound>
-  <compound refid="evab_font8_narrow_8h" kind="file"><name>evabFont8Narrow.h</name>
+  <compound refid="evab_font8_sharp_8h" kind="file"><name>evabFont8Sharp.h</name>
   </compound>
   <compound refid="evab_gallery_remixicon16_8h" kind="file"><name>evabGalleryRemixicon16.h</name>
   </compound>

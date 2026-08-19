@@ -56,7 +56,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
 * **class** [**evab::IFont**](classevab_1_1_i_font.md) _Abstract interface for font providers._     
     * **class** [**evab::Font8Bold**](classevab_1_1_font8_bold.md) _8x8 bold font implementation_ 
     * **class** [**evab::Font8Compact**](classevab_1_1_font8_compact.md) _8x8 compact font implementation_ 
-    * **class** [**evab::Font8Narrow**](classevab_1_1_font8_narrow.md) _8x8 thin font implementation_ 
+    * **class** [**evab::Font8Sharp**](classevab_1_1_font8_sharp.md) _8x8 thin font implementation_ 
 * **class** [**evab::Grid**](classevab_1_1_grid.md) _Layout manager for rest-based UI arrangement._ 
 * **class** [**evab::HorizontalProgressBarTileset**](classevab_1_1_horizontal_progress_bar_tileset.md) _Horizontal progress bar pictogram set._ 
 * **class** [**evab::HorizontalScrollBarTileset**](classevab_1_1_horizontal_scroll_bar_tileset.md) _Horizontal scroll bar pictogram set._ 

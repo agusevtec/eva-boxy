@@ -12,7 +12,7 @@ Here is a list of all files with brief descriptions:
     * **file** [**evabElementBase.h**](evab_element_base_8h.md)     
     * **file** [**evabFont8Bold.h**](evab_font8_bold_8h.md)     
     * **file** [**evabFont8Compact.h**](evab_font8_compact_8h.md)     
-    * **file** [**evabFont8Narrow.h**](evab_font8_narrow_8h.md)     
+    * **file** [**evabFont8Sharp.h**](evab_font8_sharp_8h.md)     
     * **file** [**evabGalleryRemixicon16.h**](evab_gallery_remixicon16_8h.md)     
     * **file** [**evabGalleryRemixicon24.h**](evab_gallery_remixicon24_8h.md)     
     * **file** [**evabGalleryRemixicon32.h**](evab_gallery_remixicon32_8h.md)     

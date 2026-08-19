@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
-  <compounddef id="classevab_1_1_font8_narrow" kind="class" language="C++" prot="public">
-    <compoundname>evab::Font8Narrow</compoundname>
+  <compounddef id="classevab_1_1_font8_sharp" kind="class" language="C++" prot="public">
+    <compoundname>evab::Font8Sharp</compoundname>
     <basecompoundref refid="classevab_1_1_i_font" prot="public" virt="non-virtual">evab::IFont</basecompoundref>
-    <includes refid="evab_font8_narrow_8h" local="no">evabFont8Narrow.h</includes>
+    <includes refid="evab_font8_sharp_8h" local="no">evabFont8Sharp.h</includes>
     <sectiondef kind="private-static-attrib">
-      <memberdef kind="variable" id="classevab_1_1_font8_narrow_1ab3f248a18cde663956656231cd6bb8ce" prot="private" static="yes" mutable="no">
+      <memberdef kind="variable" id="classevab_1_1_font8_sharp_1acf076b776f5ebfb9cd4d3caf75e19b22" prot="private" static="yes" mutable="no">
         <type>const unsigned char kCharmap[][7]</type>
-        <definition>const unsigned char kCharmap [][7] evab::Font8Narrow::PROGMEM</definition>
+        <definition>const unsigned char kCharmap [][7] evab::Font8Sharp::PROGMEM</definition>
         <argsstring></argsstring>
         <name>PROGMEM</name>
-        <qualifiedname>evab::Font8Narrow::PROGMEM</qualifiedname>
+        <qualifiedname>evab::Font8Sharp::PROGMEM</qualifiedname>
         <briefdescription>
 <para>Character bitmap data. </para>
         </briefdescription>
@@ -18,16 +18,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabFont8Narrow.h" line="26" column="45" bodyfile="src/evabFont8Narrow.h" bodystart="26" bodyend="-1"/>
+        <location file="src/evabFont8Sharp.h" line="26" column="45" bodyfile="src/evabFont8Sharp.h" bodystart="26" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_font8_narrow_1a5e76dd13dfb3ea0c148df7e34607b3d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classevab_1_1_font8_sharp_1aeb4fde091080753ad3c715a2365f511b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned char</type>
-        <definition>unsigned char evab::Font8Narrow::GetVerticalSlice</definition>
+        <definition>unsigned char evab::Font8Sharp::GetVerticalSlice</definition>
         <argsstring>(char aCharcode, unsigned char aCutColumn) const override</argsstring>
         <name>GetVerticalSlice</name>
-        <qualifiedname>evab::Font8Narrow::GetVerticalSlice</qualifiedname>
+        <qualifiedname>evab::Font8Sharp::GetVerticalSlice</qualifiedname>
         <reimplements refid="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad">GetVerticalSlice</reimplements>
         <param>
           <type>char</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabFont8Narrow.h" line="23" column="23"/>
+        <location file="src/evabFont8Sharp.h" line="23" column="23"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -75,8 +75,8 @@
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
-        <label>evab::Font8Narrow</label>
-        <link refid="classevab_1_1_font8_narrow"/>
+        <label>evab::Font8Sharp</label>
+        <link refid="classevab_1_1_font8_sharp"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
@@ -87,8 +87,8 @@
     </inheritancegraph>
     <collaborationgraph>
       <node id="1">
-        <label>evab::Font8Narrow</label>
-        <link refid="classevab_1_1_font8_narrow"/>
+        <label>evab::Font8Sharp</label>
+        <link refid="classevab_1_1_font8_sharp"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
@@ -97,10 +97,10 @@
         <link refid="classevab_1_1_i_font"/>
       </node>
     </collaborationgraph>
-    <location file="src/evabFont8Narrow.h" line="13" column="5" bodyfile="src/evabFont8Narrow.h" bodystart="14" bodyend="27"/>
+    <location file="src/evabFont8Sharp.h" line="13" column="5" bodyfile="src/evabFont8Sharp.h" bodystart="14" bodyend="27"/>
     <listofallmembers>
-      <member refid="classevab_1_1_font8_narrow_1a5e76dd13dfb3ea0c148df7e34607b3d9" prot="public" virt="virtual"><scope>evab::Font8Narrow</scope><name>GetVerticalSlice</name></member>
-      <member refid="classevab_1_1_font8_narrow_1ab3f248a18cde663956656231cd6bb8ce" prot="private" virt="non-virtual"><scope>evab::Font8Narrow</scope><name>PROGMEM</name></member>
+      <member refid="classevab_1_1_font8_sharp_1aeb4fde091080753ad3c715a2365f511b" prot="public" virt="virtual"><scope>evab::Font8Sharp</scope><name>GetVerticalSlice</name></member>
+      <member refid="classevab_1_1_font8_sharp_1acf076b776f5ebfb9cd4d3caf75e19b22" prot="private" virt="non-virtual"><scope>evab::Font8Sharp</scope><name>PROGMEM</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="92" column="10"/>
+        <location file="src/evabWindowAlgorithms.h" line="91" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_flip_window_algorithm_1a5f3b40d7497cec78962b9595d71ec6d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="86" column="5"/>
+        <location file="src/evabWindowAlgorithms.h" line="85" column="5"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -104,7 +104,7 @@
         <link refid="classevab_1_1_window_algorithm_base"/>
       </node>
     </collaborationgraph>
-    <location file="src/evabWindowAlgorithms.h" line="83" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="84" bodyend="93"/>
+    <location file="src/evabWindowAlgorithms.h" line="82" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="83" bodyend="92"/>
     <listofallmembers>
       <member refid="classevab_1_1_window_algorithm_base_1a7f3ed7df6d39609211d04da29495751b" prot="public" virt="non-virtual"><scope>evab::FlipWindowAlgorithm</scope><name>Count</name></member>
       <member refid="classevab_1_1_window_algorithm_base_1a4f13e98ae4ace7ec0993a5ea9788a483" prot="protected" virt="non-virtual"><scope>evab::FlipWindowAlgorithm</scope><name>indexInWindow</name></member>

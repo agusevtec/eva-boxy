@@ -8,12 +8,10 @@
 
 
 ```C++
-#ifndef EVAB_COOR_H_
-#define EVAB_COOR_H_
+#pragma once
 
 namespace evab
 {
-
   struct Coor
   {
     unsigned char X, Y; 
@@ -21,7 +19,6 @@ namespace evab
   };
 
 }
-#endif
 ```
 
 

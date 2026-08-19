@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="37" column="7" bodyfile="src/evabLayoutBase.h" bodystart="37" bodyend="58"/>
+        <location file="src/evabLayoutBase.h" line="35" column="7" bodyfile="src/evabLayoutBase.h" bodystart="35" bodyend="56"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -95,7 +95,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabLayoutBase.h" line="33" column="5" bodyfile="src/evabLayoutBase.h" bodystart="34" bodyend="59"/>
+    <location file="src/evabLayoutBase.h" line="31" column="5" bodyfile="src/evabLayoutBase.h" bodystart="32" bodyend="57"/>
     <listofallmembers>
       <member refid="classevab_1_1_layout_base_1_1_focusable_base_1a42568b513b97e4735ef0664b9bd70dd4" prot="public" virt="non-virtual"><scope>evab::LayoutBase::Focusable</scope><name>element</name></member>
       <member refid="classevab_1_1_layout_base_1_1_focusable_1a00e30dcf7ecbf9555a68fa6a265bc17a" prot="public" virt="non-virtual"><scope>evab::LayoutBase::Focusable</scope><name>Focusable</name></member>

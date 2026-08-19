@@ -23,7 +23,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**FlipWindowAlgorithm**](classevab_1_1_flip_window_algorithm.md) _Flip-page navigation algorithm._     
     * **class** [**Font8Bold**](classevab_1_1_font8_bold.md) _8x8 bold font implementation_     
     * **class** [**Font8Compact**](classevab_1_1_font8_compact.md) _8x8 compact font implementation_     
-    * **class** [**Font8Narrow**](classevab_1_1_font8_narrow.md) _8x8 thin font implementation_     
+    * **class** [**Font8Sharp**](classevab_1_1_font8_sharp.md) _8x8 thin font implementation_     
     * **namespace** [**GalleryRemixicon16**](namespaceevab_1_1_gallery_remixicon16.md)     
     * **namespace** [**GalleryRemixicon24**](namespaceevab_1_1_gallery_remixicon24.md)     
     * **namespace** [**GalleryRemixicon32**](namespaceevab_1_1_gallery_remixicon32.md)     

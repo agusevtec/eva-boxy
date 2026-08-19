@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabKeyCatcher.h" line="57" column="19" bodyfile="src/evabKeyCatcher.h" bodystart="57" bodyend="-1"/>
+        <location file="src/evabKeyCatcher.h" line="56" column="19" bodyfile="src/evabKeyCatcher.h" bodystart="56" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabKeyCatcher.h" line="29" column="5" bodyfile="src/evabKeyCatcher.h" bodystart="29" bodyend="32"/>
+        <location file="src/evabKeyCatcher.h" line="28" column="5" bodyfile="src/evabKeyCatcher.h" bodystart="28" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_key_catcher_1aca34e483a7f7b1a0aaac5426c4b7fbec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabKeyCatcher.h" line="40" column="10" bodyfile="src/evabKeyCatcher.h" bodystart="40" bodyend="54"/>
+        <location file="src/evabKeyCatcher.h" line="39" column="10" bodyfile="src/evabKeyCatcher.h" bodystart="39" bodyend="53"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -159,7 +159,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabKeyCatcher.h" line="18" column="3" bodyfile="src/evabKeyCatcher.h" bodystart="19" bodyend="58"/>
+    <location file="src/evabKeyCatcher.h" line="18" column="3" bodyfile="src/evabKeyCatcher.h" bodystart="19" bodyend="57"/>
     <listofallmembers>
       <member refid="classevab_1_1_key_catcher_1aba5d8d213e39d560ed7260db73c291e2" prot="public" virt="non-virtual"><scope>evab::KeyCatcher</scope><name>KeyCatcher</name></member>
       <member refid="classevab_1_1_key_catcher_1ab0a787dfab54c1274f6514062d9353c9" prot="private" virt="non-virtual"><scope>evab::KeyCatcher</scope><name>mListener</name></member>

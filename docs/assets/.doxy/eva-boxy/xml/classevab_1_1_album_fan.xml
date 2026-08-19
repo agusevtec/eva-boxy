@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabAlbums.h" line="50" column="40" bodyfile="src/evabAlbums.h" bodystart="50" bodyend="-1"/>
+        <location file="src/evabAlbums.h" line="51" column="40" bodyfile="src/evabAlbums.h" bodystart="51" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabAlbums.h" line="49" column="36"/>
+        <location file="src/evabAlbums.h" line="50" column="36"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -59,7 +59,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabAlbums.h" line="40" column="5" bodyfile="src/evabAlbums.h" bodystart="41" bodyend="51"/>
+    <location file="src/evabAlbums.h" line="41" column="5" bodyfile="src/evabAlbums.h" bodystart="42" bodyend="52"/>
     <listofallmembers>
       <member refid="classevab_1_1_album_fan_1a491073bab235d13c415d1139e6d4328f" prot="public" virt="non-virtual"><scope>evab::AlbumFan</scope><name>Count</name></member>
       <member refid="classevab_1_1_album_fan_1a605959ffc41f2e3594a90e52d6860c90" prot="public" virt="non-virtual"><scope>evab::AlbumFan</scope><name>GetTile</name></member>

@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabAlbums.h" line="34" column="40" bodyfile="src/evabAlbums.h" bodystart="34" bodyend="-1"/>
+        <location file="src/evabAlbums.h" line="35" column="40" bodyfile="src/evabAlbums.h" bodystart="35" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabAlbums.h" line="33" column="36"/>
+        <location file="src/evabAlbums.h" line="34" column="36"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -59,7 +59,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabAlbums.h" line="24" column="5" bodyfile="src/evabAlbums.h" bodystart="25" bodyend="35"/>
+    <location file="src/evabAlbums.h" line="25" column="5" bodyfile="src/evabAlbums.h" bodystart="26" bodyend="36"/>
     <listofallmembers>
       <member refid="classevab_1_1_album_rainbowmeter_1a71534891780705ac94cf1de13e789414" prot="public" virt="non-virtual"><scope>evab::AlbumRainbowmeter</scope><name>Count</name></member>
       <member refid="classevab_1_1_album_rainbowmeter_1a6bfea304f016b2aec75079cbd3424ca7" prot="public" virt="non-virtual"><scope>evab::AlbumRainbowmeter</scope><name>GetTile</name></member>

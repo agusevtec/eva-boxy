@@ -8,7 +8,6 @@
 
 
 ```C++
-// evabLabeled.h
 #pragma once
 
 #include <evabScreen.h>
@@ -17,7 +16,6 @@
 
 namespace evab
 {
-
   template <class T, typename TAlign, typename TText>
   class Labeled : public T
   {

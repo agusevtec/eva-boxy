@@ -16,7 +16,7 @@ _Abstract interface for font providers._ [More...](#detailed-description)
 
 
 
-Inherited by the following classes: [evab::Font8Bold](classevab_1_1_font8_bold.md),  [evab::Font8Compact](classevab_1_1_font8_compact.md),  [evab::Font8Narrow](classevab_1_1_font8_narrow.md)
+Inherited by the following classes: [evab::Font8Bold](classevab_1_1_font8_bold.md),  [evab::Font8Compact](classevab_1_1_font8_compact.md),  [evab::Font8Sharp](classevab_1_1_font8_sharp.md)
 
 
 

@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="72" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="72" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="71" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a4497e65bb6a552bbfb5cee546ec01754" prot="protected" static="no" mutable="no">
         <type>unsigned char</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="73" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="73" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="72" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1a7d09fb0297ad04dc361d2295c71d3ddd" prot="protected" static="no" mutable="no">
         <type>unsigned char</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="74" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="74" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="73" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="73" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_window_algorithm_base_1aa52d795bb2867c194b512badeeeb4c4e" prot="protected" static="no" mutable="no">
         <type>unsigned char</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="75" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="75" bodyend="-1"/>
+        <location file="src/evabWindowAlgorithms.h" line="74" column="19" bodyfile="src/evabWindowAlgorithms.h" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="18" column="5"/>
+        <location file="src/evabWindowAlgorithms.h" line="17" column="5"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a64f7b5f3026d02f69dbfdce8d52c4a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="25" column="18"/>
+        <location file="src/evabWindowAlgorithms.h" line="24" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a58020e092373f757dcf6105f5ee80da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>signed short</type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="32" column="18"/>
+        <location file="src/evabWindowAlgorithms.h" line="31" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a7f3ed7df6d39609211d04da29495751b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="39" column="19"/>
+        <location file="src/evabWindowAlgorithms.h" line="38" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a722790197126e550bc96800acd38faa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="46" column="19"/>
+        <location file="src/evabWindowAlgorithms.h" line="45" column="19"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -216,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="55" column="17"/>
+        <location file="src/evabWindowAlgorithms.h" line="54" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1a55fea5369afd26fb4db00cb51b6ad447" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="62" column="10"/>
+        <location file="src/evabWindowAlgorithms.h" line="61" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_window_algorithm_base_1ac27d614897a34588c75d22047245cd64" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabWindowAlgorithms.h" line="69" column="10"/>
+        <location file="src/evabWindowAlgorithms.h" line="68" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -313,7 +313,7 @@
         <link refid="classevab_1_1_window_algorithm_base"/>
       </node>
     </inheritancegraph>
-    <location file="src/evabWindowAlgorithms.h" line="11" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="12" bodyend="76"/>
+    <location file="src/evabWindowAlgorithms.h" line="10" column="3" bodyfile="src/evabWindowAlgorithms.h" bodystart="11" bodyend="75"/>
     <listofallmembers>
       <member refid="classevab_1_1_window_algorithm_base_1a7f3ed7df6d39609211d04da29495751b" prot="public" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>Count</name></member>
       <member refid="classevab_1_1_window_algorithm_base_1a4f13e98ae4ace7ec0993a5ea9788a483" prot="protected" virt="non-virtual"><scope>evab::WindowAlgorithmBase</scope><name>indexInWindow</name></member>

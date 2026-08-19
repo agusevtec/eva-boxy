@@ -8,14 +8,12 @@
 
 
 ```C++
-// evabPadding.h
 #pragma once
 
 #include <evabScreen.h>
 
 namespace evab
 {
-
     template <class T>
     class PaddingV : public T
     {

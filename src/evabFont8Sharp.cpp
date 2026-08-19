@@ -1,8 +1,8 @@
-#include <evabFont8Narrow.h>
+#include <evabFont8Sharp.h>
 
 using namespace evab;
 
-const unsigned char Font8Narrow::kCharmap[][7] PROGMEM = {
+const unsigned char Font8Sharp::kCharmap[][7] PROGMEM = {
     {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}, // ' '
     {0x00, 0x00, 0xc6, 0xde, 0xc6, 0x00, 0x00}, // '!'
     {0x00, 0x00, 0x0e, 0x00, 0x0e, 0x00, 0x00}, // '\"'
@@ -100,7 +100,7 @@ const unsigned char Font8Narrow::kCharmap[][7] PROGMEM = {
     {0x10, 0x08, 0x08, 0x10, 0x20, 0x20, 0x10}  // '~'
 };
 
-unsigned char Font8Narrow::GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const
+unsigned char Font8Sharp::GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const
 {
     {
         if (aCharcode < 32 || aCharcode > 126)

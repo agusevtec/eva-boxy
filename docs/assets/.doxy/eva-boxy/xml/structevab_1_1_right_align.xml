@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextAlign.h" line="49" column="30"/>
+        <location file="src/evabTextAlign.h" line="48" column="30"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -53,7 +53,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabTextAlign.h" line="41" column="5" bodyfile="src/evabTextAlign.h" bodystart="42" bodyend="50"/>
+    <location file="src/evabTextAlign.h" line="40" column="5" bodyfile="src/evabTextAlign.h" bodystart="41" bodyend="49"/>
     <listofallmembers>
       <member refid="structevab_1_1_right_align_1a549892adcc4fff3c5a8a8a2852580743" prot="public" virt="non-virtual"><scope>evab::RightAlign</scope><name>Offset</name></member>
     </listofallmembers>

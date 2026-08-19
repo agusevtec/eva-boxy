@@ -56,7 +56,7 @@
 ([**evab**](namespaceevab.md))
 * [**Font8Compact**](classevab_1_1_font8_compact.md)
 ([**evab**](namespaceevab.md))
-* [**Font8Narrow**](classevab_1_1_font8_narrow.md)
+* [**Font8Sharp**](classevab_1_1_font8_sharp.md)
 ([**evab**](namespaceevab.md))
 
 

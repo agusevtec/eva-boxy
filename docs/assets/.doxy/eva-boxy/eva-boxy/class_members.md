@@ -60,7 +60,7 @@
 * **GetTile** ([**evab::AlbumBattery**](classevab_1_1_album_battery.md), [**evab::AlbumFan**](classevab_1_1_album_fan.md), [**evab::AlbumLamp**](classevab_1_1_album_lamp.md), [**evab::AlbumOnOff**](classevab_1_1_album_on_off.md), [**evab::AlbumProgress**](classevab_1_1_album_progress.md), [**evab::AlbumRainbowmeter**](classevab_1_1_album_rainbowmeter.md), [**evab::AlbumRoundmeter**](classevab_1_1_album_roundmeter.md), [**evab::AlbumSignal**](classevab_1_1_album_signal.md), [**evab::AlbumSpeaker**](classevab_1_1_album_speaker.md), [**evab::HorizontalProgressBarTileset**](classevab_1_1_horizontal_progress_bar_tileset.md), [**evab::HorizontalScrollBarTileset**](classevab_1_1_horizontal_scroll_bar_tileset.md), [**evab::VerticalProgressBarTileset**](classevab_1_1_vertical_progress_bar_tileset.md), [**evab::VerticalScrollBarTileset**](classevab_1_1_vertical_scroll_bar_tileset.md))
 * **GetScreen** ([**evab::Boxy**](classevab_1_1_boxy.md))
 * **GetFocused** ([**evab::CompositeBase**](classevab_1_1_composite_base.md), [**evab::LayoutBase**](classevab_1_1_layout_base.md))
-* **GetVerticalSlice** ([**evab::Font8Bold**](classevab_1_1_font8_bold.md), [**evab::Font8Compact**](classevab_1_1_font8_compact.md), [**evab::Font8Narrow**](classevab_1_1_font8_narrow.md), [**evab::IFont**](classevab_1_1_i_font.md))
+* **GetVerticalSlice** ([**evab::Font8Bold**](classevab_1_1_font8_bold.md), [**evab::Font8Compact**](classevab_1_1_font8_compact.md), [**evab::Font8Sharp**](classevab_1_1_font8_sharp.md), [**evab::IFont**](classevab_1_1_i_font.md))
 * **GetPos** ([**evab::Grid**](classevab_1_1_grid.md))
 * **GetSize** ([**evab::Grid**](classevab_1_1_grid.md))
 * **Grid** ([**evab::Grid**](classevab_1_1_grid.md))
@@ -178,7 +178,7 @@
 
 ## p
 
-* **PROGMEM** ([**evab::Font8Bold**](classevab_1_1_font8_bold.md), [**evab::Font8Compact**](classevab_1_1_font8_compact.md), [**evab::Font8Narrow**](classevab_1_1_font8_narrow.md))
+* **PROGMEM** ([**evab::Font8Bold**](classevab_1_1_font8_bold.md), [**evab::Font8Compact**](classevab_1_1_font8_compact.md), [**evab::Font8Sharp**](classevab_1_1_font8_sharp.md))
 * **Picto** ([**evab::Grid**](classevab_1_1_grid.md), [**evab::Screen**](classevab_1_1_screen.md), [**evab::ScreenPage8Base**](classevab_1_1_screen_page8_base.md))
 * **PaddingH** ([**evab::PaddingH**](classevab_1_1_padding_h.md))
 * **PaddingV** ([**evab::PaddingV**](classevab_1_1_padding_v.md))
@@ -269,7 +269,6 @@
 
 * **~InputAnimationPx** ([**evab::InputAnimationPx**](classevab_1_1_input_animation_px.md))
 * **~ScreenKS0108** ([**evab::ScreenKS0108**](classevab_1_1_screen_k_s0108.md))
-* **~ScreenSSD1306** ([**evab::ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md))
 
 
 

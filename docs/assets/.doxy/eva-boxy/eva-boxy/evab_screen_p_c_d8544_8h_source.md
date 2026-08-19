@@ -25,38 +25,38 @@ namespace evab
                   uint8_t aLED = 255);
 
     void SetBacklight(uint8_t aState);
-    
+
     void SetContrast(uint8_t aContrast);
-    
+
     Coor Size() override { return {12, 6}; }
-    
+
     unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
-    
+
     void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
   private:
     void drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice) override;
-    
+
     void clearTile(Coor aPosition, unsigned char aColor) override;
 
     void clearDisplay();
-    
+
     void sendCommand(uint8_t aCmd);
-    
+
     void sendData(uint8_t aData);
-    
+
     void initDisplay();
 
-    static const uint8_t CMD_FUNC_SET = 0x20;    
-    static const uint8_t CMD_DISP_CTRL = 0x08;   
-    static const uint8_t CMD_SET_Y = 0x40;       
-    static const uint8_t CMD_SET_X = 0x80;       
-    static const uint8_t CMD_SET_VOP = 0x80;     
+    static const uint8_t CMD_FUNC_SET = 0x20;  
+    static const uint8_t CMD_DISP_CTRL = 0x08; 
+    static const uint8_t CMD_SET_Y = 0x40;     
+    static const uint8_t CMD_SET_X = 0x80;     
+    static const uint8_t CMD_SET_VOP = 0x80;   
 
-    uint8_t mRSTPin;  
-    uint8_t mCEPin;   
-    uint8_t mDCPin;   
-    uint8_t mLEDPin;  
+    uint8_t mRSTPin; 
+    uint8_t mCEPin;  
+    uint8_t mDCPin;  
+    uint8_t mLEDPin; 
   };
 
 }

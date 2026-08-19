@@ -15,13 +15,13 @@
 
 namespace evab
 {
-    class Font8Compact: public IFont
+    class Font8Compact : public IFont
     {
     public:
         unsigned char GetVerticalSlice(char aCharcode, unsigned char aCutColumn) const override;
 
     private:
-        static const unsigned char kCharmap[][5] PROGMEM;  
+        static const unsigned char kCharmap[][5] PROGMEM; 
     };
 }
 ```

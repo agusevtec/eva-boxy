@@ -18,7 +18,6 @@ namespace evab
   class KeyReactor : public T
   {
   public:
-
     template <typename... Args>
     KeyReactor(eva::IHandler *aListener, Args &&...args)
         : T(args...), mListener(aListener)

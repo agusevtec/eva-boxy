@@ -14,7 +14,6 @@
 
 namespace evab
 {
-
   class CompositeBase : public ElementBase
   {
   public:
@@ -35,7 +34,6 @@ namespace evab
   private:
     ElementBase *mFocusedChild = nullptr; 
   };
-
 }
 ```
 

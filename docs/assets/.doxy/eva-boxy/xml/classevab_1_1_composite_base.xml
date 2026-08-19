@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="64" column="17" bodyfile="src/evabCompositeBase.h" bodystart="64" bodyend="-1"/>
+        <location file="src/evabCompositeBase.h" line="63" column="17" bodyfile="src/evabCompositeBase.h" bodystart="63" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="22" column="10"/>
+        <location file="src/evabCompositeBase.h" line="21" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_composite_base_1ac6a7c9c5d50a6c27ea3d1348aa66f9c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="30" column="10"/>
+        <location file="src/evabCompositeBase.h" line="29" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_composite_base_1a57b22b464cd1ec0984e8eaba1091ff59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classevab_1_1_element_base" kindref="compound">ElementBase</ref> *</type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="37" column="17"/>
+        <location file="src/evabCompositeBase.h" line="36" column="17"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="45" column="10"/>
+        <location file="src/evabCompositeBase.h" line="44" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="56" column="18"/>
+        <location file="src/evabCompositeBase.h" line="55" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_composite_base_1a549745886246a86545a2cb3ab224941e" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabCompositeBase.h" line="61" column="18"/>
+        <location file="src/evabCompositeBase.h" line="60" column="18"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -216,7 +216,7 @@
         <link refid="classevab_1_1_element_base"/>
       </node>
     </collaborationgraph>
-    <location file="src/evabCompositeBase.h" line="13" column="3" bodyfile="src/evabCompositeBase.h" bodystart="14" bodyend="65"/>
+    <location file="src/evabCompositeBase.h" line="12" column="3" bodyfile="src/evabCompositeBase.h" bodystart="13" bodyend="64"/>
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::CompositeBase</scope><name>Draw</name></member>
       <member refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" virt="pure-virtual"><scope>evab::CompositeBase</scope><name>drawer</name></member>

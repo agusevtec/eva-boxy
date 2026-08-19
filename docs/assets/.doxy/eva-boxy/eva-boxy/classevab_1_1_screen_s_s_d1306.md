@@ -98,7 +98,6 @@ Inherits the following classes: [evab::ScreenPage8Base](classevab_1_1_screen_pag
 | virtual unsigned short | [**Serialize**](#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPos, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) <br>_Serializes element state for 16x8 screen._  |
 |  void | [**SetContrast**](#function-setcontrast) (uint8\_t aContrast) <br>_Sets display contrast._  |
 | virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](#function-size) () override<br>_Gets the screen size in tiles._  |
-|   | [**~ScreenSSD1306**](#function-screenssd1306) () <br> |
 
 
 ## Public Functions inherited from evab::ScreenPage8Base
@@ -374,19 +373,6 @@ virtual Coor evab::ScreenSSD1306::Size () override
 
         
 Implements [*evab::Screen::Size*](classevab_1_1_screen.md#function-size)
-
-
-<hr>
-
-
-
-### function ~ScreenSSD1306 
-
-```C++
-evab::ScreenSSD1306::~ScreenSSD1306 () 
-```
-
-
 
 
 <hr>

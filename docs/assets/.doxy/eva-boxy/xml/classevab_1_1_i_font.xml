@@ -4,7 +4,7 @@
     <compoundname>evab::IFont</compoundname>
     <derivedcompoundref refid="classevab_1_1_font8_bold" prot="public" virt="non-virtual">evab::Font8Bold</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_font8_compact" prot="public" virt="non-virtual">evab::Font8Compact</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_font8_narrow" prot="public" virt="non-virtual">evab::Font8Narrow</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_font8_sharp" prot="public" virt="non-virtual">evab::Font8Sharp</derivedcompoundref>
     <includes refid="evab_i_font_8h" local="no">evabIFont.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classevab_1_1_i_font_1a6d7423feb5ea422b5a83167a7a2b1cad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
@@ -15,7 +15,7 @@
         <qualifiedname>evab::IFont::GetVerticalSlice</qualifiedname>
         <reimplementedby refid="classevab_1_1_font8_bold_1a7a0536ad01be1f44b7622d03ead5efaa">GetVerticalSlice</reimplementedby>
         <reimplementedby refid="classevab_1_1_font8_compact_1a404bc44a17316019b509882081152599">GetVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_font8_narrow_1a5e76dd13dfb3ea0c148df7e34607b3d9">GetVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_font8_sharp_1aeb4fde091080753ad3c715a2365f511b">GetVerticalSlice</reimplementedby>
         <param>
           <type>char</type>
           <declname>aCharcode</declname>
@@ -74,8 +74,8 @@
         </childnode>
       </node>
       <node id="4">
-        <label>evab::Font8Narrow</label>
-        <link refid="classevab_1_1_font8_narrow"/>
+        <label>evab::Font8Sharp</label>
+        <link refid="classevab_1_1_font8_sharp"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

@@ -29,7 +29,7 @@ Below is a complete, minimal example showing how to construct a focusable form w
 ```cpp
 #include <evabBoxy.h>
 #include <evabScreenSSD1306.h>
-#include <evabFont8Narrow.h>
+#include <evabFont8Sharp.h>
 #include <evabLayoutBase.h>
 #include <evabKeyModifier.h>
 #include <evabKeyCatcher.h>
@@ -88,7 +88,7 @@ void onPhysicalButtonPressed(void* sender, CallbackInfo cbInfo) {
 void setup() {
   static SystemSettingsForm gMainForm;
   // Initialize display driver, font, and mount root layout layer
-  Boxy::Begin<ScreenSSD1306, Font8Narrow>(&gMainForm);
+  Boxy::Begin<ScreenSSD1306, Font8Sharp>(&gMainForm);
 }
 
 void loop() {

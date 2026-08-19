@@ -10,7 +10,7 @@ namespace evab
      *
      * Provides a thin 8x8 pixel font for display systems.
      */
-    class Font8Narrow : public IFont
+    class Font8Sharp : public IFont
     {
     public:
         /**

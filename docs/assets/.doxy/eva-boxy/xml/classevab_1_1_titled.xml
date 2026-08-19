@@ -29,11 +29,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="84" column="11" bodyfile="src/evabTitled.h" bodystart="84" bodyend="-1"/>
+        <location file="src/evabTitled.h" line="83" column="11" bodyfile="src/evabTitled.h" bodystart="83" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="classevab_1_1_titled_1a551f4f13496917291d325f370adce822" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classevab_1_1_titled_1a7c87b4f22114e529749939b68842c46e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename...</type>
@@ -43,7 +43,7 @@
         </templateparamlist>
         <type></type>
         <definition>evab::Titled&lt; T, TAlign, TText &gt;::Titled</definition>
-        <argsstring>(TText aName, Args &amp;&amp;... args)</argsstring>
+        <argsstring>(TText aName, Args &amp;&amp;...args)</argsstring>
         <name>Titled</name>
         <qualifiedname>evab::Titled::Titled</qualifiedname>
         <param>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="32" column="5" bodyfile="src/evabTitled.h" bodystart="32" bodyend="35"/>
+        <location file="src/evabTitled.h" line="31" column="5" bodyfile="src/evabTitled.h" bodystart="31" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_titled_1a59aa766872a7353407147310050496d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="42" column="10" bodyfile="src/evabTitled.h" bodystart="42" bodyend="46"/>
+        <location file="src/evabTitled.h" line="41" column="10" bodyfile="src/evabTitled.h" bodystart="41" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_titled_1abc0b70a6abe4a3452ee3db4a9a55cbba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>TText</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="53" column="11" bodyfile="src/evabTitled.h" bodystart="53" bodyend="56"/>
+        <location file="src/evabTitled.h" line="52" column="11" bodyfile="src/evabTitled.h" bodystart="52" bodyend="55"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTitled.h" line="67" column="10" bodyfile="src/evabTitled.h" bodystart="67" bodyend="81"/>
+        <location file="src/evabTitled.h" line="66" column="10" bodyfile="src/evabTitled.h" bodystart="66" bodyend="80"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -250,13 +250,13 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabTitled.h" line="22" column="3" bodyfile="src/evabTitled.h" bodystart="23" bodyend="85"/>
+    <location file="src/evabTitled.h" line="21" column="3" bodyfile="src/evabTitled.h" bodystart="22" bodyend="84"/>
     <listofallmembers>
       <member refid="classevab_1_1_titled_1a61cb444a976b5485db602cbb837894c8" prot="protected" virt="non-virtual"><scope>evab::Titled</scope><name>drawer</name></member>
       <member refid="classevab_1_1_titled_1abc0b70a6abe4a3452ee3db4a9a55cbba" prot="public" virt="non-virtual"><scope>evab::Titled</scope><name>GetLabel</name></member>
       <member refid="classevab_1_1_titled_1a6957ff636cc52c620fbe50c45c9492b5" prot="private" virt="non-virtual"><scope>evab::Titled</scope><name>mName</name></member>
       <member refid="classevab_1_1_titled_1a59aa766872a7353407147310050496d5" prot="public" virt="non-virtual"><scope>evab::Titled</scope><name>SetLabel</name></member>
-      <member refid="classevab_1_1_titled_1a551f4f13496917291d325f370adce822" prot="public" virt="non-virtual"><scope>evab::Titled</scope><name>Titled</name></member>
+      <member refid="classevab_1_1_titled_1a7c87b4f22114e529749939b68842c46e" prot="public" virt="non-virtual"><scope>evab::Titled</scope><name>Titled</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

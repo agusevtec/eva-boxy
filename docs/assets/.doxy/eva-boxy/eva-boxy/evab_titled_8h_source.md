@@ -8,7 +8,6 @@
 
 
 ```C++
-// evabTitled.h
 #pragma once
 
 #include <evabScreen.h>
@@ -22,9 +21,9 @@ namespace evab
   class Titled : public T
   {
   public:
-    template<typename... Args>
-    Titled(TText aName, Args&&... args) 
-      : T(args...), mName(aName)
+    template <typename... Args>
+    Titled(TText aName, Args &&...args)
+        : T(args...), mName(aName)
     {
     }
 
@@ -57,7 +56,7 @@ namespace evab
     }
 
   private:
-    TText mName;  
+    TText mName; 
   };
 
   // ============================================================
@@ -65,28 +64,26 @@ namespace evab
   // ============================================================
 
   template <class T>
-  using TitledLeft = Titled<T, LeftAlign, const char*>;
+  using TitledLeft = Titled<T, LeftAlign, const char *>;
 
   template <class T>
-  using TitledCenter = Titled<T, CenterAlign, const char*>;
+  using TitledCenter = Titled<T, CenterAlign, const char *>;
 
   template <class T>
-  using TitledRight = Titled<T, RightAlign, const char*>;
+  using TitledRight = Titled<T, RightAlign, const char *>;
 
   // ============================================================
   // Convenience aliases for Flash string labels
   // ============================================================
 
   template <class T>
-  using TitledLeftF = Titled<T, LeftAlign, const __FlashStringHelper*>;
+  using TitledLeftF = Titled<T, LeftAlign, const __FlashStringHelper *>;
 
   template <class T>
-  using TitledCenterF = Titled<T, CenterAlign, const __FlashStringHelper*>;
+  using TitledCenterF = Titled<T, CenterAlign, const __FlashStringHelper *>;
 
   template <class T>
-  using TitledRightF = Titled<T, RightAlign, const __FlashStringHelper*>;
-
-
+  using TitledRightF = Titled<T, RightAlign, const __FlashStringHelper *>;
 
 }
 ```

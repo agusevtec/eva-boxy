@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputSelectorPx.h" line="83" column="21" bodyfile="src/evabInputSelectorPx.h" bodystart="83" bodyend="-1"/>
+        <location file="src/evabInputSelectorPx.h" line="84" column="21" bodyfile="src/evabInputSelectorPx.h" bodystart="84" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputSelectorPx.h" line="23" column="9" bodyfile="src/evabInputSelectorPx.h" bodystart="23" bodyend="26"/>
+        <location file="src/evabInputSelectorPx.h" line="24" column="9" bodyfile="src/evabInputSelectorPx.h" bodystart="24" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_px_1a132fd0245269a2bb43cf1dd410576978" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputSelectorPx.h" line="33" column="14" bodyfile="src/evabInputSelectorPx.h" bodystart="33" bodyend="40"/>
+        <location file="src/evabInputSelectorPx.h" line="34" column="14" bodyfile="src/evabInputSelectorPx.h" bodystart="34" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_px_1a195d7645823d77025a1a9c68ed4d3b27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>signed char</type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputSelectorPx.h" line="47" column="21" bodyfile="src/evabInputSelectorPx.h" bodystart="47" bodyend="50"/>
+        <location file="src/evabInputSelectorPx.h" line="48" column="21" bodyfile="src/evabInputSelectorPx.h" bodystart="48" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_px_1a4410d90d11b77b8b34734c3769898018" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputSelectorPx.h" line="57" column="14" bodyfile="src/evabInputSelectorPx.h" bodystart="57" bodyend="60"/>
+        <location file="src/evabInputSelectorPx.h" line="58" column="14" bodyfile="src/evabInputSelectorPx.h" bodystart="58" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_input_selector_px_1a6084d56cf138fd8e9416e675e8a46777" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputSelectorPx.h" line="62" column="23" bodyfile="src/evabInputSelectorPx.h" bodystart="62" bodyend="65"/>
+        <location file="src/evabInputSelectorPx.h" line="63" column="23" bodyfile="src/evabInputSelectorPx.h" bodystart="63" bodyend="66"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabInputSelectorPx.h" line="76" column="14" bodyfile="src/evabInputSelectorPx.h" bodystart="76" bodyend="80"/>
+        <location file="src/evabInputSelectorPx.h" line="77" column="14" bodyfile="src/evabInputSelectorPx.h" bodystart="77" bodyend="81"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -256,7 +256,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabInputSelectorPx.h" line="15" column="5" bodyfile="src/evabInputSelectorPx.h" bodystart="16" bodyend="84"/>
+    <location file="src/evabInputSelectorPx.h" line="16" column="5" bodyfile="src/evabInputSelectorPx.h" bodystart="17" bodyend="85"/>
     <listofallmembers>
       <member refid="classevab_1_1_input_selector_px_1a6084d56cf138fd8e9416e675e8a46777" prot="public" virt="non-virtual"><scope>evab::InputSelectorPx</scope><name>Count</name></member>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::InputSelectorPx</scope><name>Draw</name></member>

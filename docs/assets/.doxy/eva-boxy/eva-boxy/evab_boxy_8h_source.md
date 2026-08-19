@@ -40,15 +40,15 @@ namespace evab
 
         static Boxy *Instance();
 
-        static void Message(const __FlashStringHelper*, const char *aText);
+        static void Message(const __FlashStringHelper *, const char *aText);
 
     private:
         void invoke(void *, eva::CallbackInfo) override;
 
     private:
-        Screen *mScreen;                          
-        ElementBase *mGround;                      
-        eva::DelayTimer mMessageTimer = {this};  
+        Screen *mScreen;                        
+        ElementBase *mGround;                   
+        eva::DelayTimer mMessageTimer = {this}; 
     };
 }
 ```

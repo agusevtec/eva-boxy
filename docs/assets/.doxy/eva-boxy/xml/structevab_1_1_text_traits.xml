@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextTraits.h" line="15" column="30" bodyfile="src/evabTextTraits.h" bodystart="15" bodyend="18"/>
+        <location file="src/evabTextTraits.h" line="14" column="30" bodyfile="src/evabTextTraits.h" bodystart="14" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="structevab_1_1_text_traits_1afed4d00938dd1d465bd43d4ddd6e703e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextTraits.h" line="20" column="21" bodyfile="src/evabTextTraits.h" bodystart="20" bodyend="23"/>
+        <location file="src/evabTextTraits.h" line="19" column="21" bodyfile="src/evabTextTraits.h" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="structevab_1_1_text_traits_1a0864d587d4a430309b9cdf96fdbb8283" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextTraits.h" line="25" column="30" bodyfile="src/evabTextTraits.h" bodystart="25" bodyend="28"/>
+        <location file="src/evabTextTraits.h" line="24" column="30" bodyfile="src/evabTextTraits.h" bodystart="24" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="structevab_1_1_text_traits_1a49483b3ad50bd07c9f3247bd950124a8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextTraits.h" line="30" column="21" bodyfile="src/evabTextTraits.h" bodystart="30" bodyend="33"/>
+        <location file="src/evabTextTraits.h" line="29" column="21" bodyfile="src/evabTextTraits.h" bodystart="29" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="structevab_1_1_text_traits_1aec7ad9242500ee84705ee05431b3d195" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextTraits.h" line="35" column="30" bodyfile="src/evabTextTraits.h" bodystart="35" bodyend="38"/>
+        <location file="src/evabTextTraits.h" line="34" column="30" bodyfile="src/evabTextTraits.h" bodystart="34" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="structevab_1_1_text_traits_1a31b15c0c57f81b9d36718a71abc49c37" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextTraits.h" line="40" column="21" bodyfile="src/evabTextTraits.h" bodystart="40" bodyend="43"/>
+        <location file="src/evabTextTraits.h" line="39" column="21" bodyfile="src/evabTextTraits.h" bodystart="39" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="structevab_1_1_text_traits_1a12c1a4d75e82d473614e888b2648410b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned char</type>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextTraits.h" line="45" column="30" bodyfile="src/evabTextTraits.h" bodystart="45" bodyend="48"/>
+        <location file="src/evabTextTraits.h" line="44" column="30" bodyfile="src/evabTextTraits.h" bodystart="44" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="structevab_1_1_text_traits_1aeefff45500474d9aa2561e682a854e1e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>char</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabTextTraits.h" line="50" column="21" bodyfile="src/evabTextTraits.h" bodystart="50" bodyend="53"/>
+        <location file="src/evabTextTraits.h" line="49" column="21" bodyfile="src/evabTextTraits.h" bodystart="49" bodyend="52"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -170,7 +170,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabTextTraits.h" line="12" column="5" bodyfile="src/evabTextTraits.h" bodystart="13" bodyend="54"/>
+    <location file="src/evabTextTraits.h" line="11" column="5" bodyfile="src/evabTextTraits.h" bodystart="12" bodyend="53"/>
     <listofallmembers>
       <member refid="structevab_1_1_text_traits_1ad7992955e98a49ce5217954402eb5898" prot="public" virt="non-virtual"><scope>evab::TextTraits</scope><name>Length</name></member>
       <member refid="structevab_1_1_text_traits_1a0864d587d4a430309b9cdf96fdbb8283" prot="public" virt="non-virtual"><scope>evab::TextTraits</scope><name>Length</name></member>

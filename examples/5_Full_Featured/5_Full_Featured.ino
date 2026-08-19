@@ -3,7 +3,7 @@
 #include <evaRepeatTimer.h>
 
 #include <evabBoxy.h>
-#include <evabFont8Narrow.h>
+#include <evabFont8Sharp.h>
 #include <evabScreenSSD1306.h>
 
 #include <evabGalleryRemixicon24.h>
@@ -201,7 +201,7 @@ class App
 public:
   App()
   {
-    Boxy::Begin<ScreenSSD1306, Font8Narrow>(&mUIGroundLayer);
+    Boxy::Begin<ScreenSSD1306, Font8Sharp>(&mUIGroundLayer);
     repeatTimer.start(2000);
     // Boxy::Message(F("Information"), "started !");
   }

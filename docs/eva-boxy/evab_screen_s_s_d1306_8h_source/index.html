@@ -1068,7 +1068,6 @@
 <span class="w">  </span><span class="p">{</span>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="n">ScreenSSD1306</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">IFont</span><span class="w"> </span><span class="o">*</span><span class="n">aFont</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">aWireClock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">800000L</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aHeightPx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">);</span>
-<span class="w">    </span><span class="o">~</span><span class="n">ScreenSSD1306</span><span class="p">();</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">SetContrast</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aContrast</span><span class="p">);</span>
 
@@ -1091,10 +1090,10 @@
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aData</span><span class="p">);</span>
 
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mAddress</span><span class="p">;</span><span class="w">  </span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mWidth</span><span class="p">;</span><span class="w">    </span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w">   </span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mPages</span><span class="p">;</span><span class="w">    </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mAddress</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mWidth</span><span class="p">;</span><span class="w">   </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mHeight</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">mPages</span><span class="p">;</span><span class="w">   </span>
 <span class="w">  </span><span class="p">};</span>
 
 <span class="p">}</span>

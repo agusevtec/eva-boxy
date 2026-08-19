@@ -53,7 +53,7 @@
 | class | [**FlipWindowAlgorithm**](classevab_1_1_flip_window_algorithm.md) <br>_Flip-page navigation algorithm._  |
 | class | [**Font8Bold**](classevab_1_1_font8_bold.md) <br>_8x8 bold font implementation_  |
 | class | [**Font8Compact**](classevab_1_1_font8_compact.md) <br>_8x8 compact font implementation_  |
-| class | [**Font8Narrow**](classevab_1_1_font8_narrow.md) <br>_8x8 thin font implementation_  |
+| class | [**Font8Sharp**](classevab_1_1_font8_sharp.md) <br>_8x8 thin font implementation_  |
 | class | [**Grid**](classevab_1_1_grid.md) <br>_Layout manager for rest-based UI arrangement._  |
 | struct | [**HorizontalProgressBarCharset**](structevab_1_1_horizontal_progress_bar_charset.md) <br>_Character set for horizontal progress bar._  |
 | class | [**HorizontalProgressBarTileset**](classevab_1_1_horizontal_progress_bar_tileset.md) <br>_Horizontal progress bar pictogram set._  |
@@ -363,7 +363,7 @@ using evab::ScrollListbox = ListBox<ScrollWindowAlgorithm>;
 ### typedef TextLabelCenter 
 
 ```C++
-using evab::TextLabelCenter = TextLabel<char*, CenterAlign>;
+using evab::TextLabelCenter = TextLabel<char *, CenterAlign>;
 ```
 
 
@@ -376,7 +376,7 @@ using evab::TextLabelCenter = TextLabel<char*, CenterAlign>;
 ### typedef TextLabelCenterConst 
 
 ```C++
-using evab::TextLabelCenterConst = TextLabel<const char*, CenterAlign>;
+using evab::TextLabelCenterConst = TextLabel<const char *, CenterAlign>;
 ```
 
 
@@ -389,7 +389,7 @@ using evab::TextLabelCenterConst = TextLabel<const char*, CenterAlign>;
 ### typedef TextLabelCenterF 
 
 ```C++
-using evab::TextLabelCenterF = TextLabel<const __FlashStringHelper*, CenterAlign>;
+using evab::TextLabelCenterF = TextLabel<const __FlashStringHelper *, CenterAlign>;
 ```
 
 
@@ -402,7 +402,7 @@ using evab::TextLabelCenterF = TextLabel<const __FlashStringHelper*, CenterAlign
 ### typedef TextLabelLeft 
 
 ```C++
-using evab::TextLabelLeft = TextLabel<char*, LeftAlign>;
+using evab::TextLabelLeft = TextLabel<char *, LeftAlign>;
 ```
 
 
@@ -415,7 +415,7 @@ using evab::TextLabelLeft = TextLabel<char*, LeftAlign>;
 ### typedef TextLabelLeftConst 
 
 ```C++
-using evab::TextLabelLeftConst = TextLabel<const char*, LeftAlign>;
+using evab::TextLabelLeftConst = TextLabel<const char *, LeftAlign>;
 ```
 
 
@@ -428,7 +428,7 @@ using evab::TextLabelLeftConst = TextLabel<const char*, LeftAlign>;
 ### typedef TextLabelLeftF 
 
 ```C++
-using evab::TextLabelLeftF = TextLabel<const __FlashStringHelper*, LeftAlign>;
+using evab::TextLabelLeftF = TextLabel<const __FlashStringHelper *, LeftAlign>;
 ```
 
 
@@ -441,7 +441,7 @@ using evab::TextLabelLeftF = TextLabel<const __FlashStringHelper*, LeftAlign>;
 ### typedef TextLabelRight 
 
 ```C++
-using evab::TextLabelRight = TextLabel<char*, RightAlign>;
+using evab::TextLabelRight = TextLabel<char *, RightAlign>;
 ```
 
 
@@ -454,7 +454,7 @@ using evab::TextLabelRight = TextLabel<char*, RightAlign>;
 ### typedef TextLabelRightConst 
 
 ```C++
-using evab::TextLabelRightConst = TextLabel<const char*, RightAlign>;
+using evab::TextLabelRightConst = TextLabel<const char *, RightAlign>;
 ```
 
 
@@ -467,7 +467,7 @@ using evab::TextLabelRightConst = TextLabel<const char*, RightAlign>;
 ### typedef TextLabelRightF 
 
 ```C++
-using evab::TextLabelRightF = TextLabel<const __FlashStringHelper*, RightAlign>;
+using evab::TextLabelRightF = TextLabel<const __FlashStringHelper *, RightAlign>;
 ```
 
 
@@ -480,7 +480,7 @@ using evab::TextLabelRightF = TextLabel<const __FlashStringHelper*, RightAlign>;
 ### typedef TitledCenter 
 
 ```C++
-using evab::TitledCenter = Titled<T, CenterAlign, const char*>;
+using evab::TitledCenter = Titled<T, CenterAlign, const char *>;
 ```
 
 
@@ -493,7 +493,7 @@ using evab::TitledCenter = Titled<T, CenterAlign, const char*>;
 ### typedef TitledCenterF 
 
 ```C++
-using evab::TitledCenterF = Titled<T, CenterAlign, const __FlashStringHelper*>;
+using evab::TitledCenterF = Titled<T, CenterAlign, const __FlashStringHelper *>;
 ```
 
 
@@ -506,7 +506,7 @@ using evab::TitledCenterF = Titled<T, CenterAlign, const __FlashStringHelper*>;
 ### typedef TitledLeft 
 
 ```C++
-using evab::TitledLeft = Titled<T, LeftAlign, const char*>;
+using evab::TitledLeft = Titled<T, LeftAlign, const char *>;
 ```
 
 
@@ -519,7 +519,7 @@ using evab::TitledLeft = Titled<T, LeftAlign, const char*>;
 ### typedef TitledLeftF 
 
 ```C++
-using evab::TitledLeftF = Titled<T, LeftAlign, const __FlashStringHelper*>;
+using evab::TitledLeftF = Titled<T, LeftAlign, const __FlashStringHelper *>;
 ```
 
 
@@ -532,7 +532,7 @@ using evab::TitledLeftF = Titled<T, LeftAlign, const __FlashStringHelper*>;
 ### typedef TitledRight 
 
 ```C++
-using evab::TitledRight = Titled<T, RightAlign, const char*>;
+using evab::TitledRight = Titled<T, RightAlign, const char *>;
 ```
 
 
@@ -545,7 +545,7 @@ using evab::TitledRight = Titled<T, RightAlign, const char*>;
 ### typedef TitledRightF 
 
 ```C++
-using evab::TitledRightF = Titled<T, RightAlign, const __FlashStringHelper*>;
+using evab::TitledRightF = Titled<T, RightAlign, const __FlashStringHelper *>;
 ```
 
 

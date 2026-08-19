@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabAlbums.h" line="66" column="40" bodyfile="src/evabAlbums.h" bodystart="66" bodyend="-1"/>
+        <location file="src/evabAlbums.h" line="67" column="40" bodyfile="src/evabAlbums.h" bodystart="67" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabAlbums.h" line="65" column="36"/>
+        <location file="src/evabAlbums.h" line="66" column="36"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -59,7 +59,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/evabAlbums.h" line="56" column="5" bodyfile="src/evabAlbums.h" bodystart="57" bodyend="67"/>
+    <location file="src/evabAlbums.h" line="57" column="5" bodyfile="src/evabAlbums.h" bodystart="58" bodyend="68"/>
     <listofallmembers>
       <member refid="classevab_1_1_album_battery_1a50fd5467a07d1f602adcbc53902a3303" prot="public" virt="non-virtual"><scope>evab::AlbumBattery</scope><name>Count</name></member>
       <member refid="classevab_1_1_album_battery_1aebe1a4bc1bf862c599f5e83fb831d790" prot="public" virt="non-virtual"><scope>evab::AlbumBattery</scope><name>GetTile</name></member>

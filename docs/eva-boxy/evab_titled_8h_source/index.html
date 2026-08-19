@@ -1055,8 +1055,7 @@
 <h1 id="file-evabtitledh">File evabTitled.h<a class="headerlink" href="#file-evabtitledh" title="Permanent link">&para;</a></h1>
 <p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_68267d1309a1af8e8297ef4c3efbcdba/"><strong>src</strong></a> <strong>&gt;</strong> <a href="../evab_titled_8h/"><strong>evabTitled.h</strong></a></p>
 <p><a href="../evab_titled_8h/">Go to the documentation of this file</a></p>
-<div class="codehilite"><pre><span></span><code><span class="c1">// evabTitled.h</span>
-<span class="cp">#pragma once</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">#pragma once</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabScreen.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabCoor.h&gt;</span>
@@ -1069,9 +1068,9 @@
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">Titled</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">T</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">  </span><span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
-<span class="w">    </span><span class="n">Titled</span><span class="p">(</span><span class="n">TText</span><span class="w"> </span><span class="n">aName</span><span class="p">,</span><span class="w"> </span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span>
-<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="n">args</span><span class="p">...),</span><span class="w"> </span><span class="n">mName</span><span class="p">(</span><span class="n">aName</span><span class="p">)</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">Args</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="n">Titled</span><span class="p">(</span><span class="n">TText</span><span class="w"> </span><span class="n">aName</span><span class="p">,</span><span class="w"> </span><span class="n">Args</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="p">...</span><span class="n">args</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="n">args</span><span class="p">...),</span><span class="w"> </span><span class="n">mName</span><span class="p">(</span><span class="n">aName</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -1104,7 +1103,7 @@
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">  </span><span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="n">TText</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w">  </span>
+<span class="w">    </span><span class="n">TText</span><span class="w"> </span><span class="n">mName</span><span class="p">;</span><span class="w"> </span>
 <span class="w">  </span><span class="p">};</span>
 
 <span class="w">  </span><span class="c1">// ============================================================</span>
@@ -1112,28 +1111,26 @@
 <span class="w">  </span><span class="c1">// ============================================================</span>
 
 <span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledLeft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">LeftAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledLeft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">LeftAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledCenter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">CenterAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledCenter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">CenterAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledRight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">RightAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*&gt;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledRight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">RightAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span>
 
 <span class="w">  </span><span class="c1">// ============================================================</span>
 <span class="w">  </span><span class="c1">// Convenience aliases for Flash string labels</span>
 <span class="w">  </span><span class="c1">// ============================================================</span>
 
 <span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledLeftF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">LeftAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="o">*&gt;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledLeftF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">LeftAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledCenterF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">CenterAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="o">*&gt;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledCenterF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">CenterAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledRightF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">RightAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="o">*&gt;</span><span class="p">;</span>
-
-
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">TitledRightF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Titled</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">RightAlign</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">__FlashStringHelper</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">;</span>
 
 <span class="p">}</span>
 </code></pre></div>

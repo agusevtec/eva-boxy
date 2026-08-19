@@ -8,7 +8,6 @@
 
 
 ```C++
-// evabBoxyRest.h
 #pragma once
 
 #include <evabElementBase.h>
@@ -16,7 +15,6 @@
 
 namespace evab
 {
-
     class Grid
     {
     public:
@@ -58,21 +56,18 @@ namespace evab
 
         void Picto(const unsigned char *aPictogram, unsigned char aIsFocused = 0);
 
-
         void Clear(unsigned char aIsFocused = 0);
 
         Coor GetPos() const { return mTopLeft; }
 
         Coor GetSize() const;
 
-
     private:
-        Coor mTopLeft;         
-        Coor mBottomRight;     
+        Coor mTopLeft;     
+        Coor mBottomRight; 
         unsigned char mIsFocused;
         const Screen *mScreen; 
     };
-
 }
 ```
 

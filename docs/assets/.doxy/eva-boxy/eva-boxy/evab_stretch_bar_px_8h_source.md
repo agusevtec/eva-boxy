@@ -31,7 +31,7 @@ namespace evab
         {
             return {aPos.X, aPos.Y + aSize.Y - index - 1};
         }
-        
+
         static Coor GetRestPosition(Coor aPos, Coor aSize)
         {
             return {aPos.X + 1, aPos.Y};

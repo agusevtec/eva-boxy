@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="22" column="19" bodyfile="src/evabLayoutBase.h" bodystart="22" bodyend="-1"/>
+        <location file="src/evabLayoutBase.h" line="20" column="19" bodyfile="src/evabLayoutBase.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classevab_1_1_layout_base_1_1_focusable_base_1a844172ce02c4aae17be4c42c07d0e2d3" prot="public" static="no" mutable="no">
         <type>FocusableBase *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="23" column="21" bodyfile="src/evabLayoutBase.h" bodystart="23" bodyend="-1"/>
+        <location file="src/evabLayoutBase.h" line="21" column="21" bodyfile="src/evabLayoutBase.h" bodystart="21" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabLayoutBase.h" line="24" column="7" bodyfile="src/evabLayoutBase.h" bodystart="24" bodyend="24"/>
+        <location file="src/evabLayoutBase.h" line="22" column="7" bodyfile="src/evabLayoutBase.h" bodystart="22" bodyend="22"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -71,7 +71,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabLayoutBase.h" line="19" column="5" bodyfile="src/evabLayoutBase.h" bodystart="20" bodyend="25"/>
+    <location file="src/evabLayoutBase.h" line="17" column="5" bodyfile="src/evabLayoutBase.h" bodystart="18" bodyend="23"/>
     <listofallmembers>
       <member refid="classevab_1_1_layout_base_1_1_focusable_base_1a42568b513b97e4735ef0664b9bd70dd4" prot="public" virt="non-virtual"><scope>evab::LayoutBase::FocusableBase</scope><name>element</name></member>
       <member refid="classevab_1_1_layout_base_1_1_focusable_base_1a44f708ca4f9ff47a8c5b58b07d04d688" prot="public" virt="non-virtual"><scope>evab::LayoutBase::FocusableBase</scope><name>FocusableBase</name></member>

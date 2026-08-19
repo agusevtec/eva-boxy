@@ -10,11 +10,8 @@ Because it eliminates structural constraints, you gain full control over child e
 
 | Feature | `CompositeBase` | `LayoutBase` |
 | :--- | :--- | :--- |
-| **Overhead** | Minimal / Lightweight | Higher (includes layout rest logic) |
 | **Freezer Propagation** | **Manual** (override `freezer()`) | Automatic across layout slots |
 | **Focus & Key Routing** | **Manual** (via `onResidualKey()`) | Automatic focus movement |
-| **Child Positioning** | Direct coordinate math | Managed via `Grid` |
-| **Best For** | Compact custom widgets, dialogs | Complex screens, multi-slot views |
 
 ---
 

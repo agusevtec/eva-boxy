@@ -8,14 +8,12 @@
 
 
 ```C++
-// evabCompositeBase.h
 #pragma once
 
 #include <evabElementBase.h>
 
 namespace evab
 {
-
   class LayoutBase : public ElementBase
   {
 

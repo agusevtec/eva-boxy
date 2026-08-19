@@ -4,7 +4,7 @@
     <compoundname>evabIFont.h</compoundname>
     <includedby refid="evab_font8_bold_8h" local="no">src/evabFont8Bold.h</includedby>
     <includedby refid="evab_font8_compact_8h" local="no">src/evabFont8Compact.h</includedby>
-    <includedby refid="evab_font8_narrow_8h" local="no">src/evabFont8Narrow.h</includedby>
+    <includedby refid="evab_font8_sharp_8h" local="no">src/evabFont8Sharp.h</includedby>
     <includedby refid="evab_screen_k_s0108_8h" local="no">src/evabScreenKS0108.h</includedby>
     <includedby refid="evab_screen_page8_base_8h" local="no">src/evabScreenPage8Base.h</includedby>
     <includedby refid="evab_screen_s_s_d1306_8h" local="no">src/evabScreenSSD1306.h</includedby>
@@ -19,8 +19,8 @@
         <link refid="evab_font8_compact_8h_source"/>
       </node>
       <node id="4">
-        <label>src/evabFont8Narrow.h</label>
-        <link refid="evab_font8_narrow_8h_source"/>
+        <label>src/evabFont8Sharp.h</label>
+        <link refid="evab_font8_sharp_8h_source"/>
       </node>
       <node id="1">
         <label>src/evabIFont.h</label>

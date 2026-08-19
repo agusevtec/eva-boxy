@@ -9,7 +9,7 @@
     <innerfile refid="evab_element_base_8h">evabElementBase.h</innerfile>
     <innerfile refid="evab_font8_bold_8h">evabFont8Bold.h</innerfile>
     <innerfile refid="evab_font8_compact_8h">evabFont8Compact.h</innerfile>
-    <innerfile refid="evab_font8_narrow_8h">evabFont8Narrow.h</innerfile>
+    <innerfile refid="evab_font8_sharp_8h">evabFont8Sharp.h</innerfile>
     <innerfile refid="evab_gallery_remixicon16_8h">evabGalleryRemixicon16.h</innerfile>
     <innerfile refid="evab_gallery_remixicon24_8h">evabGalleryRemixicon24.h</innerfile>
     <innerfile refid="evab_gallery_remixicon32_8h">evabGalleryRemixicon32.h</innerfile>

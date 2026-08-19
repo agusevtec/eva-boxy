@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabElementBase.h" line="73" column="20" bodyfile="src/evabElementBase.h" bodystart="73" bodyend="-1"/>
+        <location file="src/evabElementBase.h" line="74" column="20" bodyfile="src/evabElementBase.h" bodystart="74" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabElementBase.h" line="26" column="18"/>
+        <location file="src/evabElementBase.h" line="27" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabElementBase.h" line="36" column="10"/>
+        <location file="src/evabElementBase.h" line="37" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_element_base_1a0dac208ed4d9d29527ada9e018629e2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabElementBase.h" line="41" column="10"/>
+        <location file="src/evabElementBase.h" line="42" column="10"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabElementBase.h" line="49" column="10"/>
+        <location file="src/evabElementBase.h" line="50" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -284,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabElementBase.h" line="58" column="18"/>
+        <location file="src/evabElementBase.h" line="59" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_element_base_1ae5579e6a4f49d8be54cfe6f2e4a01124" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -316,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabElementBase.h" line="65" column="18" bodyfile="src/evabElementBase.h" bodystart="65" bodyend="65"/>
+        <location file="src/evabElementBase.h" line="66" column="18" bodyfile="src/evabElementBase.h" bodystart="66" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="classevab_1_1_element_base_1a59370fbaf8fc7fed128b0f4b4c4c0beb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabElementBase.h" line="70" column="10"/>
+        <location file="src/evabElementBase.h" line="71" column="10"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -550,7 +550,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="src/evabElementBase.h" line="15" column="3" bodyfile="src/evabElementBase.h" bodystart="16" bodyend="74"/>
+    <location file="src/evabElementBase.h" line="16" column="3" bodyfile="src/evabElementBase.h" bodystart="17" bodyend="75"/>
     <listofallmembers>
       <member refid="classevab_1_1_element_base_1a7fbbcbdc3e0d218b86e5bd5320913ca4" prot="public" virt="non-virtual"><scope>evab::ElementBase</scope><name>Draw</name></member>
       <member refid="classevab_1_1_element_base_1adec6858b2a974c864150353b6055c144" prot="protected" virt="pure-virtual"><scope>evab::ElementBase</scope><name>drawer</name></member>

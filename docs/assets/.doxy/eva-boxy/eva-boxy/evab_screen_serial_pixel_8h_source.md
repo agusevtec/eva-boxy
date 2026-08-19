@@ -21,13 +21,13 @@ namespace evab
         ScreenSerialPixel(IFont *aFont);
 
         void clear();
-        
+
         void PrintToSerial();
 
         Coor Size() override;
-        
+
         unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
-        
+
         void Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused);
 
     private:

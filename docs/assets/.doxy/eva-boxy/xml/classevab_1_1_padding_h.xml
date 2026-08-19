@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPadding.h" line="116" column="9" bodyfile="src/evabPadding.h" bodystart="116" bodyend="119"/>
+        <location file="src/evabPadding.h" line="114" column="9" bodyfile="src/evabPadding.h" bodystart="114" bodyend="117"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/evabPadding.h" line="133" column="14" bodyfile="src/evabPadding.h" bodystart="133" bodyend="143"/>
+        <location file="src/evabPadding.h" line="131" column="14" bodyfile="src/evabPadding.h" bodystart="131" bodyend="141"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -180,7 +180,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/evabPadding.h" line="106" column="5" bodyfile="src/evabPadding.h" bodystart="107" bodyend="144"/>
+    <location file="src/evabPadding.h" line="104" column="5" bodyfile="src/evabPadding.h" bodystart="105" bodyend="142"/>
     <listofallmembers>
       <member refid="classevab_1_1_padding_h_1a3ea417ef9fe290ace460baf7ca477f16" prot="protected" virt="non-virtual"><scope>evab::PaddingH</scope><name>drawer</name></member>
       <member refid="classevab_1_1_padding_h_1acc87360742879593079f8b83ab635496" prot="public" virt="non-virtual"><scope>evab::PaddingH</scope><name>PaddingH</name></member>

@@ -8,7 +8,6 @@
 
 
 ```C++
-// evabModifiers.h
 #pragma once
 
 #include "evabInputInt.h"
@@ -16,7 +15,6 @@
 
 namespace evab
 {
-
     template <typename TElement, unsigned char kStep = 0>
     class Percent : public TElement
     {
