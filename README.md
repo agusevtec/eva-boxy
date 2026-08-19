@@ -5,12 +5,12 @@
 ---
 
 ## Core Value Proposition
-* **Declarative desktop-style user code**
-* **Zero Dynamic Allocation**: 100% stack/static storage allocation. Safe for safety-critical and embedded real-time systems.
+* **Declarative desktop-style user code**: Write intuitive, structured UI layouts reminiscent of desktop frameworks without sacrificing the joy of custom creativity. It doesn't act as a rigid black box; instead, it offers a natural, deterministic scaffold that enforces good C++ design principles while preserving the creative freedom.
 * **Compile-Time Composition**: Feature wrappers (labels, decorators, key reactors, listboxes) are composed via C++ templates, eliminating runtime dispatch overhead.
 * **Guaranteed Bounding Box Principle**: Every visual component strictly owns, paints, and clears its allocated rectangular area (`Coor pos`, `Coor size`), completely preventing ghosting, visual artifacts, and trailing pixels without global screen flushes.
 * **Hardware & Display Agnostic**: Simple driver abstraction interface (`Screen` / `ScreenPage8Base`) supporting OLED, LCD, parallel, and serial-debug output.
 * **Gradual Optimization Path**: Seamlessly scale from a rapid, high-level declarative prototype down to imperative direct-to-screen drawing as hardware constraints require.
+* **Zero Dynamic Allocation**: 100% stack/static storage allocation. The battle-tested approach for safety-critical and embedded real-time systems.
 
 ---
 

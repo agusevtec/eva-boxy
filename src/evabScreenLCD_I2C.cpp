@@ -33,7 +33,7 @@ ScreenLCD_I2C::ScreenLCD_I2C(uint8_t aAddress, uint8_t aCols, uint8_t aRows, uin
 
 void ScreenLCD_I2C::sendNibble(uint8_t aData, bool aIsCommand)
 {
-  uint8_t value = aData | (aIsCommand ? 0x00 : 0x02);
+  uint8_t value = aData | (aIsCommand ? 0x00 : 0x01);
   value |= mBacklightMask;
 
   Wire.beginTransmission(mAddress);
