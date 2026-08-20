@@ -14,6 +14,15 @@
 
 ---
 
+## Built on EVA Ecosystem
+
+EVA Boxy is part of the [EVA ecosystem](https://agusevtec.github.io/eva-core-sk/) – an event-driven architecture for Arduino. This integration provides:
+
+- Non-blocking timing – callbacks and animated controls use EVA's `Tickable` infrastructure
+- Unified update cycle – Single `eva::tac()` call drives all time-based components
+- Zero-polling design – Components update themselves when needed
+
+
 ## Quick Start (Declarative Style)
 
 Below is a complete, minimal example showing how to construct a focusable form with an integer input field and a button bound to keypad events.

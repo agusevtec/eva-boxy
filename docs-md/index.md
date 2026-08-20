@@ -14,6 +14,14 @@ Its defining architectural genotype is compile-time decorator composition, allow
 
 At the same time, EVA Boxy remains comfortable for developers who prefer a traditional imperative style or require direct display control. The framework is optimized for text and symbol rendering on low-resolution displays, with optional pictogram support for icon-based interfaces.
 
+### Built on EVA Ecosystem
+
+EVA Boxy is part of the [EVA ecosystem](https://agusevtec.github.io/eva-core-sk/) – an event-driven architecture for Arduino. This integration provides:
+
+- Non-blocking timing – callbacks and animated controls use EVA's `Tickable` infrastructure
+- Unified update cycle – Single `eva::tac()` call drives all time-based components
+- Zero-polling design – Components update themselves when needed
+
 ### Architectural Styles
 
 EVA Boxy scales cleanly depending on your task, performance budget, and architectural preferences:
