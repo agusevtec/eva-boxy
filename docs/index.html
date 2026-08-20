@@ -299,6 +299,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#built-on-eva-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built on EVA Ecosystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#architectural-styles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1196,6 +1207,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#built-on-eva-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built on EVA Ecosystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#architectural-styles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1289,8 +1311,15 @@
 <p>The core priority of EVA Boxy is developer comfort when building user interfaces.</p>
 <p>Writing complex UI is enjoyable when the code is declarative, visual, and easily maintainable — just like in large desktop frameworks. However, a straightforward port of desktop patterns to microcontrollers is unviable: they rely on heavy class hierarchies, virtual tables, and dynamic memory allocation, which are fatal for resource-constrained embedded systems.</p>
 <p>EVA Boxy breaks these limitations by leveraging the EVA approach.</p>
-<p>Its defining architectural genotype is compile-time decorator composition, allowing you to include only the exact resources you need. Paired with deliberate functional boundaries — zero z-order, zero clipping buffers, and zero dynamic allocations — Boxy delivers pure, deterministic pixel execution.</p>
+<p>Its defining architectural genotype is compile-time decorator composition, allowing you to include only the exact resources you need. Paired with deliberate functional boundaries — tile positioning, zero Z-order, zero clipping buffers, and zero dynamic allocations — Boxy delivers pure, deterministic execution.</p>
 <p>At the same time, EVA Boxy remains comfortable for developers who prefer a traditional imperative style or require direct display control. The framework is optimized for text and symbol rendering on low-resolution displays, with optional pictogram support for icon-based interfaces.</p>
+<h3 id="built-on-eva-ecosystem">Built on EVA Ecosystem<a class="headerlink" href="#built-on-eva-ecosystem" title="Permanent link">&para;</a></h3>
+<p>EVA Boxy is part of the <a href="https://agusevtec.github.io/eva-core-sk/">EVA ecosystem</a> – an event-driven architecture for Arduino. This integration provides:</p>
+<ul>
+<li>Non-blocking timing – callbacks and animated controls use EVA's <code>Tickable</code> infrastructure</li>
+<li>Unified update cycle – Single <code>eva::tac()</code> call drives all time-based components</li>
+<li>Zero-polling design – Components update themselves when needed</li>
+</ul>
 <h3 id="architectural-styles">Architectural Styles<a class="headerlink" href="#architectural-styles" title="Permanent link">&para;</a></h3>
 <p>EVA Boxy scales cleanly depending on your task, performance budget, and architectural preferences:</p>
 <h4 id="1-primary-style-declarative-ui-flagship">1. Primary Style: Declarative UI (Flagship)<a class="headerlink" href="#1-primary-style-declarative-ui-flagship" title="Permanent link">&para;</a></h4>

@@ -10,7 +10,7 @@
 ```C++
 #pragma once
 
-#include <arduino.h>
+#include <Arduino.h>
 
 namespace evab
 {

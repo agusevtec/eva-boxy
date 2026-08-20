@@ -1383,9 +1383,15 @@
 
 <hr />
 <h2 id="two-chains-of-responsibility">Two Chains of Responsibility<a class="headerlink" href="#two-chains-of-responsibility" title="Permanent link">&para;</a></h2>
-<p>Through these layers flow <strong>two primary chains of responsibility</strong>:
-1. <strong>Draw – Freeze Chain:</strong> Manages visual rendering and visibility state simultaneously.
-2. <strong>Key Chain:</strong> Manages behavioral event processing and focus routing.</p>
+<p>Through these layers flow <strong>two primary chains of responsibility</strong>:</p>
+<ol>
+<li>
+<p><strong>Draw – Freeze Chain:</strong> Manages visual rendering and visibility state simultaneously.</p>
+</li>
+<li>
+<p><strong>Key Chain:</strong> Manages behavioral event processing and focus routing.</p>
+</li>
+</ol>
 <p>All library tools are designed to make implementing these chains as seamless as possible.</p>
 <h3 id="why-two-chains">Why Two Chains?<a class="headerlink" href="#why-two-chains" title="Permanent link">&para;</a></h3>
 <p>These two chains enable <strong>event-driven updates</strong> — the ability for elements to update themselves in response to external events (timers, sensor data, user input) without corrupting the display.</p>

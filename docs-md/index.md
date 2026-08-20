@@ -10,7 +10,7 @@ Writing complex UI is enjoyable when the code is declarative, visual, and easily
 
 EVA Boxy breaks these limitations by leveraging the EVA approach.
 
-Its defining architectural genotype is compile-time decorator composition, allowing you to include only the exact resources you need. Paired with deliberate functional boundaries — zero z-order, zero clipping buffers, and zero dynamic allocations — Boxy delivers pure, deterministic pixel execution.
+Its defining architectural genotype is compile-time decorator composition, allowing you to include only the exact resources you need. Paired with deliberate functional boundaries — tile positioning, zero Z-order, zero clipping buffers, and zero dynamic allocations — Boxy delivers pure, deterministic execution.
 
 At the same time, EVA Boxy remains comfortable for developers who prefer a traditional imperative style or require direct display control. The framework is optimized for text and symbol rendering on low-resolution displays, with optional pictogram support for icon-based interfaces.
 
