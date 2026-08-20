@@ -65,7 +65,9 @@ void loop() {
 ## Two Chains of Responsibility
 
 Through these layers flow **two primary chains of responsibility**:
+
 1. **Draw – Freeze Chain:** Manages visual rendering and visibility state simultaneously.
+
 2. **Key Chain:** Manages behavioral event processing and focus routing.
 
 All library tools are designed to make implementing these chains as seamless as possible.
