@@ -194,6 +194,9 @@ screen.printToSerial();
 **All graphical displays require a font to be specified during initialization.**
 
 Available fonts:
+
 - `Font8Bold` - Bold 8-pixel font
+
 - `Font8Compact` - Compact 8-pixel font (narrower characters)
+
 - `Font8Sharp` - Thin 8-pixel font
