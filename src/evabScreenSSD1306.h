@@ -77,11 +77,6 @@ namespace evab
     void clearTile(Coor aPosition, unsigned char aColor) override;
 
     /**
-     * @brief Initializes the display
-     */
-    void initDisplay();
-
-    /**
      * @brief Clears the entire display
      */
     void clearDisplay();

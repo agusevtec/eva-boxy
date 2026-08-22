@@ -12,28 +12,6 @@ ScreenSSD1306::ScreenSSD1306(const IFont *aFont, unsigned long aWireClock, uint8
 
   Wire.begin();
   Wire.setClock(aWireClock);
-  initDisplay();
-  clearDisplay();
-}
-
-void ScreenSSD1306::sendCommand(uint8_t aCmd)
-{
-  Wire.beginTransmission(mAddress);
-  Wire.write(0x00);
-  Wire.write(aCmd);
-  Wire.endTransmission();
-}
-
-void ScreenSSD1306::sendData(uint8_t aData)
-{
-  Wire.beginTransmission(mAddress);
-  Wire.write(0x40);
-  Wire.write(aData);
-  Wire.endTransmission();
-}
-
-void ScreenSSD1306::initDisplay()
-{
   sendCommand(0xAE);
   sendCommand(0xD5);
   sendCommand(0x80);
@@ -57,12 +35,7 @@ void ScreenSSD1306::initDisplay()
   sendCommand(0xA4);
   sendCommand(0xA6);
   sendCommand(0xAF);
-}
-
-void ScreenSSD1306::SetContrast(uint8_t aContrast)
-{
-  sendCommand(0x81);
-  sendCommand(aContrast);
+  clearDisplay();
 }
 
 void ScreenSSD1306::clearDisplay()
@@ -76,6 +49,29 @@ void ScreenSSD1306::clearDisplay()
     for (uint16_t i = 0; i < mWidth; i++)
       sendData(0x00);
   }
+}
+
+void ScreenSSD1306::sendCommand(uint8_t aCmd)
+{
+  Wire.beginTransmission(mAddress);
+  Wire.write(0x00);
+  Wire.write(aCmd);
+  Wire.endTransmission();
+}
+
+void ScreenSSD1306::sendData(uint8_t aData)
+{
+  Wire.beginTransmission(mAddress);
+  Wire.write(0x40);
+  Wire.write(aData);
+  Wire.endTransmission();
+}
+
+
+void ScreenSSD1306::SetContrast(uint8_t aContrast)
+{
+  sendCommand(0x81);
+  sendCommand(aContrast);
 }
 
 void ScreenSSD1306::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
