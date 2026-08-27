@@ -54,8 +54,8 @@
 | file | [**evabScreenLCD\_I2C.h**](evab_screen_l_c_d___i2_c_8h.md) <br> |
 | file | [**evabScreenPCD8544.h**](evab_screen_p_c_d8544_8h.md) <br> |
 | file | [**evabScreenPage8Base.h**](evab_screen_page8_base_8h.md) <br> |
+| file | [**evabScreenSH1106.h**](evab_screen_s_h1106_8h.md) <br> |
 | file | [**evabScreenSSD1306.h**](evab_screen_s_s_d1306_8h.md) <br> |
-| file | [**evabScreenSSH1106.h**](evab_screen_s_s_h1106_8h.md) <br> |
 | file | [**evabScreenSerialPixel.h**](evab_screen_serial_pixel_8h.md) <br> |
 | file | [**evabScreenSerialText.h**](evab_screen_serial_text_8h.md) <br> |
 | file | [**evabSerializers.h**](evab_serializers_8h.md) <br> |

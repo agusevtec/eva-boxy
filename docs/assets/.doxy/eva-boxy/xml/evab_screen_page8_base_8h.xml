@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="evab_screen_page8_base_8h" kind="file" language="C++">
     <compoundname>evabScreenPage8Base.h</compoundname>
     <includes refid="evab_coor_8h" local="no">evabCoor.h</includes>
@@ -7,8 +7,8 @@
     <includes refid="evab_i_font_8h" local="no">evabIFont.h</includes>
     <includedby refid="evab_screen_k_s0108_8h" local="no">src/evabScreenKS0108.h</includedby>
     <includedby refid="evab_screen_p_c_d8544_8h" local="no">src/evabScreenPCD8544.h</includedby>
+    <includedby refid="evab_screen_s_h1106_8h" local="no">src/evabScreenSH1106.h</includedby>
     <includedby refid="evab_screen_s_s_d1306_8h" local="no">src/evabScreenSSD1306.h</includedby>
-    <includedby refid="evab_screen_s_s_h1106_8h" local="no">src/evabScreenSSH1106.h</includedby>
     <includedby refid="evab_screen_serial_pixel_8h" local="no">src/evabScreenSerialPixel.h</includedby>
     <incdepgraph>
       <node id="4">
@@ -83,12 +83,12 @@
         </childnode>
       </node>
       <node id="4">
-        <label>src/evabScreenSSD1306.h</label>
-        <link refid="evab_screen_s_s_d1306_8h_source"/>
+        <label>src/evabScreenSH1106.h</label>
+        <link refid="evab_screen_s_h1106_8h_source"/>
       </node>
       <node id="5">
-        <label>src/evabScreenSSH1106.h</label>
-        <link refid="evab_screen_s_s_h1106_8h_source"/>
+        <label>src/evabScreenSSD1306.h</label>
+        <link refid="evab_screen_s_s_d1306_8h_source"/>
       </node>
       <node id="6">
         <label>src/evabScreenSerialPixel.h</label>

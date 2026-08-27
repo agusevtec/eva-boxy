@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="evab_coor_8h" kind="file" language="C++">
     <compoundname>evabCoor.h</compoundname>
     <includedby refid="evab_element_base_8h" local="no">src/evabElementBase.h</includedby>
     <includedby refid="evab_labeled_8h" local="no">src/evabLabeled.h</includedby>
     <includedby refid="evab_screen_8h" local="yes">src/evabScreen.h</includedby>
     <includedby refid="evab_screen_page8_base_8h" local="no">src/evabScreenPage8Base.h</includedby>
-    <includedby refid="evab_screen_s_s_h1106_8h" local="no">src/evabScreenSSH1106.h</includedby>
+    <includedby refid="evab_screen_s_h1106_8h" local="no">src/evabScreenSH1106.h</includedby>
     <includedby refid="evab_serializers_8h" local="no">src/evabSerializers.h</includedby>
     <includedby refid="evab_text_align_8h" local="no">src/evabTextAlign.h</includedby>
     <includedby refid="evab_titled_8h" local="no">src/evabTitled.h</includedby>
@@ -30,7 +30,7 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="25" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
@@ -172,12 +172,12 @@
         </childnode>
       </node>
       <node id="25">
-        <label>src/evabScreenSSD1306.h</label>
-        <link refid="evab_screen_s_s_d1306_8h_source"/>
+        <label>src/evabScreenSH1106.h</label>
+        <link refid="evab_screen_s_h1106_8h_source"/>
       </node>
       <node id="26">
-        <label>src/evabScreenSSH1106.h</label>
-        <link refid="evab_screen_s_s_h1106_8h_source"/>
+        <label>src/evabScreenSSD1306.h</label>
+        <link refid="evab_screen_s_s_d1306_8h_source"/>
       </node>
       <node id="27">
         <label>src/evabScreenSerialPixel.h</label>

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="classevab_1_1_screen_page8_base" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>evab::ScreenPage8Base</compoundname>
     <basecompoundref refid="classevab_1_1_screen" prot="public" virt="non-virtual">evab::Screen</basecompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_k_s0108" prot="public" virt="non-virtual">evab::ScreenKS0108</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_p_c_d8544" prot="public" virt="non-virtual">evab::ScreenPCD8544</derivedcompoundref>
+    <derivedcompoundref refid="classevab_1_1_screen_s_h1106" prot="public" virt="non-virtual">evab::ScreenSH1106</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_s_s_d1306" prot="public" virt="non-virtual">evab::ScreenSSD1306</derivedcompoundref>
-    <derivedcompoundref refid="classevab_1_1_screen_s_s_h1106" prot="public" virt="non-virtual">evab::ScreenSSH1106</derivedcompoundref>
     <derivedcompoundref refid="classevab_1_1_screen_serial_pixel" prot="public" virt="non-virtual">evab::ScreenSerialPixel</derivedcompoundref>
     <includes refid="evab_screen_page8_base_8h" local="no">evabScreenPage8Base.h</includes>
     <sectiondef kind="private-attrib">
@@ -187,8 +187,8 @@
         <reimplementedby refid="classevab_1_1_screen_k_s0108_1a56eff5d3a8a0453ce94d5932b25c9530">drawVerticalSlice</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_p_c_d8544_1ad43b370ec19537bf44781ff767fc6a1b">drawVerticalSlice</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_serial_pixel_1aed17499ccb2db3d0b341cca423b6b5de">drawVerticalSlice</reimplementedby>
+        <reimplementedby refid="classevab_1_1_screen_s_h1106_1abe4a83b33dc6f30f73e86cde0e9724a2">drawVerticalSlice</reimplementedby>
         <reimplementedby refid="classevab_1_1_screen_s_s_d1306_1a36c2af724890247f42804e6641a17e75">drawVerticalSlice</reimplementedby>
-        <reimplementedby refid="classevab_1_1_screen_s_s_h1106_1ae8bb14f808b9653162a341813e491c21">drawVerticalSlice</reimplementedby>
         <param>
           <type><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref></type>
           <declname>aPosition</declname>
@@ -310,14 +310,14 @@
         </childnode>
       </node>
       <node id="5">
-        <label>evab::ScreenSSD1306</label>
-        <link refid="classevab_1_1_screen_s_s_d1306"/>
+        <label>evab::ScreenSH1106</label>
+        <link refid="classevab_1_1_screen_s_h1106"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6">
-        <label>evab::ScreenSSH1106</label>
-        <link refid="classevab_1_1_screen_s_s_h1106"/>
+        <label>evab::ScreenSSD1306</label>
+        <link refid="classevab_1_1_screen_s_s_d1306"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>

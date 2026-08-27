@@ -60,8 +60,8 @@ Here are the classes, structs, unions and interfaces with brief descriptions:
     * **class** [**ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) _I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._     
     * **class** [**ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md) _PCD8544 screen driver (Nokia 5110 display)._     
     * **class** [**ScreenPage8Base**](classevab_1_1_screen_page8_base.md) _Base class for page-based 8-bit screens._     
+    * **class** [**ScreenSH1106**](classevab_1_1_screen_s_h1106.md) _SH1106 screen driver for OLED displays._     
     * **class** [**ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md) _SSD1306 screen driver for OLED displays._     
-    * **class** [**ScreenSSH1106**](classevab_1_1_screen_s_s_h1106.md) _SSH1106 screen driver for OLED displays._     
     * **class** [**ScreenSerialPixel**](classevab_1_1_screen_serial_pixel.md) _Debug screen that renders pixels to serial output._     
     * **class** [**ScreenSerialText**](classevab_1_1_screen_serial_text.md) _Debug screen that renders text to serial output._     
     * **class** [**ScrollWindowAlgorithm**](classevab_1_1_scroll_window_algorithm.md) _Scroll navigation algorithm._     

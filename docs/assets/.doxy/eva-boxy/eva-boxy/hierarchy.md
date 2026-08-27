@@ -65,8 +65,8 @@ This inheritance list is sorted roughly, but not completely, alphabetically:
     * **class** [**evab::ScreenPage8Base**](classevab_1_1_screen_page8_base.md) _Base class for page-based 8-bit screens._     
         * **class** [**evab::ScreenKS0108**](classevab_1_1_screen_k_s0108.md) _KS0108-based GLCD screen driver._ 
         * **class** [**evab::ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md) _PCD8544 screen driver (Nokia 5110 display)._ 
+        * **class** [**evab::ScreenSH1106**](classevab_1_1_screen_s_h1106.md) _SH1106 screen driver for OLED displays._ 
         * **class** [**evab::ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md) _SSD1306 screen driver for OLED displays._ 
-        * **class** [**evab::ScreenSSH1106**](classevab_1_1_screen_s_s_h1106.md) _SSH1106 screen driver for OLED displays._ 
         * **class** [**evab::ScreenSerialPixel**](classevab_1_1_screen_serial_pixel.md) _Debug screen that renders pixels to serial output._ 
     * **class** [**evab::ScreenSerialText**](classevab_1_1_screen_serial_text.md) _Debug screen that renders text to serial output._ 
 * **class** [**evab::VerticalProgressBarTileset**](classevab_1_1_vertical_progress_bar_tileset.md) _Vertical progress bar pictogram set._ 

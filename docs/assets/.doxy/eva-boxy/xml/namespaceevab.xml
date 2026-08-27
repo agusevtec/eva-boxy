@@ -1,32 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="namespaceevab" kind="namespace" language="C++">
     <compoundname>evab</compoundname>
-    <innerclass refid="classevab_1_1_album_battery" prot="public">evab::AlbumBattery</innerclass>
-    <innerclass refid="classevab_1_1_album_fan" prot="public">evab::AlbumFan</innerclass>
-    <innerclass refid="classevab_1_1_album_lamp" prot="public">evab::AlbumLamp</innerclass>
     <innerclass refid="classevab_1_1_album_on_off" prot="public">evab::AlbumOnOff</innerclass>
-    <innerclass refid="classevab_1_1_album_progress" prot="public">evab::AlbumProgress</innerclass>
     <innerclass refid="classevab_1_1_album_rainbowmeter" prot="public">evab::AlbumRainbowmeter</innerclass>
-    <innerclass refid="classevab_1_1_album_roundmeter" prot="public">evab::AlbumRoundmeter</innerclass>
-    <innerclass refid="classevab_1_1_album_signal" prot="public">evab::AlbumSignal</innerclass>
+    <innerclass refid="classevab_1_1_album_fan" prot="public">evab::AlbumFan</innerclass>
+    <innerclass refid="classevab_1_1_album_battery" prot="public">evab::AlbumBattery</innerclass>
+    <innerclass refid="classevab_1_1_album_lamp" prot="public">evab::AlbumLamp</innerclass>
+    <innerclass refid="classevab_1_1_album_progress" prot="public">evab::AlbumProgress</innerclass>
     <innerclass refid="classevab_1_1_album_speaker" prot="public">evab::AlbumSpeaker</innerclass>
+    <innerclass refid="classevab_1_1_album_signal" prot="public">evab::AlbumSignal</innerclass>
+    <innerclass refid="classevab_1_1_album_roundmeter" prot="public">evab::AlbumRoundmeter</innerclass>
     <innerclass refid="classevab_1_1_boxy" prot="public">evab::Boxy</innerclass>
-    <innerclass refid="structevab_1_1_center_align" prot="public">evab::CenterAlign</innerclass>
     <innerclass refid="classevab_1_1_composite_base" prot="public">evab::CompositeBase</innerclass>
     <innerclass refid="structevab_1_1_coor" prot="public">evab::Coor</innerclass>
     <innerclass refid="classevab_1_1_element_base" prot="public">evab::ElementBase</innerclass>
-    <innerclass refid="classevab_1_1_flip_window_algorithm" prot="public">evab::FlipWindowAlgorithm</innerclass>
     <innerclass refid="classevab_1_1_font8_bold" prot="public">evab::Font8Bold</innerclass>
     <innerclass refid="classevab_1_1_font8_compact" prot="public">evab::Font8Compact</innerclass>
     <innerclass refid="classevab_1_1_font8_sharp" prot="public">evab::Font8Sharp</innerclass>
     <innerclass refid="classevab_1_1_grid" prot="public">evab::Grid</innerclass>
-    <innerclass refid="structevab_1_1_horizontal_progress_bar_charset" prot="public">evab::HorizontalProgressBarCharset</innerclass>
-    <innerclass refid="classevab_1_1_horizontal_progress_bar_tileset" prot="public">evab::HorizontalProgressBarTileset</innerclass>
-    <innerclass refid="structevab_1_1_horizontal_scroll_bar_charset" prot="public">evab::HorizontalScrollBarCharset</innerclass>
-    <innerclass refid="classevab_1_1_horizontal_scroll_bar_tileset" prot="public">evab::HorizontalScrollBarTileset</innerclass>
-    <innerclass refid="structevab_1_1_horizontal_text_policy" prot="public">evab::HorizontalTextPolicy</innerclass>
-    <innerclass refid="structevab_1_1_horizontal_tileset_policy" prot="public">evab::HorizontalTilesetPolicy</innerclass>
     <innerclass refid="classevab_1_1_i_font" prot="public">evab::IFont</innerclass>
     <innerclass refid="classevab_1_1_input_animation_px" prot="public">evab::InputAnimationPx</innerclass>
     <innerclass refid="classevab_1_1_input_button" prot="public">evab::InputButton</innerclass>
@@ -42,12 +34,10 @@
     <innerclass refid="classevab_1_1_key_reactor" prot="public">evab::KeyReactor</innerclass>
     <innerclass refid="classevab_1_1_labeled" prot="public">evab::Labeled</innerclass>
     <innerclass refid="classevab_1_1_layout_base" prot="public">evab::LayoutBase</innerclass>
-    <innerclass refid="structevab_1_1_left_align" prot="public">evab::LeftAlign</innerclass>
     <innerclass refid="classevab_1_1_list_box" prot="public">evab::ListBox</innerclass>
-    <innerclass refid="classevab_1_1_padding_h" prot="public">evab::PaddingH</innerclass>
     <innerclass refid="classevab_1_1_padding_v" prot="public">evab::PaddingV</innerclass>
+    <innerclass refid="classevab_1_1_padding_h" prot="public">evab::PaddingH</innerclass>
     <innerclass refid="classevab_1_1_percent" prot="public">evab::Percent</innerclass>
-    <innerclass refid="structevab_1_1_right_align" prot="public">evab::RightAlign</innerclass>
     <innerclass refid="classevab_1_1_screen" prot="public">evab::Screen</innerclass>
     <innerclass refid="classevab_1_1_screen_k_s0108" prot="public">evab::ScreenKS0108</innerclass>
     <innerclass refid="classevab_1_1_screen_l_c_d___i2_c" prot="public">evab::ScreenLCD_I2C</innerclass>
@@ -55,21 +45,31 @@
     <innerclass refid="classevab_1_1_screen_p_c_d8544" prot="public">evab::ScreenPCD8544</innerclass>
     <innerclass refid="classevab_1_1_screen_serial_pixel" prot="public">evab::ScreenSerialPixel</innerclass>
     <innerclass refid="classevab_1_1_screen_serial_text" prot="public">evab::ScreenSerialText</innerclass>
+    <innerclass refid="classevab_1_1_screen_s_h1106" prot="public">evab::ScreenSH1106</innerclass>
     <innerclass refid="classevab_1_1_screen_s_s_d1306" prot="public">evab::ScreenSSD1306</innerclass>
-    <innerclass refid="classevab_1_1_screen_s_s_h1106" prot="public">evab::ScreenSSH1106</innerclass>
-    <innerclass refid="classevab_1_1_scroll_window_algorithm" prot="public">evab::ScrollWindowAlgorithm</innerclass>
+    <innerclass refid="structevab_1_1_vertical_text_policy" prot="public">evab::VerticalTextPolicy</innerclass>
+    <innerclass refid="structevab_1_1_horizontal_text_policy" prot="public">evab::HorizontalTextPolicy</innerclass>
+    <innerclass refid="structevab_1_1_vertical_progress_bar_charset" prot="public">evab::VerticalProgressBarCharset</innerclass>
+    <innerclass refid="structevab_1_1_horizontal_progress_bar_charset" prot="public">evab::HorizontalProgressBarCharset</innerclass>
+    <innerclass refid="structevab_1_1_vertical_scroll_bar_charset" prot="public">evab::VerticalScrollBarCharset</innerclass>
+    <innerclass refid="structevab_1_1_horizontal_scroll_bar_charset" prot="public">evab::HorizontalScrollBarCharset</innerclass>
     <innerclass refid="classevab_1_1_stretch_bar" prot="public">evab::StretchBar</innerclass>
+    <innerclass refid="structevab_1_1_vertical_tileset_policy" prot="public">evab::VerticalTilesetPolicy</innerclass>
+    <innerclass refid="structevab_1_1_horizontal_tileset_policy" prot="public">evab::HorizontalTilesetPolicy</innerclass>
     <innerclass refid="classevab_1_1_stretch_bar_px" prot="public">evab::StretchBarPx</innerclass>
+    <innerclass refid="classevab_1_1_vertical_progress_bar_tileset" prot="public">evab::VerticalProgressBarTileset</innerclass>
+    <innerclass refid="classevab_1_1_horizontal_progress_bar_tileset" prot="public">evab::HorizontalProgressBarTileset</innerclass>
+    <innerclass refid="classevab_1_1_vertical_scroll_bar_tileset" prot="public">evab::VerticalScrollBarTileset</innerclass>
+    <innerclass refid="classevab_1_1_horizontal_scroll_bar_tileset" prot="public">evab::HorizontalScrollBarTileset</innerclass>
+    <innerclass refid="structevab_1_1_left_align" prot="public">evab::LeftAlign</innerclass>
+    <innerclass refid="structevab_1_1_center_align" prot="public">evab::CenterAlign</innerclass>
+    <innerclass refid="structevab_1_1_right_align" prot="public">evab::RightAlign</innerclass>
     <innerclass refid="classevab_1_1_text_label" prot="public">evab::TextLabel</innerclass>
     <innerclass refid="structevab_1_1_text_traits" prot="public">evab::TextTraits</innerclass>
     <innerclass refid="classevab_1_1_titled" prot="public">evab::Titled</innerclass>
-    <innerclass refid="structevab_1_1_vertical_progress_bar_charset" prot="public">evab::VerticalProgressBarCharset</innerclass>
-    <innerclass refid="classevab_1_1_vertical_progress_bar_tileset" prot="public">evab::VerticalProgressBarTileset</innerclass>
-    <innerclass refid="structevab_1_1_vertical_scroll_bar_charset" prot="public">evab::VerticalScrollBarCharset</innerclass>
-    <innerclass refid="classevab_1_1_vertical_scroll_bar_tileset" prot="public">evab::VerticalScrollBarTileset</innerclass>
-    <innerclass refid="structevab_1_1_vertical_text_policy" prot="public">evab::VerticalTextPolicy</innerclass>
-    <innerclass refid="structevab_1_1_vertical_tileset_policy" prot="public">evab::VerticalTilesetPolicy</innerclass>
     <innerclass refid="classevab_1_1_window_algorithm_base" prot="public">evab::WindowAlgorithmBase</innerclass>
+    <innerclass refid="classevab_1_1_flip_window_algorithm" prot="public">evab::FlipWindowAlgorithm</innerclass>
+    <innerclass refid="classevab_1_1_scroll_window_algorithm" prot="public">evab::ScrollWindowAlgorithm</innerclass>
     <innernamespace refid="namespaceevab_1_1_gallery_remixicon16">evab::GalleryRemixicon16</innernamespace>
     <innernamespace refid="namespaceevab_1_1_gallery_remixicon24">evab::GalleryRemixicon24</innernamespace>
     <innernamespace refid="namespaceevab_1_1_gallery_remixicon32">evab::GalleryRemixicon32</innernamespace>

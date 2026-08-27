@@ -10,7 +10,7 @@ Pixel-based displays that can render fonts and pictograms:
 | Driver | Class | Resolution | Interface |
 |--------|-------|------------|-----------|
 | SSD1306 | `ScreenSSD1306` | 16x8 tiles | I2C |
-| SSH1106 | `ScreenSSH1106` | 16x8 tiles | I2C |
+| SH1106 | `ScreenSH1106` | 16x8 tiles | I2C |
 | PCD8544 | `ScreenPCD8544` | 12x6 tiles | SPI |
 | KS0108 | `ScreenKS0108` | 16x8 tiles | Parallel |
 
@@ -97,16 +97,16 @@ evab::ScreenKS0108 screen(
 );
 ```
 
-### ScreenSSH1106 - Alternative OLED
+### ScreenSH1106 - Alternative OLED
 
-I2C driver for SSH1106-based OLED displays.
+I2C driver for SH1106-based OLED displays.
 
 ```cpp
-#include <evabScreenSSH1106.h>
+#include <evabScreenSH1106.h>
 #include <evabFont8Compact.h>
 
 evab::Font8Compact font;
-evab::ScreenSSH1106 screen(&font, 800000L);
+evab::ScreenSH1106 screen(&font, 800000L);
 ```
 
 ## Text Display Drivers

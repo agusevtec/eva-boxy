@@ -87,8 +87,8 @@
 | class | [**ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md) <br>_I2C LCD screen driver (HD44780 with PCF8574 I2C expander)._  |
 | class | [**ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md) <br>_PCD8544 screen driver (Nokia 5110 display)._  |
 | class | [**ScreenPage8Base**](classevab_1_1_screen_page8_base.md) <br>_Base class for page-based 8-bit screens._  |
+| class | [**ScreenSH1106**](classevab_1_1_screen_s_h1106.md) <br>_SH1106 screen driver for OLED displays._  |
 | class | [**ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md) <br>_SSD1306 screen driver for OLED displays._  |
-| class | [**ScreenSSH1106**](classevab_1_1_screen_s_s_h1106.md) <br>_SSH1106 screen driver for OLED displays._  |
 | class | [**ScreenSerialPixel**](classevab_1_1_screen_serial_pixel.md) <br>_Debug screen that renders pixels to serial output._  |
 | class | [**ScreenSerialText**](classevab_1_1_screen_serial_text.md) <br>_Debug screen that renders text to serial output._  |
 | class | [**ScrollWindowAlgorithm**](classevab_1_1_scroll_window_algorithm.md) <br>_Scroll navigation algorithm._  |

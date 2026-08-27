@@ -1,8 +1,8 @@
-#include <evabScreenSSH1106.h>
+#include <evabScreenSH1106.h>
 
 using namespace evab;
 
-ScreenSSH1106::ScreenSSH1106(const IFont *font, unsigned long aWireClock)
+ScreenSH1106::ScreenSH1106(const IFont *font, unsigned long aWireClock)
     : ScreenPage8Base(font), mAddress(0x3C)
 {
     Wire.begin();
@@ -34,7 +34,7 @@ ScreenSSH1106::ScreenSSH1106(const IFont *font, unsigned long aWireClock)
     clearDisplay();
 }
 
-void ScreenSSH1106::clearDisplay()
+void ScreenSH1106::clearDisplay()
 {
     for (unsigned char page = 0; page < 8; page++)
     {
@@ -52,7 +52,7 @@ void ScreenSSH1106::clearDisplay()
     }
 }
 
-void ScreenSSH1106::sendCommand(unsigned char cmd)
+void ScreenSH1106::sendCommand(unsigned char cmd)
 {
     Wire.beginTransmission(mAddress);
     Wire.write(0x00); // command mode
@@ -60,18 +60,18 @@ void ScreenSSH1106::sendCommand(unsigned char cmd)
     Wire.endTransmission();
 }
 
-void ScreenSSH1106::setPage(unsigned char page)
+void ScreenSH1106::setPage(unsigned char page)
 {
     sendCommand(0xB0 | (page & 0x07)); // page 0-7
 }
 
-void ScreenSSH1106::setColumn(unsigned char col)
+void ScreenSH1106::setColumn(unsigned char col)
 {
     sendCommand(0x00 | (col & 0x0F));        // lower 4 bits
     sendCommand(0x10 | ((col >> 4) & 0x07)); // higher 3 bits
 }
 
-void ScreenSSH1106::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
+void ScreenSH1106::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, unsigned char aSlice)
 {
     setPage(aPosition.Y);
     setColumn(aPosition.X * 8 + aCutColumn + 2);
@@ -82,7 +82,7 @@ void ScreenSSH1106::drawVerticalSlice(Coor aPosition, unsigned char aCutColumn, 
     Wire.endTransmission();
 }
 
-void ScreenSSH1106::clearTile(Coor aPosition, unsigned char aColor)
+void ScreenSH1106::clearTile(Coor aPosition, unsigned char aColor)
 {
     setPage(aPosition.Y);
     setColumn(aPosition.X * 8 + 2);
@@ -94,19 +94,19 @@ void ScreenSSH1106::clearTile(Coor aPosition, unsigned char aColor)
     Wire.endTransmission();
 }
 
-Coor ScreenSSH1106::Size()
+Coor ScreenSH1106::Size()
 {
     return {16, 8};
 }
 
 #include <evabSerializers.h>
 
-unsigned short ScreenSSH1106::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
+unsigned short ScreenSH1106::Serialize(const Coor &aPos, const Coor &aSize, bool isFocused)
 {
     return serialize_16x8(aPos, aSize, isFocused);
 }
 
-void ScreenSSH1106::Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused)
+void ScreenSH1106::Deserialize(unsigned short aSerialized, Coor &aPos, Coor &aSize, bool &isFocused)
 {
     deserialize_16x8(aSerialized, aPos, aSize, isFocused);
 }

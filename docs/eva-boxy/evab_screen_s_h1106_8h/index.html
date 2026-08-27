@@ -17,11 +17,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
-        <title>Class evab::ScreenSSH1106 - EVA Boxy</title>
+        <title>File evabScreenSH1106.h - EVA Boxy</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#class-evabscreenssh1106" class="md-skip">
+        <a href="#file-evabscreensh1106h" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Class evab::ScreenSSH1106
+              File evabScreenSH1106.h
             
           </span>
         </div>
@@ -1041,10 +1041,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#public-functions" class="md-nav__link">
+  <a href="#namespaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Public Functions
+        Namespaces
       
     </span>
   </a>
@@ -1052,96 +1052,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#public-functions-inherited-from-evabscreenpage8base" class="md-nav__link">
+  <a href="#classes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Public Functions inherited from evab::ScreenPage8Base
+        Classes
       
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#public-functions-inherited-from-evabscreen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Public Functions inherited from evab::Screen
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-description" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Detailed Description
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#public-functions-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Public Functions Documentation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Functions Documentation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#function-deserialize" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function Deserialize
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-screenssh1106" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function ScreenSSH1106
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-serialize" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function Serialize
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-size" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        function Size
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1165,14 +1082,15 @@
   
 
 
-<h1 id="class-evabscreenssh1106">Class evab::ScreenSSH1106<a class="headerlink" href="#class-evabscreenssh1106" title="Permanent link">&para;</a></h1>
-<p><a href="../annotated/"><strong>ClassList</strong></a> <strong>&gt;</strong> <a href="../namespaceevab/"><strong>evab</strong></a> <strong>&gt;</strong> <a href="./"><strong>ScreenSSH1106</strong></a></p>
-<p><em>SSH1106 screen driver for OLED displays.</em> <a href="#detailed-description">More...</a></p>
+<h1 id="file-evabscreensh1106h">File evabScreenSH1106.h<a class="headerlink" href="#file-evabscreensh1106h" title="Permanent link">&para;</a></h1>
+<p><a href="../files/"><strong>FileList</strong></a> <strong>&gt;</strong> <a href="../dir_68267d1309a1af8e8297ef4c3efbcdba/"><strong>src</strong></a> <strong>&gt;</strong> <a href="./"><strong>evabScreenSH1106.h</strong></a></p>
+<p><a href="../evab_screen_s_h1106_8h_source/">Go to the source code of this file</a></p>
 <ul>
-<li><code>#include &lt;evabScreenSSH1106.h&gt;</code></li>
+<li><code>#include &lt;evabCoor.h&gt;</code></li>
+<li><code>#include &lt;evabScreenPage8Base.h&gt;</code></li>
+<li><code>#include &lt;Wire.h&gt;</code></li>
 </ul>
-<p>Inherits the following classes: <a href="../classevab_1_1_screen_page8_base/">evab::ScreenPage8Base</a></p>
-<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<h2 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1182,25 +1100,12 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="#function-deserialize"><strong>Deserialize</strong></a> (unsigned short aSerialized, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aPos, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aSize, bool &amp; isFocused) <br><em>Deserializes element state for 16x8 screen.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="#function-screenssh1106"><strong>ScreenSSH1106</strong></a> (const <a href="../classevab_1_1_i_font/"><strong>IFont</strong></a> * font, unsigned long aWireClock=800000L) <br><em>Constructor for SSH1106 screen driver.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual unsigned short</td>
-<td style="text-align: left;"><a href="#function-serialize"><strong>Serialize</strong></a> (const <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aPos, const <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aSize, bool isFocused) <br><em>Serializes element state for 16x8 screen.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual <a href="../structevab_1_1_coor/"><strong>Coor</strong></a></td>
-<td style="text-align: left;"><a href="#function-size"><strong>Size</strong></a> () override<br><em>Gets the screen size in tiles.</em></td>
+<td style="text-align: right;">namespace</td>
+<td style="text-align: left;"><a href="../namespaceevab/"><strong>evab</strong></a> <br></td>
 </tr>
 </tbody>
 </table>
-<h2 id="public-functions-inherited-from-evabscreenpage8base">Public Functions inherited from evab::ScreenPage8Base<a class="headerlink" href="#public-functions-inherited-from-evabscreenpage8base" title="Permanent link">&para;</a></h2>
-<p>See <a href="../classevab_1_1_screen_page8_base/">evab::ScreenPage8Base</a></p>
+<h2 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1210,141 +1115,13 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_page8_base/#function-drawsymbol"><strong>DrawSymbol</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, char aCharcode, unsigned char aColor) <br><em>Draws a symbol at the specified position with scaling.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_page8_base/#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * aPictogram, unsigned char aColor) <br><em>Draws a pictogram at the specified position.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;"></td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen_page8_base/#function-screenpage8base"><strong>ScreenPage8Base</strong></a> (const <a href="../classevab_1_1_i_font/"><strong>IFont</strong></a> * aFont) <br><em>Constructor for page-based 8-bit screen base.</em></td>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classevab_1_1_screen_s_h1106/"><strong>ScreenSH1106</strong></a> <br><em>SH1106 screen driver for OLED displays.</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="public-functions-inherited-from-evabscreen">Public Functions inherited from evab::Screen<a class="headerlink" href="#public-functions-inherited-from-evabscreen" title="Permanent link">&para;</a></h2>
-<p>See <a href="../classevab_1_1_screen/">evab::Screen</a></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: right;">Type</th>
-<th style="text-align: left;">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-clear"><strong>Clear</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, unsigned char aColor=0) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-deserialize"><strong>Deserialize</strong></a> (unsigned short aSerialized, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aSize, bool &amp; isFocused) = 0<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-drawsymbol"><strong>DrawSymbol</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, char aSymbol, unsigned char aColor=0) = 0<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-picto"><strong>Picto</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, const unsigned char * aPictogram, unsigned char aColor=0) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual unsigned short</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-serialize"><strong>Serialize</strong></a> (const <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aPosition, const <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> &amp; aSize, bool isFocused) = 0<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">virtual <a href="../structevab_1_1_coor/"><strong>Coor</strong></a></td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-size"><strong>Size</strong></a> () = 0<br></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-text"><strong>Text</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, TText aText, unsigned char aColor=0) <br><em>Draws text with specified alignment strategy.</em></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-textcenter"><strong>TextCenter</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, T aText, unsigned char aColor=0) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-textleft"><strong>TextLeft</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, T aText, unsigned char aColor=0) <br></td>
-</tr>
-<tr>
-<td style="text-align: right;">void</td>
-<td style="text-align: left;"><a href="../classevab_1_1_screen/#function-textright"><strong>TextRight</strong></a> (<a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aPosition, <a href="../structevab_1_1_coor/"><strong>Coor</strong></a> aSize, T aText, unsigned char aColor=0) <br></td>
-</tr>
-</tbody>
-</table>
-<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">&para;</a></h2>
-<p>Supports 128x64 OLED displays with I2C interface. Similar to SSD1306 but with different initialization sequence. </p>
-<h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">&para;</a></h2>
-<h3 id="function-deserialize">function Deserialize<a class="headerlink" href="#function-deserialize" title="Permanent link">&para;</a></h3>
-<p><em>Deserializes element state for 16x8 screen.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenSSH1106</span><span class="o">::</span><span class="n">Deserialize</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">aSerialized</span><span class="p">,</span>
-<span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
-<span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">isFocused</span>
-<span class="p">)</span><span class="w"> </span>
-</code></pre></div>
-
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>aSerialized</code> Serialized state </li>
-<li><code>aPos</code> Position of the element (output) </li>
-<li><code>aSize</code> Size of the element (output) </li>
-<li><code>isFocused</code> Focus state (output) </li>
-</ul>
-<p>Implements <a href="../classevab_1_1_screen/#function-deserialize"><em>evab::Screen::Deserialize</em></a></p>
-<hr>
-
-<h3 id="function-screenssh1106">function ScreenSSH1106<a class="headerlink" href="#function-screenssh1106" title="Permanent link">&para;</a></h3>
-<p><em>Constructor for SSH1106 screen driver.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="n">evab</span><span class="o">::</span><span class="n">ScreenSSH1106</span><span class="o">::</span><span class="n">ScreenSSH1106</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">IFont</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">font</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">aWireClock</span><span class="o">=</span><span class="mf">800000L</span>
-<span class="p">)</span><span class="w"> </span>
-</code></pre></div>
-
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>font</code> Font to use </li>
-<li><code>aWireClock</code> I2C clock speed (default 800000) </li>
-</ul>
-<hr>
-
-<h3 id="function-serialize">function Serialize<a class="headerlink" href="#function-serialize" title="Permanent link">&para;</a></h3>
-<p><em>Serializes element state for 16x8 screen.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">short</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenSSH1106</span><span class="o">::</span><span class="n">Serialize</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aPos</span><span class="p">,</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">aSize</span><span class="p">,</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isFocused</span>
-<span class="p">)</span><span class="w"> </span>
-</code></pre></div>
-
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>aPos</code> Position of the element </li>
-<li><code>aSize</code> Size of the element </li>
-<li><code>isFocused</code> Focus state </li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>unsigned short Serialized state </p>
-<p>Implements <a href="../classevab_1_1_screen/#function-serialize"><em>evab::Screen::Serialize</em></a></p>
-<hr>
-
-<h3 id="function-size">function Size<a class="headerlink" href="#function-size" title="Permanent link">&para;</a></h3>
-<p><em>Gets the screen size in tiles.</em> </p>
-<div class="codehilite"><pre><span></span><code><span class="k">virtual</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">evab</span><span class="o">::</span><span class="n">ScreenSSH1106</span><span class="o">::</span><span class="n">Size</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="k">override</span>
-</code></pre></div>
-
-<p><strong>Returns:</strong></p>
-<p><a href="../structevab_1_1_coor/"><strong>Coor</strong></a> <a href="../classevab_1_1_screen/"><strong>Screen</strong></a> dimensions (16x8 tiles) </p>
-<p>Implements <a href="../classevab_1_1_screen/#function-size"><em>evab::Screen::Size</em></a></p>
-<hr>
-
 <hr />
-<p>The documentation for this class was generated from the following file <code>src/evabScreenSSH1106.h</code></p>
+<p>The documentation for this class was generated from the following file <code>src/evabScreenSH1106.h</code></p>
 
 
 

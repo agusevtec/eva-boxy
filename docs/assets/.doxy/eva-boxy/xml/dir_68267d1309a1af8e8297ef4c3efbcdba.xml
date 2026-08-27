@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
     <innerfile refid="evab_albums_8h">evabAlbums.h</innerfile>
@@ -37,8 +37,8 @@
     <innerfile refid="evab_screen_p_c_d8544_8h">evabScreenPCD8544.h</innerfile>
     <innerfile refid="evab_screen_serial_pixel_8h">evabScreenSerialPixel.h</innerfile>
     <innerfile refid="evab_screen_serial_text_8h">evabScreenSerialText.h</innerfile>
+    <innerfile refid="evab_screen_s_h1106_8h">evabScreenSH1106.h</innerfile>
     <innerfile refid="evab_screen_s_s_d1306_8h">evabScreenSSD1306.h</innerfile>
-    <innerfile refid="evab_screen_s_s_h1106_8h">evabScreenSSH1106.h</innerfile>
     <innerfile refid="evab_serializers_8h">evabSerializers.h</innerfile>
     <innerfile refid="evab_stretch_bar_8h">evabStretchBar.h</innerfile>
     <innerfile refid="evab_stretch_bar_px_8h">evabStretchBarPx.h</innerfile>

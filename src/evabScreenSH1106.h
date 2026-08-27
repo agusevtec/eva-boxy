@@ -7,21 +7,21 @@
 namespace evab
 {
     /**
-     * @brief SSH1106 screen driver for OLED displays
+     * @brief SH1106 screen driver for OLED displays
      *
      * Supports 128x64 OLED displays with I2C interface.
      * Similar to SSD1306 but with different initialization sequence.
      */
-    class ScreenSSH1106 : public ScreenPage8Base
+    class ScreenSH1106 : public ScreenPage8Base
     {
     public:
         /**
-         * @brief Constructor for SSH1106 screen driver
+         * @brief Constructor for SH1106 screen driver
          *
          * @param font Font to use
          * @param aWireClock I2C clock speed (default 800000)
          */
-        ScreenSSH1106(const IFont *font, unsigned long aWireClock = 800000L);
+        ScreenSH1106(const IFont *font, unsigned long aWireClock = 800000L);
 
         /**
          * @brief Serializes element state for 16x8 screen

@@ -17,7 +17,7 @@ _Base class for page-based 8-bit screens._ [More...](#detailed-description)
 Inherits the following classes: [evab::Screen](classevab_1_1_screen.md)
 
 
-Inherited by the following classes: [evab::ScreenKS0108](classevab_1_1_screen_k_s0108.md),  [evab::ScreenPCD8544](classevab_1_1_screen_p_c_d8544.md),  [evab::ScreenSSD1306](classevab_1_1_screen_s_s_d1306.md),  [evab::ScreenSSH1106](classevab_1_1_screen_s_s_h1106.md),  [evab::ScreenSerialPixel](classevab_1_1_screen_serial_pixel.md)
+Inherited by the following classes: [evab::ScreenKS0108](classevab_1_1_screen_k_s0108.md),  [evab::ScreenPCD8544](classevab_1_1_screen_p_c_d8544.md),  [evab::ScreenSH1106](classevab_1_1_screen_s_h1106.md),  [evab::ScreenSSD1306](classevab_1_1_screen_s_s_d1306.md),  [evab::ScreenSerialPixel](classevab_1_1_screen_serial_pixel.md)
 
 
 

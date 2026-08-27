@@ -35,8 +35,6 @@ namespace evab
 
     void clearTile(Coor aPosition, unsigned char aColor) override;
 
-    void initDisplay();
-
     void clearDisplay();
 
     void sendCommand(uint8_t aCmd);

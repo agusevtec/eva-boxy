@@ -48,7 +48,7 @@
 * **mLEDPin** ([**evab::ScreenKS0108**](classevab_1_1_screen_k_s0108.md), [**evab::ScreenPCD8544**](classevab_1_1_screen_p_c_d8544.md))
 * **mRSPin** ([**evab::ScreenKS0108**](classevab_1_1_screen_k_s0108.md))
 * **mRWPin** ([**evab::ScreenKS0108**](classevab_1_1_screen_k_s0108.md))
-* **mAddress** ([**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md), [**evab::ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md), [**evab::ScreenSSH1106**](classevab_1_1_screen_s_s_h1106.md))
+* **mAddress** ([**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md), [**evab::ScreenSH1106**](classevab_1_1_screen_s_h1106.md), [**evab::ScreenSSD1306**](classevab_1_1_screen_s_s_d1306.md))
 * **mBacklightMask** ([**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md))
 * **mBacklightPin** ([**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md))
 * **mCols** ([**evab::ScreenLCD\_I2C**](classevab_1_1_screen_l_c_d___i2_c.md))

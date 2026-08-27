@@ -161,7 +161,7 @@ EVA Boxy includes built-in drivers for both graphical and text-based displays, a
 | Display Driver | Class Name | Resolution | Protocol / Interface |
 | :--- | :--- | :--- | :--- |
 | **SSD1306** OLED | `ScreenSSD1306` | 16x8 tiles | I2C |
-| **SH1106** OLED | `ScreenSSH1106` | 16x8 tiles | I2C |
+| **SH1106** OLED | `ScreenSH1106` | 16x8 tiles | I2C |
 | **PCD8544** (Nokia 5110) | `ScreenPCD8544` | 12x6 tiles | SPI |
 | **KS0108** Graphical LCD | `ScreenKS0108` | 16x8 tiles | Parallel 8-bit |
 | **HD44780** Character LCD | `ScreenLCD_I2C` | 20x4 and others | I2C (PCF8574) |

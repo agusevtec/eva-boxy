@@ -1,10 +1,10 @@
 
 
-# File evabScreenSSH1106.h
+# File evabScreenSH1106.h
 
-[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabScreenSSH1106.h**](evab_screen_s_s_h1106_8h.md)
+[**File List**](files.md) **>** [**src**](dir_68267d1309a1af8e8297ef4c3efbcdba.md) **>** [**evabScreenSH1106.h**](evab_screen_s_h1106_8h.md)
 
-[Go to the documentation of this file](evab_screen_s_s_h1106_8h.md)
+[Go to the documentation of this file](evab_screen_s_h1106_8h.md)
 
 
 ```C++
@@ -16,10 +16,10 @@
 
 namespace evab
 {
-    class ScreenSSH1106 : public ScreenPage8Base
+    class ScreenSH1106 : public ScreenPage8Base
     {
     public:
-        ScreenSSH1106(const IFont *font, unsigned long aWireClock = 800000L);
+        ScreenSH1106(const IFont *font, unsigned long aWireClock = 800000L);
 
         unsigned short Serialize(const Coor &aPos, const Coor &aSize, bool isFocused);
 

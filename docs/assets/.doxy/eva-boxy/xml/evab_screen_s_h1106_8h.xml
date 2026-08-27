@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
-  <compounddef id="evab_screen_s_s_h1106_8h" kind="file" language="C++">
-    <compoundname>evabScreenSSH1106.h</compoundname>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="evab_screen_s_h1106_8h" kind="file" language="C++">
+    <compoundname>evabScreenSH1106.h</compoundname>
     <includes refid="evab_coor_8h" local="no">evabCoor.h</includes>
     <includes refid="evab_screen_page8_base_8h" local="no">evabScreenPage8Base.h</includes>
     <includes local="no">Wire.h</includes>
@@ -40,8 +40,8 @@
         </childnode>
       </node>
       <node id="1">
-        <label>src/evabScreenSSH1106.h</label>
-        <link refid="evab_screen_s_s_h1106_8h"/>
+        <label>src/evabScreenSH1106.h</label>
+        <link refid="evab_screen_s_h1106_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -67,7 +67,7 @@
         <label>Wire.h</label>
       </node>
     </incdepgraph>
-    <innerclass refid="classevab_1_1_screen_s_s_h1106" prot="public">evab::ScreenSSH1106</innerclass>
+    <innerclass refid="classevab_1_1_screen_s_h1106" prot="public">evab::ScreenSH1106</innerclass>
     <innernamespace refid="namespaceevab">evab</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -82,16 +82,16 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">evab</highlight></codeline>
 <codeline lineno="8"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="15" refid="classevab_1_1_screen_s_s_h1106" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_screen_s_s_h1106_1ad3c7f49cb86c3feff4cdc45c0320a8dd" kindref="member">ScreenSSH1106</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_page8_base_1a769fc315283a7fd62db3ee4a38e5dfb2" kindref="member">ScreenPage8Base</ref></highlight></codeline>
+<codeline lineno="15" refid="classevab_1_1_screen_s_h1106" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevab_1_1_screen_s_h1106_1ad31c6f187d36a24772a157b95f16a708" kindref="member">ScreenSH1106</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_page8_base_1a769fc315283a7fd62db3ee4a38e5dfb2" kindref="member">ScreenPage8Base</ref></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24" refid="classevab_1_1_screen_s_s_h1106_1ad3c7f49cb86c3feff4cdc45c0320a8dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_screen_s_s_h1106_1ad3c7f49cb86c3feff4cdc45c0320a8dd" kindref="member">ScreenSSH1106</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref><sp/>*font,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>aWireClock<sp/>=<sp/>800000L);</highlight></codeline>
+<codeline lineno="24" refid="classevab_1_1_screen_s_h1106_1ad31c6f187d36a24772a157b95f16a708" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classevab_1_1_screen_s_h1106_1ad31c6f187d36a24772a157b95f16a708" kindref="member">ScreenSH1106</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_i_font" kindref="compound">IFont</ref><sp/>*font,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>aWireClock<sp/>=<sp/>800000L);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="classevab_1_1_screen_s_s_h1106_1a80e2cdf993dfdb565a21f4f593559732" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_s_s_h1106_1a80e2cdf993dfdb565a21f4f593559732" kindref="member">Serialize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aPos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isFocused);</highlight></codeline>
+<codeline lineno="34" refid="classevab_1_1_screen_s_h1106_1a872429cd2a539f8918670f5fcabca43a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_s_h1106_1a872429cd2a539f8918670f5fcabca43a" kindref="member">Serialize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aPos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isFocused);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="classevab_1_1_screen_s_s_h1106_1a21264b69f031c5d30985b48230aeb132" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_s_s_h1106_1a21264b69f031c5d30985b48230aeb132" kindref="member">Deserialize</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>aSerialized,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;isFocused);</highlight></codeline>
+<codeline lineno="44" refid="classevab_1_1_screen_s_h1106_1a5f97ec7d0c5dd97ded2f03af569f6bf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classevab_1_1_screen_s_h1106_1a5f97ec7d0c5dd97ded2f03af569f6bf8" kindref="member">Deserialize</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>aSerialized,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aPos,<sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>&amp;aSize,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;isFocused);</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/><ref refid="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa" kindref="member">Size</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51" refid="classevab_1_1_screen_s_h1106_1ac125ca222fe6a679bd57d4fbabe1bd0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/><ref refid="classevab_1_1_screen_s_h1106_1ac125ca222fe6a679bd57d4fbabe1bd0f" kindref="member">Size</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawVerticalSlice(<ref refid="structevab_1_1_coor" kindref="compound">Coor</ref><sp/>aPosition,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aCutColumn,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>aSlice)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
@@ -110,6 +110,6 @@
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="99"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="src/evabScreenSSH1106.h"/>
+    <location file="src/evabScreenSH1106.h"/>
   </compounddef>
 </doxygen>

@@ -9,7 +9,7 @@ The library is designed as an extensible system for working with various types o
 
 | Display Type | Base Class | Examples in Library |
 |--------------|------------|---------------------|
-| Page-organized (8 pixels per page) | `ScreenPage8Base` | SSD1306, KS0108, PCD8544, SSH1106 |
+| Page-organized (8 pixels per page) | `ScreenPage8Base` | SSD1306, KS0108, PCD8544, SH1106 |
 | No assumptions about internal structure | `Screen` | LCD_I2C |
 
 ## Method Requirements Summary

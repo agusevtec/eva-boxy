@@ -1,16 +1,16 @@
 
 
-# Class evab::ScreenSSH1106
+# Class evab::ScreenSH1106
 
 
 
-[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**ScreenSSH1106**](classevab_1_1_screen_s_s_h1106.md)
+[**ClassList**](annotated.md) **>** [**evab**](namespaceevab.md) **>** [**ScreenSH1106**](classevab_1_1_screen_s_h1106.md)
 
 
 
-_SSH1106 screen driver for OLED displays._ [More...](#detailed-description)
+_SH1106 screen driver for OLED displays._ [More...](#detailed-description)
 
-* `#include <evabScreenSSH1106.h>`
+* `#include <evabScreenSH1106.h>`
 
 
 
@@ -94,7 +94,7 @@ Inherits the following classes: [evab::ScreenPage8Base](classevab_1_1_screen_pag
 | Type | Name |
 | ---: | :--- |
 | virtual void | [**Deserialize**](#function-deserialize) (unsigned short aSerialized, [**Coor**](structevab_1_1_coor.md) & aPos, [**Coor**](structevab_1_1_coor.md) & aSize, bool & isFocused) <br>_Deserializes element state for 16x8 screen._  |
-|   | [**ScreenSSH1106**](#function-screenssh1106) (const [**IFont**](classevab_1_1_i_font.md) \* font, unsigned long aWireClock=800000L) <br>_Constructor for SSH1106 screen driver._  |
+|   | [**ScreenSH1106**](#function-screensh1106) (const [**IFont**](classevab_1_1_i_font.md) \* font, unsigned long aWireClock=800000L) <br>_Constructor for SH1106 screen driver._  |
 | virtual unsigned short | [**Serialize**](#function-serialize) (const [**Coor**](structevab_1_1_coor.md) & aPos, const [**Coor**](structevab_1_1_coor.md) & aSize, bool isFocused) <br>_Serializes element state for 16x8 screen._  |
 | virtual [**Coor**](structevab_1_1_coor.md) | [**Size**](#function-size) () override<br>_Gets the screen size in tiles._  |
 
@@ -222,7 +222,7 @@ Supports 128x64 OLED displays with I2C interface. Similar to SSD1306 but with di
 
 _Deserializes element state for 16x8 screen._ 
 ```C++
-virtual void evab::ScreenSSH1106::Deserialize (
+virtual void evab::ScreenSH1106::Deserialize (
     unsigned short aSerialized,
     Coor & aPos,
     Coor & aSize,
@@ -253,11 +253,11 @@ Implements [*evab::Screen::Deserialize*](classevab_1_1_screen.md#function-deseri
 
 
 
-### function ScreenSSH1106 
+### function ScreenSH1106 
 
-_Constructor for SSH1106 screen driver._ 
+_Constructor for SH1106 screen driver._ 
 ```C++
-evab::ScreenSSH1106::ScreenSSH1106 (
+evab::ScreenSH1106::ScreenSH1106 (
     const IFont * font,
     unsigned long aWireClock=800000L
 ) 
@@ -286,7 +286,7 @@ evab::ScreenSSH1106::ScreenSSH1106 (
 
 _Serializes element state for 16x8 screen._ 
 ```C++
-virtual unsigned short evab::ScreenSSH1106::Serialize (
+virtual unsigned short evab::ScreenSH1106::Serialize (
     const Coor & aPos,
     const Coor & aSize,
     bool isFocused
@@ -326,7 +326,7 @@ Implements [*evab::Screen::Serialize*](classevab_1_1_screen.md#function-serializ
 
 _Gets the screen size in tiles._ 
 ```C++
-virtual Coor evab::ScreenSSH1106::Size () override
+virtual Coor evab::ScreenSH1106::Size () override
 ```
 
 
@@ -348,5 +348,5 @@ Implements [*evab::Screen::Size*](classevab_1_1_screen.md#function-size)
 <hr>
 
 ------------------------------
-The documentation for this class was generated from the following file `src/evabScreenSSH1106.h`
+The documentation for this class was generated from the following file `src/evabScreenSH1106.h`
 

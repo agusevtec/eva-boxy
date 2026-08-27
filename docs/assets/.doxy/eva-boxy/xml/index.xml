@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.17.0" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
   <compound refid="classevab_1_1_album_battery" kind="class"><name>evab::AlbumBattery</name>
     <member refid="classevab_1_1_album_battery_1a50fd5467a07d1f602adcbc53902a3303" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_album_battery_1aebe1a4bc1bf862c599f5e83fb831d790" kind="function"><name>GetTile</name></member>
@@ -401,6 +401,19 @@
     <member refid="classevab_1_1_screen_serial_text_1a57b41418e58cbc04cd12c298a307e025" kind="function"><name>Deserialize</name></member>
     <member refid="classevab_1_1_screen_serial_text_1a24ee44f285c2a1f2f308db7846147356" kind="function"><name>DrawSymbol</name></member>
   </compound>
+  <compound refid="classevab_1_1_screen_s_h1106" kind="class"><name>evab::ScreenSH1106</name>
+    <member refid="classevab_1_1_screen_s_h1106_1a7c4a33508bf4d8aa2fe10a43d8d4c885" kind="variable"><name>mAddress</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1ad31c6f187d36a24772a157b95f16a708" kind="function"><name>ScreenSH1106</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1a872429cd2a539f8918670f5fcabca43a" kind="function"><name>Serialize</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1a5f97ec7d0c5dd97ded2f03af569f6bf8" kind="function"><name>Deserialize</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1ac125ca222fe6a679bd57d4fbabe1bd0f" kind="function"><name>Size</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1abe4a83b33dc6f30f73e86cde0e9724a2" kind="function"><name>drawVerticalSlice</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1aab19856758ba96607d0280313bff9f96" kind="function"><name>clearTile</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1a9f9964f4e9680cb6a2fbfe1158d77eb1" kind="function"><name>clearDisplay</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1ad9aaefcd0998773a1ee5194538b7f829" kind="function"><name>sendCommand</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1affbd0b349f1c2db5fede77f45e54b335" kind="function"><name>setPage</name></member>
+    <member refid="classevab_1_1_screen_s_h1106_1a58a6cf45c9f201cfb355aff6a472597a" kind="function"><name>setColumn</name></member>
+  </compound>
   <compound refid="classevab_1_1_screen_s_s_d1306" kind="class"><name>evab::ScreenSSD1306</name>
     <member refid="classevab_1_1_screen_s_s_d1306_1a29d8d7a7cf670e3dbf16b1b247d88cfc" kind="variable"><name>mAddress</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a9b6cc688c874cab19c59975d9416acf2" kind="variable"><name>mWidth</name></member>
@@ -413,23 +426,9 @@
     <member refid="classevab_1_1_screen_s_s_d1306_1afb00106a9a0edad05762591fadea1bdf" kind="function"><name>Deserialize</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a36c2af724890247f42804e6641a17e75" kind="function"><name>drawVerticalSlice</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a76a05fccb294081989556c4b7cbfc5c1" kind="function"><name>clearTile</name></member>
-    <member refid="classevab_1_1_screen_s_s_d1306_1a6d903761ebb4e180bd357b186238c1d4" kind="function"><name>initDisplay</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1ae7e88a167983b2f79e3d4193b130aaf9" kind="function"><name>clearDisplay</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1ab3b8dd9149a0294b7d01ba1e251d0477" kind="function"><name>sendCommand</name></member>
     <member refid="classevab_1_1_screen_s_s_d1306_1a2b972e4990709b9ba5024f15e40627c4" kind="function"><name>sendData</name></member>
-  </compound>
-  <compound refid="classevab_1_1_screen_s_s_h1106" kind="class"><name>evab::ScreenSSH1106</name>
-    <member refid="classevab_1_1_screen_s_s_h1106_1a7f7e9e5f4781d9633b00e51c5c047b92" kind="variable"><name>mAddress</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1ad3c7f49cb86c3feff4cdc45c0320a8dd" kind="function"><name>ScreenSSH1106</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1a80e2cdf993dfdb565a21f4f593559732" kind="function"><name>Serialize</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1a21264b69f031c5d30985b48230aeb132" kind="function"><name>Deserialize</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1af9be1dca315662b16219ea4d2897d0fa" kind="function"><name>Size</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1ae8bb14f808b9653162a341813e491c21" kind="function"><name>drawVerticalSlice</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1a2a398710e701f0520fa0d792bd051719" kind="function"><name>clearTile</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1afdb0477aec02aa7aca2ec6e48387d572" kind="function"><name>clearDisplay</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1a5169043e0ebaee909683bce07ce2f73b" kind="function"><name>sendCommand</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1a4c6970863675ff1a2546a9d41d0ca3b1" kind="function"><name>setPage</name></member>
-    <member refid="classevab_1_1_screen_s_s_h1106_1ac670c5adad1d53e44511bc109d0de635" kind="function"><name>setColumn</name></member>
   </compound>
   <compound refid="classevab_1_1_scroll_window_algorithm" kind="class"><name>evab::ScrollWindowAlgorithm</name>
     <member refid="classevab_1_1_scroll_window_algorithm_1ac4b713b71b2eb92edc7fed245c3af426" kind="function"><name>Select</name></member>
@@ -664,9 +663,9 @@
   </compound>
   <compound refid="evab_screen_serial_text_8h" kind="file"><name>evabScreenSerialText.h</name>
   </compound>
-  <compound refid="evab_screen_s_s_d1306_8h" kind="file"><name>evabScreenSSD1306.h</name>
+  <compound refid="evab_screen_s_h1106_8h" kind="file"><name>evabScreenSH1106.h</name>
   </compound>
-  <compound refid="evab_screen_s_s_h1106_8h" kind="file"><name>evabScreenSSH1106.h</name>
+  <compound refid="evab_screen_s_s_d1306_8h" kind="file"><name>evabScreenSSD1306.h</name>
   </compound>
   <compound refid="evab_serializers_8h" kind="file"><name>evabSerializers.h</name>
   </compound>
