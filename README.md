@@ -25,7 +25,7 @@ EVA Boxy is part of the [EVA ecosystem](https://agusevtec.github.io/eva-core-sk/
 
 ## Quick Start (Declarative Style)
 
-Below is a complete, minimal example showing how to construct a focusable form with an integer input field and a button bound to keypad events.
+Below is an example showing how to construct a focusable form with an integer input field and a button bound to keypad events.
 ```text
 ┌──────────────────────────┐
 │     System Settings      │
@@ -47,10 +47,6 @@ Below is a complete, minimal example showing how to construct a focusable form w
 #include <evabInputButton.h>
 #include <evabBoxyRest.h>
 
-// EVA Core | EVA Survival Kit assumed to be a source of physical key presses
-#include <evaTac.h>
-
-using namespace eva;
 using namespace evab;
 
 // Declare form with vertical navigation (KEY_DOWN / KEY_UP)
@@ -82,10 +78,10 @@ public:
   }
 };
 
-// Here EVA Core | EVA Survival Kit key source is assumed
-// https://agusevtec.github.io/eva-core-sk/quickstart/performance/
-void onPhysicalButtonPressed(void* sender, CallbackInfo cbInfo) {
-  char button = cbInfo.eventArg; 
+// Here key source is assumed
+// for example https://agusevtec.github.io/eva-core-sk/quickstart/performance/
+// ...
+void onPhysicalButtonPressed(unsigned char button) {
   switch(button) {
     case 'u': Boxy::Key(KEY_UP); break;
     case 'd': Boxy::Key(KEY_DOWN); break;
@@ -98,11 +94,6 @@ void setup() {
   static SystemSettingsForm gMainForm;
   // Initialize display driver, font, and mount root layout layer
   Boxy::Begin<ScreenSSD1306, Font8Sharp>(&gMainForm);
-}
-
-void loop() {
-  // Execute frame ticking & render pipeline
-  eva::tac();
 }
 ```
 
