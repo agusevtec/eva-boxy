@@ -83,17 +83,13 @@ This is why StretchBar elements support **Increment** (visual step) and **Percen
 ```cpp
 #include <evabPercent.h>
 
-// Album selector (Index) → Percent control
-Percent<InputSelectorPx<AlbumBattery>> batteryPercent(3);
-
 // Animation speed (Index) → Percent control
-Percent<InputAnimationPx<AlbumFan>> fanSpeedPercent(5);  // 5 → 50% of max speed
-
-// ListBox (Index) → Percent control
-Percent<ScrollListbox> listPercent(33);
+Percent<InputAnimationPx<AlbumFan>> fanSpeedPercent();
+fanSpeedPercent.SetPercent(50);  // 50% of max speed -> index = 5
 
 // Discrete int (Value + Index) → Percent control
-Percent<InputIntDiscrete> discretePercent(50);
+Percent<InputIntDiscrete> discretePercent(0, 0, 20, 1);
+discretePercent.SetPercent(50);
 ```
 
 | Feature | Description |
