@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1471,17 +1471,13 @@
 <p><strong>How it works:</strong> <code>Percent&lt;T&gt;</code> takes an element that implements the Index interface (<code>Select()</code>, <code>Selected()</code>, <code>Count()</code>) and adds <code>SetPercent()</code> and <code>GetPercent()</code> methods. The percentage is automatically mapped to the index range.</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;evabPercent.h&gt;</span>
 
-<span class="c1">// Album selector (Index) → Percent control</span>
-<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputSelectorPx</span><span class="o">&lt;</span><span class="n">AlbumBattery</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">batteryPercent</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-
 <span class="c1">// Animation speed (Index) → Percent control</span>
-<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputAnimationPx</span><span class="o">&lt;</span><span class="n">AlbumFan</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">fanSpeedPercent</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w">  </span><span class="c1">// 5 → 50% of max speed</span>
-
-<span class="c1">// ListBox (Index) → Percent control</span>
-<span class="n">Percent</span><span class="o">&lt;</span><span class="n">ScrollListbox</span><span class="o">&gt;</span><span class="w"> </span><span class="n">listPercent</span><span class="p">(</span><span class="mi">33</span><span class="p">);</span>
+<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputAnimationPx</span><span class="o">&lt;</span><span class="n">AlbumFan</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">fanSpeedPercent</span><span class="p">();</span>
+<span class="n">fanSpeedPercent</span><span class="p">.</span><span class="n">SetPercent</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span><span class="w">  </span><span class="c1">// 50% of max speed -&gt; index = 5</span>
 
 <span class="c1">// Discrete int (Value + Index) → Percent control</span>
-<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputIntDiscrete</span><span class="o">&gt;</span><span class="w"> </span><span class="n">discretePercent</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">Percent</span><span class="o">&lt;</span><span class="n">InputIntDiscrete</span><span class="o">&gt;</span><span class="w"> </span><span class="n">discretePercent</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">discretePercent</span><span class="p">.</span><span class="n">SetPercent</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
 </code></pre></div>
 
 <table>

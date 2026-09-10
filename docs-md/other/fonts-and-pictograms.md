@@ -25,8 +25,11 @@ This two-stage approach simplifies manual tweaking, visual debugging (preview), 
 Although microdisplays most frequently deal with **8x8** fonts, rasterizing directly at low resolutions during Step 1 often results in jagged edges or lost character details.
 
 In such cases, an experimental downscaling workflow works best:
+
 * **High-Res Rendering:** The font is rasterized into a larger **16x16** (or 24x24) rest, after which a downscaling factor `--descale` (`-d 2`) reduces the matrix back to the final 8x8 target size.
+
 * **Experimental Process:** Finding the optimal parameters (`-w`, `-h`, `-s`, `-d`) is an unformalized, trial-and-error process. Different typefaces react to descaling uniquely, so maximum legibility is achieved by inspecting the preview `.txt` files and tweaking parameters iteratively.
+
 
 ---
 

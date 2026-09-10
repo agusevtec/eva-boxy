@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.16.1" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.17.0" xml:lang="en-US">
   <compound refid="classevab_1_1_album_battery" kind="class"><name>evab::AlbumBattery</name>
     <member refid="classevab_1_1_album_battery_1a50fd5467a07d1f602adcbc53902a3303" kind="variable"><name>Count</name></member>
     <member refid="classevab_1_1_album_battery_1aebe1a4bc1bf862c599f5e83fb831d790" kind="function"><name>GetTile</name></member>
