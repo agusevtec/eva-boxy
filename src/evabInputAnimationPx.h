@@ -91,7 +91,7 @@ namespace evab
 
         unsigned char Count() const
         {
-            return tMaxSpeed + 1; // 0..tMaxSpeed → tMaxSpeed+1 позиций
+            return tMaxSpeed + 1; // 0..tMaxSpeed → tMaxSpeed+1
         }
 
     protected:
