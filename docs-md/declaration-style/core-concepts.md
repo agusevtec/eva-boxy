@@ -83,7 +83,7 @@ private:
 
 ---
 
-## The EVA Boxy Ground & Hardware Dispatch
+## 4. The EVA Boxy Ground & Hardware Dispatch
 
 At the base of every application is the central `EVA Boxy` ground. It bridges reactive hardware events to the active UI hierarchy and manages the display pipeline:
 
