@@ -119,7 +119,7 @@ The repository contains full MkDocs documentation with tutorials, architectural 
 
 #### Getting Started
 * [What is EVA Boxy?](https://agusevtec.github.io/eva-boxy) — Architecture, design principles, and feature comparison.
-* [Core Concepts](https://agusevtec.github.io/eva-boxy/declaration-style/core-concepts) — Ground singleton, Parent-Child composition, and the Two Chains of Responsibility.
+* [Core Concepts](https://agusevtec.github.io/eva-boxy/declaration-style/core-concepts) — Ground singleton, Parent-Child composition.
 
 #### Declarative UI Development
 * [Layout and Focus Management](https://agusevtec.github.io/eva-boxy/declaration-style/layout-and-focus) — `LayoutBase`, `Focusable<T>` focus rings, and sub-screen paging.

@@ -128,7 +128,7 @@
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>Count()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="93"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tMaxSpeed<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>0..tMaxSpeed<sp/>→<sp/>tMaxSpeed+1<sp/>позиций</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tMaxSpeed<sp/>+<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>0..tMaxSpeed<sp/>→<sp/>tMaxSpeed+1</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>

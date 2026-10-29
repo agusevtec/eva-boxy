@@ -59,25 +59,6 @@ protected:
 };
 ```
 
-### 3. Lightweight Drawing Without Grid
-To keep memory and FLASH usage as low as possible, avoid using `Grid` or heavy layout engines inside `drawer()`. Calculate positions directly using simple `Coor` offsets.
-
-When passing the `focused` state to children, combine the parent's global focus with the child's local focus (`focused && child.IsFocused()`). This ensures child elements are not highlighted as active when the entire container itself loses focus:
-
-```cpp
-void drawer(Screen* screen, Coor pos, Coor size, bool focused) override {
-    screen->Clear(pos, size, 0); // Mandatory rect clearance
-
-    // Manual positioning without Grid overhead
-    Coor halfWidth = { (int16_t)(size.x / 2), size.y };
-    Coor rightOffset = { (int16_t)(pos.x + halfWidth.x), pos.y };
-
-    // Pass active focus state ONLY if the container itself is focused
-    mButtonA.drawer(screen, pos, halfWidth, focused && mButtonA.IsFocused());
-    mButtonB.drawer(screen, rightOffset, halfWidth, focused && mButtonB.IsFocused());
-}
-```
-
 ---
 
 ## Summary

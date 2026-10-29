@@ -21,6 +21,7 @@ nav:
            - Layout and Focus: declaration-style/layout-and-focus.md
            - Listboxes: declaration-style/listboxes.md
       - Intermediate Style:
+           - Anatomy: intermediate-style/boxy-anatomy.md
            - Custom User Controls: intermediate-style/custom-user-controls.md
            - CompositeBase: intermediate-style/composite-base.md
            - Progressive Optimization: intermediate-style/progressive_optimization.md

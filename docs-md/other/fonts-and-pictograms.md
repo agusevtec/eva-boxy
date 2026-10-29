@@ -10,12 +10,12 @@ This two-stage approach simplifies manual tweaking, visual debugging (preview), 
 
 ### Generation Pipeline: Two-Step Architecture
 
-1. **Step 1: Rasterization (Font/PNG -> `.txt`)**
+**Step 1: Rasterization (Font/PNG -> `.txt`)**
    * Source vector fonts (`.ttf`/`.otf`) or raster images (`.png`) are converted into a folder containing individual `.txt` files.
    * In these `.txt` files, each character is represented as a matrix of `#` (active pixel) and `.` (empty pixel) characters.
    * Working rest sizes (e.g., 16x16, 24x24), baseline or bounding box alignment, automatic point size selection, and descaling are configured at this stage.
 
-2. **Step 2: Code Generation (`.txt` -> C++ PROGMEM)**
+**Step 2: Code Generation (`.txt` -> C++ PROGMEM)**
    * Scripts read the folder with `.txt` files, perform bit-packing (vertical columns of 8 bits where `bit 0` is the top pixel), and generate ready-to-use C++ code.
 
 ---

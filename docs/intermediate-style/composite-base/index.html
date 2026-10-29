@@ -681,6 +681,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../boxy-anatomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anatomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../custom-user-controls/" class="md-nav__link">
         
   
@@ -807,17 +835,6 @@
     <span class="md-ellipsis">
       
         2. Manual Focus Switching via focusChild()
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-lightweight-drawing-without-grid" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Lightweight Drawing Without Grid
       
     </span>
   </a>
@@ -1212,17 +1229,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3-lightweight-drawing-without-grid" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Lightweight Drawing Without Grid
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1322,22 +1328,6 @@
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// Key unhandled — bubbles up to parent</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
-</code></pre></div>
-
-<h3 id="3-lightweight-drawing-without-grid">3. Lightweight Drawing Without Grid<a class="headerlink" href="#3-lightweight-drawing-without-grid" title="Permanent link">&para;</a></h3>
-<p>To keep memory and FLASH usage as low as possible, avoid using <code>Grid</code> or heavy layout engines inside <code>drawer()</code>. Calculate positions directly using simple <code>Coor</code> offsets.</p>
-<p>When passing the <code>focused</code> state to children, combine the parent's global focus with the child's local focus (<code>focused &amp;&amp; child.IsFocused()</code>). This ensures child elements are not highlighted as active when the entire container itself loses focus:</p>
-<div class="codehilite"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">drawer</span><span class="p">(</span><span class="n">Screen</span><span class="o">*</span><span class="w"> </span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">Coor</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">focused</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">screen</span><span class="o">-&gt;</span><span class="n">Clear</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Mandatory rect clearance</span>
-
-<span class="w">    </span><span class="c1">// Manual positioning without Grid overhead</span>
-<span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">halfWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)(</span><span class="n">size</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
-<span class="w">    </span><span class="n">Coor</span><span class="w"> </span><span class="n">rightOffset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="kt">int16_t</span><span class="p">)(</span><span class="n">pos</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">halfWidth</span><span class="p">.</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
-
-<span class="w">    </span><span class="c1">// Pass active focus state ONLY if the container itself is focused</span>
-<span class="w">    </span><span class="n">mButtonA</span><span class="p">.</span><span class="n">drawer</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="n">halfWidth</span><span class="p">,</span><span class="w"> </span><span class="n">focused</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mButtonA</span><span class="p">.</span><span class="n">IsFocused</span><span class="p">());</span>
-<span class="w">    </span><span class="n">mButtonB</span><span class="p">.</span><span class="n">drawer</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span><span class="w"> </span><span class="n">rightOffset</span><span class="p">,</span><span class="w"> </span><span class="n">halfWidth</span><span class="p">,</span><span class="w"> </span><span class="n">focused</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mButtonB</span><span class="p">.</span><span class="n">IsFocused</span><span class="p">());</span>
-<span class="p">}</span>
 </code></pre></div>
 
 <hr />

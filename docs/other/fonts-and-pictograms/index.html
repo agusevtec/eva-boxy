@@ -679,6 +679,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../intermediate-style/boxy-anatomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anatomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../intermediate-style/custom-user-controls/" class="md-nav__link">
         
   
@@ -1255,18 +1283,12 @@
 </blockquote>
 <hr />
 <h3 id="generation-pipeline-two-step-architecture">Generation Pipeline: Two-Step Architecture<a class="headerlink" href="#generation-pipeline-two-step-architecture" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Step 1: Rasterization (Font/PNG -&gt; <code>.txt</code>)</strong></li>
-<li>Source vector fonts (<code>.ttf</code>/<code>.otf</code>) or raster images (<code>.png</code>) are converted into a folder containing individual <code>.txt</code> files.</li>
-<li>In these <code>.txt</code> files, each character is represented as a matrix of <code>#</code> (active pixel) and <code>.</code> (empty pixel) characters.</li>
-<li>
-<p>Working rest sizes (e.g., 16x16, 24x24), baseline or bounding box alignment, automatic point size selection, and descaling are configured at this stage.</p>
-</li>
-<li>
-<p><strong>Step 2: Code Generation (<code>.txt</code> -&gt; C++ PROGMEM)</strong></p>
-</li>
-<li>Scripts read the folder with <code>.txt</code> files, perform bit-packing (vertical columns of 8 bits where <code>bit 0</code> is the top pixel), and generate ready-to-use C++ code.</li>
-</ol>
+<p><strong>Step 1: Rasterization (Font/PNG -&gt; <code>.txt</code>)</strong>
+   * Source vector fonts (<code>.ttf</code>/<code>.otf</code>) or raster images (<code>.png</code>) are converted into a folder containing individual <code>.txt</code> files.
+   * In these <code>.txt</code> files, each character is represented as a matrix of <code>#</code> (active pixel) and <code>.</code> (empty pixel) characters.
+   * Working rest sizes (e.g., 16x16, 24x24), baseline or bounding box alignment, automatic point size selection, and descaling are configured at this stage.</p>
+<p><strong>Step 2: Code Generation (<code>.txt</code> -&gt; C++ PROGMEM)</strong>
+   * Scripts read the folder with <code>.txt</code> files, perform bit-packing (vertical columns of 8 bits where <code>bit 0</code> is the top pixel), and generate ready-to-use C++ code.</p>
 <hr />
 <h3 id="resolution-nuances-8x8-vs-16x16-with-descale">Resolution Nuances: 8x8 vs 16x16 with Descale<a class="headerlink" href="#resolution-nuances-8x8-vs-16x16-with-descale" title="Permanent link">&para;</a></h3>
 <p>Although microdisplays most frequently deal with <strong>8x8</strong> fonts, rasterizing directly at low resolutions during Step 1 often results in jagged edges or lost character details.</p>
