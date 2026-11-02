@@ -105,7 +105,7 @@ void onKeyPress() {
 
 void setup() {
     // Initialize display driver, font, and active root layer
-    Boxy::Begin<ScreenSSD1306, Font8Sharp>(&mGroundLayer);
+    Boxy::Begin<ScreenSSD1306, Font8Sharp>(&mGroundLayer, 800000L, 64););
 }
 
 void loop() {
